@@ -16,17 +16,17 @@ import { existsSync, readFileSync } from "fs";
 
 const obj = {
   "Protobuf-ES (BigInt)": {
-    resultsFile: "src/protobuf-es/failing_tests.txt",
+    resultsFile: "protobuf-es/failing_tests.txt",
     recommendedFailures: [],
     requiredFailures: [],
   },
   "Protobuf-ES (Without BigInt)": {
-    resultsFile: "src/protobuf-es/failing_tests.txt",
+    resultsFile: "protobuf-es/failing_tests.txt",
     recommendedFailures: [],
     requiredFailures: [],
   },
   ProtobufJS: {
-    resultsFile: "src/protobufjs/failing_tests.txt",
+    resultsFile: "protobufjs/failing_tests.txt",
     recommendedFailures: [],
     requiredFailures: [],
   },

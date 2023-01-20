@@ -45,4 +45,4 @@ We also mark the same TextFormat tests as expected failures.
 |---------------------|------------------------:|-----------------------:|-------------------:|
 Protobuf-ES (BigInt) | 0 | 0 | 0
 Protobuf-ES (Without BigInt) | 0 | 0 | 0
-ProtobufJS | 0 | 0 | 0
+ProtobufJS | 465 | 912 | 1377
