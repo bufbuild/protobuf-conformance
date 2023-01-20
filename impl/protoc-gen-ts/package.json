@@ -1,0 +1,20 @@
+{
+  "name": "protoc-gen-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@bufbuild/buf": "^1.14.0",
+    "@types/google-protobuf": "^3.15.6",
+    "@types/node": "^18.14.0",
+    "google-protobuf": "^3.21.2",
+    "protoc-gen-ts": "^0.8.5",
+    "typescript": "^4.9.5"
+  }
+}

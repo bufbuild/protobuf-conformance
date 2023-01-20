@@ -1,0 +1,5 @@
+{
+  "name": "protobuf-conformance",
+  "private": true,
+  "type": "module"
+}

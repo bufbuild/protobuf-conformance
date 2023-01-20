@@ -1,0 +1,11 @@
+version: v1
+plugins:
+  - name: ts
+    path: node_modules/.bin/protoc-gen-ts
+    out: gen
+    opt:
+      - target=node
+      # According to the documentation, the option `json_names` helps to conform to the JSON mapping.
+      # Unfortunately, the conformance runner crashes if we set it:
+      # > libc++abi: terminating with uncaught exception of type Json::LogicError: Type is not convertible to string
+      # - json_names

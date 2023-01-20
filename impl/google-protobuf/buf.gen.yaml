@@ -1,0 +1,6 @@
+version: v1
+plugins:
+  - name: js
+    path: ./protoc-gen-js
+    opt: import_style=commonjs,binary
+    out: gen
