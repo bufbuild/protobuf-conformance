@@ -1,0 +1,11 @@
+{
+  "include": ["src/**/*.ts"],
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "lib": [
+      "ES2016",
+      // ES2020.BigInt for the bigint representation of 64-bit integers
+      "ES2020.BigInt"
+    ]
+  }
+}

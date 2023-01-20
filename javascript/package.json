@@ -1,0 +1,23 @@
+{
+  "name": "@bufbuild/protobuf-conformance",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf ./dist/cjs/* ./dist/types/*",
+    "build": "npm run build:esm+types",
+    "build:esm+types": "../../node_modules/typescript/bin/tsc --project tsconfig.json --module ES2015 --outDir ./dist/esm --declaration --declarationDir ./dist/types",
+    "report": "node src/main.js > README.md"
+  },
+  "type": "module",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "default": "./dist/esm/index.js"
+  },
+  "dependencies": {
+    "@bufbuild/protobuf": "1.0.0",
+    "@bufbuild/protoc-gen-es": "^1.0.0",
+    "long": "^5.2.1",
+    "protobufjs": "^7.1.2",
+    "protobufjs-cli": "^1.0.2"
+  }
+}
