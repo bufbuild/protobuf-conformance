@@ -1,0 +1,28 @@
+{
+  "include": ["**/*.ts"],
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "target": "es2017",
+    "importsNotUsedAsValues": "error",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "moduleResolution": "Node",
+    "skipLibCheck": false,
+    "lib": [
+      "ES2016",
+      // ES2020.BigInt for the bigint representation of 64-bit integers
+      "ES2020.BigInt"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "google-protobuf-conformance",
+  "private": true,
+  "dependencies": {
+    "google-protobuf": "^3.21.2"
+  },
+  "devDependencies": {
+    "@bufbuild/buf": "^1.15.0"
+  }
+}
