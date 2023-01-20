@@ -4,8 +4,8 @@
   "scripts": {
     "clean": "rm -rf ./dist/cjs/* ./dist/types/*",
     "build": "npm run build:esm+types",
-    "build:esm+types": "../../node_modules/typescript/bin/tsc --project tsconfig.json --module ES2015 --outDir ./dist/esm --declaration --declarationDir ./dist/types",
-    "report": "node src/main.js > README.md"
+    "build:esm+types": "./node_modules/typescript/bin/tsc --project tsconfig.json --module ES2015 --outDir ./dist/esm --declaration --declarationDir ./dist/types",
+    "report": "node main.js > README.md"
   },
   "type": "module",
   "types": "./dist/types/index.d.ts",

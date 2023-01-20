@@ -44,17 +44,30 @@ $(BIN)/git-ls-files-unstaged: Makefile
 	@mkdir -p $(@D)
 	GOBIN=$(abspath $(BIN)) go install github.com/bufbuild/buf/private/pkg/git/cmd/git-ls-files-unstaged@v1.1.0
 
-$(BUILD)/javascript: $(GEN)/javascript node_modules $(shell find javascript/src -name '*.ts')
+$(BUILD)/javascript: $(GEN)/javascript node_modules $(shell find javascript -name '*.ts')
 	@mkdir -p $(@D)
 	@touch $(@)
+	cd javascript && npm run clean && npm run build
 
 $(GEN)/javascript: $(BIN)/protoc Makefile
-	@rm -rf javascript/src/gen/*
-	$(BIN)/protoc --plugin javascript/node_modules/.bin/protoc-gen-es --es_out javascript/src/gen --es_opt ts_nocheck=false,target=ts \
+	@rm -rf javascript/gen/*
+	$(BIN)/protoc --plugin javascript/node_modules/.bin/protoc-gen-es --es_out javascript/gen --es_opt ts_nocheck=false,target=ts \
 		--proto_path $(PB) --proto_path $(PB)/src \
 		conformance/conformance.proto \
 		google/protobuf/test_messages_proto2.proto \
 		google/protobuf/test_messages_proto3.proto
+	@mkdir -p javascript/gen/protobufjs
+	javascript/node_modules/.bin/pbjs -t static-module -w es6 -o javascript/gen/protobufjs/protos_pb.js $(PB)/conformance/conformance.proto $(PB)/src/google/protobuf/any.proto $(PB)/src/google/protobuf/field_mask.proto $(PB)/src/google/protobuf/timestamp.proto $(PB)/src/google/protobuf/duration.proto $(PB)/src/google/protobuf/struct.proto $(PB)/src/google/protobuf/wrappers.proto $(PB)/src/google/protobuf/test_messages_proto3.proto $(PB)/src/google/protobuf/test_messages_proto2.proto
+	javascript/node_modules/.bin/pbts -o javascript/gen/protobufjs/protos_pb.d.ts javascript/gen/protobufjs/protos_pb.js
+	if [ $(shell uname -s) == "Darwin" ] ; then \
+	   sed -i '' 's/ implements IMessageSetCorrect {/ {/' javascript/gen/protobufjs/protos_pb.d.ts; \
+       sed -i '' 's/import \* as $$protobuf from \"protobufjs\/minimal\";/import $$protobuf from \"protobufjs\/minimal\.js\";/' javascript/gen/protobufjs/protos_pb.js; \
+    else \
+	   sed -i'' 's/ implements IMessageSetCorrect {/ {/' javascript/gen/protobufjs/protos_pb.d.ts; \
+       sed -i'' 's/import \* as $$protobuf from \"protobufjs\/minimal\";/import $$protobuf from \"protobufjs\/minimal\.js\";/' javascript/gen/protobufjs/protos_pb.js; \
+    fi; \
+	mkdir -p javascript/dist/esm/gen/protobufjs/
+	mv javascript/gen/protobufjs/*.js javascript/dist/esm/gen/protobufjs/
 	@mkdir -p $(@D)
 	@touch $(@)
 
@@ -83,13 +96,13 @@ test-conformance: test-conformance-protobuf-es test-conformance-pbjs
 .PHONY: test-conformance-protobuf-es
 test-conformance-protobuf-es: $(BIN)/conformance_test_runner $(BUILD)/javascript
 	cd javascript \
-		&& BUF_BIGINT_DISABLE=0 $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list src/protobuf-es/failing_tests_with_bigint.txt --text_format_failure_list src/protobuf-es/failing_tests_text_format.txt --output_dir src/protobuf-es bin/protobuf-es/conformance_esm.js || true \
-		&& BUF_BIGINT_DISABLE=1 $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list src/protobuf-es/failing_tests_without_bigint.txt --text_format_failure_list src/protobuf-es/failing_tests_text_format.txt --output_dir src/protobuf-es bin/protobuf-es/conformance_esm.js || true
+		&& BUF_BIGINT_DISABLE=0 $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list protobuf-es/failing_tests_with_bigint.txt --text_format_failure_list protobuf-es/failing_tests_text_format.txt --output_dir protobuf-es bin/protobuf-es/conformance_esm.js || true \
+		&& BUF_BIGINT_DISABLE=1 $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list protobuf-es/failing_tests_without_bigint.txt --text_format_failure_list protobuf-es/failing_tests_text_format.txt --output_dir protobuf-es bin/protobuf-es/conformance_esm.js || true
 
 .PHONY: test-conformance-pbjs
 test-conformance-pbjs: $(BIN)/conformance_test_runner $(BUILD)/javascript
 	cd javascript \
-		&& $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list src/protobufjs/failing_tests_list.txt --text_format_failure_list src/protobufjs/failing_tests_text_format.txt --output_dir src/protobufjs bin/protobufjs/conformance_esm.js || true \
+		&& $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list protobufjs/failing_tests_list.txt --text_format_failure_list protobufjs/failing_tests_text_format.txt --output_dir protobufjs bin/protobufjs/conformance_esm.js || true \
 
 .PHONY: lint
 lint: node_modules $(BUILD)/javascript
