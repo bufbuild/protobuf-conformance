@@ -16,6 +16,11 @@
   "dependencies": {
     "@bufbuild/protobuf": "1.0.0",
     "@bufbuild/protoc-gen-es": "^1.0.0",
+    "eslint": "^8.31.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
     "long": "^5.2.1",
     "protobufjs": "^7.1.2",
     "protobufjs-cli": "^1.0.2"
