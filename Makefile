@@ -59,13 +59,13 @@ $(GEN)/javascript: $(BIN)/protoc Makefile
 	@mkdir -p javascript/gen/protobufjs
 	javascript/node_modules/.bin/pbjs -t static-module -w es6 -o javascript/gen/protobufjs/protos_pb.js $(PB)/conformance/conformance.proto $(PB)/src/google/protobuf/any.proto $(PB)/src/google/protobuf/field_mask.proto $(PB)/src/google/protobuf/timestamp.proto $(PB)/src/google/protobuf/duration.proto $(PB)/src/google/protobuf/struct.proto $(PB)/src/google/protobuf/wrappers.proto $(PB)/src/google/protobuf/test_messages_proto3.proto $(PB)/src/google/protobuf/test_messages_proto2.proto
 	javascript/node_modules/.bin/pbts -o javascript/gen/protobufjs/protos_pb.d.ts javascript/gen/protobufjs/protos_pb.js
-	if [ $(shell uname -s) == "Darwin" ] ; then \
-	   sed -i '' 's/ implements IMessageSetCorrect {/ {/' javascript/gen/protobufjs/protos_pb.d.ts; \
-       sed -i '' 's/import \* as $$protobuf from \"protobufjs\/minimal\";/import $$protobuf from \"protobufjs\/minimal\.js\";/' javascript/gen/protobufjs/protos_pb.js; \
-    else \
-	   sed -i'' 's/ implements IMessageSetCorrect {/ {/' javascript/gen/protobufjs/protos_pb.d.ts; \
-       sed -i'' 's/import \* as $$protobuf from \"protobufjs\/minimal\";/import $$protobuf from \"protobufjs\/minimal\.js\";/' javascript/gen/protobufjs/protos_pb.js; \
-    fi; \
+	#if [ $(shell uname -s) == "Darwin" ] ; then \
+#	   sed -i '' 's/ implements IMessageSetCorrect {/ {/' javascript/gen/protobufjs/protos_pb.d.ts; \
+#       sed -i '' 's/import \* as $$protobuf from \"protobufjs\/minimal\";/import $$protobuf from \"protobufjs\/minimal\.js\";/' javascript/gen/protobufjs/protos_pb.js; \
+#    else \
+#	   sed -i'' 's/ implements IMessageSetCorrect {/ {/' javascript/gen/protobufjs/protos_pb.d.ts; \
+#       sed -i'' 's/import \* as $$protobuf from \"protobufjs\/minimal\";/import $$protobuf from \"protobufjs\/minimal\.js\";/' javascript/gen/protobufjs/protos_pb.js; \
+#    fi; \
 	mkdir -p javascript/dist/esm/gen/protobufjs/
 	mv javascript/gen/protobufjs/*.js javascript/dist/esm/gen/protobufjs/
 	@mkdir -p $(@D)

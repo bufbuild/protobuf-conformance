@@ -17,21 +17,10 @@ import { readSync, writeSync } from "fs";
 import * as protos from "../gen/protobufjs/protos_pb.js";
 import type { Writer } from "protobufjs";
 
-const Any = protos.google.protobuf.Any;
-const Struct = protos.google.protobuf.Struct;
-const Value = protos.google.protobuf.Value;
-const Int32Value = protos.google.protobuf.Int32Value;
-const FieldMask = protos.google.protobuf.FieldMask;
-const Duration = protos.google.protobuf.Duration;
-const Timestamp = protos.google.protobuf.Timestamp;
-const TestAllTypesProto2 =
-  protos.protobuf_test_messages.proto2.TestAllTypesProto2;
-const TestAllTypesProto3 =
-  protos.protobuf_test_messages.proto3.TestAllTypesProto3;
-
-const ConformanceRequest = protos.conformance.ConformanceRequest;
-const ConformanceResponse = protos.conformance.ConformanceResponse;
-const FailureSet = protos.conformance.FailureSet;
+const {Any, Struct, Value, Int32Value, FieldMask, Duration, Timestamp} = protos.google.protobuf;
+const {TestAllTypesProto2} = protos.protobuf_test_messages.proto2;
+const {TestAllTypesProto3} = protos.protobuf_test_messages.proto3;
+const {ConformanceRequest, ConformanceResponse, FailureSet} = protos.conformance;
 
 type MessageType =
   | protos.protobuf_test_messages.proto2.TestAllTypesProto2
@@ -43,17 +32,6 @@ type MessageType =
   | protos.google.protobuf.Int32Value
   | protos.google.protobuf.Any
   | protos.google.protobuf.Timestamp;
-
-type MessageTypeInter =
-  protos.protobuf_test_messages.proto2.TestAllTypesProto2 &
-    protos.protobuf_test_messages.proto3.TestAllTypesProto3 &
-    protos.google.protobuf.Struct &
-    protos.google.protobuf.Value &
-    protos.google.protobuf.FieldMask &
-    protos.google.protobuf.Duration &
-    protos.google.protobuf.Int32Value &
-    protos.google.protobuf.Any &
-    protos.google.protobuf.Timestamp;
 
 interface Registry {
   [s: string]:
@@ -153,13 +131,13 @@ function test(request: protos.conformance.ConformanceRequest): Result {
     switch (request.requestedOutputFormat) {
       case 1: // PROTOBUF
         return {
-          protobufPayload: payloadType.encode(payload as MessageTypeInter),
+          protobufPayload: payloadType.encode(payload as any),
         };
 
       case 2: // JSON:
         return {
           jsonPayload: JSON.stringify(
-            payloadType.toObject(payload as MessageTypeInter)
+            payloadType.toObject(payload as any)
           ),
         };
 
