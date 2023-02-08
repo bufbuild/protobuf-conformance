@@ -57,11 +57,13 @@ for (const config of Object.values(obj)) {
   }
 }
 
-let markdown = `# Protobuf Conformance tests
+let markdown = `# JavaScript Protobuf Conformance tests
 
-This package implements a testee for the protocol buffers [conformance test 
+This package implements JavaScript testees for the protocol buffers [conformance test 
 suite](https://github.com/protocolbuffers/protobuf/tree/main/conformance) and runs the tests against Protobuf-ES as well
-as protobuf.js for comparison.  The conformance tests run on code transpiled to ECMAScript modules.
+as other JavaScript Protobuf libraries for comparison. 
+
+To run the JavaScript conformance tests, run \`make\` from the repo root.
 
 ## Expected Test Failures
 

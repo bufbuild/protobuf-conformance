@@ -17,10 +17,12 @@ import { readSync, writeSync } from "fs";
 import * as protos from "./gen/protos_pb.js";
 import type { Writer } from "protobufjs";
 
-const { Any, Struct, Value, Int32Value, FieldMask, Duration, Timestamp } = protos.google.protobuf;
+const { Any, Struct, Value, Int32Value, FieldMask, Duration, Timestamp } =
+  protos.google.protobuf;
 const { TestAllTypesProto2 } = protos.protobuf_test_messages.proto2;
 const { TestAllTypesProto3 } = protos.protobuf_test_messages.proto3;
-const { ConformanceRequest, ConformanceResponse, FailureSet } = protos.conformance;
+const { ConformanceRequest, ConformanceResponse, FailureSet } =
+  protos.conformance;
 
 type MessageType =
   | protos.protobuf_test_messages.proto2.TestAllTypesProto2
@@ -131,12 +133,14 @@ function test(request: protos.conformance.ConformanceRequest): Result {
     switch (request.requestedOutputFormat) {
       case 1: // PROTOBUF
         return {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           protobufPayload: payloadType.encode(payload as any),
         };
 
       case 2: // JSON:
         return {
           jsonPayload: JSON.stringify(
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             payloadType.toObject(payload as any)
           ),
         };
