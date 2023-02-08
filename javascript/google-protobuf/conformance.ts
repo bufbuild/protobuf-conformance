@@ -1,3 +1,5 @@
+var jspb = require('google-protobuf');
+var goog = jspb;
 const ConformanceRequest = goog.require('proto.conformance.ConformanceRequest');
 const {doTest} = goog.require('javascript.protobuf.conformance');
 

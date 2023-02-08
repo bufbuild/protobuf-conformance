@@ -14,7 +14,7 @@
 
 import { readSync, writeSync } from "fs";
 
-import * as protos from "../gen/protobuf.js/protos_pb.js";
+import * as protos from "./gen/protos_pb.js";
 import type { Writer } from "protobufjs";
 
 const { Any, Struct, Value, Int32Value, FieldMask, Duration, Timestamp } = protos.google.protobuf;

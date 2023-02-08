@@ -15,6 +15,8 @@ GOOGLE_PROTOBUF_VERSION = 21.12
 GOOGLE_PROTOBUF_JS_VERSION = 3.21.2
 GOOGLE_PROTOBUF_JS = .tmp/protobuf-javascript-$(GOOGLE_PROTOBUF_JS_VERSION)
 BAZEL_VERSION = 5.4.0
+LICENSE_HEADER_YEAR_RANGE := 2021-2023
+LICENSE_HEADER_IGNORES := .tmp\/ node_module\/ dist\/
 
 node_modules: javascript/package-lock.json
 	cd javascript && npm ci
@@ -60,9 +62,9 @@ $(BIN)/git-ls-files-unstaged: Makefile
 	GOBIN=$(abspath $(BIN)) go install github.com/bufbuild/buf/private/pkg/git/cmd/git-ls-files-unstaged@v1.1.0
 
 $(BUILD)/javascript: $(GEN)/javascript node_modules $(shell find javascript -name '*.ts')
-	@mkdir -p $(@D)
-	@touch $(@)
 	cd javascript && npm run clean && npm run build
+	mkdir -p javascript/dist/esm/protobuf.js/gen
+	cp javascript/protobuf.js/gen/*.js javascript/dist/esm/protobuf.js/gen/
 
 $(GEN)/javascript: $(GEN)/protobuf.js $(GEN)/protobuf-es $(GEN)/google-protobuf $(BIN)/protoc Makefile
 
@@ -78,27 +80,22 @@ $(GEN)/protobuf.js: $(BIN)/protoc Makefile
 	   sed -i'' 's/ implements IMessageSetCorrect {/ {/' javascript/protobuf.js/gen/protos_pb.d.ts; \
        sed -i'' 's/import \* as $$protobuf from \"protobufjs\/minimal\";/import $$protobuf from \"protobufjs\/minimal\.js\";/' javascript/protobuf.js/gen/protos_pb.js; \
     fi; \
-	mkdir -p javascript/dist/esm/gen/protobuf.js/
-	mv javascript/protobuf.js/gen/*.js javascript/dist/esm/gen/protobuf.js/
-	@mkdir -p $(@D)
-	@touch $(@)
 
 $(GEN)/protobuf-es: $(BIN)/protoc Makefile
 	@rm -rf javascript/protobuf-es/gen/*
+	@mkdir -p javascript/protobuf-es/gen
 	$(BIN)/protoc --plugin javascript/node_modules/.bin/protoc-gen-es --es_out javascript/protobuf-es/gen --es_opt ts_nocheck=false,target=ts \
 		--proto_path $(PB) --proto_path $(PB)/src \
 		conformance/conformance.proto \
 		google/protobuf/test_messages_proto2.proto \
 		google/protobuf/test_messages_proto3.proto
-	@mkdir -p $(@D)
-	@touch $(@)
 
 $(GEN)/google-protobuf: $(BIN)/protoc Makefile
+	@rm -rf javascript/google-protobuf/gen/*
+	@mkdir -p javascript/google-protobuf/gen
 	$(BIN)/protoc --plugin=$(BIN)/protoc-gen-js --js_out=import_style=commonjs,binary:javascript/google-protobuf/gen --proto_path $(PB) --proto_path $(PB)/src conformance/conformance.proto \
 		google/protobuf/test_messages_proto2.proto \
 		google/protobuf/test_messages_proto3.proto
-	@mkdir -p $(@D)
-	@touch $(@)
 
 
 .PHONY: help
