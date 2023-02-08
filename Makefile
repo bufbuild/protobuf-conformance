@@ -12,6 +12,8 @@ BUILD = .tmp/build
 GEN   = .tmp/gen
 PB   =  .tmp/protobuf-$(GOOGLE_PROTOBUF_VERSION)
 GOOGLE_PROTOBUF_VERSION = 21.12
+GOOGLE_PROTOBUF_JS_VERSION = 3.21.2
+GOOGLE_PROTOBUF_JS = .tmp/protobuf-javascript-$(GOOGLE_PROTOBUF_JS_VERSION)
 BAZEL_VERSION = 5.4.0
 
 node_modules: javascript/package-lock.json
@@ -24,6 +26,13 @@ $(PB):
 		> $(TMP)/protobuf-$(GOOGLE_PROTOBUF_VERSION).tar.gz
 	tar -xzf $(TMP)/protobuf-$(GOOGLE_PROTOBUF_VERSION).tar.gz -C $(TMP)/
 
+$(GOOGLE_PROTOBUF_JS):
+	echo $(GOOGLE_PROTOBUF_JS)
+	@mkdir -p $(TMP)
+	curl -L https://github.com/protocolbuffers/protobuf-javascript/archive/refs/tags/v$(GOOGLE_PROTOBUF_JS_VERSION).tar.gz \
+		> $(TMP)/protobuf-javascript-$(GOOGLE_PROTOBUF_JS_VERSION).tar.gz
+	tar -xzf $(TMP)/protobuf-javascript-$(GOOGLE_PROTOBUF_JS_VERSION).tar.gz -C $(TMP)/
+
 $(BIN)/protoc: $(PB)
 	@mkdir -p $(@D)
 	cd $(PB) && USE_BAZEL_VERSION=$(BAZEL_VERSION) bazel build protoc
@@ -34,6 +43,12 @@ $(BIN)/conformance_test_runner: $(PB)
 	@mkdir -p $(@D)
 	cd $(PB) && USE_BAZEL_VERSION=$(BAZEL_VERSION) bazel build test_messages_proto3_proto conformance:conformance_proto conformance:conformance_test conformance:conformance_test_runner
 	cp -f $(PB)/bazel-bin/conformance/conformance_test_runner $(@D)
+	@touch $(@)
+
+$(BIN)/protoc-gen-js: $(GOOGLE_PROTOBUF_JS) Makefile
+	@mkdir -p $(@D)
+	cd $(GOOGLE_PROTOBUF_JS) && USE_BAZEL_VERSION=$(BAZEL_VERSION) bazel build generator:protoc-gen-js
+	cp -f $(GOOGLE_PROTOBUF_JS)/bazel-bin/generator/protoc-gen-js $(@D)
 	@touch $(@)
 
 $(BIN)/license-header: Makefile
@@ -49,27 +64,42 @@ $(BUILD)/javascript: $(GEN)/javascript node_modules $(shell find javascript -nam
 	@touch $(@)
 	cd javascript && npm run clean && npm run build
 
-$(GEN)/javascript: $(BIN)/protoc Makefile
-	@rm -rf javascript/gen/*
-	$(BIN)/protoc --plugin javascript/node_modules/.bin/protoc-gen-es --es_out javascript/gen --es_opt ts_nocheck=false,target=ts \
+$(GEN)/javascript: $(GEN)/protobuf.js $(GEN)/protobuf-es $(GEN)/google-protobuf $(BIN)/protoc Makefile
+
+$(GEN)/protobuf.js: $(BIN)/protoc Makefile
+	@rm -rf javascript/protobuf.js/gen/*
+	@mkdir -p javascript/protobuf.js/gen
+	javascript/node_modules/.bin/pbjs -t static-module -w es6 -o javascript/protobuf.js/gen/protos_pb.js $(PB)/conformance/conformance.proto $(PB)/src/google/protobuf/any.proto $(PB)/src/google/protobuf/field_mask.proto $(PB)/src/google/protobuf/timestamp.proto $(PB)/src/google/protobuf/duration.proto $(PB)/src/google/protobuf/struct.proto $(PB)/src/google/protobuf/wrappers.proto $(PB)/src/google/protobuf/test_messages_proto3.proto $(PB)/src/google/protobuf/test_messages_proto2.proto
+	javascript/node_modules/.bin/pbts -o javascript/protobuf.js/gen/protos_pb.d.ts javascript/protobuf.js/gen/protos_pb.js
+	if [ $(shell uname -s) == "Darwin" ] ; then \
+	   sed -i '' 's/ implements IMessageSetCorrect {/ {/' javascript/protobuf.js/gen/protos_pb.d.ts; \
+       sed -i '' 's/import \* as $$protobuf from \"protobufjs\/minimal\";/import $$protobuf from \"protobufjs\/minimal\.js\";/' javascript/protobuf.js/gen/protos_pb.js; \
+    else \
+	   sed -i'' 's/ implements IMessageSetCorrect {/ {/' javascript/protobuf.js/gen/protos_pb.d.ts; \
+       sed -i'' 's/import \* as $$protobuf from \"protobufjs\/minimal\";/import $$protobuf from \"protobufjs\/minimal\.js\";/' javascript/protobuf.js/gen/protos_pb.js; \
+    fi; \
+	mkdir -p javascript/dist/esm/gen/protobuf.js/
+	mv javascript/protobuf.js/gen/*.js javascript/dist/esm/gen/protobuf.js/
+	@mkdir -p $(@D)
+	@touch $(@)
+
+$(GEN)/protobuf-es: $(BIN)/protoc Makefile
+	@rm -rf javascript/protobuf-es/gen/*
+	$(BIN)/protoc --plugin javascript/node_modules/.bin/protoc-gen-es --es_out javascript/protobuf-es/gen --es_opt ts_nocheck=false,target=ts \
 		--proto_path $(PB) --proto_path $(PB)/src \
 		conformance/conformance.proto \
 		google/protobuf/test_messages_proto2.proto \
 		google/protobuf/test_messages_proto3.proto
-	@mkdir -p javascript/gen/protobufjs
-	javascript/node_modules/.bin/pbjs -t static-module -w es6 -o javascript/gen/protobufjs/protos_pb.js $(PB)/conformance/conformance.proto $(PB)/src/google/protobuf/any.proto $(PB)/src/google/protobuf/field_mask.proto $(PB)/src/google/protobuf/timestamp.proto $(PB)/src/google/protobuf/duration.proto $(PB)/src/google/protobuf/struct.proto $(PB)/src/google/protobuf/wrappers.proto $(PB)/src/google/protobuf/test_messages_proto3.proto $(PB)/src/google/protobuf/test_messages_proto2.proto
-	javascript/node_modules/.bin/pbts -o javascript/gen/protobufjs/protos_pb.d.ts javascript/gen/protobufjs/protos_pb.js
-	if [ $(shell uname -s) == "Darwin" ] ; then \
-	   sed -i '' 's/ implements IMessageSetCorrect {/ {/' javascript/gen/protobufjs/protos_pb.d.ts; \
-       sed -i '' 's/import \* as $$protobuf from \"protobufjs\/minimal\";/import $$protobuf from \"protobufjs\/minimal\.js\";/' javascript/gen/protobufjs/protos_pb.js; \
-    else \
-	   sed -i'' 's/ implements IMessageSetCorrect {/ {/' javascript/gen/protobufjs/protos_pb.d.ts; \
-       sed -i'' 's/import \* as $$protobuf from \"protobufjs\/minimal\";/import $$protobuf from \"protobufjs\/minimal\.js\";/' javascript/gen/protobufjs/protos_pb.js; \
-    fi; \
-	mkdir -p javascript/dist/esm/gen/protobufjs/
-	mv javascript/gen/protobufjs/*.js javascript/dist/esm/gen/protobufjs/
 	@mkdir -p $(@D)
 	@touch $(@)
+
+$(GEN)/google-protobuf: $(BIN)/protoc Makefile
+	$(BIN)/protoc --plugin=$(BIN)/protoc-gen-js --js_out=import_style=commonjs,binary:javascript/google-protobuf/gen --proto_path $(PB) --proto_path $(PB)/src conformance/conformance.proto \
+		google/protobuf/test_messages_proto2.proto \
+		google/protobuf/test_messages_proto3.proto
+	@mkdir -p $(@D)
+	@touch $(@)
+
 
 .PHONY: help
 help: ## Describe useful make targets
@@ -102,7 +132,12 @@ test-conformance-protobuf-es: $(BIN)/conformance_test_runner $(BUILD)/javascript
 .PHONY: test-conformance-pbjs
 test-conformance-pbjs: $(BIN)/conformance_test_runner $(BUILD)/javascript
 	cd javascript \
-		&& $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list protobufjs/failing_tests_list.txt --text_format_failure_list protobufjs/failing_tests_text_format.txt --output_dir protobufjs bin/protobufjs/conformance_esm.js || true \
+		&& $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list protobuf.js/failing_tests_list.txt --text_format_failure_list protobuf.js/failing_tests_text_format.txt --output_dir protobuf.js bin/protobuf.js/conformance_esm.js || true \
+
+.PHONY: test-conformance-google-protobuf
+test-conformance-google-protobuf: $(BIN)/conformance_test_runner $(BUILD)/javascript
+	cd javascript \
+		&& $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list protobuf.js/failing_tests_list.txt --text_format_failure_list protobuf.js/failing_tests_text_format.txt --output_dir protobuf.js bin/google-protobuf/conformance_esm.js || true \
 
 .PHONY: lint
 lint: node_modules $(BUILD)/javascript
