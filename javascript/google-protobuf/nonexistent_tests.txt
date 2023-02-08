@@ -1,0 +1,10 @@
+Recommended.Proto2.JsonInput.FieldNameExtension.Validator
+Required.Proto3.JsonInput.Int64FieldMaxValueNotQuoted.JsonOutput
+Required.Proto3.JsonInput.Int64FieldMaxValueNotQuoted.ProtobufOutput
+Required.Proto3.JsonInput.Int64FieldMinValueNotQuoted.JsonOutput
+Required.Proto3.JsonInput.Int64FieldMinValueNotQuoted.ProtobufOutput
+Required.Proto3.JsonInput.Int64FieldTooLarge
+Required.Proto3.JsonInput.Int64FieldTooSmall
+Required.Proto3.JsonInput.Uint64FieldMaxValueNotQuoted.JsonOutput
+Required.Proto3.JsonInput.Uint64FieldMaxValueNotQuoted.ProtobufOutput
+Required.Proto3.JsonInput.Uint64FieldTooLarge

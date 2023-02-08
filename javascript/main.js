@@ -30,6 +30,11 @@ const obj = {
     recommendedFailures: [],
     requiredFailures: [],
   },
+  "google-protobuf": {
+    resultsFile: "google-protobuf/failing_tests.txt",
+    recommendedFailures: [],
+    requiredFailures: [],
+  },
 };
 
 for (const config of Object.values(obj)) {

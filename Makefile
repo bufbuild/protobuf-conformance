@@ -65,6 +65,11 @@ $(BUILD)/javascript: $(GEN)/javascript node_modules $(shell find javascript -nam
 	cd javascript && npm run clean && npm run build
 	mkdir -p javascript/dist/esm/protobuf.js/gen
 	cp javascript/protobuf.js/gen/*.js javascript/dist/esm/protobuf.js/gen/
+	mkdir -p javascript/dist/esm/google-protobuf/gen
+	cp -r javascript/google-protobuf/gen/conformance/conformance_pb.js javascript/dist/esm/google-protobuf/gen/conformance/conformance_pb.cjs
+	cp -r javascript/google-protobuf/gen/google/protobuf/test_messages_proto2_pb.js javascript/dist/esm/google-protobuf/gen/google/protobuf/test_messages_proto2_pb.cjs
+	cp -r javascript/google-protobuf/gen/google/protobuf/test_messages_proto3_pb.js javascript/dist/esm/google-protobuf/gen/google/protobuf/test_messages_proto3_pb.cjs
+	cp javascript/google-protobuf/conformance.cjs javascript/dist/esm/google-protobuf/conformance.cjs
 
 $(GEN)/javascript: $(GEN)/protobuf.js $(GEN)/protobuf-es $(GEN)/google-protobuf $(BIN)/protoc Makefile
 
@@ -117,7 +122,7 @@ build: $(BUILD)/javascript
 test: test-conformance
 
 .PHONY: test-conformance
-test-conformance: test-conformance-protobuf-es test-conformance-pbjs
+test-conformance: test-conformance-protobuf-es test-conformance-pbjs test-conformance-google-protobuf
 	cd javascript && npm run report
 
 .PHONY: test-conformance-protobuf-es
@@ -134,7 +139,7 @@ test-conformance-pbjs: $(BIN)/conformance_test_runner $(BUILD)/javascript
 .PHONY: test-conformance-google-protobuf
 test-conformance-google-protobuf: $(BIN)/conformance_test_runner $(BUILD)/javascript
 	cd javascript \
-		&& $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list protobuf.js/failing_tests_list.txt --text_format_failure_list protobuf.js/failing_tests_text_format.txt --output_dir protobuf.js bin/google-protobuf/conformance_esm.js || true \
+		&& $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list google-protobuf/failing_tests_list.txt --text_format_failure_list google-protobuf/failing_tests_text_format.txt --output_dir google-protobuf bin/google-protobuf/conformance_esm.js || true \
 
 .PHONY: lint
 lint: node_modules $(BUILD)/javascript

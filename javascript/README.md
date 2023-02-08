@@ -46,3 +46,4 @@ We also mark the same TextFormat tests as expected failures.
 Protobuf-ES (BigInt) | 0 | 0 | 0
 Protobuf-ES (Without BigInt) | 0 | 0 | 0
 protobuf.js | 465 | 912 | 1377
+google-protobuf | 112 | 74 | 186
