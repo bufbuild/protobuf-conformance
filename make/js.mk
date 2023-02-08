@@ -52,7 +52,8 @@ $(BUILD)/javascript: $(GEN)/javascript node_modules $(shell find javascript -nam
 	cd javascript && npm run clean && npm run build
 	mkdir -p javascript/dist/esm/protobuf.js/gen
 	cp javascript/protobuf.js/gen/*.js javascript/dist/esm/protobuf.js/gen/
-	mkdir -p javascript/dist/esm/google-protobuf/gen
+	mkdir -p javascript/dist/esm/google-protobuf/gen/conformance
+	mkdir -p javascript/dist/esm/google-protobuf/gen/google/protobuf
 	cp -r javascript/google-protobuf/gen/conformance/conformance_pb.js javascript/dist/esm/google-protobuf/gen/conformance/conformance_pb.cjs
 	cp -r javascript/google-protobuf/gen/google/protobuf/test_messages_proto2_pb.js javascript/dist/esm/google-protobuf/gen/google/protobuf/test_messages_proto2_pb.cjs
 	cp -r javascript/google-protobuf/gen/google/protobuf/test_messages_proto3_pb.js javascript/dist/esm/google-protobuf/gen/google/protobuf/test_messages_proto3_pb.cjs
