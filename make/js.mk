@@ -41,7 +41,7 @@ $(GEN)/protobuf-es: $(BIN)/protoc Makefile
 		google/protobuf/test_messages_proto2.proto \
 		google/protobuf/test_messages_proto3.proto
 
-$(GEN)/google-protobuf: $(BIN)/protoc Makefile
+$(GEN)/google-protobuf: $(BIN)/protoc $(BIN)/protoc-gen-js Makefile
 	@rm -rf javascript/google-protobuf/gen/*
 	@mkdir -p javascript/google-protobuf/gen
 	$(BIN)/protoc --plugin=$(BIN)/protoc-gen-js --js_out=import_style=commonjs,binary:javascript/google-protobuf/gen --proto_path $(PB) --proto_path $(PB)/src conformance/conformance.proto \
