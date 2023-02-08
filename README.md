@@ -7,7 +7,7 @@ The test suites are divided by language, with various libraries inside each lang
 
 The following libraries are tested:
 
-- Protobuf-ES
-- ProtobufJS
-- Google Protocol Buffers
+- [Protobuf-ES](https://github.com/bufbuild/protobuf-es)
+- [protobuf.js](https://github.com/protobufjs/protobuf.js)
+- [Google Protocol Buffers](https://github.com/protocolbuffers/protobuf-javascript)
 
