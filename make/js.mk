@@ -17,7 +17,7 @@ $(BIN)/protoc-gen-js: $(GOOGLE_PROTOBUF_JS) Makefile
 	cp -f $(GOOGLE_PROTOBUF_JS)/bazel-bin/generator/protoc-gen-js $(@D)
 	@touch $(@)
 
-$(GEN)/protobuf.js: $(BIN)/protoc Makefile
+$(GEN)/protobuf.js: $(BIN)/protoc Makefile node_modules
 	@rm -rf javascript/protobuf.js/gen/*
 	@mkdir -p javascript/protobuf.js/gen
 	javascript/node_modules/.bin/pbjs -t static-module -w es6 -o javascript/protobuf.js/gen/protos_pb.js $(PB)/conformance/conformance.proto $(PB)/src/google/protobuf/any.proto $(PB)/src/google/protobuf/field_mask.proto $(PB)/src/google/protobuf/timestamp.proto $(PB)/src/google/protobuf/duration.proto $(PB)/src/google/protobuf/struct.proto $(PB)/src/google/protobuf/wrappers.proto $(PB)/src/google/protobuf/test_messages_proto3.proto $(PB)/src/google/protobuf/test_messages_proto2.proto
