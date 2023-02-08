@@ -4,6 +4,8 @@ This package implements JavaScript testees for the protocol buffers [conformance
 suite](https://github.com/protocolbuffers/protobuf/tree/main/conformance) and runs the tests against Protobuf-ES as well
 as other JavaScript Protobuf libraries for comparison. 
 
+To run the JavaScript conformance tests, run `make` from the repo root.
+
 ## Expected Test Failures
 
 The conformance test suite allows test runners to specify a list of tests that are expected to fail.  The tests denoted
