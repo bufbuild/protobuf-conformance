@@ -2,7 +2,7 @@
 
 This package implements a testee for the protocol buffers [conformance test 
 suite](https://github.com/protocolbuffers/protobuf/tree/main/conformance) and runs the tests against Protobuf-ES as well
-as ProtobufJS for comparison.  The conformance tests run on code transpiled to ECMAScript modules.
+as protobuf.js for comparison.  The conformance tests run on code transpiled to ECMAScript modules.
 
 ## Expected Test Failures
 
@@ -29,12 +29,12 @@ Finally, Protobuf-ES also specifies a list of expected failures related to the P
 supported.  These TextFormat tests are run as a separate run by the conformance runner, so this is why each invocation of the runner
 seems to run twice.
 
-### ProtobufJS
+### protobuf.js
 
-For ProtobufJS conformance tests, we use the same expected failure lists as Protobuf-ES does in its list for
-environments without `BigInt` support.  While ProtobufJS does claim to support `BigInt` 
+For protobuf.js conformance tests, we use the same expected failure lists as Protobuf-ES does in its list for
+environments without `BigInt` support.  While protobuf.js does claim to support `BigInt` 
 by [simply installing](https://github.com/protobufjs/protobuf.js#compatibility) the `long` library alongside 
-ProtobufJS, it still does not seem to pass the `BigInt` related tests.  However, in the interest of fairness, we
+protobuf.js, it still does not seem to pass the `BigInt` related tests.  However, in the interest of fairness, we
 mark these as expected to fail as Protobuf-ES does.
 
 We also mark the same TextFormat tests as expected failures.
@@ -45,4 +45,4 @@ We also mark the same TextFormat tests as expected failures.
 |---------------------|------------------------:|-----------------------:|-------------------:|
 Protobuf-ES (BigInt) | 0 | 0 | 0
 Protobuf-ES (Without BigInt) | 0 | 0 | 0
-ProtobufJS | 0 | 0 | 0
+protobuf.js | 465 | 912 | 1377

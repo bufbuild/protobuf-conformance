@@ -33,17 +33,6 @@ type MessageType =
   | protos.google.protobuf.Any
   | protos.google.protobuf.Timestamp;
 
-type MessageTypeInter =
-  protos.protobuf_test_messages.proto2.TestAllTypesProto2 &
-    protos.protobuf_test_messages.proto3.TestAllTypesProto3 &
-    protos.google.protobuf.Struct &
-    protos.google.protobuf.Value &
-    protos.google.protobuf.FieldMask &
-    protos.google.protobuf.Duration &
-    protos.google.protobuf.Int32Value &
-    protos.google.protobuf.Any &
-    protos.google.protobuf.Timestamp;
-
 interface Registry {
   [s: string]:
     | typeof TestAllTypesProto2
@@ -142,13 +131,13 @@ function test(request: protos.conformance.ConformanceRequest): Result {
     switch (request.requestedOutputFormat) {
       case 1: // PROTOBUF
         return {
-          protobufPayload: payloadType.encode(payload as MessageTypeInter),
+          protobufPayload: payloadType.encode(payload as any),
         };
 
       case 2: // JSON:
         return {
           jsonPayload: JSON.stringify(
-            payloadType.toObject(payload as MessageTypeInter)
+            payloadType.toObject(payload as any)
           ),
         };
 
