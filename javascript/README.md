@@ -51,7 +51,7 @@ We also mark the same TextFormat tests as expected failures.
 
 | library      | recommended failures             | required failures               | total         | results list   
 |---------------------|------------------------:|-----------------------:|-------------------:|--------------------:|
-Protobuf-ES (BigInt) | 0 | 0 | 0 | [View results](protobuf-es/failing_tests.txt)
-Protobuf-ES (Without BigInt) | 0 | 0 | 0 | [View results](protobuf-es/failing_tests.txt)
+Protobuf-ES (BigInt) | 0 | 0 | 0 | 
+Protobuf-ES (Without BigInt) | 0 | 0 | 0 | 
 protobuf.js | 465 | 912 | 1377 | [View results](protobuf.js/failing_tests.txt)
 google-protobuf | 112 | 74 | 186 | [View results](google-protobuf/failing_tests.txt)

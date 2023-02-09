@@ -106,6 +106,11 @@ mark these as expected to fail as Protobuf-ES does.
 
 We also mark the same TextFormat tests as expected failures.
 
+## Google Protocol Buffers
+
+For Google Protocol Buffers tests, we use the same list of expected failures for Protobuf-ES.
+
+
 ## Results
 
 | library      | recommended failures             | required failures               | total         | results list   
@@ -115,10 +120,13 @@ We also mark the same TextFormat tests as expected failures.
 for (const [key, config] of Object.entries(obj)) {
   const totalRecFailures = config.recommendedFailures.length;
   const totalReqFailures = config.requiredFailures.length;
+  const totalFailures = totalRecFailures + totalReqFailures;
+  let results = "";
+  if (totalFailures > 0) {
+    results = `[View results](${config.resultsFile})`;
+  }
 
-  markdown += `${key} | ${totalRecFailures} | ${totalReqFailures} | ${
-    totalRecFailures + totalReqFailures
-  } | [View results](${config.resultsFile})\n`;
+  markdown += `${key} | ${totalRecFailures} | ${totalReqFailures} | ${totalFailures} | ${results}\n`;
 }
 
 process.stdout.write(markdown);
