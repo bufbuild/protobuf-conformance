@@ -106,7 +106,7 @@ mark these as expected to fail as Protobuf-ES does.
 
 We also mark the same TextFormat tests as expected failures.
 
-## Google Protocol Buffers
+### Google Protocol Buffers
 
 For Google Protocol Buffers tests, we use the same list of expected failures for Protobuf-ES.
 
