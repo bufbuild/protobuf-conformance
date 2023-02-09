@@ -63,6 +63,12 @@ This package implements JavaScript testees for the protocol buffers [conformance
 suite](https://github.com/protocolbuffers/protobuf/tree/main/conformance) and runs the tests against Protobuf-ES as well
 as other JavaScript Protobuf libraries for comparison. 
 
+The following libraries are tested:
+
+- [Protobuf-ES](https://github.com/bufbuild/protobuf-es)
+- [protobuf.js](https://github.com/protobufjs/protobuf.js)
+- [Google Protocol Buffers](https://github.com/protocolbuffers/protobuf-javascript)
+
 To run the JavaScript conformance tests, run \`make\` from the repo root.
 
 ## Expected Test Failures
@@ -102,8 +108,8 @@ We also mark the same TextFormat tests as expected failures.
 
 ## Results
 
-| library      | recommended failures             | required failures               | total         |
-|---------------------|------------------------:|-----------------------:|-------------------:|
+| library      | recommended failures             | required failures               | total         | results list   
+|---------------------|------------------------:|-----------------------:|-------------------:|--------------------:|
 `;
 
 for (const [key, config] of Object.entries(obj)) {
@@ -112,7 +118,7 @@ for (const [key, config] of Object.entries(obj)) {
 
   markdown += `${key} | ${totalRecFailures} | ${totalReqFailures} | ${
     totalRecFailures + totalReqFailures
-  }\n`;
+  } | [View results](${config.resultsFile})\n`;
 }
 
 process.stdout.write(markdown);

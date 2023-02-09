@@ -4,6 +4,12 @@ This package implements JavaScript testees for the protocol buffers [conformance
 suite](https://github.com/protocolbuffers/protobuf/tree/main/conformance) and runs the tests against Protobuf-ES as well
 as other JavaScript Protobuf libraries for comparison. 
 
+The following libraries are tested:
+
+- [Protobuf-ES](https://github.com/bufbuild/protobuf-es)
+- [protobuf.js](https://github.com/protobufjs/protobuf.js)
+- [Google Protocol Buffers](https://github.com/protocolbuffers/protobuf-javascript)
+
 To run the JavaScript conformance tests, run `make` from the repo root.
 
 ## Expected Test Failures
@@ -43,9 +49,9 @@ We also mark the same TextFormat tests as expected failures.
 
 ## Results
 
-| library      | recommended failures             | required failures               | total         |
-|---------------------|------------------------:|-----------------------:|-------------------:|
-Protobuf-ES (BigInt) | 0 | 0 | 0
-Protobuf-ES (Without BigInt) | 0 | 0 | 0
-protobuf.js | 465 | 912 | 1377
-google-protobuf | 112 | 74 | 186
+| library      | recommended failures             | required failures               | total         | results list   
+|---------------------|------------------------:|-----------------------:|-------------------:|--------------------:|
+Protobuf-ES (BigInt) | 0 | 0 | 0 | [View results](protobuf-es/failing_tests.txt)
+Protobuf-ES (Without BigInt) | 0 | 0 | 0 | [View results](protobuf-es/failing_tests.txt)
+protobuf.js | 465 | 912 | 1377 | [View results](protobuf.js/failing_tests.txt)
+google-protobuf | 112 | 74 | 186 | [View results](google-protobuf/failing_tests.txt)
