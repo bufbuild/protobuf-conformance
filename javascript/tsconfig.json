@@ -17,10 +17,12 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
-
-    // We need node's module resolution, so we do not have to skip lib checks
     "moduleResolution": "Node",
-    "skipLibCheck": false,
+    // Need to skip lib checks because protobuf.js generates a weak type that proto2 TestMessage implements
+    // but the implementing class adds its own properties, so the lack of overlap causes TypeScript weak
+    // type detection to fail.  See IMessageSetCorrect for the code.
+    // https://github.com/protobufjs/protobuf.js/issues/1559
+    "skipLibCheck": true,
     "lib": [
       "ES2016",
       // ES2020.BigInt for the bigint representation of 64-bit integers

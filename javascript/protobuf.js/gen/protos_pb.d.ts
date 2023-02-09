@@ -4674,7 +4674,7 @@ export namespace protobuf_test_messages {
             }
 
             /** Represents a MessageSetCorrect. */
-            class MessageSetCorrect {
+            class MessageSetCorrect implements IMessageSetCorrect {
 
                 /**
                  * Constructs a new MessageSetCorrect.
