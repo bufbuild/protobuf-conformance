@@ -1,3 +1,5 @@
+<!--- GENERATED.  DO NOT EDIT.  -->
+
 # JavaScript Protobuf Conformance tests
 
 This package implements JavaScript testees for the protocol buffers [conformance test 
@@ -13,10 +15,6 @@ The following libraries are tested:
 To run the JavaScript conformance tests, run `make` from the repo root.
 
 ## Results Summary
-
-Conformance tests are classified based on whether they are `Required` or `Recommended`. To strictly conform to the
-protobuf spec, _all_ tests marked `Required` and `Recommended` must pass.  To enforce this, the tests are run with 
-the flag `--enforce_recommended` as specified by the conformance test runner library.
 
 The below table lists the total failures for each library, including individual totals for the `Required` and
 `Recommended` failures.
