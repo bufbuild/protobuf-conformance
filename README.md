@@ -7,6 +7,6 @@ the flag `--enforce_recommended` as specified by the conformance test runner lib
 
 The test suites are divided by language, with various libraries inside each language directory.
 
-## [JavaScript](javascript)
+### [JavaScript](javascript)
 
 
