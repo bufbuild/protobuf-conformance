@@ -1,4 +1,3 @@
-# the text format is not implemented
 Recommended.Proto3.TextFormatInput.StringLiteralLongUnicodeEscapeSurrogateFirstOnlyBytes
 Recommended.Proto3.TextFormatInput.StringLiteralLongUnicodeEscapeSurrogateFirstOnlyString
 Recommended.Proto3.TextFormatInput.StringLiteralLongUnicodeEscapeSurrogatePairBytes

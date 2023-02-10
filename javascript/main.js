@@ -16,30 +16,60 @@ import { existsSync, readFileSync } from "fs";
 
 const obj = {
   "Protobuf-ES (BigInt)": {
-    resultsFile: "protobuf-es/failing_tests.txt",
-    recommendedFailures: [],
-    requiredFailures: [],
+    failingTests: {
+      fileName: "protobuf-es/failing_tests_with_bigint.txt",
+      recommendedFailures: [],
+      requiredFailures: [],
+    },
+    failingTextFormatTests: {
+      fileName: "protobuf-es/failing_tests_text_format.txt",
+      recommendedFailures: [],
+      requiredFailures: [],
+    },
   },
   "Protobuf-ES (Without BigInt)": {
-    resultsFile: "protobuf-es/failing_tests.txt",
-    recommendedFailures: [],
-    requiredFailures: [],
+    failingTests: {
+      fileName: "protobuf-es/failing_tests_without_bigint.txt",
+      recommendedFailures: [],
+      requiredFailures: [],
+    },
+    failingTextFormatTests: {
+      fileName: "protobuf-es/failing_tests_text_format.txt",
+      recommendedFailures: [],
+      requiredFailures: [],
+    },
   },
   "protobuf.js": {
-    resultsFile: "protobuf.js/failing_tests.txt",
-    recommendedFailures: [],
-    requiredFailures: [],
+    failingTests: {
+      fileName: "protobuf.js/failing_tests_list.txt",
+      recommendedFailures: [],
+      requiredFailures: [],
+    },
+    failingTextFormatTests: {
+      fileName: "protobuf.js/failing_tests_text_format.txt",
+      recommendedFailures: [],
+      requiredFailures: [],
+    },
   },
   "google-protobuf": {
-    resultsFile: "google-protobuf/failing_tests.txt",
-    recommendedFailures: [],
-    requiredFailures: [],
+    failingTests: {
+      fileName: "google-protobuf/failing_tests_list.txt",
+      recommendedFailures: [],
+      requiredFailures: [],
+    },
+    failingTextFormatTests: {
+      fileName: "google-protobuf/failing_tests_text_format.txt",
+      recommendedFailures: [],
+      requiredFailures: [],
+    },
   },
 };
 
-for (const config of Object.values(obj)) {
-  if (existsSync(config.resultsFile)) {
-    const failures = readFileSync(config.resultsFile).toString().split("\n");
+function calc(config, testType) {
+  if (existsSync(config[testType].fileName)) {
+    const failures = readFileSync(config[testType].fileName)
+      .toString()
+      .split("\n");
 
     failures.forEach((line) => {
       let letter = line.charAt(0);
@@ -47,13 +77,66 @@ for (const config of Object.values(obj)) {
         const type = line.substring(0, line.indexOf("."));
         if (type !== "") {
           if (type === "Required") {
-            config.requiredFailures.push(line);
+            config[testType].requiredFailures.push(line);
           } else if (type === "Recommended") {
-            config.recommendedFailures.push(line);
+            config[testType].recommendedFailures.push(line);
           }
         }
       }
     });
+  }
+  return config;
+}
+
+function calc2(tests, failures) {
+  failures.forEach((line) => {
+    let letter = line.charAt(0);
+    if (letter !== "#") {
+      const type = line.substring(0, line.indexOf("."));
+      if (type !== "") {
+        if (type === "Required") {
+          tests.requiredFailures.push(line);
+        } else if (type === "Recommended") {
+          tests.recommendedFailures.push(line);
+        }
+      }
+    }
+  });
+  return tests;
+}
+
+for (let config of Object.values(obj)) {
+  // config = calc(config, "failingTests");
+  // config = calc(config, "failingTextFormatTests");
+
+  if (existsSync(config.failingTests.fileName)) {
+    const failures = readFileSync(config.failingTests.fileName)
+      .toString()
+      .split("\n");
+
+    calc2(config.failingTests, failures);
+
+    // failures.forEach((line) => {
+    //   let letter = line.charAt(0);
+    //   if (letter !== "#") {
+    //     const type = line.substring(0, line.indexOf("."));
+    //     if (type !== "") {
+    //       if (type === "Required") {
+    //         config.failingTests.requiredFailures.push(line);
+    //       } else if (type === "Recommended") {
+    //         config.failingTests.recommendedFailures.push(line);
+    //       }
+    //     }
+    //   }
+    // });
+  }
+
+  if (existsSync(config.failingTextFormatTests.fileName)) {
+    const failures = readFileSync(config.failingTextFormatTests.fileName)
+      .toString()
+      .split("\n");
+
+    calc2(config.failingTextFormatTests, failures);
   }
 }
 
@@ -113,20 +196,37 @@ For Google Protocol Buffers tests, we use the same list of expected failures for
 
 ## Results
 
-| library      | recommended failures             | required failures               | total         | results list   
-|---------------------|------------------------:|-----------------------:|-------------------:|--------------------:|
+
+| library     | failures<br>(required/recommended)  | total  | text format failures<br>(required/recommended) | total     
+|-------------|------------------------------------:|-------:|---------------------------------------:|--------------:|
 `;
 
 for (const [key, config] of Object.entries(obj)) {
-  const totalRecFailures = config.recommendedFailures.length;
-  const totalReqFailures = config.requiredFailures.length;
+  const totalRecFailures = config.failingTests.recommendedFailures.length;
+  const totalReqFailures = config.failingTests.requiredFailures.length;
   const totalFailures = totalRecFailures + totalReqFailures;
+
+  // Text Format
+  const totalTextFormatRecFailures =
+    config.failingTextFormatTests.recommendedFailures.length;
+  const totalTextFormatReqFailures =
+    config.failingTextFormatTests.requiredFailures.length;
+  const totalTextFormatFailures =
+    totalTextFormatRecFailures + totalTextFormatReqFailures;
   let results = "";
   if (totalFailures > 0) {
-    results = `[View results](${config.resultsFile})`;
+    results = `[${totalFailures}](${config.failingTests.fileName})`;
+  } else {
+    results = `${totalFailures}`;
+  }
+  let textFormatResults = "";
+  if (totalTextFormatFailures > 0) {
+    textFormatResults = `[${totalTextFormatRecFailures}](${config.failingTextFormatTests.fileName})`;
+  } else {
+    textFormatResults = `${totalTextFormatRecFailures}`;
   }
 
-  markdown += `${key} | ${totalRecFailures} | ${totalReqFailures} | ${totalFailures} | ${results}\n`;
+  markdown += `${key} | (${totalReqFailures} / ${totalRecFailures}) | ${results} | ${totalTextFormatReqFailures} / ${totalTextFormatRecFailures} | ${textFormatResults}\n`;
 }
 
 process.stdout.write(markdown);

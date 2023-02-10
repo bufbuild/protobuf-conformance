@@ -54,9 +54,10 @@ For Google Protocol Buffers tests, we use the same list of expected failures for
 
 ## Results
 
-| library      | recommended failures             | required failures               | total         | results list   
-|---------------------|------------------------:|-----------------------:|-------------------:|--------------------:|
-Protobuf-ES (BigInt) | 0 | 0 | 0 | 
-Protobuf-ES (Without BigInt) | 0 | 0 | 0 | 
-protobuf.js | 465 | 912 | 1377 | [View results](protobuf.js/failing_tests.txt)
-google-protobuf | 112 | 74 | 186 | [View results](google-protobuf/failing_tests.txt)
+
+| library     | failures<br>(required/recommended)  | total  | text format failures<br>(required/recommended) | total     
+|-------------|------------------------------------:|-------:|---------------------------------------:|--------------:|
+Protobuf-ES (BigInt) | (0 / 1) | [1](protobuf-es/failing_tests_with_bigint.txt) | 88 / 24 | [24](protobuf-es/failing_tests_text_format.txt)
+Protobuf-ES (Without BigInt) | (9 / 1) | [10](protobuf-es/failing_tests_without_bigint.txt) | 88 / 24 | [24](protobuf-es/failing_tests_text_format.txt)
+protobuf.js | (921 / 466) | [1387](protobuf.js/failing_tests_list.txt) | 88 / 24 | [24](protobuf.js/failing_tests_text_format.txt)
+google-protobuf | (383 / 207) | [590](google-protobuf/failing_tests_list.txt) | 88 / 24 | [24](google-protobuf/failing_tests_text_format.txt)

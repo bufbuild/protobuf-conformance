@@ -1,3 +1,16 @@
+// This file is mostly copied from the conformance testee files located at:
+// https://github.com/protocolbuffers/protobuf-javascript/blob/main/experimental/runtime/kernel/conformance/
+// - conformance_testee.js
+// - conformance_testee_runner_node.js
+//
+// The main differences between this file and the above are:
+// - The above files were combined into this one file
+// - The test runners in the protobuf-javascript repo use handwritten code instead of generated code for the Protobuf
+//   files used in the test.  These tests generate the code from the Protobuf files using protoc-gen-js.
+// - This file uses CommonJS instead of the Closure Compiler
+// - Any unsupported input formats (JSON, TextFormat) that were skipped in the original test runner files have been
+//   modified to instead fail the tests just for transparency.  Output formats that were skipped were left as skipped
+//   to match Protobuf-ES.
 const {
   ConformanceRequest,
   ConformanceResponse,
@@ -49,14 +62,14 @@ function doTest(request) {
   if (
     request.getPayloadCase() === ConformanceRequest.PayloadCase.JSON_PAYLOAD
   ) {
-    response.setSkipped("Json is not supported as input format.");
+    response.setRuntimeError("Json is not supported as input format.");
     return response;
   }
 
   if (
     request.getPayloadCase() === ConformanceRequest.PayloadCase.TEXT_PAYLOAD
   ) {
-    response.setSkipped("Text format is not supported as input format.");
+    response.setRuntimeError("Text format is not supported as input format.");
     return response;
   }
 
