@@ -60,18 +60,18 @@ test-js-conformance: test-conformance-protobuf-es test-conformance-pbjs test-con
 .PHONY: test-conformance-protobuf-es
 test-conformance-protobuf-es: $(BIN)/conformance_test_runner $(BUILD)/javascript
 	cd javascript \
-		&& BUF_BIGINT_DISABLE=0 $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list protobuf-es/failing_tests_with_bigint.txt --text_format_failure_list protobuf-es/failing_tests_text_format.txt --output_dir protobuf-es bin/protobuf-es/conformance_esm.js || true \
-		&& BUF_BIGINT_DISABLE=1 $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list protobuf-es/failing_tests_without_bigint.txt --text_format_failure_list protobuf-es/failing_tests_text_format.txt --output_dir protobuf-es bin/protobuf-es/conformance_esm.js || true
+		&& BUF_BIGINT_DISABLE=0 $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list protobuf-es/failing_tests_with_bigint.txt --text_format_failure_list protobuf-es/failing_tests_text_format.txt --output_dir protobuf-es bin/protobuf-es/conformance_esm.js \
+		&& BUF_BIGINT_DISABLE=1 $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list protobuf-es/failing_tests_without_bigint.txt --text_format_failure_list protobuf-es/failing_tests_text_format.txt --output_dir protobuf-es bin/protobuf-es/conformance_esm.js
 
 .PHONY: test-conformance-pbjs
 test-conformance-pbjs: $(BIN)/conformance_test_runner $(BUILD)/javascript
 	cd javascript \
-		&& $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list protobuf.js/failing_tests_list.txt --text_format_failure_list protobuf.js/failing_tests_text_format.txt --output_dir protobuf.js bin/protobuf.js/conformance_esm.js || true \
+		&& $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list protobuf.js/failing_tests_list.txt --text_format_failure_list protobuf.js/failing_tests_text_format.txt --output_dir protobuf.js bin/protobuf.js/conformance_esm.js \
 
 .PHONY: test-conformance-google-protobuf
 test-conformance-google-protobuf: $(BIN)/conformance_test_runner $(BUILD)/javascript
 	cd javascript \
-		&& $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list google-protobuf/failing_tests_list.txt --text_format_failure_list google-protobuf/failing_tests_text_format.txt --output_dir google-protobuf bin/google-protobuf/conformance_esm.js || true \
+		&& $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list google-protobuf/failing_tests_list.txt --text_format_failure_list google-protobuf/failing_tests_text_format.txt --output_dir google-protobuf bin/google-protobuf/conformance_esm.js \
 
 .PHONY: lint
 lint: node_modules $(BUILD)/javascript
