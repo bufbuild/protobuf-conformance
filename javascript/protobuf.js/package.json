@@ -1,0 +1,26 @@
+{
+  "name": "protobuf.js-conformance",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf ./dist/esm/* ./dist/types/*",
+    "build": "npm run build:esm+types && npm run copy:gen",
+    "build:esm+types": "./node_modules/typescript/bin/tsc --project tsconfig.json --module ES2015 --outDir ./dist/esm --declaration --declarationDir ./dist/types",
+    "copy:gen": "mkdir -p dist/esm/gen && cp gen/*.js dist/esm/gen"
+  },
+  "type": "module",
+  "types": "./dist/types/index.d.ts",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "eslint": "^8.31.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "long": "^5.2.1",
+    "prettier": "^2.8.4",
+    "protobufjs": "^7.1.2",
+    "protobufjs-cli": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.13.0"
+  }
+}

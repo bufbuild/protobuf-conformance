@@ -1,0 +1,23 @@
+{
+  "name": "google-protobuf-conformance",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf ./dist/cjs/*",
+    "build": "npm run mkdir && npm run copy:conformance && npm run copy:test2 && npm run copy:test3 && npm run copy:runner",
+    "mkdir": "mkdir -p dist/cjs/gen/conformance && mkdir -p dist/cjs/gen/google/protobuf",
+    "copy:conformance": "cp gen/conformance/conformance_pb.js dist/cjs/gen/conformance/conformance_pb.cjs",
+    "copy:test2": "cp gen/google/protobuf/test_messages_proto2_pb.js dist/cjs/gen/google/protobuf/test_messages_proto2_pb.cjs",
+    "copy:test3": "cp gen/google/protobuf/test_messages_proto3_pb.js dist/cjs/gen/google/protobuf/test_messages_proto3_pb.cjs",
+    "copy:runner": "cp conformance.cjs dist/cjs/conformance.cjs"
+  },
+  "type": "module",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "eslint": "^8.31.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "google-protobuf": "^3.21.2",
+    "prettier": "^2.8.4"
+  }
+}
