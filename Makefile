@@ -73,7 +73,7 @@ clean: ## Delete build artifacts and installed dependencies
 .PHONY: build
 build: $(BUILD)/javascript 
 
-$(BUILD)/javascript: $(GEN)/javascript $(shell find javascript -name '*.ts' -o -name '*.js')
+$(BUILD)/javascript: $(GEN)/javascript $(shell find javascript -name '*.ts' -o -name '*.cjs')
 	cd javascript/protobuf.js && npm run clean && npm run build
 	cd javascript/protobuf-es && npm run clean && npm run build
 	cd javascript/google-protobuf && npm run clean && npm run build

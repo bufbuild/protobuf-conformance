@@ -16,7 +16,7 @@ import { existsSync, readFileSync } from "fs";
 
 const libs = {
   "google-protobuf": {
-    testRunner: "javascript/google-protobuf/conformance.ts",
+    testRunner: "javascript/google-protobuf/conformance.cjs",
     failingTests: {
       fileName: "javascript/google-protobuf/failing_tests_list.txt",
       recommendedFailures: [],
@@ -92,6 +92,7 @@ The below table lists the total failures for each library, including individual 
 
 Note that none of the libraries tested implement the text format so the results for those test runs are not shown.
 
+### JavaScript
 
 | library     | failures<br>(required/recommended)  | total     
 |-------------|------------------------------------:|-------:|

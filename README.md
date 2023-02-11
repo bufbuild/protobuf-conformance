@@ -41,10 +41,11 @@ The below table lists the total failures for each library, including individual 
 
 Note that none of the libraries tested implement the text format so the results for those test runs are not shown.
 
+### JavaScript
 
 | library     | failures<br>(required/recommended)  | total     
 |-------------|------------------------------------:|-------:|
-[google-protobuf](javascript/google-protobuf/conformance.ts) | 383 / 207 | [590](javascript/google-protobuf/failing_tests_list.txt)
+[google-protobuf](javascript/google-protobuf/conformance.cjs) | 383 / 207 | [590](javascript/google-protobuf/failing_tests_list.txt)
 [Protobuf-ES (BigInt)](javascript/protobuf-es/conformance.ts) | 0 / 1 | [1](javascript/protobuf-es/failing_tests_with_bigint.txt)
 [Protobuf-ES (Without BigInt)](javascript/protobuf-es/conformance.ts) | 9 / 1 | [10](javascript/protobuf-es/failing_tests_without_bigint.txt)
 [protobuf.js](javascript/protobuf.js/conformance.ts) | 921 / 466 | [1387](javascript/protobuf.js/failing_tests_list.txt)
