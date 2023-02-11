@@ -47,24 +47,29 @@ const libs = {
 
 let markdown = `<!--- GENERATED.  DO NOT EDIT.  -->
 
-# JavaScript Protobuf Conformance tests
+# Protobuf Conformance Tests
 
-This package implements JavaScript testees for the protocol buffers [conformance test 
-suite](https://github.com/protocolbuffers/protobuf/tree/main/conformance) and runs the tests against Protobuf-ES as well
-as other JavaScript Protobuf libraries for comparison. 
+A repository which runs the protocol buffers 
+[conformance test suite](https://github.com/protocolbuffers/protobuf/tree/main/conformance) against various languages 
+and their respective Protobuf libraries. This is intended to test each libraries conformance to the protobuf spec.
 
-The following libraries are tested:
+Conformance tests are classified based on whether they are \`Required\` or \`Recommended\`. To strictly conform to the
+protobuf spec, _all_ tests marked \`Required\` and \`Recommended\` must pass.  To enforce this, the tests are run with 
+the flag \`--enforce_recommended\` as specified by the conformance test runner library.
 
+## Running the tests
+
+To run the conformance tests, run \`make\` from the repo root.
+
+## Languages
+
+The following languages and libraries are tested:
+
+### JavaScript
+
+- [Google Protocol Buffers](https://github.com/protocolbuffers/protobuf-javascript)
 - [Protobuf-ES](https://github.com/bufbuild/protobuf-es)
 - [protobuf.js](https://github.com/protobufjs/protobuf.js)
-- [Google Protocol Buffers](https://github.com/protocolbuffers/protobuf-javascript)
-
-To run the JavaScript conformance tests, run \`make\` from the repo root.
-
-## Results Summary
-
-The below table lists the total failures for each library, including individual totals for the \`Required\` and
-\`Recommended\` failures.
 
 ### A note on Protobuf-ES
 
@@ -76,11 +81,11 @@ our string-based fallback for 64-bit integers, the conformance tests are run wit
 As a result of the above, Protobuf-ES specifies two different sets of expected test failures depending on whether
 it is running in an environment with \`BigInt\` support.  
 
-### Text Format Tests 
-
-Note that none of the libraries tested implement the text format so the results for those test runs are not shown.
-
 ## Results
+
+The below table lists the total failures for each library, including individual totals for the \`Required\` and
+\`Recommended\` failures.  Note that none of the libraries tested implement the text format so the results for those 
+test runs are not shown.
 
 
 | library     | failures<br>(required/recommended)  | total     

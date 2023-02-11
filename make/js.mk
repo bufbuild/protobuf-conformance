@@ -55,7 +55,7 @@ $(BUILD)/javascript: $(GEN)/javascript node_modules $(shell find javascript -nam
 
 .PHONY: test-js-conformance
 test-js-conformance: test-conformance-protobuf-es test-conformance-pbjs test-conformance-google-protobuf
-	cd javascript && npm run report
+	node javascript/main.js > ./README.md
 
 .PHONY: test-conformance-protobuf-es
 test-conformance-protobuf-es: $(BIN)/conformance_test_runner $(BUILD)/javascript
