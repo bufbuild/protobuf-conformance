@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-import "../dist/cjs/conformance.cjs";
+import "../dist/cjs/runner.cjs";

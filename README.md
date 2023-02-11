@@ -45,7 +45,7 @@ Note that none of the libraries tested implement the text format so the results 
 
 | library     | failures<br>(required/recommended)  | total     
 |-------------|------------------------------------:|-------:|
-[google-protobuf](javascript/google-protobuf/conformance.cjs) | 0 / 0 | 0
-[Protobuf-ES (BigInt)](javascript/protobuf-es/conformance.ts) | 0 / 0 | 0
-[Protobuf-ES (Without BigInt)](javascript/protobuf-es/conformance.ts) | 0 / 0 | 0
-[protobuf.js](javascript/protobuf.js/conformance.ts) | 0 / 0 | 0
+[google-protobuf](impl/google-protobuf/conformance.cjs) | 383 / 207 | [590](impl/google-protobuf/failing_tests_list.txt)
+[Protobuf-ES (BigInt)](impl/protobuf-es/conformance.ts) | 0 / 1 | [1](impl/protobuf-es/failing_tests_with_bigint.txt)
+[Protobuf-ES (Without BigInt)](impl/protobuf-es/conformance.ts) | 9 / 1 | [10](impl/protobuf-es/failing_tests_without_bigint.txt)
+[protobuf.js](impl/protobuf.js/conformance.ts) | 921 / 466 | [1387](impl/protobuf.js/failing_tests_list.txt)

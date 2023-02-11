@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-import "../dist/esm/conformance.js";
+import "../dist/esm/runner.js";

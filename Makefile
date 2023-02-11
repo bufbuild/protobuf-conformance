@@ -110,7 +110,7 @@ test: test-js-conformance
 
 .PHONY: test-js-conformance
 test-js-conformance: test-conformance-protobuf-es test-conformance-pbjs test-conformance-google-protobuf
-	node impl/main.js > ./README.md
+	node report.js > ./README.md
 
 .PHONY: test-conformance-protobuf-es
 test-conformance-protobuf-es: $(BIN)/conformance_test_runner $(BUILD)/javascript
