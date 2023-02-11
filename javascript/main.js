@@ -21,20 +21,10 @@ const libs = {
       recommendedFailures: [],
       requiredFailures: [],
     },
-    failingTextFormatTests: {
-      fileName: "protobuf-es/failing_tests_text_format.txt",
-      recommendedFailures: [],
-      requiredFailures: [],
-    },
   },
   "Protobuf-ES (Without BigInt)": {
     failingTests: {
       fileName: "protobuf-es/failing_tests_without_bigint.txt",
-      recommendedFailures: [],
-      requiredFailures: [],
-    },
-    failingTextFormatTests: {
-      fileName: "protobuf-es/failing_tests_text_format.txt",
       recommendedFailures: [],
       requiredFailures: [],
     },
@@ -45,20 +35,10 @@ const libs = {
       recommendedFailures: [],
       requiredFailures: [],
     },
-    failingTextFormatTests: {
-      fileName: "protobuf.js/failing_tests_text_format.txt",
-      recommendedFailures: [],
-      requiredFailures: [],
-    },
   },
   "google-protobuf": {
     failingTests: {
       fileName: "google-protobuf/failing_tests_list.txt",
-      recommendedFailures: [],
-      requiredFailures: [],
-    },
-    failingTextFormatTests: {
-      fileName: "google-protobuf/failing_tests_text_format.txt",
       recommendedFailures: [],
       requiredFailures: [],
     },
@@ -96,29 +76,16 @@ our string-based fallback for 64-bit integers, the conformance tests are run wit
 As a result of the above, Protobuf-ES specifies two different sets of expected test failures depending on whether
 it is running in an environment with \`BigInt\` support.  
 
+### Text Format Tests 
+
+Note that none of the libraries tested implement the text format so the results for those test runs are not shown.
+
 ## Results
 
 
-| library     | failures<br>(required/recommended)  | total  | text format failures<br>(required/recommended) | total     
-|-------------|------------------------------------:|-------:|---------------------------------------:|--------------:|
+| library     | failures<br>(required/recommended)  | total     
+|-------------|------------------------------------:|-------:|
 `;
-
-function calc(tests, failures) {
-  failures.forEach((line) => {
-    let letter = line.charAt(0);
-    if (letter !== "#") {
-      const type = line.substring(0, line.indexOf("."));
-      if (type !== "") {
-        if (type === "Required") {
-          tests.requiredFailures.push(line);
-        } else if (type === "Recommended") {
-          tests.recommendedFailures.push(line);
-        }
-      }
-    }
-  });
-  return tests;
-}
 
 for (const [key, config] of Object.entries(libs)) {
   if (existsSync(config.failingTests.fileName)) {
@@ -126,15 +93,19 @@ for (const [key, config] of Object.entries(libs)) {
       .toString()
       .split("\n");
 
-    calc(config.failingTests, failures);
-  }
-
-  if (existsSync(config.failingTextFormatTests.fileName)) {
-    const failures = readFileSync(config.failingTextFormatTests.fileName)
-      .toString()
-      .split("\n");
-
-    calc(config.failingTextFormatTests, failures);
+    failures.forEach((line) => {
+      let letter = line.charAt(0);
+      if (letter !== "#") {
+        const type = line.substring(0, line.indexOf("."));
+        if (type !== "") {
+          if (type === "Required") {
+            config.failingTests.requiredFailures.push(line);
+          } else if (type === "Recommended") {
+            config.failingTests.recommendedFailures.push(line);
+          }
+        }
+      }
+    });
   }
 
   // Failures
@@ -148,21 +119,7 @@ for (const [key, config] of Object.entries(libs)) {
     results = `${totalFailures}`;
   }
 
-  // Text Format Failures
-  const totalTextFormatRecFailures =
-    config.failingTextFormatTests.recommendedFailures.length;
-  const totalTextFormatReqFailures =
-    config.failingTextFormatTests.requiredFailures.length;
-  const totalTextFormatFailures =
-    totalTextFormatRecFailures + totalTextFormatReqFailures;
-  let textFormatResults = "";
-  if (totalTextFormatFailures > 0) {
-    textFormatResults = `[${totalTextFormatFailures}](${config.failingTextFormatTests.fileName})`;
-  } else {
-    textFormatResults = `${totalTextFormatFailures}`;
-  }
-
-  markdown += `${key} | ${totalReqFailures} / ${totalRecFailures} | ${results} | ${totalTextFormatReqFailures} / ${totalTextFormatRecFailures} | ${textFormatResults}\n`;
+  markdown += `${key} | ${totalReqFailures} / ${totalRecFailures} | ${results}\n`;
 }
 
 process.stdout.write(markdown);

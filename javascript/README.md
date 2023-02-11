@@ -29,12 +29,16 @@ our string-based fallback for 64-bit integers, the conformance tests are run wit
 As a result of the above, Protobuf-ES specifies two different sets of expected test failures depending on whether
 it is running in an environment with `BigInt` support.  
 
+### Text Format Tests 
+
+Note that none of the libraries tested implement the text format so the results for those test runs are not shown.
+
 ## Results
 
 
-| library     | failures<br>(required/recommended)  | total  | text format failures<br>(required/recommended) | total     
-|-------------|------------------------------------:|-------:|---------------------------------------:|--------------:|
-Protobuf-ES (BigInt) | 0 / 1 | [1](protobuf-es/failing_tests_with_bigint.txt) | 88 / 24 | [112](protobuf-es/failing_tests_text_format.txt)
-Protobuf-ES (Without BigInt) | 9 / 1 | [10](protobuf-es/failing_tests_without_bigint.txt) | 88 / 24 | [112](protobuf-es/failing_tests_text_format.txt)
-protobuf.js | 921 / 466 | [1387](protobuf.js/failing_tests_list.txt) | 88 / 24 | [112](protobuf.js/failing_tests_text_format.txt)
-google-protobuf | 383 / 207 | [590](google-protobuf/failing_tests_list.txt) | 88 / 24 | [112](google-protobuf/failing_tests_text_format.txt)
+| library     | failures<br>(required/recommended)  | total     
+|-------------|------------------------------------:|-------:|
+Protobuf-ES (BigInt) | 0 / 1 | [1](protobuf-es/failing_tests_with_bigint.txt)
+Protobuf-ES (Without BigInt) | 9 / 1 | [10](protobuf-es/failing_tests_without_bigint.txt)
+protobuf.js | 921 / 466 | [1387](protobuf.js/failing_tests_list.txt)
+google-protobuf | 383 / 207 | [590](google-protobuf/failing_tests_list.txt)
