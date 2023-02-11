@@ -73,35 +73,35 @@ clean: ## Delete build artifacts and installed dependencies
 .PHONY: build
 build: $(BUILD)/javascript 
 
-$(BUILD)/javascript: $(GEN)/javascript $(shell find javascript -name '*.ts' -o -name '*.cjs')
-	cd javascript/protobuf.js && npm run clean && npm run build
-	cd javascript/protobuf-es && npm run clean && npm run build
-	cd javascript/google-protobuf && npm run clean && npm run build
+$(BUILD)/javascript: $(GEN)/javascript $(shell find impl -name '*.ts' -o -name '*.cjs')
+	cd impl/protobuf.js && npm run clean && npm run build
+	cd impl/protobuf-es && npm run clean && npm run build
+	cd impl/google-protobuf && npm run clean && npm run build
 
 $(GEN)/javascript: $(GEN)/protobuf.js $(GEN)/protobuf-es $(GEN)/google-protobuf $(BIN)/protoc
 
-$(GEN)/protobuf.js: $(BIN)/protoc Makefile javascript/protobuf.js/package-lock.json
-	@rm -rf javascript/protobuf.js/gen/*
-	@mkdir -p javascript/protobuf.js/gen
-	cd javascript/protobuf.js && npm ci
-	javascript/protobuf.js/node_modules/.bin/pbjs -t static-module -w javascript/protobuf.js/wrapper.js --es6 -o javascript/protobuf.js/gen/protos_pb.js $(PB)/conformance/conformance.proto $(PB)/src/google/protobuf/any.proto $(PB)/src/google/protobuf/field_mask.proto $(PB)/src/google/protobuf/timestamp.proto $(PB)/src/google/protobuf/duration.proto $(PB)/src/google/protobuf/struct.proto $(PB)/src/google/protobuf/wrappers.proto $(PB)/src/google/protobuf/test_messages_proto3.proto $(PB)/src/google/protobuf/test_messages_proto2.proto
-	javascript/protobuf.js/node_modules/.bin/pbts -o javascript/protobuf.js/gen/protos_pb.d.ts javascript/protobuf.js/gen/protos_pb.js
+$(GEN)/protobuf.js: $(BIN)/protoc Makefile impl/protobuf.js/package-lock.json
+	@rm -rf impl/protobuf.js/gen/*
+	@mkdir -p impl/protobuf.js/gen
+	cd impl/protobuf.js && npm ci
+	impl/protobuf.js/node_modules/.bin/pbjs -t static-module -w impl/protobuf.js/wrapper.js --es6 -o impl/protobuf.js/gen/protos_pb.js $(PB)/conformance/conformance.proto $(PB)/src/google/protobuf/any.proto $(PB)/src/google/protobuf/field_mask.proto $(PB)/src/google/protobuf/timestamp.proto $(PB)/src/google/protobuf/duration.proto $(PB)/src/google/protobuf/struct.proto $(PB)/src/google/protobuf/wrappers.proto $(PB)/src/google/protobuf/test_messages_proto3.proto $(PB)/src/google/protobuf/test_messages_proto2.proto
+	impl/protobuf.js/node_modules/.bin/pbts -o impl/protobuf.js/gen/protos_pb.d.ts impl/protobuf.js/gen/protos_pb.js
 
-$(GEN)/protobuf-es: $(BIN)/protoc Makefile javascript/protobuf-es/package-lock.json
-	@rm -rf javascript/protobuf-es/gen/*
-	@mkdir -p javascript/protobuf-es/gen
-	cd javascript/protobuf-es && npm ci
-	$(BIN)/protoc --plugin javascript/protobuf-es/node_modules/.bin/protoc-gen-es --es_out javascript/protobuf-es/gen --es_opt ts_nocheck=false,target=ts \
+$(GEN)/protobuf-es: $(BIN)/protoc Makefile impl/protobuf-es/package-lock.json
+	@rm -rf impl/protobuf-es/gen/*
+	@mkdir -p impl/protobuf-es/gen
+	cd impl/protobuf-es && npm ci
+	$(BIN)/protoc --plugin impl/protobuf-es/node_modules/.bin/protoc-gen-es --es_out impl/protobuf-es/gen --es_opt ts_nocheck=false,target=ts \
 		--proto_path $(PB) --proto_path $(PB)/src \
 		conformance/conformance.proto \
 		google/protobuf/test_messages_proto2.proto \
 		google/protobuf/test_messages_proto3.proto
 
-$(GEN)/google-protobuf: $(BIN)/protoc Makefile $(BIN)/protoc-gen-js javascript/google-protobuf/package-lock.json
-	@rm -rf javascript/google-protobuf/gen/*
-	@mkdir -p javascript/google-protobuf/gen
-	cd javascript/google-protobuf && npm ci
-	$(BIN)/protoc --plugin=$(BIN)/protoc-gen-js --js_out=import_style=commonjs,binary:javascript/google-protobuf/gen --proto_path $(PB) --proto_path $(PB)/src conformance/conformance.proto \
+$(GEN)/google-protobuf: $(BIN)/protoc Makefile $(BIN)/protoc-gen-js impl/google-protobuf/package-lock.json
+	@rm -rf impl/google-protobuf/gen/*
+	@mkdir -p impl/google-protobuf/gen
+	cd impl/google-protobuf && npm ci
+	$(BIN)/protoc --plugin=$(BIN)/protoc-gen-js --js_out=import_style=commonjs,binary:impl/google-protobuf/gen --proto_path $(PB) --proto_path $(PB)/src conformance/conformance.proto \
 		google/protobuf/test_messages_proto2.proto \
 		google/protobuf/test_messages_proto3.proto
 
@@ -110,21 +110,21 @@ test: test-js-conformance
 
 .PHONY: test-js-conformance
 test-js-conformance: test-conformance-protobuf-es test-conformance-pbjs test-conformance-google-protobuf
-	node javascript/main.js > ./README.md
+	node impl/main.js > ./README.md
 
 .PHONY: test-conformance-protobuf-es
 test-conformance-protobuf-es: $(BIN)/conformance_test_runner $(BUILD)/javascript
-	cd javascript \
+	cd impl \
 		&& BUF_BIGINT_DISABLE=0 $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list protobuf-es/failing_tests_with_bigint.txt --text_format_failure_list protobuf-es/failing_tests_text_format.txt --output_dir protobuf-es protobuf-es/bin/conformance_esm.js \
 		&& BUF_BIGINT_DISABLE=1 $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list protobuf-es/failing_tests_without_bigint.txt --text_format_failure_list protobuf-es/failing_tests_text_format.txt --output_dir protobuf-es protobuf-es/bin/conformance_esm.js
 
 .PHONY: test-conformance-pbjs
 test-conformance-pbjs: $(BIN)/conformance_test_runner $(BUILD)/javascript
-	cd javascript \
+	cd impl \
 		&& $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list protobuf.js/failing_tests_list.txt --text_format_failure_list protobuf.js/failing_tests_text_format.txt --output_dir protobuf.js protobuf.js/bin/conformance_esm.js \
 
 .PHONY: test-conformance-google-protobuf
 test-conformance-google-protobuf: $(BIN)/conformance_test_runner $(BUILD)/javascript
-	cd javascript \
+	cd impl \
 		&& $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list google-protobuf/failing_tests_list.txt --text_format_failure_list google-protobuf/failing_tests_text_format.txt --output_dir google-protobuf google-protobuf/bin/conformance_cjs.js \
 
