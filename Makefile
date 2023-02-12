@@ -106,25 +106,25 @@ $(GEN)/google-protobuf: $(BIN)/protoc Makefile $(BIN)/protoc-gen-js impl/google-
 		google/protobuf/test_messages_proto3.proto
 
 .PHONY: test
-test: test-js-conformance
+test: testjsconformance
 
-.PHONY: test-js-conformance
-test-js-conformance: test-conformance-protobuf-es test-conformance-pbjs test-conformance-google-protobuf
+.PHONY: testjsconformance
+testjsconformance: testconformanceprotobufes testconformancepbjs testconformancegoogleprotobuf
 	node report.js > ./README.md
 
-.PHONY: test-conformance-protobuf-es
-test-conformance-protobuf-es: $(BIN)/conformance_test_runner $(BUILD)/javascript
+.PHONY: testconformanceprotobufes
+testconformanceprotobufes: $(BIN)/conformance_test_runner $(BUILD)/javascript
 	cd impl \
 		&& BUF_BIGINT_DISABLE=0 $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list protobuf-es/failing_tests_with_bigint.txt --text_format_failure_list protobuf-es/failing_tests_text_format.txt --output_dir protobuf-es protobuf-es/bin/conformance_esm.js \
 		&& BUF_BIGINT_DISABLE=1 $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list protobuf-es/failing_tests_without_bigint.txt --text_format_failure_list protobuf-es/failing_tests_text_format.txt --output_dir protobuf-es protobuf-es/bin/conformance_esm.js
 
-.PHONY: test-conformance-pbjs
-test-conformance-pbjs: $(BIN)/conformance_test_runner $(BUILD)/javascript
+.PHONY: testconformancepbjs
+testconformancepbjs: $(BIN)/conformance_test_runner $(BUILD)/javascript
 	cd impl \
 		&& $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list protobuf.js/failing_tests_list.txt --text_format_failure_list protobuf.js/failing_tests_text_format.txt --output_dir protobuf.js protobuf.js/bin/conformance_esm.js \
 
-.PHONY: test-conformance-google-protobuf
-test-conformance-google-protobuf: $(BIN)/conformance_test_runner $(BUILD)/javascript
+.PHONY: testconformancegoogleprotobuf
+testconformancegoogleprotobuf: $(BIN)/conformance_test_runner $(BUILD)/javascript
 	cd impl \
 		&& $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list google-protobuf/failing_tests_list.txt --text_format_failure_list google-protobuf/failing_tests_text_format.txt --output_dir google-protobuf google-protobuf/bin/conformance_cjs.js \
 
