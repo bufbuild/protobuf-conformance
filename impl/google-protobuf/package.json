@@ -8,10 +8,14 @@
     "copy:conformance": "cp gen/conformance/conformance_pb.js dist/cjs/gen/conformance/conformance_pb.cjs",
     "copy:test2": "cp gen/google/protobuf/test_messages_proto2_pb.js dist/cjs/gen/google/protobuf/test_messages_proto2_pb.cjs",
     "copy:test3": "cp gen/google/protobuf/test_messages_proto3_pb.js dist/cjs/gen/google/protobuf/test_messages_proto3_pb.cjs",
-    "copy:runner": "cp runner.cjs dist/cjs/runner.cjs"
+    "copy:runner": "cp runner.cjs dist/cjs/runner.cjs",
+	"lint": "npx eslint --max-warnings 0 ."
   },
   "type": "module",
   "dependencies": {
     "google-protobuf": "^3.21.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.4"
   }
 }
