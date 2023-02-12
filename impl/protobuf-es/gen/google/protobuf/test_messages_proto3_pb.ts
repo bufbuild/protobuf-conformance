@@ -39,8 +39,36 @@
 // @generated from file google/protobuf/test_messages_proto3.proto (package protobuf_test_messages.proto3, syntax proto3)
 /* eslint-disable */
 
-import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
-import { Any, BoolValue, BytesValue, DoubleValue, Duration, FieldMask, FloatValue, Int32Value, Int64Value, ListValue, Message, NullValue, proto3, protoInt64, StringValue, Struct, Timestamp, UInt32Value, UInt64Value, Value } from "@bufbuild/protobuf";
+import type {
+  BinaryReadOptions,
+  FieldList,
+  JsonReadOptions,
+  JsonValue,
+  PartialMessage,
+  PlainMessage,
+} from "@bufbuild/protobuf";
+import {
+  Any,
+  BoolValue,
+  BytesValue,
+  DoubleValue,
+  Duration,
+  FieldMask,
+  FloatValue,
+  Int32Value,
+  Int64Value,
+  ListValue,
+  Message,
+  NullValue,
+  proto3,
+  protoInt64,
+  StringValue,
+  Struct,
+  Timestamp,
+  UInt32Value,
+  UInt64Value,
+  Value,
+} from "@bufbuild/protobuf";
 
 /**
  * @generated from enum protobuf_test_messages.proto3.ForeignEnum
@@ -62,11 +90,15 @@ export enum ForeignEnum {
   FOREIGN_BAZ = 2,
 }
 // Retrieve enum metadata with: proto3.getEnumType(ForeignEnum)
-proto3.util.setEnumType(ForeignEnum, "protobuf_test_messages.proto3.ForeignEnum", [
-  { no: 0, name: "FOREIGN_FOO" },
-  { no: 1, name: "FOREIGN_BAR" },
-  { no: 2, name: "FOREIGN_BAZ" },
-]);
+proto3.util.setEnumType(
+  ForeignEnum,
+  "protobuf_test_messages.proto3.ForeignEnum",
+  [
+    { no: 0, name: "FOREIGN_FOO" },
+    { no: 1, name: "FOREIGN_BAR" },
+    { no: 2, name: "FOREIGN_BAZ" },
+  ]
+);
 
 /**
  * This proto includes every type of field in both singular and repeated
@@ -528,7 +560,8 @@ export class TestAllTypesProto3 extends Message<TestAllTypesProto3> {
   /**
    * @generated from field: map<string, protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage> map_string_nested_message = 71;
    */
-  mapStringNestedMessage: { [key: string]: TestAllTypesProto3_NestedMessage } = {};
+  mapStringNestedMessage: { [key: string]: TestAllTypesProto3_NestedMessage } =
+    {};
 
   /**
    * @generated from field: map<string, protobuf_test_messages.proto3.ForeignMessage> map_string_foreign_message = 72;
@@ -548,67 +581,78 @@ export class TestAllTypesProto3 extends Message<TestAllTypesProto3> {
   /**
    * @generated from oneof protobuf_test_messages.proto3.TestAllTypesProto3.oneof_field
    */
-  oneofField: {
-    /**
-     * @generated from field: uint32 oneof_uint32 = 111;
-     */
-    value: number;
-    case: "oneofUint32";
-  } | {
-    /**
-     * @generated from field: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage oneof_nested_message = 112;
-     */
-    value: TestAllTypesProto3_NestedMessage;
-    case: "oneofNestedMessage";
-  } | {
-    /**
-     * @generated from field: string oneof_string = 113;
-     */
-    value: string;
-    case: "oneofString";
-  } | {
-    /**
-     * @generated from field: bytes oneof_bytes = 114;
-     */
-    value: Uint8Array;
-    case: "oneofBytes";
-  } | {
-    /**
-     * @generated from field: bool oneof_bool = 115;
-     */
-    value: boolean;
-    case: "oneofBool";
-  } | {
-    /**
-     * @generated from field: uint64 oneof_uint64 = 116;
-     */
-    value: bigint;
-    case: "oneofUint64";
-  } | {
-    /**
-     * @generated from field: float oneof_float = 117;
-     */
-    value: number;
-    case: "oneofFloat";
-  } | {
-    /**
-     * @generated from field: double oneof_double = 118;
-     */
-    value: number;
-    case: "oneofDouble";
-  } | {
-    /**
-     * @generated from field: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum oneof_enum = 119;
-     */
-    value: TestAllTypesProto3_NestedEnum;
-    case: "oneofEnum";
-  } | {
-    /**
-     * @generated from field: google.protobuf.NullValue oneof_null_value = 120;
-     */
-    value: NullValue;
-    case: "oneofNullValue";
-  } | { case: undefined; value?: undefined } = { case: undefined };
+  oneofField:
+    | {
+        /**
+         * @generated from field: uint32 oneof_uint32 = 111;
+         */
+        value: number;
+        case: "oneofUint32";
+      }
+    | {
+        /**
+         * @generated from field: protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage oneof_nested_message = 112;
+         */
+        value: TestAllTypesProto3_NestedMessage;
+        case: "oneofNestedMessage";
+      }
+    | {
+        /**
+         * @generated from field: string oneof_string = 113;
+         */
+        value: string;
+        case: "oneofString";
+      }
+    | {
+        /**
+         * @generated from field: bytes oneof_bytes = 114;
+         */
+        value: Uint8Array;
+        case: "oneofBytes";
+      }
+    | {
+        /**
+         * @generated from field: bool oneof_bool = 115;
+         */
+        value: boolean;
+        case: "oneofBool";
+      }
+    | {
+        /**
+         * @generated from field: uint64 oneof_uint64 = 116;
+         */
+        value: bigint;
+        case: "oneofUint64";
+      }
+    | {
+        /**
+         * @generated from field: float oneof_float = 117;
+         */
+        value: number;
+        case: "oneofFloat";
+      }
+    | {
+        /**
+         * @generated from field: double oneof_double = 118;
+         */
+        value: number;
+        case: "oneofDouble";
+      }
+    | {
+        /**
+         * @generated from field: protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum oneof_enum = 119;
+         */
+        value: TestAllTypesProto3_NestedEnum;
+        case: "oneofEnum";
+      }
+    | {
+        /**
+         * @generated from field: google.protobuf.NullValue oneof_null_value = 120;
+         */
+        value: NullValue;
+        case: "oneofNullValue";
+      }
+    | { case: undefined; value?: undefined } = { case: undefined };
 
   /**
    * Well-known types
@@ -873,172 +917,986 @@ export class TestAllTypesProto3 extends Message<TestAllTypesProto3> {
   static readonly runtime = proto3;
   static readonly typeName = "protobuf_test_messages.proto3.TestAllTypesProto3";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "optional_int32", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 2, name: "optional_int64", kind: "scalar", T: 3 /* ScalarType.INT64 */ },
-    { no: 3, name: "optional_uint32", kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
-    { no: 4, name: "optional_uint64", kind: "scalar", T: 4 /* ScalarType.UINT64 */ },
-    { no: 5, name: "optional_sint32", kind: "scalar", T: 17 /* ScalarType.SINT32 */ },
-    { no: 6, name: "optional_sint64", kind: "scalar", T: 18 /* ScalarType.SINT64 */ },
-    { no: 7, name: "optional_fixed32", kind: "scalar", T: 7 /* ScalarType.FIXED32 */ },
-    { no: 8, name: "optional_fixed64", kind: "scalar", T: 6 /* ScalarType.FIXED64 */ },
-    { no: 9, name: "optional_sfixed32", kind: "scalar", T: 15 /* ScalarType.SFIXED32 */ },
-    { no: 10, name: "optional_sfixed64", kind: "scalar", T: 16 /* ScalarType.SFIXED64 */ },
-    { no: 11, name: "optional_float", kind: "scalar", T: 2 /* ScalarType.FLOAT */ },
-    { no: 12, name: "optional_double", kind: "scalar", T: 1 /* ScalarType.DOUBLE */ },
-    { no: 13, name: "optional_bool", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
-    { no: 14, name: "optional_string", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 15, name: "optional_bytes", kind: "scalar", T: 12 /* ScalarType.BYTES */ },
-    { no: 18, name: "optional_nested_message", kind: "message", T: TestAllTypesProto3_NestedMessage },
-    { no: 19, name: "optional_foreign_message", kind: "message", T: ForeignMessage },
-    { no: 21, name: "optional_nested_enum", kind: "enum", T: proto3.getEnumType(TestAllTypesProto3_NestedEnum) },
-    { no: 22, name: "optional_foreign_enum", kind: "enum", T: proto3.getEnumType(ForeignEnum) },
-    { no: 23, name: "optional_aliased_enum", kind: "enum", T: proto3.getEnumType(TestAllTypesProto3_AliasedEnum) },
-    { no: 24, name: "optional_string_piece", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 25, name: "optional_cord", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 27, name: "recursive_message", kind: "message", T: TestAllTypesProto3 },
-    { no: 31, name: "repeated_int32", kind: "scalar", T: 5 /* ScalarType.INT32 */, repeated: true },
-    { no: 32, name: "repeated_int64", kind: "scalar", T: 3 /* ScalarType.INT64 */, repeated: true },
-    { no: 33, name: "repeated_uint32", kind: "scalar", T: 13 /* ScalarType.UINT32 */, repeated: true },
-    { no: 34, name: "repeated_uint64", kind: "scalar", T: 4 /* ScalarType.UINT64 */, repeated: true },
-    { no: 35, name: "repeated_sint32", kind: "scalar", T: 17 /* ScalarType.SINT32 */, repeated: true },
-    { no: 36, name: "repeated_sint64", kind: "scalar", T: 18 /* ScalarType.SINT64 */, repeated: true },
-    { no: 37, name: "repeated_fixed32", kind: "scalar", T: 7 /* ScalarType.FIXED32 */, repeated: true },
-    { no: 38, name: "repeated_fixed64", kind: "scalar", T: 6 /* ScalarType.FIXED64 */, repeated: true },
-    { no: 39, name: "repeated_sfixed32", kind: "scalar", T: 15 /* ScalarType.SFIXED32 */, repeated: true },
-    { no: 40, name: "repeated_sfixed64", kind: "scalar", T: 16 /* ScalarType.SFIXED64 */, repeated: true },
-    { no: 41, name: "repeated_float", kind: "scalar", T: 2 /* ScalarType.FLOAT */, repeated: true },
-    { no: 42, name: "repeated_double", kind: "scalar", T: 1 /* ScalarType.DOUBLE */, repeated: true },
-    { no: 43, name: "repeated_bool", kind: "scalar", T: 8 /* ScalarType.BOOL */, repeated: true },
-    { no: 44, name: "repeated_string", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
-    { no: 45, name: "repeated_bytes", kind: "scalar", T: 12 /* ScalarType.BYTES */, repeated: true },
-    { no: 48, name: "repeated_nested_message", kind: "message", T: TestAllTypesProto3_NestedMessage, repeated: true },
-    { no: 49, name: "repeated_foreign_message", kind: "message", T: ForeignMessage, repeated: true },
-    { no: 51, name: "repeated_nested_enum", kind: "enum", T: proto3.getEnumType(TestAllTypesProto3_NestedEnum), repeated: true },
-    { no: 52, name: "repeated_foreign_enum", kind: "enum", T: proto3.getEnumType(ForeignEnum), repeated: true },
-    { no: 54, name: "repeated_string_piece", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
-    { no: 55, name: "repeated_cord", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
-    { no: 75, name: "packed_int32", kind: "scalar", T: 5 /* ScalarType.INT32 */, repeated: true },
-    { no: 76, name: "packed_int64", kind: "scalar", T: 3 /* ScalarType.INT64 */, repeated: true },
-    { no: 77, name: "packed_uint32", kind: "scalar", T: 13 /* ScalarType.UINT32 */, repeated: true },
-    { no: 78, name: "packed_uint64", kind: "scalar", T: 4 /* ScalarType.UINT64 */, repeated: true },
-    { no: 79, name: "packed_sint32", kind: "scalar", T: 17 /* ScalarType.SINT32 */, repeated: true },
-    { no: 80, name: "packed_sint64", kind: "scalar", T: 18 /* ScalarType.SINT64 */, repeated: true },
-    { no: 81, name: "packed_fixed32", kind: "scalar", T: 7 /* ScalarType.FIXED32 */, repeated: true },
-    { no: 82, name: "packed_fixed64", kind: "scalar", T: 6 /* ScalarType.FIXED64 */, repeated: true },
-    { no: 83, name: "packed_sfixed32", kind: "scalar", T: 15 /* ScalarType.SFIXED32 */, repeated: true },
-    { no: 84, name: "packed_sfixed64", kind: "scalar", T: 16 /* ScalarType.SFIXED64 */, repeated: true },
-    { no: 85, name: "packed_float", kind: "scalar", T: 2 /* ScalarType.FLOAT */, repeated: true },
-    { no: 86, name: "packed_double", kind: "scalar", T: 1 /* ScalarType.DOUBLE */, repeated: true },
-    { no: 87, name: "packed_bool", kind: "scalar", T: 8 /* ScalarType.BOOL */, repeated: true },
-    { no: 88, name: "packed_nested_enum", kind: "enum", T: proto3.getEnumType(TestAllTypesProto3_NestedEnum), repeated: true },
-    { no: 89, name: "unpacked_int32", kind: "scalar", T: 5 /* ScalarType.INT32 */, repeated: true, packed: false },
-    { no: 90, name: "unpacked_int64", kind: "scalar", T: 3 /* ScalarType.INT64 */, repeated: true, packed: false },
-    { no: 91, name: "unpacked_uint32", kind: "scalar", T: 13 /* ScalarType.UINT32 */, repeated: true, packed: false },
-    { no: 92, name: "unpacked_uint64", kind: "scalar", T: 4 /* ScalarType.UINT64 */, repeated: true, packed: false },
-    { no: 93, name: "unpacked_sint32", kind: "scalar", T: 17 /* ScalarType.SINT32 */, repeated: true, packed: false },
-    { no: 94, name: "unpacked_sint64", kind: "scalar", T: 18 /* ScalarType.SINT64 */, repeated: true, packed: false },
-    { no: 95, name: "unpacked_fixed32", kind: "scalar", T: 7 /* ScalarType.FIXED32 */, repeated: true, packed: false },
-    { no: 96, name: "unpacked_fixed64", kind: "scalar", T: 6 /* ScalarType.FIXED64 */, repeated: true, packed: false },
-    { no: 97, name: "unpacked_sfixed32", kind: "scalar", T: 15 /* ScalarType.SFIXED32 */, repeated: true, packed: false },
-    { no: 98, name: "unpacked_sfixed64", kind: "scalar", T: 16 /* ScalarType.SFIXED64 */, repeated: true, packed: false },
-    { no: 99, name: "unpacked_float", kind: "scalar", T: 2 /* ScalarType.FLOAT */, repeated: true, packed: false },
-    { no: 100, name: "unpacked_double", kind: "scalar", T: 1 /* ScalarType.DOUBLE */, repeated: true, packed: false },
-    { no: 101, name: "unpacked_bool", kind: "scalar", T: 8 /* ScalarType.BOOL */, repeated: true, packed: false },
-    { no: 102, name: "unpacked_nested_enum", kind: "enum", T: proto3.getEnumType(TestAllTypesProto3_NestedEnum), repeated: true, packed: false },
-    { no: 56, name: "map_int32_int32", kind: "map", K: 5 /* ScalarType.INT32 */, V: {kind: "scalar", T: 5 /* ScalarType.INT32 */} },
-    { no: 57, name: "map_int64_int64", kind: "map", K: 3 /* ScalarType.INT64 */, V: {kind: "scalar", T: 3 /* ScalarType.INT64 */} },
-    { no: 58, name: "map_uint32_uint32", kind: "map", K: 13 /* ScalarType.UINT32 */, V: {kind: "scalar", T: 13 /* ScalarType.UINT32 */} },
-    { no: 59, name: "map_uint64_uint64", kind: "map", K: 4 /* ScalarType.UINT64 */, V: {kind: "scalar", T: 4 /* ScalarType.UINT64 */} },
-    { no: 60, name: "map_sint32_sint32", kind: "map", K: 17 /* ScalarType.SINT32 */, V: {kind: "scalar", T: 17 /* ScalarType.SINT32 */} },
-    { no: 61, name: "map_sint64_sint64", kind: "map", K: 18 /* ScalarType.SINT64 */, V: {kind: "scalar", T: 18 /* ScalarType.SINT64 */} },
-    { no: 62, name: "map_fixed32_fixed32", kind: "map", K: 7 /* ScalarType.FIXED32 */, V: {kind: "scalar", T: 7 /* ScalarType.FIXED32 */} },
-    { no: 63, name: "map_fixed64_fixed64", kind: "map", K: 6 /* ScalarType.FIXED64 */, V: {kind: "scalar", T: 6 /* ScalarType.FIXED64 */} },
-    { no: 64, name: "map_sfixed32_sfixed32", kind: "map", K: 15 /* ScalarType.SFIXED32 */, V: {kind: "scalar", T: 15 /* ScalarType.SFIXED32 */} },
-    { no: 65, name: "map_sfixed64_sfixed64", kind: "map", K: 16 /* ScalarType.SFIXED64 */, V: {kind: "scalar", T: 16 /* ScalarType.SFIXED64 */} },
-    { no: 66, name: "map_int32_float", kind: "map", K: 5 /* ScalarType.INT32 */, V: {kind: "scalar", T: 2 /* ScalarType.FLOAT */} },
-    { no: 67, name: "map_int32_double", kind: "map", K: 5 /* ScalarType.INT32 */, V: {kind: "scalar", T: 1 /* ScalarType.DOUBLE */} },
-    { no: 68, name: "map_bool_bool", kind: "map", K: 8 /* ScalarType.BOOL */, V: {kind: "scalar", T: 8 /* ScalarType.BOOL */} },
-    { no: 69, name: "map_string_string", kind: "map", K: 9 /* ScalarType.STRING */, V: {kind: "scalar", T: 9 /* ScalarType.STRING */} },
-    { no: 70, name: "map_string_bytes", kind: "map", K: 9 /* ScalarType.STRING */, V: {kind: "scalar", T: 12 /* ScalarType.BYTES */} },
-    { no: 71, name: "map_string_nested_message", kind: "map", K: 9 /* ScalarType.STRING */, V: {kind: "message", T: TestAllTypesProto3_NestedMessage} },
-    { no: 72, name: "map_string_foreign_message", kind: "map", K: 9 /* ScalarType.STRING */, V: {kind: "message", T: ForeignMessage} },
-    { no: 73, name: "map_string_nested_enum", kind: "map", K: 9 /* ScalarType.STRING */, V: {kind: "enum", T: proto3.getEnumType(TestAllTypesProto3_NestedEnum)} },
-    { no: 74, name: "map_string_foreign_enum", kind: "map", K: 9 /* ScalarType.STRING */, V: {kind: "enum", T: proto3.getEnumType(ForeignEnum)} },
-    { no: 111, name: "oneof_uint32", kind: "scalar", T: 13 /* ScalarType.UINT32 */, oneof: "oneof_field" },
-    { no: 112, name: "oneof_nested_message", kind: "message", T: TestAllTypesProto3_NestedMessage, oneof: "oneof_field" },
-    { no: 113, name: "oneof_string", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "oneof_field" },
-    { no: 114, name: "oneof_bytes", kind: "scalar", T: 12 /* ScalarType.BYTES */, oneof: "oneof_field" },
-    { no: 115, name: "oneof_bool", kind: "scalar", T: 8 /* ScalarType.BOOL */, oneof: "oneof_field" },
-    { no: 116, name: "oneof_uint64", kind: "scalar", T: 4 /* ScalarType.UINT64 */, oneof: "oneof_field" },
-    { no: 117, name: "oneof_float", kind: "scalar", T: 2 /* ScalarType.FLOAT */, oneof: "oneof_field" },
-    { no: 118, name: "oneof_double", kind: "scalar", T: 1 /* ScalarType.DOUBLE */, oneof: "oneof_field" },
-    { no: 119, name: "oneof_enum", kind: "enum", T: proto3.getEnumType(TestAllTypesProto3_NestedEnum), oneof: "oneof_field" },
-    { no: 120, name: "oneof_null_value", kind: "enum", T: proto3.getEnumType(NullValue), oneof: "oneof_field" },
+    {
+      no: 1,
+      name: "optional_int32",
+      kind: "scalar",
+      T: 5 /* ScalarType.INT32 */,
+    },
+    {
+      no: 2,
+      name: "optional_int64",
+      kind: "scalar",
+      T: 3 /* ScalarType.INT64 */,
+    },
+    {
+      no: 3,
+      name: "optional_uint32",
+      kind: "scalar",
+      T: 13 /* ScalarType.UINT32 */,
+    },
+    {
+      no: 4,
+      name: "optional_uint64",
+      kind: "scalar",
+      T: 4 /* ScalarType.UINT64 */,
+    },
+    {
+      no: 5,
+      name: "optional_sint32",
+      kind: "scalar",
+      T: 17 /* ScalarType.SINT32 */,
+    },
+    {
+      no: 6,
+      name: "optional_sint64",
+      kind: "scalar",
+      T: 18 /* ScalarType.SINT64 */,
+    },
+    {
+      no: 7,
+      name: "optional_fixed32",
+      kind: "scalar",
+      T: 7 /* ScalarType.FIXED32 */,
+    },
+    {
+      no: 8,
+      name: "optional_fixed64",
+      kind: "scalar",
+      T: 6 /* ScalarType.FIXED64 */,
+    },
+    {
+      no: 9,
+      name: "optional_sfixed32",
+      kind: "scalar",
+      T: 15 /* ScalarType.SFIXED32 */,
+    },
+    {
+      no: 10,
+      name: "optional_sfixed64",
+      kind: "scalar",
+      T: 16 /* ScalarType.SFIXED64 */,
+    },
+    {
+      no: 11,
+      name: "optional_float",
+      kind: "scalar",
+      T: 2 /* ScalarType.FLOAT */,
+    },
+    {
+      no: 12,
+      name: "optional_double",
+      kind: "scalar",
+      T: 1 /* ScalarType.DOUBLE */,
+    },
+    {
+      no: 13,
+      name: "optional_bool",
+      kind: "scalar",
+      T: 8 /* ScalarType.BOOL */,
+    },
+    {
+      no: 14,
+      name: "optional_string",
+      kind: "scalar",
+      T: 9 /* ScalarType.STRING */,
+    },
+    {
+      no: 15,
+      name: "optional_bytes",
+      kind: "scalar",
+      T: 12 /* ScalarType.BYTES */,
+    },
+    {
+      no: 18,
+      name: "optional_nested_message",
+      kind: "message",
+      T: TestAllTypesProto3_NestedMessage,
+    },
+    {
+      no: 19,
+      name: "optional_foreign_message",
+      kind: "message",
+      T: ForeignMessage,
+    },
+    {
+      no: 21,
+      name: "optional_nested_enum",
+      kind: "enum",
+      T: proto3.getEnumType(TestAllTypesProto3_NestedEnum),
+    },
+    {
+      no: 22,
+      name: "optional_foreign_enum",
+      kind: "enum",
+      T: proto3.getEnumType(ForeignEnum),
+    },
+    {
+      no: 23,
+      name: "optional_aliased_enum",
+      kind: "enum",
+      T: proto3.getEnumType(TestAllTypesProto3_AliasedEnum),
+    },
+    {
+      no: 24,
+      name: "optional_string_piece",
+      kind: "scalar",
+      T: 9 /* ScalarType.STRING */,
+    },
+    {
+      no: 25,
+      name: "optional_cord",
+      kind: "scalar",
+      T: 9 /* ScalarType.STRING */,
+    },
+    {
+      no: 27,
+      name: "recursive_message",
+      kind: "message",
+      T: TestAllTypesProto3,
+    },
+    {
+      no: 31,
+      name: "repeated_int32",
+      kind: "scalar",
+      T: 5 /* ScalarType.INT32 */,
+      repeated: true,
+    },
+    {
+      no: 32,
+      name: "repeated_int64",
+      kind: "scalar",
+      T: 3 /* ScalarType.INT64 */,
+      repeated: true,
+    },
+    {
+      no: 33,
+      name: "repeated_uint32",
+      kind: "scalar",
+      T: 13 /* ScalarType.UINT32 */,
+      repeated: true,
+    },
+    {
+      no: 34,
+      name: "repeated_uint64",
+      kind: "scalar",
+      T: 4 /* ScalarType.UINT64 */,
+      repeated: true,
+    },
+    {
+      no: 35,
+      name: "repeated_sint32",
+      kind: "scalar",
+      T: 17 /* ScalarType.SINT32 */,
+      repeated: true,
+    },
+    {
+      no: 36,
+      name: "repeated_sint64",
+      kind: "scalar",
+      T: 18 /* ScalarType.SINT64 */,
+      repeated: true,
+    },
+    {
+      no: 37,
+      name: "repeated_fixed32",
+      kind: "scalar",
+      T: 7 /* ScalarType.FIXED32 */,
+      repeated: true,
+    },
+    {
+      no: 38,
+      name: "repeated_fixed64",
+      kind: "scalar",
+      T: 6 /* ScalarType.FIXED64 */,
+      repeated: true,
+    },
+    {
+      no: 39,
+      name: "repeated_sfixed32",
+      kind: "scalar",
+      T: 15 /* ScalarType.SFIXED32 */,
+      repeated: true,
+    },
+    {
+      no: 40,
+      name: "repeated_sfixed64",
+      kind: "scalar",
+      T: 16 /* ScalarType.SFIXED64 */,
+      repeated: true,
+    },
+    {
+      no: 41,
+      name: "repeated_float",
+      kind: "scalar",
+      T: 2 /* ScalarType.FLOAT */,
+      repeated: true,
+    },
+    {
+      no: 42,
+      name: "repeated_double",
+      kind: "scalar",
+      T: 1 /* ScalarType.DOUBLE */,
+      repeated: true,
+    },
+    {
+      no: 43,
+      name: "repeated_bool",
+      kind: "scalar",
+      T: 8 /* ScalarType.BOOL */,
+      repeated: true,
+    },
+    {
+      no: 44,
+      name: "repeated_string",
+      kind: "scalar",
+      T: 9 /* ScalarType.STRING */,
+      repeated: true,
+    },
+    {
+      no: 45,
+      name: "repeated_bytes",
+      kind: "scalar",
+      T: 12 /* ScalarType.BYTES */,
+      repeated: true,
+    },
+    {
+      no: 48,
+      name: "repeated_nested_message",
+      kind: "message",
+      T: TestAllTypesProto3_NestedMessage,
+      repeated: true,
+    },
+    {
+      no: 49,
+      name: "repeated_foreign_message",
+      kind: "message",
+      T: ForeignMessage,
+      repeated: true,
+    },
+    {
+      no: 51,
+      name: "repeated_nested_enum",
+      kind: "enum",
+      T: proto3.getEnumType(TestAllTypesProto3_NestedEnum),
+      repeated: true,
+    },
+    {
+      no: 52,
+      name: "repeated_foreign_enum",
+      kind: "enum",
+      T: proto3.getEnumType(ForeignEnum),
+      repeated: true,
+    },
+    {
+      no: 54,
+      name: "repeated_string_piece",
+      kind: "scalar",
+      T: 9 /* ScalarType.STRING */,
+      repeated: true,
+    },
+    {
+      no: 55,
+      name: "repeated_cord",
+      kind: "scalar",
+      T: 9 /* ScalarType.STRING */,
+      repeated: true,
+    },
+    {
+      no: 75,
+      name: "packed_int32",
+      kind: "scalar",
+      T: 5 /* ScalarType.INT32 */,
+      repeated: true,
+    },
+    {
+      no: 76,
+      name: "packed_int64",
+      kind: "scalar",
+      T: 3 /* ScalarType.INT64 */,
+      repeated: true,
+    },
+    {
+      no: 77,
+      name: "packed_uint32",
+      kind: "scalar",
+      T: 13 /* ScalarType.UINT32 */,
+      repeated: true,
+    },
+    {
+      no: 78,
+      name: "packed_uint64",
+      kind: "scalar",
+      T: 4 /* ScalarType.UINT64 */,
+      repeated: true,
+    },
+    {
+      no: 79,
+      name: "packed_sint32",
+      kind: "scalar",
+      T: 17 /* ScalarType.SINT32 */,
+      repeated: true,
+    },
+    {
+      no: 80,
+      name: "packed_sint64",
+      kind: "scalar",
+      T: 18 /* ScalarType.SINT64 */,
+      repeated: true,
+    },
+    {
+      no: 81,
+      name: "packed_fixed32",
+      kind: "scalar",
+      T: 7 /* ScalarType.FIXED32 */,
+      repeated: true,
+    },
+    {
+      no: 82,
+      name: "packed_fixed64",
+      kind: "scalar",
+      T: 6 /* ScalarType.FIXED64 */,
+      repeated: true,
+    },
+    {
+      no: 83,
+      name: "packed_sfixed32",
+      kind: "scalar",
+      T: 15 /* ScalarType.SFIXED32 */,
+      repeated: true,
+    },
+    {
+      no: 84,
+      name: "packed_sfixed64",
+      kind: "scalar",
+      T: 16 /* ScalarType.SFIXED64 */,
+      repeated: true,
+    },
+    {
+      no: 85,
+      name: "packed_float",
+      kind: "scalar",
+      T: 2 /* ScalarType.FLOAT */,
+      repeated: true,
+    },
+    {
+      no: 86,
+      name: "packed_double",
+      kind: "scalar",
+      T: 1 /* ScalarType.DOUBLE */,
+      repeated: true,
+    },
+    {
+      no: 87,
+      name: "packed_bool",
+      kind: "scalar",
+      T: 8 /* ScalarType.BOOL */,
+      repeated: true,
+    },
+    {
+      no: 88,
+      name: "packed_nested_enum",
+      kind: "enum",
+      T: proto3.getEnumType(TestAllTypesProto3_NestedEnum),
+      repeated: true,
+    },
+    {
+      no: 89,
+      name: "unpacked_int32",
+      kind: "scalar",
+      T: 5 /* ScalarType.INT32 */,
+      repeated: true,
+      packed: false,
+    },
+    {
+      no: 90,
+      name: "unpacked_int64",
+      kind: "scalar",
+      T: 3 /* ScalarType.INT64 */,
+      repeated: true,
+      packed: false,
+    },
+    {
+      no: 91,
+      name: "unpacked_uint32",
+      kind: "scalar",
+      T: 13 /* ScalarType.UINT32 */,
+      repeated: true,
+      packed: false,
+    },
+    {
+      no: 92,
+      name: "unpacked_uint64",
+      kind: "scalar",
+      T: 4 /* ScalarType.UINT64 */,
+      repeated: true,
+      packed: false,
+    },
+    {
+      no: 93,
+      name: "unpacked_sint32",
+      kind: "scalar",
+      T: 17 /* ScalarType.SINT32 */,
+      repeated: true,
+      packed: false,
+    },
+    {
+      no: 94,
+      name: "unpacked_sint64",
+      kind: "scalar",
+      T: 18 /* ScalarType.SINT64 */,
+      repeated: true,
+      packed: false,
+    },
+    {
+      no: 95,
+      name: "unpacked_fixed32",
+      kind: "scalar",
+      T: 7 /* ScalarType.FIXED32 */,
+      repeated: true,
+      packed: false,
+    },
+    {
+      no: 96,
+      name: "unpacked_fixed64",
+      kind: "scalar",
+      T: 6 /* ScalarType.FIXED64 */,
+      repeated: true,
+      packed: false,
+    },
+    {
+      no: 97,
+      name: "unpacked_sfixed32",
+      kind: "scalar",
+      T: 15 /* ScalarType.SFIXED32 */,
+      repeated: true,
+      packed: false,
+    },
+    {
+      no: 98,
+      name: "unpacked_sfixed64",
+      kind: "scalar",
+      T: 16 /* ScalarType.SFIXED64 */,
+      repeated: true,
+      packed: false,
+    },
+    {
+      no: 99,
+      name: "unpacked_float",
+      kind: "scalar",
+      T: 2 /* ScalarType.FLOAT */,
+      repeated: true,
+      packed: false,
+    },
+    {
+      no: 100,
+      name: "unpacked_double",
+      kind: "scalar",
+      T: 1 /* ScalarType.DOUBLE */,
+      repeated: true,
+      packed: false,
+    },
+    {
+      no: 101,
+      name: "unpacked_bool",
+      kind: "scalar",
+      T: 8 /* ScalarType.BOOL */,
+      repeated: true,
+      packed: false,
+    },
+    {
+      no: 102,
+      name: "unpacked_nested_enum",
+      kind: "enum",
+      T: proto3.getEnumType(TestAllTypesProto3_NestedEnum),
+      repeated: true,
+      packed: false,
+    },
+    {
+      no: 56,
+      name: "map_int32_int32",
+      kind: "map",
+      K: 5 /* ScalarType.INT32 */,
+      V: { kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    },
+    {
+      no: 57,
+      name: "map_int64_int64",
+      kind: "map",
+      K: 3 /* ScalarType.INT64 */,
+      V: { kind: "scalar", T: 3 /* ScalarType.INT64 */ },
+    },
+    {
+      no: 58,
+      name: "map_uint32_uint32",
+      kind: "map",
+      K: 13 /* ScalarType.UINT32 */,
+      V: { kind: "scalar", T: 13 /* ScalarType.UINT32 */ },
+    },
+    {
+      no: 59,
+      name: "map_uint64_uint64",
+      kind: "map",
+      K: 4 /* ScalarType.UINT64 */,
+      V: { kind: "scalar", T: 4 /* ScalarType.UINT64 */ },
+    },
+    {
+      no: 60,
+      name: "map_sint32_sint32",
+      kind: "map",
+      K: 17 /* ScalarType.SINT32 */,
+      V: { kind: "scalar", T: 17 /* ScalarType.SINT32 */ },
+    },
+    {
+      no: 61,
+      name: "map_sint64_sint64",
+      kind: "map",
+      K: 18 /* ScalarType.SINT64 */,
+      V: { kind: "scalar", T: 18 /* ScalarType.SINT64 */ },
+    },
+    {
+      no: 62,
+      name: "map_fixed32_fixed32",
+      kind: "map",
+      K: 7 /* ScalarType.FIXED32 */,
+      V: { kind: "scalar", T: 7 /* ScalarType.FIXED32 */ },
+    },
+    {
+      no: 63,
+      name: "map_fixed64_fixed64",
+      kind: "map",
+      K: 6 /* ScalarType.FIXED64 */,
+      V: { kind: "scalar", T: 6 /* ScalarType.FIXED64 */ },
+    },
+    {
+      no: 64,
+      name: "map_sfixed32_sfixed32",
+      kind: "map",
+      K: 15 /* ScalarType.SFIXED32 */,
+      V: { kind: "scalar", T: 15 /* ScalarType.SFIXED32 */ },
+    },
+    {
+      no: 65,
+      name: "map_sfixed64_sfixed64",
+      kind: "map",
+      K: 16 /* ScalarType.SFIXED64 */,
+      V: { kind: "scalar", T: 16 /* ScalarType.SFIXED64 */ },
+    },
+    {
+      no: 66,
+      name: "map_int32_float",
+      kind: "map",
+      K: 5 /* ScalarType.INT32 */,
+      V: { kind: "scalar", T: 2 /* ScalarType.FLOAT */ },
+    },
+    {
+      no: 67,
+      name: "map_int32_double",
+      kind: "map",
+      K: 5 /* ScalarType.INT32 */,
+      V: { kind: "scalar", T: 1 /* ScalarType.DOUBLE */ },
+    },
+    {
+      no: 68,
+      name: "map_bool_bool",
+      kind: "map",
+      K: 8 /* ScalarType.BOOL */,
+      V: { kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+    },
+    {
+      no: 69,
+      name: "map_string_string",
+      kind: "map",
+      K: 9 /* ScalarType.STRING */,
+      V: { kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    },
+    {
+      no: 70,
+      name: "map_string_bytes",
+      kind: "map",
+      K: 9 /* ScalarType.STRING */,
+      V: { kind: "scalar", T: 12 /* ScalarType.BYTES */ },
+    },
+    {
+      no: 71,
+      name: "map_string_nested_message",
+      kind: "map",
+      K: 9 /* ScalarType.STRING */,
+      V: { kind: "message", T: TestAllTypesProto3_NestedMessage },
+    },
+    {
+      no: 72,
+      name: "map_string_foreign_message",
+      kind: "map",
+      K: 9 /* ScalarType.STRING */,
+      V: { kind: "message", T: ForeignMessage },
+    },
+    {
+      no: 73,
+      name: "map_string_nested_enum",
+      kind: "map",
+      K: 9 /* ScalarType.STRING */,
+      V: { kind: "enum", T: proto3.getEnumType(TestAllTypesProto3_NestedEnum) },
+    },
+    {
+      no: 74,
+      name: "map_string_foreign_enum",
+      kind: "map",
+      K: 9 /* ScalarType.STRING */,
+      V: { kind: "enum", T: proto3.getEnumType(ForeignEnum) },
+    },
+    {
+      no: 111,
+      name: "oneof_uint32",
+      kind: "scalar",
+      T: 13 /* ScalarType.UINT32 */,
+      oneof: "oneof_field",
+    },
+    {
+      no: 112,
+      name: "oneof_nested_message",
+      kind: "message",
+      T: TestAllTypesProto3_NestedMessage,
+      oneof: "oneof_field",
+    },
+    {
+      no: 113,
+      name: "oneof_string",
+      kind: "scalar",
+      T: 9 /* ScalarType.STRING */,
+      oneof: "oneof_field",
+    },
+    {
+      no: 114,
+      name: "oneof_bytes",
+      kind: "scalar",
+      T: 12 /* ScalarType.BYTES */,
+      oneof: "oneof_field",
+    },
+    {
+      no: 115,
+      name: "oneof_bool",
+      kind: "scalar",
+      T: 8 /* ScalarType.BOOL */,
+      oneof: "oneof_field",
+    },
+    {
+      no: 116,
+      name: "oneof_uint64",
+      kind: "scalar",
+      T: 4 /* ScalarType.UINT64 */,
+      oneof: "oneof_field",
+    },
+    {
+      no: 117,
+      name: "oneof_float",
+      kind: "scalar",
+      T: 2 /* ScalarType.FLOAT */,
+      oneof: "oneof_field",
+    },
+    {
+      no: 118,
+      name: "oneof_double",
+      kind: "scalar",
+      T: 1 /* ScalarType.DOUBLE */,
+      oneof: "oneof_field",
+    },
+    {
+      no: 119,
+      name: "oneof_enum",
+      kind: "enum",
+      T: proto3.getEnumType(TestAllTypesProto3_NestedEnum),
+      oneof: "oneof_field",
+    },
+    {
+      no: 120,
+      name: "oneof_null_value",
+      kind: "enum",
+      T: proto3.getEnumType(NullValue),
+      oneof: "oneof_field",
+    },
     { no: 201, name: "optional_bool_wrapper", kind: "message", T: BoolValue },
     { no: 202, name: "optional_int32_wrapper", kind: "message", T: Int32Value },
     { no: 203, name: "optional_int64_wrapper", kind: "message", T: Int64Value },
-    { no: 204, name: "optional_uint32_wrapper", kind: "message", T: UInt32Value },
-    { no: 205, name: "optional_uint64_wrapper", kind: "message", T: UInt64Value },
+    {
+      no: 204,
+      name: "optional_uint32_wrapper",
+      kind: "message",
+      T: UInt32Value,
+    },
+    {
+      no: 205,
+      name: "optional_uint64_wrapper",
+      kind: "message",
+      T: UInt64Value,
+    },
     { no: 206, name: "optional_float_wrapper", kind: "message", T: FloatValue },
-    { no: 207, name: "optional_double_wrapper", kind: "message", T: DoubleValue },
-    { no: 208, name: "optional_string_wrapper", kind: "message", T: StringValue },
+    {
+      no: 207,
+      name: "optional_double_wrapper",
+      kind: "message",
+      T: DoubleValue,
+    },
+    {
+      no: 208,
+      name: "optional_string_wrapper",
+      kind: "message",
+      T: StringValue,
+    },
     { no: 209, name: "optional_bytes_wrapper", kind: "message", T: BytesValue },
-    { no: 211, name: "repeated_bool_wrapper", kind: "message", T: BoolValue, repeated: true },
-    { no: 212, name: "repeated_int32_wrapper", kind: "message", T: Int32Value, repeated: true },
-    { no: 213, name: "repeated_int64_wrapper", kind: "message", T: Int64Value, repeated: true },
-    { no: 214, name: "repeated_uint32_wrapper", kind: "message", T: UInt32Value, repeated: true },
-    { no: 215, name: "repeated_uint64_wrapper", kind: "message", T: UInt64Value, repeated: true },
-    { no: 216, name: "repeated_float_wrapper", kind: "message", T: FloatValue, repeated: true },
-    { no: 217, name: "repeated_double_wrapper", kind: "message", T: DoubleValue, repeated: true },
-    { no: 218, name: "repeated_string_wrapper", kind: "message", T: StringValue, repeated: true },
-    { no: 219, name: "repeated_bytes_wrapper", kind: "message", T: BytesValue, repeated: true },
+    {
+      no: 211,
+      name: "repeated_bool_wrapper",
+      kind: "message",
+      T: BoolValue,
+      repeated: true,
+    },
+    {
+      no: 212,
+      name: "repeated_int32_wrapper",
+      kind: "message",
+      T: Int32Value,
+      repeated: true,
+    },
+    {
+      no: 213,
+      name: "repeated_int64_wrapper",
+      kind: "message",
+      T: Int64Value,
+      repeated: true,
+    },
+    {
+      no: 214,
+      name: "repeated_uint32_wrapper",
+      kind: "message",
+      T: UInt32Value,
+      repeated: true,
+    },
+    {
+      no: 215,
+      name: "repeated_uint64_wrapper",
+      kind: "message",
+      T: UInt64Value,
+      repeated: true,
+    },
+    {
+      no: 216,
+      name: "repeated_float_wrapper",
+      kind: "message",
+      T: FloatValue,
+      repeated: true,
+    },
+    {
+      no: 217,
+      name: "repeated_double_wrapper",
+      kind: "message",
+      T: DoubleValue,
+      repeated: true,
+    },
+    {
+      no: 218,
+      name: "repeated_string_wrapper",
+      kind: "message",
+      T: StringValue,
+      repeated: true,
+    },
+    {
+      no: 219,
+      name: "repeated_bytes_wrapper",
+      kind: "message",
+      T: BytesValue,
+      repeated: true,
+    },
     { no: 301, name: "optional_duration", kind: "message", T: Duration },
     { no: 302, name: "optional_timestamp", kind: "message", T: Timestamp },
     { no: 303, name: "optional_field_mask", kind: "message", T: FieldMask },
     { no: 304, name: "optional_struct", kind: "message", T: Struct },
     { no: 305, name: "optional_any", kind: "message", T: Any },
     { no: 306, name: "optional_value", kind: "message", T: Value },
-    { no: 307, name: "optional_null_value", kind: "enum", T: proto3.getEnumType(NullValue) },
-    { no: 311, name: "repeated_duration", kind: "message", T: Duration, repeated: true },
-    { no: 312, name: "repeated_timestamp", kind: "message", T: Timestamp, repeated: true },
-    { no: 313, name: "repeated_fieldmask", kind: "message", T: FieldMask, repeated: true },
-    { no: 324, name: "repeated_struct", kind: "message", T: Struct, repeated: true },
+    {
+      no: 307,
+      name: "optional_null_value",
+      kind: "enum",
+      T: proto3.getEnumType(NullValue),
+    },
+    {
+      no: 311,
+      name: "repeated_duration",
+      kind: "message",
+      T: Duration,
+      repeated: true,
+    },
+    {
+      no: 312,
+      name: "repeated_timestamp",
+      kind: "message",
+      T: Timestamp,
+      repeated: true,
+    },
+    {
+      no: 313,
+      name: "repeated_fieldmask",
+      kind: "message",
+      T: FieldMask,
+      repeated: true,
+    },
+    {
+      no: 324,
+      name: "repeated_struct",
+      kind: "message",
+      T: Struct,
+      repeated: true,
+    },
     { no: 315, name: "repeated_any", kind: "message", T: Any, repeated: true },
-    { no: 316, name: "repeated_value", kind: "message", T: Value, repeated: true },
-    { no: 317, name: "repeated_list_value", kind: "message", T: ListValue, repeated: true },
-    { no: 401, name: "fieldname1", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 402, name: "field_name2", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 403, name: "_field_name3", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 404, name: "field__name4_", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 405, name: "field0name5", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 406, name: "field_0_name6", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 407, name: "fieldName7", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 408, name: "FieldName8", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 409, name: "field_Name9", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 410, name: "Field_Name10", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 411, name: "FIELD_NAME11", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 412, name: "FIELD_name12", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 413, name: "__field_name13", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 414, name: "__Field_name14", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 415, name: "field__name15", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 416, name: "field__Name16", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 417, name: "field_name17__", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 418, name: "Field_name18__", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    {
+      no: 316,
+      name: "repeated_value",
+      kind: "message",
+      T: Value,
+      repeated: true,
+    },
+    {
+      no: 317,
+      name: "repeated_list_value",
+      kind: "message",
+      T: ListValue,
+      repeated: true,
+    },
+    {
+      no: 401,
+      name: "fieldname1",
+      kind: "scalar",
+      T: 5 /* ScalarType.INT32 */,
+    },
+    {
+      no: 402,
+      name: "field_name2",
+      kind: "scalar",
+      T: 5 /* ScalarType.INT32 */,
+    },
+    {
+      no: 403,
+      name: "_field_name3",
+      kind: "scalar",
+      T: 5 /* ScalarType.INT32 */,
+    },
+    {
+      no: 404,
+      name: "field__name4_",
+      kind: "scalar",
+      T: 5 /* ScalarType.INT32 */,
+    },
+    {
+      no: 405,
+      name: "field0name5",
+      kind: "scalar",
+      T: 5 /* ScalarType.INT32 */,
+    },
+    {
+      no: 406,
+      name: "field_0_name6",
+      kind: "scalar",
+      T: 5 /* ScalarType.INT32 */,
+    },
+    {
+      no: 407,
+      name: "fieldName7",
+      kind: "scalar",
+      T: 5 /* ScalarType.INT32 */,
+    },
+    {
+      no: 408,
+      name: "FieldName8",
+      kind: "scalar",
+      T: 5 /* ScalarType.INT32 */,
+    },
+    {
+      no: 409,
+      name: "field_Name9",
+      kind: "scalar",
+      T: 5 /* ScalarType.INT32 */,
+    },
+    {
+      no: 410,
+      name: "Field_Name10",
+      kind: "scalar",
+      T: 5 /* ScalarType.INT32 */,
+    },
+    {
+      no: 411,
+      name: "FIELD_NAME11",
+      kind: "scalar",
+      T: 5 /* ScalarType.INT32 */,
+    },
+    {
+      no: 412,
+      name: "FIELD_name12",
+      kind: "scalar",
+      T: 5 /* ScalarType.INT32 */,
+    },
+    {
+      no: 413,
+      name: "__field_name13",
+      kind: "scalar",
+      T: 5 /* ScalarType.INT32 */,
+    },
+    {
+      no: 414,
+      name: "__Field_name14",
+      kind: "scalar",
+      T: 5 /* ScalarType.INT32 */,
+    },
+    {
+      no: 415,
+      name: "field__name15",
+      kind: "scalar",
+      T: 5 /* ScalarType.INT32 */,
+    },
+    {
+      no: 416,
+      name: "field__Name16",
+      kind: "scalar",
+      T: 5 /* ScalarType.INT32 */,
+    },
+    {
+      no: 417,
+      name: "field_name17__",
+      kind: "scalar",
+      T: 5 /* ScalarType.INT32 */,
+    },
+    {
+      no: 418,
+      name: "Field_name18__",
+      kind: "scalar",
+      T: 5 /* ScalarType.INT32 */,
+    },
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): TestAllTypesProto3 {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): TestAllTypesProto3 {
     return new TestAllTypesProto3().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): TestAllTypesProto3 {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): TestAllTypesProto3 {
     return new TestAllTypesProto3().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): TestAllTypesProto3 {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): TestAllTypesProto3 {
     return new TestAllTypesProto3().fromJsonString(jsonString, options);
   }
 
-  static equals(a: TestAllTypesProto3 | PlainMessage<TestAllTypesProto3> | undefined, b: TestAllTypesProto3 | PlainMessage<TestAllTypesProto3> | undefined): boolean {
+  static equals(
+    a: TestAllTypesProto3 | PlainMessage<TestAllTypesProto3> | undefined,
+    b: TestAllTypesProto3 | PlainMessage<TestAllTypesProto3> | undefined
+  ): boolean {
     return proto3.util.equals(TestAllTypesProto3, a, b);
   }
 }
@@ -1070,12 +1928,16 @@ export enum TestAllTypesProto3_NestedEnum {
   NEG = -1,
 }
 // Retrieve enum metadata with: proto3.getEnumType(TestAllTypesProto3_NestedEnum)
-proto3.util.setEnumType(TestAllTypesProto3_NestedEnum, "protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum", [
-  { no: 0, name: "FOO" },
-  { no: 1, name: "BAR" },
-  { no: 2, name: "BAZ" },
-  { no: -1, name: "NEG" },
-]);
+proto3.util.setEnumType(
+  TestAllTypesProto3_NestedEnum,
+  "protobuf_test_messages.proto3.TestAllTypesProto3.NestedEnum",
+  [
+    { no: 0, name: "FOO" },
+    { no: 1, name: "BAR" },
+    { no: 2, name: "BAZ" },
+    { no: -1, name: "NEG" },
+  ]
+);
 
 /**
  * @generated from enum protobuf_test_messages.proto3.TestAllTypesProto3.AliasedEnum
@@ -1112,14 +1974,18 @@ export enum TestAllTypesProto3_AliasedEnum {
   bAz = 2,
 }
 // Retrieve enum metadata with: proto3.getEnumType(TestAllTypesProto3_AliasedEnum)
-proto3.util.setEnumType(TestAllTypesProto3_AliasedEnum, "protobuf_test_messages.proto3.TestAllTypesProto3.AliasedEnum", [
-  { no: 0, name: "ALIAS_FOO" },
-  { no: 1, name: "ALIAS_BAR" },
-  { no: 2, name: "ALIAS_BAZ" },
-  { no: 2, name: "MOO" },
-  { no: 2, name: "moo" },
-  { no: 2, name: "bAz" },
-]);
+proto3.util.setEnumType(
+  TestAllTypesProto3_AliasedEnum,
+  "protobuf_test_messages.proto3.TestAllTypesProto3.AliasedEnum",
+  [
+    { no: 0, name: "ALIAS_FOO" },
+    { no: 1, name: "ALIAS_BAR" },
+    { no: 2, name: "ALIAS_BAZ" },
+    { no: 2, name: "MOO" },
+    { no: 2, name: "moo" },
+    { no: 2, name: "bAz" },
+  ]
+);
 
 /**
  * @generated from message protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage
@@ -1141,25 +2007,47 @@ export class TestAllTypesProto3_NestedMessage extends Message<TestAllTypesProto3
   }
 
   static readonly runtime = proto3;
-  static readonly typeName = "protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage";
+  static readonly typeName =
+    "protobuf_test_messages.proto3.TestAllTypesProto3.NestedMessage";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "a", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
     { no: 2, name: "corecursive", kind: "message", T: TestAllTypesProto3 },
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): TestAllTypesProto3_NestedMessage {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): TestAllTypesProto3_NestedMessage {
     return new TestAllTypesProto3_NestedMessage().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): TestAllTypesProto3_NestedMessage {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): TestAllTypesProto3_NestedMessage {
     return new TestAllTypesProto3_NestedMessage().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): TestAllTypesProto3_NestedMessage {
-    return new TestAllTypesProto3_NestedMessage().fromJsonString(jsonString, options);
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): TestAllTypesProto3_NestedMessage {
+    return new TestAllTypesProto3_NestedMessage().fromJsonString(
+      jsonString,
+      options
+    );
   }
 
-  static equals(a: TestAllTypesProto3_NestedMessage | PlainMessage<TestAllTypesProto3_NestedMessage> | undefined, b: TestAllTypesProto3_NestedMessage | PlainMessage<TestAllTypesProto3_NestedMessage> | undefined): boolean {
+  static equals(
+    a:
+      | TestAllTypesProto3_NestedMessage
+      | PlainMessage<TestAllTypesProto3_NestedMessage>
+      | undefined,
+    b:
+      | TestAllTypesProto3_NestedMessage
+      | PlainMessage<TestAllTypesProto3_NestedMessage>
+      | undefined
+  ): boolean {
     return proto3.util.equals(TestAllTypesProto3_NestedMessage, a, b);
   }
 }
@@ -1184,19 +2072,31 @@ export class ForeignMessage extends Message<ForeignMessage> {
     { no: 1, name: "c", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ForeignMessage {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): ForeignMessage {
     return new ForeignMessage().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ForeignMessage {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): ForeignMessage {
     return new ForeignMessage().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ForeignMessage {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): ForeignMessage {
     return new ForeignMessage().fromJsonString(jsonString, options);
   }
 
-  static equals(a: ForeignMessage | PlainMessage<ForeignMessage> | undefined, b: ForeignMessage | PlainMessage<ForeignMessage> | undefined): boolean {
+  static equals(
+    a: ForeignMessage | PlainMessage<ForeignMessage> | undefined,
+    b: ForeignMessage | PlainMessage<ForeignMessage> | undefined
+  ): boolean {
     return proto3.util.equals(ForeignMessage, a, b);
   }
 }
@@ -1211,23 +2111,35 @@ export class NullHypothesisProto3 extends Message<NullHypothesisProto3> {
   }
 
   static readonly runtime = proto3;
-  static readonly typeName = "protobuf_test_messages.proto3.NullHypothesisProto3";
-  static readonly fields: FieldList = proto3.util.newFieldList(() => [
-  ]);
+  static readonly typeName =
+    "protobuf_test_messages.proto3.NullHypothesisProto3";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => []);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): NullHypothesisProto3 {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): NullHypothesisProto3 {
     return new NullHypothesisProto3().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): NullHypothesisProto3 {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): NullHypothesisProto3 {
     return new NullHypothesisProto3().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): NullHypothesisProto3 {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): NullHypothesisProto3 {
     return new NullHypothesisProto3().fromJsonString(jsonString, options);
   }
 
-  static equals(a: NullHypothesisProto3 | PlainMessage<NullHypothesisProto3> | undefined, b: NullHypothesisProto3 | PlainMessage<NullHypothesisProto3> | undefined): boolean {
+  static equals(
+    a: NullHypothesisProto3 | PlainMessage<NullHypothesisProto3> | undefined,
+    b: NullHypothesisProto3 | PlainMessage<NullHypothesisProto3> | undefined
+  ): boolean {
     return proto3.util.equals(NullHypothesisProto3, a, b);
   }
 }
@@ -1243,22 +2155,33 @@ export class EnumOnlyProto3 extends Message<EnumOnlyProto3> {
 
   static readonly runtime = proto3;
   static readonly typeName = "protobuf_test_messages.proto3.EnumOnlyProto3";
-  static readonly fields: FieldList = proto3.util.newFieldList(() => [
-  ]);
+  static readonly fields: FieldList = proto3.util.newFieldList(() => []);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): EnumOnlyProto3 {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): EnumOnlyProto3 {
     return new EnumOnlyProto3().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): EnumOnlyProto3 {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): EnumOnlyProto3 {
     return new EnumOnlyProto3().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): EnumOnlyProto3 {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): EnumOnlyProto3 {
     return new EnumOnlyProto3().fromJsonString(jsonString, options);
   }
 
-  static equals(a: EnumOnlyProto3 | PlainMessage<EnumOnlyProto3> | undefined, b: EnumOnlyProto3 | PlainMessage<EnumOnlyProto3> | undefined): boolean {
+  static equals(
+    a: EnumOnlyProto3 | PlainMessage<EnumOnlyProto3> | undefined,
+    b: EnumOnlyProto3 | PlainMessage<EnumOnlyProto3> | undefined
+  ): boolean {
     return proto3.util.equals(EnumOnlyProto3, a, b);
   }
 }
@@ -1278,8 +2201,11 @@ export enum EnumOnlyProto3_Bool {
   kTrue = 1,
 }
 // Retrieve enum metadata with: proto3.getEnumType(EnumOnlyProto3_Bool)
-proto3.util.setEnumType(EnumOnlyProto3_Bool, "protobuf_test_messages.proto3.EnumOnlyProto3.Bool", [
-  { no: 0, name: "kFalse" },
-  { no: 1, name: "kTrue" },
-]);
-
+proto3.util.setEnumType(
+  EnumOnlyProto3_Bool,
+  "protobuf_test_messages.proto3.EnumOnlyProto3.Bool",
+  [
+    { no: 0, name: "kFalse" },
+    { no: 1, name: "kTrue" },
+  ]
+);

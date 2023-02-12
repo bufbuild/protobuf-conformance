@@ -32,7 +32,14 @@
 // @generated from file conformance/conformance.proto (package conformance, syntax proto3)
 /* eslint-disable */
 
-import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
+import type {
+  BinaryReadOptions,
+  FieldList,
+  JsonReadOptions,
+  JsonValue,
+  PartialMessage,
+  PlainMessage,
+} from "@bufbuild/protobuf";
 import { Message, proto3 } from "@bufbuild/protobuf";
 
 /**
@@ -155,22 +162,40 @@ export class FailureSet extends Message<FailureSet> {
   static readonly runtime = proto3;
   static readonly typeName = "conformance.FailureSet";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "failure", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+    {
+      no: 1,
+      name: "failure",
+      kind: "scalar",
+      T: 9 /* ScalarType.STRING */,
+      repeated: true,
+    },
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): FailureSet {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): FailureSet {
     return new FailureSet().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): FailureSet {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): FailureSet {
     return new FailureSet().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): FailureSet {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): FailureSet {
     return new FailureSet().fromJsonString(jsonString, options);
   }
 
-  static equals(a: FailureSet | PlainMessage<FailureSet> | undefined, b: FailureSet | PlainMessage<FailureSet> | undefined): boolean {
+  static equals(
+    a: FailureSet | PlainMessage<FailureSet> | undefined,
+    b: FailureSet | PlainMessage<FailureSet> | undefined
+  ): boolean {
     return proto3.util.equals(FailureSet, a, b);
   }
 }
@@ -196,33 +221,38 @@ export class ConformanceRequest extends Message<ConformanceRequest> {
    *
    * @generated from oneof conformance.ConformanceRequest.payload
    */
-  payload: {
-    /**
-     * @generated from field: bytes protobuf_payload = 1;
-     */
-    value: Uint8Array;
-    case: "protobufPayload";
-  } | {
-    /**
-     * @generated from field: string json_payload = 2;
-     */
-    value: string;
-    case: "jsonPayload";
-  } | {
-    /**
-     * Google internal only.  Opensource testees just skip it.
-     *
-     * @generated from field: string jspb_payload = 7;
-     */
-    value: string;
-    case: "jspbPayload";
-  } | {
-    /**
-     * @generated from field: string text_payload = 8;
-     */
-    value: string;
-    case: "textPayload";
-  } | { case: undefined; value?: undefined } = { case: undefined };
+  payload:
+    | {
+        /**
+         * @generated from field: bytes protobuf_payload = 1;
+         */
+        value: Uint8Array;
+        case: "protobufPayload";
+      }
+    | {
+        /**
+         * @generated from field: string json_payload = 2;
+         */
+        value: string;
+        case: "jsonPayload";
+      }
+    | {
+        /**
+         * Google internal only.  Opensource testees just skip it.
+         *
+         * @generated from field: string jspb_payload = 7;
+         */
+        value: string;
+        case: "jspbPayload";
+      }
+    | {
+        /**
+         * @generated from field: string text_payload = 8;
+         */
+        value: string;
+        case: "textPayload";
+      }
+    | { case: undefined; value?: undefined } = { case: undefined };
 
   /**
    * Which format should the testee serialize its message to?
@@ -272,30 +302,91 @@ export class ConformanceRequest extends Message<ConformanceRequest> {
   static readonly runtime = proto3;
   static readonly typeName = "conformance.ConformanceRequest";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "protobuf_payload", kind: "scalar", T: 12 /* ScalarType.BYTES */, oneof: "payload" },
-    { no: 2, name: "json_payload", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "payload" },
-    { no: 7, name: "jspb_payload", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "payload" },
-    { no: 8, name: "text_payload", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "payload" },
-    { no: 3, name: "requested_output_format", kind: "enum", T: proto3.getEnumType(WireFormat) },
-    { no: 4, name: "message_type", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 5, name: "test_category", kind: "enum", T: proto3.getEnumType(TestCategory) },
-    { no: 6, name: "jspb_encoding_options", kind: "message", T: JspbEncodingConfig },
-    { no: 9, name: "print_unknown_fields", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+    {
+      no: 1,
+      name: "protobuf_payload",
+      kind: "scalar",
+      T: 12 /* ScalarType.BYTES */,
+      oneof: "payload",
+    },
+    {
+      no: 2,
+      name: "json_payload",
+      kind: "scalar",
+      T: 9 /* ScalarType.STRING */,
+      oneof: "payload",
+    },
+    {
+      no: 7,
+      name: "jspb_payload",
+      kind: "scalar",
+      T: 9 /* ScalarType.STRING */,
+      oneof: "payload",
+    },
+    {
+      no: 8,
+      name: "text_payload",
+      kind: "scalar",
+      T: 9 /* ScalarType.STRING */,
+      oneof: "payload",
+    },
+    {
+      no: 3,
+      name: "requested_output_format",
+      kind: "enum",
+      T: proto3.getEnumType(WireFormat),
+    },
+    {
+      no: 4,
+      name: "message_type",
+      kind: "scalar",
+      T: 9 /* ScalarType.STRING */,
+    },
+    {
+      no: 5,
+      name: "test_category",
+      kind: "enum",
+      T: proto3.getEnumType(TestCategory),
+    },
+    {
+      no: 6,
+      name: "jspb_encoding_options",
+      kind: "message",
+      T: JspbEncodingConfig,
+    },
+    {
+      no: 9,
+      name: "print_unknown_fields",
+      kind: "scalar",
+      T: 8 /* ScalarType.BOOL */,
+    },
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ConformanceRequest {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): ConformanceRequest {
     return new ConformanceRequest().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ConformanceRequest {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): ConformanceRequest {
     return new ConformanceRequest().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ConformanceRequest {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): ConformanceRequest {
     return new ConformanceRequest().fromJsonString(jsonString, options);
   }
 
-  static equals(a: ConformanceRequest | PlainMessage<ConformanceRequest> | undefined, b: ConformanceRequest | PlainMessage<ConformanceRequest> | undefined): boolean {
+  static equals(
+    a: ConformanceRequest | PlainMessage<ConformanceRequest> | undefined,
+    b: ConformanceRequest | PlainMessage<ConformanceRequest> | undefined
+  ): boolean {
     return proto3.util.equals(ConformanceRequest, a, b);
   }
 }
@@ -309,85 +400,94 @@ export class ConformanceResponse extends Message<ConformanceResponse> {
   /**
    * @generated from oneof conformance.ConformanceResponse.result
    */
-  result: {
-    /**
-     * This string should be set to indicate parsing failed.  The string can
-     * provide more information about the parse error if it is available.
-     *
-     * Setting this string does not necessarily mean the testee failed the
-     * test.  Some of the test cases are intentionally invalid input.
-     *
-     * @generated from field: string parse_error = 1;
-     */
-    value: string;
-    case: "parseError";
-  } | {
-    /**
-     * If the input was successfully parsed but errors occurred when
-     * serializing it to the requested output format, set the error message in
-     * this field.
-     *
-     * @generated from field: string serialize_error = 6;
-     */
-    value: string;
-    case: "serializeError";
-  } | {
-    /**
-     * This should be set if some other error occurred.  This will always
-     * indicate that the test failed.  The string can provide more information
-     * about the failure.
-     *
-     * @generated from field: string runtime_error = 2;
-     */
-    value: string;
-    case: "runtimeError";
-  } | {
-    /**
-     * If the input was successfully parsed and the requested output was
-     * protobuf, serialize it to protobuf and set it in this field.
-     *
-     * @generated from field: bytes protobuf_payload = 3;
-     */
-    value: Uint8Array;
-    case: "protobufPayload";
-  } | {
-    /**
-     * If the input was successfully parsed and the requested output was JSON,
-     * serialize to JSON and set it in this field.
-     *
-     * @generated from field: string json_payload = 4;
-     */
-    value: string;
-    case: "jsonPayload";
-  } | {
-    /**
-     * For when the testee skipped the test, likely because a certain feature
-     * wasn't supported, like JSON input/output.
-     *
-     * @generated from field: string skipped = 5;
-     */
-    value: string;
-    case: "skipped";
-  } | {
-    /**
-     * If the input was successfully parsed and the requested output was JSPB,
-     * serialize to JSPB and set it in this field. JSPB is google internal only
-     * format. Opensource testees can just skip it.
-     *
-     * @generated from field: string jspb_payload = 7;
-     */
-    value: string;
-    case: "jspbPayload";
-  } | {
-    /**
-     * If the input was successfully parsed and the requested output was
-     * TEXT_FORMAT, serialize to TEXT_FORMAT and set it in this field.
-     *
-     * @generated from field: string text_payload = 8;
-     */
-    value: string;
-    case: "textPayload";
-  } | { case: undefined; value?: undefined } = { case: undefined };
+  result:
+    | {
+        /**
+         * This string should be set to indicate parsing failed.  The string can
+         * provide more information about the parse error if it is available.
+         *
+         * Setting this string does not necessarily mean the testee failed the
+         * test.  Some of the test cases are intentionally invalid input.
+         *
+         * @generated from field: string parse_error = 1;
+         */
+        value: string;
+        case: "parseError";
+      }
+    | {
+        /**
+         * If the input was successfully parsed but errors occurred when
+         * serializing it to the requested output format, set the error message in
+         * this field.
+         *
+         * @generated from field: string serialize_error = 6;
+         */
+        value: string;
+        case: "serializeError";
+      }
+    | {
+        /**
+         * This should be set if some other error occurred.  This will always
+         * indicate that the test failed.  The string can provide more information
+         * about the failure.
+         *
+         * @generated from field: string runtime_error = 2;
+         */
+        value: string;
+        case: "runtimeError";
+      }
+    | {
+        /**
+         * If the input was successfully parsed and the requested output was
+         * protobuf, serialize it to protobuf and set it in this field.
+         *
+         * @generated from field: bytes protobuf_payload = 3;
+         */
+        value: Uint8Array;
+        case: "protobufPayload";
+      }
+    | {
+        /**
+         * If the input was successfully parsed and the requested output was JSON,
+         * serialize to JSON and set it in this field.
+         *
+         * @generated from field: string json_payload = 4;
+         */
+        value: string;
+        case: "jsonPayload";
+      }
+    | {
+        /**
+         * For when the testee skipped the test, likely because a certain feature
+         * wasn't supported, like JSON input/output.
+         *
+         * @generated from field: string skipped = 5;
+         */
+        value: string;
+        case: "skipped";
+      }
+    | {
+        /**
+         * If the input was successfully parsed and the requested output was JSPB,
+         * serialize to JSPB and set it in this field. JSPB is google internal only
+         * format. Opensource testees can just skip it.
+         *
+         * @generated from field: string jspb_payload = 7;
+         */
+        value: string;
+        case: "jspbPayload";
+      }
+    | {
+        /**
+         * If the input was successfully parsed and the requested output was
+         * TEXT_FORMAT, serialize to TEXT_FORMAT and set it in this field.
+         *
+         * @generated from field: string text_payload = 8;
+         */
+        value: string;
+        case: "textPayload";
+      }
+    | { case: undefined; value?: undefined } = { case: undefined };
 
   constructor(data?: PartialMessage<ConformanceResponse>) {
     super();
@@ -397,29 +497,89 @@ export class ConformanceResponse extends Message<ConformanceResponse> {
   static readonly runtime = proto3;
   static readonly typeName = "conformance.ConformanceResponse";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "parse_error", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "result" },
-    { no: 6, name: "serialize_error", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "result" },
-    { no: 2, name: "runtime_error", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "result" },
-    { no: 3, name: "protobuf_payload", kind: "scalar", T: 12 /* ScalarType.BYTES */, oneof: "result" },
-    { no: 4, name: "json_payload", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "result" },
-    { no: 5, name: "skipped", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "result" },
-    { no: 7, name: "jspb_payload", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "result" },
-    { no: 8, name: "text_payload", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "result" },
+    {
+      no: 1,
+      name: "parse_error",
+      kind: "scalar",
+      T: 9 /* ScalarType.STRING */,
+      oneof: "result",
+    },
+    {
+      no: 6,
+      name: "serialize_error",
+      kind: "scalar",
+      T: 9 /* ScalarType.STRING */,
+      oneof: "result",
+    },
+    {
+      no: 2,
+      name: "runtime_error",
+      kind: "scalar",
+      T: 9 /* ScalarType.STRING */,
+      oneof: "result",
+    },
+    {
+      no: 3,
+      name: "protobuf_payload",
+      kind: "scalar",
+      T: 12 /* ScalarType.BYTES */,
+      oneof: "result",
+    },
+    {
+      no: 4,
+      name: "json_payload",
+      kind: "scalar",
+      T: 9 /* ScalarType.STRING */,
+      oneof: "result",
+    },
+    {
+      no: 5,
+      name: "skipped",
+      kind: "scalar",
+      T: 9 /* ScalarType.STRING */,
+      oneof: "result",
+    },
+    {
+      no: 7,
+      name: "jspb_payload",
+      kind: "scalar",
+      T: 9 /* ScalarType.STRING */,
+      oneof: "result",
+    },
+    {
+      no: 8,
+      name: "text_payload",
+      kind: "scalar",
+      T: 9 /* ScalarType.STRING */,
+      oneof: "result",
+    },
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ConformanceResponse {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): ConformanceResponse {
     return new ConformanceResponse().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ConformanceResponse {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): ConformanceResponse {
     return new ConformanceResponse().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ConformanceResponse {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): ConformanceResponse {
     return new ConformanceResponse().fromJsonString(jsonString, options);
   }
 
-  static equals(a: ConformanceResponse | PlainMessage<ConformanceResponse> | undefined, b: ConformanceResponse | PlainMessage<ConformanceResponse> | undefined): boolean {
+  static equals(
+    a: ConformanceResponse | PlainMessage<ConformanceResponse> | undefined,
+    b: ConformanceResponse | PlainMessage<ConformanceResponse> | undefined
+  ): boolean {
     return proto3.util.equals(ConformanceResponse, a, b);
   }
 }
@@ -445,23 +605,39 @@ export class JspbEncodingConfig extends Message<JspbEncodingConfig> {
   static readonly runtime = proto3;
   static readonly typeName = "conformance.JspbEncodingConfig";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "use_jspb_array_any_format", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+    {
+      no: 1,
+      name: "use_jspb_array_any_format",
+      kind: "scalar",
+      T: 8 /* ScalarType.BOOL */,
+    },
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): JspbEncodingConfig {
+  static fromBinary(
+    bytes: Uint8Array,
+    options?: Partial<BinaryReadOptions>
+  ): JspbEncodingConfig {
     return new JspbEncodingConfig().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): JspbEncodingConfig {
+  static fromJson(
+    jsonValue: JsonValue,
+    options?: Partial<JsonReadOptions>
+  ): JspbEncodingConfig {
     return new JspbEncodingConfig().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): JspbEncodingConfig {
+  static fromJsonString(
+    jsonString: string,
+    options?: Partial<JsonReadOptions>
+  ): JspbEncodingConfig {
     return new JspbEncodingConfig().fromJsonString(jsonString, options);
   }
 
-  static equals(a: JspbEncodingConfig | PlainMessage<JspbEncodingConfig> | undefined, b: JspbEncodingConfig | PlainMessage<JspbEncodingConfig> | undefined): boolean {
+  static equals(
+    a: JspbEncodingConfig | PlainMessage<JspbEncodingConfig> | undefined,
+    b: JspbEncodingConfig | PlainMessage<JspbEncodingConfig> | undefined
+  ): boolean {
     return proto3.util.equals(JspbEncodingConfig, a, b);
   }
 }
-

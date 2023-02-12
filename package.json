@@ -1,5 +1,13 @@
 {
   "name": "protobuf-conformance",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "prettier": "^2.8.4",
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "eslint": "^8.31.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0"
+  }
 }

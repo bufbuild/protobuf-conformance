@@ -14,7 +14,7 @@ PB   =  .tmp/protobuf-$(GOOGLE_PROTOBUF_VERSION)
 GOOGLE_PROTOBUF_VERSION = 21.12
 BAZEL_VERSION = 5.4.0
 LICENSE_HEADER_YEAR_RANGE := 2021-2023
-LICENSE_HEADER_IGNORES := .tmp\/ node_module\/ dist\/
+LICENSE_HEADER_IGNORES := .tmp\/ node_module\/ dist\/ bin gen impl\/protobuf.js\/wrapper.js
 GOOGLE_PROTOBUF_JS_VERSION = 3.21.2
 GOOGLE_PROTOBUF_JS = .tmp/protobuf-javascript-$(GOOGLE_PROTOBUF_JS_VERSION)
 
@@ -58,12 +58,22 @@ $(BIN)/git-ls-files-unstaged: Makefile
 	@mkdir -p $(@D)
 	GOBIN=$(abspath $(BIN)) go install github.com/bufbuild/buf/private/pkg/git/cmd/git-ls-files-unstaged@v1.1.0
 
+.PHONY: format
+format: $(BIN)/git-ls-files-unstaged $(BIN)/license-header ## Format all files, adding license headers
+	npx prettier --write '**/*.{json,js,jsx,ts,tsx,css,mjs}' --loglevel error
+	$(BIN)/git-ls-files-unstaged | \
+		grep -v $(patsubst %,-e %,$(sort $(LICENSE_HEADER_IGNORES))) | \
+		xargs $(BIN)/license-header \
+			--license-type "apache" \
+			--copyright-holder "Buf Technologies, Inc." \
+			--year-range "$(LICENSE_HEADER_YEAR_RANGE)"
+
 .PHONY: help
 help: ## Describe useful make targets
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "%-30s %s\n", $$1, $$2}'
 
 .PHONY: all
-all: test
+all: test format
 
 .PHONY: clean
 clean: ## Delete build artifacts and installed dependencies
