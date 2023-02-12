@@ -14,7 +14,7 @@ PB   =  .tmp/protobuf-$(GOOGLE_PROTOBUF_VERSION)
 GOOGLE_PROTOBUF_VERSION = 21.12
 BAZEL_VERSION = 5.4.0
 LICENSE_HEADER_YEAR_RANGE := 2021-2023
-LICENSE_HEADER_IGNORES := .tmp\/ node_module\/ dist\/ bin gen impl\/protobuf.js\/wrapper.js
+LICENSE_HEADER_IGNORES := .tmp\/ node_module\/ dist\/ bin gen impl\/protobuf.js\/wrapper.js impl\/google-protobuf\/runner.cjs
 GOOGLE_PROTOBUF_JS_VERSION = 3.21.2
 GOOGLE_PROTOBUF_JS = .tmp/protobuf-javascript-$(GOOGLE_PROTOBUF_JS_VERSION)
 
@@ -67,6 +67,10 @@ format: $(BIN)/git-ls-files-unstaged $(BIN)/license-header ## Format all files, 
 			--license-type "apache" \
 			--copyright-holder "Buf Technologies, Inc." \
 			--year-range "$(LICENSE_HEADER_YEAR_RANGE)"
+
+.PHONY: lint
+lint: $(BUILD)/javascript 
+	npx eslint --max-warnings 0 .
 
 .PHONY: help
 help: ## Describe useful make targets

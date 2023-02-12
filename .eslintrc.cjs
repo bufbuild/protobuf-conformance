@@ -7,14 +7,10 @@ module.exports = {
     node: true,
   },
   ignorePatterns: [
-    "dist/**",
-    "gen/**/*",
+    "**/dist/**",
+    "**/gen/**/*",
+    "**/impl/**/wrapper.js",
     "node_modules/**",
   ],
-  extends: [
-    'eslint:recommended',
-    "plugin:@typescript-eslint/recommended"
-  ],
-}
-
-
+  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+};
