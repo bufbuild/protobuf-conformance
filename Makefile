@@ -18,6 +18,9 @@ LICENSE_HEADER_IGNORES := .tmp\/ node_module\/ dist\/ bin gen impl\/protobuf.js\
 GOOGLE_PROTOBUF_JS_VERSION = 3.21.2
 GOOGLE_PROTOBUF_JS = .tmp/protobuf-javascript-$(GOOGLE_PROTOBUF_JS_VERSION)
 
+node_modules: package-lock.json
+	npm ci
+
 $(PB):
 	echo $(PB)
 	@mkdir -p $(TMP)
@@ -59,7 +62,7 @@ $(BIN)/git-ls-files-unstaged: Makefile
 	GOBIN=$(abspath $(BIN)) go install github.com/bufbuild/buf/private/pkg/git/cmd/git-ls-files-unstaged@v1.1.0
 
 .PHONY: format
-format: $(BIN)/git-ls-files-unstaged $(BIN)/license-header ## Format all files, adding license headers
+format: node_modules $(BIN)/git-ls-files-unstaged $(BIN)/license-header ## Format all files, adding license headers
 	npx prettier --write '**/*.{json,js,jsx,ts,tsx,css,mjs}' --loglevel error
 	$(BIN)/git-ls-files-unstaged | \
 		grep -v $(patsubst %,-e %,$(sort $(LICENSE_HEADER_IGNORES))) | \
@@ -69,7 +72,7 @@ format: $(BIN)/git-ls-files-unstaged $(BIN)/license-header ## Format all files, 
 			--year-range "$(LICENSE_HEADER_YEAR_RANGE)"
 
 .PHONY: lint
-lint: $(BUILD)/javascript 
+lint: node_modules $(BUILD)/javascript 
 	npx eslint --max-warnings 0 .
 
 .PHONY: help
@@ -77,7 +80,7 @@ help: ## Describe useful make targets
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "%-30s %s\n", $$1, $$2}'
 
 .PHONY: all
-all: test format
+all: format lint test
 
 .PHONY: clean
 clean: ## Delete build artifacts and installed dependencies
