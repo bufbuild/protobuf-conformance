@@ -14,7 +14,7 @@ PB   =  .tmp/protobuf-$(GOOGLE_PROTOBUF_VERSION)
 GOOGLE_PROTOBUF_VERSION = 21.12
 BAZEL_VERSION = 5.4.0
 LICENSE_HEADER_YEAR_RANGE := 2021-2023
-LICENSE_HEADER_IGNORES := .tmp\/ node_module\/ dist\/ bin gen impl\/protobuf.js\/wrapper.js impl\/protobuf-es\/runner.ts impl\/google-protobuf\/runner.ts
+LICENSE_HEADER_IGNORES := .tmp\/ node_module\/ gen impl\/protobuf.js\/wrapper.js impl\/protobuf.js\/runner.ts impl\/protobuf-es\/runner.ts impl\/google-protobuf\/runner.ts
 GOOGLE_PROTOBUF_JS_VERSION = 3.21.2
 GOOGLE_PROTOBUF_JS = .tmp/protobuf-javascript-$(GOOGLE_PROTOBUF_JS_VERSION)
 
@@ -38,12 +38,6 @@ $(BIN)/protoc-gen-js: $(GOOGLE_PROTOBUF_JS) Makefile
 	cp -f $(GOOGLE_PROTOBUF_JS)/bazel-bin/generator/protoc-gen-js $(@D)
 	@touch $(@)
 
-$(BIN)/protoc: $(PB)
-	@mkdir -p $(@D)
-	cd $(PB) && USE_BAZEL_VERSION=$(BAZEL_VERSION) bazel build protoc
-	cp -f $(PB)/bazel-bin/protoc $(@D)
-	@touch $(@)
-
 $(BIN)/conformance_test_runner: $(PB)
 	@mkdir -p $(@D)
 	cd $(PB) && USE_BAZEL_VERSION=$(BAZEL_VERSION) bazel build test_messages_proto3_proto conformance:conformance_proto conformance:conformance_test conformance:conformance_test_runner
@@ -61,7 +55,8 @@ $(BIN)/git-ls-files-unstaged: Makefile
 .PHONY: format
 format: $(BIN)/git-ls-files-unstaged $(BIN)/license-header ## Format all files, adding license headers
 	cd impl/protobuf-es && npm run format
-	
+	cd impl/protobuf.js && npm run format
+	cd impl/google-protobuf && npm run format
 	$(BIN)/git-ls-files-unstaged | \
 		grep -v $(patsubst %,-e %,$(sort $(LICENSE_HEADER_IGNORES))) | \
 		xargs $(BIN)/license-header \
@@ -95,7 +90,7 @@ $(BUILD)/javascript: $(GEN)/javascript $(shell find impl -name '*.ts' -o -name '
 
 $(GEN)/javascript: $(GEN)/protobuf.js $(GEN)/protobuf-es $(GEN)/google-protobuf
 
-$(GEN)/protobuf.js: $(BIN)/protoc Makefile impl/protobuf.js/package-lock.json
+$(GEN)/protobuf.js: Makefile impl/protobuf.js/package-lock.json
 	@rm -rf impl/protobuf.js/proto/*
 	@mkdir -p impl/protobuf.js/proto/conformance
 	@mkdir -p impl/protobuf.js/proto/google/protobuf
@@ -112,7 +107,7 @@ $(GEN)/protobuf.js: $(BIN)/protoc Makefile impl/protobuf.js/package-lock.json
 	@mkdir -p impl/protobuf.js/gen
 	cd impl/protobuf.js && npm run clean && npm run buf:generate
 
-$(GEN)/protobuf-es: $(BIN)/protoc Makefile impl/protobuf-es/package-lock.json
+$(GEN)/protobuf-es: Makefile impl/protobuf-es/package-lock.json
 	@rm -rf impl/protobuf-es/proto/*
 	@mkdir -p impl/protobuf-es/proto/conformance
 	@mkdir -p impl/protobuf-es/proto/google/protobuf
@@ -120,13 +115,13 @@ $(GEN)/protobuf-es: $(BIN)/protoc Makefile impl/protobuf-es/package-lock.json
 	@cp $(PB)/src/google/protobuf/test_messages*.proto impl/protobuf-es/proto/google/protobuf/
 	cd impl/protobuf-es && npm run clean && npm run buf:generate
 
-$(GEN)/google-protobuf: $(BIN)/protoc Makefile $(BIN)/protoc-gen-js impl/google-protobuf/package-lock.json
-	@rm -rf impl/google-protobuf/gen/*
-	@mkdir -p impl/google-protobuf/gen
-	cd impl/google-protobuf && npm ci
-	$(BIN)/protoc --plugin=$(BIN)/protoc-gen-js --js_out=import_style=commonjs,binary:impl/google-protobuf/gen --proto_path $(PB) --proto_path $(PB)/src conformance/conformance.proto \
-		google/protobuf/test_messages_proto2.proto \
-		google/protobuf/test_messages_proto3.proto
+$(GEN)/google-protobuf: Makefile $(BIN)/protoc-gen-js impl/google-protobuf/package-lock.json
+	@rm -rf impl/google-protobuf/proto/*
+	@mkdir -p impl/google-protobuf/proto/conformance
+	@mkdir -p impl/google-protobuf/proto/google/protobuf
+	@cp $(PB)/conformance/conformance.proto impl/google-protobuf/proto/conformance
+	@cp $(PB)/src/google/protobuf/test_messages*.proto impl/google-protobuf/proto/google/protobuf/
+	cd impl/protobuf-es && npm run clean && npm run buf:generate
 
 $(BUILD)/protobuf-es: $(GEN)/protobuf-es
 	cd impl/protobuf-es && npm run build

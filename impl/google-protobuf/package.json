@@ -4,13 +4,19 @@
   "scripts": {
     "clean": "rm -rf ./dist/cjs/*",
     "build": "./node_modules/typescript/bin/tsc --project tsconfig.json --module ES2015 --noEmit",
-    "lint": "npx eslint --max-warnings 0 ."
+    "lint": "npx eslint --max-warnings 0 .",
+    "format": "npx prettier --write '**/*.{json,js,jsx,ts,tsx,css,mjs}' --loglevel error",
+    "buf:generate": "npx buf generate"
   },
   "dependencies": {
     "google-protobuf": "^3.21.2"
   },
   "devDependencies": {
+    "@bufbuild/buf": "^1.14.0",
     "@types/node": "^18.13.0",
+    "eslint": "^8.31.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
     "prettier": "^2.8.4",
     "tsx": "^3.12.3",
     "typescript": "^4.9.5"

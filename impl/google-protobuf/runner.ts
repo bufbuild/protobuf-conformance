@@ -60,7 +60,7 @@ function writeBuffer(buffer: Buffer) {
   }
 }
 
-function doTest(request: any) {
+function doTest(request: typeof ConformanceRequest) {
   const response = new ConformanceResponse(new ArrayBuffer(0));
 
   if (
@@ -168,6 +168,7 @@ function runConformanceTest() {
   return true;
 }
 
+// eslint-disable-next-line no-constant-condition
 while (true) {
   if (!runConformanceTest()) {
     break;

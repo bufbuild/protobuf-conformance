@@ -6,9 +6,9 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  ignorePatterns: ["dist/**", "gen/**/*", "node_modules/**"],
-  extends: ["eslint:recommended"],
-  parserOptions: {
-    sourceType: "module",
+  ignorePatterns: ["gen/**/*", "node_modules/**"],
+  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  rules: {
+    "@typescript-eslint/no-var-requires": 0,
   },
 };

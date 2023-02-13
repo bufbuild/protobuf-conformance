@@ -6,6 +6,6 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  ignorePatterns: ["dist/**", "gen/**/*", "wrapper.js", "node_modules/**"],
+  ignorePatterns: ["gen/**/*", "wrapper.js", "node_modules/**"],
   extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
 };
