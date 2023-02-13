@@ -19,14 +19,14 @@ const {
   ConformanceRequest,
   ConformanceResponse,
   WireFormat,
-} = require("./gen/conformance/conformance_pb.js");
+} = require("./gen/proto/conformance/conformance_pb.js");
 
 const {
   TestAllTypesProto2,
-} = require("./gen/google/protobuf/test_messages_proto2_pb.js");
+} = require("./gen/proto/google/protobuf/test_messages_proto2_pb.js");
 const {
   TestAllTypesProto3,
-} = require("./gen/google/protobuf/test_messages_proto3_pb.js");
+} = require("./gen/proto/google/protobuf/test_messages_proto3_pb.js");
 
 const { readSync, writeSync } = require("fs");
 
