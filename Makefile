@@ -85,8 +85,7 @@ clean: ## Delete build artifacts and installed dependencies
 .PHONY: build
 build: $(BUILD)/javascript 
 
-$(BUILD)/javascript: $(GEN)/javascript $(shell find impl -name '*.ts' -o -name '*.cjs')
-	cd impl/google-protobuf && npm run clean && npm run build
+$(BUILD)/javascript: $(BUILD)/protobuf-es $(BUILD)/protobuf.js $(BUILD)/google-protobuf $(shell find impl -name '*.ts' -o -name '*.cjs')
 
 $(GEN)/javascript: $(GEN)/protobuf.js $(GEN)/protobuf-es $(GEN)/google-protobuf
 
@@ -121,16 +120,16 @@ $(GEN)/google-protobuf: Makefile $(BIN)/protoc-gen-js impl/google-protobuf/packa
 	@mkdir -p impl/google-protobuf/proto/google/protobuf
 	@cp $(PB)/conformance/conformance.proto impl/google-protobuf/proto/conformance
 	@cp $(PB)/src/google/protobuf/test_messages*.proto impl/google-protobuf/proto/google/protobuf/
-	cd impl/protobuf-es && npm run clean && npm run buf:generate
+	cd impl/google-protobuf && npm run clean && npm run buf:generate
 
 $(BUILD)/protobuf-es: $(GEN)/protobuf-es
 	cd impl/protobuf-es && npm run build
 
 $(BUILD)/protobuf.js: $(GEN)/protobuf.js
-	cd impl/protobuf.js && npm run clean && npm run build
+	cd impl/protobuf.js && npm run build
 
 $(BUILD)/google-protobuf: $(GEN)/google-protobuf
-	cd impl/protobuf.js && npm run clean && npm run build
+	cd impl/protobuf.js && npm run build
 
 .PHONY: test
 test: testjsconformance

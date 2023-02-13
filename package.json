@@ -1,8 +1,5 @@
 {
   "name": "protobuf-conformance",
   "private": true,
-  "type": "module",
-  "devDependencies": {
-    "@types/node": "^18.13.0"
-  }
+  "type": "module"
 }

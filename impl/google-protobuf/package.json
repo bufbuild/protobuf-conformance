@@ -2,7 +2,7 @@
   "name": "google-protobuf-conformance",
   "private": true,
   "scripts": {
-    "clean": "rm -rf ./dist/cjs/*",
+    "clean": "rm -rf gen",
     "build": "./node_modules/typescript/bin/tsc --project tsconfig.json --module ES2015 --noEmit",
     "lint": "npx eslint --max-warnings 0 .",
     "format": "npx prettier --write '**/*.{json,js,jsx,ts,tsx,css,mjs}' --loglevel error",
