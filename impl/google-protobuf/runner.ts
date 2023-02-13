@@ -1,3 +1,5 @@
+#!/usr/bin/env -S npx tsx
+
 // This file is mostly copied from the conformance testee files located at:
 // https://github.com/protocolbuffers/protobuf-javascript/blob/main/experimental/runtime/kernel/conformance/
 // - conformance_testee.js
@@ -5,9 +7,11 @@
 //
 // The main differences between this file and the above are:
 // - The above files were combined into this one file
+// - This file uses TypeScript
 // - The test runners in the protobuf-javascript repo use handwritten code instead of generated code for the Protobuf
 //   files used in the test.  These tests generate the code from the Protobuf files using protoc-gen-js.
 // - This file uses CommonJS instead of the Closure Compiler
+// - err.toString was converted to String(err)
 // - Any unsupported input formats (JSON, TextFormat) that were skipped in the original test runner files have been
 //   modified to instead fail the tests just for transparency.  Output formats that were skipped were left as skipped
 //   to match Protobuf-ES.
@@ -15,18 +19,18 @@ const {
   ConformanceRequest,
   ConformanceResponse,
   WireFormat,
-} = require("./gen/conformance/conformance_pb.cjs");
+} = require("./gen/conformance/conformance_pb.js");
 
 const {
   TestAllTypesProto2,
-} = require("./gen/google/protobuf/test_messages_proto2_pb.cjs");
+} = require("./gen/google/protobuf/test_messages_proto2_pb.js");
 const {
   TestAllTypesProto3,
-} = require("./gen/google/protobuf/test_messages_proto3_pb.cjs");
+} = require("./gen/google/protobuf/test_messages_proto3_pb.js");
 
 const { readSync, writeSync } = require("fs");
 
-function readBuffer(bytes) {
+function readBuffer(bytes: number) {
   const buf = Buffer.alloc(bytes);
   let read = 0;
   try {
@@ -44,7 +48,7 @@ function readBuffer(bytes) {
 }
 
 // Write a buffer to stdout.
-function writeBuffer(buffer) {
+function writeBuffer(buffer: Buffer) {
   let totalWritten = 0;
   while (totalWritten < buffer.length) {
     totalWritten += writeSync(
@@ -56,7 +60,7 @@ function writeBuffer(buffer) {
   }
 }
 
-function doTest(request) {
+function doTest(request: any) {
   const response = new ConformanceResponse(new ArrayBuffer(0));
 
   if (
@@ -117,7 +121,7 @@ function doTest(request) {
       );
       response.setProtobufPayload(testMessage.serializeBinary());
     } catch (err) {
-      response.setParseError(err.toString());
+      response.setParseError(String(err));
     }
   } else if (
     request.getMessageType() ===
@@ -129,7 +133,7 @@ function doTest(request) {
       );
       response.setProtobufPayload(testMessage.serializeBinary());
     } catch (err) {
-      response.setParseError(err.toString());
+      response.setParseError(String(err));
     }
   } else {
     throw new Error(
