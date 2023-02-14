@@ -8,15 +8,17 @@ MAKEFLAGS += --no-builtin-rules
 MAKEFLAGS += --no-print-directory
 TMP   = .tmp
 BIN   = .tmp/bin
-BUILD = .tmp/build
-GEN   = .tmp/gen
 PB   =  .tmp/protobuf-$(GOOGLE_PROTOBUF_VERSION)
 GOOGLE_PROTOBUF_VERSION = 21.12
 BAZEL_VERSION = 5.4.0
 LICENSE_HEADER_YEAR_RANGE := 2021-2023
-LICENSE_HEADER_IGNORES := .tmp\/ node_module\/ gen impl\/protobuf.js\/wrapper.js impl\/protobuf.js\/runner.ts impl\/protobuf-es\/runner.ts impl\/google-protobuf\/runner.ts
+LICENSE_HEADER_IGNORES := .tmp\/ node_module\/ proto gen impl\/protobuf.js\/wrapper.js impl\/protobuf.js\/runner.ts impl\/protobuf-es\/runner.ts impl\/google-protobuf\/runner.ts
 GOOGLE_PROTOBUF_JS_VERSION = 3.21.2
 GOOGLE_PROTOBUF_JS = .tmp/protobuf-javascript-$(GOOGLE_PROTOBUF_JS_VERSION)
+
+JS_LIBS = google-protobuf \
+	   protobuf-es \
+	   protobuf.js
 
 $(PB):
 	echo $(PB)
@@ -66,39 +68,23 @@ help: ## Describe useful make targets
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "%-30s %s\n", $$1, $$2}'
 
 .PHONY: all
-all: license lint test
+all: build lint test
 
-.PHONY: clean
-clean: ## Delete build artifacts and installed dependencies
-	@# -X only removes untracked files, -d recurses into directories, -f actually removes files/dirs
-	git clean -Xdf
+define copyprotofunc
+.PHONY: copyproto$(notdir $(1))
+copyproto$(notdir $(1)):
+	@rm -rf impl/$(1)/proto/*
+	@mkdir -p impl/$(1)/proto/conformance
+	@mkdir -p impl/$(1)/proto/google/protobuf
+	@cp $(PB)/conformance/conformance.proto impl/$(1)/proto/conformance
+	@cp $(PB)/src/google/protobuf/test_messages*.proto impl/$(1)/proto/google/protobuf/
 
-.PHONY: copyproto
-copyproto:
-	# protobuf.js
-	@rm -rf impl/protobuf.js/proto/*
-	@mkdir -p impl/protobuf.js/proto/conformance
-	@mkdir -p impl/protobuf.js/proto/google/protobuf
-	@cp $(PB)/conformance/conformance.proto impl/protobuf.js/proto/conformance
-	@cp $(PB)/src/google/protobuf/test_messages*.proto impl/protobuf.js/proto/google/protobuf/
-	# protobuf-es
-	@rm -rf impl/protobuf-es/proto/*
-	@mkdir -p impl/protobuf-es/proto/conformance
-	@mkdir -p impl/protobuf-es/proto/google/protobuf
-	@cp $(PB)/conformance/conformance.proto impl/protobuf-es/proto/conformance
-	@cp $(PB)/src/google/protobuf/test_messages*.proto impl/protobuf-es/proto/google/protobuf/
-	# google-protobuf
-	@rm -rf impl/google-protobuf/proto/*
-	@mkdir -p impl/google-protobuf/proto/conformance
-	@mkdir -p impl/google-protobuf/proto/google/protobuf
-	@cp $(PB)/conformance/conformance.proto impl/google-protobuf/proto/conformance
-	@cp $(PB)/src/google/protobuf/test_messages*.proto impl/google-protobuf/proto/google/protobuf/
+copyproto:: copyproto$(notdir $(1))
+endef
 
-JS = protobuf.js \
-	   google-protobuf \
-	   protobuf-es
+$(foreach js,$(sort $(JS_LIBS)),$(eval $(call copyprotofunc,$(js))))
 
-define lintfunc
+define jslintfunc
 .PHONY: lint$(notdir $(1))
 lint$(notdir $(1)): build$(1)
 	cd impl/$(1) && npm run lint 
@@ -106,58 +92,27 @@ lint$(notdir $(1)): build$(1)
 lint:: lint$(notdir $(1))
 endef
 
-$(foreach js,$(sort $(JS)),$(eval $(call lintfunc,$(js))))
+$(foreach js,$(sort $(JS_LIBS)),$(eval $(call jslintfunc,$(js))))
 
-# .PHONY: lint
-# lint: $(BUILD)/javascript 
-# 	cd impl/protobuf.js && npm run lint 
-# 	cd impl/protobuf-es && npm run lint
-# 	cd impl/google-protobuf && npm run lint
-#
-define buildfunc 
+define jsbuildfunc 
 .PHONY: build$(notdir $(1))
-build$(notdir $(1)): gen$(1) $(shell find impl -name '*.ts' -o -name '*.js')
+build$(notdir $(1)): gen$(1) $(shell find impl -name '*.ts' -o -name '*.js') license
 	cd impl/$(1) && npm ci && npm run build 
 
 build:: build$(notdir $(1))
 endef
 
-$(foreach js,$(sort $(JS)),$(eval $(call buildfunc,$(js))))
+$(foreach js,$(sort $(JS_LIBS)),$(eval $(call jsbuildfunc,$(js))))
 
-# .PHONY: build
-# build: $(BUILD)/javascript 
-
-# $(BUILD)/javascript: $(BUILD)/protobuf-es $(BUILD)/protobuf.js $(BUILD)/google-protobuf 
-
-# $(BUILD)/protobuf-es: $(GEN)/protobuf-es $(shell find impl -name '*.ts' -o -name '*.js')
-# 	cd impl/protobuf-es && npm ci && npm run build
-
-# $(BUILD)/protobuf.js: $(GEN)/protobuf.js $(shell find impl -name '*.ts' -o -name '*.js')
-# 	cd impl/protobuf.js && npm ci && npm run build
-
-# $(BUILD)/google-protobuf: $(GEN)/google-protobuf $(shell find impl -name '*.ts' -o -name '*.js')
-# 	cd impl/protobuf.js && npm ci && npm run build
-#
-define genfunc 
+define jsgenfunc 
 .PHONY: gen$(notdir $(1))
-gen$(notdir $(1)): Makefile copyproto impl/$(1)/package-lock.json
+gen$(notdir $(1)): Makefile copyproto$(1) impl/$(1)/package-lock.json $(BIN)/protoc-gen-js
 	cd impl/$(1) && npm run clean && npm run generate 
 
 gen:: gen$(notdir $(1))
 endef
 
-$(foreach js,$(sort $(JS)),$(eval $(call genfunc,$(js))))
-
-# $(GEN)/javascript: $(GEN)/protobuf.js $(GEN)/protobuf-es $(GEN)/google-protobuf
-
-# $(GEN)/protobuf.js: Makefile copyproto impl/protobuf.js/package-lock.json
-# 	cd impl/protobuf.js && npm run clean && npm run generate
-
-# $(GEN)/protobuf-es: Makefile copyproto impl/protobuf-es/package-lock.json
-# 	cd impl/protobuf-es && npm run clean && npm run generate
-
-# $(GEN)/google-protobuf: Makefile copyproto $(BIN)/protoc-gen-js impl/google-protobuf/package-lock.json
-# 	cd impl/google-protobuf && npm run clean && npm run generate
+$(foreach js,$(sort $(JS_LIBS)),$(eval $(call jsgenfunc,$(js))))
 
 .PHONY: test
 test: testjsconformance
