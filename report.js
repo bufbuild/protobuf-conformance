@@ -16,7 +16,7 @@ import { existsSync, readFileSync } from "fs";
 
 const libs = {
   "google-protobuf": {
-    testRunner: "impl/google-protobuf/conformance.cjs",
+    testRunner: "impl/google-protobuf/runner.ts",
     failingTests: {
       fileName: "impl/google-protobuf/failing_tests_list.txt",
       recommendedFailures: [],
@@ -24,7 +24,7 @@ const libs = {
     },
   },
   "Protobuf-ES (BigInt)": {
-    testRunner: "impl/protobuf-es/conformance.ts",
+    testRunner: "impl/protobuf-es/runner.ts",
     failingTests: {
       fileName: "impl/protobuf-es/failing_tests_with_bigint.txt",
       recommendedFailures: [],
@@ -32,7 +32,7 @@ const libs = {
     },
   },
   "Protobuf-ES (Without BigInt)": {
-    testRunner: "impl/protobuf-es/conformance.ts",
+    testRunner: "impl/protobuf-es/runner.ts",
     failingTests: {
       fileName: "impl/protobuf-es/failing_tests_without_bigint.txt",
       recommendedFailures: [],
@@ -40,7 +40,7 @@ const libs = {
     },
   },
   "protobuf.js": {
-    testRunner: "impl/protobuf.js/conformance.ts",
+    testRunner: "impl/protobuf.js/runner.ts",
     failingTests: {
       fileName: "impl/protobuf.js/failing_tests_list.txt",
       recommendedFailures: [],
