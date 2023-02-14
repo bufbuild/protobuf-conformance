@@ -75,52 +75,89 @@ clean: ## Delete build artifacts and installed dependencies
 
 .PHONY: copyproto
 copyproto:
+	# protobuf.js
 	@rm -rf impl/protobuf.js/proto/*
 	@mkdir -p impl/protobuf.js/proto/conformance
 	@mkdir -p impl/protobuf.js/proto/google/protobuf
 	@cp $(PB)/conformance/conformance.proto impl/protobuf.js/proto/conformance
 	@cp $(PB)/src/google/protobuf/test_messages*.proto impl/protobuf.js/proto/google/protobuf/
+	# protobuf-es
 	@rm -rf impl/protobuf-es/proto/*
 	@mkdir -p impl/protobuf-es/proto/conformance
 	@mkdir -p impl/protobuf-es/proto/google/protobuf
 	@cp $(PB)/conformance/conformance.proto impl/protobuf-es/proto/conformance
 	@cp $(PB)/src/google/protobuf/test_messages*.proto impl/protobuf-es/proto/google/protobuf/
+	# google-protobuf
 	@rm -rf impl/google-protobuf/proto/*
 	@mkdir -p impl/google-protobuf/proto/conformance
 	@mkdir -p impl/google-protobuf/proto/google/protobuf
 	@cp $(PB)/conformance/conformance.proto impl/google-protobuf/proto/conformance
 	@cp $(PB)/src/google/protobuf/test_messages*.proto impl/google-protobuf/proto/google/protobuf/
 
-.PHONY: lint
-lint: $(BUILD)/javascript 
-	cd impl/protobuf.js && npm run lint 
-	cd impl/protobuf-es && npm run lint
-	cd impl/google-protobuf && npm run lint
+JS = protobuf.js \
+	   google-protobuf \
+	   protobuf-es
 
-.PHONY: build
-build: $(BUILD)/javascript 
+define lintfunc
+.PHONY: lint$(notdir $(1))
+lint$(notdir $(1)): build$(1)
+	cd impl/$(1) && npm run lint 
 
-$(BUILD)/javascript: $(BUILD)/protobuf-es $(BUILD)/protobuf.js $(BUILD)/google-protobuf 
+lint:: lint$(notdir $(1))
+endef
 
-$(BUILD)/protobuf-es: $(GEN)/protobuf-es $(shell find impl -name '*.ts' -o -name '*.js')
-	cd impl/protobuf-es && npm ci && npm run build
+$(foreach js,$(sort $(JS)),$(eval $(call lintfunc,$(js))))
 
-$(BUILD)/protobuf.js: $(GEN)/protobuf.js $(shell find impl -name '*.ts' -o -name '*.js')
-	cd impl/protobuf.js && npm ci && npm run build
+# .PHONY: lint
+# lint: $(BUILD)/javascript 
+# 	cd impl/protobuf.js && npm run lint 
+# 	cd impl/protobuf-es && npm run lint
+# 	cd impl/google-protobuf && npm run lint
+#
+define buildfunc 
+.PHONY: build$(notdir $(1))
+build$(notdir $(1)): gen$(1) $(shell find impl -name '*.ts' -o -name '*.js')
+	cd impl/$(1) && npm ci && npm run build 
 
-$(BUILD)/google-protobuf: $(GEN)/google-protobuf $(shell find impl -name '*.ts' -o -name '*.js')
-	cd impl/protobuf.js && npm ci && npm run build
+build:: build$(notdir $(1))
+endef
 
-$(GEN)/javascript: $(GEN)/protobuf.js $(GEN)/protobuf-es $(GEN)/google-protobuf
+$(foreach js,$(sort $(JS)),$(eval $(call buildfunc,$(js))))
 
-$(GEN)/protobuf.js: Makefile copyproto impl/protobuf.js/package-lock.json
-	cd impl/protobuf.js && npm run clean && npm run generate
+# .PHONY: build
+# build: $(BUILD)/javascript 
 
-$(GEN)/protobuf-es: Makefile copyproto impl/protobuf-es/package-lock.json
-	cd impl/protobuf-es && npm run clean && npm run generate
+# $(BUILD)/javascript: $(BUILD)/protobuf-es $(BUILD)/protobuf.js $(BUILD)/google-protobuf 
 
-$(GEN)/google-protobuf: Makefile copyproto $(BIN)/protoc-gen-js impl/google-protobuf/package-lock.json
-	cd impl/google-protobuf && npm run clean && npm run generate
+# $(BUILD)/protobuf-es: $(GEN)/protobuf-es $(shell find impl -name '*.ts' -o -name '*.js')
+# 	cd impl/protobuf-es && npm ci && npm run build
+
+# $(BUILD)/protobuf.js: $(GEN)/protobuf.js $(shell find impl -name '*.ts' -o -name '*.js')
+# 	cd impl/protobuf.js && npm ci && npm run build
+
+# $(BUILD)/google-protobuf: $(GEN)/google-protobuf $(shell find impl -name '*.ts' -o -name '*.js')
+# 	cd impl/protobuf.js && npm ci && npm run build
+#
+define genfunc 
+.PHONY: gen$(notdir $(1))
+gen$(notdir $(1)): Makefile copyproto impl/$(1)/package-lock.json
+	cd impl/$(1) && npm run clean && npm run generate 
+
+gen:: gen$(notdir $(1))
+endef
+
+$(foreach js,$(sort $(JS)),$(eval $(call genfunc,$(js))))
+
+# $(GEN)/javascript: $(GEN)/protobuf.js $(GEN)/protobuf-es $(GEN)/google-protobuf
+
+# $(GEN)/protobuf.js: Makefile copyproto impl/protobuf.js/package-lock.json
+# 	cd impl/protobuf.js && npm run clean && npm run generate
+
+# $(GEN)/protobuf-es: Makefile copyproto impl/protobuf-es/package-lock.json
+# 	cd impl/protobuf-es && npm run clean && npm run generate
+
+# $(GEN)/google-protobuf: Makefile copyproto $(BIN)/protoc-gen-js impl/google-protobuf/package-lock.json
+# 	cd impl/google-protobuf && npm run clean && npm run generate
 
 .PHONY: test
 test: testjsconformance
@@ -130,17 +167,17 @@ test: testjsconformance
 testjsconformance: testconformanceprotobufes testconformancepbjs testconformancegoogleprotobuf
 
 .PHONY: testconformanceprotobufes
-testconformanceprotobufes: $(BIN)/conformance_test_runner $(BUILD)/protobuf-es
+testconformanceprotobufes: $(BIN)/conformance_test_runner buildprotobuf-es
 	cd impl \
 		&& BUF_BIGINT_DISABLE=0 $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list protobuf-es/failing_tests_with_bigint.txt --text_format_failure_list protobuf-es/failing_tests_text_format.txt --output_dir protobuf-es protobuf-es/runner.ts \
 		&& BUF_BIGINT_DISABLE=1 $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list protobuf-es/failing_tests_without_bigint.txt --text_format_failure_list protobuf-es/failing_tests_text_format.txt --output_dir protobuf-es protobuf-es/runner.ts
 
 .PHONY: testconformancepbjs
-testconformancepbjs: $(BIN)/conformance_test_runner $(BUILD)/protobuf.js
+testconformancepbjs: $(BIN)/conformance_test_runner buildprotobuf.js
 	cd impl \
 		&& $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list protobuf.js/failing_tests_list.txt --text_format_failure_list protobuf.js/failing_tests_text_format.txt --output_dir protobuf.js protobuf.js/runner.ts \
 
 .PHONY: testconformancegoogleprotobuf
-testconformancegoogleprotobuf: $(BIN)/conformance_test_runner $(BUILD)/google-protobuf
+testconformancegoogleprotobuf: $(BIN)/conformance_test_runner buildgoogle-protobuf
 	cd impl \
 		&& $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list google-protobuf/failing_tests_list.txt --text_format_failure_list google-protobuf/failing_tests_text_format.txt --output_dir google-protobuf google-protobuf/runner.ts \
