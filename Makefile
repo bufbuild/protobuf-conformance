@@ -72,7 +72,7 @@ all: build lint test
 
 define copyprotofunc
 .PHONY: copyproto$(notdir $(1))
-copyproto$(notdir $(1)):
+copyproto$(notdir $(1)): $(PB)
 	@rm -rf impl/$(1)/proto/*
 	@mkdir -p impl/$(1)/proto/conformance
 	@mkdir -p impl/$(1)/proto/google/protobuf
@@ -97,7 +97,7 @@ $(foreach js,$(sort $(JS_LIBS)),$(eval $(call jslintfunc,$(js))))
 define jsbuildfunc 
 .PHONY: build$(notdir $(1))
 build$(notdir $(1)): gen$(1) $(shell find impl -name '*.ts' -o -name '*.js') license
-	cd impl/$(1) && npm ci && npm run build 
+	cd impl/$(1) && npm run build 
 
 build:: build$(notdir $(1))
 endef
@@ -107,7 +107,7 @@ $(foreach js,$(sort $(JS_LIBS)),$(eval $(call jsbuildfunc,$(js))))
 define jsgenfunc 
 .PHONY: gen$(notdir $(1))
 gen$(notdir $(1)): Makefile copyproto$(1) impl/$(1)/package-lock.json $(BIN)/protoc-gen-js
-	cd impl/$(1) && npm run clean && npm run generate 
+	cd impl/$(1) && npm ci && npm run clean && npm run generate 
 
 gen:: gen$(notdir $(1))
 endef
