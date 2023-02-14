@@ -2,11 +2,10 @@
   "name": "protobuf.js-conformance",
   "private": true,
   "scripts": {
-    "clean": "",
+    "clean": "rm -rf gen/*",
     "build": "./node_modules/typescript/bin/tsc --project tsconfig.json --module ES2015 --noEmit",
     "lint": "npx eslint --max-warnings 0 .",
-    "format": "npx prettier --write '**/*.{json,js,jsx,ts,tsx,css,mjs}' --loglevel error",
-    "buf:generate": "./scripts/generate.sh"
+    "generate": "./scripts/generate.sh"
   },
   "type": "module",
   "dependencies": {
