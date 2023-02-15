@@ -1,0 +1,33 @@
+1.  create new directory named after library in impl
+2.  npm init
+    name = <lib>-conformance
+
+{
+  "name": "ts-proto-conformance",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf gen/*",
+    "build": "./node_modules/typescript/bin/tsc --project tsconfig.json --module ES2015 --noEmit",
+    "lint": "npx eslint --max-warnings 0 .",
+    "generate": "buf generate"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@bufbuild/buf": "^1.14.0",
+    "@types/node": "^18.13.0",
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "eslint": "^8.31.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "prettier": "^2.8.4",
+    "typescript": "^4.9.5"
+  }
+}
+
+3.  copy buf.gen.yaml, tsconfig, and eslintrc
+4.  config buf.gen.yaml accordingly
+4.  add to libs in Makefile
+5.  add a conformance tset target
+6.  install lib in package.json
+

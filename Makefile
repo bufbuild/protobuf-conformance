@@ -18,7 +18,8 @@ GOOGLE_PROTOBUF_JS = .tmp/protobuf-javascript-$(GOOGLE_PROTOBUF_JS_VERSION)
 
 JS_LIBS = google-protobuf \
 	   protobuf-es \
-	   protobuf.js
+	   protobuf.js \
+	   ts-proto
 
 $(PB):
 	echo $(PB)
@@ -40,7 +41,7 @@ $(BIN)/protoc-gen-js: $(GOOGLE_PROTOBUF_JS) Makefile
 	cp -f $(GOOGLE_PROTOBUF_JS)/bazel-bin/generator/protoc-gen-js $(@D)
 	@touch $(@)
 
-$(BIN)/conformance_test_runner: $(PB)
+$(BIN)/conformance_test_runner: $(PB) Makefile
 	@mkdir -p $(@D)
 	cd $(PB) && USE_BAZEL_VERSION=$(BAZEL_VERSION) bazel build test_messages_proto3_proto conformance:conformance_proto conformance:conformance_test conformance:conformance_test_runner
 	cp -f $(PB)/bazel-bin/conformance/conformance_test_runner $(@D)
@@ -97,7 +98,7 @@ $(foreach js,$(sort $(JS_LIBS)),$(eval $(call jslintfunc,$(js))))
 define jsbuildfunc 
 .PHONY: build$(notdir $(1))
 build$(notdir $(1)): gen$(1) $(shell find impl -name '*.ts' -o -name '*.js') license
-	cd impl/$(1) && npm run build 
+	cd impl/$(1)
 
 build:: build$(notdir $(1))
 endef
@@ -119,7 +120,7 @@ test: testjsconformance
 	node report.js > ./README.md
 
 .PHONY: testjsconformance
-testjsconformance: testconformanceprotobufes testconformancepbjs testconformancegoogleprotobuf
+testjsconformance: testconformanceprotobufes testconformancepbjs testconformancegoogleprotobuf testconformancetsproto
 
 .PHONY: testconformanceprotobufes
 testconformanceprotobufes: $(BIN)/conformance_test_runner buildprotobuf-es
@@ -136,3 +137,8 @@ testconformancepbjs: $(BIN)/conformance_test_runner buildprotobuf.js
 testconformancegoogleprotobuf: $(BIN)/conformance_test_runner buildgoogle-protobuf
 	cd impl \
 		&& $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list google-protobuf/failing_tests_list.txt --text_format_failure_list google-protobuf/failing_tests_text_format.txt --output_dir google-protobuf google-protobuf/runner.ts \
+
+.PHONY: testconformancetsproto
+testconformancetsproto: $(BIN)/conformance_test_runner buildts-proto
+	cd impl \
+		&& $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list ts-proto/failing_tests_list.txt --text_format_failure_list ts-proto/failing_tests_text_format.txt --output_dir ts-proto ts-proto/runner.ts

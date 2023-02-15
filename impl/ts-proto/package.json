@@ -1,0 +1,25 @@
+{
+  "name": "ts-proto-conformance",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf gen/*",
+    "build": "./node_modules/typescript/bin/tsc --project tsconfig.json --module ES2015 --noEmit",
+    "lint": "npx eslint --max-warnings 0 .",
+    "generate": "buf generate proto --exclude-path proto/google/protobuf/*proto2.proto"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@bufbuild/buf": "^1.14.0",
+    "@types/node": "^18.13.0",
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "eslint": "^8.31.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "prettier": "^2.8.4",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "ts-proto": "^1.139.0"
+  }
+}
