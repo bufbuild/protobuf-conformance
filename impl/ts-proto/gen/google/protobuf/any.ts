@@ -118,11 +118,11 @@ export interface Any {
    */
   typeUrl: string;
   /** Must be a valid serialized protocol buffer of the above specified type. */
-  value: Uint8Array;
+  value: Buffer;
 }
 
 function createBaseAny(): Any {
-  return { typeUrl: "", value: new Uint8Array() };
+  return { typeUrl: "", value: Buffer.alloc(0) };
 }
 
 export const Any = {
@@ -147,7 +147,7 @@ export const Any = {
           message.typeUrl = reader.string();
           break;
         case 2:
-          message.value = reader.bytes();
+          message.value = reader.bytes() as Buffer;
           break;
         default:
           reader.skipType(tag & 7);
@@ -160,7 +160,7 @@ export const Any = {
   fromJSON(object: any): Any {
     return {
       typeUrl: isSet(object.typeUrl) ? String(object.typeUrl) : "",
-      value: isSet(object.value) ? bytesFromBase64(object.value) : new Uint8Array(),
+      value: isSet(object.value) ? Buffer.from(bytesFromBase64(object.value)) : Buffer.alloc(0),
     };
   },
 
@@ -168,7 +168,7 @@ export const Any = {
     const obj: any = {};
     message.typeUrl !== undefined && (obj.typeUrl = message.typeUrl);
     message.value !== undefined &&
-      (obj.value = base64FromBytes(message.value !== undefined ? message.value : new Uint8Array()));
+      (obj.value = base64FromBytes(message.value !== undefined ? message.value : Buffer.alloc(0)));
     return obj;
   },
 
@@ -179,7 +179,7 @@ export const Any = {
   fromPartial<I extends Exact<DeepPartial<Any>, I>>(object: I): Any {
     const message = createBaseAny();
     message.typeUrl = object.typeUrl ?? "";
-    message.value = object.value ?? new Uint8Array();
+    message.value = object.value ?? Buffer.alloc(0);
     return message;
   },
 };

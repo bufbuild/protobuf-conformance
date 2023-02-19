@@ -12,7 +12,6 @@ export const protobufPackage = "google.protobuf";
 export enum NullValue {
   /** NULL_VALUE - Null value. */
   NULL_VALUE = 0,
-  UNRECOGNIZED = -1,
 }
 
 export function nullValueFromJSON(object: any): NullValue {
@@ -20,10 +19,8 @@ export function nullValueFromJSON(object: any): NullValue {
     case 0:
     case "NULL_VALUE":
       return NullValue.NULL_VALUE;
-    case -1:
-    case "UNRECOGNIZED":
     default:
-      return NullValue.UNRECOGNIZED;
+      throw new tsProtoGlobalThis.Error("Unrecognized enum value " + object + " for enum NullValue");
   }
 }
 
@@ -31,9 +28,8 @@ export function nullValueToJSON(object: NullValue): string {
   switch (object) {
     case NullValue.NULL_VALUE:
       return "NULL_VALUE";
-    case NullValue.UNRECOGNIZED:
     default:
-      return "UNRECOGNIZED";
+      throw new tsProtoGlobalThis.Error("Unrecognized enum value " + object + " for enum NullValue");
   }
 }
 
@@ -476,6 +472,25 @@ export const ListValue = {
     }
   },
 };
+
+declare var self: any | undefined;
+declare var window: any | undefined;
+declare var global: any | undefined;
+var tsProtoGlobalThis: any = (() => {
+  if (typeof globalThis !== "undefined") {
+    return globalThis;
+  }
+  if (typeof self !== "undefined") {
+    return self;
+  }
+  if (typeof window !== "undefined") {
+    return window;
+  }
+  if (typeof global !== "undefined") {
+    return global;
+  }
+  throw "Unable to locate global object";
+})();
 
 type Builtin = Date | Function | Uint8Array | string | number | boolean | undefined;
 

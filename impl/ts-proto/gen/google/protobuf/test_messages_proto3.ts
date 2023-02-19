@@ -4,7 +4,14 @@ import _m0 from "protobufjs/minimal";
 import { Any } from "./any";
 import { Duration } from "./duration";
 import { FieldMask } from "./field_mask";
-import { ListValue, NullValue, nullValueFromJSON, nullValueToJSON, Struct, Value } from "./struct";
+import {
+  ListValue,
+  NullValue,
+  nullValueFromJSON,
+  nullValueToJSON,
+  Struct,
+  Value,
+} from "./struct";
 import { Timestamp } from "./timestamp";
 import {
   BoolValue,
@@ -24,7 +31,6 @@ export enum ForeignEnum {
   FOREIGN_FOO = 0,
   FOREIGN_BAR = 1,
   FOREIGN_BAZ = 2,
-  UNRECOGNIZED = -1,
 }
 
 export function foreignEnumFromJSON(object: any): ForeignEnum {
@@ -38,10 +44,10 @@ export function foreignEnumFromJSON(object: any): ForeignEnum {
     case 2:
     case "FOREIGN_BAZ":
       return ForeignEnum.FOREIGN_BAZ;
-    case -1:
-    case "UNRECOGNIZED":
     default:
-      return ForeignEnum.UNRECOGNIZED;
+      throw new tsProtoGlobalThis.Error(
+        "Unrecognized enum value " + object + " for enum ForeignEnum"
+      );
   }
 }
 
@@ -53,9 +59,10 @@ export function foreignEnumToJSON(object: ForeignEnum): string {
       return "FOREIGN_BAR";
     case ForeignEnum.FOREIGN_BAZ:
       return "FOREIGN_BAZ";
-    case ForeignEnum.UNRECOGNIZED:
     default:
-      return "UNRECOGNIZED";
+      throw new tsProtoGlobalThis.Error(
+        "Unrecognized enum value " + object + " for enum ForeignEnum"
+      );
   }
 }
 
@@ -84,7 +91,7 @@ export interface TestAllTypesProto3 {
   optionalDouble: number;
   optionalBool: boolean;
   optionalString: string;
-  optionalBytes: Uint8Array;
+  optionalBytes: Buffer;
   optionalNestedMessage: TestAllTypesProto3_NestedMessage | undefined;
   optionalForeignMessage: ForeignMessage | undefined;
   optionalNestedEnum: TestAllTypesProto3_NestedEnum;
@@ -92,9 +99,7 @@ export interface TestAllTypesProto3 {
   optionalAliasedEnum: TestAllTypesProto3_AliasedEnum;
   optionalStringPiece: string;
   optionalCord: string;
-  recursiveMessage:
-    | TestAllTypesProto3
-    | undefined;
+  recursiveMessage: TestAllTypesProto3 | undefined;
   /** Repeated */
   repeatedInt32: number[];
   repeatedInt64: number[];
@@ -110,7 +115,7 @@ export interface TestAllTypesProto3 {
   repeatedDouble: number[];
   repeatedBool: boolean[];
   repeatedString: string[];
-  repeatedBytes: Uint8Array[];
+  repeatedBytes: Buffer[];
   repeatedNestedMessage: TestAllTypesProto3_NestedMessage[];
   repeatedForeignMessage: ForeignMessage[];
   repeatedNestedEnum: TestAllTypesProto3_NestedEnum[];
@@ -162,16 +167,19 @@ export interface TestAllTypesProto3 {
   mapInt32Double: Map<number, number>;
   mapBoolBool: Map<boolean, boolean>;
   mapStringString: Map<string, string>;
-  mapStringBytes: Map<string, Uint8Array>;
+  mapStringBytes: Map<string, Buffer>;
   mapStringNestedMessage: Map<string, TestAllTypesProto3_NestedMessage>;
   mapStringForeignMessage: Map<string, ForeignMessage>;
   mapStringNestedEnum: Map<string, TestAllTypesProto3_NestedEnum>;
   mapStringForeignEnum: Map<string, ForeignEnum>;
   oneofField?:
     | { $case: "oneofUint32"; oneofUint32: number }
-    | { $case: "oneofNestedMessage"; oneofNestedMessage: TestAllTypesProto3_NestedMessage }
+    | {
+        $case: "oneofNestedMessage";
+        oneofNestedMessage: TestAllTypesProto3_NestedMessage;
+      }
     | { $case: "oneofString"; oneofString: string }
-    | { $case: "oneofBytes"; oneofBytes: Uint8Array }
+    | { $case: "oneofBytes"; oneofBytes: Buffer }
     | { $case: "oneofBool"; oneofBool: boolean }
     | { $case: "oneofUint64"; oneofUint64: number }
     | { $case: "oneofFloat"; oneofFloat: number }
@@ -187,7 +195,7 @@ export interface TestAllTypesProto3 {
   optionalFloatWrapper: number | undefined;
   optionalDoubleWrapper: number | undefined;
   optionalStringWrapper: string | undefined;
-  optionalBytesWrapper: Uint8Array | undefined;
+  optionalBytesWrapper: Buffer | undefined;
   repeatedBoolWrapper: boolean[];
   repeatedInt32Wrapper: number[];
   repeatedInt64Wrapper: number[];
@@ -196,7 +204,7 @@ export interface TestAllTypesProto3 {
   repeatedFloatWrapper: number[];
   repeatedDoubleWrapper: number[];
   repeatedStringWrapper: string[];
-  repeatedBytesWrapper: Uint8Array[];
+  repeatedBytesWrapper: Buffer[];
   optionalDuration: Duration | undefined;
   optionalTimestamp: Date | undefined;
   optionalFieldMask: string[] | undefined;
@@ -241,10 +249,11 @@ export enum TestAllTypesProto3_NestedEnum {
   BAZ = 2,
   /** NEG - Intentionally negative. */
   NEG = -1,
-  UNRECOGNIZED = -1,
 }
 
-export function testAllTypesProto3_NestedEnumFromJSON(object: any): TestAllTypesProto3_NestedEnum {
+export function testAllTypesProto3_NestedEnumFromJSON(
+  object: any
+): TestAllTypesProto3_NestedEnum {
   switch (object) {
     case 0:
     case "FOO":
@@ -258,14 +267,18 @@ export function testAllTypesProto3_NestedEnumFromJSON(object: any): TestAllTypes
     case -1:
     case "NEG":
       return TestAllTypesProto3_NestedEnum.NEG;
-    case -1:
-    case "UNRECOGNIZED":
     default:
-      return TestAllTypesProto3_NestedEnum.UNRECOGNIZED;
+      throw new tsProtoGlobalThis.Error(
+        "Unrecognized enum value " +
+          object +
+          " for enum TestAllTypesProto3_NestedEnum"
+      );
   }
 }
 
-export function testAllTypesProto3_NestedEnumToJSON(object: TestAllTypesProto3_NestedEnum): string {
+export function testAllTypesProto3_NestedEnumToJSON(
+  object: TestAllTypesProto3_NestedEnum
+): string {
   switch (object) {
     case TestAllTypesProto3_NestedEnum.FOO:
       return "FOO";
@@ -275,9 +288,12 @@ export function testAllTypesProto3_NestedEnumToJSON(object: TestAllTypesProto3_N
       return "BAZ";
     case TestAllTypesProto3_NestedEnum.NEG:
       return "NEG";
-    case TestAllTypesProto3_NestedEnum.UNRECOGNIZED:
     default:
-      return "UNRECOGNIZED";
+      throw new tsProtoGlobalThis.Error(
+        "Unrecognized enum value " +
+          object +
+          " for enum TestAllTypesProto3_NestedEnum"
+      );
   }
 }
 
@@ -285,13 +301,11 @@ export enum TestAllTypesProto3_AliasedEnum {
   ALIAS_FOO = 0,
   ALIAS_BAR = 1,
   ALIAS_BAZ = 2,
-  MOO = 2,
-  moo = 2,
-  bAz = 2,
-  UNRECOGNIZED = -1,
 }
 
-export function testAllTypesProto3_AliasedEnumFromJSON(object: any): TestAllTypesProto3_AliasedEnum {
+export function testAllTypesProto3_AliasedEnumFromJSON(
+  object: any
+): TestAllTypesProto3_AliasedEnum {
   switch (object) {
     case 0:
     case "ALIAS_FOO":
@@ -302,23 +316,18 @@ export function testAllTypesProto3_AliasedEnumFromJSON(object: any): TestAllType
     case 2:
     case "ALIAS_BAZ":
       return TestAllTypesProto3_AliasedEnum.ALIAS_BAZ;
-    case 2:
-    case "MOO":
-      return TestAllTypesProto3_AliasedEnum.MOO;
-    case 2:
-    case "moo":
-      return TestAllTypesProto3_AliasedEnum.moo;
-    case 2:
-    case "bAz":
-      return TestAllTypesProto3_AliasedEnum.bAz;
-    case -1:
-    case "UNRECOGNIZED":
     default:
-      return TestAllTypesProto3_AliasedEnum.UNRECOGNIZED;
+      throw new tsProtoGlobalThis.Error(
+        "Unrecognized enum value " +
+          object +
+          " for enum TestAllTypesProto3_AliasedEnum"
+      );
   }
 }
 
-export function testAllTypesProto3_AliasedEnumToJSON(object: TestAllTypesProto3_AliasedEnum): string {
+export function testAllTypesProto3_AliasedEnumToJSON(
+  object: TestAllTypesProto3_AliasedEnum
+): string {
   switch (object) {
     case TestAllTypesProto3_AliasedEnum.ALIAS_FOO:
       return "ALIAS_FOO";
@@ -326,15 +335,12 @@ export function testAllTypesProto3_AliasedEnumToJSON(object: TestAllTypesProto3_
       return "ALIAS_BAR";
     case TestAllTypesProto3_AliasedEnum.ALIAS_BAZ:
       return "ALIAS_BAZ";
-    case TestAllTypesProto3_AliasedEnum.MOO:
-      return "MOO";
-    case TestAllTypesProto3_AliasedEnum.moo:
-      return "moo";
-    case TestAllTypesProto3_AliasedEnum.bAz:
-      return "bAz";
-    case TestAllTypesProto3_AliasedEnum.UNRECOGNIZED:
     default:
-      return "UNRECOGNIZED";
+      throw new tsProtoGlobalThis.Error(
+        "Unrecognized enum value " +
+          object +
+          " for enum TestAllTypesProto3_AliasedEnum"
+      );
   }
 }
 
@@ -415,7 +421,7 @@ export interface TestAllTypesProto3_MapStringStringEntry {
 
 export interface TestAllTypesProto3_MapStringBytesEntry {
   key: string;
-  value: Uint8Array;
+  value: Buffer;
 }
 
 export interface TestAllTypesProto3_MapStringNestedMessageEntry {
@@ -442,16 +448,13 @@ export interface ForeignMessage {
   c: number;
 }
 
-export interface NullHypothesisProto3 {
-}
+export interface NullHypothesisProto3 {}
 
-export interface EnumOnlyProto3 {
-}
+export interface EnumOnlyProto3 {}
 
 export enum EnumOnlyProto3_Bool {
   kFalse = 0,
   kTrue = 1,
-  UNRECOGNIZED = -1,
 }
 
 export function enumOnlyProto3_BoolFromJSON(object: any): EnumOnlyProto3_Bool {
@@ -462,10 +465,10 @@ export function enumOnlyProto3_BoolFromJSON(object: any): EnumOnlyProto3_Bool {
     case 1:
     case "kTrue":
       return EnumOnlyProto3_Bool.kTrue;
-    case -1:
-    case "UNRECOGNIZED":
     default:
-      return EnumOnlyProto3_Bool.UNRECOGNIZED;
+      throw new tsProtoGlobalThis.Error(
+        "Unrecognized enum value " + object + " for enum EnumOnlyProto3_Bool"
+      );
   }
 }
 
@@ -475,9 +478,10 @@ export function enumOnlyProto3_BoolToJSON(object: EnumOnlyProto3_Bool): string {
       return "kFalse";
     case EnumOnlyProto3_Bool.kTrue:
       return "kTrue";
-    case EnumOnlyProto3_Bool.UNRECOGNIZED:
     default:
-      return "UNRECOGNIZED";
+      throw new tsProtoGlobalThis.Error(
+        "Unrecognized enum value " + object + " for enum EnumOnlyProto3_Bool"
+      );
   }
 }
 
@@ -497,7 +501,7 @@ function createBaseTestAllTypesProto3(): TestAllTypesProto3 {
     optionalDouble: 0,
     optionalBool: false,
     optionalString: "",
-    optionalBytes: new Uint8Array(),
+    optionalBytes: Buffer.alloc(0),
     optionalNestedMessage: undefined,
     optionalForeignMessage: undefined,
     optionalNestedEnum: 0,
@@ -629,7 +633,10 @@ function createBaseTestAllTypesProto3(): TestAllTypesProto3 {
 }
 
 export const TestAllTypesProto3 = {
-  encode(message: TestAllTypesProto3, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+  encode(
+    message: TestAllTypesProto3,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
     if (message.optionalInt32 !== 0) {
       writer.uint32(8).int32(message.optionalInt32);
     }
@@ -676,10 +683,16 @@ export const TestAllTypesProto3 = {
       writer.uint32(122).bytes(message.optionalBytes);
     }
     if (message.optionalNestedMessage !== undefined) {
-      TestAllTypesProto3_NestedMessage.encode(message.optionalNestedMessage, writer.uint32(146).fork()).ldelim();
+      TestAllTypesProto3_NestedMessage.encode(
+        message.optionalNestedMessage,
+        writer.uint32(146).fork()
+      ).ldelim();
     }
     if (message.optionalForeignMessage !== undefined) {
-      ForeignMessage.encode(message.optionalForeignMessage, writer.uint32(154).fork()).ldelim();
+      ForeignMessage.encode(
+        message.optionalForeignMessage,
+        writer.uint32(154).fork()
+      ).ldelim();
     }
     if (message.optionalNestedEnum !== 0) {
       writer.uint32(168).int32(message.optionalNestedEnum);
@@ -697,7 +710,10 @@ export const TestAllTypesProto3 = {
       writer.uint32(202).string(message.optionalCord);
     }
     if (message.recursiveMessage !== undefined) {
-      TestAllTypesProto3.encode(message.recursiveMessage, writer.uint32(218).fork()).ldelim();
+      TestAllTypesProto3.encode(
+        message.recursiveMessage,
+        writer.uint32(218).fork()
+      ).ldelim();
     }
     writer.uint32(250).fork();
     for (const v of message.repeatedInt32) {
@@ -771,7 +787,10 @@ export const TestAllTypesProto3 = {
       writer.uint32(362).bytes(v!);
     }
     for (const v of message.repeatedNestedMessage) {
-      TestAllTypesProto3_NestedMessage.encode(v!, writer.uint32(386).fork()).ldelim();
+      TestAllTypesProto3_NestedMessage.encode(
+        v!,
+        writer.uint32(386).fork()
+      ).ldelim();
     }
     for (const v of message.repeatedForeignMessage) {
       ForeignMessage.encode(v!, writer.uint32(394).fork()).ldelim();
@@ -933,75 +952,128 @@ export const TestAllTypesProto3 = {
     }
     writer.ldelim();
     message.mapInt32Int32.forEach((value, key) => {
-      TestAllTypesProto3_MapInt32Int32Entry.encode({ key: key as any, value }, writer.uint32(450).fork()).ldelim();
+      TestAllTypesProto3_MapInt32Int32Entry.encode(
+        { key: key as any, value },
+        writer.uint32(450).fork()
+      ).ldelim();
     });
     message.mapInt64Int64.forEach((value, key) => {
-      TestAllTypesProto3_MapInt64Int64Entry.encode({ key: key as any, value }, writer.uint32(458).fork()).ldelim();
+      TestAllTypesProto3_MapInt64Int64Entry.encode(
+        { key: key as any, value },
+        writer.uint32(458).fork()
+      ).ldelim();
     });
     message.mapUint32Uint32.forEach((value, key) => {
-      TestAllTypesProto3_MapUint32Uint32Entry.encode({ key: key as any, value }, writer.uint32(466).fork()).ldelim();
+      TestAllTypesProto3_MapUint32Uint32Entry.encode(
+        { key: key as any, value },
+        writer.uint32(466).fork()
+      ).ldelim();
     });
     message.mapUint64Uint64.forEach((value, key) => {
-      TestAllTypesProto3_MapUint64Uint64Entry.encode({ key: key as any, value }, writer.uint32(474).fork()).ldelim();
+      TestAllTypesProto3_MapUint64Uint64Entry.encode(
+        { key: key as any, value },
+        writer.uint32(474).fork()
+      ).ldelim();
     });
     message.mapSint32Sint32.forEach((value, key) => {
-      TestAllTypesProto3_MapSint32Sint32Entry.encode({ key: key as any, value }, writer.uint32(482).fork()).ldelim();
+      TestAllTypesProto3_MapSint32Sint32Entry.encode(
+        { key: key as any, value },
+        writer.uint32(482).fork()
+      ).ldelim();
     });
     message.mapSint64Sint64.forEach((value, key) => {
-      TestAllTypesProto3_MapSint64Sint64Entry.encode({ key: key as any, value }, writer.uint32(490).fork()).ldelim();
+      TestAllTypesProto3_MapSint64Sint64Entry.encode(
+        { key: key as any, value },
+        writer.uint32(490).fork()
+      ).ldelim();
     });
     message.mapFixed32Fixed32.forEach((value, key) => {
-      TestAllTypesProto3_MapFixed32Fixed32Entry.encode({ key: key as any, value }, writer.uint32(498).fork()).ldelim();
+      TestAllTypesProto3_MapFixed32Fixed32Entry.encode(
+        { key: key as any, value },
+        writer.uint32(498).fork()
+      ).ldelim();
     });
     message.mapFixed64Fixed64.forEach((value, key) => {
-      TestAllTypesProto3_MapFixed64Fixed64Entry.encode({ key: key as any, value }, writer.uint32(506).fork()).ldelim();
+      TestAllTypesProto3_MapFixed64Fixed64Entry.encode(
+        { key: key as any, value },
+        writer.uint32(506).fork()
+      ).ldelim();
     });
     message.mapSfixed32Sfixed32.forEach((value, key) => {
-      TestAllTypesProto3_MapSfixed32Sfixed32Entry.encode({ key: key as any, value }, writer.uint32(514).fork())
-        .ldelim();
+      TestAllTypesProto3_MapSfixed32Sfixed32Entry.encode(
+        { key: key as any, value },
+        writer.uint32(514).fork()
+      ).ldelim();
     });
     message.mapSfixed64Sfixed64.forEach((value, key) => {
-      TestAllTypesProto3_MapSfixed64Sfixed64Entry.encode({ key: key as any, value }, writer.uint32(522).fork())
-        .ldelim();
+      TestAllTypesProto3_MapSfixed64Sfixed64Entry.encode(
+        { key: key as any, value },
+        writer.uint32(522).fork()
+      ).ldelim();
     });
     message.mapInt32Float.forEach((value, key) => {
-      TestAllTypesProto3_MapInt32FloatEntry.encode({ key: key as any, value }, writer.uint32(530).fork()).ldelim();
+      TestAllTypesProto3_MapInt32FloatEntry.encode(
+        { key: key as any, value },
+        writer.uint32(530).fork()
+      ).ldelim();
     });
     message.mapInt32Double.forEach((value, key) => {
-      TestAllTypesProto3_MapInt32DoubleEntry.encode({ key: key as any, value }, writer.uint32(538).fork()).ldelim();
+      TestAllTypesProto3_MapInt32DoubleEntry.encode(
+        { key: key as any, value },
+        writer.uint32(538).fork()
+      ).ldelim();
     });
     message.mapBoolBool.forEach((value, key) => {
-      TestAllTypesProto3_MapBoolBoolEntry.encode({ key: key as any, value }, writer.uint32(546).fork()).ldelim();
+      TestAllTypesProto3_MapBoolBoolEntry.encode(
+        { key: key as any, value },
+        writer.uint32(546).fork()
+      ).ldelim();
     });
     message.mapStringString.forEach((value, key) => {
-      TestAllTypesProto3_MapStringStringEntry.encode({ key: key as any, value }, writer.uint32(554).fork()).ldelim();
+      TestAllTypesProto3_MapStringStringEntry.encode(
+        { key: key as any, value },
+        writer.uint32(554).fork()
+      ).ldelim();
     });
     message.mapStringBytes.forEach((value, key) => {
-      TestAllTypesProto3_MapStringBytesEntry.encode({ key: key as any, value }, writer.uint32(562).fork()).ldelim();
+      TestAllTypesProto3_MapStringBytesEntry.encode(
+        { key: key as any, value },
+        writer.uint32(562).fork()
+      ).ldelim();
     });
     message.mapStringNestedMessage.forEach((value, key) => {
-      TestAllTypesProto3_MapStringNestedMessageEntry.encode({ key: key as any, value }, writer.uint32(570).fork())
-        .ldelim();
+      TestAllTypesProto3_MapStringNestedMessageEntry.encode(
+        { key: key as any, value },
+        writer.uint32(570).fork()
+      ).ldelim();
     });
     message.mapStringForeignMessage.forEach((value, key) => {
-      TestAllTypesProto3_MapStringForeignMessageEntry.encode({ key: key as any, value }, writer.uint32(578).fork())
-        .ldelim();
+      TestAllTypesProto3_MapStringForeignMessageEntry.encode(
+        { key: key as any, value },
+        writer.uint32(578).fork()
+      ).ldelim();
     });
     message.mapStringNestedEnum.forEach((value, key) => {
-      TestAllTypesProto3_MapStringNestedEnumEntry.encode({ key: key as any, value }, writer.uint32(586).fork())
-        .ldelim();
+      TestAllTypesProto3_MapStringNestedEnumEntry.encode(
+        { key: key as any, value },
+        writer.uint32(586).fork()
+      ).ldelim();
     });
     message.mapStringForeignEnum.forEach((value, key) => {
-      TestAllTypesProto3_MapStringForeignEnumEntry.encode({ key: key as any, value }, writer.uint32(594).fork())
-        .ldelim();
+      TestAllTypesProto3_MapStringForeignEnumEntry.encode(
+        { key: key as any, value },
+        writer.uint32(594).fork()
+      ).ldelim();
     });
     switch (message.oneofField?.$case) {
       case "oneofUint32":
         writer.uint32(888).uint32(message.oneofField.oneofUint32);
         break;
       case "oneofNestedMessage":
-        TestAllTypesProto3_NestedMessage.encode(message.oneofField.oneofNestedMessage, writer.uint32(898).fork())
-          .ldelim();
+        TestAllTypesProto3_NestedMessage.encode(
+          message.oneofField.oneofNestedMessage,
+          writer.uint32(898).fork()
+        ).ldelim();
         break;
       case "oneofString":
         writer.uint32(906).string(message.oneofField.oneofString);
@@ -1029,31 +1101,58 @@ export const TestAllTypesProto3 = {
         break;
     }
     if (message.optionalBoolWrapper !== undefined) {
-      BoolValue.encode({ value: message.optionalBoolWrapper! }, writer.uint32(1610).fork()).ldelim();
+      BoolValue.encode(
+        { value: message.optionalBoolWrapper! },
+        writer.uint32(1610).fork()
+      ).ldelim();
     }
     if (message.optionalInt32Wrapper !== undefined) {
-      Int32Value.encode({ value: message.optionalInt32Wrapper! }, writer.uint32(1618).fork()).ldelim();
+      Int32Value.encode(
+        { value: message.optionalInt32Wrapper! },
+        writer.uint32(1618).fork()
+      ).ldelim();
     }
     if (message.optionalInt64Wrapper !== undefined) {
-      Int64Value.encode({ value: message.optionalInt64Wrapper! }, writer.uint32(1626).fork()).ldelim();
+      Int64Value.encode(
+        { value: message.optionalInt64Wrapper! },
+        writer.uint32(1626).fork()
+      ).ldelim();
     }
     if (message.optionalUint32Wrapper !== undefined) {
-      UInt32Value.encode({ value: message.optionalUint32Wrapper! }, writer.uint32(1634).fork()).ldelim();
+      UInt32Value.encode(
+        { value: message.optionalUint32Wrapper! },
+        writer.uint32(1634).fork()
+      ).ldelim();
     }
     if (message.optionalUint64Wrapper !== undefined) {
-      UInt64Value.encode({ value: message.optionalUint64Wrapper! }, writer.uint32(1642).fork()).ldelim();
+      UInt64Value.encode(
+        { value: message.optionalUint64Wrapper! },
+        writer.uint32(1642).fork()
+      ).ldelim();
     }
     if (message.optionalFloatWrapper !== undefined) {
-      FloatValue.encode({ value: message.optionalFloatWrapper! }, writer.uint32(1650).fork()).ldelim();
+      FloatValue.encode(
+        { value: message.optionalFloatWrapper! },
+        writer.uint32(1650).fork()
+      ).ldelim();
     }
     if (message.optionalDoubleWrapper !== undefined) {
-      DoubleValue.encode({ value: message.optionalDoubleWrapper! }, writer.uint32(1658).fork()).ldelim();
+      DoubleValue.encode(
+        { value: message.optionalDoubleWrapper! },
+        writer.uint32(1658).fork()
+      ).ldelim();
     }
     if (message.optionalStringWrapper !== undefined) {
-      StringValue.encode({ value: message.optionalStringWrapper! }, writer.uint32(1666).fork()).ldelim();
+      StringValue.encode(
+        { value: message.optionalStringWrapper! },
+        writer.uint32(1666).fork()
+      ).ldelim();
     }
     if (message.optionalBytesWrapper !== undefined) {
-      BytesValue.encode({ value: message.optionalBytesWrapper! }, writer.uint32(1674).fork()).ldelim();
+      BytesValue.encode(
+        { value: message.optionalBytesWrapper! },
+        writer.uint32(1674).fork()
+      ).ldelim();
     }
     for (const v of message.repeatedBoolWrapper) {
       BoolValue.encode({ value: v!! }, writer.uint32(1690).fork()).ldelim();
@@ -1083,22 +1182,37 @@ export const TestAllTypesProto3 = {
       BytesValue.encode({ value: v!! }, writer.uint32(1754).fork()).ldelim();
     }
     if (message.optionalDuration !== undefined) {
-      Duration.encode(message.optionalDuration, writer.uint32(2410).fork()).ldelim();
+      Duration.encode(
+        message.optionalDuration,
+        writer.uint32(2410).fork()
+      ).ldelim();
     }
     if (message.optionalTimestamp !== undefined) {
-      Timestamp.encode(toTimestamp(message.optionalTimestamp), writer.uint32(2418).fork()).ldelim();
+      Timestamp.encode(
+        toTimestamp(message.optionalTimestamp),
+        writer.uint32(2418).fork()
+      ).ldelim();
     }
     if (message.optionalFieldMask !== undefined) {
-      FieldMask.encode(FieldMask.wrap(message.optionalFieldMask), writer.uint32(2426).fork()).ldelim();
+      FieldMask.encode(
+        FieldMask.wrap(message.optionalFieldMask),
+        writer.uint32(2426).fork()
+      ).ldelim();
     }
     if (message.optionalStruct !== undefined) {
-      Struct.encode(Struct.wrap(message.optionalStruct), writer.uint32(2434).fork()).ldelim();
+      Struct.encode(
+        Struct.wrap(message.optionalStruct),
+        writer.uint32(2434).fork()
+      ).ldelim();
     }
     if (message.optionalAny !== undefined) {
       Any.encode(message.optionalAny, writer.uint32(2442).fork()).ldelim();
     }
     if (message.optionalValue !== undefined) {
-      Value.encode(Value.wrap(message.optionalValue), writer.uint32(2450).fork()).ldelim();
+      Value.encode(
+        Value.wrap(message.optionalValue),
+        writer.uint32(2450).fork()
+      ).ldelim();
     }
     if (message.optionalNullValue !== 0) {
       writer.uint32(2456).int32(message.optionalNullValue);
@@ -1231,13 +1345,17 @@ export const TestAllTypesProto3 = {
           message.optionalString = reader.string();
           break;
         case 15:
-          message.optionalBytes = reader.bytes();
+          message.optionalBytes = reader.bytes() as Buffer;
           break;
         case 18:
-          message.optionalNestedMessage = TestAllTypesProto3_NestedMessage.decode(reader, reader.uint32());
+          message.optionalNestedMessage =
+            TestAllTypesProto3_NestedMessage.decode(reader, reader.uint32());
           break;
         case 19:
-          message.optionalForeignMessage = ForeignMessage.decode(reader, reader.uint32());
+          message.optionalForeignMessage = ForeignMessage.decode(
+            reader,
+            reader.uint32()
+          );
           break;
         case 21:
           message.optionalNestedEnum = reader.int32() as any;
@@ -1255,7 +1373,10 @@ export const TestAllTypesProto3 = {
           message.optionalCord = reader.string();
           break;
         case 27:
-          message.recursiveMessage = TestAllTypesProto3.decode(reader, reader.uint32());
+          message.recursiveMessage = TestAllTypesProto3.decode(
+            reader,
+            reader.uint32()
+          );
           break;
         case 31:
           if ((tag & 7) === 2) {
@@ -1291,7 +1412,9 @@ export const TestAllTypesProto3 = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.repeatedUint64.push(longToNumber(reader.uint64() as Long));
+              message.repeatedUint64.push(
+                longToNumber(reader.uint64() as Long)
+              );
             }
           } else {
             message.repeatedUint64.push(longToNumber(reader.uint64() as Long));
@@ -1311,7 +1434,9 @@ export const TestAllTypesProto3 = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.repeatedSint64.push(longToNumber(reader.sint64() as Long));
+              message.repeatedSint64.push(
+                longToNumber(reader.sint64() as Long)
+              );
             }
           } else {
             message.repeatedSint64.push(longToNumber(reader.sint64() as Long));
@@ -1331,10 +1456,14 @@ export const TestAllTypesProto3 = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.repeatedFixed64.push(longToNumber(reader.fixed64() as Long));
+              message.repeatedFixed64.push(
+                longToNumber(reader.fixed64() as Long)
+              );
             }
           } else {
-            message.repeatedFixed64.push(longToNumber(reader.fixed64() as Long));
+            message.repeatedFixed64.push(
+              longToNumber(reader.fixed64() as Long)
+            );
           }
           break;
         case 39:
@@ -1351,10 +1480,14 @@ export const TestAllTypesProto3 = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.repeatedSfixed64.push(longToNumber(reader.sfixed64() as Long));
+              message.repeatedSfixed64.push(
+                longToNumber(reader.sfixed64() as Long)
+              );
             }
           } else {
-            message.repeatedSfixed64.push(longToNumber(reader.sfixed64() as Long));
+            message.repeatedSfixed64.push(
+              longToNumber(reader.sfixed64() as Long)
+            );
           }
           break;
         case 41:
@@ -1391,13 +1524,17 @@ export const TestAllTypesProto3 = {
           message.repeatedString.push(reader.string());
           break;
         case 45:
-          message.repeatedBytes.push(reader.bytes());
+          message.repeatedBytes.push(reader.bytes() as Buffer);
           break;
         case 48:
-          message.repeatedNestedMessage.push(TestAllTypesProto3_NestedMessage.decode(reader, reader.uint32()));
+          message.repeatedNestedMessage.push(
+            TestAllTypesProto3_NestedMessage.decode(reader, reader.uint32())
+          );
           break;
         case 49:
-          message.repeatedForeignMessage.push(ForeignMessage.decode(reader, reader.uint32()));
+          message.repeatedForeignMessage.push(
+            ForeignMessage.decode(reader, reader.uint32())
+          );
           break;
         case 51:
           if ((tag & 7) === 2) {
@@ -1499,7 +1636,9 @@ export const TestAllTypesProto3 = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.packedFixed64.push(longToNumber(reader.fixed64() as Long));
+              message.packedFixed64.push(
+                longToNumber(reader.fixed64() as Long)
+              );
             }
           } else {
             message.packedFixed64.push(longToNumber(reader.fixed64() as Long));
@@ -1519,10 +1658,14 @@ export const TestAllTypesProto3 = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.packedSfixed64.push(longToNumber(reader.sfixed64() as Long));
+              message.packedSfixed64.push(
+                longToNumber(reader.sfixed64() as Long)
+              );
             }
           } else {
-            message.packedSfixed64.push(longToNumber(reader.sfixed64() as Long));
+            message.packedSfixed64.push(
+              longToNumber(reader.sfixed64() as Long)
+            );
           }
           break;
         case 85:
@@ -1599,7 +1742,9 @@ export const TestAllTypesProto3 = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.unpackedUint64.push(longToNumber(reader.uint64() as Long));
+              message.unpackedUint64.push(
+                longToNumber(reader.uint64() as Long)
+              );
             }
           } else {
             message.unpackedUint64.push(longToNumber(reader.uint64() as Long));
@@ -1619,7 +1764,9 @@ export const TestAllTypesProto3 = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.unpackedSint64.push(longToNumber(reader.sint64() as Long));
+              message.unpackedSint64.push(
+                longToNumber(reader.sint64() as Long)
+              );
             }
           } else {
             message.unpackedSint64.push(longToNumber(reader.sint64() as Long));
@@ -1639,10 +1786,14 @@ export const TestAllTypesProto3 = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.unpackedFixed64.push(longToNumber(reader.fixed64() as Long));
+              message.unpackedFixed64.push(
+                longToNumber(reader.fixed64() as Long)
+              );
             }
           } else {
-            message.unpackedFixed64.push(longToNumber(reader.fixed64() as Long));
+            message.unpackedFixed64.push(
+              longToNumber(reader.fixed64() as Long)
+            );
           }
           break;
         case 97:
@@ -1659,10 +1810,14 @@ export const TestAllTypesProto3 = {
           if ((tag & 7) === 2) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
-              message.unpackedSfixed64.push(longToNumber(reader.sfixed64() as Long));
+              message.unpackedSfixed64.push(
+                longToNumber(reader.sfixed64() as Long)
+              );
             }
           } else {
-            message.unpackedSfixed64.push(longToNumber(reader.sfixed64() as Long));
+            message.unpackedSfixed64.push(
+              longToNumber(reader.sfixed64() as Long)
+            );
           }
           break;
         case 99:
@@ -1706,247 +1861,397 @@ export const TestAllTypesProto3 = {
           }
           break;
         case 56:
-          const entry56 = TestAllTypesProto3_MapInt32Int32Entry.decode(reader, reader.uint32());
+          const entry56 = TestAllTypesProto3_MapInt32Int32Entry.decode(
+            reader,
+            reader.uint32()
+          );
           if (entry56.value !== undefined) {
             message.mapInt32Int32.set(entry56.key, entry56.value);
           }
           break;
         case 57:
-          const entry57 = TestAllTypesProto3_MapInt64Int64Entry.decode(reader, reader.uint32());
+          const entry57 = TestAllTypesProto3_MapInt64Int64Entry.decode(
+            reader,
+            reader.uint32()
+          );
           if (entry57.value !== undefined) {
             message.mapInt64Int64.set(entry57.key, entry57.value);
           }
           break;
         case 58:
-          const entry58 = TestAllTypesProto3_MapUint32Uint32Entry.decode(reader, reader.uint32());
+          const entry58 = TestAllTypesProto3_MapUint32Uint32Entry.decode(
+            reader,
+            reader.uint32()
+          );
           if (entry58.value !== undefined) {
             message.mapUint32Uint32.set(entry58.key, entry58.value);
           }
           break;
         case 59:
-          const entry59 = TestAllTypesProto3_MapUint64Uint64Entry.decode(reader, reader.uint32());
+          const entry59 = TestAllTypesProto3_MapUint64Uint64Entry.decode(
+            reader,
+            reader.uint32()
+          );
           if (entry59.value !== undefined) {
             message.mapUint64Uint64.set(entry59.key, entry59.value);
           }
           break;
         case 60:
-          const entry60 = TestAllTypesProto3_MapSint32Sint32Entry.decode(reader, reader.uint32());
+          const entry60 = TestAllTypesProto3_MapSint32Sint32Entry.decode(
+            reader,
+            reader.uint32()
+          );
           if (entry60.value !== undefined) {
             message.mapSint32Sint32.set(entry60.key, entry60.value);
           }
           break;
         case 61:
-          const entry61 = TestAllTypesProto3_MapSint64Sint64Entry.decode(reader, reader.uint32());
+          const entry61 = TestAllTypesProto3_MapSint64Sint64Entry.decode(
+            reader,
+            reader.uint32()
+          );
           if (entry61.value !== undefined) {
             message.mapSint64Sint64.set(entry61.key, entry61.value);
           }
           break;
         case 62:
-          const entry62 = TestAllTypesProto3_MapFixed32Fixed32Entry.decode(reader, reader.uint32());
+          const entry62 = TestAllTypesProto3_MapFixed32Fixed32Entry.decode(
+            reader,
+            reader.uint32()
+          );
           if (entry62.value !== undefined) {
             message.mapFixed32Fixed32.set(entry62.key, entry62.value);
           }
           break;
         case 63:
-          const entry63 = TestAllTypesProto3_MapFixed64Fixed64Entry.decode(reader, reader.uint32());
+          const entry63 = TestAllTypesProto3_MapFixed64Fixed64Entry.decode(
+            reader,
+            reader.uint32()
+          );
           if (entry63.value !== undefined) {
             message.mapFixed64Fixed64.set(entry63.key, entry63.value);
           }
           break;
         case 64:
-          const entry64 = TestAllTypesProto3_MapSfixed32Sfixed32Entry.decode(reader, reader.uint32());
+          const entry64 = TestAllTypesProto3_MapSfixed32Sfixed32Entry.decode(
+            reader,
+            reader.uint32()
+          );
           if (entry64.value !== undefined) {
             message.mapSfixed32Sfixed32.set(entry64.key, entry64.value);
           }
           break;
         case 65:
-          const entry65 = TestAllTypesProto3_MapSfixed64Sfixed64Entry.decode(reader, reader.uint32());
+          const entry65 = TestAllTypesProto3_MapSfixed64Sfixed64Entry.decode(
+            reader,
+            reader.uint32()
+          );
           if (entry65.value !== undefined) {
             message.mapSfixed64Sfixed64.set(entry65.key, entry65.value);
           }
           break;
         case 66:
-          const entry66 = TestAllTypesProto3_MapInt32FloatEntry.decode(reader, reader.uint32());
+          const entry66 = TestAllTypesProto3_MapInt32FloatEntry.decode(
+            reader,
+            reader.uint32()
+          );
           if (entry66.value !== undefined) {
             message.mapInt32Float.set(entry66.key, entry66.value);
           }
           break;
         case 67:
-          const entry67 = TestAllTypesProto3_MapInt32DoubleEntry.decode(reader, reader.uint32());
+          const entry67 = TestAllTypesProto3_MapInt32DoubleEntry.decode(
+            reader,
+            reader.uint32()
+          );
           if (entry67.value !== undefined) {
             message.mapInt32Double.set(entry67.key, entry67.value);
           }
           break;
         case 68:
-          const entry68 = TestAllTypesProto3_MapBoolBoolEntry.decode(reader, reader.uint32());
+          const entry68 = TestAllTypesProto3_MapBoolBoolEntry.decode(
+            reader,
+            reader.uint32()
+          );
           if (entry68.value !== undefined) {
             message.mapBoolBool.set(entry68.key, entry68.value);
           }
           break;
         case 69:
-          const entry69 = TestAllTypesProto3_MapStringStringEntry.decode(reader, reader.uint32());
+          const entry69 = TestAllTypesProto3_MapStringStringEntry.decode(
+            reader,
+            reader.uint32()
+          );
           if (entry69.value !== undefined) {
             message.mapStringString.set(entry69.key, entry69.value);
           }
           break;
         case 70:
-          const entry70 = TestAllTypesProto3_MapStringBytesEntry.decode(reader, reader.uint32());
+          const entry70 = TestAllTypesProto3_MapStringBytesEntry.decode(
+            reader,
+            reader.uint32()
+          );
           if (entry70.value !== undefined) {
             message.mapStringBytes.set(entry70.key, entry70.value);
           }
           break;
         case 71:
-          const entry71 = TestAllTypesProto3_MapStringNestedMessageEntry.decode(reader, reader.uint32());
+          const entry71 = TestAllTypesProto3_MapStringNestedMessageEntry.decode(
+            reader,
+            reader.uint32()
+          );
           if (entry71.value !== undefined) {
             message.mapStringNestedMessage.set(entry71.key, entry71.value);
           }
           break;
         case 72:
-          const entry72 = TestAllTypesProto3_MapStringForeignMessageEntry.decode(reader, reader.uint32());
+          const entry72 =
+            TestAllTypesProto3_MapStringForeignMessageEntry.decode(
+              reader,
+              reader.uint32()
+            );
           if (entry72.value !== undefined) {
             message.mapStringForeignMessage.set(entry72.key, entry72.value);
           }
           break;
         case 73:
-          const entry73 = TestAllTypesProto3_MapStringNestedEnumEntry.decode(reader, reader.uint32());
+          const entry73 = TestAllTypesProto3_MapStringNestedEnumEntry.decode(
+            reader,
+            reader.uint32()
+          );
           if (entry73.value !== undefined) {
             message.mapStringNestedEnum.set(entry73.key, entry73.value);
           }
           break;
         case 74:
-          const entry74 = TestAllTypesProto3_MapStringForeignEnumEntry.decode(reader, reader.uint32());
+          const entry74 = TestAllTypesProto3_MapStringForeignEnumEntry.decode(
+            reader,
+            reader.uint32()
+          );
           if (entry74.value !== undefined) {
             message.mapStringForeignEnum.set(entry74.key, entry74.value);
           }
           break;
         case 111:
-          message.oneofField = { $case: "oneofUint32", oneofUint32: reader.uint32() };
+          message.oneofField = {
+            $case: "oneofUint32",
+            oneofUint32: reader.uint32(),
+          };
           break;
         case 112:
           message.oneofField = {
             $case: "oneofNestedMessage",
-            oneofNestedMessage: TestAllTypesProto3_NestedMessage.decode(reader, reader.uint32()),
+            oneofNestedMessage: TestAllTypesProto3_NestedMessage.decode(
+              reader,
+              reader.uint32()
+            ),
           };
           break;
         case 113:
-          message.oneofField = { $case: "oneofString", oneofString: reader.string() };
+          message.oneofField = {
+            $case: "oneofString",
+            oneofString: reader.string(),
+          };
           break;
         case 114:
-          message.oneofField = { $case: "oneofBytes", oneofBytes: reader.bytes() };
+          message.oneofField = {
+            $case: "oneofBytes",
+            oneofBytes: reader.bytes() as Buffer,
+          };
           break;
         case 115:
           message.oneofField = { $case: "oneofBool", oneofBool: reader.bool() };
           break;
         case 116:
-          message.oneofField = { $case: "oneofUint64", oneofUint64: longToNumber(reader.uint64() as Long) };
+          message.oneofField = {
+            $case: "oneofUint64",
+            oneofUint64: longToNumber(reader.uint64() as Long),
+          };
           break;
         case 117:
-          message.oneofField = { $case: "oneofFloat", oneofFloat: reader.float() };
+          message.oneofField = {
+            $case: "oneofFloat",
+            oneofFloat: reader.float(),
+          };
           break;
         case 118:
-          message.oneofField = { $case: "oneofDouble", oneofDouble: reader.double() };
+          message.oneofField = {
+            $case: "oneofDouble",
+            oneofDouble: reader.double(),
+          };
           break;
         case 119:
-          message.oneofField = { $case: "oneofEnum", oneofEnum: reader.int32() as any };
+          message.oneofField = {
+            $case: "oneofEnum",
+            oneofEnum: reader.int32() as any,
+          };
           break;
         case 120:
-          message.oneofField = { $case: "oneofNullValue", oneofNullValue: reader.int32() as any };
+          message.oneofField = {
+            $case: "oneofNullValue",
+            oneofNullValue: reader.int32() as any,
+          };
           break;
         case 201:
-          message.optionalBoolWrapper = BoolValue.decode(reader, reader.uint32()).value;
+          message.optionalBoolWrapper = BoolValue.decode(
+            reader,
+            reader.uint32()
+          ).value;
           break;
         case 202:
-          message.optionalInt32Wrapper = Int32Value.decode(reader, reader.uint32()).value;
+          message.optionalInt32Wrapper = Int32Value.decode(
+            reader,
+            reader.uint32()
+          ).value;
           break;
         case 203:
-          message.optionalInt64Wrapper = Int64Value.decode(reader, reader.uint32()).value;
+          message.optionalInt64Wrapper = Int64Value.decode(
+            reader,
+            reader.uint32()
+          ).value;
           break;
         case 204:
-          message.optionalUint32Wrapper = UInt32Value.decode(reader, reader.uint32()).value;
+          message.optionalUint32Wrapper = UInt32Value.decode(
+            reader,
+            reader.uint32()
+          ).value;
           break;
         case 205:
-          message.optionalUint64Wrapper = UInt64Value.decode(reader, reader.uint32()).value;
+          message.optionalUint64Wrapper = UInt64Value.decode(
+            reader,
+            reader.uint32()
+          ).value;
           break;
         case 206:
-          message.optionalFloatWrapper = FloatValue.decode(reader, reader.uint32()).value;
+          message.optionalFloatWrapper = FloatValue.decode(
+            reader,
+            reader.uint32()
+          ).value;
           break;
         case 207:
-          message.optionalDoubleWrapper = DoubleValue.decode(reader, reader.uint32()).value;
+          message.optionalDoubleWrapper = DoubleValue.decode(
+            reader,
+            reader.uint32()
+          ).value;
           break;
         case 208:
-          message.optionalStringWrapper = StringValue.decode(reader, reader.uint32()).value;
+          message.optionalStringWrapper = StringValue.decode(
+            reader,
+            reader.uint32()
+          ).value;
           break;
         case 209:
-          message.optionalBytesWrapper = BytesValue.decode(reader, reader.uint32()).value;
+          message.optionalBytesWrapper = BytesValue.decode(
+            reader,
+            reader.uint32()
+          ).value;
           break;
         case 211:
-          message.repeatedBoolWrapper.push(BoolValue.decode(reader, reader.uint32()).value);
+          message.repeatedBoolWrapper.push(
+            BoolValue.decode(reader, reader.uint32()).value
+          );
           break;
         case 212:
-          message.repeatedInt32Wrapper.push(Int32Value.decode(reader, reader.uint32()).value);
+          message.repeatedInt32Wrapper.push(
+            Int32Value.decode(reader, reader.uint32()).value
+          );
           break;
         case 213:
-          message.repeatedInt64Wrapper.push(Int64Value.decode(reader, reader.uint32()).value);
+          message.repeatedInt64Wrapper.push(
+            Int64Value.decode(reader, reader.uint32()).value
+          );
           break;
         case 214:
-          message.repeatedUint32Wrapper.push(UInt32Value.decode(reader, reader.uint32()).value);
+          message.repeatedUint32Wrapper.push(
+            UInt32Value.decode(reader, reader.uint32()).value
+          );
           break;
         case 215:
-          message.repeatedUint64Wrapper.push(UInt64Value.decode(reader, reader.uint32()).value);
+          message.repeatedUint64Wrapper.push(
+            UInt64Value.decode(reader, reader.uint32()).value
+          );
           break;
         case 216:
-          message.repeatedFloatWrapper.push(FloatValue.decode(reader, reader.uint32()).value);
+          message.repeatedFloatWrapper.push(
+            FloatValue.decode(reader, reader.uint32()).value
+          );
           break;
         case 217:
-          message.repeatedDoubleWrapper.push(DoubleValue.decode(reader, reader.uint32()).value);
+          message.repeatedDoubleWrapper.push(
+            DoubleValue.decode(reader, reader.uint32()).value
+          );
           break;
         case 218:
-          message.repeatedStringWrapper.push(StringValue.decode(reader, reader.uint32()).value);
+          message.repeatedStringWrapper.push(
+            StringValue.decode(reader, reader.uint32()).value
+          );
           break;
         case 219:
-          message.repeatedBytesWrapper.push(BytesValue.decode(reader, reader.uint32()).value);
+          message.repeatedBytesWrapper.push(
+            BytesValue.decode(reader, reader.uint32()).value
+          );
           break;
         case 301:
           message.optionalDuration = Duration.decode(reader, reader.uint32());
           break;
         case 302:
-          message.optionalTimestamp = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
+          message.optionalTimestamp = fromTimestamp(
+            Timestamp.decode(reader, reader.uint32())
+          );
           break;
         case 303:
-          message.optionalFieldMask = FieldMask.unwrap(FieldMask.decode(reader, reader.uint32()));
+          message.optionalFieldMask = FieldMask.unwrap(
+            FieldMask.decode(reader, reader.uint32())
+          );
           break;
         case 304:
-          message.optionalStruct = Struct.unwrap(Struct.decode(reader, reader.uint32()));
+          message.optionalStruct = Struct.unwrap(
+            Struct.decode(reader, reader.uint32())
+          );
           break;
         case 305:
           message.optionalAny = Any.decode(reader, reader.uint32());
           break;
         case 306:
-          message.optionalValue = Value.unwrap(Value.decode(reader, reader.uint32()));
+          message.optionalValue = Value.unwrap(
+            Value.decode(reader, reader.uint32())
+          );
           break;
         case 307:
           message.optionalNullValue = reader.int32() as any;
           break;
         case 311:
-          message.repeatedDuration.push(Duration.decode(reader, reader.uint32()));
+          message.repeatedDuration.push(
+            Duration.decode(reader, reader.uint32())
+          );
           break;
         case 312:
-          message.repeatedTimestamp.push(fromTimestamp(Timestamp.decode(reader, reader.uint32())));
+          message.repeatedTimestamp.push(
+            fromTimestamp(Timestamp.decode(reader, reader.uint32()))
+          );
           break;
         case 313:
-          message.repeatedFieldmask.push(FieldMask.unwrap(FieldMask.decode(reader, reader.uint32())));
+          message.repeatedFieldmask.push(
+            FieldMask.unwrap(FieldMask.decode(reader, reader.uint32()))
+          );
           break;
         case 324:
-          message.repeatedStruct.push(Struct.unwrap(Struct.decode(reader, reader.uint32())));
+          message.repeatedStruct.push(
+            Struct.unwrap(Struct.decode(reader, reader.uint32()))
+          );
           break;
         case 315:
           message.repeatedAny.push(Any.decode(reader, reader.uint32()));
           break;
         case 316:
-          message.repeatedValue.push(Value.unwrap(Value.decode(reader, reader.uint32())));
+          message.repeatedValue.push(
+            Value.unwrap(Value.decode(reader, reader.uint32()))
+          );
           break;
         case 317:
-          message.repeatedListValue.push(ListValue.unwrap(ListValue.decode(reader, reader.uint32())));
+          message.repeatedListValue.push(
+            ListValue.unwrap(ListValue.decode(reader, reader.uint32()))
+          );
           break;
         case 401:
           message.fieldname1 = reader.int32();
@@ -2012,23 +2317,55 @@ export const TestAllTypesProto3 = {
 
   fromJSON(object: any): TestAllTypesProto3 {
     return {
-      optionalInt32: isSet(object.optionalInt32) ? Number(object.optionalInt32) : 0,
-      optionalInt64: isSet(object.optionalInt64) ? Number(object.optionalInt64) : 0,
-      optionalUint32: isSet(object.optionalUint32) ? Number(object.optionalUint32) : 0,
-      optionalUint64: isSet(object.optionalUint64) ? Number(object.optionalUint64) : 0,
-      optionalSint32: isSet(object.optionalSint32) ? Number(object.optionalSint32) : 0,
-      optionalSint64: isSet(object.optionalSint64) ? Number(object.optionalSint64) : 0,
-      optionalFixed32: isSet(object.optionalFixed32) ? Number(object.optionalFixed32) : 0,
-      optionalFixed64: isSet(object.optionalFixed64) ? Number(object.optionalFixed64) : 0,
-      optionalSfixed32: isSet(object.optionalSfixed32) ? Number(object.optionalSfixed32) : 0,
-      optionalSfixed64: isSet(object.optionalSfixed64) ? Number(object.optionalSfixed64) : 0,
-      optionalFloat: isSet(object.optionalFloat) ? Number(object.optionalFloat) : 0,
-      optionalDouble: isSet(object.optionalDouble) ? Number(object.optionalDouble) : 0,
-      optionalBool: isSet(object.optionalBool) ? Boolean(object.optionalBool) : false,
-      optionalString: isSet(object.optionalString) ? String(object.optionalString) : "",
-      optionalBytes: isSet(object.optionalBytes) ? bytesFromBase64(object.optionalBytes) : new Uint8Array(),
+      optionalInt32: isSet(object.optionalInt32)
+        ? Number(object.optionalInt32)
+        : 0,
+      optionalInt64: isSet(object.optionalInt64)
+        ? Number(object.optionalInt64)
+        : 0,
+      optionalUint32: isSet(object.optionalUint32)
+        ? Number(object.optionalUint32)
+        : 0,
+      optionalUint64: isSet(object.optionalUint64)
+        ? Number(object.optionalUint64)
+        : 0,
+      optionalSint32: isSet(object.optionalSint32)
+        ? Number(object.optionalSint32)
+        : 0,
+      optionalSint64: isSet(object.optionalSint64)
+        ? Number(object.optionalSint64)
+        : 0,
+      optionalFixed32: isSet(object.optionalFixed32)
+        ? Number(object.optionalFixed32)
+        : 0,
+      optionalFixed64: isSet(object.optionalFixed64)
+        ? Number(object.optionalFixed64)
+        : 0,
+      optionalSfixed32: isSet(object.optionalSfixed32)
+        ? Number(object.optionalSfixed32)
+        : 0,
+      optionalSfixed64: isSet(object.optionalSfixed64)
+        ? Number(object.optionalSfixed64)
+        : 0,
+      optionalFloat: isSet(object.optionalFloat)
+        ? Number(object.optionalFloat)
+        : 0,
+      optionalDouble: isSet(object.optionalDouble)
+        ? Number(object.optionalDouble)
+        : 0,
+      optionalBool: isSet(object.optionalBool)
+        ? Boolean(object.optionalBool)
+        : false,
+      optionalString: isSet(object.optionalString)
+        ? String(object.optionalString)
+        : "",
+      optionalBytes: isSet(object.optionalBytes)
+        ? Buffer.from(bytesFromBase64(object.optionalBytes))
+        : Buffer.alloc(0),
       optionalNestedMessage: isSet(object.optionalNestedMessage)
-        ? TestAllTypesProto3_NestedMessage.fromJSON(object.optionalNestedMessage)
+        ? TestAllTypesProto3_NestedMessage.fromJSON(
+            object.optionalNestedMessage
+          )
         : undefined,
       optionalForeignMessage: isSet(object.optionalForeignMessage)
         ? ForeignMessage.fromJSON(object.optionalForeignMessage)
@@ -2036,44 +2373,80 @@ export const TestAllTypesProto3 = {
       optionalNestedEnum: isSet(object.optionalNestedEnum)
         ? testAllTypesProto3_NestedEnumFromJSON(object.optionalNestedEnum)
         : 0,
-      optionalForeignEnum: isSet(object.optionalForeignEnum) ? foreignEnumFromJSON(object.optionalForeignEnum) : 0,
+      optionalForeignEnum: isSet(object.optionalForeignEnum)
+        ? foreignEnumFromJSON(object.optionalForeignEnum)
+        : 0,
       optionalAliasedEnum: isSet(object.optionalAliasedEnum)
         ? testAllTypesProto3_AliasedEnumFromJSON(object.optionalAliasedEnum)
         : 0,
-      optionalStringPiece: isSet(object.optionalStringPiece) ? String(object.optionalStringPiece) : "",
-      optionalCord: isSet(object.optionalCord) ? String(object.optionalCord) : "",
+      optionalStringPiece: isSet(object.optionalStringPiece)
+        ? String(object.optionalStringPiece)
+        : "",
+      optionalCord: isSet(object.optionalCord)
+        ? String(object.optionalCord)
+        : "",
       recursiveMessage: isSet(object.recursiveMessage)
         ? TestAllTypesProto3.fromJSON(object.recursiveMessage)
         : undefined,
-      repeatedInt32: Array.isArray(object?.repeatedInt32) ? object.repeatedInt32.map((e: any) => Number(e)) : [],
-      repeatedInt64: Array.isArray(object?.repeatedInt64) ? object.repeatedInt64.map((e: any) => Number(e)) : [],
-      repeatedUint32: Array.isArray(object?.repeatedUint32) ? object.repeatedUint32.map((e: any) => Number(e)) : [],
-      repeatedUint64: Array.isArray(object?.repeatedUint64) ? object.repeatedUint64.map((e: any) => Number(e)) : [],
-      repeatedSint32: Array.isArray(object?.repeatedSint32) ? object.repeatedSint32.map((e: any) => Number(e)) : [],
-      repeatedSint64: Array.isArray(object?.repeatedSint64) ? object.repeatedSint64.map((e: any) => Number(e)) : [],
-      repeatedFixed32: Array.isArray(object?.repeatedFixed32) ? object.repeatedFixed32.map((e: any) => Number(e)) : [],
-      repeatedFixed64: Array.isArray(object?.repeatedFixed64) ? object.repeatedFixed64.map((e: any) => Number(e)) : [],
+      repeatedInt32: Array.isArray(object?.repeatedInt32)
+        ? object.repeatedInt32.map((e: any) => Number(e))
+        : [],
+      repeatedInt64: Array.isArray(object?.repeatedInt64)
+        ? object.repeatedInt64.map((e: any) => Number(e))
+        : [],
+      repeatedUint32: Array.isArray(object?.repeatedUint32)
+        ? object.repeatedUint32.map((e: any) => Number(e))
+        : [],
+      repeatedUint64: Array.isArray(object?.repeatedUint64)
+        ? object.repeatedUint64.map((e: any) => Number(e))
+        : [],
+      repeatedSint32: Array.isArray(object?.repeatedSint32)
+        ? object.repeatedSint32.map((e: any) => Number(e))
+        : [],
+      repeatedSint64: Array.isArray(object?.repeatedSint64)
+        ? object.repeatedSint64.map((e: any) => Number(e))
+        : [],
+      repeatedFixed32: Array.isArray(object?.repeatedFixed32)
+        ? object.repeatedFixed32.map((e: any) => Number(e))
+        : [],
+      repeatedFixed64: Array.isArray(object?.repeatedFixed64)
+        ? object.repeatedFixed64.map((e: any) => Number(e))
+        : [],
       repeatedSfixed32: Array.isArray(object?.repeatedSfixed32)
         ? object.repeatedSfixed32.map((e: any) => Number(e))
         : [],
       repeatedSfixed64: Array.isArray(object?.repeatedSfixed64)
         ? object.repeatedSfixed64.map((e: any) => Number(e))
         : [],
-      repeatedFloat: Array.isArray(object?.repeatedFloat) ? object.repeatedFloat.map((e: any) => Number(e)) : [],
-      repeatedDouble: Array.isArray(object?.repeatedDouble) ? object.repeatedDouble.map((e: any) => Number(e)) : [],
-      repeatedBool: Array.isArray(object?.repeatedBool) ? object.repeatedBool.map((e: any) => Boolean(e)) : [],
-      repeatedString: Array.isArray(object?.repeatedString) ? object.repeatedString.map((e: any) => String(e)) : [],
+      repeatedFloat: Array.isArray(object?.repeatedFloat)
+        ? object.repeatedFloat.map((e: any) => Number(e))
+        : [],
+      repeatedDouble: Array.isArray(object?.repeatedDouble)
+        ? object.repeatedDouble.map((e: any) => Number(e))
+        : [],
+      repeatedBool: Array.isArray(object?.repeatedBool)
+        ? object.repeatedBool.map((e: any) => Boolean(e))
+        : [],
+      repeatedString: Array.isArray(object?.repeatedString)
+        ? object.repeatedString.map((e: any) => String(e))
+        : [],
       repeatedBytes: Array.isArray(object?.repeatedBytes)
-        ? object.repeatedBytes.map((e: any) => bytesFromBase64(e))
+        ? object.repeatedBytes.map((e: any) => Buffer.from(bytesFromBase64(e)))
         : [],
       repeatedNestedMessage: Array.isArray(object?.repeatedNestedMessage)
-        ? object.repeatedNestedMessage.map((e: any) => TestAllTypesProto3_NestedMessage.fromJSON(e))
+        ? object.repeatedNestedMessage.map((e: any) =>
+            TestAllTypesProto3_NestedMessage.fromJSON(e)
+          )
         : [],
       repeatedForeignMessage: Array.isArray(object?.repeatedForeignMessage)
-        ? object.repeatedForeignMessage.map((e: any) => ForeignMessage.fromJSON(e))
+        ? object.repeatedForeignMessage.map((e: any) =>
+            ForeignMessage.fromJSON(e)
+          )
         : [],
       repeatedNestedEnum: Array.isArray(object?.repeatedNestedEnum)
-        ? object.repeatedNestedEnum.map((e: any) => testAllTypesProto3_NestedEnumFromJSON(e))
+        ? object.repeatedNestedEnum.map((e: any) =>
+            testAllTypesProto3_NestedEnumFromJSON(e)
+          )
         : [],
       repeatedForeignEnum: Array.isArray(object?.repeatedForeignEnum)
         ? object.repeatedForeignEnum.map((e: any) => foreignEnumFromJSON(e))
@@ -2081,174 +2454,278 @@ export const TestAllTypesProto3 = {
       repeatedStringPiece: Array.isArray(object?.repeatedStringPiece)
         ? object.repeatedStringPiece.map((e: any) => String(e))
         : [],
-      repeatedCord: Array.isArray(object?.repeatedCord) ? object.repeatedCord.map((e: any) => String(e)) : [],
-      packedInt32: Array.isArray(object?.packedInt32) ? object.packedInt32.map((e: any) => Number(e)) : [],
-      packedInt64: Array.isArray(object?.packedInt64) ? object.packedInt64.map((e: any) => Number(e)) : [],
-      packedUint32: Array.isArray(object?.packedUint32) ? object.packedUint32.map((e: any) => Number(e)) : [],
-      packedUint64: Array.isArray(object?.packedUint64) ? object.packedUint64.map((e: any) => Number(e)) : [],
-      packedSint32: Array.isArray(object?.packedSint32) ? object.packedSint32.map((e: any) => Number(e)) : [],
-      packedSint64: Array.isArray(object?.packedSint64) ? object.packedSint64.map((e: any) => Number(e)) : [],
-      packedFixed32: Array.isArray(object?.packedFixed32) ? object.packedFixed32.map((e: any) => Number(e)) : [],
-      packedFixed64: Array.isArray(object?.packedFixed64) ? object.packedFixed64.map((e: any) => Number(e)) : [],
-      packedSfixed32: Array.isArray(object?.packedSfixed32) ? object.packedSfixed32.map((e: any) => Number(e)) : [],
-      packedSfixed64: Array.isArray(object?.packedSfixed64) ? object.packedSfixed64.map((e: any) => Number(e)) : [],
-      packedFloat: Array.isArray(object?.packedFloat) ? object.packedFloat.map((e: any) => Number(e)) : [],
-      packedDouble: Array.isArray(object?.packedDouble) ? object.packedDouble.map((e: any) => Number(e)) : [],
-      packedBool: Array.isArray(object?.packedBool) ? object.packedBool.map((e: any) => Boolean(e)) : [],
-      packedNestedEnum: Array.isArray(object?.packedNestedEnum)
-        ? object.packedNestedEnum.map((e: any) => testAllTypesProto3_NestedEnumFromJSON(e))
+      repeatedCord: Array.isArray(object?.repeatedCord)
+        ? object.repeatedCord.map((e: any) => String(e))
         : [],
-      unpackedInt32: Array.isArray(object?.unpackedInt32) ? object.unpackedInt32.map((e: any) => Number(e)) : [],
-      unpackedInt64: Array.isArray(object?.unpackedInt64) ? object.unpackedInt64.map((e: any) => Number(e)) : [],
-      unpackedUint32: Array.isArray(object?.unpackedUint32) ? object.unpackedUint32.map((e: any) => Number(e)) : [],
-      unpackedUint64: Array.isArray(object?.unpackedUint64) ? object.unpackedUint64.map((e: any) => Number(e)) : [],
-      unpackedSint32: Array.isArray(object?.unpackedSint32) ? object.unpackedSint32.map((e: any) => Number(e)) : [],
-      unpackedSint64: Array.isArray(object?.unpackedSint64) ? object.unpackedSint64.map((e: any) => Number(e)) : [],
-      unpackedFixed32: Array.isArray(object?.unpackedFixed32) ? object.unpackedFixed32.map((e: any) => Number(e)) : [],
-      unpackedFixed64: Array.isArray(object?.unpackedFixed64) ? object.unpackedFixed64.map((e: any) => Number(e)) : [],
+      packedInt32: Array.isArray(object?.packedInt32)
+        ? object.packedInt32.map((e: any) => Number(e))
+        : [],
+      packedInt64: Array.isArray(object?.packedInt64)
+        ? object.packedInt64.map((e: any) => Number(e))
+        : [],
+      packedUint32: Array.isArray(object?.packedUint32)
+        ? object.packedUint32.map((e: any) => Number(e))
+        : [],
+      packedUint64: Array.isArray(object?.packedUint64)
+        ? object.packedUint64.map((e: any) => Number(e))
+        : [],
+      packedSint32: Array.isArray(object?.packedSint32)
+        ? object.packedSint32.map((e: any) => Number(e))
+        : [],
+      packedSint64: Array.isArray(object?.packedSint64)
+        ? object.packedSint64.map((e: any) => Number(e))
+        : [],
+      packedFixed32: Array.isArray(object?.packedFixed32)
+        ? object.packedFixed32.map((e: any) => Number(e))
+        : [],
+      packedFixed64: Array.isArray(object?.packedFixed64)
+        ? object.packedFixed64.map((e: any) => Number(e))
+        : [],
+      packedSfixed32: Array.isArray(object?.packedSfixed32)
+        ? object.packedSfixed32.map((e: any) => Number(e))
+        : [],
+      packedSfixed64: Array.isArray(object?.packedSfixed64)
+        ? object.packedSfixed64.map((e: any) => Number(e))
+        : [],
+      packedFloat: Array.isArray(object?.packedFloat)
+        ? object.packedFloat.map((e: any) => Number(e))
+        : [],
+      packedDouble: Array.isArray(object?.packedDouble)
+        ? object.packedDouble.map((e: any) => Number(e))
+        : [],
+      packedBool: Array.isArray(object?.packedBool)
+        ? object.packedBool.map((e: any) => Boolean(e))
+        : [],
+      packedNestedEnum: Array.isArray(object?.packedNestedEnum)
+        ? object.packedNestedEnum.map((e: any) =>
+            testAllTypesProto3_NestedEnumFromJSON(e)
+          )
+        : [],
+      unpackedInt32: Array.isArray(object?.unpackedInt32)
+        ? object.unpackedInt32.map((e: any) => Number(e))
+        : [],
+      unpackedInt64: Array.isArray(object?.unpackedInt64)
+        ? object.unpackedInt64.map((e: any) => Number(e))
+        : [],
+      unpackedUint32: Array.isArray(object?.unpackedUint32)
+        ? object.unpackedUint32.map((e: any) => Number(e))
+        : [],
+      unpackedUint64: Array.isArray(object?.unpackedUint64)
+        ? object.unpackedUint64.map((e: any) => Number(e))
+        : [],
+      unpackedSint32: Array.isArray(object?.unpackedSint32)
+        ? object.unpackedSint32.map((e: any) => Number(e))
+        : [],
+      unpackedSint64: Array.isArray(object?.unpackedSint64)
+        ? object.unpackedSint64.map((e: any) => Number(e))
+        : [],
+      unpackedFixed32: Array.isArray(object?.unpackedFixed32)
+        ? object.unpackedFixed32.map((e: any) => Number(e))
+        : [],
+      unpackedFixed64: Array.isArray(object?.unpackedFixed64)
+        ? object.unpackedFixed64.map((e: any) => Number(e))
+        : [],
       unpackedSfixed32: Array.isArray(object?.unpackedSfixed32)
         ? object.unpackedSfixed32.map((e: any) => Number(e))
         : [],
       unpackedSfixed64: Array.isArray(object?.unpackedSfixed64)
         ? object.unpackedSfixed64.map((e: any) => Number(e))
         : [],
-      unpackedFloat: Array.isArray(object?.unpackedFloat) ? object.unpackedFloat.map((e: any) => Number(e)) : [],
-      unpackedDouble: Array.isArray(object?.unpackedDouble) ? object.unpackedDouble.map((e: any) => Number(e)) : [],
-      unpackedBool: Array.isArray(object?.unpackedBool) ? object.unpackedBool.map((e: any) => Boolean(e)) : [],
+      unpackedFloat: Array.isArray(object?.unpackedFloat)
+        ? object.unpackedFloat.map((e: any) => Number(e))
+        : [],
+      unpackedDouble: Array.isArray(object?.unpackedDouble)
+        ? object.unpackedDouble.map((e: any) => Number(e))
+        : [],
+      unpackedBool: Array.isArray(object?.unpackedBool)
+        ? object.unpackedBool.map((e: any) => Boolean(e))
+        : [],
       unpackedNestedEnum: Array.isArray(object?.unpackedNestedEnum)
-        ? object.unpackedNestedEnum.map((e: any) => testAllTypesProto3_NestedEnumFromJSON(e))
+        ? object.unpackedNestedEnum.map((e: any) =>
+            testAllTypesProto3_NestedEnumFromJSON(e)
+          )
         : [],
       mapInt32Int32: isObject(object.mapInt32Int32)
-        ? Object.entries(object.mapInt32Int32).reduce<Map<number, number>>((acc, [key, value]) => {
-          acc.set(Number(key), Number(value));
-          return acc;
-        }, new Map())
+        ? Object.entries(object.mapInt32Int32).reduce<Map<number, number>>(
+            (acc, [key, value]) => {
+              acc.set(Number(key), Number(value));
+              return acc;
+            },
+            new Map()
+          )
         : new Map(),
       mapInt64Int64: isObject(object.mapInt64Int64)
-        ? Object.entries(object.mapInt64Int64).reduce<Map<number, number>>((acc, [key, value]) => {
-          acc.set(Number(key), Number(value));
-          return acc;
-        }, new Map())
+        ? Object.entries(object.mapInt64Int64).reduce<Map<number, number>>(
+            (acc, [key, value]) => {
+              acc.set(Number(key), Number(value));
+              return acc;
+            },
+            new Map()
+          )
         : new Map(),
       mapUint32Uint32: isObject(object.mapUint32Uint32)
-        ? Object.entries(object.mapUint32Uint32).reduce<Map<number, number>>((acc, [key, value]) => {
-          acc.set(Number(key), Number(value));
-          return acc;
-        }, new Map())
+        ? Object.entries(object.mapUint32Uint32).reduce<Map<number, number>>(
+            (acc, [key, value]) => {
+              acc.set(Number(key), Number(value));
+              return acc;
+            },
+            new Map()
+          )
         : new Map(),
       mapUint64Uint64: isObject(object.mapUint64Uint64)
-        ? Object.entries(object.mapUint64Uint64).reduce<Map<number, number>>((acc, [key, value]) => {
-          acc.set(Number(key), Number(value));
-          return acc;
-        }, new Map())
+        ? Object.entries(object.mapUint64Uint64).reduce<Map<number, number>>(
+            (acc, [key, value]) => {
+              acc.set(Number(key), Number(value));
+              return acc;
+            },
+            new Map()
+          )
         : new Map(),
       mapSint32Sint32: isObject(object.mapSint32Sint32)
-        ? Object.entries(object.mapSint32Sint32).reduce<Map<number, number>>((acc, [key, value]) => {
-          acc.set(Number(key), Number(value));
-          return acc;
-        }, new Map())
+        ? Object.entries(object.mapSint32Sint32).reduce<Map<number, number>>(
+            (acc, [key, value]) => {
+              acc.set(Number(key), Number(value));
+              return acc;
+            },
+            new Map()
+          )
         : new Map(),
       mapSint64Sint64: isObject(object.mapSint64Sint64)
-        ? Object.entries(object.mapSint64Sint64).reduce<Map<number, number>>((acc, [key, value]) => {
-          acc.set(Number(key), Number(value));
-          return acc;
-        }, new Map())
+        ? Object.entries(object.mapSint64Sint64).reduce<Map<number, number>>(
+            (acc, [key, value]) => {
+              acc.set(Number(key), Number(value));
+              return acc;
+            },
+            new Map()
+          )
         : new Map(),
       mapFixed32Fixed32: isObject(object.mapFixed32Fixed32)
-        ? Object.entries(object.mapFixed32Fixed32).reduce<Map<number, number>>((acc, [key, value]) => {
-          acc.set(Number(key), Number(value));
-          return acc;
-        }, new Map())
+        ? Object.entries(object.mapFixed32Fixed32).reduce<Map<number, number>>(
+            (acc, [key, value]) => {
+              acc.set(Number(key), Number(value));
+              return acc;
+            },
+            new Map()
+          )
         : new Map(),
       mapFixed64Fixed64: isObject(object.mapFixed64Fixed64)
-        ? Object.entries(object.mapFixed64Fixed64).reduce<Map<number, number>>((acc, [key, value]) => {
-          acc.set(Number(key), Number(value));
-          return acc;
-        }, new Map())
+        ? Object.entries(object.mapFixed64Fixed64).reduce<Map<number, number>>(
+            (acc, [key, value]) => {
+              acc.set(Number(key), Number(value));
+              return acc;
+            },
+            new Map()
+          )
         : new Map(),
       mapSfixed32Sfixed32: isObject(object.mapSfixed32Sfixed32)
-        ? Object.entries(object.mapSfixed32Sfixed32).reduce<Map<number, number>>((acc, [key, value]) => {
-          acc.set(Number(key), Number(value));
-          return acc;
-        }, new Map())
+        ? Object.entries(object.mapSfixed32Sfixed32).reduce<
+            Map<number, number>
+          >((acc, [key, value]) => {
+            acc.set(Number(key), Number(value));
+            return acc;
+          }, new Map())
         : new Map(),
       mapSfixed64Sfixed64: isObject(object.mapSfixed64Sfixed64)
-        ? Object.entries(object.mapSfixed64Sfixed64).reduce<Map<number, number>>((acc, [key, value]) => {
-          acc.set(Number(key), Number(value));
-          return acc;
-        }, new Map())
+        ? Object.entries(object.mapSfixed64Sfixed64).reduce<
+            Map<number, number>
+          >((acc, [key, value]) => {
+            acc.set(Number(key), Number(value));
+            return acc;
+          }, new Map())
         : new Map(),
       mapInt32Float: isObject(object.mapInt32Float)
-        ? Object.entries(object.mapInt32Float).reduce<Map<number, number>>((acc, [key, value]) => {
-          acc.set(Number(key), Number(value));
-          return acc;
-        }, new Map())
+        ? Object.entries(object.mapInt32Float).reduce<Map<number, number>>(
+            (acc, [key, value]) => {
+              acc.set(Number(key), Number(value));
+              return acc;
+            },
+            new Map()
+          )
         : new Map(),
       mapInt32Double: isObject(object.mapInt32Double)
-        ? Object.entries(object.mapInt32Double).reduce<Map<number, number>>((acc, [key, value]) => {
-          acc.set(Number(key), Number(value));
-          return acc;
-        }, new Map())
+        ? Object.entries(object.mapInt32Double).reduce<Map<number, number>>(
+            (acc, [key, value]) => {
+              acc.set(Number(key), Number(value));
+              return acc;
+            },
+            new Map()
+          )
         : new Map(),
       mapBoolBool: isObject(object.mapBoolBool)
-        ? Object.entries(object.mapBoolBool).reduce<Map<boolean, boolean>>((acc, [key, value]) => {
-          acc.set(Number(key), Boolean(value));
-          return acc;
-        }, new Map())
+        ? Object.entries(object.mapBoolBool).reduce<Map<boolean, boolean>>(
+            (acc, [key, value]) => {
+              acc.set(Number(key), Boolean(value));
+              return acc;
+            },
+            new Map()
+          )
         : new Map(),
       mapStringString: isObject(object.mapStringString)
-        ? Object.entries(object.mapStringString).reduce<Map<string, string>>((acc, [key, value]) => {
-          acc.set(key, String(value));
-          return acc;
-        }, new Map())
+        ? Object.entries(object.mapStringString).reduce<Map<string, string>>(
+            (acc, [key, value]) => {
+              acc.set(key, String(value));
+              return acc;
+            },
+            new Map()
+          )
         : new Map(),
       mapStringBytes: isObject(object.mapStringBytes)
-        ? Object.entries(object.mapStringBytes).reduce<Map<string, Uint8Array>>((acc, [key, value]) => {
-          acc.set(key, bytesFromBase64(value as string));
-          return acc;
-        }, new Map())
+        ? Object.entries(object.mapStringBytes).reduce<Map<string, Buffer>>(
+            (acc, [key, value]) => {
+              acc.set(key, Buffer.from(bytesFromBase64(value as string)));
+              return acc;
+            },
+            new Map()
+          )
         : new Map(),
       mapStringNestedMessage: isObject(object.mapStringNestedMessage)
-        ? Object.entries(object.mapStringNestedMessage).reduce<Map<string, TestAllTypesProto3_NestedMessage>>(
-          (acc, [key, value]) => {
+        ? Object.entries(object.mapStringNestedMessage).reduce<
+            Map<string, TestAllTypesProto3_NestedMessage>
+          >((acc, [key, value]) => {
             acc.set(key, TestAllTypesProto3_NestedMessage.fromJSON(value));
             return acc;
-          },
-          new Map(),
-        )
+          }, new Map())
         : new Map(),
       mapStringForeignMessage: isObject(object.mapStringForeignMessage)
-        ? Object.entries(object.mapStringForeignMessage).reduce<Map<string, ForeignMessage>>((acc, [key, value]) => {
-          acc.set(key, ForeignMessage.fromJSON(value));
-          return acc;
-        }, new Map())
+        ? Object.entries(object.mapStringForeignMessage).reduce<
+            Map<string, ForeignMessage>
+          >((acc, [key, value]) => {
+            acc.set(key, ForeignMessage.fromJSON(value));
+            return acc;
+          }, new Map())
         : new Map(),
       mapStringNestedEnum: isObject(object.mapStringNestedEnum)
-        ? Object.entries(object.mapStringNestedEnum).reduce<Map<string, TestAllTypesProto3_NestedEnum>>(
-          (acc, [key, value]) => {
+        ? Object.entries(object.mapStringNestedEnum).reduce<
+            Map<string, TestAllTypesProto3_NestedEnum>
+          >((acc, [key, value]) => {
             acc.set(key, testAllTypesProto3_NestedEnumFromJSON(value));
             return acc;
-          },
-          new Map(),
-        )
+          }, new Map())
         : new Map(),
       mapStringForeignEnum: isObject(object.mapStringForeignEnum)
-        ? Object.entries(object.mapStringForeignEnum).reduce<Map<string, ForeignEnum>>((acc, [key, value]) => {
-          acc.set(key, foreignEnumFromJSON(value));
-          return acc;
-        }, new Map())
+        ? Object.entries(object.mapStringForeignEnum).reduce<
+            Map<string, ForeignEnum>
+          >((acc, [key, value]) => {
+            acc.set(key, foreignEnumFromJSON(value));
+            return acc;
+          }, new Map())
         : new Map(),
       oneofField: isSet(object.oneofUint32)
         ? { $case: "oneofUint32", oneofUint32: Number(object.oneofUint32) }
         : isSet(object.oneofNestedMessage)
         ? {
-          $case: "oneofNestedMessage",
-          oneofNestedMessage: TestAllTypesProto3_NestedMessage.fromJSON(object.oneofNestedMessage),
-        }
+            $case: "oneofNestedMessage",
+            oneofNestedMessage: TestAllTypesProto3_NestedMessage.fromJSON(
+              object.oneofNestedMessage
+            ),
+          }
         : isSet(object.oneofString)
         ? { $case: "oneofString", oneofString: String(object.oneofString) }
         : isSet(object.oneofBytes)
-        ? { $case: "oneofBytes", oneofBytes: bytesFromBase64(object.oneofBytes) }
+        ? {
+            $case: "oneofBytes",
+            oneofBytes: Buffer.from(bytesFromBase64(object.oneofBytes)),
+          }
         : isSet(object.oneofBool)
         ? { $case: "oneofBool", oneofBool: Boolean(object.oneofBool) }
         : isSet(object.oneofUint64)
@@ -2258,20 +2735,42 @@ export const TestAllTypesProto3 = {
         : isSet(object.oneofDouble)
         ? { $case: "oneofDouble", oneofDouble: Number(object.oneofDouble) }
         : isSet(object.oneofEnum)
-        ? { $case: "oneofEnum", oneofEnum: testAllTypesProto3_NestedEnumFromJSON(object.oneofEnum) }
+        ? {
+            $case: "oneofEnum",
+            oneofEnum: testAllTypesProto3_NestedEnumFromJSON(object.oneofEnum),
+          }
         : isSet(object.oneofNullValue)
-        ? { $case: "oneofNullValue", oneofNullValue: nullValueFromJSON(object.oneofNullValue) }
+        ? {
+            $case: "oneofNullValue",
+            oneofNullValue: nullValueFromJSON(object.oneofNullValue),
+          }
         : undefined,
-      optionalBoolWrapper: isSet(object.optionalBoolWrapper) ? Boolean(object.optionalBoolWrapper) : undefined,
-      optionalInt32Wrapper: isSet(object.optionalInt32Wrapper) ? Number(object.optionalInt32Wrapper) : undefined,
-      optionalInt64Wrapper: isSet(object.optionalInt64Wrapper) ? Number(object.optionalInt64Wrapper) : undefined,
-      optionalUint32Wrapper: isSet(object.optionalUint32Wrapper) ? Number(object.optionalUint32Wrapper) : undefined,
-      optionalUint64Wrapper: isSet(object.optionalUint64Wrapper) ? Number(object.optionalUint64Wrapper) : undefined,
-      optionalFloatWrapper: isSet(object.optionalFloatWrapper) ? Number(object.optionalFloatWrapper) : undefined,
-      optionalDoubleWrapper: isSet(object.optionalDoubleWrapper) ? Number(object.optionalDoubleWrapper) : undefined,
-      optionalStringWrapper: isSet(object.optionalStringWrapper) ? String(object.optionalStringWrapper) : undefined,
+      optionalBoolWrapper: isSet(object.optionalBoolWrapper)
+        ? Boolean(object.optionalBoolWrapper)
+        : undefined,
+      optionalInt32Wrapper: isSet(object.optionalInt32Wrapper)
+        ? Number(object.optionalInt32Wrapper)
+        : undefined,
+      optionalInt64Wrapper: isSet(object.optionalInt64Wrapper)
+        ? Number(object.optionalInt64Wrapper)
+        : undefined,
+      optionalUint32Wrapper: isSet(object.optionalUint32Wrapper)
+        ? Number(object.optionalUint32Wrapper)
+        : undefined,
+      optionalUint64Wrapper: isSet(object.optionalUint64Wrapper)
+        ? Number(object.optionalUint64Wrapper)
+        : undefined,
+      optionalFloatWrapper: isSet(object.optionalFloatWrapper)
+        ? Number(object.optionalFloatWrapper)
+        : undefined,
+      optionalDoubleWrapper: isSet(object.optionalDoubleWrapper)
+        ? Number(object.optionalDoubleWrapper)
+        : undefined,
+      optionalStringWrapper: isSet(object.optionalStringWrapper)
+        ? String(object.optionalStringWrapper)
+        : undefined,
       optionalBytesWrapper: isSet(object.optionalBytesWrapper)
-        ? new Uint8Array(object.optionalBytesWrapper)
+        ? new Buffer(object.optionalBytesWrapper)
         : undefined,
       repeatedBoolWrapper: Array.isArray(object?.repeatedBoolWrapper)
         ? object.repeatedBoolWrapper.map((e: any) => Boolean(e))
@@ -2298,17 +2797,29 @@ export const TestAllTypesProto3 = {
         ? object.repeatedStringWrapper.map((e: any) => String(e))
         : [],
       repeatedBytesWrapper: Array.isArray(object?.repeatedBytesWrapper)
-        ? object.repeatedBytesWrapper.map((e: any) => new Uint8Array(e))
+        ? object.repeatedBytesWrapper.map((e: any) => new Buffer(e))
         : [],
-      optionalDuration: isSet(object.optionalDuration) ? Duration.fromJSON(object.optionalDuration) : undefined,
-      optionalTimestamp: isSet(object.optionalTimestamp) ? fromJsonTimestamp(object.optionalTimestamp) : undefined,
+      optionalDuration: isSet(object.optionalDuration)
+        ? Duration.fromJSON(object.optionalDuration)
+        : undefined,
+      optionalTimestamp: isSet(object.optionalTimestamp)
+        ? fromJsonTimestamp(object.optionalTimestamp)
+        : undefined,
       optionalFieldMask: isSet(object.optionalFieldMask)
         ? FieldMask.unwrap(FieldMask.fromJSON(object.optionalFieldMask))
         : undefined,
-      optionalStruct: isObject(object.optionalStruct) ? object.optionalStruct : undefined,
-      optionalAny: isSet(object.optionalAny) ? Any.fromJSON(object.optionalAny) : undefined,
-      optionalValue: isSet(object?.optionalValue) ? object.optionalValue : undefined,
-      optionalNullValue: isSet(object.optionalNullValue) ? nullValueFromJSON(object.optionalNullValue) : 0,
+      optionalStruct: isObject(object.optionalStruct)
+        ? object.optionalStruct
+        : undefined,
+      optionalAny: isSet(object.optionalAny)
+        ? Any.fromJSON(object.optionalAny)
+        : undefined,
+      optionalValue: isSet(object?.optionalValue)
+        ? object.optionalValue
+        : undefined,
+      optionalNullValue: isSet(object.optionalNullValue)
+        ? nullValueFromJSON(object.optionalNullValue)
+        : 0,
       repeatedDuration: Array.isArray(object?.repeatedDuration)
         ? object.repeatedDuration.map((e: any) => Duration.fromJSON(e))
         : [],
@@ -2316,11 +2827,19 @@ export const TestAllTypesProto3 = {
         ? object.repeatedTimestamp.map((e: any) => fromJsonTimestamp(e))
         : [],
       repeatedFieldmask: Array.isArray(object?.repeatedFieldmask)
-        ? object.repeatedFieldmask.map((e: any) => FieldMask.unwrap(FieldMask.fromJSON(e)))
+        ? object.repeatedFieldmask.map((e: any) =>
+            FieldMask.unwrap(FieldMask.fromJSON(e))
+          )
         : [],
-      repeatedStruct: Array.isArray(object?.repeatedStruct) ? [...object.repeatedStruct] : [],
-      repeatedAny: Array.isArray(object?.repeatedAny) ? object.repeatedAny.map((e: any) => Any.fromJSON(e)) : [],
-      repeatedValue: Array.isArray(object?.repeatedValue) ? [...object.repeatedValue] : [],
+      repeatedStruct: Array.isArray(object?.repeatedStruct)
+        ? [...object.repeatedStruct]
+        : [],
+      repeatedAny: Array.isArray(object?.repeatedAny)
+        ? object.repeatedAny.map((e: any) => Any.fromJSON(e))
+        : [],
+      repeatedValue: Array.isArray(object?.repeatedValue)
+        ? [...object.repeatedValue]
+        : [],
       repeatedListValue: Array.isArray(object?.repeatedListValue)
         ? object.repeatedListValue.map((e: any) => [...e])
         : [],
@@ -2347,38 +2866,64 @@ export const TestAllTypesProto3 = {
 
   toJSON(message: TestAllTypesProto3): unknown {
     const obj: any = {};
-    message.optionalInt32 !== undefined && (obj.optionalInt32 = Math.round(message.optionalInt32));
-    message.optionalInt64 !== undefined && (obj.optionalInt64 = Math.round(message.optionalInt64));
-    message.optionalUint32 !== undefined && (obj.optionalUint32 = Math.round(message.optionalUint32));
-    message.optionalUint64 !== undefined && (obj.optionalUint64 = Math.round(message.optionalUint64));
-    message.optionalSint32 !== undefined && (obj.optionalSint32 = Math.round(message.optionalSint32));
-    message.optionalSint64 !== undefined && (obj.optionalSint64 = Math.round(message.optionalSint64));
-    message.optionalFixed32 !== undefined && (obj.optionalFixed32 = Math.round(message.optionalFixed32));
-    message.optionalFixed64 !== undefined && (obj.optionalFixed64 = Math.round(message.optionalFixed64));
-    message.optionalSfixed32 !== undefined && (obj.optionalSfixed32 = Math.round(message.optionalSfixed32));
-    message.optionalSfixed64 !== undefined && (obj.optionalSfixed64 = Math.round(message.optionalSfixed64));
-    message.optionalFloat !== undefined && (obj.optionalFloat = message.optionalFloat);
-    message.optionalDouble !== undefined && (obj.optionalDouble = message.optionalDouble);
-    message.optionalBool !== undefined && (obj.optionalBool = message.optionalBool);
-    message.optionalString !== undefined && (obj.optionalString = message.optionalString);
+    message.optionalInt32 !== undefined &&
+      (obj.optionalInt32 = Math.round(message.optionalInt32));
+    message.optionalInt64 !== undefined &&
+      (obj.optionalInt64 = Math.round(message.optionalInt64));
+    message.optionalUint32 !== undefined &&
+      (obj.optionalUint32 = Math.round(message.optionalUint32));
+    message.optionalUint64 !== undefined &&
+      (obj.optionalUint64 = Math.round(message.optionalUint64));
+    message.optionalSint32 !== undefined &&
+      (obj.optionalSint32 = Math.round(message.optionalSint32));
+    message.optionalSint64 !== undefined &&
+      (obj.optionalSint64 = Math.round(message.optionalSint64));
+    message.optionalFixed32 !== undefined &&
+      (obj.optionalFixed32 = Math.round(message.optionalFixed32));
+    message.optionalFixed64 !== undefined &&
+      (obj.optionalFixed64 = Math.round(message.optionalFixed64));
+    message.optionalSfixed32 !== undefined &&
+      (obj.optionalSfixed32 = Math.round(message.optionalSfixed32));
+    message.optionalSfixed64 !== undefined &&
+      (obj.optionalSfixed64 = Math.round(message.optionalSfixed64));
+    message.optionalFloat !== undefined &&
+      (obj.optionalFloat = message.optionalFloat);
+    message.optionalDouble !== undefined &&
+      (obj.optionalDouble = message.optionalDouble);
+    message.optionalBool !== undefined &&
+      (obj.optionalBool = message.optionalBool);
+    message.optionalString !== undefined &&
+      (obj.optionalString = message.optionalString);
     message.optionalBytes !== undefined &&
       (obj.optionalBytes = base64FromBytes(
-        message.optionalBytes !== undefined ? message.optionalBytes : new Uint8Array(),
+        message.optionalBytes !== undefined
+          ? message.optionalBytes
+          : Buffer.alloc(0)
       ));
-    message.optionalNestedMessage !== undefined && (obj.optionalNestedMessage = message.optionalNestedMessage
-      ? TestAllTypesProto3_NestedMessage.toJSON(message.optionalNestedMessage)
-      : undefined);
-    message.optionalForeignMessage !== undefined && (obj.optionalForeignMessage = message.optionalForeignMessage
-      ? ForeignMessage.toJSON(message.optionalForeignMessage)
-      : undefined);
+    message.optionalNestedMessage !== undefined &&
+      (obj.optionalNestedMessage = message.optionalNestedMessage
+        ? TestAllTypesProto3_NestedMessage.toJSON(message.optionalNestedMessage)
+        : undefined);
+    message.optionalForeignMessage !== undefined &&
+      (obj.optionalForeignMessage = message.optionalForeignMessage
+        ? ForeignMessage.toJSON(message.optionalForeignMessage)
+        : undefined);
     message.optionalNestedEnum !== undefined &&
-      (obj.optionalNestedEnum = testAllTypesProto3_NestedEnumToJSON(message.optionalNestedEnum));
+      (obj.optionalNestedEnum = testAllTypesProto3_NestedEnumToJSON(
+        message.optionalNestedEnum
+      ));
     message.optionalForeignEnum !== undefined &&
-      (obj.optionalForeignEnum = foreignEnumToJSON(message.optionalForeignEnum));
+      (obj.optionalForeignEnum = foreignEnumToJSON(
+        message.optionalForeignEnum
+      ));
     message.optionalAliasedEnum !== undefined &&
-      (obj.optionalAliasedEnum = testAllTypesProto3_AliasedEnumToJSON(message.optionalAliasedEnum));
-    message.optionalStringPiece !== undefined && (obj.optionalStringPiece = message.optionalStringPiece);
-    message.optionalCord !== undefined && (obj.optionalCord = message.optionalCord);
+      (obj.optionalAliasedEnum = testAllTypesProto3_AliasedEnumToJSON(
+        message.optionalAliasedEnum
+      ));
+    message.optionalStringPiece !== undefined &&
+      (obj.optionalStringPiece = message.optionalStringPiece);
+    message.optionalCord !== undefined &&
+      (obj.optionalCord = message.optionalCord);
     message.recursiveMessage !== undefined &&
       (obj.recursiveMessage = message.recursiveMessage
         ? TestAllTypesProto3.toJSON(message.recursiveMessage)
@@ -2454,7 +2999,9 @@ export const TestAllTypesProto3 = {
       obj.repeatedString = [];
     }
     if (message.repeatedBytes) {
-      obj.repeatedBytes = message.repeatedBytes.map((e) => base64FromBytes(e !== undefined ? e : new Uint8Array()));
+      obj.repeatedBytes = message.repeatedBytes.map((e) =>
+        base64FromBytes(e !== undefined ? e : Buffer.alloc(0))
+      );
     } else {
       obj.repeatedBytes = [];
     }
@@ -2466,17 +3013,23 @@ export const TestAllTypesProto3 = {
       obj.repeatedNestedMessage = [];
     }
     if (message.repeatedForeignMessage) {
-      obj.repeatedForeignMessage = message.repeatedForeignMessage.map((e) => e ? ForeignMessage.toJSON(e) : undefined);
+      obj.repeatedForeignMessage = message.repeatedForeignMessage.map((e) =>
+        e ? ForeignMessage.toJSON(e) : undefined
+      );
     } else {
       obj.repeatedForeignMessage = [];
     }
     if (message.repeatedNestedEnum) {
-      obj.repeatedNestedEnum = message.repeatedNestedEnum.map((e) => testAllTypesProto3_NestedEnumToJSON(e));
+      obj.repeatedNestedEnum = message.repeatedNestedEnum.map((e) =>
+        testAllTypesProto3_NestedEnumToJSON(e)
+      );
     } else {
       obj.repeatedNestedEnum = [];
     }
     if (message.repeatedForeignEnum) {
-      obj.repeatedForeignEnum = message.repeatedForeignEnum.map((e) => foreignEnumToJSON(e));
+      obj.repeatedForeignEnum = message.repeatedForeignEnum.map((e) =>
+        foreignEnumToJSON(e)
+      );
     } else {
       obj.repeatedForeignEnum = [];
     }
@@ -2556,7 +3109,9 @@ export const TestAllTypesProto3 = {
       obj.packedBool = [];
     }
     if (message.packedNestedEnum) {
-      obj.packedNestedEnum = message.packedNestedEnum.map((e) => testAllTypesProto3_NestedEnumToJSON(e));
+      obj.packedNestedEnum = message.packedNestedEnum.map((e) =>
+        testAllTypesProto3_NestedEnumToJSON(e)
+      );
     } else {
       obj.packedNestedEnum = [];
     }
@@ -2626,7 +3181,9 @@ export const TestAllTypesProto3 = {
       obj.unpackedBool = [];
     }
     if (message.unpackedNestedEnum) {
-      obj.unpackedNestedEnum = message.unpackedNestedEnum.map((e) => testAllTypesProto3_NestedEnumToJSON(e));
+      obj.unpackedNestedEnum = message.unpackedNestedEnum.map((e) =>
+        testAllTypesProto3_NestedEnumToJSON(e)
+      );
     } else {
       obj.unpackedNestedEnum = [];
     }
@@ -2723,7 +3280,8 @@ export const TestAllTypesProto3 = {
     obj.mapStringNestedMessage = {};
     if (message.mapStringNestedMessage) {
       message.mapStringNestedMessage.forEach((v, k) => {
-        obj.mapStringNestedMessage[k] = TestAllTypesProto3_NestedMessage.toJSON(v);
+        obj.mapStringNestedMessage[k] =
+          TestAllTypesProto3_NestedMessage.toJSON(v);
       });
     }
     obj.mapStringForeignMessage = {};
@@ -2744,35 +3302,57 @@ export const TestAllTypesProto3 = {
         obj.mapStringForeignEnum[k] = foreignEnumToJSON(v);
       });
     }
-    message.oneofField?.$case === "oneofUint32" && (obj.oneofUint32 = Math.round(message.oneofField?.oneofUint32));
+    message.oneofField?.$case === "oneofUint32" &&
+      (obj.oneofUint32 = Math.round(message.oneofField?.oneofUint32));
     message.oneofField?.$case === "oneofNestedMessage" &&
       (obj.oneofNestedMessage = message.oneofField?.oneofNestedMessage
-        ? TestAllTypesProto3_NestedMessage.toJSON(message.oneofField?.oneofNestedMessage)
+        ? TestAllTypesProto3_NestedMessage.toJSON(
+            message.oneofField?.oneofNestedMessage
+          )
         : undefined);
-    message.oneofField?.$case === "oneofString" && (obj.oneofString = message.oneofField?.oneofString);
-    message.oneofField?.$case === "oneofBytes" && (obj.oneofBytes = message.oneofField?.oneofBytes !== undefined
-      ? base64FromBytes(message.oneofField?.oneofBytes)
-      : undefined);
-    message.oneofField?.$case === "oneofBool" && (obj.oneofBool = message.oneofField?.oneofBool);
-    message.oneofField?.$case === "oneofUint64" && (obj.oneofUint64 = Math.round(message.oneofField?.oneofUint64));
-    message.oneofField?.$case === "oneofFloat" && (obj.oneofFloat = message.oneofField?.oneofFloat);
-    message.oneofField?.$case === "oneofDouble" && (obj.oneofDouble = message.oneofField?.oneofDouble);
-    message.oneofField?.$case === "oneofEnum" && (obj.oneofEnum = message.oneofField?.oneofEnum !== undefined
-      ? testAllTypesProto3_NestedEnumToJSON(message.oneofField?.oneofEnum)
-      : undefined);
+    message.oneofField?.$case === "oneofString" &&
+      (obj.oneofString = message.oneofField?.oneofString);
+    message.oneofField?.$case === "oneofBytes" &&
+      (obj.oneofBytes =
+        message.oneofField?.oneofBytes !== undefined
+          ? base64FromBytes(message.oneofField?.oneofBytes)
+          : undefined);
+    message.oneofField?.$case === "oneofBool" &&
+      (obj.oneofBool = message.oneofField?.oneofBool);
+    message.oneofField?.$case === "oneofUint64" &&
+      (obj.oneofUint64 = Math.round(message.oneofField?.oneofUint64));
+    message.oneofField?.$case === "oneofFloat" &&
+      (obj.oneofFloat = message.oneofField?.oneofFloat);
+    message.oneofField?.$case === "oneofDouble" &&
+      (obj.oneofDouble = message.oneofField?.oneofDouble);
+    message.oneofField?.$case === "oneofEnum" &&
+      (obj.oneofEnum =
+        message.oneofField?.oneofEnum !== undefined
+          ? testAllTypesProto3_NestedEnumToJSON(message.oneofField?.oneofEnum)
+          : undefined);
     message.oneofField?.$case === "oneofNullValue" &&
-      (obj.oneofNullValue = message.oneofField?.oneofNullValue !== undefined
-        ? nullValueToJSON(message.oneofField?.oneofNullValue)
-        : undefined);
-    message.optionalBoolWrapper !== undefined && (obj.optionalBoolWrapper = message.optionalBoolWrapper);
-    message.optionalInt32Wrapper !== undefined && (obj.optionalInt32Wrapper = message.optionalInt32Wrapper);
-    message.optionalInt64Wrapper !== undefined && (obj.optionalInt64Wrapper = message.optionalInt64Wrapper);
-    message.optionalUint32Wrapper !== undefined && (obj.optionalUint32Wrapper = message.optionalUint32Wrapper);
-    message.optionalUint64Wrapper !== undefined && (obj.optionalUint64Wrapper = message.optionalUint64Wrapper);
-    message.optionalFloatWrapper !== undefined && (obj.optionalFloatWrapper = message.optionalFloatWrapper);
-    message.optionalDoubleWrapper !== undefined && (obj.optionalDoubleWrapper = message.optionalDoubleWrapper);
-    message.optionalStringWrapper !== undefined && (obj.optionalStringWrapper = message.optionalStringWrapper);
-    message.optionalBytesWrapper !== undefined && (obj.optionalBytesWrapper = message.optionalBytesWrapper);
+      (obj.oneofNullValue =
+        message.oneofField?.oneofNullValue !== undefined
+          ? nullValueToJSON(message.oneofField?.oneofNullValue)
+          : undefined);
+    message.optionalBoolWrapper !== undefined &&
+      (obj.optionalBoolWrapper = message.optionalBoolWrapper);
+    message.optionalInt32Wrapper !== undefined &&
+      (obj.optionalInt32Wrapper = message.optionalInt32Wrapper);
+    message.optionalInt64Wrapper !== undefined &&
+      (obj.optionalInt64Wrapper = message.optionalInt64Wrapper);
+    message.optionalUint32Wrapper !== undefined &&
+      (obj.optionalUint32Wrapper = message.optionalUint32Wrapper);
+    message.optionalUint64Wrapper !== undefined &&
+      (obj.optionalUint64Wrapper = message.optionalUint64Wrapper);
+    message.optionalFloatWrapper !== undefined &&
+      (obj.optionalFloatWrapper = message.optionalFloatWrapper);
+    message.optionalDoubleWrapper !== undefined &&
+      (obj.optionalDoubleWrapper = message.optionalDoubleWrapper);
+    message.optionalStringWrapper !== undefined &&
+      (obj.optionalStringWrapper = message.optionalStringWrapper);
+    message.optionalBytesWrapper !== undefined &&
+      (obj.optionalBytesWrapper = message.optionalBytesWrapper);
     if (message.repeatedBoolWrapper) {
       obj.repeatedBoolWrapper = message.repeatedBoolWrapper.map((e) => e);
     } else {
@@ -2819,27 +3399,43 @@ export const TestAllTypesProto3 = {
       obj.repeatedBytesWrapper = [];
     }
     message.optionalDuration !== undefined &&
-      (obj.optionalDuration = message.optionalDuration ? Duration.toJSON(message.optionalDuration) : undefined);
-    message.optionalTimestamp !== undefined && (obj.optionalTimestamp = message.optionalTimestamp.toISOString());
+      (obj.optionalDuration = message.optionalDuration
+        ? Duration.toJSON(message.optionalDuration)
+        : undefined);
+    message.optionalTimestamp !== undefined &&
+      (obj.optionalTimestamp = message.optionalTimestamp.toISOString());
     message.optionalFieldMask !== undefined &&
-      (obj.optionalFieldMask = FieldMask.toJSON(FieldMask.wrap(message.optionalFieldMask)));
-    message.optionalStruct !== undefined && (obj.optionalStruct = message.optionalStruct);
+      (obj.optionalFieldMask = FieldMask.toJSON(
+        FieldMask.wrap(message.optionalFieldMask)
+      ));
+    message.optionalStruct !== undefined &&
+      (obj.optionalStruct = message.optionalStruct);
     message.optionalAny !== undefined &&
-      (obj.optionalAny = message.optionalAny ? Any.toJSON(message.optionalAny) : undefined);
-    message.optionalValue !== undefined && (obj.optionalValue = message.optionalValue);
-    message.optionalNullValue !== undefined && (obj.optionalNullValue = nullValueToJSON(message.optionalNullValue));
+      (obj.optionalAny = message.optionalAny
+        ? Any.toJSON(message.optionalAny)
+        : undefined);
+    message.optionalValue !== undefined &&
+      (obj.optionalValue = message.optionalValue);
+    message.optionalNullValue !== undefined &&
+      (obj.optionalNullValue = nullValueToJSON(message.optionalNullValue));
     if (message.repeatedDuration) {
-      obj.repeatedDuration = message.repeatedDuration.map((e) => e ? Duration.toJSON(e) : undefined);
+      obj.repeatedDuration = message.repeatedDuration.map((e) =>
+        e ? Duration.toJSON(e) : undefined
+      );
     } else {
       obj.repeatedDuration = [];
     }
     if (message.repeatedTimestamp) {
-      obj.repeatedTimestamp = message.repeatedTimestamp.map((e) => e.toISOString());
+      obj.repeatedTimestamp = message.repeatedTimestamp.map((e) =>
+        e.toISOString()
+      );
     } else {
       obj.repeatedTimestamp = [];
     }
     if (message.repeatedFieldmask) {
-      obj.repeatedFieldmask = message.repeatedFieldmask.map((e) => FieldMask.toJSON(FieldMask.wrap(e)));
+      obj.repeatedFieldmask = message.repeatedFieldmask.map((e) =>
+        FieldMask.toJSON(FieldMask.wrap(e))
+      );
     } else {
       obj.repeatedFieldmask = [];
     }
@@ -2849,7 +3445,9 @@ export const TestAllTypesProto3 = {
       obj.repeatedStruct = [];
     }
     if (message.repeatedAny) {
-      obj.repeatedAny = message.repeatedAny.map((e) => e ? Any.toJSON(e) : undefined);
+      obj.repeatedAny = message.repeatedAny.map((e) =>
+        e ? Any.toJSON(e) : undefined
+      );
     } else {
       obj.repeatedAny = [];
     }
@@ -2863,32 +3461,54 @@ export const TestAllTypesProto3 = {
     } else {
       obj.repeatedListValue = [];
     }
-    message.fieldname1 !== undefined && (obj.fieldname1 = Math.round(message.fieldname1));
-    message.fieldName2 !== undefined && (obj.fieldName2 = Math.round(message.fieldName2));
-    message.FieldName3 !== undefined && (obj.FieldName3 = Math.round(message.FieldName3));
-    message.fieldName4 !== undefined && (obj.fieldName4 = Math.round(message.fieldName4));
-    message.field0name5 !== undefined && (obj.field0name5 = Math.round(message.field0name5));
-    message.field0Name6 !== undefined && (obj.field0Name6 = Math.round(message.field0Name6));
-    message.fieldName7 !== undefined && (obj.fieldName7 = Math.round(message.fieldName7));
-    message.FieldName8 !== undefined && (obj.FieldName8 = Math.round(message.FieldName8));
-    message.fieldName9 !== undefined && (obj.fieldName9 = Math.round(message.fieldName9));
-    message.FieldName10 !== undefined && (obj.FieldName10 = Math.round(message.FieldName10));
-    message.fieldName11 !== undefined && (obj.FIELDNAME11 = Math.round(message.fieldName11));
-    message.FIELDName12 !== undefined && (obj.FIELDName12 = Math.round(message.FIELDName12));
-    message.FieldName13 !== undefined && (obj.FieldName13 = Math.round(message.FieldName13));
-    message.FieldName14 !== undefined && (obj.FieldName14 = Math.round(message.FieldName14));
-    message.fieldName15 !== undefined && (obj.fieldName15 = Math.round(message.fieldName15));
-    message.fieldName16 !== undefined && (obj.fieldName16 = Math.round(message.fieldName16));
-    message.fieldName17 !== undefined && (obj.fieldName17 = Math.round(message.fieldName17));
-    message.FieldName18 !== undefined && (obj.FieldName18 = Math.round(message.FieldName18));
+    message.fieldname1 !== undefined &&
+      (obj.fieldname1 = Math.round(message.fieldname1));
+    message.fieldName2 !== undefined &&
+      (obj.fieldName2 = Math.round(message.fieldName2));
+    message.FieldName3 !== undefined &&
+      (obj.FieldName3 = Math.round(message.FieldName3));
+    message.fieldName4 !== undefined &&
+      (obj.fieldName4 = Math.round(message.fieldName4));
+    message.field0name5 !== undefined &&
+      (obj.field0name5 = Math.round(message.field0name5));
+    message.field0Name6 !== undefined &&
+      (obj.field0Name6 = Math.round(message.field0Name6));
+    message.fieldName7 !== undefined &&
+      (obj.fieldName7 = Math.round(message.fieldName7));
+    message.FieldName8 !== undefined &&
+      (obj.FieldName8 = Math.round(message.FieldName8));
+    message.fieldName9 !== undefined &&
+      (obj.fieldName9 = Math.round(message.fieldName9));
+    message.FieldName10 !== undefined &&
+      (obj.FieldName10 = Math.round(message.FieldName10));
+    message.fieldName11 !== undefined &&
+      (obj.FIELDNAME11 = Math.round(message.fieldName11));
+    message.FIELDName12 !== undefined &&
+      (obj.FIELDName12 = Math.round(message.FIELDName12));
+    message.FieldName13 !== undefined &&
+      (obj.FieldName13 = Math.round(message.FieldName13));
+    message.FieldName14 !== undefined &&
+      (obj.FieldName14 = Math.round(message.FieldName14));
+    message.fieldName15 !== undefined &&
+      (obj.fieldName15 = Math.round(message.fieldName15));
+    message.fieldName16 !== undefined &&
+      (obj.fieldName16 = Math.round(message.fieldName16));
+    message.fieldName17 !== undefined &&
+      (obj.fieldName17 = Math.round(message.fieldName17));
+    message.FieldName18 !== undefined &&
+      (obj.FieldName18 = Math.round(message.FieldName18));
     return obj;
   },
 
-  create<I extends Exact<DeepPartial<TestAllTypesProto3>, I>>(base?: I): TestAllTypesProto3 {
+  create<I extends Exact<DeepPartial<TestAllTypesProto3>, I>>(
+    base?: I
+  ): TestAllTypesProto3 {
     return TestAllTypesProto3.fromPartial(base ?? {});
   },
 
-  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3>, I>>(object: I): TestAllTypesProto3 {
+  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3>, I>>(
+    object: I
+  ): TestAllTypesProto3 {
     const message = createBaseTestAllTypesProto3();
     message.optionalInt32 = object.optionalInt32 ?? 0;
     message.optionalInt64 = object.optionalInt64 ?? 0;
@@ -2904,13 +3524,17 @@ export const TestAllTypesProto3 = {
     message.optionalDouble = object.optionalDouble ?? 0;
     message.optionalBool = object.optionalBool ?? false;
     message.optionalString = object.optionalString ?? "";
-    message.optionalBytes = object.optionalBytes ?? new Uint8Array();
+    message.optionalBytes = object.optionalBytes ?? Buffer.alloc(0);
     message.optionalNestedMessage =
-      (object.optionalNestedMessage !== undefined && object.optionalNestedMessage !== null)
-        ? TestAllTypesProto3_NestedMessage.fromPartial(object.optionalNestedMessage)
+      object.optionalNestedMessage !== undefined &&
+      object.optionalNestedMessage !== null
+        ? TestAllTypesProto3_NestedMessage.fromPartial(
+            object.optionalNestedMessage
+          )
         : undefined;
     message.optionalForeignMessage =
-      (object.optionalForeignMessage !== undefined && object.optionalForeignMessage !== null)
+      object.optionalForeignMessage !== undefined &&
+      object.optionalForeignMessage !== null
         ? ForeignMessage.fromPartial(object.optionalForeignMessage)
         : undefined;
     message.optionalNestedEnum = object.optionalNestedEnum ?? 0;
@@ -2918,9 +3542,10 @@ export const TestAllTypesProto3 = {
     message.optionalAliasedEnum = object.optionalAliasedEnum ?? 0;
     message.optionalStringPiece = object.optionalStringPiece ?? "";
     message.optionalCord = object.optionalCord ?? "";
-    message.recursiveMessage = (object.recursiveMessage !== undefined && object.recursiveMessage !== null)
-      ? TestAllTypesProto3.fromPartial(object.recursiveMessage)
-      : undefined;
+    message.recursiveMessage =
+      object.recursiveMessage !== undefined && object.recursiveMessage !== null
+        ? TestAllTypesProto3.fromPartial(object.recursiveMessage)
+        : undefined;
     message.repeatedInt32 = object.repeatedInt32?.map((e) => e) || [];
     message.repeatedInt64 = object.repeatedInt64?.map((e) => e) || [];
     message.repeatedUint32 = object.repeatedUint32?.map((e) => e) || [];
@@ -2937,11 +3562,18 @@ export const TestAllTypesProto3 = {
     message.repeatedString = object.repeatedString?.map((e) => e) || [];
     message.repeatedBytes = object.repeatedBytes?.map((e) => e) || [];
     message.repeatedNestedMessage =
-      object.repeatedNestedMessage?.map((e) => TestAllTypesProto3_NestedMessage.fromPartial(e)) || [];
-    message.repeatedForeignMessage = object.repeatedForeignMessage?.map((e) => ForeignMessage.fromPartial(e)) || [];
+      object.repeatedNestedMessage?.map((e) =>
+        TestAllTypesProto3_NestedMessage.fromPartial(e)
+      ) || [];
+    message.repeatedForeignMessage =
+      object.repeatedForeignMessage?.map((e) =>
+        ForeignMessage.fromPartial(e)
+      ) || [];
     message.repeatedNestedEnum = object.repeatedNestedEnum?.map((e) => e) || [];
-    message.repeatedForeignEnum = object.repeatedForeignEnum?.map((e) => e) || [];
-    message.repeatedStringPiece = object.repeatedStringPiece?.map((e) => e) || [];
+    message.repeatedForeignEnum =
+      object.repeatedForeignEnum?.map((e) => e) || [];
+    message.repeatedStringPiece =
+      object.repeatedStringPiece?.map((e) => e) || [];
     message.repeatedCord = object.repeatedCord?.map((e) => e) || [];
     message.packedInt32 = object.packedInt32?.map((e) => e) || [];
     message.packedInt64 = object.packedInt64?.map((e) => e) || [];
@@ -2973,79 +3605,97 @@ export const TestAllTypesProto3 = {
     message.unpackedNestedEnum = object.unpackedNestedEnum?.map((e) => e) || [];
     message.mapInt32Int32 = (() => {
       const m = new Map();
-      (object.mapInt32Int32 as Map<number, number> ?? new Map()).forEach((value, key) => {
-        if (value !== undefined) {
-          m.set(Number(key), Number(value));
+      ((object.mapInt32Int32 as Map<number, number>) ?? new Map()).forEach(
+        (value, key) => {
+          if (value !== undefined) {
+            m.set(Number(key), Number(value));
+          }
         }
-      });
+      );
       return m;
     })();
     message.mapInt64Int64 = (() => {
       const m = new Map();
-      (object.mapInt64Int64 as Map<number, number> ?? new Map()).forEach((value, key) => {
-        if (value !== undefined) {
-          m.set(Number(key), Number(value));
+      ((object.mapInt64Int64 as Map<number, number>) ?? new Map()).forEach(
+        (value, key) => {
+          if (value !== undefined) {
+            m.set(Number(key), Number(value));
+          }
         }
-      });
+      );
       return m;
     })();
     message.mapUint32Uint32 = (() => {
       const m = new Map();
-      (object.mapUint32Uint32 as Map<number, number> ?? new Map()).forEach((value, key) => {
-        if (value !== undefined) {
-          m.set(Number(key), Number(value));
+      ((object.mapUint32Uint32 as Map<number, number>) ?? new Map()).forEach(
+        (value, key) => {
+          if (value !== undefined) {
+            m.set(Number(key), Number(value));
+          }
         }
-      });
+      );
       return m;
     })();
     message.mapUint64Uint64 = (() => {
       const m = new Map();
-      (object.mapUint64Uint64 as Map<number, number> ?? new Map()).forEach((value, key) => {
-        if (value !== undefined) {
-          m.set(Number(key), Number(value));
+      ((object.mapUint64Uint64 as Map<number, number>) ?? new Map()).forEach(
+        (value, key) => {
+          if (value !== undefined) {
+            m.set(Number(key), Number(value));
+          }
         }
-      });
+      );
       return m;
     })();
     message.mapSint32Sint32 = (() => {
       const m = new Map();
-      (object.mapSint32Sint32 as Map<number, number> ?? new Map()).forEach((value, key) => {
-        if (value !== undefined) {
-          m.set(Number(key), Number(value));
+      ((object.mapSint32Sint32 as Map<number, number>) ?? new Map()).forEach(
+        (value, key) => {
+          if (value !== undefined) {
+            m.set(Number(key), Number(value));
+          }
         }
-      });
+      );
       return m;
     })();
     message.mapSint64Sint64 = (() => {
       const m = new Map();
-      (object.mapSint64Sint64 as Map<number, number> ?? new Map()).forEach((value, key) => {
-        if (value !== undefined) {
-          m.set(Number(key), Number(value));
+      ((object.mapSint64Sint64 as Map<number, number>) ?? new Map()).forEach(
+        (value, key) => {
+          if (value !== undefined) {
+            m.set(Number(key), Number(value));
+          }
         }
-      });
+      );
       return m;
     })();
     message.mapFixed32Fixed32 = (() => {
       const m = new Map();
-      (object.mapFixed32Fixed32 as Map<number, number> ?? new Map()).forEach((value, key) => {
-        if (value !== undefined) {
-          m.set(Number(key), Number(value));
+      ((object.mapFixed32Fixed32 as Map<number, number>) ?? new Map()).forEach(
+        (value, key) => {
+          if (value !== undefined) {
+            m.set(Number(key), Number(value));
+          }
         }
-      });
+      );
       return m;
     })();
     message.mapFixed64Fixed64 = (() => {
       const m = new Map();
-      (object.mapFixed64Fixed64 as Map<number, number> ?? new Map()).forEach((value, key) => {
-        if (value !== undefined) {
-          m.set(Number(key), Number(value));
+      ((object.mapFixed64Fixed64 as Map<number, number>) ?? new Map()).forEach(
+        (value, key) => {
+          if (value !== undefined) {
+            m.set(Number(key), Number(value));
+          }
         }
-      });
+      );
       return m;
     })();
     message.mapSfixed32Sfixed32 = (() => {
       const m = new Map();
-      (object.mapSfixed32Sfixed32 as Map<number, number> ?? new Map()).forEach((value, key) => {
+      (
+        (object.mapSfixed32Sfixed32 as Map<number, number>) ?? new Map()
+      ).forEach((value, key) => {
         if (value !== undefined) {
           m.set(Number(key), Number(value));
         }
@@ -3054,7 +3704,9 @@ export const TestAllTypesProto3 = {
     })();
     message.mapSfixed64Sfixed64 = (() => {
       const m = new Map();
-      (object.mapSfixed64Sfixed64 as Map<number, number> ?? new Map()).forEach((value, key) => {
+      (
+        (object.mapSfixed64Sfixed64 as Map<number, number>) ?? new Map()
+      ).forEach((value, key) => {
         if (value !== undefined) {
           m.set(Number(key), Number(value));
         }
@@ -3063,63 +3715,79 @@ export const TestAllTypesProto3 = {
     })();
     message.mapInt32Float = (() => {
       const m = new Map();
-      (object.mapInt32Float as Map<number, number> ?? new Map()).forEach((value, key) => {
-        if (value !== undefined) {
-          m.set(Number(key), Number(value));
+      ((object.mapInt32Float as Map<number, number>) ?? new Map()).forEach(
+        (value, key) => {
+          if (value !== undefined) {
+            m.set(Number(key), Number(value));
+          }
         }
-      });
+      );
       return m;
     })();
     message.mapInt32Double = (() => {
       const m = new Map();
-      (object.mapInt32Double as Map<number, number> ?? new Map()).forEach((value, key) => {
-        if (value !== undefined) {
-          m.set(Number(key), Number(value));
+      ((object.mapInt32Double as Map<number, number>) ?? new Map()).forEach(
+        (value, key) => {
+          if (value !== undefined) {
+            m.set(Number(key), Number(value));
+          }
         }
-      });
+      );
       return m;
     })();
     message.mapBoolBool = (() => {
       const m = new Map();
-      (object.mapBoolBool as Map<boolean, boolean> ?? new Map()).forEach((value, key) => {
-        if (value !== undefined) {
-          m.set(Number(key), Boolean(value));
+      ((object.mapBoolBool as Map<boolean, boolean>) ?? new Map()).forEach(
+        (value, key) => {
+          if (value !== undefined) {
+            m.set(Number(key), Boolean(value));
+          }
         }
-      });
+      );
       return m;
     })();
     message.mapStringString = (() => {
       const m = new Map();
-      (object.mapStringString as Map<string, string> ?? new Map()).forEach((value, key) => {
-        if (value !== undefined) {
-          m.set(key, String(value));
+      ((object.mapStringString as Map<string, string>) ?? new Map()).forEach(
+        (value, key) => {
+          if (value !== undefined) {
+            m.set(key, String(value));
+          }
         }
-      });
+      );
       return m;
     })();
     message.mapStringBytes = (() => {
       const m = new Map();
-      (object.mapStringBytes as Map<string, Uint8Array> ?? new Map()).forEach((value, key) => {
-        if (value !== undefined) {
-          m.set(key, value);
+      ((object.mapStringBytes as Map<string, Buffer>) ?? new Map()).forEach(
+        (value, key) => {
+          if (value !== undefined) {
+            m.set(key, value);
+          }
         }
-      });
+      );
       return m;
     })();
     message.mapStringNestedMessage = (() => {
       const m = new Map();
-      (object.mapStringNestedMessage as Map<string, TestAllTypesProto3_NestedMessage> ?? new Map()).forEach(
-        (value, key) => {
-          if (value !== undefined) {
-            m.set(key, TestAllTypesProto3_NestedMessage.fromPartial(value));
-          }
-        },
-      );
+      (
+        (object.mapStringNestedMessage as Map<
+          string,
+          TestAllTypesProto3_NestedMessage
+        >) ?? new Map()
+      ).forEach((value, key) => {
+        if (value !== undefined) {
+          m.set(key, TestAllTypesProto3_NestedMessage.fromPartial(value));
+        }
+      });
       return m;
     })();
     message.mapStringForeignMessage = (() => {
       const m = new Map();
-      (object.mapStringForeignMessage as Map<string, ForeignMessage> ?? new Map()).forEach((value, key) => {
+      (
+        (object.mapStringForeignMessage as Map<string, ForeignMessage>) ??
+        new Map()
+      ).forEach((value, key) => {
         if (value !== undefined) {
           m.set(key, ForeignMessage.fromPartial(value));
         }
@@ -3128,7 +3796,12 @@ export const TestAllTypesProto3 = {
     })();
     message.mapStringNestedEnum = (() => {
       const m = new Map();
-      (object.mapStringNestedEnum as Map<string, TestAllTypesProto3_NestedEnum> ?? new Map()).forEach((value, key) => {
+      (
+        (object.mapStringNestedEnum as Map<
+          string,
+          TestAllTypesProto3_NestedEnum
+        >) ?? new Map()
+      ).forEach((value, key) => {
         if (value !== undefined) {
           m.set(key, value as TestAllTypesProto3_NestedEnum);
         }
@@ -3137,7 +3810,9 @@ export const TestAllTypesProto3 = {
     })();
     message.mapStringForeignEnum = (() => {
       const m = new Map();
-      (object.mapStringForeignEnum as Map<string, ForeignEnum> ?? new Map()).forEach((value, key) => {
+      (
+        (object.mapStringForeignEnum as Map<string, ForeignEnum>) ?? new Map()
+      ).forEach((value, key) => {
         if (value !== undefined) {
           m.set(key, value as ForeignEnum);
         }
@@ -3149,7 +3824,10 @@ export const TestAllTypesProto3 = {
       object.oneofField?.oneofUint32 !== undefined &&
       object.oneofField?.oneofUint32 !== null
     ) {
-      message.oneofField = { $case: "oneofUint32", oneofUint32: object.oneofField.oneofUint32 };
+      message.oneofField = {
+        $case: "oneofUint32",
+        oneofUint32: object.oneofField.oneofUint32,
+      };
     }
     if (
       object.oneofField?.$case === "oneofNestedMessage" &&
@@ -3158,7 +3836,9 @@ export const TestAllTypesProto3 = {
     ) {
       message.oneofField = {
         $case: "oneofNestedMessage",
-        oneofNestedMessage: TestAllTypesProto3_NestedMessage.fromPartial(object.oneofField.oneofNestedMessage),
+        oneofNestedMessage: TestAllTypesProto3_NestedMessage.fromPartial(
+          object.oneofField.oneofNestedMessage
+        ),
       };
     }
     if (
@@ -3166,56 +3846,80 @@ export const TestAllTypesProto3 = {
       object.oneofField?.oneofString !== undefined &&
       object.oneofField?.oneofString !== null
     ) {
-      message.oneofField = { $case: "oneofString", oneofString: object.oneofField.oneofString };
+      message.oneofField = {
+        $case: "oneofString",
+        oneofString: object.oneofField.oneofString,
+      };
     }
     if (
       object.oneofField?.$case === "oneofBytes" &&
       object.oneofField?.oneofBytes !== undefined &&
       object.oneofField?.oneofBytes !== null
     ) {
-      message.oneofField = { $case: "oneofBytes", oneofBytes: object.oneofField.oneofBytes };
+      message.oneofField = {
+        $case: "oneofBytes",
+        oneofBytes: object.oneofField.oneofBytes,
+      };
     }
     if (
       object.oneofField?.$case === "oneofBool" &&
       object.oneofField?.oneofBool !== undefined &&
       object.oneofField?.oneofBool !== null
     ) {
-      message.oneofField = { $case: "oneofBool", oneofBool: object.oneofField.oneofBool };
+      message.oneofField = {
+        $case: "oneofBool",
+        oneofBool: object.oneofField.oneofBool,
+      };
     }
     if (
       object.oneofField?.$case === "oneofUint64" &&
       object.oneofField?.oneofUint64 !== undefined &&
       object.oneofField?.oneofUint64 !== null
     ) {
-      message.oneofField = { $case: "oneofUint64", oneofUint64: object.oneofField.oneofUint64 };
+      message.oneofField = {
+        $case: "oneofUint64",
+        oneofUint64: object.oneofField.oneofUint64,
+      };
     }
     if (
       object.oneofField?.$case === "oneofFloat" &&
       object.oneofField?.oneofFloat !== undefined &&
       object.oneofField?.oneofFloat !== null
     ) {
-      message.oneofField = { $case: "oneofFloat", oneofFloat: object.oneofField.oneofFloat };
+      message.oneofField = {
+        $case: "oneofFloat",
+        oneofFloat: object.oneofField.oneofFloat,
+      };
     }
     if (
       object.oneofField?.$case === "oneofDouble" &&
       object.oneofField?.oneofDouble !== undefined &&
       object.oneofField?.oneofDouble !== null
     ) {
-      message.oneofField = { $case: "oneofDouble", oneofDouble: object.oneofField.oneofDouble };
+      message.oneofField = {
+        $case: "oneofDouble",
+        oneofDouble: object.oneofField.oneofDouble,
+      };
     }
     if (
       object.oneofField?.$case === "oneofEnum" &&
       object.oneofField?.oneofEnum !== undefined &&
       object.oneofField?.oneofEnum !== null
     ) {
-      message.oneofField = { $case: "oneofEnum", oneofEnum: object.oneofField.oneofEnum };
+      message.oneofField = {
+        $case: "oneofEnum",
+        oneofEnum: object.oneofField.oneofEnum,
+      };
     }
     if (
       object.oneofField?.$case === "oneofNullValue" &&
       object.oneofField?.oneofNullValue !== undefined &&
       object.oneofField?.oneofNullValue !== null
     ) {
-      message.oneofField = { $case: "oneofNullValue", oneofNullValue: object.oneofField.oneofNullValue };
+      message.oneofField = {
+        $case: "oneofNullValue",
+        oneofNullValue: object.oneofField.oneofNullValue,
+      };
     }
     message.optionalBoolWrapper = object.optionalBoolWrapper ?? undefined;
     message.optionalInt32Wrapper = object.optionalInt32Wrapper ?? undefined;
@@ -3226,31 +3930,44 @@ export const TestAllTypesProto3 = {
     message.optionalDoubleWrapper = object.optionalDoubleWrapper ?? undefined;
     message.optionalStringWrapper = object.optionalStringWrapper ?? undefined;
     message.optionalBytesWrapper = object.optionalBytesWrapper ?? undefined;
-    message.repeatedBoolWrapper = object.repeatedBoolWrapper?.map((e) => e) || [];
-    message.repeatedInt32Wrapper = object.repeatedInt32Wrapper?.map((e) => e) || [];
-    message.repeatedInt64Wrapper = object.repeatedInt64Wrapper?.map((e) => e) || [];
-    message.repeatedUint32Wrapper = object.repeatedUint32Wrapper?.map((e) => e) || [];
-    message.repeatedUint64Wrapper = object.repeatedUint64Wrapper?.map((e) => e) || [];
-    message.repeatedFloatWrapper = object.repeatedFloatWrapper?.map((e) => e) || [];
-    message.repeatedDoubleWrapper = object.repeatedDoubleWrapper?.map((e) => e) || [];
-    message.repeatedStringWrapper = object.repeatedStringWrapper?.map((e) => e) || [];
-    message.repeatedBytesWrapper = object.repeatedBytesWrapper?.map((e) => e) || [];
-    message.optionalDuration = (object.optionalDuration !== undefined && object.optionalDuration !== null)
-      ? Duration.fromPartial(object.optionalDuration)
-      : undefined;
+    message.repeatedBoolWrapper =
+      object.repeatedBoolWrapper?.map((e) => e) || [];
+    message.repeatedInt32Wrapper =
+      object.repeatedInt32Wrapper?.map((e) => e) || [];
+    message.repeatedInt64Wrapper =
+      object.repeatedInt64Wrapper?.map((e) => e) || [];
+    message.repeatedUint32Wrapper =
+      object.repeatedUint32Wrapper?.map((e) => e) || [];
+    message.repeatedUint64Wrapper =
+      object.repeatedUint64Wrapper?.map((e) => e) || [];
+    message.repeatedFloatWrapper =
+      object.repeatedFloatWrapper?.map((e) => e) || [];
+    message.repeatedDoubleWrapper =
+      object.repeatedDoubleWrapper?.map((e) => e) || [];
+    message.repeatedStringWrapper =
+      object.repeatedStringWrapper?.map((e) => e) || [];
+    message.repeatedBytesWrapper =
+      object.repeatedBytesWrapper?.map((e) => e) || [];
+    message.optionalDuration =
+      object.optionalDuration !== undefined && object.optionalDuration !== null
+        ? Duration.fromPartial(object.optionalDuration)
+        : undefined;
     message.optionalTimestamp = object.optionalTimestamp ?? undefined;
     message.optionalFieldMask = object.optionalFieldMask ?? undefined;
     message.optionalStruct = object.optionalStruct ?? undefined;
-    message.optionalAny = (object.optionalAny !== undefined && object.optionalAny !== null)
-      ? Any.fromPartial(object.optionalAny)
-      : undefined;
+    message.optionalAny =
+      object.optionalAny !== undefined && object.optionalAny !== null
+        ? Any.fromPartial(object.optionalAny)
+        : undefined;
     message.optionalValue = object.optionalValue ?? undefined;
     message.optionalNullValue = object.optionalNullValue ?? 0;
-    message.repeatedDuration = object.repeatedDuration?.map((e) => Duration.fromPartial(e)) || [];
+    message.repeatedDuration =
+      object.repeatedDuration?.map((e) => Duration.fromPartial(e)) || [];
     message.repeatedTimestamp = object.repeatedTimestamp?.map((e) => e) || [];
     message.repeatedFieldmask = object.repeatedFieldmask?.map((e) => e) || [];
     message.repeatedStruct = object.repeatedStruct?.map((e) => e) || [];
-    message.repeatedAny = object.repeatedAny?.map((e) => Any.fromPartial(e)) || [];
+    message.repeatedAny =
+      object.repeatedAny?.map((e) => Any.fromPartial(e)) || [];
     message.repeatedValue = object.repeatedValue?.map((e) => e) || [];
     message.repeatedListValue = object.repeatedListValue?.map((e) => e) || [];
     message.fieldname1 = object.fieldname1 ?? 0;
@@ -3280,17 +3997,26 @@ function createBaseTestAllTypesProto3_NestedMessage(): TestAllTypesProto3_Nested
 }
 
 export const TestAllTypesProto3_NestedMessage = {
-  encode(message: TestAllTypesProto3_NestedMessage, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+  encode(
+    message: TestAllTypesProto3_NestedMessage,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
     if (message.a !== 0) {
       writer.uint32(8).int32(message.a);
     }
     if (message.corecursive !== undefined) {
-      TestAllTypesProto3.encode(message.corecursive, writer.uint32(18).fork()).ldelim();
+      TestAllTypesProto3.encode(
+        message.corecursive,
+        writer.uint32(18).fork()
+      ).ldelim();
     }
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_NestedMessage {
+  decode(
+    input: _m0.Reader | Uint8Array,
+    length?: number
+  ): TestAllTypesProto3_NestedMessage {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_NestedMessage();
@@ -3301,7 +4027,10 @@ export const TestAllTypesProto3_NestedMessage = {
           message.a = reader.int32();
           break;
         case 2:
-          message.corecursive = TestAllTypesProto3.decode(reader, reader.uint32());
+          message.corecursive = TestAllTypesProto3.decode(
+            reader,
+            reader.uint32()
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -3314,7 +4043,9 @@ export const TestAllTypesProto3_NestedMessage = {
   fromJSON(object: any): TestAllTypesProto3_NestedMessage {
     return {
       a: isSet(object.a) ? Number(object.a) : 0,
-      corecursive: isSet(object.corecursive) ? TestAllTypesProto3.fromJSON(object.corecursive) : undefined,
+      corecursive: isSet(object.corecursive)
+        ? TestAllTypesProto3.fromJSON(object.corecursive)
+        : undefined,
     };
   },
 
@@ -3322,24 +4053,27 @@ export const TestAllTypesProto3_NestedMessage = {
     const obj: any = {};
     message.a !== undefined && (obj.a = Math.round(message.a));
     message.corecursive !== undefined &&
-      (obj.corecursive = message.corecursive ? TestAllTypesProto3.toJSON(message.corecursive) : undefined);
+      (obj.corecursive = message.corecursive
+        ? TestAllTypesProto3.toJSON(message.corecursive)
+        : undefined);
     return obj;
   },
 
   create<I extends Exact<DeepPartial<TestAllTypesProto3_NestedMessage>, I>>(
-    base?: I,
+    base?: I
   ): TestAllTypesProto3_NestedMessage {
     return TestAllTypesProto3_NestedMessage.fromPartial(base ?? {});
   },
 
-  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_NestedMessage>, I>>(
-    object: I,
-  ): TestAllTypesProto3_NestedMessage {
+  fromPartial<
+    I extends Exact<DeepPartial<TestAllTypesProto3_NestedMessage>, I>
+  >(object: I): TestAllTypesProto3_NestedMessage {
     const message = createBaseTestAllTypesProto3_NestedMessage();
     message.a = object.a ?? 0;
-    message.corecursive = (object.corecursive !== undefined && object.corecursive !== null)
-      ? TestAllTypesProto3.fromPartial(object.corecursive)
-      : undefined;
+    message.corecursive =
+      object.corecursive !== undefined && object.corecursive !== null
+        ? TestAllTypesProto3.fromPartial(object.corecursive)
+        : undefined;
     return message;
   },
 };
@@ -3349,7 +4083,10 @@ function createBaseTestAllTypesProto3_MapInt32Int32Entry(): TestAllTypesProto3_M
 }
 
 export const TestAllTypesProto3_MapInt32Int32Entry = {
-  encode(message: TestAllTypesProto3_MapInt32Int32Entry, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+  encode(
+    message: TestAllTypesProto3_MapInt32Int32Entry,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
     if (message.key !== 0) {
       writer.uint32(8).int32(message.key);
     }
@@ -3359,7 +4096,10 @@ export const TestAllTypesProto3_MapInt32Int32Entry = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapInt32Int32Entry {
+  decode(
+    input: _m0.Reader | Uint8Array,
+    length?: number
+  ): TestAllTypesProto3_MapInt32Int32Entry {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapInt32Int32Entry();
@@ -3381,7 +4121,10 @@ export const TestAllTypesProto3_MapInt32Int32Entry = {
   },
 
   fromJSON(object: any): TestAllTypesProto3_MapInt32Int32Entry {
-    return { key: isSet(object.key) ? Number(object.key) : 0, value: isSet(object.value) ? Number(object.value) : 0 };
+    return {
+      key: isSet(object.key) ? Number(object.key) : 0,
+      value: isSet(object.value) ? Number(object.value) : 0,
+    };
   },
 
   toJSON(message: TestAllTypesProto3_MapInt32Int32Entry): unknown {
@@ -3391,15 +4134,15 @@ export const TestAllTypesProto3_MapInt32Int32Entry = {
     return obj;
   },
 
-  create<I extends Exact<DeepPartial<TestAllTypesProto3_MapInt32Int32Entry>, I>>(
-    base?: I,
-  ): TestAllTypesProto3_MapInt32Int32Entry {
+  create<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapInt32Int32Entry>, I>
+  >(base?: I): TestAllTypesProto3_MapInt32Int32Entry {
     return TestAllTypesProto3_MapInt32Int32Entry.fromPartial(base ?? {});
   },
 
-  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapInt32Int32Entry>, I>>(
-    object: I,
-  ): TestAllTypesProto3_MapInt32Int32Entry {
+  fromPartial<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapInt32Int32Entry>, I>
+  >(object: I): TestAllTypesProto3_MapInt32Int32Entry {
     const message = createBaseTestAllTypesProto3_MapInt32Int32Entry();
     message.key = object.key ?? 0;
     message.value = object.value ?? 0;
@@ -3412,7 +4155,10 @@ function createBaseTestAllTypesProto3_MapInt64Int64Entry(): TestAllTypesProto3_M
 }
 
 export const TestAllTypesProto3_MapInt64Int64Entry = {
-  encode(message: TestAllTypesProto3_MapInt64Int64Entry, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+  encode(
+    message: TestAllTypesProto3_MapInt64Int64Entry,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
     if (message.key !== 0) {
       writer.uint32(8).int64(message.key);
     }
@@ -3422,7 +4168,10 @@ export const TestAllTypesProto3_MapInt64Int64Entry = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapInt64Int64Entry {
+  decode(
+    input: _m0.Reader | Uint8Array,
+    length?: number
+  ): TestAllTypesProto3_MapInt64Int64Entry {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapInt64Int64Entry();
@@ -3444,7 +4193,10 @@ export const TestAllTypesProto3_MapInt64Int64Entry = {
   },
 
   fromJSON(object: any): TestAllTypesProto3_MapInt64Int64Entry {
-    return { key: isSet(object.key) ? Number(object.key) : 0, value: isSet(object.value) ? Number(object.value) : 0 };
+    return {
+      key: isSet(object.key) ? Number(object.key) : 0,
+      value: isSet(object.value) ? Number(object.value) : 0,
+    };
   },
 
   toJSON(message: TestAllTypesProto3_MapInt64Int64Entry): unknown {
@@ -3454,15 +4206,15 @@ export const TestAllTypesProto3_MapInt64Int64Entry = {
     return obj;
   },
 
-  create<I extends Exact<DeepPartial<TestAllTypesProto3_MapInt64Int64Entry>, I>>(
-    base?: I,
-  ): TestAllTypesProto3_MapInt64Int64Entry {
+  create<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapInt64Int64Entry>, I>
+  >(base?: I): TestAllTypesProto3_MapInt64Int64Entry {
     return TestAllTypesProto3_MapInt64Int64Entry.fromPartial(base ?? {});
   },
 
-  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapInt64Int64Entry>, I>>(
-    object: I,
-  ): TestAllTypesProto3_MapInt64Int64Entry {
+  fromPartial<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapInt64Int64Entry>, I>
+  >(object: I): TestAllTypesProto3_MapInt64Int64Entry {
     const message = createBaseTestAllTypesProto3_MapInt64Int64Entry();
     message.key = object.key ?? 0;
     message.value = object.value ?? 0;
@@ -3475,7 +4227,10 @@ function createBaseTestAllTypesProto3_MapUint32Uint32Entry(): TestAllTypesProto3
 }
 
 export const TestAllTypesProto3_MapUint32Uint32Entry = {
-  encode(message: TestAllTypesProto3_MapUint32Uint32Entry, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+  encode(
+    message: TestAllTypesProto3_MapUint32Uint32Entry,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
     if (message.key !== 0) {
       writer.uint32(8).uint32(message.key);
     }
@@ -3485,7 +4240,10 @@ export const TestAllTypesProto3_MapUint32Uint32Entry = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapUint32Uint32Entry {
+  decode(
+    input: _m0.Reader | Uint8Array,
+    length?: number
+  ): TestAllTypesProto3_MapUint32Uint32Entry {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapUint32Uint32Entry();
@@ -3507,7 +4265,10 @@ export const TestAllTypesProto3_MapUint32Uint32Entry = {
   },
 
   fromJSON(object: any): TestAllTypesProto3_MapUint32Uint32Entry {
-    return { key: isSet(object.key) ? Number(object.key) : 0, value: isSet(object.value) ? Number(object.value) : 0 };
+    return {
+      key: isSet(object.key) ? Number(object.key) : 0,
+      value: isSet(object.value) ? Number(object.value) : 0,
+    };
   },
 
   toJSON(message: TestAllTypesProto3_MapUint32Uint32Entry): unknown {
@@ -3517,15 +4278,15 @@ export const TestAllTypesProto3_MapUint32Uint32Entry = {
     return obj;
   },
 
-  create<I extends Exact<DeepPartial<TestAllTypesProto3_MapUint32Uint32Entry>, I>>(
-    base?: I,
-  ): TestAllTypesProto3_MapUint32Uint32Entry {
+  create<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapUint32Uint32Entry>, I>
+  >(base?: I): TestAllTypesProto3_MapUint32Uint32Entry {
     return TestAllTypesProto3_MapUint32Uint32Entry.fromPartial(base ?? {});
   },
 
-  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapUint32Uint32Entry>, I>>(
-    object: I,
-  ): TestAllTypesProto3_MapUint32Uint32Entry {
+  fromPartial<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapUint32Uint32Entry>, I>
+  >(object: I): TestAllTypesProto3_MapUint32Uint32Entry {
     const message = createBaseTestAllTypesProto3_MapUint32Uint32Entry();
     message.key = object.key ?? 0;
     message.value = object.value ?? 0;
@@ -3538,7 +4299,10 @@ function createBaseTestAllTypesProto3_MapUint64Uint64Entry(): TestAllTypesProto3
 }
 
 export const TestAllTypesProto3_MapUint64Uint64Entry = {
-  encode(message: TestAllTypesProto3_MapUint64Uint64Entry, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+  encode(
+    message: TestAllTypesProto3_MapUint64Uint64Entry,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
     if (message.key !== 0) {
       writer.uint32(8).uint64(message.key);
     }
@@ -3548,7 +4312,10 @@ export const TestAllTypesProto3_MapUint64Uint64Entry = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapUint64Uint64Entry {
+  decode(
+    input: _m0.Reader | Uint8Array,
+    length?: number
+  ): TestAllTypesProto3_MapUint64Uint64Entry {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapUint64Uint64Entry();
@@ -3570,7 +4337,10 @@ export const TestAllTypesProto3_MapUint64Uint64Entry = {
   },
 
   fromJSON(object: any): TestAllTypesProto3_MapUint64Uint64Entry {
-    return { key: isSet(object.key) ? Number(object.key) : 0, value: isSet(object.value) ? Number(object.value) : 0 };
+    return {
+      key: isSet(object.key) ? Number(object.key) : 0,
+      value: isSet(object.value) ? Number(object.value) : 0,
+    };
   },
 
   toJSON(message: TestAllTypesProto3_MapUint64Uint64Entry): unknown {
@@ -3580,15 +4350,15 @@ export const TestAllTypesProto3_MapUint64Uint64Entry = {
     return obj;
   },
 
-  create<I extends Exact<DeepPartial<TestAllTypesProto3_MapUint64Uint64Entry>, I>>(
-    base?: I,
-  ): TestAllTypesProto3_MapUint64Uint64Entry {
+  create<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapUint64Uint64Entry>, I>
+  >(base?: I): TestAllTypesProto3_MapUint64Uint64Entry {
     return TestAllTypesProto3_MapUint64Uint64Entry.fromPartial(base ?? {});
   },
 
-  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapUint64Uint64Entry>, I>>(
-    object: I,
-  ): TestAllTypesProto3_MapUint64Uint64Entry {
+  fromPartial<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapUint64Uint64Entry>, I>
+  >(object: I): TestAllTypesProto3_MapUint64Uint64Entry {
     const message = createBaseTestAllTypesProto3_MapUint64Uint64Entry();
     message.key = object.key ?? 0;
     message.value = object.value ?? 0;
@@ -3601,7 +4371,10 @@ function createBaseTestAllTypesProto3_MapSint32Sint32Entry(): TestAllTypesProto3
 }
 
 export const TestAllTypesProto3_MapSint32Sint32Entry = {
-  encode(message: TestAllTypesProto3_MapSint32Sint32Entry, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+  encode(
+    message: TestAllTypesProto3_MapSint32Sint32Entry,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
     if (message.key !== 0) {
       writer.uint32(8).sint32(message.key);
     }
@@ -3611,7 +4384,10 @@ export const TestAllTypesProto3_MapSint32Sint32Entry = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapSint32Sint32Entry {
+  decode(
+    input: _m0.Reader | Uint8Array,
+    length?: number
+  ): TestAllTypesProto3_MapSint32Sint32Entry {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapSint32Sint32Entry();
@@ -3633,7 +4409,10 @@ export const TestAllTypesProto3_MapSint32Sint32Entry = {
   },
 
   fromJSON(object: any): TestAllTypesProto3_MapSint32Sint32Entry {
-    return { key: isSet(object.key) ? Number(object.key) : 0, value: isSet(object.value) ? Number(object.value) : 0 };
+    return {
+      key: isSet(object.key) ? Number(object.key) : 0,
+      value: isSet(object.value) ? Number(object.value) : 0,
+    };
   },
 
   toJSON(message: TestAllTypesProto3_MapSint32Sint32Entry): unknown {
@@ -3643,15 +4422,15 @@ export const TestAllTypesProto3_MapSint32Sint32Entry = {
     return obj;
   },
 
-  create<I extends Exact<DeepPartial<TestAllTypesProto3_MapSint32Sint32Entry>, I>>(
-    base?: I,
-  ): TestAllTypesProto3_MapSint32Sint32Entry {
+  create<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapSint32Sint32Entry>, I>
+  >(base?: I): TestAllTypesProto3_MapSint32Sint32Entry {
     return TestAllTypesProto3_MapSint32Sint32Entry.fromPartial(base ?? {});
   },
 
-  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapSint32Sint32Entry>, I>>(
-    object: I,
-  ): TestAllTypesProto3_MapSint32Sint32Entry {
+  fromPartial<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapSint32Sint32Entry>, I>
+  >(object: I): TestAllTypesProto3_MapSint32Sint32Entry {
     const message = createBaseTestAllTypesProto3_MapSint32Sint32Entry();
     message.key = object.key ?? 0;
     message.value = object.value ?? 0;
@@ -3664,7 +4443,10 @@ function createBaseTestAllTypesProto3_MapSint64Sint64Entry(): TestAllTypesProto3
 }
 
 export const TestAllTypesProto3_MapSint64Sint64Entry = {
-  encode(message: TestAllTypesProto3_MapSint64Sint64Entry, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+  encode(
+    message: TestAllTypesProto3_MapSint64Sint64Entry,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
     if (message.key !== 0) {
       writer.uint32(8).sint64(message.key);
     }
@@ -3674,7 +4456,10 @@ export const TestAllTypesProto3_MapSint64Sint64Entry = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapSint64Sint64Entry {
+  decode(
+    input: _m0.Reader | Uint8Array,
+    length?: number
+  ): TestAllTypesProto3_MapSint64Sint64Entry {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapSint64Sint64Entry();
@@ -3696,7 +4481,10 @@ export const TestAllTypesProto3_MapSint64Sint64Entry = {
   },
 
   fromJSON(object: any): TestAllTypesProto3_MapSint64Sint64Entry {
-    return { key: isSet(object.key) ? Number(object.key) : 0, value: isSet(object.value) ? Number(object.value) : 0 };
+    return {
+      key: isSet(object.key) ? Number(object.key) : 0,
+      value: isSet(object.value) ? Number(object.value) : 0,
+    };
   },
 
   toJSON(message: TestAllTypesProto3_MapSint64Sint64Entry): unknown {
@@ -3706,15 +4494,15 @@ export const TestAllTypesProto3_MapSint64Sint64Entry = {
     return obj;
   },
 
-  create<I extends Exact<DeepPartial<TestAllTypesProto3_MapSint64Sint64Entry>, I>>(
-    base?: I,
-  ): TestAllTypesProto3_MapSint64Sint64Entry {
+  create<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapSint64Sint64Entry>, I>
+  >(base?: I): TestAllTypesProto3_MapSint64Sint64Entry {
     return TestAllTypesProto3_MapSint64Sint64Entry.fromPartial(base ?? {});
   },
 
-  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapSint64Sint64Entry>, I>>(
-    object: I,
-  ): TestAllTypesProto3_MapSint64Sint64Entry {
+  fromPartial<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapSint64Sint64Entry>, I>
+  >(object: I): TestAllTypesProto3_MapSint64Sint64Entry {
     const message = createBaseTestAllTypesProto3_MapSint64Sint64Entry();
     message.key = object.key ?? 0;
     message.value = object.value ?? 0;
@@ -3727,7 +4515,10 @@ function createBaseTestAllTypesProto3_MapFixed32Fixed32Entry(): TestAllTypesProt
 }
 
 export const TestAllTypesProto3_MapFixed32Fixed32Entry = {
-  encode(message: TestAllTypesProto3_MapFixed32Fixed32Entry, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+  encode(
+    message: TestAllTypesProto3_MapFixed32Fixed32Entry,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
     if (message.key !== 0) {
       writer.uint32(13).fixed32(message.key);
     }
@@ -3737,7 +4528,10 @@ export const TestAllTypesProto3_MapFixed32Fixed32Entry = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapFixed32Fixed32Entry {
+  decode(
+    input: _m0.Reader | Uint8Array,
+    length?: number
+  ): TestAllTypesProto3_MapFixed32Fixed32Entry {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapFixed32Fixed32Entry();
@@ -3759,7 +4553,10 @@ export const TestAllTypesProto3_MapFixed32Fixed32Entry = {
   },
 
   fromJSON(object: any): TestAllTypesProto3_MapFixed32Fixed32Entry {
-    return { key: isSet(object.key) ? Number(object.key) : 0, value: isSet(object.value) ? Number(object.value) : 0 };
+    return {
+      key: isSet(object.key) ? Number(object.key) : 0,
+      value: isSet(object.value) ? Number(object.value) : 0,
+    };
   },
 
   toJSON(message: TestAllTypesProto3_MapFixed32Fixed32Entry): unknown {
@@ -3769,15 +4566,15 @@ export const TestAllTypesProto3_MapFixed32Fixed32Entry = {
     return obj;
   },
 
-  create<I extends Exact<DeepPartial<TestAllTypesProto3_MapFixed32Fixed32Entry>, I>>(
-    base?: I,
-  ): TestAllTypesProto3_MapFixed32Fixed32Entry {
+  create<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapFixed32Fixed32Entry>, I>
+  >(base?: I): TestAllTypesProto3_MapFixed32Fixed32Entry {
     return TestAllTypesProto3_MapFixed32Fixed32Entry.fromPartial(base ?? {});
   },
 
-  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapFixed32Fixed32Entry>, I>>(
-    object: I,
-  ): TestAllTypesProto3_MapFixed32Fixed32Entry {
+  fromPartial<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapFixed32Fixed32Entry>, I>
+  >(object: I): TestAllTypesProto3_MapFixed32Fixed32Entry {
     const message = createBaseTestAllTypesProto3_MapFixed32Fixed32Entry();
     message.key = object.key ?? 0;
     message.value = object.value ?? 0;
@@ -3790,7 +4587,10 @@ function createBaseTestAllTypesProto3_MapFixed64Fixed64Entry(): TestAllTypesProt
 }
 
 export const TestAllTypesProto3_MapFixed64Fixed64Entry = {
-  encode(message: TestAllTypesProto3_MapFixed64Fixed64Entry, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+  encode(
+    message: TestAllTypesProto3_MapFixed64Fixed64Entry,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
     if (message.key !== 0) {
       writer.uint32(9).fixed64(message.key);
     }
@@ -3800,7 +4600,10 @@ export const TestAllTypesProto3_MapFixed64Fixed64Entry = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapFixed64Fixed64Entry {
+  decode(
+    input: _m0.Reader | Uint8Array,
+    length?: number
+  ): TestAllTypesProto3_MapFixed64Fixed64Entry {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapFixed64Fixed64Entry();
@@ -3822,7 +4625,10 @@ export const TestAllTypesProto3_MapFixed64Fixed64Entry = {
   },
 
   fromJSON(object: any): TestAllTypesProto3_MapFixed64Fixed64Entry {
-    return { key: isSet(object.key) ? Number(object.key) : 0, value: isSet(object.value) ? Number(object.value) : 0 };
+    return {
+      key: isSet(object.key) ? Number(object.key) : 0,
+      value: isSet(object.value) ? Number(object.value) : 0,
+    };
   },
 
   toJSON(message: TestAllTypesProto3_MapFixed64Fixed64Entry): unknown {
@@ -3832,15 +4638,15 @@ export const TestAllTypesProto3_MapFixed64Fixed64Entry = {
     return obj;
   },
 
-  create<I extends Exact<DeepPartial<TestAllTypesProto3_MapFixed64Fixed64Entry>, I>>(
-    base?: I,
-  ): TestAllTypesProto3_MapFixed64Fixed64Entry {
+  create<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapFixed64Fixed64Entry>, I>
+  >(base?: I): TestAllTypesProto3_MapFixed64Fixed64Entry {
     return TestAllTypesProto3_MapFixed64Fixed64Entry.fromPartial(base ?? {});
   },
 
-  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapFixed64Fixed64Entry>, I>>(
-    object: I,
-  ): TestAllTypesProto3_MapFixed64Fixed64Entry {
+  fromPartial<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapFixed64Fixed64Entry>, I>
+  >(object: I): TestAllTypesProto3_MapFixed64Fixed64Entry {
     const message = createBaseTestAllTypesProto3_MapFixed64Fixed64Entry();
     message.key = object.key ?? 0;
     message.value = object.value ?? 0;
@@ -3853,7 +4659,10 @@ function createBaseTestAllTypesProto3_MapSfixed32Sfixed32Entry(): TestAllTypesPr
 }
 
 export const TestAllTypesProto3_MapSfixed32Sfixed32Entry = {
-  encode(message: TestAllTypesProto3_MapSfixed32Sfixed32Entry, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+  encode(
+    message: TestAllTypesProto3_MapSfixed32Sfixed32Entry,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
     if (message.key !== 0) {
       writer.uint32(13).sfixed32(message.key);
     }
@@ -3863,7 +4672,10 @@ export const TestAllTypesProto3_MapSfixed32Sfixed32Entry = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapSfixed32Sfixed32Entry {
+  decode(
+    input: _m0.Reader | Uint8Array,
+    length?: number
+  ): TestAllTypesProto3_MapSfixed32Sfixed32Entry {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapSfixed32Sfixed32Entry();
@@ -3885,7 +4697,10 @@ export const TestAllTypesProto3_MapSfixed32Sfixed32Entry = {
   },
 
   fromJSON(object: any): TestAllTypesProto3_MapSfixed32Sfixed32Entry {
-    return { key: isSet(object.key) ? Number(object.key) : 0, value: isSet(object.value) ? Number(object.value) : 0 };
+    return {
+      key: isSet(object.key) ? Number(object.key) : 0,
+      value: isSet(object.value) ? Number(object.value) : 0,
+    };
   },
 
   toJSON(message: TestAllTypesProto3_MapSfixed32Sfixed32Entry): unknown {
@@ -3895,15 +4710,15 @@ export const TestAllTypesProto3_MapSfixed32Sfixed32Entry = {
     return obj;
   },
 
-  create<I extends Exact<DeepPartial<TestAllTypesProto3_MapSfixed32Sfixed32Entry>, I>>(
-    base?: I,
-  ): TestAllTypesProto3_MapSfixed32Sfixed32Entry {
+  create<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapSfixed32Sfixed32Entry>, I>
+  >(base?: I): TestAllTypesProto3_MapSfixed32Sfixed32Entry {
     return TestAllTypesProto3_MapSfixed32Sfixed32Entry.fromPartial(base ?? {});
   },
 
-  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapSfixed32Sfixed32Entry>, I>>(
-    object: I,
-  ): TestAllTypesProto3_MapSfixed32Sfixed32Entry {
+  fromPartial<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapSfixed32Sfixed32Entry>, I>
+  >(object: I): TestAllTypesProto3_MapSfixed32Sfixed32Entry {
     const message = createBaseTestAllTypesProto3_MapSfixed32Sfixed32Entry();
     message.key = object.key ?? 0;
     message.value = object.value ?? 0;
@@ -3916,7 +4731,10 @@ function createBaseTestAllTypesProto3_MapSfixed64Sfixed64Entry(): TestAllTypesPr
 }
 
 export const TestAllTypesProto3_MapSfixed64Sfixed64Entry = {
-  encode(message: TestAllTypesProto3_MapSfixed64Sfixed64Entry, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+  encode(
+    message: TestAllTypesProto3_MapSfixed64Sfixed64Entry,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
     if (message.key !== 0) {
       writer.uint32(9).sfixed64(message.key);
     }
@@ -3926,7 +4744,10 @@ export const TestAllTypesProto3_MapSfixed64Sfixed64Entry = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapSfixed64Sfixed64Entry {
+  decode(
+    input: _m0.Reader | Uint8Array,
+    length?: number
+  ): TestAllTypesProto3_MapSfixed64Sfixed64Entry {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapSfixed64Sfixed64Entry();
@@ -3948,7 +4769,10 @@ export const TestAllTypesProto3_MapSfixed64Sfixed64Entry = {
   },
 
   fromJSON(object: any): TestAllTypesProto3_MapSfixed64Sfixed64Entry {
-    return { key: isSet(object.key) ? Number(object.key) : 0, value: isSet(object.value) ? Number(object.value) : 0 };
+    return {
+      key: isSet(object.key) ? Number(object.key) : 0,
+      value: isSet(object.value) ? Number(object.value) : 0,
+    };
   },
 
   toJSON(message: TestAllTypesProto3_MapSfixed64Sfixed64Entry): unknown {
@@ -3958,15 +4782,15 @@ export const TestAllTypesProto3_MapSfixed64Sfixed64Entry = {
     return obj;
   },
 
-  create<I extends Exact<DeepPartial<TestAllTypesProto3_MapSfixed64Sfixed64Entry>, I>>(
-    base?: I,
-  ): TestAllTypesProto3_MapSfixed64Sfixed64Entry {
+  create<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapSfixed64Sfixed64Entry>, I>
+  >(base?: I): TestAllTypesProto3_MapSfixed64Sfixed64Entry {
     return TestAllTypesProto3_MapSfixed64Sfixed64Entry.fromPartial(base ?? {});
   },
 
-  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapSfixed64Sfixed64Entry>, I>>(
-    object: I,
-  ): TestAllTypesProto3_MapSfixed64Sfixed64Entry {
+  fromPartial<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapSfixed64Sfixed64Entry>, I>
+  >(object: I): TestAllTypesProto3_MapSfixed64Sfixed64Entry {
     const message = createBaseTestAllTypesProto3_MapSfixed64Sfixed64Entry();
     message.key = object.key ?? 0;
     message.value = object.value ?? 0;
@@ -3979,7 +4803,10 @@ function createBaseTestAllTypesProto3_MapInt32FloatEntry(): TestAllTypesProto3_M
 }
 
 export const TestAllTypesProto3_MapInt32FloatEntry = {
-  encode(message: TestAllTypesProto3_MapInt32FloatEntry, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+  encode(
+    message: TestAllTypesProto3_MapInt32FloatEntry,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
     if (message.key !== 0) {
       writer.uint32(8).int32(message.key);
     }
@@ -3989,7 +4816,10 @@ export const TestAllTypesProto3_MapInt32FloatEntry = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapInt32FloatEntry {
+  decode(
+    input: _m0.Reader | Uint8Array,
+    length?: number
+  ): TestAllTypesProto3_MapInt32FloatEntry {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapInt32FloatEntry();
@@ -4011,7 +4841,10 @@ export const TestAllTypesProto3_MapInt32FloatEntry = {
   },
 
   fromJSON(object: any): TestAllTypesProto3_MapInt32FloatEntry {
-    return { key: isSet(object.key) ? Number(object.key) : 0, value: isSet(object.value) ? Number(object.value) : 0 };
+    return {
+      key: isSet(object.key) ? Number(object.key) : 0,
+      value: isSet(object.value) ? Number(object.value) : 0,
+    };
   },
 
   toJSON(message: TestAllTypesProto3_MapInt32FloatEntry): unknown {
@@ -4021,15 +4854,15 @@ export const TestAllTypesProto3_MapInt32FloatEntry = {
     return obj;
   },
 
-  create<I extends Exact<DeepPartial<TestAllTypesProto3_MapInt32FloatEntry>, I>>(
-    base?: I,
-  ): TestAllTypesProto3_MapInt32FloatEntry {
+  create<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapInt32FloatEntry>, I>
+  >(base?: I): TestAllTypesProto3_MapInt32FloatEntry {
     return TestAllTypesProto3_MapInt32FloatEntry.fromPartial(base ?? {});
   },
 
-  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapInt32FloatEntry>, I>>(
-    object: I,
-  ): TestAllTypesProto3_MapInt32FloatEntry {
+  fromPartial<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapInt32FloatEntry>, I>
+  >(object: I): TestAllTypesProto3_MapInt32FloatEntry {
     const message = createBaseTestAllTypesProto3_MapInt32FloatEntry();
     message.key = object.key ?? 0;
     message.value = object.value ?? 0;
@@ -4042,7 +4875,10 @@ function createBaseTestAllTypesProto3_MapInt32DoubleEntry(): TestAllTypesProto3_
 }
 
 export const TestAllTypesProto3_MapInt32DoubleEntry = {
-  encode(message: TestAllTypesProto3_MapInt32DoubleEntry, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+  encode(
+    message: TestAllTypesProto3_MapInt32DoubleEntry,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
     if (message.key !== 0) {
       writer.uint32(8).int32(message.key);
     }
@@ -4052,7 +4888,10 @@ export const TestAllTypesProto3_MapInt32DoubleEntry = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapInt32DoubleEntry {
+  decode(
+    input: _m0.Reader | Uint8Array,
+    length?: number
+  ): TestAllTypesProto3_MapInt32DoubleEntry {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapInt32DoubleEntry();
@@ -4074,7 +4913,10 @@ export const TestAllTypesProto3_MapInt32DoubleEntry = {
   },
 
   fromJSON(object: any): TestAllTypesProto3_MapInt32DoubleEntry {
-    return { key: isSet(object.key) ? Number(object.key) : 0, value: isSet(object.value) ? Number(object.value) : 0 };
+    return {
+      key: isSet(object.key) ? Number(object.key) : 0,
+      value: isSet(object.value) ? Number(object.value) : 0,
+    };
   },
 
   toJSON(message: TestAllTypesProto3_MapInt32DoubleEntry): unknown {
@@ -4084,15 +4926,15 @@ export const TestAllTypesProto3_MapInt32DoubleEntry = {
     return obj;
   },
 
-  create<I extends Exact<DeepPartial<TestAllTypesProto3_MapInt32DoubleEntry>, I>>(
-    base?: I,
-  ): TestAllTypesProto3_MapInt32DoubleEntry {
+  create<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapInt32DoubleEntry>, I>
+  >(base?: I): TestAllTypesProto3_MapInt32DoubleEntry {
     return TestAllTypesProto3_MapInt32DoubleEntry.fromPartial(base ?? {});
   },
 
-  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapInt32DoubleEntry>, I>>(
-    object: I,
-  ): TestAllTypesProto3_MapInt32DoubleEntry {
+  fromPartial<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapInt32DoubleEntry>, I>
+  >(object: I): TestAllTypesProto3_MapInt32DoubleEntry {
     const message = createBaseTestAllTypesProto3_MapInt32DoubleEntry();
     message.key = object.key ?? 0;
     message.value = object.value ?? 0;
@@ -4105,7 +4947,10 @@ function createBaseTestAllTypesProto3_MapBoolBoolEntry(): TestAllTypesProto3_Map
 }
 
 export const TestAllTypesProto3_MapBoolBoolEntry = {
-  encode(message: TestAllTypesProto3_MapBoolBoolEntry, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+  encode(
+    message: TestAllTypesProto3_MapBoolBoolEntry,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
     if (message.key === true) {
       writer.uint32(8).bool(message.key);
     }
@@ -4115,7 +4960,10 @@ export const TestAllTypesProto3_MapBoolBoolEntry = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapBoolBoolEntry {
+  decode(
+    input: _m0.Reader | Uint8Array,
+    length?: number
+  ): TestAllTypesProto3_MapBoolBoolEntry {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapBoolBoolEntry();
@@ -4151,14 +4999,14 @@ export const TestAllTypesProto3_MapBoolBoolEntry = {
   },
 
   create<I extends Exact<DeepPartial<TestAllTypesProto3_MapBoolBoolEntry>, I>>(
-    base?: I,
+    base?: I
   ): TestAllTypesProto3_MapBoolBoolEntry {
     return TestAllTypesProto3_MapBoolBoolEntry.fromPartial(base ?? {});
   },
 
-  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapBoolBoolEntry>, I>>(
-    object: I,
-  ): TestAllTypesProto3_MapBoolBoolEntry {
+  fromPartial<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapBoolBoolEntry>, I>
+  >(object: I): TestAllTypesProto3_MapBoolBoolEntry {
     const message = createBaseTestAllTypesProto3_MapBoolBoolEntry();
     message.key = object.key ?? false;
     message.value = object.value ?? false;
@@ -4171,7 +5019,10 @@ function createBaseTestAllTypesProto3_MapStringStringEntry(): TestAllTypesProto3
 }
 
 export const TestAllTypesProto3_MapStringStringEntry = {
-  encode(message: TestAllTypesProto3_MapStringStringEntry, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+  encode(
+    message: TestAllTypesProto3_MapStringStringEntry,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
     if (message.key !== "") {
       writer.uint32(10).string(message.key);
     }
@@ -4181,7 +5032,10 @@ export const TestAllTypesProto3_MapStringStringEntry = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapStringStringEntry {
+  decode(
+    input: _m0.Reader | Uint8Array,
+    length?: number
+  ): TestAllTypesProto3_MapStringStringEntry {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapStringStringEntry();
@@ -4203,7 +5057,10 @@ export const TestAllTypesProto3_MapStringStringEntry = {
   },
 
   fromJSON(object: any): TestAllTypesProto3_MapStringStringEntry {
-    return { key: isSet(object.key) ? String(object.key) : "", value: isSet(object.value) ? String(object.value) : "" };
+    return {
+      key: isSet(object.key) ? String(object.key) : "",
+      value: isSet(object.value) ? String(object.value) : "",
+    };
   },
 
   toJSON(message: TestAllTypesProto3_MapStringStringEntry): unknown {
@@ -4213,15 +5070,15 @@ export const TestAllTypesProto3_MapStringStringEntry = {
     return obj;
   },
 
-  create<I extends Exact<DeepPartial<TestAllTypesProto3_MapStringStringEntry>, I>>(
-    base?: I,
-  ): TestAllTypesProto3_MapStringStringEntry {
+  create<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapStringStringEntry>, I>
+  >(base?: I): TestAllTypesProto3_MapStringStringEntry {
     return TestAllTypesProto3_MapStringStringEntry.fromPartial(base ?? {});
   },
 
-  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapStringStringEntry>, I>>(
-    object: I,
-  ): TestAllTypesProto3_MapStringStringEntry {
+  fromPartial<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapStringStringEntry>, I>
+  >(object: I): TestAllTypesProto3_MapStringStringEntry {
     const message = createBaseTestAllTypesProto3_MapStringStringEntry();
     message.key = object.key ?? "";
     message.value = object.value ?? "";
@@ -4230,11 +5087,14 @@ export const TestAllTypesProto3_MapStringStringEntry = {
 };
 
 function createBaseTestAllTypesProto3_MapStringBytesEntry(): TestAllTypesProto3_MapStringBytesEntry {
-  return { key: "", value: new Uint8Array() };
+  return { key: "", value: Buffer.alloc(0) };
 }
 
 export const TestAllTypesProto3_MapStringBytesEntry = {
-  encode(message: TestAllTypesProto3_MapStringBytesEntry, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+  encode(
+    message: TestAllTypesProto3_MapStringBytesEntry,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
     if (message.key !== "") {
       writer.uint32(10).string(message.key);
     }
@@ -4244,7 +5104,10 @@ export const TestAllTypesProto3_MapStringBytesEntry = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapStringBytesEntry {
+  decode(
+    input: _m0.Reader | Uint8Array,
+    length?: number
+  ): TestAllTypesProto3_MapStringBytesEntry {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapStringBytesEntry();
@@ -4255,7 +5118,7 @@ export const TestAllTypesProto3_MapStringBytesEntry = {
           message.key = reader.string();
           break;
         case 2:
-          message.value = reader.bytes();
+          message.value = reader.bytes() as Buffer;
           break;
         default:
           reader.skipType(tag & 7);
@@ -4268,7 +5131,9 @@ export const TestAllTypesProto3_MapStringBytesEntry = {
   fromJSON(object: any): TestAllTypesProto3_MapStringBytesEntry {
     return {
       key: isSet(object.key) ? String(object.key) : "",
-      value: isSet(object.value) ? bytesFromBase64(object.value) : new Uint8Array(),
+      value: isSet(object.value)
+        ? Buffer.from(bytesFromBase64(object.value))
+        : Buffer.alloc(0),
     };
   },
 
@@ -4276,22 +5141,24 @@ export const TestAllTypesProto3_MapStringBytesEntry = {
     const obj: any = {};
     message.key !== undefined && (obj.key = message.key);
     message.value !== undefined &&
-      (obj.value = base64FromBytes(message.value !== undefined ? message.value : new Uint8Array()));
+      (obj.value = base64FromBytes(
+        message.value !== undefined ? message.value : Buffer.alloc(0)
+      ));
     return obj;
   },
 
-  create<I extends Exact<DeepPartial<TestAllTypesProto3_MapStringBytesEntry>, I>>(
-    base?: I,
-  ): TestAllTypesProto3_MapStringBytesEntry {
+  create<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapStringBytesEntry>, I>
+  >(base?: I): TestAllTypesProto3_MapStringBytesEntry {
     return TestAllTypesProto3_MapStringBytesEntry.fromPartial(base ?? {});
   },
 
-  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapStringBytesEntry>, I>>(
-    object: I,
-  ): TestAllTypesProto3_MapStringBytesEntry {
+  fromPartial<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapStringBytesEntry>, I>
+  >(object: I): TestAllTypesProto3_MapStringBytesEntry {
     const message = createBaseTestAllTypesProto3_MapStringBytesEntry();
     message.key = object.key ?? "";
-    message.value = object.value ?? new Uint8Array();
+    message.value = object.value ?? Buffer.alloc(0);
     return message;
   },
 };
@@ -4303,18 +5170,24 @@ function createBaseTestAllTypesProto3_MapStringNestedMessageEntry(): TestAllType
 export const TestAllTypesProto3_MapStringNestedMessageEntry = {
   encode(
     message: TestAllTypesProto3_MapStringNestedMessageEntry,
-    writer: _m0.Writer = _m0.Writer.create(),
+    writer: _m0.Writer = _m0.Writer.create()
   ): _m0.Writer {
     if (message.key !== "") {
       writer.uint32(10).string(message.key);
     }
     if (message.value !== undefined) {
-      TestAllTypesProto3_NestedMessage.encode(message.value, writer.uint32(18).fork()).ldelim();
+      TestAllTypesProto3_NestedMessage.encode(
+        message.value,
+        writer.uint32(18).fork()
+      ).ldelim();
     }
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapStringNestedMessageEntry {
+  decode(
+    input: _m0.Reader | Uint8Array,
+    length?: number
+  ): TestAllTypesProto3_MapStringNestedMessageEntry {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapStringNestedMessageEntry();
@@ -4325,7 +5198,10 @@ export const TestAllTypesProto3_MapStringNestedMessageEntry = {
           message.key = reader.string();
           break;
         case 2:
-          message.value = TestAllTypesProto3_NestedMessage.decode(reader, reader.uint32());
+          message.value = TestAllTypesProto3_NestedMessage.decode(
+            reader,
+            reader.uint32()
+          );
           break;
         default:
           reader.skipType(tag & 7);
@@ -4338,7 +5214,9 @@ export const TestAllTypesProto3_MapStringNestedMessageEntry = {
   fromJSON(object: any): TestAllTypesProto3_MapStringNestedMessageEntry {
     return {
       key: isSet(object.key) ? String(object.key) : "",
-      value: isSet(object.value) ? TestAllTypesProto3_NestedMessage.fromJSON(object.value) : undefined,
+      value: isSet(object.value)
+        ? TestAllTypesProto3_NestedMessage.fromJSON(object.value)
+        : undefined,
     };
   },
 
@@ -4346,24 +5224,35 @@ export const TestAllTypesProto3_MapStringNestedMessageEntry = {
     const obj: any = {};
     message.key !== undefined && (obj.key = message.key);
     message.value !== undefined &&
-      (obj.value = message.value ? TestAllTypesProto3_NestedMessage.toJSON(message.value) : undefined);
+      (obj.value = message.value
+        ? TestAllTypesProto3_NestedMessage.toJSON(message.value)
+        : undefined);
     return obj;
   },
 
-  create<I extends Exact<DeepPartial<TestAllTypesProto3_MapStringNestedMessageEntry>, I>>(
-    base?: I,
-  ): TestAllTypesProto3_MapStringNestedMessageEntry {
-    return TestAllTypesProto3_MapStringNestedMessageEntry.fromPartial(base ?? {});
+  create<
+    I extends Exact<
+      DeepPartial<TestAllTypesProto3_MapStringNestedMessageEntry>,
+      I
+    >
+  >(base?: I): TestAllTypesProto3_MapStringNestedMessageEntry {
+    return TestAllTypesProto3_MapStringNestedMessageEntry.fromPartial(
+      base ?? {}
+    );
   },
 
-  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapStringNestedMessageEntry>, I>>(
-    object: I,
-  ): TestAllTypesProto3_MapStringNestedMessageEntry {
+  fromPartial<
+    I extends Exact<
+      DeepPartial<TestAllTypesProto3_MapStringNestedMessageEntry>,
+      I
+    >
+  >(object: I): TestAllTypesProto3_MapStringNestedMessageEntry {
     const message = createBaseTestAllTypesProto3_MapStringNestedMessageEntry();
     message.key = object.key ?? "";
-    message.value = (object.value !== undefined && object.value !== null)
-      ? TestAllTypesProto3_NestedMessage.fromPartial(object.value)
-      : undefined;
+    message.value =
+      object.value !== undefined && object.value !== null
+        ? TestAllTypesProto3_NestedMessage.fromPartial(object.value)
+        : undefined;
     return message;
   },
 };
@@ -4375,7 +5264,7 @@ function createBaseTestAllTypesProto3_MapStringForeignMessageEntry(): TestAllTyp
 export const TestAllTypesProto3_MapStringForeignMessageEntry = {
   encode(
     message: TestAllTypesProto3_MapStringForeignMessageEntry,
-    writer: _m0.Writer = _m0.Writer.create(),
+    writer: _m0.Writer = _m0.Writer.create()
   ): _m0.Writer {
     if (message.key !== "") {
       writer.uint32(10).string(message.key);
@@ -4386,7 +5275,10 @@ export const TestAllTypesProto3_MapStringForeignMessageEntry = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapStringForeignMessageEntry {
+  decode(
+    input: _m0.Reader | Uint8Array,
+    length?: number
+  ): TestAllTypesProto3_MapStringForeignMessageEntry {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapStringForeignMessageEntry();
@@ -4410,31 +5302,45 @@ export const TestAllTypesProto3_MapStringForeignMessageEntry = {
   fromJSON(object: any): TestAllTypesProto3_MapStringForeignMessageEntry {
     return {
       key: isSet(object.key) ? String(object.key) : "",
-      value: isSet(object.value) ? ForeignMessage.fromJSON(object.value) : undefined,
+      value: isSet(object.value)
+        ? ForeignMessage.fromJSON(object.value)
+        : undefined,
     };
   },
 
   toJSON(message: TestAllTypesProto3_MapStringForeignMessageEntry): unknown {
     const obj: any = {};
     message.key !== undefined && (obj.key = message.key);
-    message.value !== undefined && (obj.value = message.value ? ForeignMessage.toJSON(message.value) : undefined);
+    message.value !== undefined &&
+      (obj.value = message.value
+        ? ForeignMessage.toJSON(message.value)
+        : undefined);
     return obj;
   },
 
-  create<I extends Exact<DeepPartial<TestAllTypesProto3_MapStringForeignMessageEntry>, I>>(
-    base?: I,
-  ): TestAllTypesProto3_MapStringForeignMessageEntry {
-    return TestAllTypesProto3_MapStringForeignMessageEntry.fromPartial(base ?? {});
+  create<
+    I extends Exact<
+      DeepPartial<TestAllTypesProto3_MapStringForeignMessageEntry>,
+      I
+    >
+  >(base?: I): TestAllTypesProto3_MapStringForeignMessageEntry {
+    return TestAllTypesProto3_MapStringForeignMessageEntry.fromPartial(
+      base ?? {}
+    );
   },
 
-  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapStringForeignMessageEntry>, I>>(
-    object: I,
-  ): TestAllTypesProto3_MapStringForeignMessageEntry {
+  fromPartial<
+    I extends Exact<
+      DeepPartial<TestAllTypesProto3_MapStringForeignMessageEntry>,
+      I
+    >
+  >(object: I): TestAllTypesProto3_MapStringForeignMessageEntry {
     const message = createBaseTestAllTypesProto3_MapStringForeignMessageEntry();
     message.key = object.key ?? "";
-    message.value = (object.value !== undefined && object.value !== null)
-      ? ForeignMessage.fromPartial(object.value)
-      : undefined;
+    message.value =
+      object.value !== undefined && object.value !== null
+        ? ForeignMessage.fromPartial(object.value)
+        : undefined;
     return message;
   },
 };
@@ -4444,7 +5350,10 @@ function createBaseTestAllTypesProto3_MapStringNestedEnumEntry(): TestAllTypesPr
 }
 
 export const TestAllTypesProto3_MapStringNestedEnumEntry = {
-  encode(message: TestAllTypesProto3_MapStringNestedEnumEntry, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+  encode(
+    message: TestAllTypesProto3_MapStringNestedEnumEntry,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
     if (message.key !== "") {
       writer.uint32(10).string(message.key);
     }
@@ -4454,7 +5363,10 @@ export const TestAllTypesProto3_MapStringNestedEnumEntry = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapStringNestedEnumEntry {
+  decode(
+    input: _m0.Reader | Uint8Array,
+    length?: number
+  ): TestAllTypesProto3_MapStringNestedEnumEntry {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapStringNestedEnumEntry();
@@ -4478,26 +5390,29 @@ export const TestAllTypesProto3_MapStringNestedEnumEntry = {
   fromJSON(object: any): TestAllTypesProto3_MapStringNestedEnumEntry {
     return {
       key: isSet(object.key) ? String(object.key) : "",
-      value: isSet(object.value) ? testAllTypesProto3_NestedEnumFromJSON(object.value) : 0,
+      value: isSet(object.value)
+        ? testAllTypesProto3_NestedEnumFromJSON(object.value)
+        : 0,
     };
   },
 
   toJSON(message: TestAllTypesProto3_MapStringNestedEnumEntry): unknown {
     const obj: any = {};
     message.key !== undefined && (obj.key = message.key);
-    message.value !== undefined && (obj.value = testAllTypesProto3_NestedEnumToJSON(message.value));
+    message.value !== undefined &&
+      (obj.value = testAllTypesProto3_NestedEnumToJSON(message.value));
     return obj;
   },
 
-  create<I extends Exact<DeepPartial<TestAllTypesProto3_MapStringNestedEnumEntry>, I>>(
-    base?: I,
-  ): TestAllTypesProto3_MapStringNestedEnumEntry {
+  create<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapStringNestedEnumEntry>, I>
+  >(base?: I): TestAllTypesProto3_MapStringNestedEnumEntry {
     return TestAllTypesProto3_MapStringNestedEnumEntry.fromPartial(base ?? {});
   },
 
-  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapStringNestedEnumEntry>, I>>(
-    object: I,
-  ): TestAllTypesProto3_MapStringNestedEnumEntry {
+  fromPartial<
+    I extends Exact<DeepPartial<TestAllTypesProto3_MapStringNestedEnumEntry>, I>
+  >(object: I): TestAllTypesProto3_MapStringNestedEnumEntry {
     const message = createBaseTestAllTypesProto3_MapStringNestedEnumEntry();
     message.key = object.key ?? "";
     message.value = object.value ?? 0;
@@ -4510,7 +5425,10 @@ function createBaseTestAllTypesProto3_MapStringForeignEnumEntry(): TestAllTypesP
 }
 
 export const TestAllTypesProto3_MapStringForeignEnumEntry = {
-  encode(message: TestAllTypesProto3_MapStringForeignEnumEntry, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+  encode(
+    message: TestAllTypesProto3_MapStringForeignEnumEntry,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
     if (message.key !== "") {
       writer.uint32(10).string(message.key);
     }
@@ -4520,7 +5438,10 @@ export const TestAllTypesProto3_MapStringForeignEnumEntry = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapStringForeignEnumEntry {
+  decode(
+    input: _m0.Reader | Uint8Array,
+    length?: number
+  ): TestAllTypesProto3_MapStringForeignEnumEntry {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapStringForeignEnumEntry();
@@ -4551,19 +5472,26 @@ export const TestAllTypesProto3_MapStringForeignEnumEntry = {
   toJSON(message: TestAllTypesProto3_MapStringForeignEnumEntry): unknown {
     const obj: any = {};
     message.key !== undefined && (obj.key = message.key);
-    message.value !== undefined && (obj.value = foreignEnumToJSON(message.value));
+    message.value !== undefined &&
+      (obj.value = foreignEnumToJSON(message.value));
     return obj;
   },
 
-  create<I extends Exact<DeepPartial<TestAllTypesProto3_MapStringForeignEnumEntry>, I>>(
-    base?: I,
-  ): TestAllTypesProto3_MapStringForeignEnumEntry {
+  create<
+    I extends Exact<
+      DeepPartial<TestAllTypesProto3_MapStringForeignEnumEntry>,
+      I
+    >
+  >(base?: I): TestAllTypesProto3_MapStringForeignEnumEntry {
     return TestAllTypesProto3_MapStringForeignEnumEntry.fromPartial(base ?? {});
   },
 
-  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapStringForeignEnumEntry>, I>>(
-    object: I,
-  ): TestAllTypesProto3_MapStringForeignEnumEntry {
+  fromPartial<
+    I extends Exact<
+      DeepPartial<TestAllTypesProto3_MapStringForeignEnumEntry>,
+      I
+    >
+  >(object: I): TestAllTypesProto3_MapStringForeignEnumEntry {
     const message = createBaseTestAllTypesProto3_MapStringForeignEnumEntry();
     message.key = object.key ?? "";
     message.value = object.value ?? 0;
@@ -4576,7 +5504,10 @@ function createBaseForeignMessage(): ForeignMessage {
 }
 
 export const ForeignMessage = {
-  encode(message: ForeignMessage, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+  encode(
+    message: ForeignMessage,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
     if (message.c !== 0) {
       writer.uint32(8).int32(message.c);
     }
@@ -4611,11 +5542,15 @@ export const ForeignMessage = {
     return obj;
   },
 
-  create<I extends Exact<DeepPartial<ForeignMessage>, I>>(base?: I): ForeignMessage {
+  create<I extends Exact<DeepPartial<ForeignMessage>, I>>(
+    base?: I
+  ): ForeignMessage {
     return ForeignMessage.fromPartial(base ?? {});
   },
 
-  fromPartial<I extends Exact<DeepPartial<ForeignMessage>, I>>(object: I): ForeignMessage {
+  fromPartial<I extends Exact<DeepPartial<ForeignMessage>, I>>(
+    object: I
+  ): ForeignMessage {
     const message = createBaseForeignMessage();
     message.c = object.c ?? 0;
     return message;
@@ -4627,11 +5562,17 @@ function createBaseNullHypothesisProto3(): NullHypothesisProto3 {
 }
 
 export const NullHypothesisProto3 = {
-  encode(_: NullHypothesisProto3, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+  encode(
+    _: NullHypothesisProto3,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): NullHypothesisProto3 {
+  decode(
+    input: _m0.Reader | Uint8Array,
+    length?: number
+  ): NullHypothesisProto3 {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseNullHypothesisProto3();
@@ -4655,11 +5596,15 @@ export const NullHypothesisProto3 = {
     return obj;
   },
 
-  create<I extends Exact<DeepPartial<NullHypothesisProto3>, I>>(base?: I): NullHypothesisProto3 {
+  create<I extends Exact<DeepPartial<NullHypothesisProto3>, I>>(
+    base?: I
+  ): NullHypothesisProto3 {
     return NullHypothesisProto3.fromPartial(base ?? {});
   },
 
-  fromPartial<I extends Exact<DeepPartial<NullHypothesisProto3>, I>>(_: I): NullHypothesisProto3 {
+  fromPartial<I extends Exact<DeepPartial<NullHypothesisProto3>, I>>(
+    _: I
+  ): NullHypothesisProto3 {
     const message = createBaseNullHypothesisProto3();
     return message;
   },
@@ -4670,7 +5615,10 @@ function createBaseEnumOnlyProto3(): EnumOnlyProto3 {
 }
 
 export const EnumOnlyProto3 = {
-  encode(_: EnumOnlyProto3, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+  encode(
+    _: EnumOnlyProto3,
+    writer: _m0.Writer = _m0.Writer.create()
+  ): _m0.Writer {
     return writer;
   },
 
@@ -4698,11 +5646,15 @@ export const EnumOnlyProto3 = {
     return obj;
   },
 
-  create<I extends Exact<DeepPartial<EnumOnlyProto3>, I>>(base?: I): EnumOnlyProto3 {
+  create<I extends Exact<DeepPartial<EnumOnlyProto3>, I>>(
+    base?: I
+  ): EnumOnlyProto3 {
     return EnumOnlyProto3.fromPartial(base ?? {});
   },
 
-  fromPartial<I extends Exact<DeepPartial<EnumOnlyProto3>, I>>(_: I): EnumOnlyProto3 {
+  fromPartial<I extends Exact<DeepPartial<EnumOnlyProto3>, I>>(
+    _: I
+  ): EnumOnlyProto3 {
     const message = createBaseEnumOnlyProto3();
     return message;
   },
@@ -4752,17 +5704,35 @@ function base64FromBytes(arr: Uint8Array): string {
   }
 }
 
-type Builtin = Date | Function | Uint8Array | string | number | boolean | undefined;
+type Builtin =
+  | Date
+  | Function
+  | Uint8Array
+  | string
+  | number
+  | boolean
+  | undefined;
 
-export type DeepPartial<T> = T extends Builtin ? T
-  : T extends Array<infer U> ? Array<DeepPartial<U>> : T extends ReadonlyArray<infer U> ? ReadonlyArray<DeepPartial<U>>
-  : T extends { $case: string } ? { [K in keyof Omit<T, "$case">]?: DeepPartial<T[K]> } & { $case: T["$case"] }
-  : T extends {} ? { [K in keyof T]?: DeepPartial<T[K]> }
+export type DeepPartial<T> = T extends Builtin
+  ? T
+  : T extends Array<infer U>
+  ? Array<DeepPartial<U>>
+  : T extends ReadonlyArray<infer U>
+  ? ReadonlyArray<DeepPartial<U>>
+  : T extends { $case: string }
+  ? { [K in keyof Omit<T, "$case">]?: DeepPartial<T[K]> } & {
+      $case: T["$case"];
+    }
+  : T extends {}
+  ? { [K in keyof T]?: DeepPartial<T[K]> }
   : Partial<T>;
 
 type KeysOfUnion<T> = T extends T ? keyof T : never;
-export type Exact<P, I extends P> = P extends Builtin ? P
-  : P & { [K in keyof P]: Exact<P[K], I[K]> } & { [K in Exclude<keyof I, KeysOfUnion<P>>]: never };
+export type Exact<P, I extends P> = P extends Builtin
+  ? P
+  : P & { [K in keyof P]: Exact<P[K], I[K]> } & {
+      [K in Exclude<keyof I, KeysOfUnion<P>>]: never;
+    };
 
 function toTimestamp(date: Date): Timestamp {
   const seconds = date.getTime() / 1_000;
@@ -4788,7 +5758,9 @@ function fromJsonTimestamp(o: any): Date {
 
 function longToNumber(long: Long): number {
   if (long.gt(Number.MAX_SAFE_INTEGER)) {
-    throw new tsProtoGlobalThis.Error("Value is larger than Number.MAX_SAFE_INTEGER");
+    throw new tsProtoGlobalThis.Error(
+      "Value is larger than Number.MAX_SAFE_INTEGER"
+    );
   }
   return long.toNumber();
 }
