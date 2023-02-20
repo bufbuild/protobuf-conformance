@@ -1,8 +1,7 @@
 # Protobuf Conformance Tests
 
 A repository which runs the protocol buffers
-[conformance test suite](https://github.com/protocolbuffers/protobuf/tree/main/conformance) against various \
-implementations.
+[conformance test suite](https://github.com/protocolbuffers/protobuf/tree/main/conformance) against various implementations.
 
 
 ## Results
