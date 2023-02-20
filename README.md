@@ -13,6 +13,7 @@ A repository which runs the protocol buffers
 | [Protobuf-ES](impl/protobuf-es)         | TypeScript & JavaScript | 100.00%&nbsp;(1477/1477)     | 99.81%&nbsp;(539/540)     |             yes |
 | [protobuf.js](impl/protobuf.js)         | JavaScript & TypeScript | 37.64%&nbsp;(556/1477)     | 13.70%&nbsp;(74/540)     |              no |
 | [ts-proto](impl/ts-proto)               | TypeScript              | 42.92%&nbsp;(634/1477)        | 3.70%&nbsp;(20/540)        |             yes |
+| [protoc-gen-ts](impl/protoc-gen-ts)     | TypeScript              | 26.81%&nbsp;(396/1477)    | 33.15%&nbsp;(179/540)    |             yes |
 <!--- RESULTS-END -->
 
 Note: None of the libraries tested implement the text format so the results for those test runs are not shown.
