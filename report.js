@@ -33,11 +33,17 @@ writeFileSync(templatePath, injectResults(templatePath, table), "utf-8");
 
 
 function required(failures, base) {
-  return `${base.requiredFailures - failures.requiredFailures} / ${base.requiredFailures}`;
+  const total = base.requiredFailures;
+  const passed = base.requiredFailures - failures.requiredFailures;
+  const percentage = (passed / total * 100).toFixed(2);
+  return `${percentage}% (${passed} / ${total})`;
 }
 
 function recommended(failures, base) {
-  return `${base.recommendedFailures - failures.recommendedFailures} / ${base.recommendedFailures}`;
+  const total = base.recommendedFailures;
+  const passed = base.recommendedFailures - failures.recommendedFailures;
+  const percentage = (passed / total * 100).toFixed(2);
+  return `${percentage}% (${passed} / ${total})`;
 }
 
 function countFailures(failureListPath) {
