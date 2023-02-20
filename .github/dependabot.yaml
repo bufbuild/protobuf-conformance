@@ -1,0 +1,49 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      timezone: UTC
+      time: "07:00"
+  - package-ecosystem: "npm"
+    directory: "/impl/baseline"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      timezone: UTC
+      time: "07:00"
+    open-pull-requests-limit: 50
+  - package-ecosystem: "npm"
+    directory: "/impl/google-protobuf"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      timezone: UTC
+      time: "07:00"
+    open-pull-requests-limit: 50
+  - package-ecosystem: "npm"
+    directory: "/impl/protobuf-es"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      timezone: UTC
+      time: "07:00"
+    open-pull-requests-limit: 50
+  - package-ecosystem: "npm"
+    directory: "/impl/protobuf.js"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      timezone: UTC
+      time: "07:00"
+    open-pull-requests-limit: 50
+  - package-ecosystem: "npm"
+    directory: "/impl/ts-proto"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      timezone: UTC
+      time: "07:00"
+    open-pull-requests-limit: 50

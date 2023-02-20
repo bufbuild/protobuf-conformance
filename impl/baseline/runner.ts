@@ -4,35 +4,8 @@ import {
   ConformanceRequest,
   ConformanceResponse,
   FailureSet,
-  TestCategory,
-  WireFormat,
 } from "./gen/conformance/conformance_pb.js";
-import { TestAllTypesProto3 } from "./gen/google/protobuf/test_messages_proto3_pb.js";
-import { TestAllTypesProto2 } from "./gen/google/protobuf/test_messages_proto2_pb.js";
 import { readSync, writeSync } from "fs";
-import {
-  Any,
-  createRegistry,
-  Duration,
-  FieldMask,
-  Int32Value,
-  Message,
-  Struct,
-  Timestamp,
-  Value,
-} from "@bufbuild/protobuf";
-
-const registry = createRegistry(
-  Value,
-  Struct,
-  FieldMask,
-  Timestamp,
-  Duration,
-  Int32Value,
-  TestAllTypesProto3,
-  TestAllTypesProto2,
-  Any
-);
 
 function main() {
   let testCount = 0;
@@ -56,82 +29,10 @@ function test(request: ConformanceRequest): ConformanceResponse["result"] {
     const failureSet = new FailureSet();
     return { case: "protobufPayload", value: failureSet.toBinary() };
   }
-
-  const payloadType = registry.findMessage(request.messageType);
-  if (!payloadType) {
-    return {
-      case: "runtimeError",
-      value: `unknown request message type ${request.messageType}`,
-    };
-  }
-
-  let payload: Message;
-
-  try {
-    switch (request.payload.case) {
-      case "protobufPayload":
-        payload = payloadType.fromBinary(request.payload.value);
-        break;
-
-      case "jsonPayload":
-        payload = payloadType.fromJsonString(request.payload.value, {
-          ignoreUnknownFields:
-            request.testCategory ===
-            TestCategory.JSON_IGNORE_UNKNOWN_PARSING_TEST,
-          typeRegistry: registry,
-        });
-        break;
-
-      default:
-        // We use a failure list instead of skipping, because that is more transparent.
-        return {
-          case: "runtimeError",
-          value: `${request.payload.case ?? "?"} not supported`,
-        };
-    }
-  } catch (err) {
-    // > This string should be set to indicate parsing failed.  The string can
-    // > provide more information about the parse error if it is available.
-    // >
-    // > Setting this string does not necessarily mean the testee failed the
-    // > test.  Some of the test cases are intentionally invalid input.
-    return { case: "parseError", value: String(err) };
-  }
-
-  try {
-    switch (request.requestedOutputFormat) {
-      case WireFormat.PROTOBUF:
-        return {
-          case: "protobufPayload",
-          value: payload.toBinary(),
-        };
-
-      case WireFormat.JSON:
-        return {
-          case: "jsonPayload",
-          value: payload.toJsonString({
-            typeRegistry: registry,
-          }),
-        };
-
-      case WireFormat.JSPB:
-        return { case: "skipped", value: "JSPB not supported." };
-
-      case WireFormat.TEXT_FORMAT:
-        return { case: "skipped", value: "Text format not supported." };
-
-      default:
-        return {
-          case: "runtimeError",
-          value: `unknown requested output format ${request.requestedOutputFormat}`,
-        };
-    }
-  } catch (err) {
-    // > If the input was successfully parsed but errors occurred when
-    // > serializing it to the requested output format, set the error message in
-    // > this field.
-    return { case: "serializeError", value: String(err) };
-  }
+  return {
+    case: "runtimeError",
+    value: "not implemented"
+  };
 }
 
 // Returns true if the test ran successfully, false on legitimate EOF.
