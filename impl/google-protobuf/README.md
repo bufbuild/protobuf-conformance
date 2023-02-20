@@ -12,5 +12,5 @@ A few modifications were made to the file to enable it to run in this environmen
 ## Caveats
 
 - Does not support ESM.
-- Requires additional code generators for TypeScript.
+- Requires community-maintained typings and separate code generators for TypeScript.
 
