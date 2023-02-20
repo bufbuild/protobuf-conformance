@@ -1,5 +1,3 @@
-#!/usr/bin/env -S npx tsx
-
 import { readSync, writeSync } from "fs";
 import {
   ConformanceRequest,
@@ -56,7 +54,7 @@ function test(request: ConformanceRequest): ConformanceResponse["result"] {
         break;
 
       case "jsonPayload":
-        payload = TestAllTypesProto3.fromJSON(request.payload.jsonPayload);
+        TestAllTypesProto3.fromJSON(request.payload.jsonPayload);
         break;
 
       default:
@@ -96,6 +94,7 @@ function test(request: ConformanceRequest): ConformanceResponse["result"] {
         return { $case: "skipped", skipped: "Text format not supported." };
 
       default:
+        process.stderr.write("Unknown");
         return {
           $case: "runtimeError",
           runtimeError: `unknown requested output format ${request.requestedOutputFormat}`,
@@ -111,6 +110,7 @@ function test(request: ConformanceRequest): ConformanceResponse["result"] {
 
 // Returns true if the test ran successfully, false on legitimate EOF.
 // If EOF is encountered in an unexpected place, raises IOError.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function testIo(test: (request: ConformanceRequest) => any): boolean {
   setBlockingStdout();
   const requestLengthBuf = readBuffer(4);
@@ -123,8 +123,8 @@ function testIo(test: (request: ConformanceRequest) => any): boolean {
     throw "Failed to read request.";
   }
   const request = ConformanceRequest.decode(serializedRequest);
-  const result = test(request);
-  const response = ConformanceResponse.create(result);
+  const response = ConformanceResponse.create();
+  response.result = test(request);
   const serializedResponse = ConformanceResponse.encode(response).finish();
   const responseLengthBuf = Buffer.alloc(4);
   responseLengthBuf.writeInt32LE(serializedResponse.length, 0);

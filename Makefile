@@ -98,7 +98,7 @@ $(foreach js,$(sort $(JS_LIBS)),$(eval $(call jslintfunc,$(js))))
 define jsbuildfunc 
 .PHONY: build$(notdir $(1))
 build$(notdir $(1)): gen$(1) $(shell find impl -name '*.ts' -o -name '*.js') license
-	cd impl/$(1)
+	cd impl/$(1) && npm run build
 
 build:: build$(notdir $(1))
 endef
@@ -141,4 +141,4 @@ testconformancegoogleprotobuf: $(BIN)/conformance_test_runner buildgoogle-protob
 .PHONY: testconformancetsproto
 testconformancetsproto: $(BIN)/conformance_test_runner buildts-proto
 	cd impl \
-		&& $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list ts-proto/failing_tests_list.txt --text_format_failure_list ts-proto/failing_tests_text_format.txt --output_dir ts-proto ts-proto/runner.ts
+		&& $(abspath $(BIN)/conformance_test_runner) --enforce_recommended --failure_list ts-proto/failing_tests_list.txt --text_format_failure_list ts-proto/failing_tests_text_format.txt --output_dir ts-proto ts-proto/bin/conformance.js

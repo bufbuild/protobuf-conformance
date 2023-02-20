@@ -136,7 +136,7 @@ export interface FailureSet {
  */
 export interface ConformanceRequest {
   payload?:
-    | { $case: "protobufPayload"; protobufPayload: Buffer }
+    | { $case: "protobufPayload"; protobufPayload: Uint8Array }
     | { $case: "jsonPayload"; jsonPayload: string }
     | { $case: "jspbPayload"; jspbPayload: string }
     | { $case: "textPayload"; textPayload: string };
@@ -171,7 +171,7 @@ export interface ConformanceResponse {
     | { $case: "parseError"; parseError: string }
     | { $case: "serializeError"; serializeError: string }
     | { $case: "runtimeError"; runtimeError: string }
-    | { $case: "protobufPayload"; protobufPayload: Buffer }
+    | { $case: "protobufPayload"; protobufPayload: Uint8Array }
     | { $case: "jsonPayload"; jsonPayload: string }
     | { $case: "skipped"; skipped: string }
     | { $case: "jspbPayload"; jspbPayload: string }
@@ -292,7 +292,7 @@ export const ConformanceRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.payload = { $case: "protobufPayload", protobufPayload: reader.bytes() as Buffer };
+          message.payload = { $case: "protobufPayload", protobufPayload: reader.bytes() };
           break;
         case 2:
           message.payload = { $case: "jsonPayload", jsonPayload: reader.string() };
@@ -329,7 +329,7 @@ export const ConformanceRequest = {
   fromJSON(object: any): ConformanceRequest {
     return {
       payload: isSet(object.protobufPayload)
-        ? { $case: "protobufPayload", protobufPayload: Buffer.from(bytesFromBase64(object.protobufPayload)) }
+        ? { $case: "protobufPayload", protobufPayload: bytesFromBase64(object.protobufPayload) }
         : isSet(object.jsonPayload)
         ? { $case: "jsonPayload", jsonPayload: String(object.jsonPayload) }
         : isSet(object.jspbPayload)
@@ -464,7 +464,7 @@ export const ConformanceResponse = {
           message.result = { $case: "runtimeError", runtimeError: reader.string() };
           break;
         case 3:
-          message.result = { $case: "protobufPayload", protobufPayload: reader.bytes() as Buffer };
+          message.result = { $case: "protobufPayload", protobufPayload: reader.bytes() };
           break;
         case 4:
           message.result = { $case: "jsonPayload", jsonPayload: reader.string() };
@@ -495,7 +495,7 @@ export const ConformanceResponse = {
         : isSet(object.runtimeError)
         ? { $case: "runtimeError", runtimeError: String(object.runtimeError) }
         : isSet(object.protobufPayload)
-        ? { $case: "protobufPayload", protobufPayload: Buffer.from(bytesFromBase64(object.protobufPayload)) }
+        ? { $case: "protobufPayload", protobufPayload: bytesFromBase64(object.protobufPayload) }
         : isSet(object.jsonPayload)
         ? { $case: "jsonPayload", jsonPayload: String(object.jsonPayload) }
         : isSet(object.skipped)

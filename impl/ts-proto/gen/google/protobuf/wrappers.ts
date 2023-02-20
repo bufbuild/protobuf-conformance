@@ -91,7 +91,7 @@ export interface StringValue {
  */
 export interface BytesValue {
   /** The bytes value. */
-  value: Buffer;
+  value: Uint8Array;
 }
 
 function createBaseDoubleValue(): DoubleValue {
@@ -503,7 +503,7 @@ export const StringValue = {
 };
 
 function createBaseBytesValue(): BytesValue {
-  return { value: Buffer.alloc(0) };
+  return { value: new Uint8Array() };
 }
 
 export const BytesValue = {
@@ -522,7 +522,7 @@ export const BytesValue = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.value = reader.bytes() as Buffer;
+          message.value = reader.bytes();
           break;
         default:
           reader.skipType(tag & 7);
@@ -533,13 +533,13 @@ export const BytesValue = {
   },
 
   fromJSON(object: any): BytesValue {
-    return { value: isSet(object.value) ? Buffer.from(bytesFromBase64(object.value)) : Buffer.alloc(0) };
+    return { value: isSet(object.value) ? bytesFromBase64(object.value) : new Uint8Array() };
   },
 
   toJSON(message: BytesValue): unknown {
     const obj: any = {};
     message.value !== undefined &&
-      (obj.value = base64FromBytes(message.value !== undefined ? message.value : Buffer.alloc(0)));
+      (obj.value = base64FromBytes(message.value !== undefined ? message.value : new Uint8Array()));
     return obj;
   },
 
@@ -549,7 +549,7 @@ export const BytesValue = {
 
   fromPartial<I extends Exact<DeepPartial<BytesValue>, I>>(object: I): BytesValue {
     const message = createBaseBytesValue();
-    message.value = object.value ?? Buffer.alloc(0);
+    message.value = object.value ?? new Uint8Array();
     return message;
   },
 };
