@@ -11,19 +11,23 @@ platform=""
 case $(uname -s) in
   Darwin) platform="osx";;
   Linux)  platform="linux";;
-  *) >&2 echo "unknown OS - don't known how to get protoc-gen-js"; exit 1
+  *) >&2 echo "unknown OS $(uname -s) - don't known how to get protoc-gen-js"; exit 1
 esac
 case $(uname -m) in
   arm64)
       platform="${platform}-aarch_64"
       ;;
+  x86_64)
+      platform="${platform}-x86_64"
+      ;;
   *)
-    >&2 echo "unknown architecture - don't known how to get protoc-gen-js"
+    >&2 echo "unknown architecture $(uname -m) - don't known how to get protoc-gen-js"
     exit 1
 esac
+
 curl -sSL \
   "https://github.com/protocolbuffers/protobuf-javascript/releases/download/v${version}/protobuf-javascript-${version}-${platform}.tar.gz" \
-  | tar xJ -C . --strip-components 1
+  | tar xz -C . --strip-components 1
 
 # generate code
 rm -rf gen/*
