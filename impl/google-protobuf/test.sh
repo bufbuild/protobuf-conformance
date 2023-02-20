@@ -11,7 +11,7 @@ platform=""
 case $(uname -s) in
   Darwin) platform="osx";;
   Linux)  platform="linux";;
-  *) >&2 echo "unknown OS $(uname -s) - don't known how to get protoc-gen-js"; exit 1
+  *) >&2 echo "unknown OS $(uname -s) - don't know how to get protoc-gen-js"; exit 1
 esac
 case $(uname -m) in
   arm64)
@@ -21,7 +21,7 @@ case $(uname -m) in
       platform="${platform}-x86_64"
       ;;
   *)
-    >&2 echo "unknown architecture $(uname -m) - don't known how to get protoc-gen-js"
+    >&2 echo "unknown architecture $(uname -m) - don't know how to get protoc-gen-js"
     exit 1
 esac
 
