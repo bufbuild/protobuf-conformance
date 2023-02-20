@@ -7,3 +7,10 @@ The google-protobuf test runner was mostly copied directly from the
 
 A few modifications were made to the file to enable it to run in this environment.  Those changes are listed in the
 [file header](./runner.js).
+
+
+## Caveats
+
+- Does not support ESM.
+- Requires additional code generators for TypeScript.
+
