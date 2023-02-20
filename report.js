@@ -88,6 +88,14 @@ All JavaScript libraries are run using \`tsx\` except where noted below.
 
 Items of note related to the testing setup of the above libraries:
 
+#### google-protobuf
+
+The google-protobuf test runner was mostly copied directly from the 
+[google-protobuf repository](https://github.com/protocolbuffers/protobuf-javascript/tree/main/experimental/runtime/kernel/conformance). 
+
+A few modifications were made to the file to get it to run in this environment.  Those changes are listed in the
+[file header](impl/google-protobuf/runner.ts).
+
 #### Protobuf-ES
 
 In environments where \`BigInt\` is not supported, Protobuf-ES will fallback to a string representation. Consequently,
@@ -114,7 +122,7 @@ for more details.
 
 The \`ts-proto\` library fails generating the \`test_messages_proto2.proto\` file in the Conformance Tests due to its
 usage of [group fields](https://protobuf.dev/reference/protobuf/proto2-spec/#group_field).  As a result, this file is
-skipped during the generation process, causing all \`proto2\` tests to fail.
+intentionally skipped during the generation process, causing all \`proto2\` tests to fail.
 
 In addition, \`ts-proto\` generates duplicate case statements for the \`AliasedEnum\` message in the 
 \`test_messages_proto3.proto\` file. This is because it uses an \`allow_alias\` option, which permits duplicate values. 
