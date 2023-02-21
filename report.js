@@ -39,7 +39,7 @@ function required(failures, base) {
   const fails = failures.requiredFailures;
   const passed = total - fails;
   const percentage = (passed / total * 100).toFixed(0);
-  return `${percentage}%&nbsp;passing&nbsp;(${fails}&nbsp;failures)`;
+  return `${percentage}%&nbsp;passing<br>(${fails}&nbsp;failures)`;
 }
 
 function recommended(failures, base) {
@@ -47,7 +47,7 @@ function recommended(failures, base) {
   const fails = failures.recommendedFailures;
   const passed = total - fails;
   const percentage = (passed / total * 100).toFixed(0);
-  return `${percentage}%&nbsp;passing&nbsp;(${fails}&nbsp;failures)`;
+  return `${percentage}%&nbsp;passing<br>(${fails}&nbsp;failures)`;
 }
 
 function countFailures(failureListPath) {
