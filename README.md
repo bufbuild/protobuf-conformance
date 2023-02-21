@@ -9,10 +9,11 @@ A repository which runs the protocol buffers
 <!--- RESULTS-START -->
 | Implementation                          | Language                | Required tests                        | Recommended tests                        | Standard plugin | 
 |-----------------------------------------|-------------------------|--------------------------------------:|-----------------------------------------:|----------------:|
-| [google-protobuf](impl/google-protobuf) | JavaScript              | 74.07%&nbsp;(1094/1477) | 61.67%&nbsp;(333/540) |             yes |
-| [Protobuf-ES](impl/protobuf-es)         | TypeScript & JavaScript | 100.00%&nbsp;(1477/1477)     | 99.81%&nbsp;(539/540)     |             yes |
-| [protobuf.js](impl/protobuf.js)         | JavaScript & TypeScript | 37.64%&nbsp;(556/1477)     | 13.70%&nbsp;(74/540)     |              no |
-| [ts-proto](impl/ts-proto)               | TypeScript              | 42.92%&nbsp;(634/1477)        | 3.70%&nbsp;(20/540)        |             yes |
+| [google-protobuf](impl/google-protobuf) | JavaScript              | 74%&nbsp;(383&nbsp;failures) | 62%&nbsp;(207&nbsp;failures) |             yes |
+| [Protobuf-ES](impl/protobuf-es)         | TypeScript & JavaScript | 100%&nbsp;(0&nbsp;failures)     | 100%&nbsp;(1&nbsp;failures)     |             yes |
+| [protobuf.js](impl/protobuf.js)         | JavaScript & TypeScript | 38%&nbsp;(921&nbsp;failures)     | 14%&nbsp;(466&nbsp;failures)     |              no |
+| [ts-proto](impl/ts-proto)               | TypeScript              | 43%&nbsp;(843&nbsp;failures)        | 4%&nbsp;(520&nbsp;failures)        |             yes |
+| [protoc-gen-ts](impl/protoc-gen-ts)     | TypeScript              | 27%&nbsp;(1081&nbsp;failures)    | 33%&nbsp;(361&nbsp;failures)    |             yes |
 <!--- RESULTS-END -->
 
 Note: None of the libraries tested implement the text format so the results for those test runs are not shown.

@@ -20,6 +20,7 @@ const googleProtobuf = countFailures("impl/google-protobuf/failing_tests.txt");
 const protobufEs = countFailures("impl/protobuf-es/failing_tests.txt");
 const protobufJs = countFailures("impl/protobuf.js/failing_tests.txt");
 const tsProto = countFailures("impl/ts-proto/failing_tests.txt");
+const protocGenTs = countFailures("impl/protoc-gen-ts/failing_tests.txt");
 const table = `
 | Implementation                          | Language                | Required tests                        | Recommended tests                        | Standard plugin | 
 |-----------------------------------------|-------------------------|--------------------------------------:|-----------------------------------------:|----------------:|
@@ -27,6 +28,7 @@ const table = `
 | [Protobuf-ES](impl/protobuf-es)         | TypeScript & JavaScript | ${required(protobufEs, baseline)}     | ${recommended(protobufEs, baseline)}     |             yes |
 | [protobuf.js](impl/protobuf.js)         | JavaScript & TypeScript | ${required(protobufJs, baseline)}     | ${recommended(protobufJs, baseline)}     |              no |
 | [ts-proto](impl/ts-proto)               | TypeScript              | ${required(tsProto, baseline)}        | ${recommended(tsProto, baseline)}        |             yes |
+| [protoc-gen-ts](impl/protoc-gen-ts)     | TypeScript              | ${required(protocGenTs, baseline)}    | ${recommended(protocGenTs, baseline)}    |             yes |
 `;
 
 writeFileSync(templatePath, injectResults(templatePath, table), "utf-8");
@@ -34,16 +36,18 @@ writeFileSync(templatePath, injectResults(templatePath, table), "utf-8");
 
 function required(failures, base) {
   const total = base.requiredFailures;
-  const passed = base.requiredFailures - failures.requiredFailures;
-  const percentage = (passed / total * 100).toFixed(2);
-  return `${percentage}%&nbsp;(${passed}/${total})`;
+  const fails = failures.requiredFailures;
+  const passed = total - fails;
+  const percentage = (passed / total * 100).toFixed(0);
+  return `${percentage}%&nbsp;(${fails}&nbsp;failures)`;
 }
 
 function recommended(failures, base) {
   const total = base.recommendedFailures;
-  const passed = base.recommendedFailures - failures.recommendedFailures;
-  const percentage = (passed / total * 100).toFixed(2);
-  return `${percentage}%&nbsp;(${passed}/${total})`;
+  const fails = failures.recommendedFailures;
+  const passed = total - fails;
+  const percentage = (passed / total * 100).toFixed(0);
+  return `${percentage}%&nbsp;(${fails}&nbsp;failures)`;
 }
 
 function countFailures(failureListPath) {
