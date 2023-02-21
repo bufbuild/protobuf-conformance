@@ -22,13 +22,13 @@ const protobufJs = countFailures("impl/protobuf.js/failing_tests.txt");
 const tsProto = countFailures("impl/ts-proto/failing_tests.txt");
 const protocGenTs = countFailures("impl/protoc-gen-ts/failing_tests.txt");
 const table = `
-| Implementation                          | Language                | Required tests                        | Recommended tests                        | Standard plugin | 
-|-----------------------------------------|-------------------------|--------------------------------------:|-----------------------------------------:|----------------:|
-| [google-protobuf](impl/google-protobuf) | JavaScript              | ${required(googleProtobuf, baseline)} | ${recommended(googleProtobuf, baseline)} |             yes |
-| [Protobuf-ES](impl/protobuf-es)         | TypeScript & JavaScript | ${required(protobufEs, baseline)}     | ${recommended(protobufEs, baseline)}     |             yes |
-| [protobuf.js](impl/protobuf.js)         | JavaScript & TypeScript | ${required(protobufJs, baseline)}     | ${recommended(protobufJs, baseline)}     |              no |
-| [protoc-gen-ts](impl/protoc-gen-ts)     | TypeScript              | ${required(protocGenTs, baseline)}    | ${recommended(protocGenTs, baseline)}    |             yes |
-| [ts-proto](impl/ts-proto)               | TypeScript              | ${required(tsProto, baseline)}        | ${recommended(tsProto, baseline)}        |             yes |
+| Implementation                          | JavaScript         | TypeScript         | Required tests                        | Recommended tests                        | Standard plugin    |
+|-----------------------------------------|--------------------|--------------------|--------------------------------------:|-----------------------------------------:|-------------------:|
+| [google-protobuf](impl/google-protobuf) | :heavy_check_mark: | :x:                | ${required(googleProtobuf, baseline)} | ${recommended(googleProtobuf, baseline)} | :heavy_check_mark: |
+| [Protobuf-ES](impl/protobuf-es)         | :heavy_check_mark: | :heavy_check_mark: | ${required(protobufEs, baseline)}     | ${recommended(protobufEs, baseline)}     | :heavy_check_mark: |
+| [protobuf.js](impl/protobuf.js)         | :heavy_check_mark: | :heavy_check_mark: | ${required(protobufJs, baseline)}     | ${recommended(protobufJs, baseline)}     | :x:                |
+| [protoc-gen-ts](impl/protoc-gen-ts)     | :x:                | :heavy_check_mark: | ${required(protocGenTs, baseline)}    | ${recommended(protocGenTs, baseline)}    | :heavy_check_mark: |
+| [ts-proto](impl/ts-proto)               | :x:                | :heavy_check_mark: | ${required(tsProto, baseline)}        | ${recommended(tsProto, baseline)}        | :heavy_check_mark: |
 `;
 
 writeFileSync(templatePath, injectResults(templatePath, table), "utf-8");
