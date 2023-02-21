@@ -27,8 +27,8 @@ const table = `
 | [google-protobuf](impl/google-protobuf) | JavaScript              | ${required(googleProtobuf, baseline)} | ${recommended(googleProtobuf, baseline)} |             yes |
 | [Protobuf-ES](impl/protobuf-es)         | TypeScript & JavaScript | ${required(protobufEs, baseline)}     | ${recommended(protobufEs, baseline)}     |             yes |
 | [protobuf.js](impl/protobuf.js)         | JavaScript & TypeScript | ${required(protobufJs, baseline)}     | ${recommended(protobufJs, baseline)}     |              no |
-| [ts-proto](impl/ts-proto)               | TypeScript              | ${required(tsProto, baseline)}        | ${recommended(tsProto, baseline)}        |             yes |
 | [protoc-gen-ts](impl/protoc-gen-ts)     | TypeScript              | ${required(protocGenTs, baseline)}    | ${recommended(protocGenTs, baseline)}    |             yes |
+| [ts-proto](impl/ts-proto)               | TypeScript              | ${required(tsProto, baseline)}        | ${recommended(tsProto, baseline)}        |             yes |
 `;
 
 writeFileSync(templatePath, injectResults(templatePath, table), "utf-8");
@@ -38,16 +38,16 @@ function required(failures, base) {
   const total = base.requiredFailures;
   const fails = failures.requiredFailures;
   const passed = total - fails;
-  const percentage = (passed / total * 100).toFixed(0);
-  return `${percentage}%&nbsp;(${fails}&nbsp;failures)`;
+  const percentage = (passed / total * 100).toFixed(1);
+  return `${percentage}%&nbsp;passing<br>(${fails}&nbsp;failures)`;
 }
 
 function recommended(failures, base) {
   const total = base.recommendedFailures;
   const fails = failures.recommendedFailures;
   const passed = total - fails;
-  const percentage = (passed / total * 100).toFixed(0);
-  return `${percentage}%&nbsp;(${fails}&nbsp;failures)`;
+  const percentage = (passed / total * 100).toFixed(1);
+  return `${percentage}%&nbsp;passing<br>(${fails}&nbsp;failures)`;
 }
 
 function countFailures(failureListPath) {
