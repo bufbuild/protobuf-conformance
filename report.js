@@ -21,9 +21,23 @@ const protobufEs = countFailures("impl/protobuf-es/failing_tests.txt");
 const protobufJs = countFailures("impl/protobuf.js/failing_tests.txt");
 const tsProto = countFailures("impl/ts-proto/failing_tests.txt");
 const protocGenTs = countFailures("impl/protoc-gen-ts/failing_tests.txt");
+
+const percentages = (property) => (failures, base) => {
+  const total = base[property];
+  const fails = failures[property];
+  const passed = total - fails;
+  const percentage = ((passed / total) * 100).toFixed(1);
+  return `![](https://progress-bar.dev/${Math.floor(
+    percentage
+  )})<br/>${percentage}%&nbsp;passing<br>(${fails}&nbsp;failures)`;
+};
+
+const required = percentages("requiredFailures");
+const recommended = percentages("recommendedFailures");
+
 const table = `
 | Implementation                          | JavaScript         | TypeScript         | Required tests                        | Recommended tests                        | Standard plugin    |
-|-----------------------------------------|--------------------|--------------------|--------------------------------------:|-----------------------------------------:|-------------------:|
+|-----------------------------------------|:------------------:|:------------------:|:-------------------------------------:|:----------------------------------------:|:------------------:|
 | [google-protobuf](impl/google-protobuf) | :heavy_check_mark: | :x:                | ${required(googleProtobuf, baseline)} | ${recommended(googleProtobuf, baseline)} | :heavy_check_mark: |
 | [Protobuf-ES](impl/protobuf-es)         | :heavy_check_mark: | :heavy_check_mark: | ${required(protobufEs, baseline)}     | ${recommended(protobufEs, baseline)}     | :heavy_check_mark: |
 | [protobuf.js](impl/protobuf.js)         | :heavy_check_mark: | :heavy_check_mark: | ${required(protobufJs, baseline)}     | ${recommended(protobufJs, baseline)}     | :x:                |
@@ -33,34 +47,18 @@ const table = `
 
 writeFileSync(templatePath, injectResults(templatePath, table), "utf-8");
 
-
-function required(failures, base) {
-  const total = base.requiredFailures;
-  const fails = failures.requiredFailures;
-  const passed = total - fails;
-  const percentage = (passed / total * 100).toFixed(1);
-  return `${percentage}%&nbsp;passing<br>(${fails}&nbsp;failures)`;
-}
-
-function recommended(failures, base) {
-  const total = base.recommendedFailures;
-  const fails = failures.recommendedFailures;
-  const passed = total - fails;
-  const percentage = (passed / total * 100).toFixed(1);
-  return `${percentage}%&nbsp;passing<br>(${fails}&nbsp;failures)`;
-}
-
 function countFailures(failureListPath) {
   const lines = readFileSync(failureListPath, "utf-8")
     .split("\n")
-    .filter(line => line.trim().length > 0)
-    .filter(line => !line.startsWith("#"));
+    .filter((line) => line.trim().length > 0)
+    .filter((line) => !line.startsWith("#"));
   return {
-    requiredFailures: lines.filter(line => line.startsWith("Required.")).length,
-    recommendedFailures: lines.filter(line => line.startsWith("Recommended.")).length,
+    requiredFailures: lines.filter((line) => line.startsWith("Required."))
+      .length,
+    recommendedFailures: lines.filter((line) => line.startsWith("Recommended."))
+      .length,
   };
 }
-
 
 function injectResults(filePath, content) {
   const cStart = "<!--- RESULTS-START -->";
@@ -73,4 +71,3 @@ function injectResults(filePath, content) {
   const foot = fileContent.substring(iEnd);
   return head + content + foot;
 }
-
