@@ -12,21 +12,11 @@ import { TestAllTypesProto2 } from "./gen/google/protobuf/test_messages_proto2.j
 import { readSync, writeSync } from "fs";
 import { Any } from "./gen/google/protobuf/any.js";
 import { Duration } from "./gen/google/protobuf/duration.js";
-import {
-  FieldMask
-} from "./gen/google/protobuf/field_mask.js";
-import {
-  Int32Value
-} from "./gen/google/protobuf/wrappers.js";
-import {
-  Struct
-} from "./gen/google/protobuf/struct.js";
-import {
-  Timestamp
-} from "./gen/google/protobuf/timestamp.js";
-import {
-  Value
-} from "./gen/google/protobuf/struct.js";
+import { FieldMask } from "./gen/google/protobuf/field_mask.js";
+import { Int32Value } from "./gen/google/protobuf/wrappers.js";
+import { Struct } from "./gen/google/protobuf/struct.js";
+import { Timestamp } from "./gen/google/protobuf/timestamp.js";
+import { Value } from "./gen/google/protobuf/struct.js";
 
 const registry: Record<string, any> = {
   "google.protobuf.Any": Any,
