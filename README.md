@@ -3,6 +3,15 @@
 A repository which runs the protocol buffers
 [conformance test suite](https://github.com/protocolbuffers/protobuf/tree/main/conformance) against various implementations.
 
+## Implementations
+
+The current implementations being tested are:
+
+* Protobuf-ES:  https://github.com/bufbuild/protobuf-es
+* google-protobuf:  https://github.com/protocolbuffers/protobuf-javascript
+* protobuf.js:  https://github.com/protobufjs/protobuf.js/
+* protoc-gen-ts:  https://github.com/thesayyn/protoc-gen-ts
+* ts-proto:  https://github.com/stephenh/ts-proto
 
 ## Results
 
