@@ -1,5 +1,6 @@
 #!/usr/bin/env -S npx tsx
 
+import type { IMessageType } from "@protobuf-ts/runtime";
 import {
   ConformanceRequest,
   ConformanceResponse,
@@ -18,17 +19,17 @@ import { Struct } from "./gen/google/protobuf/struct.js";
 import { Timestamp } from "./gen/google/protobuf/timestamp.js";
 import { Value } from "./gen/google/protobuf/struct.js";
 
-const registry: Record<string, any> = {
-  "google.protobuf.Any": Any,
-  "google.protobuf.Duration": Duration,
-  "google.protobuf.FieldMask": FieldMask,
-  "google.protobuf.Int32Value": Int32Value,
-  "google.protobuf.Struct": Struct,
-  "google.protobuf.Value": Value,
-  "google.protobuf.Timestamp": Timestamp,
-  "protobuf_test_messages.proto2.TestAllTypesProto2": TestAllTypesProto2,
-  "protobuf_test_messages.proto3.TestAllTypesProto3": TestAllTypesProto3
-};
+const typeRegistry = [
+  Value,
+  Struct,
+  FieldMask,
+  Timestamp,
+  Duration,
+  Int32Value,
+  TestAllTypesProto3,
+  TestAllTypesProto2,
+  Any,
+] as const;
 
 function main() {
   let testCount = 0;
@@ -44,45 +45,69 @@ function main() {
   }
 }
 
-function test(request: ConformanceRequest): ConformanceResponse["result"] {
+function test(request: ConformanceRequest): ConformanceResponse {
   if (request.messageType === FailureSet.typeName) {
     // > The conformance runner will request a list of failures as the first request.
     // > This will be known by message_type == "conformance.FailureSet", a conformance
     // > test should return a serialized FailureSet in protobuf_payload.
-    return { oneofKind: "protobufPayload", protobufPayload: FailureSet.toBinary(FailureSet.create()) };
+    return ConformanceResponse.create({
+      result: {
+        oneofKind: "protobufPayload",
+        protobufPayload: FailureSet.toBinary(FailureSet.create()),
+      },
+    });
   }
 
-  const payloadType = registry[request.messageType];
-  if (!payloadType) {
-    return {
-      oneofKind: "runtimeError",
-      runtimeError: `unknown request message type ${request.messageType}`,
-    };
-  }
+  let testMessage: object;
+  let testMessageType: IMessageType<object>;
+  let response = ConformanceResponse.create();
 
-  let payload: any;
+  switch (request.messageType) {
+    case TestAllTypesProto3.typeName:
+      testMessageType = TestAllTypesProto3;
+      break;
+
+    case TestAllTypesProto2.typeName:
+      testMessageType = TestAllTypesProto2;
+      break;
+
+    default:
+      return ConformanceResponse.create({
+        result: {
+          oneofKind: "runtimeError",
+          runtimeError: `unknown request message type ${request.messageType}`,
+        },
+      });
+  }
 
   try {
     switch (request.payload.oneofKind) {
       case "protobufPayload":
-        payload = payloadType.fromBinary(request.payload.protobufPayload);
+        testMessage = testMessageType.fromBinary(
+          request.payload.protobufPayload
+        );
         break;
 
       case "jsonPayload":
-        payload = payloadType.fromJsonString(request.payload.jsonPayload, {
-          ignoreUnknownFields:
-            request.testCategory ===
-            TestCategory.JSON_IGNORE_UNKNOWN_PARSING_TEST,
-          typeRegistry: registry,
-        });
+        testMessage = testMessageType.fromJsonString(
+          request.payload.jsonPayload,
+          {
+            ignoreUnknownFields:
+              request.testCategory ===
+              TestCategory.JSON_IGNORE_UNKNOWN_PARSING_TEST,
+            typeRegistry,
+          }
+        );
         break;
 
       default:
         // We use a failure list instead of skipping, because that is more transparent.
-        return {
-          oneofKind: "runtimeError",
-          runtimeError: `${request.payload.oneofKind ?? "?"} not supported`,
-        };
+        return ConformanceResponse.create({
+          result: {
+            oneofKind: "runtimeError",
+            runtimeError: `${request.payload.oneofKind ?? "?"} not supported`,
+          },
+        });
     }
   } catch (err) {
     // > This string should be set to indicate parsing failed.  The string can
@@ -90,49 +115,66 @@ function test(request: ConformanceRequest): ConformanceResponse["result"] {
     // >
     // > Setting this string does not necessarily mean the testee failed the
     // > test.  Some of the test cases are intentionally invalid input.
-    return { oneofKind: "parseError", parseError: String(err) };
+    return ConformanceResponse.create({
+      result: { oneofKind: "parseError", parseError: String(err) },
+    });
   }
 
   try {
     switch (request.requestedOutputFormat) {
       case WireFormat.PROTOBUF:
-        return {
+        response.result = {
           oneofKind: "protobufPayload",
-          protobufPayload: payloadType.toBinary(payload),
+          protobufPayload: testMessageType.toBinary(testMessage),
         };
+        break;
 
       case WireFormat.JSON:
-        return {
+        response.result = {
           oneofKind: "jsonPayload",
-          jsonPayload: payloadType.toJsonString(payload, {
-            typeRegistry: registry,
+          jsonPayload: testMessageType.toJsonString(testMessage, {
+            typeRegistry,
           }),
         };
+        break;
 
       case WireFormat.JSPB:
-        return { oneofKind: "skipped", skipped: "JSPB not supported." };
+        response.result = {
+          oneofKind: "skipped",
+          skipped: "JSPB not supported.",
+        };
+        return response;
 
       case WireFormat.TEXT_FORMAT:
-        return { oneofKind: "skipped", skipped: "Text format not supported." };
+        response.result = {
+          oneofKind: "skipped",
+          skipped: "Text format not supported.",
+        };
+        return response;
 
       default:
-        return {
-          oneofKind: "runtimeError",
-          runtimeError: `unknown requested output format ${request.requestedOutputFormat}`,
-        };
+        return ConformanceResponse.create({
+          result: {
+            oneofKind: "runtimeError",
+            runtimeError: `unknown requested output format ${request.requestedOutputFormat}`,
+          },
+        });
     }
   } catch (err) {
     // > If the input was successfully parsed but errors occurred when
     // > serializing it to the requested output format, set the error message in
     // > this field.
-    return { oneofKind: "serializeError", serializeError: String(err) };
+    return ConformanceResponse.create({
+      result: { oneofKind: "serializeError", serializeError: String(err) },
+    });
   }
+  return response;
 }
 
 // Returns true if the test ran successfully, false on legitimate EOF.
 // If EOF is encountered in an unexpected place, raises IOError.
 function testIo(
-  test: (request: ConformanceRequest) => ConformanceResponse["result"]
+  test: (request: ConformanceRequest) => ConformanceResponse
 ): boolean {
   setBlockingStdout();
   const requestLengthBuf = readBuffer(4);
@@ -145,8 +187,7 @@ function testIo(
     throw "Failed to read request.";
   }
   const request = ConformanceRequest.fromBinary(serializedRequest);
-  const response = ConformanceResponse.create();
-  response.result = test(request);
+  const response = test(request);
   const serializedResponse = ConformanceResponse.toBinary(response);
   const responseLengthBuf = Buffer.alloc(4);
   responseLengthBuf.writeInt32LE(serializedResponse.length, 0);

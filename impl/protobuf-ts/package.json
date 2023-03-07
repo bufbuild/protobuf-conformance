@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@protobuf-ts/plugin": "^2.8.2"
+    "@protobuf-ts/plugin": "^2.8.2",
+    "@protobuf-ts/runtime": "^2.8.2"
   },
   "devDependencies": {
     "@bufbuild/buf": "^1.15.0",
