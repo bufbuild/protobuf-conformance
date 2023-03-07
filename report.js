@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import {readFileSync, writeFileSync} from "fs";
+import { readFileSync, writeFileSync } from "fs";
 
 const templatePath = "README.md";
 const baseline = countFailures("impl/baseline/failing_tests.txt");
