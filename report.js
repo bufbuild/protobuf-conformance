@@ -27,10 +27,20 @@ const percentages = (property) => (failures, base) => {
   const total = base[property];
   const fails = failures[property];
   const passed = total - fails;
-  const percentage = ((passed / total) * 100).toFixed(1);
-  return `![](https://progress-bar.dev/${Math.floor(
-    percentage
-  )})<br/>${percentage}%&nbsp;passing<br>(${fails}&nbsp;failures)`;
+  const percentage = (passed / total) * 100;
+  const [sig, fra] = new Intl.NumberFormat("en-US", {
+    maximumSignificantDigits: 3,
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 1
+  }).format(percentage).split(".");
+  const url = new URL(`https://progress-bar.dev/${sig}`);
+  url.searchParams.set("width", "100");
+  if (fra === undefined) {
+    url.searchParams.set("suffix", `% passing`);
+  } else {
+    url.searchParams.set("suffix", `.${fra}% passing`);
+  }
+  return `<sub><img src="${url}" height="25" width="125" /></sub><br><sup>(${fails}&nbsp;failures)<sub>`;
 };
 
 const required = percentages("requiredFailures");
