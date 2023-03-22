@@ -8,6 +8,7 @@ MAKEFLAGS += --no-builtin-rules
 MAKEFLAGS += --no-print-directory
 TMP   = .tmp
 BIN   = .tmp/bin
+DIST  = .tmp/dist
 PB   =  .tmp/protobuf-$(GOOGLE_PROTOBUF_VERSION)
 LICENSE_HEADER_YEAR_RANGE := 2023
 GOOGLE_PROTOBUF_VERSION = 22.2
@@ -27,6 +28,12 @@ $(BIN)/conformance_test_runner: $(PB) Makefile
 	@cp $(PB)/conformance/conformance.proto proto/conformance
 	@cp $(PB)/src/google/protobuf/test_messages*.proto proto/google/protobuf/
 	@touch $(@)
+
+.PHONY: release
+release: $(BIN)/conformance_test_runner ## Creates a binary with version for release
+	@rm -rf $(DIST)
+	@mkdir $(DIST)
+	@cp -f $(PB)/bazel-bin/conformance/conformance_test_runner $(DIST)/conformance_test_runner-v$(GOOGLE_PROTOBUF_VERSION)
 
 .PHONY: all
 all: test license  ## Run conformance tests and update license headers
