@@ -30,7 +30,7 @@ $(BIN)/conformance_test_runner: $(PB) Makefile
 	@touch $(@)
 
 .PHONY: release
-release: $(BIN)/conformance_test_runner ## Creates a binary with version for release
+release: all checkdiff ## Creates a binary with version for release
 	@rm -rf $(DIST)
 	@mkdir $(DIST)
 	@cp -f $(PB)/bazel-bin/conformance/conformance_test_runner $(DIST)/conformance_test_runner-v$(GOOGLE_PROTOBUF_VERSION)
@@ -64,6 +64,6 @@ license: Makefile ## Updates license headers
 
 .PHONY: checkdiff
 checkdiff:
-	@# Used in CI to verify that `make` doesn't produce a diff
+	@# Used to verify that `make` doesn't produce a diff
 	test -z "$$(git status --porcelain | tee /dev/stderr)"
 
