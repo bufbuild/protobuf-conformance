@@ -1,0 +1,5 @@
+!**/dist/index.html
+**/dist/*
+coverage
+node_modules
+todo.txt
