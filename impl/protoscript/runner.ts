@@ -5,8 +5,8 @@ import {
   ConformanceResponse,
   FailureSet,
   WireFormat,
-} from "./gen/conformance/conformance.pb";
-import { TestAllTypesProto3, TestAllTypesProto3JSON } from "./gen/google/protobuf/test_messages_proto3.pb";
+} from "./gen/conformance/conformance.pb.js";
+import { TestAllTypesProto3, TestAllTypesProto3JSON } from "./gen/google/protobuf/test_messages_proto3.pb.js";
 import { readSync, writeSync } from "fs";
 // import {
 //   Any,
@@ -17,7 +17,6 @@ import { readSync, writeSync } from "fs";
 //   Timestamp,
 //   Value,
 // } from "protoscript";
-
 
 function main() {
   let testCount = 0;
@@ -122,26 +121,23 @@ function test(request: ConformanceRequest): ConformanceResponse {
 function testIo(
   test: (request: ConformanceRequest) => ConformanceResponse
 ): boolean {
+  console.trace(`setBlockingStdout...`);
   setBlockingStdout();
 
-  console.error(`readBuffer(4)...`);
-  const requestLengthBuf = readBuffer(1);
-  console.error(`buffer=`, requestLengthBuf);
-  readBuffer(3); // DELETEME
+  console.trace(`readBuffer(4)...`);
+  const requestLengthBuf = readBuffer(4);
   if (requestLengthBuf === "EOF") {
     return false;
   }
 
-  console.error(`readInt32LE(0)...`);
-  const requestLength = 28; // DELETEME
-  // const requestLength = requestLengthBuf.readInt32LE(0);
-  console.error(`reading request, length=${requestLength}...`);
+  const requestLength = requestLengthBuf.readInt32LE(0);
+  console.trace(`reading request, length=${requestLength}...`);
   const serializedRequest = readBuffer(requestLength);
   if (serializedRequest === "EOF") {
     throw "Failed to read request.";
   }
 
-  console.error(`decoding request...`);
+  console.trace(`decoding request...`);
   const request = ConformanceRequest.decode(serializedRequest);
   if (request.messageType === "conformance.FailureSet") {
     // HACKS

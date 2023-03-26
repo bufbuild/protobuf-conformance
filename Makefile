@@ -13,14 +13,14 @@ LICENSE_HEADER_YEAR_RANGE := 2023
 GOOGLE_PROTOBUF_VERSION = 22.2
 BAZEL_VERSION = 5.4.0
 
-$(PB):
+$(PB): Makefile
 	echo $(PB)
 	@mkdir -p $(TMP)
-	curl -L https://github.com/protocolbuffers/protobuf/releases/download/v$(GOOGLE_PROTOBUF_VERSION)/protobuf-$(GOOGLE_PROTOBUF_VERSION).tar.gz \
-		> $(TMP)/protobuf-$(GOOGLE_PROTOBUF_VERSION).tar.gz
-	tar -xzf $(TMP)/protobuf-$(GOOGLE_PROTOBUF_VERSION).tar.gz -C $(TMP)/
+	# curl -L https://github.com/protocolbuffers/protobuf/releases/download/v$(GOOGLE_PROTOBUF_VERSION)/protobuf-$(GOOGLE_PROTOBUF_VERSION).tar.gz \
+	# 	> $(TMP)/protobuf-$(GOOGLE_PROTOBUF_VERSION).tar.gz
+	# tar -xzf $(TMP)/protobuf-$(GOOGLE_PROTOBUF_VERSION).tar.gz -C $(TMP)/
 
-$(BIN)/conformance_test_runner: $(PB)
+$(BIN)/conformance_test_runner: $(PB) $(PB)/conformance/conformance_test_runner.cc Makefile
 	@mkdir -p $(@D)
 	cd $(PB) && USE_BAZEL_VERSION=$(BAZEL_VERSION) bazel build test_messages_proto3_cc_proto conformance:conformance_proto conformance:conformance_test conformance:conformance_test_runner
 	cp -f $(PB)/bazel-bin/conformance/conformance_test_runner $(@D)
@@ -37,7 +37,7 @@ help: ## Describe useful make targets
 
 .PHONY: test
 test: $(BIN)/conformance_test_runner  ## Run conformance tests
-	cd impl/protoscript;       PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
+	cd impl/protoscript;     PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
 	# cd impl/ts-proto;        PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
 	# cd impl/protobuf.js;     PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
 	# cd impl/google-protobuf; PATH="$(abspath $(BIN)):$(PATH)" ./test.sh

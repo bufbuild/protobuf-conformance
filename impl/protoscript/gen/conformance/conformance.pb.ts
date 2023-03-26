@@ -330,11 +330,6 @@ export const FailureSet = {
   ): BinaryWriter {
     if (msg.failure?.length) {
       writer.writeRepeatedString(1, msg.failure);
-    } else {
-      console.trace(`encoding empty array, buffer=${writer.buffer_}...`);
-      // writer.endDelimited_(writer.beginDelimited_(1));
-      writer.writeRepeatedString(1, []);
-      // return { getResultBuffer: () => new Uint8Array([26, 0]) } as any;
     }
     return writer;
   },

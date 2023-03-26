@@ -22,7 +22,6 @@
     "package:build": "npm install && npm run clean && npm run build:commonjs && npm run build:module && chmod +x dist/compiler.js dist/cli/index.js && cp src/compiler.cmd dist/compiler.cmd && npm run package:prune && npm run package:copy:files",
     "package:copy:files": "cp ./LICENSE ./README.md dist/ && cp ./public.package.json dist/package.json",
     "package:prune": "find dist -name *test* -delete",
-    "prepare": "husky install",
     "test": "jest",
     "test:ci": "npm run e2e:setup && npm run test --coverage",
     "typecheck": "tsc --noEmit"
@@ -43,7 +42,6 @@
     "esbuild": "^0.15.5",
     "eslint": "^8.19.0",
     "eslint-config-prettier": "^8.1.0",
-    "husky": "^8.0.1",
     "jest": "^29.0.1",
     "prettier": "^2.7.1",
     "prettier-package-json": "^2.6.4",
