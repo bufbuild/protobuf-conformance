@@ -1,6 +1,0 @@
-{
-  "name": "test-serialization",
-  "dependencies": {
-    "protoscript": "file:../../dist"
-  }
-}
