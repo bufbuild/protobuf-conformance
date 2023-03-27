@@ -10,40 +10,24 @@ import { TestAllTypesProto2, TestAllTypesProto2JSON } from "./gen/google/protobu
 import { TestAllTypesProto3, TestAllTypesProto3JSON } from "./gen/google/protobuf/test_messages_proto3.pb.js";
 import { readSync, writeSync } from "fs";
 
-function timeSync<R>(label: string, fn: () => R, enabled = false): R {
-  if (!enabled) return fn();
-
-  let startedAt = new Date();
-  try {
-    return fn();
-  } finally {
-    const elapsedMs = new Date().valueOf() - startedAt.valueOf();
-    console.error(`${label},time=${elapsedMs}ms`);
-  }
-}
-
-function timedSync<A extends Array<any>, R>(label: string, fn: (...args: A) => R) {
-  return (...args: A) => timeSync(label, () => fn(...args));
-}
-
 const proto2serializer = {
-  decodeProtobuf: timedSync("TestAllTypesProto2.decode", TestAllTypesProto2.decode.bind(TestAllTypesProto2)),
-  decodeJson: timedSync("TestAllTypesProto2JSON.decode", TestAllTypesProto2JSON.decode.bind(TestAllTypesProto2JSON)),
-  encodeProtobuf: timedSync("TestAllTypesProto2.encode", TestAllTypesProto2.encode.bind(TestAllTypesProto2)),
-  encodeJson: timedSync("TestAllTypesProto2JSON.encode", TestAllTypesProto2JSON.encode.bind(TestAllTypesProto2JSON)),
+  decodeProtobuf: TestAllTypesProto2.decode.bind(TestAllTypesProto2),
+  decodeJson: TestAllTypesProto2JSON.decode.bind(TestAllTypesProto2JSON),
+  encodeProtobuf: TestAllTypesProto2.encode.bind(TestAllTypesProto2),
+  encodeJson: TestAllTypesProto2JSON.encode.bind(TestAllTypesProto2JSON),
 }
 
 const proto3serializer = {
-  decodeProtobuf: timedSync("TestAllTypesProto3.decode", TestAllTypesProto3.decode.bind(TestAllTypesProto3)),
-  decodeJson: timedSync("TestAllTypesProto3JSON.decode", TestAllTypesProto3JSON.decode.bind(TestAllTypesProto3JSON)),
-  encodeProtobuf: timedSync("TestAllTypesProto3.encode", TestAllTypesProto3.encode.bind(TestAllTypesProto3)),
-  encodeJson: timedSync("TestAllTypesProto3JSON.encode", TestAllTypesProto3JSON.encode.bind(TestAllTypesProto3JSON)),
+  decodeProtobuf: TestAllTypesProto3.decode.bind(TestAllTypesProto3),
+  decodeJson: TestAllTypesProto3JSON.decode.bind(TestAllTypesProto3JSON),
+  encodeProtobuf: TestAllTypesProto3.encode.bind(TestAllTypesProto3),
+  encodeJson: TestAllTypesProto3JSON.encode.bind(TestAllTypesProto3JSON),
 }
 
 function main() {
   let testCount = 0;
   try {
-    while (timeSync(`test.${testCount}`, () => testIo(test))) {
+    while (testIo(test)) {
       testCount += 1;
     }
   } catch (e) {
@@ -59,25 +43,31 @@ function test(request: ConformanceRequest): ConformanceResponse {
     // > The conformance runner will request a list of failures as the first request.
     // > This will be known by message_type == "conformance.FailureSet", a conformance
     // > test should return a serialized FailureSet in protobuf_payload.
-    return { protobufPayload: timeSync("encodeFailureSet", () => FailureSet.encode({})) };
+    return {
+      protobufPayload: FailureSet.encode({})
+    };
   }
 
+  const serializer = request.messageType === "protobuf_test_messages.proto3.TestAllTypesProto3"
+    ? proto3serializer
+    : request.messageType === "protobuf_test_messages.proto2.TestAllTypesProto2"
+      ? proto2serializer
+      : undefined;
 
-  let serializer: typeof proto2serializer | typeof proto3serializer;
-  if (request.messageType === "protobuf_test_messages.proto3.TestAllTypesProto3") {
-    serializer = proto3serializer;
-  } else if (request.messageType === "protobuf_test_messages.proto2.TestAllTypesProto2") {
-    serializer = proto2serializer;
-  } else {
+  if (!serializer) {
     return { runtimeError: `unknown request message type ${request.messageType}` };
   }
 
-  let testMessage: any;
+  let testMessage: object;
   try {
     if (request.protobufPayload) {
-      testMessage = serializer.decodeProtobuf(request.protobufPayload);
+      testMessage = serializer.decodeProtobuf(
+        request.protobufPayload
+      );
     } else if (request.jsonPayload) {
-      testMessage = serializer.decodeJson(request.jsonPayload);
+      testMessage = serializer.decodeJson(
+        request.jsonPayload
+      );
     } else {
       // We use a failure list instead of skipping, because that is more transparent.
       return { runtimeError: `${request} not supported` };
@@ -88,12 +78,10 @@ function test(request: ConformanceRequest): ConformanceResponse {
     // >
     // > Setting this string does not necessarily mean the testee failed the
     // > test.  Some of the test cases are intentionally invalid input.
-    // console.error(err);
     return { parseError: String(err) };
   }
 
   try {
-    console.error(`requestedOutputFormat=${request.requestedOutputFormat}`);
     switch (request.requestedOutputFormat) {
       case WireFormat.PROTOBUF:
         return { protobufPayload: serializer.encodeProtobuf(testMessage) };
@@ -136,10 +124,10 @@ function testIo(
     throw "Failed to read request.";
   }
 
-  const request = timeSync("decodeRequest", () => ConformanceRequest.decode(serializedRequest));
+  const request = ConformanceRequest.decode(serializedRequest);
   const response = test(request);
 
-  const serializedResponse = timeSync("encodeResponse", () => ConformanceResponse.encode(response));
+  const serializedResponse = ConformanceResponse.encode(response);
   const responseLengthBuf = Buffer.alloc(4);
   responseLengthBuf.writeInt32LE(serializedResponse.length, 0);
   writeBuffer(responseLengthBuf);
