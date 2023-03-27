@@ -20,7 +20,7 @@ function titleCase(str: string): string {
 
 function camelCase(segments: string[]): string {
   const [first, ...rest] = segments;
-  return first + rest.filter(Boolean).map(titleCase).join("");
+  return first + rest.map(titleCase).join("");
 }
 
 const FileLabel = {
