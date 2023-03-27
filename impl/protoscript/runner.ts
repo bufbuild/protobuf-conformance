@@ -33,7 +33,6 @@ function main() {
 }
 
 function test(request: ConformanceRequest): ConformanceResponse {
-  console.trace(request);
   if (request.messageType === "conformance.FailureSet") {
     // > The conformance runner will request a list of failures as the first request.
     // > This will be known by message_type == "conformance.FailureSet", a conformance
@@ -52,14 +51,9 @@ function test(request: ConformanceRequest): ConformanceResponse {
     encodeJson: TestAllTypesProto3JSON.encode.bind(TestAllTypesProto3JSON),
   };
 
-  console.trace(request.messageType);
   switch (request.messageType) {
-    case "google.protobuf.TestAllTypesProto3":
+    case "protobuf_test_messages.proto3.TestAllTypesProto3":
       break;
-
-    // case "google.protobuf.TestAllTypesProto2":
-    //   testMessageType = TestAllTypesProto2;
-    //   break;
 
     default:
       return {
@@ -121,40 +115,24 @@ function test(request: ConformanceRequest): ConformanceResponse {
 function testIo(
   test: (request: ConformanceRequest) => ConformanceResponse
 ): boolean {
-  console.trace(`setBlockingStdout...`);
   setBlockingStdout();
 
-  console.trace(`readBuffer(4)...`);
   const requestLengthBuf = readBuffer(4);
   if (requestLengthBuf === "EOF") {
     return false;
   }
 
   const requestLength = requestLengthBuf.readInt32LE(0);
-  console.trace(`reading request, length=${requestLength}...`);
   const serializedRequest = readBuffer(requestLength);
   if (serializedRequest === "EOF") {
     throw "Failed to read request.";
   }
 
-  console.trace(`decoding request...`);
   const request = ConformanceRequest.decode(serializedRequest);
-  if (request.messageType === "conformance.FailureSet") {
-    // HACKS
-    const serializedResponse = new Uint8Array([26, 0]);
-    const responseLengthBuf = Buffer.alloc(4);
-    console.error(`writing response=${serializedResponse}, length=${serializedResponse.length}...`);
-    responseLengthBuf.writeInt32LE(serializedResponse.length, 0);
-    writeBuffer(responseLengthBuf);
-    writeBuffer(Buffer.from(serializedResponse));
-    return true;
-  }
-
   const response = test(request);
 
   const serializedResponse = ConformanceResponse.encode(response);
   const responseLengthBuf = Buffer.alloc(4);
-  console.error(`writing response=${serializedResponse}, length=${serializedResponse.length}...`);
   responseLengthBuf.writeInt32LE(serializedResponse.length, 0);
   writeBuffer(responseLengthBuf);
   writeBuffer(Buffer.from(serializedResponse));
