@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# install dependencies, generate code, and type check
-pushd vendor/protoscript && npm run package:build && popd
+# patch and install dependencies
+curl -sL https://github.com/tatethurston/ProtoScript/archive/refs/tags/v0.0.14.tar.gz | tar -xz -C vendor
+patch -d vendor/ProtoScript-0.0.14 < vendor/ProtoScript-0.0.14.patch
+pushd vendor/ProtoScript-0.0.14 && npm run package:build --ignore-scripts && popd
 npm ci
 
+# generate code
 rm -rf gen/
-
-# protoscript 0.0.14 crashes when compiling test_messages_proto2.proto
 npx buf generate ../../proto
 
 # finally, run the tests

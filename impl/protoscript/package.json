@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "protoscript": "file:vendor/protoscript/dist"
+    "protoscript": "file:vendor/ProtoScript-0.0.14/dist"
   },
   "devDependencies": {
     "@bufbuild/buf": "^1.15.0",
