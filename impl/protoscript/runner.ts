@@ -10,6 +10,20 @@ import { TestAllTypesProto2, TestAllTypesProto2JSON } from "./gen/google/protobu
 import { TestAllTypesProto3, TestAllTypesProto3JSON } from "./gen/google/protobuf/test_messages_proto3.pb.js";
 import { readSync, writeSync } from "fs";
 
+const proto2serializer = {
+  decodeProtobuf: TestAllTypesProto2.decode.bind(TestAllTypesProto2),
+  decodeJson: TestAllTypesProto2JSON.decode.bind(TestAllTypesProto2JSON),
+  encodeProtobuf: TestAllTypesProto2.encode.bind(TestAllTypesProto2),
+  encodeJson: TestAllTypesProto2JSON.encode.bind(TestAllTypesProto2JSON),
+}
+
+const proto3serializer = {
+  decodeProtobuf: TestAllTypesProto3.decode.bind(TestAllTypesProto3),
+  decodeJson: TestAllTypesProto3JSON.decode.bind(TestAllTypesProto3JSON),
+  encodeProtobuf: TestAllTypesProto3.encode.bind(TestAllTypesProto3),
+  encodeJson: TestAllTypesProto3JSON.encode.bind(TestAllTypesProto3JSON),
+}
+
 function main() {
   let testCount = 0;
   try {
@@ -30,22 +44,15 @@ function test(request: ConformanceRequest): ConformanceResponse {
     // > This will be known by message_type == "conformance.FailureSet", a conformance
     // > test should return a serialized FailureSet in protobuf_payload.
     return {
-      // Failing, serializes to empty byte array
-      protobufPayload: FailureSet.encode({ failure: [] })
+      protobufPayload: FailureSet.encode({})
     };
   }
 
-  const serializer = request.messageType === "protobuf_test_messages.proto3.TestAllTypesProto3" ? {
-    decodeProtobuf: TestAllTypesProto3.decode.bind(TestAllTypesProto3),
-    decodeJson: TestAllTypesProto3JSON.decode.bind(TestAllTypesProto3JSON),
-    encodeProtobuf: TestAllTypesProto3.encode.bind(TestAllTypesProto3),
-    encodeJson: TestAllTypesProto3JSON.encode.bind(TestAllTypesProto3JSON),
-  } : request.messageType === "protobuf_test_messages.proto2.TestAllTypesProto2" ? {
-    decodeProtobuf: TestAllTypesProto2.decode.bind(TestAllTypesProto2),
-    decodeJson: TestAllTypesProto2JSON.decode.bind(TestAllTypesProto2JSON),
-    encodeProtobuf: TestAllTypesProto2.encode.bind(TestAllTypesProto2),
-    encodeJson: TestAllTypesProto2JSON.encode.bind(TestAllTypesProto2JSON),
-  } : undefined;
+  const serializer = request.messageType === "protobuf_test_messages.proto3.TestAllTypesProto3"
+    ? proto3serializer
+    : request.messageType === "protobuf_test_messages.proto2.TestAllTypesProto2"
+      ? proto2serializer
+      : undefined;
 
   if (!serializer) {
     return { runtimeError: `unknown request message type ${request.messageType}` };
