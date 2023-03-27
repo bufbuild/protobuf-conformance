@@ -46,7 +46,6 @@ function main() {
 }
 
 function test(request: ConformanceRequest): ConformanceResponse {
-  console.trace(request);
   if (request.messageType === FailureSet.typeName) {
     // > The conformance runner will request a list of failures as the first request.
     // > This will be known by message_type == "conformance.FailureSet", a conformance
@@ -190,7 +189,6 @@ function testIo(
   const request = ConformanceRequest.fromBinary(serializedRequest);
   const response = test(request);
   const serializedResponse = ConformanceResponse.toBinary(response);
-  console.error(`writing response=${serializedResponse}, length=${serializedResponse.length}...`);
   const responseLengthBuf = Buffer.alloc(4);
   responseLengthBuf.writeInt32LE(serializedResponse.length, 0);
   writeBuffer(responseLengthBuf);
