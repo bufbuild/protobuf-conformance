@@ -56,3 +56,5 @@ index 7cc590d..d8d96f3 100644
  
  const FileLabel = {
 ```
+
+Compiles BigInt literals, so TypeScript must target ES2020.

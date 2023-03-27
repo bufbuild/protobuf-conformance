@@ -6,17 +6,9 @@ import {
   FailureSet,
   WireFormat,
 } from "./gen/conformance/conformance.pb.js";
+import { TestAllTypesProto2, TestAllTypesProto2JSON } from "./gen/google/protobuf/test_messages_proto2.pb.js";
 import { TestAllTypesProto3, TestAllTypesProto3JSON } from "./gen/google/protobuf/test_messages_proto3.pb.js";
 import { readSync, writeSync } from "fs";
-// import {
-//   Any,
-//   Duration,
-//   FieldMask,
-//   Int32Value,
-//   Struct,
-//   Timestamp,
-//   Value,
-// } from "protoscript";
 
 function main() {
   let testCount = 0;
@@ -43,24 +35,23 @@ function test(request: ConformanceRequest): ConformanceResponse {
     };
   }
 
-  let testMessage: object;
-  let serializer = {
+  const serializer = request.messageType === "protobuf_test_messages.proto3.TestAllTypesProto3" ? {
     decodeProtobuf: TestAllTypesProto3.decode.bind(TestAllTypesProto3),
     decodeJson: TestAllTypesProto3JSON.decode.bind(TestAllTypesProto3JSON),
     encodeProtobuf: TestAllTypesProto3.encode.bind(TestAllTypesProto3),
     encodeJson: TestAllTypesProto3JSON.encode.bind(TestAllTypesProto3JSON),
-  };
+  } : request.messageType === "protobuf_test_messages.proto2.TestAllTypesProto2" ? {
+    decodeProtobuf: TestAllTypesProto2.decode.bind(TestAllTypesProto2),
+    decodeJson: TestAllTypesProto2JSON.decode.bind(TestAllTypesProto2JSON),
+    encodeProtobuf: TestAllTypesProto2.encode.bind(TestAllTypesProto2),
+    encodeJson: TestAllTypesProto2JSON.encode.bind(TestAllTypesProto2JSON),
+  } : undefined;
 
-  switch (request.messageType) {
-    case "protobuf_test_messages.proto3.TestAllTypesProto3":
-      break;
-
-    default:
-      return {
-        runtimeError: `unknown request message type ${request.messageType}`,
-      };
+  if (!serializer) {
+    return { runtimeError: `unknown request message type ${request.messageType}` };
   }
 
+  let testMessage: object;
   try {
     if (request.protobufPayload) {
       testMessage = serializer.decodeProtobuf(
@@ -72,9 +63,7 @@ function test(request: ConformanceRequest): ConformanceResponse {
       );
     } else {
       // We use a failure list instead of skipping, because that is more transparent.
-      return {
-        runtimeError: `${request} not supported`,
-      };
+      return { runtimeError: `${request} not supported` };
     }
   } catch (err) {
     // > This string should be set to indicate parsing failed.  The string can

@@ -9,6 +9,7 @@ The current implementations being tested are:
 
 * Protobuf-ES:  https://github.com/bufbuild/protobuf-es
 * protobuf-ts:  https://github.com/timostamm/protobuf-ts
+* protoscript:  https://github.com/TateThurston/protoscript
 * google-protobuf:  https://github.com/protocolbuffers/protobuf-javascript
 * protobuf.js:  https://github.com/protobufjs/protobuf.js/
 * protoc-gen-ts:  https://github.com/thesayyn/protoc-gen-ts
