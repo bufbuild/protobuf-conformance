@@ -459,6 +459,9 @@ export const TestAllTypesProto3 = {
    * Initializes TestAllTypesProto3 with all fields set to their default value.
    */
   initialize: function (): TestAllTypesProto3 {
+    let _optionalNestedMessage: TestAllTypesProto3.NestedMessage | undefined;
+    let _optionalForeignMessage: ForeignMessage | undefined;
+    let _recursiveMessage: TestAllTypesProto3 | undefined;
     return {
       optionalInt32: 0,
       optionalInt64: 0n,
@@ -475,14 +478,30 @@ export const TestAllTypesProto3 = {
       optionalBool: false,
       optionalString: "",
       optionalBytes: new Uint8Array(),
-      optionalNestedMessage: TestAllTypesProto3.NestedMessage.initialize(),
-      optionalForeignMessage: ForeignMessage.initialize(),
+      get optionalNestedMessage(): TestAllTypesProto3.NestedMessage {
+        if (!_optionalNestedMessage) {
+          _optionalNestedMessage =
+            TestAllTypesProto3.NestedMessage.initialize();
+        }
+        return _optionalNestedMessage;
+      },
+      get optionalForeignMessage(): ForeignMessage {
+        if (!_optionalForeignMessage) {
+          _optionalForeignMessage = ForeignMessage.initialize();
+        }
+        return _optionalForeignMessage;
+      },
       optionalNestedEnum: TestAllTypesProto3.NestedEnum._fromInt(0),
       optionalForeignEnum: ForeignEnum._fromInt(0),
       optionalAliasedEnum: TestAllTypesProto3.AliasedEnum._fromInt(0),
       optionalStringPiece: "",
       optionalCord: "",
-      recursiveMessage: TestAllTypesProto3.initialize(),
+      get recursiveMessage(): TestAllTypesProto3 {
+        if (!_recursiveMessage) {
+          _recursiveMessage = TestAllTypesProto3.initialize();
+        }
+        return _recursiveMessage;
+      },
       repeatedInt32: [],
       repeatedInt64: [],
       repeatedUint32: [],
@@ -561,15 +580,60 @@ export const TestAllTypesProto3 = {
       oneofDouble: undefined,
       oneofEnum: undefined,
       oneofNullValue: undefined,
-      optionalBoolWrapper: protoscript.BoolValue.initialize(),
-      optionalInt32Wrapper: protoscript.Int32Value.initialize(),
-      optionalInt64Wrapper: protoscript.Int64Value.initialize(),
-      optionalUint32Wrapper: protoscript.UInt32Value.initialize(),
-      optionalUint64Wrapper: protoscript.UInt64Value.initialize(),
-      optionalFloatWrapper: protoscript.FloatValue.initialize(),
-      optionalDoubleWrapper: protoscript.DoubleValue.initialize(),
-      optionalStringWrapper: protoscript.StringValue.initialize(),
-      optionalBytesWrapper: protoscript.BytesValue.initialize(),
+      get optionalBoolWrapper(): protoscript.BoolValue {
+        if (!_optionalBoolWrapper) {
+          _optionalBoolWrapper = protoscript.BoolValue.initialize();
+        }
+        return _optionalBoolWrapper;
+      },
+      get optionalInt32Wrapper(): protoscript.Int32Value {
+        if (!_optionalInt32Wrapper) {
+          _optionalInt32Wrapper = protoscript.Int32Value.initialize();
+        }
+        return _optionalInt32Wrapper;
+      },
+      get optionalInt64Wrapper(): protoscript.Int64Value {
+        if (!_optionalInt64Wrapper) {
+          _optionalInt64Wrapper = protoscript.Int64Value.initialize();
+        }
+        return _optionalInt64Wrapper;
+      },
+      get optionalUint32Wrapper(): protoscript.UInt32Value {
+        if (!_optionalUint32Wrapper) {
+          _optionalUint32Wrapper = protoscript.UInt32Value.initialize();
+        }
+        return _optionalUint32Wrapper;
+      },
+      get optionalUint64Wrapper(): protoscript.UInt64Value {
+        if (!_optionalUint64Wrapper) {
+          _optionalUint64Wrapper = protoscript.UInt64Value.initialize();
+        }
+        return _optionalUint64Wrapper;
+      },
+      get optionalFloatWrapper(): protoscript.FloatValue {
+        if (!_optionalFloatWrapper) {
+          _optionalFloatWrapper = protoscript.FloatValue.initialize();
+        }
+        return _optionalFloatWrapper;
+      },
+      get optionalDoubleWrapper(): protoscript.DoubleValue {
+        if (!_optionalDoubleWrapper) {
+          _optionalDoubleWrapper = protoscript.DoubleValue.initialize();
+        }
+        return _optionalDoubleWrapper;
+      },
+      get optionalStringWrapper(): protoscript.StringValue {
+        if (!_optionalStringWrapper) {
+          _optionalStringWrapper = protoscript.StringValue.initialize();
+        }
+        return _optionalStringWrapper;
+      },
+      get optionalBytesWrapper(): protoscript.BytesValue {
+        if (!_optionalBytesWrapper) {
+          _optionalBytesWrapper = protoscript.BytesValue.initialize();
+        }
+        return _optionalBytesWrapper;
+      },
       repeatedBoolWrapper: [],
       repeatedInt32Wrapper: [],
       repeatedInt64Wrapper: [],
@@ -579,12 +643,42 @@ export const TestAllTypesProto3 = {
       repeatedDoubleWrapper: [],
       repeatedStringWrapper: [],
       repeatedBytesWrapper: [],
-      optionalDuration: protoscript.Duration.initialize(),
-      optionalTimestamp: protoscript.Timestamp.initialize(),
-      optionalFieldMask: protoscript.FieldMask.initialize(),
-      optionalStruct: protoscript.Struct.initialize(),
-      optionalAny: protoscript.Any.initialize(),
-      optionalValue: protoscript.Value.initialize(),
+      get optionalDuration(): protoscript.Duration {
+        if (!_optionalDuration) {
+          _optionalDuration = protoscript.Duration.initialize();
+        }
+        return _optionalDuration;
+      },
+      get optionalTimestamp(): protoscript.Timestamp {
+        if (!_optionalTimestamp) {
+          _optionalTimestamp = protoscript.Timestamp.initialize();
+        }
+        return _optionalTimestamp;
+      },
+      get optionalFieldMask(): protoscript.FieldMask {
+        if (!_optionalFieldMask) {
+          _optionalFieldMask = protoscript.FieldMask.initialize();
+        }
+        return _optionalFieldMask;
+      },
+      get optionalStruct(): protoscript.Struct {
+        if (!_optionalStruct) {
+          _optionalStruct = protoscript.Struct.initialize();
+        }
+        return _optionalStruct;
+      },
+      get optionalAny(): protoscript.Any {
+        if (!_optionalAny) {
+          _optionalAny = protoscript.Any.initialize();
+        }
+        return _optionalAny;
+      },
+      get optionalValue(): protoscript.Value {
+        if (!_optionalValue) {
+          _optionalValue = protoscript.Value.initialize();
+        }
+        return _optionalValue;
+      },
       optionalNullValue: protoscript.NullValue._fromInt(0),
       repeatedDuration: [],
       repeatedTimestamp: [],
@@ -2609,9 +2703,15 @@ export const TestAllTypesProto3 = {
      * Initializes TestAllTypesProto3.NestedMessage with all fields set to their default value.
      */
     initialize: function (): TestAllTypesProto3.NestedMessage {
+      let _corecursive: TestAllTypesProto3 | undefined;
       return {
         a: 0,
-        corecursive: TestAllTypesProto3.initialize(),
+        get corecursive(): TestAllTypesProto3 {
+          if (!_corecursive) {
+            _corecursive = TestAllTypesProto3.initialize();
+          }
+          return _corecursive;
+        },
       };
     },
 
@@ -3797,6 +3897,9 @@ export const TestAllTypesProto3JSON = {
    * Initializes TestAllTypesProto3 with all fields set to their default value.
    */
   initialize: function (): TestAllTypesProto3 {
+    let _optionalNestedMessage: TestAllTypesProto3.NestedMessage | undefined;
+    let _optionalForeignMessage: ForeignMessage | undefined;
+    let _recursiveMessage: TestAllTypesProto3 | undefined;
     return {
       optionalInt32: 0,
       optionalInt64: 0n,
@@ -3813,14 +3916,30 @@ export const TestAllTypesProto3JSON = {
       optionalBool: false,
       optionalString: "",
       optionalBytes: new Uint8Array(),
-      optionalNestedMessage: TestAllTypesProto3JSON.NestedMessage.initialize(),
-      optionalForeignMessage: ForeignMessageJSON.initialize(),
+      get optionalNestedMessage(): TestAllTypesProto3.NestedMessage {
+        if (!_optionalNestedMessage) {
+          _optionalNestedMessage =
+            TestAllTypesProto3JSON.NestedMessage.initialize();
+        }
+        return _optionalNestedMessage;
+      },
+      get optionalForeignMessage(): ForeignMessage {
+        if (!_optionalForeignMessage) {
+          _optionalForeignMessage = ForeignMessageJSON.initialize();
+        }
+        return _optionalForeignMessage;
+      },
       optionalNestedEnum: TestAllTypesProto3.NestedEnum._fromInt(0),
       optionalForeignEnum: ForeignEnum._fromInt(0),
       optionalAliasedEnum: TestAllTypesProto3.AliasedEnum._fromInt(0),
       optionalStringPiece: "",
       optionalCord: "",
-      recursiveMessage: TestAllTypesProto3JSON.initialize(),
+      get recursiveMessage(): TestAllTypesProto3 {
+        if (!_recursiveMessage) {
+          _recursiveMessage = TestAllTypesProto3JSON.initialize();
+        }
+        return _recursiveMessage;
+      },
       repeatedInt32: [],
       repeatedInt64: [],
       repeatedUint32: [],
@@ -3899,15 +4018,60 @@ export const TestAllTypesProto3JSON = {
       oneofDouble: undefined,
       oneofEnum: undefined,
       oneofNullValue: undefined,
-      optionalBoolWrapper: protoscript.BoolValueJSON.initialize(),
-      optionalInt32Wrapper: protoscript.Int32ValueJSON.initialize(),
-      optionalInt64Wrapper: protoscript.Int64ValueJSON.initialize(),
-      optionalUint32Wrapper: protoscript.UInt32ValueJSON.initialize(),
-      optionalUint64Wrapper: protoscript.UInt64ValueJSON.initialize(),
-      optionalFloatWrapper: protoscript.FloatValueJSON.initialize(),
-      optionalDoubleWrapper: protoscript.DoubleValueJSON.initialize(),
-      optionalStringWrapper: protoscript.StringValueJSON.initialize(),
-      optionalBytesWrapper: protoscript.BytesValueJSON.initialize(),
+      get optionalBoolWrapper(): protoscript.BoolValue {
+        if (!_optionalBoolWrapper) {
+          _optionalBoolWrapper = protoscript.BoolValueJSON.initialize();
+        }
+        return _optionalBoolWrapper;
+      },
+      get optionalInt32Wrapper(): protoscript.Int32Value {
+        if (!_optionalInt32Wrapper) {
+          _optionalInt32Wrapper = protoscript.Int32ValueJSON.initialize();
+        }
+        return _optionalInt32Wrapper;
+      },
+      get optionalInt64Wrapper(): protoscript.Int64Value {
+        if (!_optionalInt64Wrapper) {
+          _optionalInt64Wrapper = protoscript.Int64ValueJSON.initialize();
+        }
+        return _optionalInt64Wrapper;
+      },
+      get optionalUint32Wrapper(): protoscript.UInt32Value {
+        if (!_optionalUint32Wrapper) {
+          _optionalUint32Wrapper = protoscript.UInt32ValueJSON.initialize();
+        }
+        return _optionalUint32Wrapper;
+      },
+      get optionalUint64Wrapper(): protoscript.UInt64Value {
+        if (!_optionalUint64Wrapper) {
+          _optionalUint64Wrapper = protoscript.UInt64ValueJSON.initialize();
+        }
+        return _optionalUint64Wrapper;
+      },
+      get optionalFloatWrapper(): protoscript.FloatValue {
+        if (!_optionalFloatWrapper) {
+          _optionalFloatWrapper = protoscript.FloatValueJSON.initialize();
+        }
+        return _optionalFloatWrapper;
+      },
+      get optionalDoubleWrapper(): protoscript.DoubleValue {
+        if (!_optionalDoubleWrapper) {
+          _optionalDoubleWrapper = protoscript.DoubleValueJSON.initialize();
+        }
+        return _optionalDoubleWrapper;
+      },
+      get optionalStringWrapper(): protoscript.StringValue {
+        if (!_optionalStringWrapper) {
+          _optionalStringWrapper = protoscript.StringValueJSON.initialize();
+        }
+        return _optionalStringWrapper;
+      },
+      get optionalBytesWrapper(): protoscript.BytesValue {
+        if (!_optionalBytesWrapper) {
+          _optionalBytesWrapper = protoscript.BytesValueJSON.initialize();
+        }
+        return _optionalBytesWrapper;
+      },
       repeatedBoolWrapper: [],
       repeatedInt32Wrapper: [],
       repeatedInt64Wrapper: [],
@@ -3917,12 +4081,42 @@ export const TestAllTypesProto3JSON = {
       repeatedDoubleWrapper: [],
       repeatedStringWrapper: [],
       repeatedBytesWrapper: [],
-      optionalDuration: protoscript.DurationJSON.initialize(),
-      optionalTimestamp: protoscript.TimestampJSON.initialize(),
-      optionalFieldMask: protoscript.FieldMaskJSON.initialize(),
-      optionalStruct: protoscript.StructJSON.initialize(),
-      optionalAny: protoscript.AnyJSON.initialize(),
-      optionalValue: protoscript.ValueJSON.initialize(),
+      get optionalDuration(): protoscript.Duration {
+        if (!_optionalDuration) {
+          _optionalDuration = protoscript.DurationJSON.initialize();
+        }
+        return _optionalDuration;
+      },
+      get optionalTimestamp(): protoscript.Timestamp {
+        if (!_optionalTimestamp) {
+          _optionalTimestamp = protoscript.TimestampJSON.initialize();
+        }
+        return _optionalTimestamp;
+      },
+      get optionalFieldMask(): protoscript.FieldMask {
+        if (!_optionalFieldMask) {
+          _optionalFieldMask = protoscript.FieldMaskJSON.initialize();
+        }
+        return _optionalFieldMask;
+      },
+      get optionalStruct(): protoscript.Struct {
+        if (!_optionalStruct) {
+          _optionalStruct = protoscript.StructJSON.initialize();
+        }
+        return _optionalStruct;
+      },
+      get optionalAny(): protoscript.Any {
+        if (!_optionalAny) {
+          _optionalAny = protoscript.AnyJSON.initialize();
+        }
+        return _optionalAny;
+      },
+      get optionalValue(): protoscript.Value {
+        if (!_optionalValue) {
+          _optionalValue = protoscript.ValueJSON.initialize();
+        }
+        return _optionalValue;
+      },
       optionalNullValue: protoscript.NullValue._fromInt(0),
       repeatedDuration: [],
       repeatedTimestamp: [],
@@ -5734,9 +5928,15 @@ export const TestAllTypesProto3JSON = {
      * Initializes TestAllTypesProto3.NestedMessage with all fields set to their default value.
      */
     initialize: function (): TestAllTypesProto3.NestedMessage {
+      let _corecursive: TestAllTypesProto3 | undefined;
       return {
         a: 0,
-        corecursive: TestAllTypesProto3JSON.initialize(),
+        get corecursive(): TestAllTypesProto3 {
+          if (!_corecursive) {
+            _corecursive = TestAllTypesProto3JSON.initialize();
+          }
+          return _corecursive;
+        },
       };
     },
 

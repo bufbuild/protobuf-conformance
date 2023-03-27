@@ -380,6 +380,7 @@ export const ConformanceRequest = {
    * Initializes ConformanceRequest with all fields set to their default value.
    */
   initialize: function (): ConformanceRequest {
+    let _jspbEncodingOptions: JspbEncodingConfig | undefined;
     return {
       protobufPayload: undefined,
       jsonPayload: undefined,
@@ -388,7 +389,12 @@ export const ConformanceRequest = {
       requestedOutputFormat: WireFormat._fromInt(0),
       messageType: "",
       testCategory: TestCategory._fromInt(0),
-      jspbEncodingOptions: JspbEncodingConfig.initialize(),
+      get jspbEncodingOptions(): JspbEncodingConfig {
+        if (!_jspbEncodingOptions) {
+          _jspbEncodingOptions = JspbEncodingConfig.initialize();
+        }
+        return _jspbEncodingOptions;
+      },
       printUnknownFields: false,
     };
   },
@@ -912,6 +918,7 @@ export const ConformanceRequestJSON = {
    * Initializes ConformanceRequest with all fields set to their default value.
    */
   initialize: function (): ConformanceRequest {
+    let _jspbEncodingOptions: JspbEncodingConfig | undefined;
     return {
       protobufPayload: undefined,
       jsonPayload: undefined,
@@ -920,7 +927,12 @@ export const ConformanceRequestJSON = {
       requestedOutputFormat: WireFormat._fromInt(0),
       messageType: "",
       testCategory: TestCategory._fromInt(0),
-      jspbEncodingOptions: JspbEncodingConfigJSON.initialize(),
+      get jspbEncodingOptions(): JspbEncodingConfig {
+        if (!_jspbEncodingOptions) {
+          _jspbEncodingOptions = JspbEncodingConfigJSON.initialize();
+        }
+        return _jspbEncodingOptions;
+      },
       printUnknownFields: false,
     };
   },

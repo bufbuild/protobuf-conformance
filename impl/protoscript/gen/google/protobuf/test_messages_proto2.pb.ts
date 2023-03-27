@@ -475,6 +475,9 @@ export const TestAllTypesProto2 = {
    * Initializes TestAllTypesProto2 with all fields set to their default value.
    */
   initialize: function (): TestAllTypesProto2 {
+    let _optionalNestedMessage: TestAllTypesProto2.NestedMessage | undefined;
+    let _optionalForeignMessage: ForeignMessageProto2 | undefined;
+    let _recursiveMessage: TestAllTypesProto2 | undefined;
     return {
       optionalInt32: 0,
       optionalInt64: 0n,
@@ -491,13 +494,29 @@ export const TestAllTypesProto2 = {
       optionalBool: false,
       optionalString: "",
       optionalBytes: new Uint8Array(),
-      optionalNestedMessage: TestAllTypesProto2.NestedMessage.initialize(),
-      optionalForeignMessage: ForeignMessageProto2.initialize(),
+      get optionalNestedMessage(): TestAllTypesProto2.NestedMessage {
+        if (!_optionalNestedMessage) {
+          _optionalNestedMessage =
+            TestAllTypesProto2.NestedMessage.initialize();
+        }
+        return _optionalNestedMessage;
+      },
+      get optionalForeignMessage(): ForeignMessageProto2 {
+        if (!_optionalForeignMessage) {
+          _optionalForeignMessage = ForeignMessageProto2.initialize();
+        }
+        return _optionalForeignMessage;
+      },
       optionalNestedEnum: TestAllTypesProto2.NestedEnum._fromInt(0),
       optionalForeignEnum: ForeignEnumProto2._fromInt(0),
       optionalStringPiece: "",
       optionalCord: "",
-      recursiveMessage: TestAllTypesProto2.initialize(),
+      get recursiveMessage(): TestAllTypesProto2 {
+        if (!_recursiveMessage) {
+          _recursiveMessage = TestAllTypesProto2.initialize();
+        }
+        return _recursiveMessage;
+      },
       repeatedInt32: [],
       repeatedInt64: [],
       repeatedUint32: [],
@@ -2208,9 +2227,15 @@ export const TestAllTypesProto2 = {
      * Initializes TestAllTypesProto2.NestedMessage with all fields set to their default value.
      */
     initialize: function (): TestAllTypesProto2.NestedMessage {
+      let _corecursive: TestAllTypesProto2 | undefined;
       return {
         a: 0,
-        corecursive: TestAllTypesProto2.initialize(),
+        get corecursive(): TestAllTypesProto2 {
+          if (!_corecursive) {
+            _corecursive = TestAllTypesProto2.initialize();
+          }
+          return _corecursive;
+        },
       };
     },
 
@@ -3488,10 +3513,16 @@ export const UnknownToTestAllTypes = {
    * Initializes UnknownToTestAllTypes with all fields set to their default value.
    */
   initialize: function (): UnknownToTestAllTypes {
+    let _nestedMessage: ForeignMessageProto2 | undefined;
     return {
       optionalInt32: 0,
       optionalString: "",
-      nestedMessage: ForeignMessageProto2.initialize(),
+      get nestedMessage(): ForeignMessageProto2 {
+        if (!_nestedMessage) {
+          _nestedMessage = ForeignMessageProto2.initialize();
+        }
+        return _nestedMessage;
+      },
       optionalBool: false,
       repeatedInt32: [],
     };
@@ -3989,6 +4020,9 @@ export const TestAllTypesProto2JSON = {
    * Initializes TestAllTypesProto2 with all fields set to their default value.
    */
   initialize: function (): TestAllTypesProto2 {
+    let _optionalNestedMessage: TestAllTypesProto2.NestedMessage | undefined;
+    let _optionalForeignMessage: ForeignMessageProto2 | undefined;
+    let _recursiveMessage: TestAllTypesProto2 | undefined;
     return {
       optionalInt32: 0,
       optionalInt64: 0n,
@@ -4005,13 +4039,29 @@ export const TestAllTypesProto2JSON = {
       optionalBool: false,
       optionalString: "",
       optionalBytes: new Uint8Array(),
-      optionalNestedMessage: TestAllTypesProto2JSON.NestedMessage.initialize(),
-      optionalForeignMessage: ForeignMessageProto2JSON.initialize(),
+      get optionalNestedMessage(): TestAllTypesProto2.NestedMessage {
+        if (!_optionalNestedMessage) {
+          _optionalNestedMessage =
+            TestAllTypesProto2JSON.NestedMessage.initialize();
+        }
+        return _optionalNestedMessage;
+      },
+      get optionalForeignMessage(): ForeignMessageProto2 {
+        if (!_optionalForeignMessage) {
+          _optionalForeignMessage = ForeignMessageProto2JSON.initialize();
+        }
+        return _optionalForeignMessage;
+      },
       optionalNestedEnum: TestAllTypesProto2.NestedEnum._fromInt(0),
       optionalForeignEnum: ForeignEnumProto2._fromInt(0),
       optionalStringPiece: "",
       optionalCord: "",
-      recursiveMessage: TestAllTypesProto2JSON.initialize(),
+      get recursiveMessage(): TestAllTypesProto2 {
+        if (!_recursiveMessage) {
+          _recursiveMessage = TestAllTypesProto2JSON.initialize();
+        }
+        return _recursiveMessage;
+      },
       repeatedInt32: [],
       repeatedInt64: [],
       repeatedUint32: [],
@@ -5486,9 +5536,15 @@ export const TestAllTypesProto2JSON = {
      * Initializes TestAllTypesProto2.NestedMessage with all fields set to their default value.
      */
     initialize: function (): TestAllTypesProto2.NestedMessage {
+      let _corecursive: TestAllTypesProto2 | undefined;
       return {
         a: 0,
-        corecursive: TestAllTypesProto2JSON.initialize(),
+        get corecursive(): TestAllTypesProto2 {
+          if (!_corecursive) {
+            _corecursive = TestAllTypesProto2JSON.initialize();
+          }
+          return _corecursive;
+        },
       };
     },
 
@@ -6537,10 +6593,16 @@ export const UnknownToTestAllTypesJSON = {
    * Initializes UnknownToTestAllTypes with all fields set to their default value.
    */
   initialize: function (): UnknownToTestAllTypes {
+    let _nestedMessage: ForeignMessageProto2 | undefined;
     return {
       optionalInt32: 0,
       optionalString: "",
-      nestedMessage: ForeignMessageProto2JSON.initialize(),
+      get nestedMessage(): ForeignMessageProto2 {
+        if (!_nestedMessage) {
+          _nestedMessage = ForeignMessageProto2JSON.initialize();
+        }
+        return _nestedMessage;
+      },
       optionalBool: false,
       repeatedInt32: [],
     };
