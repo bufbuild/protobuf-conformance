@@ -1274,8 +1274,6 @@ Required.Proto3.ProtobufInput.IllegalZeroFieldNum_Case_2
 Required.Proto3.ProtobufInput.IllegalZeroFieldNum_Case_3
 Required.Proto3.ProtobufInput.RepeatedScalarMessageMerge.JsonOutput
 Required.Proto3.ProtobufInput.RepeatedScalarMessageMerge.ProtobufOutput
-Required.Proto3.ProtobufInput.RepeatedScalarSelectsLast.BOOL.JsonOutput
-Required.Proto3.ProtobufInput.RepeatedScalarSelectsLast.BOOL.ProtobufOutput
 Required.Proto3.ProtobufInput.RepeatedScalarSelectsLast.ENUM.JsonOutput
 Required.Proto3.ProtobufInput.RepeatedScalarSelectsLast.ENUM.ProtobufOutput
 Required.Proto3.ProtobufInput.RepeatedScalarSelectsLast.FIXED64.JsonOutput
