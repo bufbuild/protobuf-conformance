@@ -3,7 +3,7 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "target": "es2020",
-    "importsNotUsedAsValues": "error",
+    "verbatimModuleSyntax": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitAny": true,
