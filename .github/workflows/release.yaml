@@ -118,7 +118,7 @@ jobs:
       - name: Build Binary
         run: |
           tar -xf protobuf.tar.gz
-          cd ./protobuf-{{ needs.get-protobuf.outputs.version }}
+          cd ./protobuf-${{ needs.get-protobuf.outputs.version }}
           USE_BAZEL_VERSION=5.4.0 BAZEL_CXXOPTS="-std=c++14" bazel build conformance:conformance_test_runner --toolchain_resolution_debug=@bazel_tools//tools/cpp:toolchain_type
 
       - name: Rename Binary
