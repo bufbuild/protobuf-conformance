@@ -1,4 +1,4 @@
-name: release 
+name: build_conformance_runner_binaries 
 on:
   push:
     tags:
@@ -18,8 +18,7 @@ jobs:
       - name: Get Protobuf
         id: protobuf
         run: |
-          # tag=$(git describe --tags --abbrev=0 --exact-match)
-          tag=v22.2
+          tag=$(git describe --tags --abbrev=0 --exact-match)
           release_version="${tag:1}"
           protobuf_dir=${GITHUB_WORKSPACE}/protobuf-${release_version}
           mkdir -p ${protobuf_dir}
