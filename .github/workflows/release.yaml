@@ -41,7 +41,7 @@ jobs:
         with:
           name: protobuf
 
-      - name: Bazel cache
+      - name: Bazel Cache
         id: bazel-cache
         uses: actions/cache@v2
         env:
@@ -95,7 +95,7 @@ jobs:
         with:
           name: protobuf
 
-      - name: Bazel cache
+      - name: Bazel Cache
         id: bazel-cache
         uses: actions/cache@v2
         env:
