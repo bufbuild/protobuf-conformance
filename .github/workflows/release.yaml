@@ -78,6 +78,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           generate_release_notes: true
+          body: Conformance runner binaries for Protobuf v${{ needs.get-protobuf.outputs.version }}
           append_body: true
           files: |
             .tmp/bin/conformance_test_runner-${{ needs.get-protobuf.outputs.version }}-linux-x86_64
