@@ -1,4 +1,4 @@
-name: build_conformance_runner_binaries 
+name: release 
 on:
   push:
     tags:
@@ -20,11 +20,8 @@ jobs:
         run: |
           tag=$(git describe --tags --abbrev=0 --exact-match)
           release_version="${tag:1}"
-          protobuf_dir=${GITHUB_WORKSPACE}/protobuf-${release_version}
-          mkdir -p ${protobuf_dir}
           curl -L https://github.com/protocolbuffers/protobuf/releases/download/${tag}/protobuf-${release_version}.tar.gz > ./protobuf.tar.gz
           echo "version=${release_version}" >> $GITHUB_OUTPUT
-          echo "dir=${protobuf_dir}" >> $GITHUB_ENV
 
       - name: Upload Protobuf
         uses: actions/upload-artifact@v3
