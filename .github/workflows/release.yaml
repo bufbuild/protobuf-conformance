@@ -77,7 +77,7 @@ jobs:
       - name: Publish GitHub artifacts
         uses: softprops/action-gh-release@v1
         with:
-          generate_release_notes: true
+          generate_release_notes: false
           body: Conformance runner binaries for Protobuf v${{ needs.get-protobuf.outputs.version }}
           append_body: true
           files: |
