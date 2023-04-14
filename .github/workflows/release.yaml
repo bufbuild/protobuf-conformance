@@ -41,15 +41,15 @@ jobs:
         with:
           name: protobuf
 
-      # - name: Bazel Cache
-      #   id: bazel-cache
-      #   uses: actions/cache@v2
-      #   env:
-      #     version: 4.2.1
-      #   with:
-      #     path: | 
-      #       ~/.cache/bazel
-      #     key: ${{ runner.os }}-{{ env.version }}-bazel-cache
+      - name: Bazel Cache
+        id: bazel-cache
+        uses: actions/cache@v2
+        env:
+          version: 4.2.1
+        with:
+          path: | 
+            ~/.cache/bazel
+          key: ${{ runner.os }}-{{ env.version }}-bazel-cache
 
       - name: Install bazelisk
         run: |
