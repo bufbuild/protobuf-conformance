@@ -5,7 +5,7 @@
   "devDependencies": {
     "@bufbuild/buf": "^1.15.0",
     "@types/node": "^18.16.3",
-    "esbuild": "^0.17.18",
+    "esbuild": "^0.17.19",
     "typescript": "^5.0.4"
   },
   "dependencies": {
