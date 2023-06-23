@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# patch and install dependencies
-curl -sL https://github.com/tatethurston/ProtoScript/archive/refs/tags/v0.0.14.tar.gz | tar -xz -C vendor
-patch -d vendor/ProtoScript-0.0.14 < vendor/ProtoScript-0.0.14.patch
-pushd vendor/ProtoScript-0.0.14 && npm run package:build --ignore-scripts && popd
+# install dependencies
 npm ci
 
 # generate code

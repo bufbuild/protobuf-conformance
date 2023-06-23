@@ -50,7 +50,7 @@ export interface TestAllTypesProto2 {
   optionalForeignEnum: ForeignEnumProto2;
   optionalStringPiece: string;
   optionalCord: string;
-  recursiveMessage: TestAllTypesProto2;
+  recursiveMessage: TestAllTypesProto2 | null | undefined;
   /**
    * Repeated
    */
@@ -221,7 +221,7 @@ export interface TestAllTypesProto2 {
    * (protobuf says names can be any valid C/C++ identifier.)
    */
   fieldName2: number;
-  FieldName3: number;
+  fieldName3: number;
   fieldName4: number;
   field0name5: number;
   field0Name6: number;
@@ -231,7 +231,7 @@ export interface TestAllTypesProto2 {
   FieldName10: number;
   FIELDNAME11: number;
   FIELDName12: number;
-  FieldName13: number;
+  fieldName13: number;
   FieldName14: number;
   fieldName15: number;
   fieldName16: number;
@@ -244,7 +244,7 @@ export declare namespace TestAllTypesProto2 {
 
   export interface NestedMessage {
     a: number;
-    corecursive: TestAllTypesProto2;
+    corecursive: TestAllTypesProto2 | null | undefined;
   }
 
   interface MapInt32Int32 {
@@ -475,9 +475,6 @@ export const TestAllTypesProto2 = {
    * Initializes TestAllTypesProto2 with all fields set to their default value.
    */
   initialize: function (): TestAllTypesProto2 {
-    let _optionalNestedMessage: TestAllTypesProto2.NestedMessage | undefined;
-    let _optionalForeignMessage: ForeignMessageProto2 | undefined;
-    let _recursiveMessage: TestAllTypesProto2 | undefined;
     return {
       optionalInt32: 0,
       optionalInt64: 0n,
@@ -494,29 +491,13 @@ export const TestAllTypesProto2 = {
       optionalBool: false,
       optionalString: "",
       optionalBytes: new Uint8Array(),
-      get optionalNestedMessage(): TestAllTypesProto2.NestedMessage {
-        if (!_optionalNestedMessage) {
-          _optionalNestedMessage =
-            TestAllTypesProto2.NestedMessage.initialize();
-        }
-        return _optionalNestedMessage;
-      },
-      get optionalForeignMessage(): ForeignMessageProto2 {
-        if (!_optionalForeignMessage) {
-          _optionalForeignMessage = ForeignMessageProto2.initialize();
-        }
-        return _optionalForeignMessage;
-      },
+      optionalNestedMessage: TestAllTypesProto2.NestedMessage.initialize(),
+      optionalForeignMessage: ForeignMessageProto2.initialize(),
       optionalNestedEnum: TestAllTypesProto2.NestedEnum._fromInt(0),
       optionalForeignEnum: ForeignEnumProto2._fromInt(0),
       optionalStringPiece: "",
       optionalCord: "",
-      get recursiveMessage(): TestAllTypesProto2 {
-        if (!_recursiveMessage) {
-          _recursiveMessage = TestAllTypesProto2.initialize();
-        }
-        return _recursiveMessage;
-      },
+      recursiveMessage: undefined,
       repeatedInt32: [],
       repeatedInt64: [],
       repeatedUint32: [],
@@ -611,7 +592,7 @@ export const TestAllTypesProto2 = {
       defaultBytes: new Uint8Array(),
       fieldname1: 0,
       fieldName2: 0,
-      FieldName3: 0,
+      fieldName3: 0,
       fieldName4: 0,
       field0name5: 0,
       field0Name6: 0,
@@ -621,7 +602,7 @@ export const TestAllTypesProto2 = {
       FieldName10: 0,
       FIELDNAME11: 0,
       FIELDName12: 0,
-      FieldName13: 0,
+      fieldName13: 0,
       FieldName14: 0,
       fieldName15: 0,
       fieldName16: 0,
@@ -1211,8 +1192,8 @@ export const TestAllTypesProto2 = {
     if (msg.fieldName2) {
       writer.writeInt32(402, msg.fieldName2);
     }
-    if (msg.FieldName3) {
-      writer.writeInt32(403, msg.FieldName3);
+    if (msg.fieldName3) {
+      writer.writeInt32(403, msg.fieldName3);
     }
     if (msg.fieldName4) {
       writer.writeInt32(404, msg.fieldName4);
@@ -1241,8 +1222,8 @@ export const TestAllTypesProto2 = {
     if (msg.FIELDName12) {
       writer.writeInt32(412, msg.FIELDName12);
     }
-    if (msg.FieldName13) {
-      writer.writeInt32(413, msg.FieldName13);
+    if (msg.fieldName13) {
+      writer.writeInt32(413, msg.fieldName13);
     }
     if (msg.FieldName14) {
       writer.writeInt32(414, msg.FieldName14);
@@ -2075,7 +2056,7 @@ export const TestAllTypesProto2 = {
           break;
         }
         case 403: {
-          msg.FieldName3 = reader.readInt32();
+          msg.fieldName3 = reader.readInt32();
           break;
         }
         case 404: {
@@ -2115,7 +2096,7 @@ export const TestAllTypesProto2 = {
           break;
         }
         case 413: {
-          msg.FieldName13 = reader.readInt32();
+          msg.fieldName13 = reader.readInt32();
           break;
         }
         case 414: {
@@ -2227,15 +2208,9 @@ export const TestAllTypesProto2 = {
      * Initializes TestAllTypesProto2.NestedMessage with all fields set to their default value.
      */
     initialize: function (): TestAllTypesProto2.NestedMessage {
-      let _corecursive: TestAllTypesProto2 | undefined;
       return {
         a: 0,
-        get corecursive(): TestAllTypesProto2 {
-          if (!_corecursive) {
-            _corecursive = TestAllTypesProto2.initialize();
-          }
-          return _corecursive;
-        },
+        corecursive: undefined,
       };
     },
 
@@ -3513,16 +3488,10 @@ export const UnknownToTestAllTypes = {
    * Initializes UnknownToTestAllTypes with all fields set to their default value.
    */
   initialize: function (): UnknownToTestAllTypes {
-    let _nestedMessage: ForeignMessageProto2 | undefined;
     return {
       optionalInt32: 0,
       optionalString: "",
-      get nestedMessage(): ForeignMessageProto2 {
-        if (!_nestedMessage) {
-          _nestedMessage = ForeignMessageProto2.initialize();
-        }
-        return _nestedMessage;
-      },
+      nestedMessage: ForeignMessageProto2.initialize(),
       optionalBool: false,
       repeatedInt32: [],
     };
@@ -4020,9 +3989,6 @@ export const TestAllTypesProto2JSON = {
    * Initializes TestAllTypesProto2 with all fields set to their default value.
    */
   initialize: function (): TestAllTypesProto2 {
-    let _optionalNestedMessage: TestAllTypesProto2.NestedMessage | undefined;
-    let _optionalForeignMessage: ForeignMessageProto2 | undefined;
-    let _recursiveMessage: TestAllTypesProto2 | undefined;
     return {
       optionalInt32: 0,
       optionalInt64: 0n,
@@ -4039,29 +4005,13 @@ export const TestAllTypesProto2JSON = {
       optionalBool: false,
       optionalString: "",
       optionalBytes: new Uint8Array(),
-      get optionalNestedMessage(): TestAllTypesProto2.NestedMessage {
-        if (!_optionalNestedMessage) {
-          _optionalNestedMessage =
-            TestAllTypesProto2JSON.NestedMessage.initialize();
-        }
-        return _optionalNestedMessage;
-      },
-      get optionalForeignMessage(): ForeignMessageProto2 {
-        if (!_optionalForeignMessage) {
-          _optionalForeignMessage = ForeignMessageProto2JSON.initialize();
-        }
-        return _optionalForeignMessage;
-      },
+      optionalNestedMessage: TestAllTypesProto2JSON.NestedMessage.initialize(),
+      optionalForeignMessage: ForeignMessageProto2JSON.initialize(),
       optionalNestedEnum: TestAllTypesProto2.NestedEnum._fromInt(0),
       optionalForeignEnum: ForeignEnumProto2._fromInt(0),
       optionalStringPiece: "",
       optionalCord: "",
-      get recursiveMessage(): TestAllTypesProto2 {
-        if (!_recursiveMessage) {
-          _recursiveMessage = TestAllTypesProto2JSON.initialize();
-        }
-        return _recursiveMessage;
-      },
+      recursiveMessage: TestAllTypesProto2JSON.initialize(),
       repeatedInt32: [],
       repeatedInt64: [],
       repeatedUint32: [],
@@ -4156,7 +4106,7 @@ export const TestAllTypesProto2JSON = {
       defaultBytes: new Uint8Array(),
       fieldname1: 0,
       fieldName2: 0,
-      FieldName3: 0,
+      fieldName3: 0,
       fieldName4: 0,
       field0name5: 0,
       field0Name6: 0,
@@ -4166,7 +4116,7 @@ export const TestAllTypesProto2JSON = {
       FieldName10: 0,
       FIELDNAME11: 0,
       FIELDName12: 0,
-      FieldName13: 0,
+      fieldName13: 0,
       FieldName14: 0,
       fieldName15: 0,
       fieldName16: 0,
@@ -4712,8 +4662,8 @@ export const TestAllTypesProto2JSON = {
     if (msg.fieldName2) {
       json["fieldName2"] = msg.fieldName2;
     }
-    if (msg.FieldName3) {
-      json["FieldName3"] = msg.FieldName3;
+    if (msg.fieldName3) {
+      json["FieldName3"] = msg.fieldName3;
     }
     if (msg.fieldName4) {
       json["fieldName4"] = msg.fieldName4;
@@ -4742,8 +4692,8 @@ export const TestAllTypesProto2JSON = {
     if (msg.FIELDName12) {
       json["FIELDName12"] = msg.FIELDName12;
     }
-    if (msg.FieldName13) {
-      json["FieldName13"] = msg.FieldName13;
+    if (msg.fieldName13) {
+      json["FieldName13"] = msg.fieldName13;
     }
     if (msg.FieldName14) {
       json["FieldName14"] = msg.FieldName14;
@@ -4837,7 +4787,7 @@ export const TestAllTypesProto2JSON = {
     const _optionalNestedMessage_ =
       json["optionalNestedMessage"] ?? json["optional_nested_message"];
     if (_optionalNestedMessage_) {
-      const m = TestAllTypesProto2.NestedMessage.initialize();
+      const m = TestAllTypesProto2JSON.NestedMessage.initialize();
       TestAllTypesProto2JSON.NestedMessage._readMessage(
         m,
         _optionalNestedMessage_
@@ -4847,7 +4797,7 @@ export const TestAllTypesProto2JSON = {
     const _optionalForeignMessage_ =
       json["optionalForeignMessage"] ?? json["optional_foreign_message"];
     if (_optionalForeignMessage_) {
-      const m = ForeignMessageProto2.initialize();
+      const m = ForeignMessageProto2JSON.initialize();
       ForeignMessageProto2JSON._readMessage(m, _optionalForeignMessage_);
       msg.optionalForeignMessage = m;
     }
@@ -4873,7 +4823,7 @@ export const TestAllTypesProto2JSON = {
     const _recursiveMessage_ =
       json["recursiveMessage"] ?? json["recursive_message"];
     if (_recursiveMessage_) {
-      const m = TestAllTypesProto2.initialize();
+      const m = TestAllTypesProto2JSON.initialize();
       TestAllTypesProto2JSON._readMessage(m, _recursiveMessage_);
       msg.recursiveMessage = m;
     }
@@ -4945,7 +4895,7 @@ export const TestAllTypesProto2JSON = {
       json["repeatedNestedMessage"] ?? json["repeated_nested_message"];
     if (_repeatedNestedMessage_) {
       for (const item of _repeatedNestedMessage_) {
-        const m = TestAllTypesProto2.NestedMessage.initialize();
+        const m = TestAllTypesProto2JSON.NestedMessage.initialize();
         TestAllTypesProto2JSON.NestedMessage._readMessage(m, item);
         msg.repeatedNestedMessage.push(m);
       }
@@ -4954,7 +4904,7 @@ export const TestAllTypesProto2JSON = {
       json["repeatedForeignMessage"] ?? json["repeated_foreign_message"];
     if (_repeatedForeignMessage_) {
       for (const item of _repeatedForeignMessage_) {
-        const m = ForeignMessageProto2.initialize();
+        const m = ForeignMessageProto2JSON.initialize();
         ForeignMessageProto2JSON._readMessage(m, item);
         msg.repeatedForeignMessage.push(m);
       }
@@ -5287,7 +5237,7 @@ export const TestAllTypesProto2JSON = {
     const _oneofNestedMessage_ =
       json["oneofNestedMessage"] ?? json["oneof_nested_message"];
     if (_oneofNestedMessage_) {
-      const m = TestAllTypesProto2.NestedMessage.initialize();
+      const m = TestAllTypesProto2JSON.NestedMessage.initialize();
       TestAllTypesProto2JSON.NestedMessage._readMessage(
         m,
         _oneofNestedMessage_
@@ -5392,9 +5342,10 @@ export const TestAllTypesProto2JSON = {
     if (_fieldName2_) {
       msg.fieldName2 = _fieldName2_;
     }
-    const _FieldName3_ = json["FieldName3"] ?? json["_field_name3"];
-    if (_FieldName3_) {
-      msg.FieldName3 = _FieldName3_;
+    const _fieldName3_ =
+      json["FieldName3"] ?? json["fieldName3"] ?? json["_field_name3"];
+    if (_fieldName3_) {
+      msg.fieldName3 = _fieldName3_;
     }
     const _fieldName4_ = json["fieldName4"] ?? json["field__name4_"];
     if (_fieldName4_) {
@@ -5432,9 +5383,10 @@ export const TestAllTypesProto2JSON = {
     if (_FIELDName12_) {
       msg.FIELDName12 = _FIELDName12_;
     }
-    const _FieldName13_ = json["FieldName13"] ?? json["__field_name13"];
-    if (_FieldName13_) {
-      msg.FieldName13 = _FieldName13_;
+    const _fieldName13_ =
+      json["FieldName13"] ?? json["fieldName13"] ?? json["__field_name13"];
+    if (_fieldName13_) {
+      msg.fieldName13 = _fieldName13_;
     }
     const _FieldName14_ = json["FieldName14"] ?? json["__Field_name14"];
     if (_FieldName14_) {
@@ -5536,15 +5488,9 @@ export const TestAllTypesProto2JSON = {
      * Initializes TestAllTypesProto2.NestedMessage with all fields set to their default value.
      */
     initialize: function (): TestAllTypesProto2.NestedMessage {
-      let _corecursive: TestAllTypesProto2 | undefined;
       return {
         a: 0,
-        get corecursive(): TestAllTypesProto2 {
-          if (!_corecursive) {
-            _corecursive = TestAllTypesProto2JSON.initialize();
-          }
-          return _corecursive;
-        },
+        corecursive: TestAllTypesProto2JSON.initialize(),
       };
     },
 
@@ -5582,7 +5528,7 @@ export const TestAllTypesProto2JSON = {
       }
       const _corecursive_ = json["corecursive"];
       if (_corecursive_) {
-        const m = TestAllTypesProto2.initialize();
+        const m = TestAllTypesProto2JSON.initialize();
         TestAllTypesProto2JSON._readMessage(m, _corecursive_);
         msg.corecursive = m;
       }
@@ -6165,7 +6111,7 @@ export const TestAllTypesProto2JSON = {
       }
       const _value_ = json["value"];
       if (_value_) {
-        const m = TestAllTypesProto2.NestedMessage.initialize();
+        const m = TestAllTypesProto2JSON.NestedMessage.initialize();
         TestAllTypesProto2JSON.NestedMessage._readMessage(m, _value_);
         msg.value = m;
       }
@@ -6206,7 +6152,7 @@ export const TestAllTypesProto2JSON = {
       }
       const _value_ = json["value"];
       if (_value_) {
-        const m = ForeignMessageProto2.initialize();
+        const m = ForeignMessageProto2JSON.initialize();
         ForeignMessageProto2JSON._readMessage(m, _value_);
         msg.value = m;
       }
@@ -6593,16 +6539,10 @@ export const UnknownToTestAllTypesJSON = {
    * Initializes UnknownToTestAllTypes with all fields set to their default value.
    */
   initialize: function (): UnknownToTestAllTypes {
-    let _nestedMessage: ForeignMessageProto2 | undefined;
     return {
       optionalInt32: 0,
       optionalString: "",
-      get nestedMessage(): ForeignMessageProto2 {
-        if (!_nestedMessage) {
-          _nestedMessage = ForeignMessageProto2JSON.initialize();
-        }
-        return _nestedMessage;
-      },
+      nestedMessage: ForeignMessageProto2JSON.initialize(),
       optionalBool: false,
       repeatedInt32: [],
     };
@@ -6655,7 +6595,7 @@ export const UnknownToTestAllTypesJSON = {
     }
     const _nestedMessage_ = json["nestedMessage"] ?? json["nested_message"];
     if (_nestedMessage_) {
-      const m = ForeignMessageProto2.initialize();
+      const m = ForeignMessageProto2JSON.initialize();
       ForeignMessageProto2JSON._readMessage(m, _nestedMessage_);
       msg.nestedMessage = m;
     }
