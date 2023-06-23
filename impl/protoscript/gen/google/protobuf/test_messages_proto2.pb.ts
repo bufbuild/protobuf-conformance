@@ -400,6 +400,84 @@ export interface ProtoWithKeywords {
   requires: string[];
 }
 
+export interface TestAllRequiredTypesProto2 {
+  /**
+   * Singular
+   */
+  requiredInt32: number;
+  requiredInt64: bigint;
+  requiredUint32: number;
+  requiredUint64: bigint;
+  requiredSint32: number;
+  requiredSint64: bigint;
+  requiredFixed32: number;
+  requiredFixed64: bigint;
+  requiredSfixed32: number;
+  requiredSfixed64: bigint;
+  requiredFloat: number;
+  requiredDouble: number;
+  requiredBool: boolean;
+  requiredString: string;
+  requiredBytes: Uint8Array;
+  requiredNestedMessage: TestAllRequiredTypesProto2.NestedMessage;
+  requiredForeignMessage: ForeignMessageProto2;
+  requiredNestedEnum: TestAllRequiredTypesProto2.NestedEnum;
+  requiredForeignEnum: ForeignEnumProto2;
+  requiredStringPiece: string;
+  requiredCord: string;
+  recursiveMessage: TestAllRequiredTypesProto2 | null | undefined;
+  optionalRecursiveMessage: TestAllRequiredTypesProto2 | null | undefined;
+  defaultInt32: number;
+  /**
+   * default values
+   */
+  defaultInt64: bigint;
+  defaultUint32: number;
+  defaultUint64: bigint;
+  defaultSint32: number;
+  defaultSint64: bigint;
+  defaultFixed32: number;
+  defaultFixed64: bigint;
+  defaultSfixed32: number;
+  defaultSfixed64: bigint;
+  defaultFloat: number;
+  defaultDouble: number;
+  defaultBool: boolean;
+  defaultString: string;
+  defaultBytes: Uint8Array;
+}
+
+export declare namespace TestAllRequiredTypesProto2 {
+  export type NestedEnum = "FOO" | "BAR" | "BAZ" | "NEG";
+
+  export interface NestedMessage {
+    a: number;
+    corecursive: TestAllRequiredTypesProto2 | null | undefined;
+    optionalCorecursive: TestAllRequiredTypesProto2 | null | undefined;
+  }
+
+  /**
+   * groups
+   */
+  export interface Data {
+    groupInt32: number;
+    groupUint32: number;
+  }
+
+  /**
+   * message_set test case.
+   */
+  export interface MessageSetCorrect {}
+
+  export interface MessageSetCorrectExtension1 {
+    str: string;
+  }
+
+  export interface MessageSetCorrectExtension2 {
+    i: number;
+  }
+}
+
 //========================================//
 //        Protobuf Encode / Decode        //
 //========================================//
@@ -3917,6 +3995,832 @@ export const ProtoWithKeywords = {
   },
 };
 
+export const TestAllRequiredTypesProto2 = {
+  /**
+   * Serializes TestAllRequiredTypesProto2 to protobuf.
+   */
+  encode: function (msg: Partial<TestAllRequiredTypesProto2>): Uint8Array {
+    return TestAllRequiredTypesProto2._writeMessage(
+      msg,
+      new BinaryWriter()
+    ).getResultBuffer();
+  },
+
+  /**
+   * Deserializes TestAllRequiredTypesProto2 from protobuf.
+   */
+  decode: function (bytes: ByteSource): TestAllRequiredTypesProto2 {
+    return TestAllRequiredTypesProto2._readMessage(
+      TestAllRequiredTypesProto2.initialize(),
+      new BinaryReader(bytes)
+    );
+  },
+
+  /**
+   * Initializes TestAllRequiredTypesProto2 with all fields set to their default value.
+   */
+  initialize: function (): TestAllRequiredTypesProto2 {
+    return {
+      requiredInt32: 0,
+      requiredInt64: 0n,
+      requiredUint32: 0,
+      requiredUint64: 0n,
+      requiredSint32: 0,
+      requiredSint64: 0n,
+      requiredFixed32: 0,
+      requiredFixed64: 0n,
+      requiredSfixed32: 0,
+      requiredSfixed64: 0n,
+      requiredFloat: 0,
+      requiredDouble: 0,
+      requiredBool: false,
+      requiredString: "",
+      requiredBytes: new Uint8Array(),
+      requiredNestedMessage:
+        TestAllRequiredTypesProto2.NestedMessage.initialize(),
+      requiredForeignMessage: ForeignMessageProto2.initialize(),
+      requiredNestedEnum: TestAllRequiredTypesProto2.NestedEnum._fromInt(0),
+      requiredForeignEnum: ForeignEnumProto2._fromInt(0),
+      requiredStringPiece: "",
+      requiredCord: "",
+      recursiveMessage: undefined,
+      optionalRecursiveMessage: undefined,
+      defaultInt32: 0,
+      defaultInt64: 0n,
+      defaultUint32: 0,
+      defaultUint64: 0n,
+      defaultSint32: 0,
+      defaultSint64: 0n,
+      defaultFixed32: 0,
+      defaultFixed64: 0n,
+      defaultSfixed32: 0,
+      defaultSfixed64: 0n,
+      defaultFloat: 0,
+      defaultDouble: 0,
+      defaultBool: false,
+      defaultString: "",
+      defaultBytes: new Uint8Array(),
+    };
+  },
+
+  /**
+   * @private
+   */
+  _writeMessage: function (
+    msg: Partial<TestAllRequiredTypesProto2>,
+    writer: BinaryWriter
+  ): BinaryWriter {
+    if (msg.requiredInt32) {
+      writer.writeInt32(1, msg.requiredInt32);
+    }
+    if (msg.requiredInt64) {
+      writer.writeInt64String(2, msg.requiredInt64.toString() as any);
+    }
+    if (msg.requiredUint32) {
+      writer.writeUint32(3, msg.requiredUint32);
+    }
+    if (msg.requiredUint64) {
+      writer.writeUint64String(4, msg.requiredUint64.toString() as any);
+    }
+    if (msg.requiredSint32) {
+      writer.writeSint32(5, msg.requiredSint32);
+    }
+    if (msg.requiredSint64) {
+      writer.writeSint64String(6, msg.requiredSint64.toString() as any);
+    }
+    if (msg.requiredFixed32) {
+      writer.writeFixed32(7, msg.requiredFixed32);
+    }
+    if (msg.requiredFixed64) {
+      writer.writeFixed64String(8, msg.requiredFixed64.toString() as any);
+    }
+    if (msg.requiredSfixed32) {
+      writer.writeSfixed32(9, msg.requiredSfixed32);
+    }
+    if (msg.requiredSfixed64) {
+      writer.writeSfixed64String(10, msg.requiredSfixed64.toString() as any);
+    }
+    if (msg.requiredFloat) {
+      writer.writeFloat(11, msg.requiredFloat);
+    }
+    if (msg.requiredDouble) {
+      writer.writeDouble(12, msg.requiredDouble);
+    }
+    if (msg.requiredBool) {
+      writer.writeBool(13, msg.requiredBool);
+    }
+    if (msg.requiredString) {
+      writer.writeString(14, msg.requiredString);
+    }
+    if (msg.requiredBytes?.length) {
+      writer.writeBytes(15, msg.requiredBytes);
+    }
+    if (msg.requiredNestedMessage) {
+      writer.writeMessage(
+        18,
+        msg.requiredNestedMessage,
+        TestAllRequiredTypesProto2.NestedMessage._writeMessage
+      );
+    }
+    if (msg.requiredForeignMessage) {
+      writer.writeMessage(
+        19,
+        msg.requiredForeignMessage,
+        ForeignMessageProto2._writeMessage
+      );
+    }
+    if (
+      msg.requiredNestedEnum &&
+      TestAllRequiredTypesProto2.NestedEnum._toInt(msg.requiredNestedEnum)
+    ) {
+      writer.writeEnum(
+        21,
+        TestAllRequiredTypesProto2.NestedEnum._toInt(msg.requiredNestedEnum)
+      );
+    }
+    if (
+      msg.requiredForeignEnum &&
+      ForeignEnumProto2._toInt(msg.requiredForeignEnum)
+    ) {
+      writer.writeEnum(22, ForeignEnumProto2._toInt(msg.requiredForeignEnum));
+    }
+    if (msg.requiredStringPiece) {
+      writer.writeString(24, msg.requiredStringPiece);
+    }
+    if (msg.requiredCord) {
+      writer.writeString(25, msg.requiredCord);
+    }
+    if (msg.recursiveMessage) {
+      writer.writeMessage(
+        27,
+        msg.recursiveMessage,
+        TestAllRequiredTypesProto2._writeMessage
+      );
+    }
+    if (msg.optionalRecursiveMessage) {
+      writer.writeMessage(
+        28,
+        msg.optionalRecursiveMessage,
+        TestAllRequiredTypesProto2._writeMessage
+      );
+    }
+    if (msg.defaultInt32) {
+      writer.writeInt32(241, msg.defaultInt32);
+    }
+    if (msg.defaultInt64) {
+      writer.writeInt64String(242, msg.defaultInt64.toString() as any);
+    }
+    if (msg.defaultUint32) {
+      writer.writeUint32(243, msg.defaultUint32);
+    }
+    if (msg.defaultUint64) {
+      writer.writeUint64String(244, msg.defaultUint64.toString() as any);
+    }
+    if (msg.defaultSint32) {
+      writer.writeSint32(245, msg.defaultSint32);
+    }
+    if (msg.defaultSint64) {
+      writer.writeSint64String(246, msg.defaultSint64.toString() as any);
+    }
+    if (msg.defaultFixed32) {
+      writer.writeFixed32(247, msg.defaultFixed32);
+    }
+    if (msg.defaultFixed64) {
+      writer.writeFixed64String(248, msg.defaultFixed64.toString() as any);
+    }
+    if (msg.defaultSfixed32) {
+      writer.writeSfixed32(249, msg.defaultSfixed32);
+    }
+    if (msg.defaultSfixed64) {
+      writer.writeSfixed64String(250, msg.defaultSfixed64.toString() as any);
+    }
+    if (msg.defaultFloat) {
+      writer.writeFloat(251, msg.defaultFloat);
+    }
+    if (msg.defaultDouble) {
+      writer.writeDouble(252, msg.defaultDouble);
+    }
+    if (msg.defaultBool) {
+      writer.writeBool(253, msg.defaultBool);
+    }
+    if (msg.defaultString) {
+      writer.writeString(254, msg.defaultString);
+    }
+    if (msg.defaultBytes?.length) {
+      writer.writeBytes(255, msg.defaultBytes);
+    }
+    return writer;
+  },
+
+  /**
+   * @private
+   */
+  _readMessage: function (
+    msg: TestAllRequiredTypesProto2,
+    reader: BinaryReader
+  ): TestAllRequiredTypesProto2 {
+    while (reader.nextField()) {
+      const field = reader.getFieldNumber();
+      switch (field) {
+        case 1: {
+          msg.requiredInt32 = reader.readInt32();
+          break;
+        }
+        case 2: {
+          msg.requiredInt64 = BigInt(reader.readInt64String());
+          break;
+        }
+        case 3: {
+          msg.requiredUint32 = reader.readUint32();
+          break;
+        }
+        case 4: {
+          msg.requiredUint64 = BigInt(reader.readUint64String());
+          break;
+        }
+        case 5: {
+          msg.requiredSint32 = reader.readSint32();
+          break;
+        }
+        case 6: {
+          msg.requiredSint64 = BigInt(reader.readSint64String());
+          break;
+        }
+        case 7: {
+          msg.requiredFixed32 = reader.readFixed32();
+          break;
+        }
+        case 8: {
+          msg.requiredFixed64 = BigInt(reader.readFixed64String());
+          break;
+        }
+        case 9: {
+          msg.requiredSfixed32 = reader.readSfixed32();
+          break;
+        }
+        case 10: {
+          msg.requiredSfixed64 = BigInt(reader.readSfixed64String());
+          break;
+        }
+        case 11: {
+          msg.requiredFloat = reader.readFloat();
+          break;
+        }
+        case 12: {
+          msg.requiredDouble = reader.readDouble();
+          break;
+        }
+        case 13: {
+          msg.requiredBool = reader.readBool();
+          break;
+        }
+        case 14: {
+          msg.requiredString = reader.readString();
+          break;
+        }
+        case 15: {
+          msg.requiredBytes = reader.readBytes();
+          break;
+        }
+        case 18: {
+          reader.readMessage(
+            msg.requiredNestedMessage,
+            TestAllRequiredTypesProto2.NestedMessage._readMessage
+          );
+          break;
+        }
+        case 19: {
+          reader.readMessage(
+            msg.requiredForeignMessage,
+            ForeignMessageProto2._readMessage
+          );
+          break;
+        }
+        case 21: {
+          msg.requiredNestedEnum =
+            TestAllRequiredTypesProto2.NestedEnum._fromInt(reader.readEnum());
+          break;
+        }
+        case 22: {
+          msg.requiredForeignEnum = ForeignEnumProto2._fromInt(
+            reader.readEnum()
+          );
+          break;
+        }
+        case 24: {
+          msg.requiredStringPiece = reader.readString();
+          break;
+        }
+        case 25: {
+          msg.requiredCord = reader.readString();
+          break;
+        }
+        case 27: {
+          reader.readMessage(
+            msg.recursiveMessage,
+            TestAllRequiredTypesProto2._readMessage
+          );
+          break;
+        }
+        case 28: {
+          reader.readMessage(
+            msg.optionalRecursiveMessage,
+            TestAllRequiredTypesProto2._readMessage
+          );
+          break;
+        }
+        case 241: {
+          msg.defaultInt32 = reader.readInt32();
+          break;
+        }
+        case 242: {
+          msg.defaultInt64 = BigInt(reader.readInt64String());
+          break;
+        }
+        case 243: {
+          msg.defaultUint32 = reader.readUint32();
+          break;
+        }
+        case 244: {
+          msg.defaultUint64 = BigInt(reader.readUint64String());
+          break;
+        }
+        case 245: {
+          msg.defaultSint32 = reader.readSint32();
+          break;
+        }
+        case 246: {
+          msg.defaultSint64 = BigInt(reader.readSint64String());
+          break;
+        }
+        case 247: {
+          msg.defaultFixed32 = reader.readFixed32();
+          break;
+        }
+        case 248: {
+          msg.defaultFixed64 = BigInt(reader.readFixed64String());
+          break;
+        }
+        case 249: {
+          msg.defaultSfixed32 = reader.readSfixed32();
+          break;
+        }
+        case 250: {
+          msg.defaultSfixed64 = BigInt(reader.readSfixed64String());
+          break;
+        }
+        case 251: {
+          msg.defaultFloat = reader.readFloat();
+          break;
+        }
+        case 252: {
+          msg.defaultDouble = reader.readDouble();
+          break;
+        }
+        case 253: {
+          msg.defaultBool = reader.readBool();
+          break;
+        }
+        case 254: {
+          msg.defaultString = reader.readString();
+          break;
+        }
+        case 255: {
+          msg.defaultBytes = reader.readBytes();
+          break;
+        }
+        default: {
+          reader.skipField();
+          break;
+        }
+      }
+    }
+    return msg;
+  },
+
+  NestedEnum: {
+    FOO: "FOO",
+    BAR: "BAR",
+    BAZ: "BAZ",
+    NEG: "NEG",
+    /**
+     * @private
+     */
+    _fromInt: function (i: number): TestAllRequiredTypesProto2.NestedEnum {
+      switch (i) {
+        case 0: {
+          return "FOO";
+        }
+        case 1: {
+          return "BAR";
+        }
+        case 2: {
+          return "BAZ";
+        }
+        case -1: {
+          return "NEG";
+        }
+        // unknown values are preserved as numbers. this occurs when new enum values are introduced and the generated code is out of date.
+        default: {
+          return i as unknown as TestAllRequiredTypesProto2.NestedEnum;
+        }
+      }
+    },
+    /**
+     * @private
+     */
+    _toInt: function (i: TestAllRequiredTypesProto2.NestedEnum): number {
+      switch (i) {
+        case "FOO": {
+          return 0;
+        }
+        case "BAR": {
+          return 1;
+        }
+        case "BAZ": {
+          return 2;
+        }
+        case "NEG": {
+          return -1;
+        }
+        // unknown values are preserved as numbers. this occurs when new enum values are introduced and the generated code is out of date.
+        default: {
+          return i as unknown as number;
+        }
+      }
+    },
+  } as const,
+
+  NestedMessage: {
+    /**
+     * Serializes TestAllRequiredTypesProto2.NestedMessage to protobuf.
+     */
+    encode: function (
+      msg: Partial<TestAllRequiredTypesProto2.NestedMessage>
+    ): Uint8Array {
+      return TestAllRequiredTypesProto2.NestedMessage._writeMessage(
+        msg,
+        new BinaryWriter()
+      ).getResultBuffer();
+    },
+
+    /**
+     * Deserializes TestAllRequiredTypesProto2.NestedMessage from protobuf.
+     */
+    decode: function (
+      bytes: ByteSource
+    ): TestAllRequiredTypesProto2.NestedMessage {
+      return TestAllRequiredTypesProto2.NestedMessage._readMessage(
+        TestAllRequiredTypesProto2.NestedMessage.initialize(),
+        new BinaryReader(bytes)
+      );
+    },
+
+    /**
+     * Initializes TestAllRequiredTypesProto2.NestedMessage with all fields set to their default value.
+     */
+    initialize: function (): TestAllRequiredTypesProto2.NestedMessage {
+      return {
+        a: 0,
+        corecursive: undefined,
+        optionalCorecursive: undefined,
+      };
+    },
+
+    /**
+     * @private
+     */
+    _writeMessage: function (
+      msg: Partial<TestAllRequiredTypesProto2.NestedMessage>,
+      writer: BinaryWriter
+    ): BinaryWriter {
+      if (msg.a) {
+        writer.writeInt32(1, msg.a);
+      }
+      if (msg.corecursive) {
+        writer.writeMessage(
+          2,
+          msg.corecursive,
+          TestAllRequiredTypesProto2._writeMessage
+        );
+      }
+      if (msg.optionalCorecursive) {
+        writer.writeMessage(
+          3,
+          msg.optionalCorecursive,
+          TestAllRequiredTypesProto2._writeMessage
+        );
+      }
+      return writer;
+    },
+
+    /**
+     * @private
+     */
+    _readMessage: function (
+      msg: TestAllRequiredTypesProto2.NestedMessage,
+      reader: BinaryReader
+    ): TestAllRequiredTypesProto2.NestedMessage {
+      while (reader.nextField()) {
+        const field = reader.getFieldNumber();
+        switch (field) {
+          case 1: {
+            msg.a = reader.readInt32();
+            break;
+          }
+          case 2: {
+            reader.readMessage(
+              msg.corecursive,
+              TestAllRequiredTypesProto2._readMessage
+            );
+            break;
+          }
+          case 3: {
+            reader.readMessage(
+              msg.optionalCorecursive,
+              TestAllRequiredTypesProto2._readMessage
+            );
+            break;
+          }
+          default: {
+            reader.skipField();
+            break;
+          }
+        }
+      }
+      return msg;
+    },
+  },
+
+  Data: {
+    /**
+     * Serializes TestAllRequiredTypesProto2.Data to protobuf.
+     */
+    encode: function (
+      msg: Partial<TestAllRequiredTypesProto2.Data>
+    ): Uint8Array {
+      return TestAllRequiredTypesProto2.Data._writeMessage(
+        msg,
+        new BinaryWriter()
+      ).getResultBuffer();
+    },
+
+    /**
+     * Deserializes TestAllRequiredTypesProto2.Data from protobuf.
+     */
+    decode: function (bytes: ByteSource): TestAllRequiredTypesProto2.Data {
+      return TestAllRequiredTypesProto2.Data._readMessage(
+        TestAllRequiredTypesProto2.Data.initialize(),
+        new BinaryReader(bytes)
+      );
+    },
+
+    /**
+     * Initializes TestAllRequiredTypesProto2.Data with all fields set to their default value.
+     */
+    initialize: function (): TestAllRequiredTypesProto2.Data {
+      return {
+        groupInt32: 0,
+        groupUint32: 0,
+      };
+    },
+
+    /**
+     * @private
+     */
+    _writeMessage: function (
+      msg: Partial<TestAllRequiredTypesProto2.Data>,
+      writer: BinaryWriter
+    ): BinaryWriter {
+      if (msg.groupInt32) {
+        writer.writeInt32(202, msg.groupInt32);
+      }
+      if (msg.groupUint32) {
+        writer.writeUint32(203, msg.groupUint32);
+      }
+      return writer;
+    },
+
+    /**
+     * @private
+     */
+    _readMessage: function (
+      msg: TestAllRequiredTypesProto2.Data,
+      reader: BinaryReader
+    ): TestAllRequiredTypesProto2.Data {
+      while (reader.nextField()) {
+        const field = reader.getFieldNumber();
+        switch (field) {
+          case 202: {
+            msg.groupInt32 = reader.readInt32();
+            break;
+          }
+          case 203: {
+            msg.groupUint32 = reader.readUint32();
+            break;
+          }
+          default: {
+            reader.skipField();
+            break;
+          }
+        }
+      }
+      return msg;
+    },
+  },
+
+  MessageSetCorrect: {
+    /**
+     * Serializes TestAllRequiredTypesProto2.MessageSetCorrect to protobuf.
+     */
+    encode: function (
+      _msg?: Partial<TestAllRequiredTypesProto2.MessageSetCorrect>
+    ): Uint8Array {
+      return new Uint8Array();
+    },
+
+    /**
+     * Deserializes TestAllRequiredTypesProto2.MessageSetCorrect from protobuf.
+     */
+    decode: function (
+      _bytes?: ByteSource
+    ): TestAllRequiredTypesProto2.MessageSetCorrect {
+      return {};
+    },
+
+    /**
+     * Initializes TestAllRequiredTypesProto2.MessageSetCorrect with all fields set to their default value.
+     */
+    initialize: function (): TestAllRequiredTypesProto2.MessageSetCorrect {
+      return {};
+    },
+
+    /**
+     * @private
+     */
+    _writeMessage: function (
+      _msg: Partial<TestAllRequiredTypesProto2.MessageSetCorrect>,
+      writer: BinaryWriter
+    ): BinaryWriter {
+      return writer;
+    },
+
+    /**
+     * @private
+     */
+    _readMessage: function (
+      _msg: TestAllRequiredTypesProto2.MessageSetCorrect,
+      _reader: BinaryReader
+    ): TestAllRequiredTypesProto2.MessageSetCorrect {
+      return _msg;
+    },
+  },
+
+  MessageSetCorrectExtension1: {
+    /**
+     * Serializes TestAllRequiredTypesProto2.MessageSetCorrectExtension1 to protobuf.
+     */
+    encode: function (
+      msg: Partial<TestAllRequiredTypesProto2.MessageSetCorrectExtension1>
+    ): Uint8Array {
+      return TestAllRequiredTypesProto2.MessageSetCorrectExtension1._writeMessage(
+        msg,
+        new BinaryWriter()
+      ).getResultBuffer();
+    },
+
+    /**
+     * Deserializes TestAllRequiredTypesProto2.MessageSetCorrectExtension1 from protobuf.
+     */
+    decode: function (
+      bytes: ByteSource
+    ): TestAllRequiredTypesProto2.MessageSetCorrectExtension1 {
+      return TestAllRequiredTypesProto2.MessageSetCorrectExtension1._readMessage(
+        TestAllRequiredTypesProto2.MessageSetCorrectExtension1.initialize(),
+        new BinaryReader(bytes)
+      );
+    },
+
+    /**
+     * Initializes TestAllRequiredTypesProto2.MessageSetCorrectExtension1 with all fields set to their default value.
+     */
+    initialize:
+      function (): TestAllRequiredTypesProto2.MessageSetCorrectExtension1 {
+        return {
+          str: "",
+        };
+      },
+
+    /**
+     * @private
+     */
+    _writeMessage: function (
+      msg: Partial<TestAllRequiredTypesProto2.MessageSetCorrectExtension1>,
+      writer: BinaryWriter
+    ): BinaryWriter {
+      if (msg.str) {
+        writer.writeString(25, msg.str);
+      }
+      return writer;
+    },
+
+    /**
+     * @private
+     */
+    _readMessage: function (
+      msg: TestAllRequiredTypesProto2.MessageSetCorrectExtension1,
+      reader: BinaryReader
+    ): TestAllRequiredTypesProto2.MessageSetCorrectExtension1 {
+      while (reader.nextField()) {
+        const field = reader.getFieldNumber();
+        switch (field) {
+          case 25: {
+            msg.str = reader.readString();
+            break;
+          }
+          default: {
+            reader.skipField();
+            break;
+          }
+        }
+      }
+      return msg;
+    },
+  },
+
+  MessageSetCorrectExtension2: {
+    /**
+     * Serializes TestAllRequiredTypesProto2.MessageSetCorrectExtension2 to protobuf.
+     */
+    encode: function (
+      msg: Partial<TestAllRequiredTypesProto2.MessageSetCorrectExtension2>
+    ): Uint8Array {
+      return TestAllRequiredTypesProto2.MessageSetCorrectExtension2._writeMessage(
+        msg,
+        new BinaryWriter()
+      ).getResultBuffer();
+    },
+
+    /**
+     * Deserializes TestAllRequiredTypesProto2.MessageSetCorrectExtension2 from protobuf.
+     */
+    decode: function (
+      bytes: ByteSource
+    ): TestAllRequiredTypesProto2.MessageSetCorrectExtension2 {
+      return TestAllRequiredTypesProto2.MessageSetCorrectExtension2._readMessage(
+        TestAllRequiredTypesProto2.MessageSetCorrectExtension2.initialize(),
+        new BinaryReader(bytes)
+      );
+    },
+
+    /**
+     * Initializes TestAllRequiredTypesProto2.MessageSetCorrectExtension2 with all fields set to their default value.
+     */
+    initialize:
+      function (): TestAllRequiredTypesProto2.MessageSetCorrectExtension2 {
+        return {
+          i: 0,
+        };
+      },
+
+    /**
+     * @private
+     */
+    _writeMessage: function (
+      msg: Partial<TestAllRequiredTypesProto2.MessageSetCorrectExtension2>,
+      writer: BinaryWriter
+    ): BinaryWriter {
+      if (msg.i) {
+        writer.writeInt32(9, msg.i);
+      }
+      return writer;
+    },
+
+    /**
+     * @private
+     */
+    _readMessage: function (
+      msg: TestAllRequiredTypesProto2.MessageSetCorrectExtension2,
+      reader: BinaryReader
+    ): TestAllRequiredTypesProto2.MessageSetCorrectExtension2 {
+      while (reader.nextField()) {
+        const field = reader.getFieldNumber();
+        switch (field) {
+          case 9: {
+            msg.i = reader.readInt32();
+            break;
+          }
+          default: {
+            reader.skipField();
+            break;
+          }
+        }
+      }
+      return msg;
+    },
+  },
+};
+
 //========================================//
 //          JSON Encode / Decode          //
 //========================================//
@@ -6910,5 +7814,793 @@ export const ProtoWithKeywordsJSON = {
       msg.requires = _requires_;
     }
     return msg;
+  },
+};
+
+export const TestAllRequiredTypesProto2JSON = {
+  /**
+   * Serializes TestAllRequiredTypesProto2 to JSON.
+   */
+  encode: function (msg: Partial<TestAllRequiredTypesProto2>): string {
+    return JSON.stringify(TestAllRequiredTypesProto2JSON._writeMessage(msg));
+  },
+
+  /**
+   * Deserializes TestAllRequiredTypesProto2 from JSON.
+   */
+  decode: function (json: string): TestAllRequiredTypesProto2 {
+    return TestAllRequiredTypesProto2JSON._readMessage(
+      TestAllRequiredTypesProto2JSON.initialize(),
+      JSON.parse(json)
+    );
+  },
+
+  /**
+   * Initializes TestAllRequiredTypesProto2 with all fields set to their default value.
+   */
+  initialize: function (): TestAllRequiredTypesProto2 {
+    return {
+      requiredInt32: 0,
+      requiredInt64: 0n,
+      requiredUint32: 0,
+      requiredUint64: 0n,
+      requiredSint32: 0,
+      requiredSint64: 0n,
+      requiredFixed32: 0,
+      requiredFixed64: 0n,
+      requiredSfixed32: 0,
+      requiredSfixed64: 0n,
+      requiredFloat: 0,
+      requiredDouble: 0,
+      requiredBool: false,
+      requiredString: "",
+      requiredBytes: new Uint8Array(),
+      requiredNestedMessage:
+        TestAllRequiredTypesProto2JSON.NestedMessage.initialize(),
+      requiredForeignMessage: ForeignMessageProto2JSON.initialize(),
+      requiredNestedEnum: TestAllRequiredTypesProto2.NestedEnum._fromInt(0),
+      requiredForeignEnum: ForeignEnumProto2._fromInt(0),
+      requiredStringPiece: "",
+      requiredCord: "",
+      recursiveMessage: TestAllRequiredTypesProto2JSON.initialize(),
+      optionalRecursiveMessage: TestAllRequiredTypesProto2JSON.initialize(),
+      defaultInt32: 0,
+      defaultInt64: 0n,
+      defaultUint32: 0,
+      defaultUint64: 0n,
+      defaultSint32: 0,
+      defaultSint64: 0n,
+      defaultFixed32: 0,
+      defaultFixed64: 0n,
+      defaultSfixed32: 0,
+      defaultSfixed64: 0n,
+      defaultFloat: 0,
+      defaultDouble: 0,
+      defaultBool: false,
+      defaultString: "",
+      defaultBytes: new Uint8Array(),
+    };
+  },
+
+  /**
+   * @private
+   */
+  _writeMessage: function (
+    msg: Partial<TestAllRequiredTypesProto2>
+  ): Record<string, unknown> {
+    const json: Record<string, unknown> = {};
+    if (msg.requiredInt32) {
+      json["requiredInt32"] = msg.requiredInt32;
+    }
+    if (msg.requiredInt64) {
+      json["requiredInt64"] = msg.requiredInt64.toString();
+    }
+    if (msg.requiredUint32) {
+      json["requiredUint32"] = msg.requiredUint32;
+    }
+    if (msg.requiredUint64) {
+      json["requiredUint64"] = msg.requiredUint64.toString();
+    }
+    if (msg.requiredSint32) {
+      json["requiredSint32"] = msg.requiredSint32;
+    }
+    if (msg.requiredSint64) {
+      json["requiredSint64"] = msg.requiredSint64.toString();
+    }
+    if (msg.requiredFixed32) {
+      json["requiredFixed32"] = msg.requiredFixed32;
+    }
+    if (msg.requiredFixed64) {
+      json["requiredFixed64"] = msg.requiredFixed64.toString();
+    }
+    if (msg.requiredSfixed32) {
+      json["requiredSfixed32"] = msg.requiredSfixed32;
+    }
+    if (msg.requiredSfixed64) {
+      json["requiredSfixed64"] = msg.requiredSfixed64.toString();
+    }
+    if (msg.requiredFloat) {
+      json["requiredFloat"] = msg.requiredFloat;
+    }
+    if (msg.requiredDouble) {
+      json["requiredDouble"] = msg.requiredDouble;
+    }
+    if (msg.requiredBool) {
+      json["requiredBool"] = msg.requiredBool;
+    }
+    if (msg.requiredString) {
+      json["requiredString"] = msg.requiredString;
+    }
+    if (msg.requiredBytes?.length) {
+      json["requiredBytes"] = encodeBase64Bytes(msg.requiredBytes);
+    }
+    if (msg.requiredNestedMessage) {
+      const _requiredNestedMessage_ =
+        TestAllRequiredTypesProto2JSON.NestedMessage._writeMessage(
+          msg.requiredNestedMessage
+        );
+      if (Object.keys(_requiredNestedMessage_).length > 0) {
+        json["requiredNestedMessage"] = _requiredNestedMessage_;
+      }
+    }
+    if (msg.requiredForeignMessage) {
+      const _requiredForeignMessage_ = ForeignMessageProto2JSON._writeMessage(
+        msg.requiredForeignMessage
+      );
+      if (Object.keys(_requiredForeignMessage_).length > 0) {
+        json["requiredForeignMessage"] = _requiredForeignMessage_;
+      }
+    }
+    if (
+      msg.requiredNestedEnum &&
+      TestAllRequiredTypesProto2JSON.NestedEnum._toInt(msg.requiredNestedEnum)
+    ) {
+      json["requiredNestedEnum"] = msg.requiredNestedEnum;
+    }
+    if (
+      msg.requiredForeignEnum &&
+      ForeignEnumProto2JSON._toInt(msg.requiredForeignEnum)
+    ) {
+      json["requiredForeignEnum"] = msg.requiredForeignEnum;
+    }
+    if (msg.requiredStringPiece) {
+      json["requiredStringPiece"] = msg.requiredStringPiece;
+    }
+    if (msg.requiredCord) {
+      json["requiredCord"] = msg.requiredCord;
+    }
+    if (msg.recursiveMessage) {
+      const _recursiveMessage_ = TestAllRequiredTypesProto2JSON._writeMessage(
+        msg.recursiveMessage
+      );
+      if (Object.keys(_recursiveMessage_).length > 0) {
+        json["recursiveMessage"] = _recursiveMessage_;
+      }
+    }
+    if (msg.optionalRecursiveMessage) {
+      const _optionalRecursiveMessage_ =
+        TestAllRequiredTypesProto2JSON._writeMessage(
+          msg.optionalRecursiveMessage
+        );
+      if (Object.keys(_optionalRecursiveMessage_).length > 0) {
+        json["optionalRecursiveMessage"] = _optionalRecursiveMessage_;
+      }
+    }
+    if (msg.defaultInt32) {
+      json["defaultInt32"] = msg.defaultInt32;
+    }
+    if (msg.defaultInt64) {
+      json["defaultInt64"] = msg.defaultInt64.toString();
+    }
+    if (msg.defaultUint32) {
+      json["defaultUint32"] = msg.defaultUint32;
+    }
+    if (msg.defaultUint64) {
+      json["defaultUint64"] = msg.defaultUint64.toString();
+    }
+    if (msg.defaultSint32) {
+      json["defaultSint32"] = msg.defaultSint32;
+    }
+    if (msg.defaultSint64) {
+      json["defaultSint64"] = msg.defaultSint64.toString();
+    }
+    if (msg.defaultFixed32) {
+      json["defaultFixed32"] = msg.defaultFixed32;
+    }
+    if (msg.defaultFixed64) {
+      json["defaultFixed64"] = msg.defaultFixed64.toString();
+    }
+    if (msg.defaultSfixed32) {
+      json["defaultSfixed32"] = msg.defaultSfixed32;
+    }
+    if (msg.defaultSfixed64) {
+      json["defaultSfixed64"] = msg.defaultSfixed64.toString();
+    }
+    if (msg.defaultFloat) {
+      json["defaultFloat"] = msg.defaultFloat;
+    }
+    if (msg.defaultDouble) {
+      json["defaultDouble"] = msg.defaultDouble;
+    }
+    if (msg.defaultBool) {
+      json["defaultBool"] = msg.defaultBool;
+    }
+    if (msg.defaultString) {
+      json["defaultString"] = msg.defaultString;
+    }
+    if (msg.defaultBytes?.length) {
+      json["defaultBytes"] = encodeBase64Bytes(msg.defaultBytes);
+    }
+    return json;
+  },
+
+  /**
+   * @private
+   */
+  _readMessage: function (
+    msg: TestAllRequiredTypesProto2,
+    json: any
+  ): TestAllRequiredTypesProto2 {
+    const _requiredInt32_ = json["requiredInt32"] ?? json["required_int32"];
+    if (_requiredInt32_) {
+      msg.requiredInt32 = _requiredInt32_;
+    }
+    const _requiredInt64_ = json["requiredInt64"] ?? json["required_int64"];
+    if (_requiredInt64_) {
+      msg.requiredInt64 = BigInt(_requiredInt64_);
+    }
+    const _requiredUint32_ = json["requiredUint32"] ?? json["required_uint32"];
+    if (_requiredUint32_) {
+      msg.requiredUint32 = _requiredUint32_;
+    }
+    const _requiredUint64_ = json["requiredUint64"] ?? json["required_uint64"];
+    if (_requiredUint64_) {
+      msg.requiredUint64 = BigInt(_requiredUint64_);
+    }
+    const _requiredSint32_ = json["requiredSint32"] ?? json["required_sint32"];
+    if (_requiredSint32_) {
+      msg.requiredSint32 = _requiredSint32_;
+    }
+    const _requiredSint64_ = json["requiredSint64"] ?? json["required_sint64"];
+    if (_requiredSint64_) {
+      msg.requiredSint64 = BigInt(_requiredSint64_);
+    }
+    const _requiredFixed32_ =
+      json["requiredFixed32"] ?? json["required_fixed32"];
+    if (_requiredFixed32_) {
+      msg.requiredFixed32 = _requiredFixed32_;
+    }
+    const _requiredFixed64_ =
+      json["requiredFixed64"] ?? json["required_fixed64"];
+    if (_requiredFixed64_) {
+      msg.requiredFixed64 = BigInt(_requiredFixed64_);
+    }
+    const _requiredSfixed32_ =
+      json["requiredSfixed32"] ?? json["required_sfixed32"];
+    if (_requiredSfixed32_) {
+      msg.requiredSfixed32 = _requiredSfixed32_;
+    }
+    const _requiredSfixed64_ =
+      json["requiredSfixed64"] ?? json["required_sfixed64"];
+    if (_requiredSfixed64_) {
+      msg.requiredSfixed64 = BigInt(_requiredSfixed64_);
+    }
+    const _requiredFloat_ = json["requiredFloat"] ?? json["required_float"];
+    if (_requiredFloat_) {
+      msg.requiredFloat = _requiredFloat_;
+    }
+    const _requiredDouble_ = json["requiredDouble"] ?? json["required_double"];
+    if (_requiredDouble_) {
+      msg.requiredDouble = _requiredDouble_;
+    }
+    const _requiredBool_ = json["requiredBool"] ?? json["required_bool"];
+    if (_requiredBool_) {
+      msg.requiredBool = _requiredBool_;
+    }
+    const _requiredString_ = json["requiredString"] ?? json["required_string"];
+    if (_requiredString_) {
+      msg.requiredString = _requiredString_;
+    }
+    const _requiredBytes_ = json["requiredBytes"] ?? json["required_bytes"];
+    if (_requiredBytes_) {
+      msg.requiredBytes = decodeBase64Bytes(_requiredBytes_);
+    }
+    const _requiredNestedMessage_ =
+      json["requiredNestedMessage"] ?? json["required_nested_message"];
+    if (_requiredNestedMessage_) {
+      const m = TestAllRequiredTypesProto2JSON.NestedMessage.initialize();
+      TestAllRequiredTypesProto2JSON.NestedMessage._readMessage(
+        m,
+        _requiredNestedMessage_
+      );
+      msg.requiredNestedMessage = m;
+    }
+    const _requiredForeignMessage_ =
+      json["requiredForeignMessage"] ?? json["required_foreign_message"];
+    if (_requiredForeignMessage_) {
+      const m = ForeignMessageProto2JSON.initialize();
+      ForeignMessageProto2JSON._readMessage(m, _requiredForeignMessage_);
+      msg.requiredForeignMessage = m;
+    }
+    const _requiredNestedEnum_ =
+      json["requiredNestedEnum"] ?? json["required_nested_enum"];
+    if (_requiredNestedEnum_) {
+      msg.requiredNestedEnum = _requiredNestedEnum_;
+    }
+    const _requiredForeignEnum_ =
+      json["requiredForeignEnum"] ?? json["required_foreign_enum"];
+    if (_requiredForeignEnum_) {
+      msg.requiredForeignEnum = _requiredForeignEnum_;
+    }
+    const _requiredStringPiece_ =
+      json["requiredStringPiece"] ?? json["required_string_piece"];
+    if (_requiredStringPiece_) {
+      msg.requiredStringPiece = _requiredStringPiece_;
+    }
+    const _requiredCord_ = json["requiredCord"] ?? json["required_cord"];
+    if (_requiredCord_) {
+      msg.requiredCord = _requiredCord_;
+    }
+    const _recursiveMessage_ =
+      json["recursiveMessage"] ?? json["recursive_message"];
+    if (_recursiveMessage_) {
+      const m = TestAllRequiredTypesProto2JSON.initialize();
+      TestAllRequiredTypesProto2JSON._readMessage(m, _recursiveMessage_);
+      msg.recursiveMessage = m;
+    }
+    const _optionalRecursiveMessage_ =
+      json["optionalRecursiveMessage"] ?? json["optional_recursive_message"];
+    if (_optionalRecursiveMessage_) {
+      const m = TestAllRequiredTypesProto2JSON.initialize();
+      TestAllRequiredTypesProto2JSON._readMessage(
+        m,
+        _optionalRecursiveMessage_
+      );
+      msg.optionalRecursiveMessage = m;
+    }
+    const _defaultInt32_ = json["defaultInt32"] ?? json["default_int32"];
+    if (_defaultInt32_) {
+      msg.defaultInt32 = _defaultInt32_;
+    }
+    const _defaultInt64_ = json["defaultInt64"] ?? json["default_int64"];
+    if (_defaultInt64_) {
+      msg.defaultInt64 = BigInt(_defaultInt64_);
+    }
+    const _defaultUint32_ = json["defaultUint32"] ?? json["default_uint32"];
+    if (_defaultUint32_) {
+      msg.defaultUint32 = _defaultUint32_;
+    }
+    const _defaultUint64_ = json["defaultUint64"] ?? json["default_uint64"];
+    if (_defaultUint64_) {
+      msg.defaultUint64 = BigInt(_defaultUint64_);
+    }
+    const _defaultSint32_ = json["defaultSint32"] ?? json["default_sint32"];
+    if (_defaultSint32_) {
+      msg.defaultSint32 = _defaultSint32_;
+    }
+    const _defaultSint64_ = json["defaultSint64"] ?? json["default_sint64"];
+    if (_defaultSint64_) {
+      msg.defaultSint64 = BigInt(_defaultSint64_);
+    }
+    const _defaultFixed32_ = json["defaultFixed32"] ?? json["default_fixed32"];
+    if (_defaultFixed32_) {
+      msg.defaultFixed32 = _defaultFixed32_;
+    }
+    const _defaultFixed64_ = json["defaultFixed64"] ?? json["default_fixed64"];
+    if (_defaultFixed64_) {
+      msg.defaultFixed64 = BigInt(_defaultFixed64_);
+    }
+    const _defaultSfixed32_ =
+      json["defaultSfixed32"] ?? json["default_sfixed32"];
+    if (_defaultSfixed32_) {
+      msg.defaultSfixed32 = _defaultSfixed32_;
+    }
+    const _defaultSfixed64_ =
+      json["defaultSfixed64"] ?? json["default_sfixed64"];
+    if (_defaultSfixed64_) {
+      msg.defaultSfixed64 = BigInt(_defaultSfixed64_);
+    }
+    const _defaultFloat_ = json["defaultFloat"] ?? json["default_float"];
+    if (_defaultFloat_) {
+      msg.defaultFloat = _defaultFloat_;
+    }
+    const _defaultDouble_ = json["defaultDouble"] ?? json["default_double"];
+    if (_defaultDouble_) {
+      msg.defaultDouble = _defaultDouble_;
+    }
+    const _defaultBool_ = json["defaultBool"] ?? json["default_bool"];
+    if (_defaultBool_) {
+      msg.defaultBool = _defaultBool_;
+    }
+    const _defaultString_ = json["defaultString"] ?? json["default_string"];
+    if (_defaultString_) {
+      msg.defaultString = _defaultString_;
+    }
+    const _defaultBytes_ = json["defaultBytes"] ?? json["default_bytes"];
+    if (_defaultBytes_) {
+      msg.defaultBytes = decodeBase64Bytes(_defaultBytes_);
+    }
+    return msg;
+  },
+
+  NestedEnum: {
+    FOO: "FOO",
+    BAR: "BAR",
+    BAZ: "BAZ",
+    NEG: "NEG",
+    /**
+     * @private
+     */
+    _fromInt: function (i: number): TestAllRequiredTypesProto2.NestedEnum {
+      switch (i) {
+        case 0: {
+          return "FOO";
+        }
+        case 1: {
+          return "BAR";
+        }
+        case 2: {
+          return "BAZ";
+        }
+        case -1: {
+          return "NEG";
+        }
+        // unknown values are preserved as numbers. this occurs when new enum values are introduced and the generated code is out of date.
+        default: {
+          return i as unknown as TestAllRequiredTypesProto2.NestedEnum;
+        }
+      }
+    },
+    /**
+     * @private
+     */
+    _toInt: function (i: TestAllRequiredTypesProto2.NestedEnum): number {
+      switch (i) {
+        case "FOO": {
+          return 0;
+        }
+        case "BAR": {
+          return 1;
+        }
+        case "BAZ": {
+          return 2;
+        }
+        case "NEG": {
+          return -1;
+        }
+        // unknown values are preserved as numbers. this occurs when new enum values are introduced and the generated code is out of date.
+        default: {
+          return i as unknown as number;
+        }
+      }
+    },
+  } as const,
+
+  NestedMessage: {
+    /**
+     * Serializes TestAllRequiredTypesProto2.NestedMessage to JSON.
+     */
+    encode: function (
+      msg: Partial<TestAllRequiredTypesProto2.NestedMessage>
+    ): string {
+      return JSON.stringify(
+        TestAllRequiredTypesProto2JSON.NestedMessage._writeMessage(msg)
+      );
+    },
+
+    /**
+     * Deserializes TestAllRequiredTypesProto2.NestedMessage from JSON.
+     */
+    decode: function (json: string): TestAllRequiredTypesProto2.NestedMessage {
+      return TestAllRequiredTypesProto2JSON.NestedMessage._readMessage(
+        TestAllRequiredTypesProto2JSON.NestedMessage.initialize(),
+        JSON.parse(json)
+      );
+    },
+
+    /**
+     * Initializes TestAllRequiredTypesProto2.NestedMessage with all fields set to their default value.
+     */
+    initialize: function (): TestAllRequiredTypesProto2.NestedMessage {
+      return {
+        a: 0,
+        corecursive: TestAllRequiredTypesProto2JSON.initialize(),
+        optionalCorecursive: TestAllRequiredTypesProto2JSON.initialize(),
+      };
+    },
+
+    /**
+     * @private
+     */
+    _writeMessage: function (
+      msg: Partial<TestAllRequiredTypesProto2.NestedMessage>
+    ): Record<string, unknown> {
+      const json: Record<string, unknown> = {};
+      if (msg.a) {
+        json["a"] = msg.a;
+      }
+      if (msg.corecursive) {
+        const _corecursive_ = TestAllRequiredTypesProto2JSON._writeMessage(
+          msg.corecursive
+        );
+        if (Object.keys(_corecursive_).length > 0) {
+          json["corecursive"] = _corecursive_;
+        }
+      }
+      if (msg.optionalCorecursive) {
+        const _optionalCorecursive_ =
+          TestAllRequiredTypesProto2JSON._writeMessage(msg.optionalCorecursive);
+        if (Object.keys(_optionalCorecursive_).length > 0) {
+          json["optionalCorecursive"] = _optionalCorecursive_;
+        }
+      }
+      return json;
+    },
+
+    /**
+     * @private
+     */
+    _readMessage: function (
+      msg: TestAllRequiredTypesProto2.NestedMessage,
+      json: any
+    ): TestAllRequiredTypesProto2.NestedMessage {
+      const _a_ = json["a"];
+      if (_a_) {
+        msg.a = _a_;
+      }
+      const _corecursive_ = json["corecursive"];
+      if (_corecursive_) {
+        const m = TestAllRequiredTypesProto2JSON.initialize();
+        TestAllRequiredTypesProto2JSON._readMessage(m, _corecursive_);
+        msg.corecursive = m;
+      }
+      const _optionalCorecursive_ =
+        json["optionalCorecursive"] ?? json["optional_corecursive"];
+      if (_optionalCorecursive_) {
+        const m = TestAllRequiredTypesProto2JSON.initialize();
+        TestAllRequiredTypesProto2JSON._readMessage(m, _optionalCorecursive_);
+        msg.optionalCorecursive = m;
+      }
+      return msg;
+    },
+  },
+
+  Data: {
+    /**
+     * Serializes TestAllRequiredTypesProto2.Data to JSON.
+     */
+    encode: function (msg: Partial<TestAllRequiredTypesProto2.Data>): string {
+      return JSON.stringify(
+        TestAllRequiredTypesProto2JSON.Data._writeMessage(msg)
+      );
+    },
+
+    /**
+     * Deserializes TestAllRequiredTypesProto2.Data from JSON.
+     */
+    decode: function (json: string): TestAllRequiredTypesProto2.Data {
+      return TestAllRequiredTypesProto2JSON.Data._readMessage(
+        TestAllRequiredTypesProto2JSON.Data.initialize(),
+        JSON.parse(json)
+      );
+    },
+
+    /**
+     * Initializes TestAllRequiredTypesProto2.Data with all fields set to their default value.
+     */
+    initialize: function (): TestAllRequiredTypesProto2.Data {
+      return {
+        groupInt32: 0,
+        groupUint32: 0,
+      };
+    },
+
+    /**
+     * @private
+     */
+    _writeMessage: function (
+      msg: Partial<TestAllRequiredTypesProto2.Data>
+    ): Record<string, unknown> {
+      const json: Record<string, unknown> = {};
+      if (msg.groupInt32) {
+        json["groupInt32"] = msg.groupInt32;
+      }
+      if (msg.groupUint32) {
+        json["groupUint32"] = msg.groupUint32;
+      }
+      return json;
+    },
+
+    /**
+     * @private
+     */
+    _readMessage: function (
+      msg: TestAllRequiredTypesProto2.Data,
+      json: any
+    ): TestAllRequiredTypesProto2.Data {
+      const _groupInt32_ = json["groupInt32"] ?? json["group_int32"];
+      if (_groupInt32_) {
+        msg.groupInt32 = _groupInt32_;
+      }
+      const _groupUint32_ = json["groupUint32"] ?? json["group_uint32"];
+      if (_groupUint32_) {
+        msg.groupUint32 = _groupUint32_;
+      }
+      return msg;
+    },
+  },
+
+  MessageSetCorrect: {
+    /**
+     * Serializes TestAllRequiredTypesProto2.MessageSetCorrect to JSON.
+     */
+    encode: function (
+      _msg?: Partial<TestAllRequiredTypesProto2.MessageSetCorrect>
+    ): string {
+      return "{}";
+    },
+
+    /**
+     * Deserializes TestAllRequiredTypesProto2.MessageSetCorrect from JSON.
+     */
+    decode: function (
+      _json?: string
+    ): TestAllRequiredTypesProto2.MessageSetCorrect {
+      return {};
+    },
+
+    /**
+     * Initializes TestAllRequiredTypesProto2.MessageSetCorrect with all fields set to their default value.
+     */
+    initialize: function (): TestAllRequiredTypesProto2.MessageSetCorrect {
+      return {};
+    },
+
+    /**
+     * @private
+     */
+    _writeMessage: function (
+      _msg: Partial<TestAllRequiredTypesProto2.MessageSetCorrect>
+    ): Record<string, unknown> {
+      return {};
+    },
+
+    /**
+     * @private
+     */
+    _readMessage: function (
+      msg: TestAllRequiredTypesProto2.MessageSetCorrect,
+      _json: any
+    ): TestAllRequiredTypesProto2.MessageSetCorrect {
+      return msg;
+    },
+  },
+
+  MessageSetCorrectExtension1: {
+    /**
+     * Serializes TestAllRequiredTypesProto2.MessageSetCorrectExtension1 to JSON.
+     */
+    encode: function (
+      msg: Partial<TestAllRequiredTypesProto2.MessageSetCorrectExtension1>
+    ): string {
+      return JSON.stringify(
+        TestAllRequiredTypesProto2JSON.MessageSetCorrectExtension1._writeMessage(
+          msg
+        )
+      );
+    },
+
+    /**
+     * Deserializes TestAllRequiredTypesProto2.MessageSetCorrectExtension1 from JSON.
+     */
+    decode: function (
+      json: string
+    ): TestAllRequiredTypesProto2.MessageSetCorrectExtension1 {
+      return TestAllRequiredTypesProto2JSON.MessageSetCorrectExtension1._readMessage(
+        TestAllRequiredTypesProto2JSON.MessageSetCorrectExtension1.initialize(),
+        JSON.parse(json)
+      );
+    },
+
+    /**
+     * Initializes TestAllRequiredTypesProto2.MessageSetCorrectExtension1 with all fields set to their default value.
+     */
+    initialize:
+      function (): TestAllRequiredTypesProto2.MessageSetCorrectExtension1 {
+        return {
+          str: "",
+        };
+      },
+
+    /**
+     * @private
+     */
+    _writeMessage: function (
+      msg: Partial<TestAllRequiredTypesProto2.MessageSetCorrectExtension1>
+    ): Record<string, unknown> {
+      const json: Record<string, unknown> = {};
+      if (msg.str) {
+        json["str"] = msg.str;
+      }
+      return json;
+    },
+
+    /**
+     * @private
+     */
+    _readMessage: function (
+      msg: TestAllRequiredTypesProto2.MessageSetCorrectExtension1,
+      json: any
+    ): TestAllRequiredTypesProto2.MessageSetCorrectExtension1 {
+      const _str_ = json["str"];
+      if (_str_) {
+        msg.str = _str_;
+      }
+      return msg;
+    },
+  },
+
+  MessageSetCorrectExtension2: {
+    /**
+     * Serializes TestAllRequiredTypesProto2.MessageSetCorrectExtension2 to JSON.
+     */
+    encode: function (
+      msg: Partial<TestAllRequiredTypesProto2.MessageSetCorrectExtension2>
+    ): string {
+      return JSON.stringify(
+        TestAllRequiredTypesProto2JSON.MessageSetCorrectExtension2._writeMessage(
+          msg
+        )
+      );
+    },
+
+    /**
+     * Deserializes TestAllRequiredTypesProto2.MessageSetCorrectExtension2 from JSON.
+     */
+    decode: function (
+      json: string
+    ): TestAllRequiredTypesProto2.MessageSetCorrectExtension2 {
+      return TestAllRequiredTypesProto2JSON.MessageSetCorrectExtension2._readMessage(
+        TestAllRequiredTypesProto2JSON.MessageSetCorrectExtension2.initialize(),
+        JSON.parse(json)
+      );
+    },
+
+    /**
+     * Initializes TestAllRequiredTypesProto2.MessageSetCorrectExtension2 with all fields set to their default value.
+     */
+    initialize:
+      function (): TestAllRequiredTypesProto2.MessageSetCorrectExtension2 {
+        return {
+          i: 0,
+        };
+      },
+
+    /**
+     * @private
+     */
+    _writeMessage: function (
+      msg: Partial<TestAllRequiredTypesProto2.MessageSetCorrectExtension2>
+    ): Record<string, unknown> {
+      const json: Record<string, unknown> = {};
+      if (msg.i) {
+        json["i"] = msg.i;
+      }
+      return json;
+    },
+
+    /**
+     * @private
+     */
+    _readMessage: function (
+      msg: TestAllRequiredTypesProto2.MessageSetCorrectExtension2,
+      json: any
+    ): TestAllRequiredTypesProto2.MessageSetCorrectExtension2 {
+      const _i_ = json["i"];
+      if (_i_) {
+        msg.i = _i_;
+      }
+      return msg;
+    },
   },
 };
