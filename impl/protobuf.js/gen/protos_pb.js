@@ -17378,6 +17378,2482 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
             return ProtoWithKeywords;
         })();
 
+        proto2.TestAllRequiredTypesProto2 = (function() {
+
+            /**
+             * Properties of a TestAllRequiredTypesProto2.
+             * @memberof protobuf_test_messages.proto2
+             * @interface ITestAllRequiredTypesProto2
+             * @property {number} requiredInt32 TestAllRequiredTypesProto2 requiredInt32
+             * @property {number|Long} requiredInt64 TestAllRequiredTypesProto2 requiredInt64
+             * @property {number} requiredUint32 TestAllRequiredTypesProto2 requiredUint32
+             * @property {number|Long} requiredUint64 TestAllRequiredTypesProto2 requiredUint64
+             * @property {number} requiredSint32 TestAllRequiredTypesProto2 requiredSint32
+             * @property {number|Long} requiredSint64 TestAllRequiredTypesProto2 requiredSint64
+             * @property {number} requiredFixed32 TestAllRequiredTypesProto2 requiredFixed32
+             * @property {number|Long} requiredFixed64 TestAllRequiredTypesProto2 requiredFixed64
+             * @property {number} requiredSfixed32 TestAllRequiredTypesProto2 requiredSfixed32
+             * @property {number|Long} requiredSfixed64 TestAllRequiredTypesProto2 requiredSfixed64
+             * @property {number} requiredFloat TestAllRequiredTypesProto2 requiredFloat
+             * @property {number} requiredDouble TestAllRequiredTypesProto2 requiredDouble
+             * @property {boolean} requiredBool TestAllRequiredTypesProto2 requiredBool
+             * @property {string} requiredString TestAllRequiredTypesProto2 requiredString
+             * @property {Uint8Array} requiredBytes TestAllRequiredTypesProto2 requiredBytes
+             * @property {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.INestedMessage} requiredNestedMessage TestAllRequiredTypesProto2 requiredNestedMessage
+             * @property {protobuf_test_messages.proto2.IForeignMessageProto2} requiredForeignMessage TestAllRequiredTypesProto2 requiredForeignMessage
+             * @property {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedEnum} requiredNestedEnum TestAllRequiredTypesProto2 requiredNestedEnum
+             * @property {protobuf_test_messages.proto2.ForeignEnumProto2} requiredForeignEnum TestAllRequiredTypesProto2 requiredForeignEnum
+             * @property {string} requiredStringPiece TestAllRequiredTypesProto2 requiredStringPiece
+             * @property {string} requiredCord TestAllRequiredTypesProto2 requiredCord
+             * @property {protobuf_test_messages.proto2.ITestAllRequiredTypesProto2} recursiveMessage TestAllRequiredTypesProto2 recursiveMessage
+             * @property {protobuf_test_messages.proto2.ITestAllRequiredTypesProto2|null} [optionalRecursiveMessage] TestAllRequiredTypesProto2 optionalRecursiveMessage
+             * @property {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IData} data TestAllRequiredTypesProto2 data
+             * @property {number} defaultInt32 TestAllRequiredTypesProto2 defaultInt32
+             * @property {number|Long} defaultInt64 TestAllRequiredTypesProto2 defaultInt64
+             * @property {number} defaultUint32 TestAllRequiredTypesProto2 defaultUint32
+             * @property {number|Long} defaultUint64 TestAllRequiredTypesProto2 defaultUint64
+             * @property {number} defaultSint32 TestAllRequiredTypesProto2 defaultSint32
+             * @property {number|Long} defaultSint64 TestAllRequiredTypesProto2 defaultSint64
+             * @property {number} defaultFixed32 TestAllRequiredTypesProto2 defaultFixed32
+             * @property {number|Long} defaultFixed64 TestAllRequiredTypesProto2 defaultFixed64
+             * @property {number} defaultSfixed32 TestAllRequiredTypesProto2 defaultSfixed32
+             * @property {number|Long} defaultSfixed64 TestAllRequiredTypesProto2 defaultSfixed64
+             * @property {number} defaultFloat TestAllRequiredTypesProto2 defaultFloat
+             * @property {number} defaultDouble TestAllRequiredTypesProto2 defaultDouble
+             * @property {boolean} defaultBool TestAllRequiredTypesProto2 defaultBool
+             * @property {string} defaultString TestAllRequiredTypesProto2 defaultString
+             * @property {Uint8Array} defaultBytes TestAllRequiredTypesProto2 defaultBytes
+             */
+
+            /**
+             * Constructs a new TestAllRequiredTypesProto2.
+             * @memberof protobuf_test_messages.proto2
+             * @classdesc Represents a TestAllRequiredTypesProto2.
+             * @implements ITestAllRequiredTypesProto2
+             * @constructor
+             * @param {protobuf_test_messages.proto2.ITestAllRequiredTypesProto2=} [properties] Properties to set
+             */
+            function TestAllRequiredTypesProto2(properties) {
+                if (properties)
+                    for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * TestAllRequiredTypesProto2 requiredInt32.
+             * @member {number} requiredInt32
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.requiredInt32 = 0;
+
+            /**
+             * TestAllRequiredTypesProto2 requiredInt64.
+             * @member {number|Long} requiredInt64
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.requiredInt64 = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+
+            /**
+             * TestAllRequiredTypesProto2 requiredUint32.
+             * @member {number} requiredUint32
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.requiredUint32 = 0;
+
+            /**
+             * TestAllRequiredTypesProto2 requiredUint64.
+             * @member {number|Long} requiredUint64
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.requiredUint64 = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+
+            /**
+             * TestAllRequiredTypesProto2 requiredSint32.
+             * @member {number} requiredSint32
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.requiredSint32 = 0;
+
+            /**
+             * TestAllRequiredTypesProto2 requiredSint64.
+             * @member {number|Long} requiredSint64
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.requiredSint64 = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+
+            /**
+             * TestAllRequiredTypesProto2 requiredFixed32.
+             * @member {number} requiredFixed32
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.requiredFixed32 = 0;
+
+            /**
+             * TestAllRequiredTypesProto2 requiredFixed64.
+             * @member {number|Long} requiredFixed64
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.requiredFixed64 = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+
+            /**
+             * TestAllRequiredTypesProto2 requiredSfixed32.
+             * @member {number} requiredSfixed32
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.requiredSfixed32 = 0;
+
+            /**
+             * TestAllRequiredTypesProto2 requiredSfixed64.
+             * @member {number|Long} requiredSfixed64
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.requiredSfixed64 = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+
+            /**
+             * TestAllRequiredTypesProto2 requiredFloat.
+             * @member {number} requiredFloat
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.requiredFloat = 0;
+
+            /**
+             * TestAllRequiredTypesProto2 requiredDouble.
+             * @member {number} requiredDouble
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.requiredDouble = 0;
+
+            /**
+             * TestAllRequiredTypesProto2 requiredBool.
+             * @member {boolean} requiredBool
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.requiredBool = false;
+
+            /**
+             * TestAllRequiredTypesProto2 requiredString.
+             * @member {string} requiredString
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.requiredString = "";
+
+            /**
+             * TestAllRequiredTypesProto2 requiredBytes.
+             * @member {Uint8Array} requiredBytes
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.requiredBytes = $util.newBuffer([]);
+
+            /**
+             * TestAllRequiredTypesProto2 requiredNestedMessage.
+             * @member {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.INestedMessage} requiredNestedMessage
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.requiredNestedMessage = null;
+
+            /**
+             * TestAllRequiredTypesProto2 requiredForeignMessage.
+             * @member {protobuf_test_messages.proto2.IForeignMessageProto2} requiredForeignMessage
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.requiredForeignMessage = null;
+
+            /**
+             * TestAllRequiredTypesProto2 requiredNestedEnum.
+             * @member {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedEnum} requiredNestedEnum
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.requiredNestedEnum = 0;
+
+            /**
+             * TestAllRequiredTypesProto2 requiredForeignEnum.
+             * @member {protobuf_test_messages.proto2.ForeignEnumProto2} requiredForeignEnum
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.requiredForeignEnum = 0;
+
+            /**
+             * TestAllRequiredTypesProto2 requiredStringPiece.
+             * @member {string} requiredStringPiece
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.requiredStringPiece = "";
+
+            /**
+             * TestAllRequiredTypesProto2 requiredCord.
+             * @member {string} requiredCord
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.requiredCord = "";
+
+            /**
+             * TestAllRequiredTypesProto2 recursiveMessage.
+             * @member {protobuf_test_messages.proto2.ITestAllRequiredTypesProto2} recursiveMessage
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.recursiveMessage = null;
+
+            /**
+             * TestAllRequiredTypesProto2 optionalRecursiveMessage.
+             * @member {protobuf_test_messages.proto2.ITestAllRequiredTypesProto2|null|undefined} optionalRecursiveMessage
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.optionalRecursiveMessage = null;
+
+            /**
+             * TestAllRequiredTypesProto2 data.
+             * @member {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IData} data
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.data = null;
+
+            /**
+             * TestAllRequiredTypesProto2 defaultInt32.
+             * @member {number} defaultInt32
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.defaultInt32 = -123456789;
+
+            /**
+             * TestAllRequiredTypesProto2 defaultInt64.
+             * @member {number|Long} defaultInt64
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.defaultInt64 = $util.Long ? $util.Long.fromBits(1890295808,-2124220317,false) : -9123456789123457000;
+
+            /**
+             * TestAllRequiredTypesProto2 defaultUint32.
+             * @member {number} defaultUint32
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.defaultUint32 = 2123456789;
+
+            /**
+             * TestAllRequiredTypesProto2 defaultUint64.
+             * @member {number|Long} defaultUint64
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.defaultUint64 = $util.Long ? $util.Long.fromBits(918052864,-1937916336,true) : 10123456789123457000;
+
+            /**
+             * TestAllRequiredTypesProto2 defaultSint32.
+             * @member {number} defaultSint32
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.defaultSint32 = -123456789;
+
+            /**
+             * TestAllRequiredTypesProto2 defaultSint64.
+             * @member {number|Long} defaultSint64
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.defaultSint64 = $util.Long ? $util.Long.fromBits(1890295808,-2124220317,false) : -9123456789123457000;
+
+            /**
+             * TestAllRequiredTypesProto2 defaultFixed32.
+             * @member {number} defaultFixed32
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.defaultFixed32 = 2123456789;
+
+            /**
+             * TestAllRequiredTypesProto2 defaultFixed64.
+             * @member {number|Long} defaultFixed64
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.defaultFixed64 = $util.Long ? $util.Long.fromBits(-1,2147483647,false) : 9223372036854776000;
+
+            /**
+             * TestAllRequiredTypesProto2 defaultSfixed32.
+             * @member {number} defaultSfixed32
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.defaultSfixed32 = -123456789;
+
+            /**
+             * TestAllRequiredTypesProto2 defaultSfixed64.
+             * @member {number|Long} defaultSfixed64
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.defaultSfixed64 = $util.Long ? $util.Long.fromBits(1890295808,-2124220317,false) : -9123456789123457000;
+
+            /**
+             * TestAllRequiredTypesProto2 defaultFloat.
+             * @member {number} defaultFloat
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.defaultFloat = 9000000000;
+
+            /**
+             * TestAllRequiredTypesProto2 defaultDouble.
+             * @member {number} defaultDouble
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.defaultDouble = 7e+22;
+
+            /**
+             * TestAllRequiredTypesProto2 defaultBool.
+             * @member {boolean} defaultBool
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.defaultBool = true;
+
+            /**
+             * TestAllRequiredTypesProto2 defaultString.
+             * @member {string} defaultString
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.defaultString = "Rosebud";
+
+            /**
+             * TestAllRequiredTypesProto2 defaultBytes.
+             * @member {Uint8Array} defaultBytes
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             */
+            TestAllRequiredTypesProto2.prototype.defaultBytes = $util.newBuffer([106,111,115,104,117,97]);
+
+            /**
+             * Creates a new TestAllRequiredTypesProto2 instance using the specified properties.
+             * @function create
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @static
+             * @param {protobuf_test_messages.proto2.ITestAllRequiredTypesProto2=} [properties] Properties to set
+             * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2} TestAllRequiredTypesProto2 instance
+             */
+            TestAllRequiredTypesProto2.create = function create(properties) {
+                return new TestAllRequiredTypesProto2(properties);
+            };
+
+            /**
+             * Encodes the specified TestAllRequiredTypesProto2 message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.verify|verify} messages.
+             * @function encode
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @static
+             * @param {protobuf_test_messages.proto2.ITestAllRequiredTypesProto2} message TestAllRequiredTypesProto2 message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            TestAllRequiredTypesProto2.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                writer.uint32(/* id 1, wireType 0 =*/8).int32(message.requiredInt32);
+                writer.uint32(/* id 2, wireType 0 =*/16).int64(message.requiredInt64);
+                writer.uint32(/* id 3, wireType 0 =*/24).uint32(message.requiredUint32);
+                writer.uint32(/* id 4, wireType 0 =*/32).uint64(message.requiredUint64);
+                writer.uint32(/* id 5, wireType 0 =*/40).sint32(message.requiredSint32);
+                writer.uint32(/* id 6, wireType 0 =*/48).sint64(message.requiredSint64);
+                writer.uint32(/* id 7, wireType 5 =*/61).fixed32(message.requiredFixed32);
+                writer.uint32(/* id 8, wireType 1 =*/65).fixed64(message.requiredFixed64);
+                writer.uint32(/* id 9, wireType 5 =*/77).sfixed32(message.requiredSfixed32);
+                writer.uint32(/* id 10, wireType 1 =*/81).sfixed64(message.requiredSfixed64);
+                writer.uint32(/* id 11, wireType 5 =*/93).float(message.requiredFloat);
+                writer.uint32(/* id 12, wireType 1 =*/97).double(message.requiredDouble);
+                writer.uint32(/* id 13, wireType 0 =*/104).bool(message.requiredBool);
+                writer.uint32(/* id 14, wireType 2 =*/114).string(message.requiredString);
+                writer.uint32(/* id 15, wireType 2 =*/122).bytes(message.requiredBytes);
+                $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.encode(message.requiredNestedMessage, writer.uint32(/* id 18, wireType 2 =*/146).fork()).ldelim();
+                $root.protobuf_test_messages.proto2.ForeignMessageProto2.encode(message.requiredForeignMessage, writer.uint32(/* id 19, wireType 2 =*/154).fork()).ldelim();
+                writer.uint32(/* id 21, wireType 0 =*/168).int32(message.requiredNestedEnum);
+                writer.uint32(/* id 22, wireType 0 =*/176).int32(message.requiredForeignEnum);
+                writer.uint32(/* id 24, wireType 2 =*/194).string(message.requiredStringPiece);
+                writer.uint32(/* id 25, wireType 2 =*/202).string(message.requiredCord);
+                $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.encode(message.recursiveMessage, writer.uint32(/* id 27, wireType 2 =*/218).fork()).ldelim();
+                if (message.optionalRecursiveMessage != null && Object.hasOwnProperty.call(message, "optionalRecursiveMessage"))
+                    $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.encode(message.optionalRecursiveMessage, writer.uint32(/* id 28, wireType 2 =*/226).fork()).ldelim();
+                $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.encode(message.data, writer.uint32(/* id 201, wireType 3 =*/1611)).uint32(/* id 201, wireType 4 =*/1612);
+                writer.uint32(/* id 241, wireType 0 =*/1928).int32(message.defaultInt32);
+                writer.uint32(/* id 242, wireType 0 =*/1936).int64(message.defaultInt64);
+                writer.uint32(/* id 243, wireType 0 =*/1944).uint32(message.defaultUint32);
+                writer.uint32(/* id 244, wireType 0 =*/1952).uint64(message.defaultUint64);
+                writer.uint32(/* id 245, wireType 0 =*/1960).sint32(message.defaultSint32);
+                writer.uint32(/* id 246, wireType 0 =*/1968).sint64(message.defaultSint64);
+                writer.uint32(/* id 247, wireType 5 =*/1981).fixed32(message.defaultFixed32);
+                writer.uint32(/* id 248, wireType 1 =*/1985).fixed64(message.defaultFixed64);
+                writer.uint32(/* id 249, wireType 5 =*/1997).sfixed32(message.defaultSfixed32);
+                writer.uint32(/* id 250, wireType 1 =*/2001).sfixed64(message.defaultSfixed64);
+                writer.uint32(/* id 251, wireType 5 =*/2013).float(message.defaultFloat);
+                writer.uint32(/* id 252, wireType 1 =*/2017).double(message.defaultDouble);
+                writer.uint32(/* id 253, wireType 0 =*/2024).bool(message.defaultBool);
+                writer.uint32(/* id 254, wireType 2 =*/2034).string(message.defaultString);
+                writer.uint32(/* id 255, wireType 2 =*/2042).bytes(message.defaultBytes);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified TestAllRequiredTypesProto2 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @static
+             * @param {protobuf_test_messages.proto2.ITestAllRequiredTypesProto2} message TestAllRequiredTypesProto2 message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            TestAllRequiredTypesProto2.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a TestAllRequiredTypesProto2 message from the specified reader or buffer.
+             * @function decode
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2} TestAllRequiredTypesProto2
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            TestAllRequiredTypesProto2.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                let end = length === undefined ? reader.len : reader.pos + length, message = new $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2();
+                while (reader.pos < end) {
+                    let tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.requiredInt32 = reader.int32();
+                            break;
+                        }
+                    case 2: {
+                            message.requiredInt64 = reader.int64();
+                            break;
+                        }
+                    case 3: {
+                            message.requiredUint32 = reader.uint32();
+                            break;
+                        }
+                    case 4: {
+                            message.requiredUint64 = reader.uint64();
+                            break;
+                        }
+                    case 5: {
+                            message.requiredSint32 = reader.sint32();
+                            break;
+                        }
+                    case 6: {
+                            message.requiredSint64 = reader.sint64();
+                            break;
+                        }
+                    case 7: {
+                            message.requiredFixed32 = reader.fixed32();
+                            break;
+                        }
+                    case 8: {
+                            message.requiredFixed64 = reader.fixed64();
+                            break;
+                        }
+                    case 9: {
+                            message.requiredSfixed32 = reader.sfixed32();
+                            break;
+                        }
+                    case 10: {
+                            message.requiredSfixed64 = reader.sfixed64();
+                            break;
+                        }
+                    case 11: {
+                            message.requiredFloat = reader.float();
+                            break;
+                        }
+                    case 12: {
+                            message.requiredDouble = reader.double();
+                            break;
+                        }
+                    case 13: {
+                            message.requiredBool = reader.bool();
+                            break;
+                        }
+                    case 14: {
+                            message.requiredString = reader.string();
+                            break;
+                        }
+                    case 15: {
+                            message.requiredBytes = reader.bytes();
+                            break;
+                        }
+                    case 18: {
+                            message.requiredNestedMessage = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.decode(reader, reader.uint32());
+                            break;
+                        }
+                    case 19: {
+                            message.requiredForeignMessage = $root.protobuf_test_messages.proto2.ForeignMessageProto2.decode(reader, reader.uint32());
+                            break;
+                        }
+                    case 21: {
+                            message.requiredNestedEnum = reader.int32();
+                            break;
+                        }
+                    case 22: {
+                            message.requiredForeignEnum = reader.int32();
+                            break;
+                        }
+                    case 24: {
+                            message.requiredStringPiece = reader.string();
+                            break;
+                        }
+                    case 25: {
+                            message.requiredCord = reader.string();
+                            break;
+                        }
+                    case 27: {
+                            message.recursiveMessage = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.decode(reader, reader.uint32());
+                            break;
+                        }
+                    case 28: {
+                            message.optionalRecursiveMessage = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.decode(reader, reader.uint32());
+                            break;
+                        }
+                    case 201: {
+                            message.data = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.decode(reader);
+                            break;
+                        }
+                    case 241: {
+                            message.defaultInt32 = reader.int32();
+                            break;
+                        }
+                    case 242: {
+                            message.defaultInt64 = reader.int64();
+                            break;
+                        }
+                    case 243: {
+                            message.defaultUint32 = reader.uint32();
+                            break;
+                        }
+                    case 244: {
+                            message.defaultUint64 = reader.uint64();
+                            break;
+                        }
+                    case 245: {
+                            message.defaultSint32 = reader.sint32();
+                            break;
+                        }
+                    case 246: {
+                            message.defaultSint64 = reader.sint64();
+                            break;
+                        }
+                    case 247: {
+                            message.defaultFixed32 = reader.fixed32();
+                            break;
+                        }
+                    case 248: {
+                            message.defaultFixed64 = reader.fixed64();
+                            break;
+                        }
+                    case 249: {
+                            message.defaultSfixed32 = reader.sfixed32();
+                            break;
+                        }
+                    case 250: {
+                            message.defaultSfixed64 = reader.sfixed64();
+                            break;
+                        }
+                    case 251: {
+                            message.defaultFloat = reader.float();
+                            break;
+                        }
+                    case 252: {
+                            message.defaultDouble = reader.double();
+                            break;
+                        }
+                    case 253: {
+                            message.defaultBool = reader.bool();
+                            break;
+                        }
+                    case 254: {
+                            message.defaultString = reader.string();
+                            break;
+                        }
+                    case 255: {
+                            message.defaultBytes = reader.bytes();
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                if (!message.hasOwnProperty("requiredInt32"))
+                    throw $util.ProtocolError("missing required 'requiredInt32'", { instance: message });
+                if (!message.hasOwnProperty("requiredInt64"))
+                    throw $util.ProtocolError("missing required 'requiredInt64'", { instance: message });
+                if (!message.hasOwnProperty("requiredUint32"))
+                    throw $util.ProtocolError("missing required 'requiredUint32'", { instance: message });
+                if (!message.hasOwnProperty("requiredUint64"))
+                    throw $util.ProtocolError("missing required 'requiredUint64'", { instance: message });
+                if (!message.hasOwnProperty("requiredSint32"))
+                    throw $util.ProtocolError("missing required 'requiredSint32'", { instance: message });
+                if (!message.hasOwnProperty("requiredSint64"))
+                    throw $util.ProtocolError("missing required 'requiredSint64'", { instance: message });
+                if (!message.hasOwnProperty("requiredFixed32"))
+                    throw $util.ProtocolError("missing required 'requiredFixed32'", { instance: message });
+                if (!message.hasOwnProperty("requiredFixed64"))
+                    throw $util.ProtocolError("missing required 'requiredFixed64'", { instance: message });
+                if (!message.hasOwnProperty("requiredSfixed32"))
+                    throw $util.ProtocolError("missing required 'requiredSfixed32'", { instance: message });
+                if (!message.hasOwnProperty("requiredSfixed64"))
+                    throw $util.ProtocolError("missing required 'requiredSfixed64'", { instance: message });
+                if (!message.hasOwnProperty("requiredFloat"))
+                    throw $util.ProtocolError("missing required 'requiredFloat'", { instance: message });
+                if (!message.hasOwnProperty("requiredDouble"))
+                    throw $util.ProtocolError("missing required 'requiredDouble'", { instance: message });
+                if (!message.hasOwnProperty("requiredBool"))
+                    throw $util.ProtocolError("missing required 'requiredBool'", { instance: message });
+                if (!message.hasOwnProperty("requiredString"))
+                    throw $util.ProtocolError("missing required 'requiredString'", { instance: message });
+                if (!message.hasOwnProperty("requiredBytes"))
+                    throw $util.ProtocolError("missing required 'requiredBytes'", { instance: message });
+                if (!message.hasOwnProperty("requiredNestedMessage"))
+                    throw $util.ProtocolError("missing required 'requiredNestedMessage'", { instance: message });
+                if (!message.hasOwnProperty("requiredForeignMessage"))
+                    throw $util.ProtocolError("missing required 'requiredForeignMessage'", { instance: message });
+                if (!message.hasOwnProperty("requiredNestedEnum"))
+                    throw $util.ProtocolError("missing required 'requiredNestedEnum'", { instance: message });
+                if (!message.hasOwnProperty("requiredForeignEnum"))
+                    throw $util.ProtocolError("missing required 'requiredForeignEnum'", { instance: message });
+                if (!message.hasOwnProperty("requiredStringPiece"))
+                    throw $util.ProtocolError("missing required 'requiredStringPiece'", { instance: message });
+                if (!message.hasOwnProperty("requiredCord"))
+                    throw $util.ProtocolError("missing required 'requiredCord'", { instance: message });
+                if (!message.hasOwnProperty("recursiveMessage"))
+                    throw $util.ProtocolError("missing required 'recursiveMessage'", { instance: message });
+                if (!message.hasOwnProperty("data"))
+                    throw $util.ProtocolError("missing required 'data'", { instance: message });
+                if (!message.hasOwnProperty("defaultInt32"))
+                    throw $util.ProtocolError("missing required 'defaultInt32'", { instance: message });
+                if (!message.hasOwnProperty("defaultInt64"))
+                    throw $util.ProtocolError("missing required 'defaultInt64'", { instance: message });
+                if (!message.hasOwnProperty("defaultUint32"))
+                    throw $util.ProtocolError("missing required 'defaultUint32'", { instance: message });
+                if (!message.hasOwnProperty("defaultUint64"))
+                    throw $util.ProtocolError("missing required 'defaultUint64'", { instance: message });
+                if (!message.hasOwnProperty("defaultSint32"))
+                    throw $util.ProtocolError("missing required 'defaultSint32'", { instance: message });
+                if (!message.hasOwnProperty("defaultSint64"))
+                    throw $util.ProtocolError("missing required 'defaultSint64'", { instance: message });
+                if (!message.hasOwnProperty("defaultFixed32"))
+                    throw $util.ProtocolError("missing required 'defaultFixed32'", { instance: message });
+                if (!message.hasOwnProperty("defaultFixed64"))
+                    throw $util.ProtocolError("missing required 'defaultFixed64'", { instance: message });
+                if (!message.hasOwnProperty("defaultSfixed32"))
+                    throw $util.ProtocolError("missing required 'defaultSfixed32'", { instance: message });
+                if (!message.hasOwnProperty("defaultSfixed64"))
+                    throw $util.ProtocolError("missing required 'defaultSfixed64'", { instance: message });
+                if (!message.hasOwnProperty("defaultFloat"))
+                    throw $util.ProtocolError("missing required 'defaultFloat'", { instance: message });
+                if (!message.hasOwnProperty("defaultDouble"))
+                    throw $util.ProtocolError("missing required 'defaultDouble'", { instance: message });
+                if (!message.hasOwnProperty("defaultBool"))
+                    throw $util.ProtocolError("missing required 'defaultBool'", { instance: message });
+                if (!message.hasOwnProperty("defaultString"))
+                    throw $util.ProtocolError("missing required 'defaultString'", { instance: message });
+                if (!message.hasOwnProperty("defaultBytes"))
+                    throw $util.ProtocolError("missing required 'defaultBytes'", { instance: message });
+                return message;
+            };
+
+            /**
+             * Decodes a TestAllRequiredTypesProto2 message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2} TestAllRequiredTypesProto2
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            TestAllRequiredTypesProto2.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a TestAllRequiredTypesProto2 message.
+             * @function verify
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            TestAllRequiredTypesProto2.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (!$util.isInteger(message.requiredInt32))
+                    return "requiredInt32: integer expected";
+                if (!$util.isInteger(message.requiredInt64) && !(message.requiredInt64 && $util.isInteger(message.requiredInt64.low) && $util.isInteger(message.requiredInt64.high)))
+                    return "requiredInt64: integer|Long expected";
+                if (!$util.isInteger(message.requiredUint32))
+                    return "requiredUint32: integer expected";
+                if (!$util.isInteger(message.requiredUint64) && !(message.requiredUint64 && $util.isInteger(message.requiredUint64.low) && $util.isInteger(message.requiredUint64.high)))
+                    return "requiredUint64: integer|Long expected";
+                if (!$util.isInteger(message.requiredSint32))
+                    return "requiredSint32: integer expected";
+                if (!$util.isInteger(message.requiredSint64) && !(message.requiredSint64 && $util.isInteger(message.requiredSint64.low) && $util.isInteger(message.requiredSint64.high)))
+                    return "requiredSint64: integer|Long expected";
+                if (!$util.isInteger(message.requiredFixed32))
+                    return "requiredFixed32: integer expected";
+                if (!$util.isInteger(message.requiredFixed64) && !(message.requiredFixed64 && $util.isInteger(message.requiredFixed64.low) && $util.isInteger(message.requiredFixed64.high)))
+                    return "requiredFixed64: integer|Long expected";
+                if (!$util.isInteger(message.requiredSfixed32))
+                    return "requiredSfixed32: integer expected";
+                if (!$util.isInteger(message.requiredSfixed64) && !(message.requiredSfixed64 && $util.isInteger(message.requiredSfixed64.low) && $util.isInteger(message.requiredSfixed64.high)))
+                    return "requiredSfixed64: integer|Long expected";
+                if (typeof message.requiredFloat !== "number")
+                    return "requiredFloat: number expected";
+                if (typeof message.requiredDouble !== "number")
+                    return "requiredDouble: number expected";
+                if (typeof message.requiredBool !== "boolean")
+                    return "requiredBool: boolean expected";
+                if (!$util.isString(message.requiredString))
+                    return "requiredString: string expected";
+                if (!(message.requiredBytes && typeof message.requiredBytes.length === "number" || $util.isString(message.requiredBytes)))
+                    return "requiredBytes: buffer expected";
+                {
+                    let error = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.verify(message.requiredNestedMessage);
+                    if (error)
+                        return "requiredNestedMessage." + error;
+                }
+                {
+                    let error = $root.protobuf_test_messages.proto2.ForeignMessageProto2.verify(message.requiredForeignMessage);
+                    if (error)
+                        return "requiredForeignMessage." + error;
+                }
+                switch (message.requiredNestedEnum) {
+                default:
+                    return "requiredNestedEnum: enum value expected";
+                case 0:
+                case 1:
+                case 2:
+                case -1:
+                    break;
+                }
+                switch (message.requiredForeignEnum) {
+                default:
+                    return "requiredForeignEnum: enum value expected";
+                case 0:
+                case 1:
+                case 2:
+                    break;
+                }
+                if (!$util.isString(message.requiredStringPiece))
+                    return "requiredStringPiece: string expected";
+                if (!$util.isString(message.requiredCord))
+                    return "requiredCord: string expected";
+                {
+                    let error = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.verify(message.recursiveMessage);
+                    if (error)
+                        return "recursiveMessage." + error;
+                }
+                if (message.optionalRecursiveMessage != null && message.hasOwnProperty("optionalRecursiveMessage")) {
+                    let error = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.verify(message.optionalRecursiveMessage);
+                    if (error)
+                        return "optionalRecursiveMessage." + error;
+                }
+                {
+                    let error = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.verify(message.data);
+                    if (error)
+                        return "data." + error;
+                }
+                if (!$util.isInteger(message.defaultInt32))
+                    return "defaultInt32: integer expected";
+                if (!$util.isInteger(message.defaultInt64) && !(message.defaultInt64 && $util.isInteger(message.defaultInt64.low) && $util.isInteger(message.defaultInt64.high)))
+                    return "defaultInt64: integer|Long expected";
+                if (!$util.isInteger(message.defaultUint32))
+                    return "defaultUint32: integer expected";
+                if (!$util.isInteger(message.defaultUint64) && !(message.defaultUint64 && $util.isInteger(message.defaultUint64.low) && $util.isInteger(message.defaultUint64.high)))
+                    return "defaultUint64: integer|Long expected";
+                if (!$util.isInteger(message.defaultSint32))
+                    return "defaultSint32: integer expected";
+                if (!$util.isInteger(message.defaultSint64) && !(message.defaultSint64 && $util.isInteger(message.defaultSint64.low) && $util.isInteger(message.defaultSint64.high)))
+                    return "defaultSint64: integer|Long expected";
+                if (!$util.isInteger(message.defaultFixed32))
+                    return "defaultFixed32: integer expected";
+                if (!$util.isInteger(message.defaultFixed64) && !(message.defaultFixed64 && $util.isInteger(message.defaultFixed64.low) && $util.isInteger(message.defaultFixed64.high)))
+                    return "defaultFixed64: integer|Long expected";
+                if (!$util.isInteger(message.defaultSfixed32))
+                    return "defaultSfixed32: integer expected";
+                if (!$util.isInteger(message.defaultSfixed64) && !(message.defaultSfixed64 && $util.isInteger(message.defaultSfixed64.low) && $util.isInteger(message.defaultSfixed64.high)))
+                    return "defaultSfixed64: integer|Long expected";
+                if (typeof message.defaultFloat !== "number")
+                    return "defaultFloat: number expected";
+                if (typeof message.defaultDouble !== "number")
+                    return "defaultDouble: number expected";
+                if (typeof message.defaultBool !== "boolean")
+                    return "defaultBool: boolean expected";
+                if (!$util.isString(message.defaultString))
+                    return "defaultString: string expected";
+                if (!(message.defaultBytes && typeof message.defaultBytes.length === "number" || $util.isString(message.defaultBytes)))
+                    return "defaultBytes: buffer expected";
+                return null;
+            };
+
+            /**
+             * Creates a TestAllRequiredTypesProto2 message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2} TestAllRequiredTypesProto2
+             */
+            TestAllRequiredTypesProto2.fromObject = function fromObject(object) {
+                if (object instanceof $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2)
+                    return object;
+                let message = new $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2();
+                if (object.requiredInt32 != null)
+                    message.requiredInt32 = object.requiredInt32 | 0;
+                if (object.requiredInt64 != null)
+                    if ($util.Long)
+                        (message.requiredInt64 = $util.Long.fromValue(object.requiredInt64)).unsigned = false;
+                    else if (typeof object.requiredInt64 === "string")
+                        message.requiredInt64 = parseInt(object.requiredInt64, 10);
+                    else if (typeof object.requiredInt64 === "number")
+                        message.requiredInt64 = object.requiredInt64;
+                    else if (typeof object.requiredInt64 === "object")
+                        message.requiredInt64 = new $util.LongBits(object.requiredInt64.low >>> 0, object.requiredInt64.high >>> 0).toNumber();
+                if (object.requiredUint32 != null)
+                    message.requiredUint32 = object.requiredUint32 >>> 0;
+                if (object.requiredUint64 != null)
+                    if ($util.Long)
+                        (message.requiredUint64 = $util.Long.fromValue(object.requiredUint64)).unsigned = true;
+                    else if (typeof object.requiredUint64 === "string")
+                        message.requiredUint64 = parseInt(object.requiredUint64, 10);
+                    else if (typeof object.requiredUint64 === "number")
+                        message.requiredUint64 = object.requiredUint64;
+                    else if (typeof object.requiredUint64 === "object")
+                        message.requiredUint64 = new $util.LongBits(object.requiredUint64.low >>> 0, object.requiredUint64.high >>> 0).toNumber(true);
+                if (object.requiredSint32 != null)
+                    message.requiredSint32 = object.requiredSint32 | 0;
+                if (object.requiredSint64 != null)
+                    if ($util.Long)
+                        (message.requiredSint64 = $util.Long.fromValue(object.requiredSint64)).unsigned = false;
+                    else if (typeof object.requiredSint64 === "string")
+                        message.requiredSint64 = parseInt(object.requiredSint64, 10);
+                    else if (typeof object.requiredSint64 === "number")
+                        message.requiredSint64 = object.requiredSint64;
+                    else if (typeof object.requiredSint64 === "object")
+                        message.requiredSint64 = new $util.LongBits(object.requiredSint64.low >>> 0, object.requiredSint64.high >>> 0).toNumber();
+                if (object.requiredFixed32 != null)
+                    message.requiredFixed32 = object.requiredFixed32 >>> 0;
+                if (object.requiredFixed64 != null)
+                    if ($util.Long)
+                        (message.requiredFixed64 = $util.Long.fromValue(object.requiredFixed64)).unsigned = false;
+                    else if (typeof object.requiredFixed64 === "string")
+                        message.requiredFixed64 = parseInt(object.requiredFixed64, 10);
+                    else if (typeof object.requiredFixed64 === "number")
+                        message.requiredFixed64 = object.requiredFixed64;
+                    else if (typeof object.requiredFixed64 === "object")
+                        message.requiredFixed64 = new $util.LongBits(object.requiredFixed64.low >>> 0, object.requiredFixed64.high >>> 0).toNumber();
+                if (object.requiredSfixed32 != null)
+                    message.requiredSfixed32 = object.requiredSfixed32 | 0;
+                if (object.requiredSfixed64 != null)
+                    if ($util.Long)
+                        (message.requiredSfixed64 = $util.Long.fromValue(object.requiredSfixed64)).unsigned = false;
+                    else if (typeof object.requiredSfixed64 === "string")
+                        message.requiredSfixed64 = parseInt(object.requiredSfixed64, 10);
+                    else if (typeof object.requiredSfixed64 === "number")
+                        message.requiredSfixed64 = object.requiredSfixed64;
+                    else if (typeof object.requiredSfixed64 === "object")
+                        message.requiredSfixed64 = new $util.LongBits(object.requiredSfixed64.low >>> 0, object.requiredSfixed64.high >>> 0).toNumber();
+                if (object.requiredFloat != null)
+                    message.requiredFloat = Number(object.requiredFloat);
+                if (object.requiredDouble != null)
+                    message.requiredDouble = Number(object.requiredDouble);
+                if (object.requiredBool != null)
+                    message.requiredBool = Boolean(object.requiredBool);
+                if (object.requiredString != null)
+                    message.requiredString = String(object.requiredString);
+                if (object.requiredBytes != null)
+                    if (typeof object.requiredBytes === "string")
+                        $util.base64.decode(object.requiredBytes, message.requiredBytes = $util.newBuffer($util.base64.length(object.requiredBytes)), 0);
+                    else if (object.requiredBytes.length >= 0)
+                        message.requiredBytes = object.requiredBytes;
+                if (object.requiredNestedMessage != null) {
+                    if (typeof object.requiredNestedMessage !== "object")
+                        throw TypeError(".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.requiredNestedMessage: object expected");
+                    message.requiredNestedMessage = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.fromObject(object.requiredNestedMessage);
+                }
+                if (object.requiredForeignMessage != null) {
+                    if (typeof object.requiredForeignMessage !== "object")
+                        throw TypeError(".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.requiredForeignMessage: object expected");
+                    message.requiredForeignMessage = $root.protobuf_test_messages.proto2.ForeignMessageProto2.fromObject(object.requiredForeignMessage);
+                }
+                switch (object.requiredNestedEnum) {
+                default:
+                    if (typeof object.requiredNestedEnum === "number") {
+                        message.requiredNestedEnum = object.requiredNestedEnum;
+                        break;
+                    }
+                    break;
+                case "FOO":
+                case 0:
+                    message.requiredNestedEnum = 0;
+                    break;
+                case "BAR":
+                case 1:
+                    message.requiredNestedEnum = 1;
+                    break;
+                case "BAZ":
+                case 2:
+                    message.requiredNestedEnum = 2;
+                    break;
+                case "NEG":
+                case -1:
+                    message.requiredNestedEnum = -1;
+                    break;
+                }
+                switch (object.requiredForeignEnum) {
+                default:
+                    if (typeof object.requiredForeignEnum === "number") {
+                        message.requiredForeignEnum = object.requiredForeignEnum;
+                        break;
+                    }
+                    break;
+                case "FOREIGN_FOO":
+                case 0:
+                    message.requiredForeignEnum = 0;
+                    break;
+                case "FOREIGN_BAR":
+                case 1:
+                    message.requiredForeignEnum = 1;
+                    break;
+                case "FOREIGN_BAZ":
+                case 2:
+                    message.requiredForeignEnum = 2;
+                    break;
+                }
+                if (object.requiredStringPiece != null)
+                    message.requiredStringPiece = String(object.requiredStringPiece);
+                if (object.requiredCord != null)
+                    message.requiredCord = String(object.requiredCord);
+                if (object.recursiveMessage != null) {
+                    if (typeof object.recursiveMessage !== "object")
+                        throw TypeError(".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.recursiveMessage: object expected");
+                    message.recursiveMessage = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.fromObject(object.recursiveMessage);
+                }
+                if (object.optionalRecursiveMessage != null) {
+                    if (typeof object.optionalRecursiveMessage !== "object")
+                        throw TypeError(".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.optionalRecursiveMessage: object expected");
+                    message.optionalRecursiveMessage = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.fromObject(object.optionalRecursiveMessage);
+                }
+                if (object.data != null) {
+                    if (typeof object.data !== "object")
+                        throw TypeError(".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.data: object expected");
+                    message.data = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.fromObject(object.data);
+                }
+                if (object.defaultInt32 != null)
+                    message.defaultInt32 = object.defaultInt32 | 0;
+                if (object.defaultInt64 != null)
+                    if ($util.Long)
+                        (message.defaultInt64 = $util.Long.fromValue(object.defaultInt64)).unsigned = false;
+                    else if (typeof object.defaultInt64 === "string")
+                        message.defaultInt64 = parseInt(object.defaultInt64, 10);
+                    else if (typeof object.defaultInt64 === "number")
+                        message.defaultInt64 = object.defaultInt64;
+                    else if (typeof object.defaultInt64 === "object")
+                        message.defaultInt64 = new $util.LongBits(object.defaultInt64.low >>> 0, object.defaultInt64.high >>> 0).toNumber();
+                if (object.defaultUint32 != null)
+                    message.defaultUint32 = object.defaultUint32 >>> 0;
+                if (object.defaultUint64 != null)
+                    if ($util.Long)
+                        (message.defaultUint64 = $util.Long.fromValue(object.defaultUint64)).unsigned = true;
+                    else if (typeof object.defaultUint64 === "string")
+                        message.defaultUint64 = parseInt(object.defaultUint64, 10);
+                    else if (typeof object.defaultUint64 === "number")
+                        message.defaultUint64 = object.defaultUint64;
+                    else if (typeof object.defaultUint64 === "object")
+                        message.defaultUint64 = new $util.LongBits(object.defaultUint64.low >>> 0, object.defaultUint64.high >>> 0).toNumber(true);
+                if (object.defaultSint32 != null)
+                    message.defaultSint32 = object.defaultSint32 | 0;
+                if (object.defaultSint64 != null)
+                    if ($util.Long)
+                        (message.defaultSint64 = $util.Long.fromValue(object.defaultSint64)).unsigned = false;
+                    else if (typeof object.defaultSint64 === "string")
+                        message.defaultSint64 = parseInt(object.defaultSint64, 10);
+                    else if (typeof object.defaultSint64 === "number")
+                        message.defaultSint64 = object.defaultSint64;
+                    else if (typeof object.defaultSint64 === "object")
+                        message.defaultSint64 = new $util.LongBits(object.defaultSint64.low >>> 0, object.defaultSint64.high >>> 0).toNumber();
+                if (object.defaultFixed32 != null)
+                    message.defaultFixed32 = object.defaultFixed32 >>> 0;
+                if (object.defaultFixed64 != null)
+                    if ($util.Long)
+                        (message.defaultFixed64 = $util.Long.fromValue(object.defaultFixed64)).unsigned = false;
+                    else if (typeof object.defaultFixed64 === "string")
+                        message.defaultFixed64 = parseInt(object.defaultFixed64, 10);
+                    else if (typeof object.defaultFixed64 === "number")
+                        message.defaultFixed64 = object.defaultFixed64;
+                    else if (typeof object.defaultFixed64 === "object")
+                        message.defaultFixed64 = new $util.LongBits(object.defaultFixed64.low >>> 0, object.defaultFixed64.high >>> 0).toNumber();
+                if (object.defaultSfixed32 != null)
+                    message.defaultSfixed32 = object.defaultSfixed32 | 0;
+                if (object.defaultSfixed64 != null)
+                    if ($util.Long)
+                        (message.defaultSfixed64 = $util.Long.fromValue(object.defaultSfixed64)).unsigned = false;
+                    else if (typeof object.defaultSfixed64 === "string")
+                        message.defaultSfixed64 = parseInt(object.defaultSfixed64, 10);
+                    else if (typeof object.defaultSfixed64 === "number")
+                        message.defaultSfixed64 = object.defaultSfixed64;
+                    else if (typeof object.defaultSfixed64 === "object")
+                        message.defaultSfixed64 = new $util.LongBits(object.defaultSfixed64.low >>> 0, object.defaultSfixed64.high >>> 0).toNumber();
+                if (object.defaultFloat != null)
+                    message.defaultFloat = Number(object.defaultFloat);
+                if (object.defaultDouble != null)
+                    message.defaultDouble = Number(object.defaultDouble);
+                if (object.defaultBool != null)
+                    message.defaultBool = Boolean(object.defaultBool);
+                if (object.defaultString != null)
+                    message.defaultString = String(object.defaultString);
+                if (object.defaultBytes != null)
+                    if (typeof object.defaultBytes === "string")
+                        $util.base64.decode(object.defaultBytes, message.defaultBytes = $util.newBuffer($util.base64.length(object.defaultBytes)), 0);
+                    else if (object.defaultBytes.length >= 0)
+                        message.defaultBytes = object.defaultBytes;
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a TestAllRequiredTypesProto2 message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @static
+             * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2} message TestAllRequiredTypesProto2
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            TestAllRequiredTypesProto2.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                let object = {};
+                if (options.defaults) {
+                    object.requiredInt32 = 0;
+                    if ($util.Long) {
+                        let long = new $util.Long(0, 0, false);
+                        object.requiredInt64 = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                    } else
+                        object.requiredInt64 = options.longs === String ? "0" : 0;
+                    object.requiredUint32 = 0;
+                    if ($util.Long) {
+                        let long = new $util.Long(0, 0, true);
+                        object.requiredUint64 = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                    } else
+                        object.requiredUint64 = options.longs === String ? "0" : 0;
+                    object.requiredSint32 = 0;
+                    if ($util.Long) {
+                        let long = new $util.Long(0, 0, false);
+                        object.requiredSint64 = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                    } else
+                        object.requiredSint64 = options.longs === String ? "0" : 0;
+                    object.requiredFixed32 = 0;
+                    if ($util.Long) {
+                        let long = new $util.Long(0, 0, false);
+                        object.requiredFixed64 = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                    } else
+                        object.requiredFixed64 = options.longs === String ? "0" : 0;
+                    object.requiredSfixed32 = 0;
+                    if ($util.Long) {
+                        let long = new $util.Long(0, 0, false);
+                        object.requiredSfixed64 = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                    } else
+                        object.requiredSfixed64 = options.longs === String ? "0" : 0;
+                    object.requiredFloat = 0;
+                    object.requiredDouble = 0;
+                    object.requiredBool = false;
+                    object.requiredString = "";
+                    if (options.bytes === String)
+                        object.requiredBytes = "";
+                    else {
+                        object.requiredBytes = [];
+                        if (options.bytes !== Array)
+                            object.requiredBytes = $util.newBuffer(object.requiredBytes);
+                    }
+                    object.requiredNestedMessage = null;
+                    object.requiredForeignMessage = null;
+                    object.requiredNestedEnum = options.enums === String ? "FOO" : 0;
+                    object.requiredForeignEnum = options.enums === String ? "FOREIGN_FOO" : 0;
+                    object.requiredStringPiece = "";
+                    object.requiredCord = "";
+                    object.recursiveMessage = null;
+                    object.optionalRecursiveMessage = null;
+                    object.data = null;
+                    object.defaultInt32 = -123456789;
+                    if ($util.Long) {
+                        let long = new $util.Long(1890295808, -2124220317, false);
+                        object.defaultInt64 = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                    } else
+                        object.defaultInt64 = options.longs === String ? "-9123456789123457024" : -9123456789123457000;
+                    object.defaultUint32 = 2123456789;
+                    if ($util.Long) {
+                        let long = new $util.Long(918052864, -1937916336, true);
+                        object.defaultUint64 = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                    } else
+                        object.defaultUint64 = options.longs === String ? "10123456789123457024" : 10123456789123457000;
+                    object.defaultSint32 = -123456789;
+                    if ($util.Long) {
+                        let long = new $util.Long(1890295808, -2124220317, false);
+                        object.defaultSint64 = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                    } else
+                        object.defaultSint64 = options.longs === String ? "-9123456789123457024" : -9123456789123457000;
+                    object.defaultFixed32 = 2123456789;
+                    if ($util.Long) {
+                        let long = new $util.Long(-1, 2147483647, false);
+                        object.defaultFixed64 = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                    } else
+                        object.defaultFixed64 = options.longs === String ? "9223372036854775807" : 9223372036854776000;
+                    object.defaultSfixed32 = -123456789;
+                    if ($util.Long) {
+                        let long = new $util.Long(1890295808, -2124220317, false);
+                        object.defaultSfixed64 = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                    } else
+                        object.defaultSfixed64 = options.longs === String ? "-9123456789123457024" : -9123456789123457000;
+                    object.defaultFloat = 9000000000;
+                    object.defaultDouble = 7e+22;
+                    object.defaultBool = true;
+                    object.defaultString = "Rosebud";
+                    if (options.bytes === String)
+                        object.defaultBytes = "joshua";
+                    else {
+                        object.defaultBytes = [
+                            106,
+                            111,
+                            115,
+                            104,
+                            117,
+                            97
+                        ];
+                        if (options.bytes !== Array)
+                            object.defaultBytes = $util.newBuffer(object.defaultBytes);
+                    }
+                }
+                if (message.requiredInt32 != null && message.hasOwnProperty("requiredInt32"))
+                    object.requiredInt32 = message.requiredInt32;
+                if (message.requiredInt64 != null && message.hasOwnProperty("requiredInt64"))
+                    if (typeof message.requiredInt64 === "number")
+                        object.requiredInt64 = options.longs === String ? String(message.requiredInt64) : message.requiredInt64;
+                    else
+                        object.requiredInt64 = options.longs === String ? $util.Long.prototype.toString.call(message.requiredInt64) : options.longs === Number ? new $util.LongBits(message.requiredInt64.low >>> 0, message.requiredInt64.high >>> 0).toNumber() : message.requiredInt64;
+                if (message.requiredUint32 != null && message.hasOwnProperty("requiredUint32"))
+                    object.requiredUint32 = message.requiredUint32;
+                if (message.requiredUint64 != null && message.hasOwnProperty("requiredUint64"))
+                    if (typeof message.requiredUint64 === "number")
+                        object.requiredUint64 = options.longs === String ? String(message.requiredUint64) : message.requiredUint64;
+                    else
+                        object.requiredUint64 = options.longs === String ? $util.Long.prototype.toString.call(message.requiredUint64) : options.longs === Number ? new $util.LongBits(message.requiredUint64.low >>> 0, message.requiredUint64.high >>> 0).toNumber(true) : message.requiredUint64;
+                if (message.requiredSint32 != null && message.hasOwnProperty("requiredSint32"))
+                    object.requiredSint32 = message.requiredSint32;
+                if (message.requiredSint64 != null && message.hasOwnProperty("requiredSint64"))
+                    if (typeof message.requiredSint64 === "number")
+                        object.requiredSint64 = options.longs === String ? String(message.requiredSint64) : message.requiredSint64;
+                    else
+                        object.requiredSint64 = options.longs === String ? $util.Long.prototype.toString.call(message.requiredSint64) : options.longs === Number ? new $util.LongBits(message.requiredSint64.low >>> 0, message.requiredSint64.high >>> 0).toNumber() : message.requiredSint64;
+                if (message.requiredFixed32 != null && message.hasOwnProperty("requiredFixed32"))
+                    object.requiredFixed32 = message.requiredFixed32;
+                if (message.requiredFixed64 != null && message.hasOwnProperty("requiredFixed64"))
+                    if (typeof message.requiredFixed64 === "number")
+                        object.requiredFixed64 = options.longs === String ? String(message.requiredFixed64) : message.requiredFixed64;
+                    else
+                        object.requiredFixed64 = options.longs === String ? $util.Long.prototype.toString.call(message.requiredFixed64) : options.longs === Number ? new $util.LongBits(message.requiredFixed64.low >>> 0, message.requiredFixed64.high >>> 0).toNumber() : message.requiredFixed64;
+                if (message.requiredSfixed32 != null && message.hasOwnProperty("requiredSfixed32"))
+                    object.requiredSfixed32 = message.requiredSfixed32;
+                if (message.requiredSfixed64 != null && message.hasOwnProperty("requiredSfixed64"))
+                    if (typeof message.requiredSfixed64 === "number")
+                        object.requiredSfixed64 = options.longs === String ? String(message.requiredSfixed64) : message.requiredSfixed64;
+                    else
+                        object.requiredSfixed64 = options.longs === String ? $util.Long.prototype.toString.call(message.requiredSfixed64) : options.longs === Number ? new $util.LongBits(message.requiredSfixed64.low >>> 0, message.requiredSfixed64.high >>> 0).toNumber() : message.requiredSfixed64;
+                if (message.requiredFloat != null && message.hasOwnProperty("requiredFloat"))
+                    object.requiredFloat = options.json && !isFinite(message.requiredFloat) ? String(message.requiredFloat) : message.requiredFloat;
+                if (message.requiredDouble != null && message.hasOwnProperty("requiredDouble"))
+                    object.requiredDouble = options.json && !isFinite(message.requiredDouble) ? String(message.requiredDouble) : message.requiredDouble;
+                if (message.requiredBool != null && message.hasOwnProperty("requiredBool"))
+                    object.requiredBool = message.requiredBool;
+                if (message.requiredString != null && message.hasOwnProperty("requiredString"))
+                    object.requiredString = message.requiredString;
+                if (message.requiredBytes != null && message.hasOwnProperty("requiredBytes"))
+                    object.requiredBytes = options.bytes === String ? $util.base64.encode(message.requiredBytes, 0, message.requiredBytes.length) : options.bytes === Array ? Array.prototype.slice.call(message.requiredBytes) : message.requiredBytes;
+                if (message.requiredNestedMessage != null && message.hasOwnProperty("requiredNestedMessage"))
+                    object.requiredNestedMessage = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.toObject(message.requiredNestedMessage, options);
+                if (message.requiredForeignMessage != null && message.hasOwnProperty("requiredForeignMessage"))
+                    object.requiredForeignMessage = $root.protobuf_test_messages.proto2.ForeignMessageProto2.toObject(message.requiredForeignMessage, options);
+                if (message.requiredNestedEnum != null && message.hasOwnProperty("requiredNestedEnum"))
+                    object.requiredNestedEnum = options.enums === String ? $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedEnum[message.requiredNestedEnum] === undefined ? message.requiredNestedEnum : $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedEnum[message.requiredNestedEnum] : message.requiredNestedEnum;
+                if (message.requiredForeignEnum != null && message.hasOwnProperty("requiredForeignEnum"))
+                    object.requiredForeignEnum = options.enums === String ? $root.protobuf_test_messages.proto2.ForeignEnumProto2[message.requiredForeignEnum] === undefined ? message.requiredForeignEnum : $root.protobuf_test_messages.proto2.ForeignEnumProto2[message.requiredForeignEnum] : message.requiredForeignEnum;
+                if (message.requiredStringPiece != null && message.hasOwnProperty("requiredStringPiece"))
+                    object.requiredStringPiece = message.requiredStringPiece;
+                if (message.requiredCord != null && message.hasOwnProperty("requiredCord"))
+                    object.requiredCord = message.requiredCord;
+                if (message.recursiveMessage != null && message.hasOwnProperty("recursiveMessage"))
+                    object.recursiveMessage = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.toObject(message.recursiveMessage, options);
+                if (message.optionalRecursiveMessage != null && message.hasOwnProperty("optionalRecursiveMessage"))
+                    object.optionalRecursiveMessage = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.toObject(message.optionalRecursiveMessage, options);
+                if (message.data != null && message.hasOwnProperty("data"))
+                    object.data = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.toObject(message.data, options);
+                if (message.defaultInt32 != null && message.hasOwnProperty("defaultInt32"))
+                    object.defaultInt32 = message.defaultInt32;
+                if (message.defaultInt64 != null && message.hasOwnProperty("defaultInt64"))
+                    if (typeof message.defaultInt64 === "number")
+                        object.defaultInt64 = options.longs === String ? String(message.defaultInt64) : message.defaultInt64;
+                    else
+                        object.defaultInt64 = options.longs === String ? $util.Long.prototype.toString.call(message.defaultInt64) : options.longs === Number ? new $util.LongBits(message.defaultInt64.low >>> 0, message.defaultInt64.high >>> 0).toNumber() : message.defaultInt64;
+                if (message.defaultUint32 != null && message.hasOwnProperty("defaultUint32"))
+                    object.defaultUint32 = message.defaultUint32;
+                if (message.defaultUint64 != null && message.hasOwnProperty("defaultUint64"))
+                    if (typeof message.defaultUint64 === "number")
+                        object.defaultUint64 = options.longs === String ? String(message.defaultUint64) : message.defaultUint64;
+                    else
+                        object.defaultUint64 = options.longs === String ? $util.Long.prototype.toString.call(message.defaultUint64) : options.longs === Number ? new $util.LongBits(message.defaultUint64.low >>> 0, message.defaultUint64.high >>> 0).toNumber(true) : message.defaultUint64;
+                if (message.defaultSint32 != null && message.hasOwnProperty("defaultSint32"))
+                    object.defaultSint32 = message.defaultSint32;
+                if (message.defaultSint64 != null && message.hasOwnProperty("defaultSint64"))
+                    if (typeof message.defaultSint64 === "number")
+                        object.defaultSint64 = options.longs === String ? String(message.defaultSint64) : message.defaultSint64;
+                    else
+                        object.defaultSint64 = options.longs === String ? $util.Long.prototype.toString.call(message.defaultSint64) : options.longs === Number ? new $util.LongBits(message.defaultSint64.low >>> 0, message.defaultSint64.high >>> 0).toNumber() : message.defaultSint64;
+                if (message.defaultFixed32 != null && message.hasOwnProperty("defaultFixed32"))
+                    object.defaultFixed32 = message.defaultFixed32;
+                if (message.defaultFixed64 != null && message.hasOwnProperty("defaultFixed64"))
+                    if (typeof message.defaultFixed64 === "number")
+                        object.defaultFixed64 = options.longs === String ? String(message.defaultFixed64) : message.defaultFixed64;
+                    else
+                        object.defaultFixed64 = options.longs === String ? $util.Long.prototype.toString.call(message.defaultFixed64) : options.longs === Number ? new $util.LongBits(message.defaultFixed64.low >>> 0, message.defaultFixed64.high >>> 0).toNumber() : message.defaultFixed64;
+                if (message.defaultSfixed32 != null && message.hasOwnProperty("defaultSfixed32"))
+                    object.defaultSfixed32 = message.defaultSfixed32;
+                if (message.defaultSfixed64 != null && message.hasOwnProperty("defaultSfixed64"))
+                    if (typeof message.defaultSfixed64 === "number")
+                        object.defaultSfixed64 = options.longs === String ? String(message.defaultSfixed64) : message.defaultSfixed64;
+                    else
+                        object.defaultSfixed64 = options.longs === String ? $util.Long.prototype.toString.call(message.defaultSfixed64) : options.longs === Number ? new $util.LongBits(message.defaultSfixed64.low >>> 0, message.defaultSfixed64.high >>> 0).toNumber() : message.defaultSfixed64;
+                if (message.defaultFloat != null && message.hasOwnProperty("defaultFloat"))
+                    object.defaultFloat = options.json && !isFinite(message.defaultFloat) ? String(message.defaultFloat) : message.defaultFloat;
+                if (message.defaultDouble != null && message.hasOwnProperty("defaultDouble"))
+                    object.defaultDouble = options.json && !isFinite(message.defaultDouble) ? String(message.defaultDouble) : message.defaultDouble;
+                if (message.defaultBool != null && message.hasOwnProperty("defaultBool"))
+                    object.defaultBool = message.defaultBool;
+                if (message.defaultString != null && message.hasOwnProperty("defaultString"))
+                    object.defaultString = message.defaultString;
+                if (message.defaultBytes != null && message.hasOwnProperty("defaultBytes"))
+                    object.defaultBytes = options.bytes === String ? $util.base64.encode(message.defaultBytes, 0, message.defaultBytes.length) : options.bytes === Array ? Array.prototype.slice.call(message.defaultBytes) : message.defaultBytes;
+                return object;
+            };
+
+            /**
+             * Converts this TestAllRequiredTypesProto2 to JSON.
+             * @function toJSON
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            TestAllRequiredTypesProto2.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for TestAllRequiredTypesProto2
+             * @function getTypeUrl
+             * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            TestAllRequiredTypesProto2.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/protobuf_test_messages.proto2.TestAllRequiredTypesProto2";
+            };
+
+            TestAllRequiredTypesProto2.NestedMessage = (function() {
+
+                /**
+                 * Properties of a NestedMessage.
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+                 * @interface INestedMessage
+                 * @property {number} a NestedMessage a
+                 * @property {protobuf_test_messages.proto2.ITestAllRequiredTypesProto2} corecursive NestedMessage corecursive
+                 * @property {protobuf_test_messages.proto2.ITestAllRequiredTypesProto2|null} [optionalCorecursive] NestedMessage optionalCorecursive
+                 */
+
+                /**
+                 * Constructs a new NestedMessage.
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+                 * @classdesc Represents a NestedMessage.
+                 * @implements INestedMessage
+                 * @constructor
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.INestedMessage=} [properties] Properties to set
+                 */
+                function NestedMessage(properties) {
+                    if (properties)
+                        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+
+                /**
+                 * NestedMessage a.
+                 * @member {number} a
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage
+                 * @instance
+                 */
+                NestedMessage.prototype.a = 0;
+
+                /**
+                 * NestedMessage corecursive.
+                 * @member {protobuf_test_messages.proto2.ITestAllRequiredTypesProto2} corecursive
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage
+                 * @instance
+                 */
+                NestedMessage.prototype.corecursive = null;
+
+                /**
+                 * NestedMessage optionalCorecursive.
+                 * @member {protobuf_test_messages.proto2.ITestAllRequiredTypesProto2|null|undefined} optionalCorecursive
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage
+                 * @instance
+                 */
+                NestedMessage.prototype.optionalCorecursive = null;
+
+                /**
+                 * Creates a new NestedMessage instance using the specified properties.
+                 * @function create
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage
+                 * @static
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.INestedMessage=} [properties] Properties to set
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage} NestedMessage instance
+                 */
+                NestedMessage.create = function create(properties) {
+                    return new NestedMessage(properties);
+                };
+
+                /**
+                 * Encodes the specified NestedMessage message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.verify|verify} messages.
+                 * @function encode
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage
+                 * @static
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.INestedMessage} message NestedMessage message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                NestedMessage.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    writer.uint32(/* id 1, wireType 0 =*/8).int32(message.a);
+                    $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.encode(message.corecursive, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                    if (message.optionalCorecursive != null && Object.hasOwnProperty.call(message, "optionalCorecursive"))
+                        $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.encode(message.optionalCorecursive, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+                    return writer;
+                };
+
+                /**
+                 * Encodes the specified NestedMessage message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage
+                 * @static
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.INestedMessage} message NestedMessage message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                NestedMessage.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+
+                /**
+                 * Decodes a NestedMessage message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage} NestedMessage
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                NestedMessage.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    let end = length === undefined ? reader.len : reader.pos + length, message = new $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage();
+                    while (reader.pos < end) {
+                        let tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1: {
+                                message.a = reader.int32();
+                                break;
+                            }
+                        case 2: {
+                                message.corecursive = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.decode(reader, reader.uint32());
+                                break;
+                            }
+                        case 3: {
+                                message.optionalCorecursive = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.decode(reader, reader.uint32());
+                                break;
+                            }
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    if (!message.hasOwnProperty("a"))
+                        throw $util.ProtocolError("missing required 'a'", { instance: message });
+                    if (!message.hasOwnProperty("corecursive"))
+                        throw $util.ProtocolError("missing required 'corecursive'", { instance: message });
+                    return message;
+                };
+
+                /**
+                 * Decodes a NestedMessage message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage} NestedMessage
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                NestedMessage.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+
+                /**
+                 * Verifies a NestedMessage message.
+                 * @function verify
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                NestedMessage.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (!$util.isInteger(message.a))
+                        return "a: integer expected";
+                    {
+                        let error = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.verify(message.corecursive);
+                        if (error)
+                            return "corecursive." + error;
+                    }
+                    if (message.optionalCorecursive != null && message.hasOwnProperty("optionalCorecursive")) {
+                        let error = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.verify(message.optionalCorecursive);
+                        if (error)
+                            return "optionalCorecursive." + error;
+                    }
+                    return null;
+                };
+
+                /**
+                 * Creates a NestedMessage message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage} NestedMessage
+                 */
+                NestedMessage.fromObject = function fromObject(object) {
+                    if (object instanceof $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage)
+                        return object;
+                    let message = new $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage();
+                    if (object.a != null)
+                        message.a = object.a | 0;
+                    if (object.corecursive != null) {
+                        if (typeof object.corecursive !== "object")
+                            throw TypeError(".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.corecursive: object expected");
+                        message.corecursive = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.fromObject(object.corecursive);
+                    }
+                    if (object.optionalCorecursive != null) {
+                        if (typeof object.optionalCorecursive !== "object")
+                            throw TypeError(".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.optionalCorecursive: object expected");
+                        message.optionalCorecursive = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.fromObject(object.optionalCorecursive);
+                    }
+                    return message;
+                };
+
+                /**
+                 * Creates a plain object from a NestedMessage message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage
+                 * @static
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage} message NestedMessage
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                NestedMessage.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    let object = {};
+                    if (options.defaults) {
+                        object.a = 0;
+                        object.corecursive = null;
+                        object.optionalCorecursive = null;
+                    }
+                    if (message.a != null && message.hasOwnProperty("a"))
+                        object.a = message.a;
+                    if (message.corecursive != null && message.hasOwnProperty("corecursive"))
+                        object.corecursive = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.toObject(message.corecursive, options);
+                    if (message.optionalCorecursive != null && message.hasOwnProperty("optionalCorecursive"))
+                        object.optionalCorecursive = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.toObject(message.optionalCorecursive, options);
+                    return object;
+                };
+
+                /**
+                 * Converts this NestedMessage to JSON.
+                 * @function toJSON
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                NestedMessage.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+
+                /**
+                 * Gets the default type url for NestedMessage
+                 * @function getTypeUrl
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage
+                 * @static
+                 * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns {string} The default type url
+                 */
+                NestedMessage.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                    if (typeUrlPrefix === undefined) {
+                        typeUrlPrefix = "type.googleapis.com";
+                    }
+                    return typeUrlPrefix + "/protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage";
+                };
+
+                return NestedMessage;
+            })();
+
+            /**
+             * NestedEnum enum.
+             * @name protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedEnum
+             * @enum {number}
+             * @property {number} FOO=0 FOO value
+             * @property {number} BAR=1 BAR value
+             * @property {number} BAZ=2 BAZ value
+             * @property {number} NEG=-1 NEG value
+             */
+            TestAllRequiredTypesProto2.NestedEnum = (function() {
+                const valuesById = {}, values = Object.create(valuesById);
+                values[valuesById[0] = "FOO"] = 0;
+                values[valuesById[1] = "BAR"] = 1;
+                values[valuesById[2] = "BAZ"] = 2;
+                values[valuesById[-1] = "NEG"] = -1;
+                return values;
+            })();
+
+            TestAllRequiredTypesProto2.Data = (function() {
+
+                /**
+                 * Properties of a Data.
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+                 * @interface IData
+                 * @property {number} groupInt32 Data groupInt32
+                 * @property {number} groupUint32 Data groupUint32
+                 */
+
+                /**
+                 * Constructs a new Data.
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+                 * @classdesc Represents a Data.
+                 * @implements IData
+                 * @constructor
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IData=} [properties] Properties to set
+                 */
+                function Data(properties) {
+                    if (properties)
+                        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+
+                /**
+                 * Data groupInt32.
+                 * @member {number} groupInt32
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data
+                 * @instance
+                 */
+                Data.prototype.groupInt32 = 0;
+
+                /**
+                 * Data groupUint32.
+                 * @member {number} groupUint32
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data
+                 * @instance
+                 */
+                Data.prototype.groupUint32 = 0;
+
+                /**
+                 * Creates a new Data instance using the specified properties.
+                 * @function create
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data
+                 * @static
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IData=} [properties] Properties to set
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data} Data instance
+                 */
+                Data.create = function create(properties) {
+                    return new Data(properties);
+                };
+
+                /**
+                 * Encodes the specified Data message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.verify|verify} messages.
+                 * @function encode
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data
+                 * @static
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IData} message Data message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                Data.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    writer.uint32(/* id 202, wireType 0 =*/1616).int32(message.groupInt32);
+                    writer.uint32(/* id 203, wireType 0 =*/1624).uint32(message.groupUint32);
+                    return writer;
+                };
+
+                /**
+                 * Encodes the specified Data message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data
+                 * @static
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IData} message Data message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                Data.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+
+                /**
+                 * Decodes a Data message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data} Data
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                Data.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    let end = length === undefined ? reader.len : reader.pos + length, message = new $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data();
+                    while (reader.pos < end) {
+                        let tag = reader.uint32();
+                        if ((tag & 7) === 4)
+                            break;
+                        switch (tag >>> 3) {
+                        case 202: {
+                                message.groupInt32 = reader.int32();
+                                break;
+                            }
+                        case 203: {
+                                message.groupUint32 = reader.uint32();
+                                break;
+                            }
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    if (!message.hasOwnProperty("groupInt32"))
+                        throw $util.ProtocolError("missing required 'groupInt32'", { instance: message });
+                    if (!message.hasOwnProperty("groupUint32"))
+                        throw $util.ProtocolError("missing required 'groupUint32'", { instance: message });
+                    return message;
+                };
+
+                /**
+                 * Decodes a Data message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data} Data
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                Data.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+
+                /**
+                 * Verifies a Data message.
+                 * @function verify
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                Data.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (!$util.isInteger(message.groupInt32))
+                        return "groupInt32: integer expected";
+                    if (!$util.isInteger(message.groupUint32))
+                        return "groupUint32: integer expected";
+                    return null;
+                };
+
+                /**
+                 * Creates a Data message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data} Data
+                 */
+                Data.fromObject = function fromObject(object) {
+                    if (object instanceof $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data)
+                        return object;
+                    let message = new $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data();
+                    if (object.groupInt32 != null)
+                        message.groupInt32 = object.groupInt32 | 0;
+                    if (object.groupUint32 != null)
+                        message.groupUint32 = object.groupUint32 >>> 0;
+                    return message;
+                };
+
+                /**
+                 * Creates a plain object from a Data message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data
+                 * @static
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data} message Data
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                Data.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    let object = {};
+                    if (options.defaults) {
+                        object.groupInt32 = 0;
+                        object.groupUint32 = 0;
+                    }
+                    if (message.groupInt32 != null && message.hasOwnProperty("groupInt32"))
+                        object.groupInt32 = message.groupInt32;
+                    if (message.groupUint32 != null && message.hasOwnProperty("groupUint32"))
+                        object.groupUint32 = message.groupUint32;
+                    return object;
+                };
+
+                /**
+                 * Converts this Data to JSON.
+                 * @function toJSON
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                Data.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+
+                /**
+                 * Gets the default type url for Data
+                 * @function getTypeUrl
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data
+                 * @static
+                 * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns {string} The default type url
+                 */
+                Data.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                    if (typeUrlPrefix === undefined) {
+                        typeUrlPrefix = "type.googleapis.com";
+                    }
+                    return typeUrlPrefix + "/protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data";
+                };
+
+                return Data;
+            })();
+
+            TestAllRequiredTypesProto2.MessageSetCorrect = (function() {
+
+                /**
+                 * Properties of a MessageSetCorrect.
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+                 * @interface IMessageSetCorrect
+                 * @property {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrectExtension1|null} [".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension"] MessageSetCorrect .protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension
+                 * @property {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrectExtension2|null} [".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"] MessageSetCorrect .protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension
+                 */
+
+                /**
+                 * Constructs a new MessageSetCorrect.
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+                 * @classdesc Represents a MessageSetCorrect.
+                 * @implements IMessageSetCorrect
+                 * @constructor
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrect=} [properties] Properties to set
+                 */
+                function MessageSetCorrect(properties) {
+                    if (properties)
+                        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+
+                /**
+                 * MessageSetCorrect .protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension.
+                 * @member {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrectExtension1|null|undefined} .protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
+                 * @instance
+                 */
+                MessageSetCorrect.prototype[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension"] = null;
+
+                /**
+                 * MessageSetCorrect .protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension.
+                 * @member {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrectExtension2|null|undefined} .protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
+                 * @instance
+                 */
+                MessageSetCorrect.prototype[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"] = null;
+
+                /**
+                 * Creates a new MessageSetCorrect instance using the specified properties.
+                 * @function create
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
+                 * @static
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrect=} [properties] Properties to set
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect} MessageSetCorrect instance
+                 */
+                MessageSetCorrect.create = function create(properties) {
+                    return new MessageSetCorrect(properties);
+                };
+
+                /**
+                 * Encodes the specified MessageSetCorrect message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.verify|verify} messages.
+                 * @function encode
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
+                 * @static
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrect} message MessageSetCorrect message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MessageSetCorrect.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension"] != null && Object.hasOwnProperty.call(message, ".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension"))
+                        $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.encode(message[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension"], writer.uint32(/* id 1547769, wireType 2 =*/12382154).fork()).ldelim();
+                    if (message[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"] != null && Object.hasOwnProperty.call(message, ".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"))
+                        $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.encode(message[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"], writer.uint32(/* id 4135312, wireType 2 =*/33082498).fork()).ldelim();
+                    return writer;
+                };
+
+                /**
+                 * Encodes the specified MessageSetCorrect message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
+                 * @static
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrect} message MessageSetCorrect message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MessageSetCorrect.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+
+                /**
+                 * Decodes a MessageSetCorrect message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect} MessageSetCorrect
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MessageSetCorrect.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    let end = length === undefined ? reader.len : reader.pos + length, message = new $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect();
+                    while (reader.pos < end) {
+                        let tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1547769: {
+                                message[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension"] = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.decode(reader, reader.uint32());
+                                break;
+                            }
+                        case 4135312: {
+                                message[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"] = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.decode(reader, reader.uint32());
+                                break;
+                            }
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+
+                /**
+                 * Decodes a MessageSetCorrect message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect} MessageSetCorrect
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MessageSetCorrect.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+
+                /**
+                 * Verifies a MessageSetCorrect message.
+                 * @function verify
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                MessageSetCorrect.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension"] != null && message.hasOwnProperty(".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension")) {
+                        let error = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.verify(message[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension"]);
+                        if (error)
+                            return ".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension." + error;
+                    }
+                    if (message[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"] != null && message.hasOwnProperty(".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension")) {
+                        let error = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.verify(message[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"]);
+                        if (error)
+                            return ".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension." + error;
+                    }
+                    return null;
+                };
+
+                /**
+                 * Creates a MessageSetCorrect message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect} MessageSetCorrect
+                 */
+                MessageSetCorrect.fromObject = function fromObject(object) {
+                    if (object instanceof $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect)
+                        return object;
+                    let message = new $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect();
+                    if (object[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension"] != null) {
+                        if (typeof object[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension"] !== "object")
+                            throw TypeError(".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect..protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension: object expected");
+                        message[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension"] = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.fromObject(object[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension"]);
+                    }
+                    if (object[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"] != null) {
+                        if (typeof object[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"] !== "object")
+                            throw TypeError(".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect..protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension: object expected");
+                        message[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"] = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.fromObject(object[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"]);
+                    }
+                    return message;
+                };
+
+                /**
+                 * Creates a plain object from a MessageSetCorrect message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
+                 * @static
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect} message MessageSetCorrect
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                MessageSetCorrect.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    let object = {};
+                    if (options.defaults) {
+                        object[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension"] = null;
+                        object[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"] = null;
+                    }
+                    if (message[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension"] != null && message.hasOwnProperty(".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension"))
+                        object[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension"] = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.toObject(message[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension"], options);
+                    if (message[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"] != null && message.hasOwnProperty(".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"))
+                        object[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"] = $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.toObject(message[".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"], options);
+                    return object;
+                };
+
+                /**
+                 * Converts this MessageSetCorrect to JSON.
+                 * @function toJSON
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                MessageSetCorrect.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+
+                /**
+                 * Gets the default type url for MessageSetCorrect
+                 * @function getTypeUrl
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
+                 * @static
+                 * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns {string} The default type url
+                 */
+                MessageSetCorrect.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                    if (typeUrlPrefix === undefined) {
+                        typeUrlPrefix = "type.googleapis.com";
+                    }
+                    return typeUrlPrefix + "/protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect";
+                };
+
+                return MessageSetCorrect;
+            })();
+
+            TestAllRequiredTypesProto2.MessageSetCorrectExtension1 = (function() {
+
+                /**
+                 * Properties of a MessageSetCorrectExtension1.
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+                 * @interface IMessageSetCorrectExtension1
+                 * @property {string} str MessageSetCorrectExtension1 str
+                 */
+
+                /**
+                 * Constructs a new MessageSetCorrectExtension1.
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+                 * @classdesc Represents a MessageSetCorrectExtension1.
+                 * @implements IMessageSetCorrectExtension1
+                 * @constructor
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrectExtension1=} [properties] Properties to set
+                 */
+                function MessageSetCorrectExtension1(properties) {
+                    if (properties)
+                        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+
+                /**
+                 * MessageSetCorrectExtension1 str.
+                 * @member {string} str
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1
+                 * @instance
+                 */
+                MessageSetCorrectExtension1.prototype.str = "";
+
+                /**
+                 * Creates a new MessageSetCorrectExtension1 instance using the specified properties.
+                 * @function create
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1
+                 * @static
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrectExtension1=} [properties] Properties to set
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1} MessageSetCorrectExtension1 instance
+                 */
+                MessageSetCorrectExtension1.create = function create(properties) {
+                    return new MessageSetCorrectExtension1(properties);
+                };
+
+                /**
+                 * Encodes the specified MessageSetCorrectExtension1 message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.verify|verify} messages.
+                 * @function encode
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1
+                 * @static
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrectExtension1} message MessageSetCorrectExtension1 message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MessageSetCorrectExtension1.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    writer.uint32(/* id 25, wireType 2 =*/202).string(message.str);
+                    return writer;
+                };
+
+                /**
+                 * Encodes the specified MessageSetCorrectExtension1 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1
+                 * @static
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrectExtension1} message MessageSetCorrectExtension1 message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MessageSetCorrectExtension1.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+
+                /**
+                 * Decodes a MessageSetCorrectExtension1 message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1} MessageSetCorrectExtension1
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MessageSetCorrectExtension1.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    let end = length === undefined ? reader.len : reader.pos + length, message = new $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1();
+                    while (reader.pos < end) {
+                        let tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 25: {
+                                message.str = reader.string();
+                                break;
+                            }
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    if (!message.hasOwnProperty("str"))
+                        throw $util.ProtocolError("missing required 'str'", { instance: message });
+                    return message;
+                };
+
+                /**
+                 * Decodes a MessageSetCorrectExtension1 message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1} MessageSetCorrectExtension1
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MessageSetCorrectExtension1.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+
+                /**
+                 * Verifies a MessageSetCorrectExtension1 message.
+                 * @function verify
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                MessageSetCorrectExtension1.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (!$util.isString(message.str))
+                        return "str: string expected";
+                    return null;
+                };
+
+                /**
+                 * Creates a MessageSetCorrectExtension1 message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1} MessageSetCorrectExtension1
+                 */
+                MessageSetCorrectExtension1.fromObject = function fromObject(object) {
+                    if (object instanceof $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1)
+                        return object;
+                    let message = new $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1();
+                    if (object.str != null)
+                        message.str = String(object.str);
+                    return message;
+                };
+
+                /**
+                 * Creates a plain object from a MessageSetCorrectExtension1 message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1
+                 * @static
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1} message MessageSetCorrectExtension1
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                MessageSetCorrectExtension1.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    let object = {};
+                    if (options.defaults)
+                        object.str = "";
+                    if (message.str != null && message.hasOwnProperty("str"))
+                        object.str = message.str;
+                    return object;
+                };
+
+                /**
+                 * Converts this MessageSetCorrectExtension1 to JSON.
+                 * @function toJSON
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                MessageSetCorrectExtension1.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+
+                /**
+                 * Gets the default type url for MessageSetCorrectExtension1
+                 * @function getTypeUrl
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1
+                 * @static
+                 * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns {string} The default type url
+                 */
+                MessageSetCorrectExtension1.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                    if (typeUrlPrefix === undefined) {
+                        typeUrlPrefix = "type.googleapis.com";
+                    }
+                    return typeUrlPrefix + "/protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1";
+                };
+
+                return MessageSetCorrectExtension1;
+            })();
+
+            TestAllRequiredTypesProto2.MessageSetCorrectExtension2 = (function() {
+
+                /**
+                 * Properties of a MessageSetCorrectExtension2.
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+                 * @interface IMessageSetCorrectExtension2
+                 * @property {number} i MessageSetCorrectExtension2 i
+                 */
+
+                /**
+                 * Constructs a new MessageSetCorrectExtension2.
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2
+                 * @classdesc Represents a MessageSetCorrectExtension2.
+                 * @implements IMessageSetCorrectExtension2
+                 * @constructor
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrectExtension2=} [properties] Properties to set
+                 */
+                function MessageSetCorrectExtension2(properties) {
+                    if (properties)
+                        for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+
+                /**
+                 * MessageSetCorrectExtension2 i.
+                 * @member {number} i
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2
+                 * @instance
+                 */
+                MessageSetCorrectExtension2.prototype.i = 0;
+
+                /**
+                 * Creates a new MessageSetCorrectExtension2 instance using the specified properties.
+                 * @function create
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2
+                 * @static
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrectExtension2=} [properties] Properties to set
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2} MessageSetCorrectExtension2 instance
+                 */
+                MessageSetCorrectExtension2.create = function create(properties) {
+                    return new MessageSetCorrectExtension2(properties);
+                };
+
+                /**
+                 * Encodes the specified MessageSetCorrectExtension2 message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.verify|verify} messages.
+                 * @function encode
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2
+                 * @static
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrectExtension2} message MessageSetCorrectExtension2 message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MessageSetCorrectExtension2.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    writer.uint32(/* id 9, wireType 0 =*/72).int32(message.i);
+                    return writer;
+                };
+
+                /**
+                 * Encodes the specified MessageSetCorrectExtension2 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2
+                 * @static
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrectExtension2} message MessageSetCorrectExtension2 message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                MessageSetCorrectExtension2.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+
+                /**
+                 * Decodes a MessageSetCorrectExtension2 message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2} MessageSetCorrectExtension2
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MessageSetCorrectExtension2.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    let end = length === undefined ? reader.len : reader.pos + length, message = new $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2();
+                    while (reader.pos < end) {
+                        let tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 9: {
+                                message.i = reader.int32();
+                                break;
+                            }
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    if (!message.hasOwnProperty("i"))
+                        throw $util.ProtocolError("missing required 'i'", { instance: message });
+                    return message;
+                };
+
+                /**
+                 * Decodes a MessageSetCorrectExtension2 message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2} MessageSetCorrectExtension2
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                MessageSetCorrectExtension2.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+
+                /**
+                 * Verifies a MessageSetCorrectExtension2 message.
+                 * @function verify
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                MessageSetCorrectExtension2.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (!$util.isInteger(message.i))
+                        return "i: integer expected";
+                    return null;
+                };
+
+                /**
+                 * Creates a MessageSetCorrectExtension2 message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2} MessageSetCorrectExtension2
+                 */
+                MessageSetCorrectExtension2.fromObject = function fromObject(object) {
+                    if (object instanceof $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2)
+                        return object;
+                    let message = new $root.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2();
+                    if (object.i != null)
+                        message.i = object.i | 0;
+                    return message;
+                };
+
+                /**
+                 * Creates a plain object from a MessageSetCorrectExtension2 message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2
+                 * @static
+                 * @param {protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2} message MessageSetCorrectExtension2
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                MessageSetCorrectExtension2.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    let object = {};
+                    if (options.defaults)
+                        object.i = 0;
+                    if (message.i != null && message.hasOwnProperty("i"))
+                        object.i = message.i;
+                    return object;
+                };
+
+                /**
+                 * Converts this MessageSetCorrectExtension2 to JSON.
+                 * @function toJSON
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                MessageSetCorrectExtension2.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+
+                /**
+                 * Gets the default type url for MessageSetCorrectExtension2
+                 * @function getTypeUrl
+                 * @memberof protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2
+                 * @static
+                 * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns {string} The default type url
+                 */
+                MessageSetCorrectExtension2.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                    if (typeUrlPrefix === undefined) {
+                        typeUrlPrefix = "type.googleapis.com";
+                    }
+                    return typeUrlPrefix + "/protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2";
+                };
+
+                return MessageSetCorrectExtension2;
+            })();
+
+            return TestAllRequiredTypesProto2;
+        })();
+
         return proto2;
     })();
 

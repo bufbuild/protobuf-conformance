@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@bufbuild/buf": "^1.14.0",
+    "@bufbuild/buf": "^1.15.0-1",
     "@types/google-protobuf": "^3.15.6",
     "@types/node": "^18.14.0",
     "google-protobuf": "^3.21.2",

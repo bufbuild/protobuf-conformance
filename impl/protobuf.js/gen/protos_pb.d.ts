@@ -4072,6 +4072,845 @@ export namespace protobuf_test_messages {
              */
             public static getTypeUrl(typeUrlPrefix?: string): string;
         }
+
+        /** Properties of a TestAllRequiredTypesProto2. */
+        interface ITestAllRequiredTypesProto2 {
+
+            /** TestAllRequiredTypesProto2 requiredInt32 */
+            requiredInt32: number;
+
+            /** TestAllRequiredTypesProto2 requiredInt64 */
+            requiredInt64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 requiredUint32 */
+            requiredUint32: number;
+
+            /** TestAllRequiredTypesProto2 requiredUint64 */
+            requiredUint64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 requiredSint32 */
+            requiredSint32: number;
+
+            /** TestAllRequiredTypesProto2 requiredSint64 */
+            requiredSint64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 requiredFixed32 */
+            requiredFixed32: number;
+
+            /** TestAllRequiredTypesProto2 requiredFixed64 */
+            requiredFixed64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 requiredSfixed32 */
+            requiredSfixed32: number;
+
+            /** TestAllRequiredTypesProto2 requiredSfixed64 */
+            requiredSfixed64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 requiredFloat */
+            requiredFloat: number;
+
+            /** TestAllRequiredTypesProto2 requiredDouble */
+            requiredDouble: number;
+
+            /** TestAllRequiredTypesProto2 requiredBool */
+            requiredBool: boolean;
+
+            /** TestAllRequiredTypesProto2 requiredString */
+            requiredString: string;
+
+            /** TestAllRequiredTypesProto2 requiredBytes */
+            requiredBytes: Uint8Array;
+
+            /** TestAllRequiredTypesProto2 requiredNestedMessage */
+            requiredNestedMessage: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.INestedMessage;
+
+            /** TestAllRequiredTypesProto2 requiredForeignMessage */
+            requiredForeignMessage: protobuf_test_messages.proto2.IForeignMessageProto2;
+
+            /** TestAllRequiredTypesProto2 requiredNestedEnum */
+            requiredNestedEnum: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedEnum;
+
+            /** TestAllRequiredTypesProto2 requiredForeignEnum */
+            requiredForeignEnum: protobuf_test_messages.proto2.ForeignEnumProto2;
+
+            /** TestAllRequiredTypesProto2 requiredStringPiece */
+            requiredStringPiece: string;
+
+            /** TestAllRequiredTypesProto2 requiredCord */
+            requiredCord: string;
+
+            /** TestAllRequiredTypesProto2 recursiveMessage */
+            recursiveMessage: protobuf_test_messages.proto2.ITestAllRequiredTypesProto2;
+
+            /** TestAllRequiredTypesProto2 optionalRecursiveMessage */
+            optionalRecursiveMessage?: (protobuf_test_messages.proto2.ITestAllRequiredTypesProto2|null);
+
+            /** TestAllRequiredTypesProto2 data */
+            data: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IData;
+
+            /** TestAllRequiredTypesProto2 defaultInt32 */
+            defaultInt32: number;
+
+            /** TestAllRequiredTypesProto2 defaultInt64 */
+            defaultInt64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 defaultUint32 */
+            defaultUint32: number;
+
+            /** TestAllRequiredTypesProto2 defaultUint64 */
+            defaultUint64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 defaultSint32 */
+            defaultSint32: number;
+
+            /** TestAllRequiredTypesProto2 defaultSint64 */
+            defaultSint64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 defaultFixed32 */
+            defaultFixed32: number;
+
+            /** TestAllRequiredTypesProto2 defaultFixed64 */
+            defaultFixed64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 defaultSfixed32 */
+            defaultSfixed32: number;
+
+            /** TestAllRequiredTypesProto2 defaultSfixed64 */
+            defaultSfixed64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 defaultFloat */
+            defaultFloat: number;
+
+            /** TestAllRequiredTypesProto2 defaultDouble */
+            defaultDouble: number;
+
+            /** TestAllRequiredTypesProto2 defaultBool */
+            defaultBool: boolean;
+
+            /** TestAllRequiredTypesProto2 defaultString */
+            defaultString: string;
+
+            /** TestAllRequiredTypesProto2 defaultBytes */
+            defaultBytes: Uint8Array;
+        }
+
+        /** Represents a TestAllRequiredTypesProto2. */
+        class TestAllRequiredTypesProto2 implements ITestAllRequiredTypesProto2 {
+
+            /**
+             * Constructs a new TestAllRequiredTypesProto2.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: protobuf_test_messages.proto2.ITestAllRequiredTypesProto2);
+
+            /** TestAllRequiredTypesProto2 requiredInt32. */
+            public requiredInt32: number;
+
+            /** TestAllRequiredTypesProto2 requiredInt64. */
+            public requiredInt64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 requiredUint32. */
+            public requiredUint32: number;
+
+            /** TestAllRequiredTypesProto2 requiredUint64. */
+            public requiredUint64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 requiredSint32. */
+            public requiredSint32: number;
+
+            /** TestAllRequiredTypesProto2 requiredSint64. */
+            public requiredSint64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 requiredFixed32. */
+            public requiredFixed32: number;
+
+            /** TestAllRequiredTypesProto2 requiredFixed64. */
+            public requiredFixed64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 requiredSfixed32. */
+            public requiredSfixed32: number;
+
+            /** TestAllRequiredTypesProto2 requiredSfixed64. */
+            public requiredSfixed64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 requiredFloat. */
+            public requiredFloat: number;
+
+            /** TestAllRequiredTypesProto2 requiredDouble. */
+            public requiredDouble: number;
+
+            /** TestAllRequiredTypesProto2 requiredBool. */
+            public requiredBool: boolean;
+
+            /** TestAllRequiredTypesProto2 requiredString. */
+            public requiredString: string;
+
+            /** TestAllRequiredTypesProto2 requiredBytes. */
+            public requiredBytes: Uint8Array;
+
+            /** TestAllRequiredTypesProto2 requiredNestedMessage. */
+            public requiredNestedMessage: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.INestedMessage;
+
+            /** TestAllRequiredTypesProto2 requiredForeignMessage. */
+            public requiredForeignMessage: protobuf_test_messages.proto2.IForeignMessageProto2;
+
+            /** TestAllRequiredTypesProto2 requiredNestedEnum. */
+            public requiredNestedEnum: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedEnum;
+
+            /** TestAllRequiredTypesProto2 requiredForeignEnum. */
+            public requiredForeignEnum: protobuf_test_messages.proto2.ForeignEnumProto2;
+
+            /** TestAllRequiredTypesProto2 requiredStringPiece. */
+            public requiredStringPiece: string;
+
+            /** TestAllRequiredTypesProto2 requiredCord. */
+            public requiredCord: string;
+
+            /** TestAllRequiredTypesProto2 recursiveMessage. */
+            public recursiveMessage: protobuf_test_messages.proto2.ITestAllRequiredTypesProto2;
+
+            /** TestAllRequiredTypesProto2 optionalRecursiveMessage. */
+            public optionalRecursiveMessage?: (protobuf_test_messages.proto2.ITestAllRequiredTypesProto2|null);
+
+            /** TestAllRequiredTypesProto2 data. */
+            public data: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IData;
+
+            /** TestAllRequiredTypesProto2 defaultInt32. */
+            public defaultInt32: number;
+
+            /** TestAllRequiredTypesProto2 defaultInt64. */
+            public defaultInt64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 defaultUint32. */
+            public defaultUint32: number;
+
+            /** TestAllRequiredTypesProto2 defaultUint64. */
+            public defaultUint64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 defaultSint32. */
+            public defaultSint32: number;
+
+            /** TestAllRequiredTypesProto2 defaultSint64. */
+            public defaultSint64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 defaultFixed32. */
+            public defaultFixed32: number;
+
+            /** TestAllRequiredTypesProto2 defaultFixed64. */
+            public defaultFixed64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 defaultSfixed32. */
+            public defaultSfixed32: number;
+
+            /** TestAllRequiredTypesProto2 defaultSfixed64. */
+            public defaultSfixed64: (number|Long);
+
+            /** TestAllRequiredTypesProto2 defaultFloat. */
+            public defaultFloat: number;
+
+            /** TestAllRequiredTypesProto2 defaultDouble. */
+            public defaultDouble: number;
+
+            /** TestAllRequiredTypesProto2 defaultBool. */
+            public defaultBool: boolean;
+
+            /** TestAllRequiredTypesProto2 defaultString. */
+            public defaultString: string;
+
+            /** TestAllRequiredTypesProto2 defaultBytes. */
+            public defaultBytes: Uint8Array;
+
+            /**
+             * Creates a new TestAllRequiredTypesProto2 instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns TestAllRequiredTypesProto2 instance
+             */
+            public static create(properties?: protobuf_test_messages.proto2.ITestAllRequiredTypesProto2): protobuf_test_messages.proto2.TestAllRequiredTypesProto2;
+
+            /**
+             * Encodes the specified TestAllRequiredTypesProto2 message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.verify|verify} messages.
+             * @param message TestAllRequiredTypesProto2 message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: protobuf_test_messages.proto2.ITestAllRequiredTypesProto2, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified TestAllRequiredTypesProto2 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.verify|verify} messages.
+             * @param message TestAllRequiredTypesProto2 message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: protobuf_test_messages.proto2.ITestAllRequiredTypesProto2, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a TestAllRequiredTypesProto2 message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns TestAllRequiredTypesProto2
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllRequiredTypesProto2;
+
+            /**
+             * Decodes a TestAllRequiredTypesProto2 message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns TestAllRequiredTypesProto2
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllRequiredTypesProto2;
+
+            /**
+             * Verifies a TestAllRequiredTypesProto2 message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a TestAllRequiredTypesProto2 message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns TestAllRequiredTypesProto2
+             */
+            public static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllRequiredTypesProto2;
+
+            /**
+             * Creates a plain object from a TestAllRequiredTypesProto2 message. Also converts values to other types if specified.
+             * @param message TestAllRequiredTypesProto2
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this TestAllRequiredTypesProto2 to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+
+            /**
+             * Gets the default type url for TestAllRequiredTypesProto2
+             * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns The default type url
+             */
+            public static getTypeUrl(typeUrlPrefix?: string): string;
+        }
+
+        namespace TestAllRequiredTypesProto2 {
+
+            /** Properties of a NestedMessage. */
+            interface INestedMessage {
+
+                /** NestedMessage a */
+                a: number;
+
+                /** NestedMessage corecursive */
+                corecursive: protobuf_test_messages.proto2.ITestAllRequiredTypesProto2;
+
+                /** NestedMessage optionalCorecursive */
+                optionalCorecursive?: (protobuf_test_messages.proto2.ITestAllRequiredTypesProto2|null);
+            }
+
+            /** Represents a NestedMessage. */
+            class NestedMessage implements INestedMessage {
+
+                /**
+                 * Constructs a new NestedMessage.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.INestedMessage);
+
+                /** NestedMessage a. */
+                public a: number;
+
+                /** NestedMessage corecursive. */
+                public corecursive: protobuf_test_messages.proto2.ITestAllRequiredTypesProto2;
+
+                /** NestedMessage optionalCorecursive. */
+                public optionalCorecursive?: (protobuf_test_messages.proto2.ITestAllRequiredTypesProto2|null);
+
+                /**
+                 * Creates a new NestedMessage instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns NestedMessage instance
+                 */
+                public static create(properties?: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.INestedMessage): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage;
+
+                /**
+                 * Encodes the specified NestedMessage message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.verify|verify} messages.
+                 * @param message NestedMessage message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.INestedMessage, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified NestedMessage message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.verify|verify} messages.
+                 * @param message NestedMessage message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.INestedMessage, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a NestedMessage message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns NestedMessage
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage;
+
+                /**
+                 * Decodes a NestedMessage message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns NestedMessage
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage;
+
+                /**
+                 * Verifies a NestedMessage message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a NestedMessage message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns NestedMessage
+                 */
+                public static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage;
+
+                /**
+                 * Creates a plain object from a NestedMessage message. Also converts values to other types if specified.
+                 * @param message NestedMessage
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this NestedMessage to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the default type url for NestedMessage
+                 * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns The default type url
+                 */
+                public static getTypeUrl(typeUrlPrefix?: string): string;
+            }
+
+            /** NestedEnum enum. */
+            enum NestedEnum {
+                FOO = 0,
+                BAR = 1,
+                BAZ = 2,
+                NEG = -1
+            }
+
+            /** Properties of a Data. */
+            interface IData {
+
+                /** Data groupInt32 */
+                groupInt32: number;
+
+                /** Data groupUint32 */
+                groupUint32: number;
+            }
+
+            /** Represents a Data. */
+            class Data implements IData {
+
+                /**
+                 * Constructs a new Data.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IData);
+
+                /** Data groupInt32. */
+                public groupInt32: number;
+
+                /** Data groupUint32. */
+                public groupUint32: number;
+
+                /**
+                 * Creates a new Data instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns Data instance
+                 */
+                public static create(properties?: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IData): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data;
+
+                /**
+                 * Encodes the specified Data message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.verify|verify} messages.
+                 * @param message Data message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IData, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified Data message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.verify|verify} messages.
+                 * @param message Data message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IData, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a Data message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns Data
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data;
+
+                /**
+                 * Decodes a Data message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns Data
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data;
+
+                /**
+                 * Verifies a Data message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a Data message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns Data
+                 */
+                public static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data;
+
+                /**
+                 * Creates a plain object from a Data message. Also converts values to other types if specified.
+                 * @param message Data
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this Data to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the default type url for Data
+                 * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns The default type url
+                 */
+                public static getTypeUrl(typeUrlPrefix?: string): string;
+            }
+
+            /** Properties of a MessageSetCorrect. */
+            interface IMessageSetCorrect {
+
+                /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension */
+                ".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension"?: (protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrectExtension1|null);
+
+                /** MessageSetCorrect .protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension */
+                ".protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension"?: (protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrectExtension2|null);
+            }
+
+            /** Represents a MessageSetCorrect. */
+            class MessageSetCorrect implements IMessageSetCorrect {
+
+                /**
+                 * Constructs a new MessageSetCorrect.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrect);
+
+                /**
+                 * Creates a new MessageSetCorrect instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns MessageSetCorrect instance
+                 */
+                public static create(properties?: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrect): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect;
+
+                /**
+                 * Encodes the specified MessageSetCorrect message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.verify|verify} messages.
+                 * @param message MessageSetCorrect message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrect, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified MessageSetCorrect message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.verify|verify} messages.
+                 * @param message MessageSetCorrect message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrect, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a MessageSetCorrect message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns MessageSetCorrect
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect;
+
+                /**
+                 * Decodes a MessageSetCorrect message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns MessageSetCorrect
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect;
+
+                /**
+                 * Verifies a MessageSetCorrect message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a MessageSetCorrect message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns MessageSetCorrect
+                 */
+                public static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect;
+
+                /**
+                 * Creates a plain object from a MessageSetCorrect message. Also converts values to other types if specified.
+                 * @param message MessageSetCorrect
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this MessageSetCorrect to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the default type url for MessageSetCorrect
+                 * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns The default type url
+                 */
+                public static getTypeUrl(typeUrlPrefix?: string): string;
+            }
+
+            /** Properties of a MessageSetCorrectExtension1. */
+            interface IMessageSetCorrectExtension1 {
+
+                /** MessageSetCorrectExtension1 str */
+                str: string;
+            }
+
+            /** Represents a MessageSetCorrectExtension1. */
+            class MessageSetCorrectExtension1 implements IMessageSetCorrectExtension1 {
+
+                /**
+                 * Constructs a new MessageSetCorrectExtension1.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrectExtension1);
+
+                /** MessageSetCorrectExtension1 str. */
+                public str: string;
+
+                /**
+                 * Creates a new MessageSetCorrectExtension1 instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns MessageSetCorrectExtension1 instance
+                 */
+                public static create(properties?: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrectExtension1): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1;
+
+                /**
+                 * Encodes the specified MessageSetCorrectExtension1 message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.verify|verify} messages.
+                 * @param message MessageSetCorrectExtension1 message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrectExtension1, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified MessageSetCorrectExtension1 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.verify|verify} messages.
+                 * @param message MessageSetCorrectExtension1 message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrectExtension1, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a MessageSetCorrectExtension1 message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns MessageSetCorrectExtension1
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1;
+
+                /**
+                 * Decodes a MessageSetCorrectExtension1 message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns MessageSetCorrectExtension1
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1;
+
+                /**
+                 * Verifies a MessageSetCorrectExtension1 message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a MessageSetCorrectExtension1 message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns MessageSetCorrectExtension1
+                 */
+                public static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1;
+
+                /**
+                 * Creates a plain object from a MessageSetCorrectExtension1 message. Also converts values to other types if specified.
+                 * @param message MessageSetCorrectExtension1
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this MessageSetCorrectExtension1 to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the default type url for MessageSetCorrectExtension1
+                 * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns The default type url
+                 */
+                public static getTypeUrl(typeUrlPrefix?: string): string;
+            }
+
+            /** Properties of a MessageSetCorrectExtension2. */
+            interface IMessageSetCorrectExtension2 {
+
+                /** MessageSetCorrectExtension2 i */
+                i: number;
+            }
+
+            /** Represents a MessageSetCorrectExtension2. */
+            class MessageSetCorrectExtension2 implements IMessageSetCorrectExtension2 {
+
+                /**
+                 * Constructs a new MessageSetCorrectExtension2.
+                 * @param [properties] Properties to set
+                 */
+                constructor(properties?: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrectExtension2);
+
+                /** MessageSetCorrectExtension2 i. */
+                public i: number;
+
+                /**
+                 * Creates a new MessageSetCorrectExtension2 instance using the specified properties.
+                 * @param [properties] Properties to set
+                 * @returns MessageSetCorrectExtension2 instance
+                 */
+                public static create(properties?: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrectExtension2): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2;
+
+                /**
+                 * Encodes the specified MessageSetCorrectExtension2 message. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.verify|verify} messages.
+                 * @param message MessageSetCorrectExtension2 message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encode(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrectExtension2, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Encodes the specified MessageSetCorrectExtension2 message, length delimited. Does not implicitly {@link protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.verify|verify} messages.
+                 * @param message MessageSetCorrectExtension2 message or plain object to encode
+                 * @param [writer] Writer to encode to
+                 * @returns Writer
+                 */
+                public static encodeDelimited(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.IMessageSetCorrectExtension2, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                /**
+                 * Decodes a MessageSetCorrectExtension2 message from the specified reader or buffer.
+                 * @param reader Reader or buffer to decode from
+                 * @param [length] Message length if known beforehand
+                 * @returns MessageSetCorrectExtension2
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2;
+
+                /**
+                 * Decodes a MessageSetCorrectExtension2 message from the specified reader or buffer, length delimited.
+                 * @param reader Reader or buffer to decode from
+                 * @returns MessageSetCorrectExtension2
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2;
+
+                /**
+                 * Verifies a MessageSetCorrectExtension2 message.
+                 * @param message Plain object to verify
+                 * @returns `null` if valid, otherwise the reason why it is not
+                 */
+                public static verify(message: { [k: string]: any }): (string|null);
+
+                /**
+                 * Creates a MessageSetCorrectExtension2 message from a plain object. Also converts values to their respective internal types.
+                 * @param object Plain object
+                 * @returns MessageSetCorrectExtension2
+                 */
+                public static fromObject(object: { [k: string]: any }): protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2;
+
+                /**
+                 * Creates a plain object from a MessageSetCorrectExtension2 message. Also converts values to other types if specified.
+                 * @param message MessageSetCorrectExtension2
+                 * @param [options] Conversion options
+                 * @returns Plain object
+                 */
+                public static toObject(message: protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                /**
+                 * Converts this MessageSetCorrectExtension2 to JSON.
+                 * @returns JSON object
+                 */
+                public toJSON(): { [k: string]: any };
+
+                /**
+                 * Gets the default type url for MessageSetCorrectExtension2
+                 * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                 * @returns The default type url
+                 */
+                public static getTypeUrl(typeUrlPrefix?: string): string;
+            }
+        }
     }
 }
 

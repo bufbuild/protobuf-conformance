@@ -924,66 +924,66 @@ export const TestAllTypesProto3 = {
       writer.int32(v);
     }
     writer.ldelim();
-    message.mapInt32Int32.forEach((value, key) => {
+    (message.mapInt32Int32).forEach((value, key) => {
       TestAllTypesProto3_MapInt32Int32Entry.encode({ key: key as any, value }, writer.uint32(450).fork()).ldelim();
     });
-    message.mapInt64Int64.forEach((value, key) => {
+    (message.mapInt64Int64).forEach((value, key) => {
       TestAllTypesProto3_MapInt64Int64Entry.encode({ key: key as any, value }, writer.uint32(458).fork()).ldelim();
     });
-    message.mapUint32Uint32.forEach((value, key) => {
+    (message.mapUint32Uint32).forEach((value, key) => {
       TestAllTypesProto3_MapUint32Uint32Entry.encode({ key: key as any, value }, writer.uint32(466).fork()).ldelim();
     });
-    message.mapUint64Uint64.forEach((value, key) => {
+    (message.mapUint64Uint64).forEach((value, key) => {
       TestAllTypesProto3_MapUint64Uint64Entry.encode({ key: key as any, value }, writer.uint32(474).fork()).ldelim();
     });
-    message.mapSint32Sint32.forEach((value, key) => {
+    (message.mapSint32Sint32).forEach((value, key) => {
       TestAllTypesProto3_MapSint32Sint32Entry.encode({ key: key as any, value }, writer.uint32(482).fork()).ldelim();
     });
-    message.mapSint64Sint64.forEach((value, key) => {
+    (message.mapSint64Sint64).forEach((value, key) => {
       TestAllTypesProto3_MapSint64Sint64Entry.encode({ key: key as any, value }, writer.uint32(490).fork()).ldelim();
     });
-    message.mapFixed32Fixed32.forEach((value, key) => {
+    (message.mapFixed32Fixed32).forEach((value, key) => {
       TestAllTypesProto3_MapFixed32Fixed32Entry.encode({ key: key as any, value }, writer.uint32(498).fork()).ldelim();
     });
-    message.mapFixed64Fixed64.forEach((value, key) => {
+    (message.mapFixed64Fixed64).forEach((value, key) => {
       TestAllTypesProto3_MapFixed64Fixed64Entry.encode({ key: key as any, value }, writer.uint32(506).fork()).ldelim();
     });
-    message.mapSfixed32Sfixed32.forEach((value, key) => {
+    (message.mapSfixed32Sfixed32).forEach((value, key) => {
       TestAllTypesProto3_MapSfixed32Sfixed32Entry.encode({ key: key as any, value }, writer.uint32(514).fork())
         .ldelim();
     });
-    message.mapSfixed64Sfixed64.forEach((value, key) => {
+    (message.mapSfixed64Sfixed64).forEach((value, key) => {
       TestAllTypesProto3_MapSfixed64Sfixed64Entry.encode({ key: key as any, value }, writer.uint32(522).fork())
         .ldelim();
     });
-    message.mapInt32Float.forEach((value, key) => {
+    (message.mapInt32Float).forEach((value, key) => {
       TestAllTypesProto3_MapInt32FloatEntry.encode({ key: key as any, value }, writer.uint32(530).fork()).ldelim();
     });
-    message.mapInt32Double.forEach((value, key) => {
+    (message.mapInt32Double).forEach((value, key) => {
       TestAllTypesProto3_MapInt32DoubleEntry.encode({ key: key as any, value }, writer.uint32(538).fork()).ldelim();
     });
-    message.mapBoolBool.forEach((value, key) => {
+    (message.mapBoolBool).forEach((value, key) => {
       TestAllTypesProto3_MapBoolBoolEntry.encode({ key: key as any, value }, writer.uint32(546).fork()).ldelim();
     });
-    message.mapStringString.forEach((value, key) => {
+    (message.mapStringString).forEach((value, key) => {
       TestAllTypesProto3_MapStringStringEntry.encode({ key: key as any, value }, writer.uint32(554).fork()).ldelim();
     });
-    message.mapStringBytes.forEach((value, key) => {
+    (message.mapStringBytes).forEach((value, key) => {
       TestAllTypesProto3_MapStringBytesEntry.encode({ key: key as any, value }, writer.uint32(562).fork()).ldelim();
     });
-    message.mapStringNestedMessage.forEach((value, key) => {
+    (message.mapStringNestedMessage).forEach((value, key) => {
       TestAllTypesProto3_MapStringNestedMessageEntry.encode({ key: key as any, value }, writer.uint32(570).fork())
         .ldelim();
     });
-    message.mapStringForeignMessage.forEach((value, key) => {
+    (message.mapStringForeignMessage).forEach((value, key) => {
       TestAllTypesProto3_MapStringForeignMessageEntry.encode({ key: key as any, value }, writer.uint32(578).fork())
         .ldelim();
     });
-    message.mapStringNestedEnum.forEach((value, key) => {
+    (message.mapStringNestedEnum).forEach((value, key) => {
       TestAllTypesProto3_MapStringNestedEnumEntry.encode({ key: key as any, value }, writer.uint32(586).fork())
         .ldelim();
     });
-    message.mapStringForeignEnum.forEach((value, key) => {
+    (message.mapStringForeignEnum).forEach((value, key) => {
       TestAllTypesProto3_MapStringForeignEnumEntry.encode({ key: key as any, value }, writer.uint32(594).fork())
         .ldelim();
     });
@@ -1174,830 +1174,1521 @@ export const TestAllTypesProto3 = {
   },
 
   decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3 {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
+          if (tag != 8) {
+            break;
+          }
+
           message.optionalInt32 = reader.int32();
-          break;
+          continue;
         case 2:
+          if (tag != 16) {
+            break;
+          }
+
           message.optionalInt64 = longToNumber(reader.int64() as Long);
-          break;
+          continue;
         case 3:
+          if (tag != 24) {
+            break;
+          }
+
           message.optionalUint32 = reader.uint32();
-          break;
+          continue;
         case 4:
+          if (tag != 32) {
+            break;
+          }
+
           message.optionalUint64 = longToNumber(reader.uint64() as Long);
-          break;
+          continue;
         case 5:
+          if (tag != 40) {
+            break;
+          }
+
           message.optionalSint32 = reader.sint32();
-          break;
+          continue;
         case 6:
+          if (tag != 48) {
+            break;
+          }
+
           message.optionalSint64 = longToNumber(reader.sint64() as Long);
-          break;
+          continue;
         case 7:
+          if (tag != 61) {
+            break;
+          }
+
           message.optionalFixed32 = reader.fixed32();
-          break;
+          continue;
         case 8:
+          if (tag != 65) {
+            break;
+          }
+
           message.optionalFixed64 = longToNumber(reader.fixed64() as Long);
-          break;
+          continue;
         case 9:
+          if (tag != 77) {
+            break;
+          }
+
           message.optionalSfixed32 = reader.sfixed32();
-          break;
+          continue;
         case 10:
+          if (tag != 81) {
+            break;
+          }
+
           message.optionalSfixed64 = longToNumber(reader.sfixed64() as Long);
-          break;
+          continue;
         case 11:
+          if (tag != 93) {
+            break;
+          }
+
           message.optionalFloat = reader.float();
-          break;
+          continue;
         case 12:
+          if (tag != 97) {
+            break;
+          }
+
           message.optionalDouble = reader.double();
-          break;
+          continue;
         case 13:
+          if (tag != 104) {
+            break;
+          }
+
           message.optionalBool = reader.bool();
-          break;
+          continue;
         case 14:
+          if (tag != 114) {
+            break;
+          }
+
           message.optionalString = reader.string();
-          break;
+          continue;
         case 15:
+          if (tag != 122) {
+            break;
+          }
+
           message.optionalBytes = reader.bytes();
-          break;
+          continue;
         case 18:
+          if (tag != 146) {
+            break;
+          }
+
           message.optionalNestedMessage = TestAllTypesProto3_NestedMessage.decode(reader, reader.uint32());
-          break;
+          continue;
         case 19:
+          if (tag != 154) {
+            break;
+          }
+
           message.optionalForeignMessage = ForeignMessage.decode(reader, reader.uint32());
-          break;
+          continue;
         case 21:
+          if (tag != 168) {
+            break;
+          }
+
           message.optionalNestedEnum = reader.int32() as any;
-          break;
+          continue;
         case 22:
+          if (tag != 176) {
+            break;
+          }
+
           message.optionalForeignEnum = reader.int32() as any;
-          break;
+          continue;
         case 23:
+          if (tag != 184) {
+            break;
+          }
+
           message.optionalAliasedEnum = reader.int32() as any;
-          break;
+          continue;
         case 24:
+          if (tag != 194) {
+            break;
+          }
+
           message.optionalStringPiece = reader.string();
-          break;
+          continue;
         case 25:
+          if (tag != 202) {
+            break;
+          }
+
           message.optionalCord = reader.string();
-          break;
+          continue;
         case 27:
+          if (tag != 218) {
+            break;
+          }
+
           message.recursiveMessage = TestAllTypesProto3.decode(reader, reader.uint32());
-          break;
+          continue;
         case 31:
-          if ((tag & 7) === 2) {
+          if (tag == 248) {
+            message.repeatedInt32.push(reader.int32());
+            continue;
+          }
+
+          if (tag == 250) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedInt32.push(reader.int32());
             }
-          } else {
-            message.repeatedInt32.push(reader.int32());
+
+            continue;
           }
+
           break;
         case 32:
-          if ((tag & 7) === 2) {
+          if (tag == 256) {
+            message.repeatedInt64.push(longToNumber(reader.int64() as Long));
+            continue;
+          }
+
+          if (tag == 258) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedInt64.push(longToNumber(reader.int64() as Long));
             }
-          } else {
-            message.repeatedInt64.push(longToNumber(reader.int64() as Long));
+
+            continue;
           }
+
           break;
         case 33:
-          if ((tag & 7) === 2) {
+          if (tag == 264) {
+            message.repeatedUint32.push(reader.uint32());
+            continue;
+          }
+
+          if (tag == 266) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedUint32.push(reader.uint32());
             }
-          } else {
-            message.repeatedUint32.push(reader.uint32());
+
+            continue;
           }
+
           break;
         case 34:
-          if ((tag & 7) === 2) {
+          if (tag == 272) {
+            message.repeatedUint64.push(longToNumber(reader.uint64() as Long));
+            continue;
+          }
+
+          if (tag == 274) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedUint64.push(longToNumber(reader.uint64() as Long));
             }
-          } else {
-            message.repeatedUint64.push(longToNumber(reader.uint64() as Long));
+
+            continue;
           }
+
           break;
         case 35:
-          if ((tag & 7) === 2) {
+          if (tag == 280) {
+            message.repeatedSint32.push(reader.sint32());
+            continue;
+          }
+
+          if (tag == 282) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedSint32.push(reader.sint32());
             }
-          } else {
-            message.repeatedSint32.push(reader.sint32());
+
+            continue;
           }
+
           break;
         case 36:
-          if ((tag & 7) === 2) {
+          if (tag == 288) {
+            message.repeatedSint64.push(longToNumber(reader.sint64() as Long));
+            continue;
+          }
+
+          if (tag == 290) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedSint64.push(longToNumber(reader.sint64() as Long));
             }
-          } else {
-            message.repeatedSint64.push(longToNumber(reader.sint64() as Long));
+
+            continue;
           }
+
           break;
         case 37:
-          if ((tag & 7) === 2) {
+          if (tag == 301) {
+            message.repeatedFixed32.push(reader.fixed32());
+            continue;
+          }
+
+          if (tag == 298) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedFixed32.push(reader.fixed32());
             }
-          } else {
-            message.repeatedFixed32.push(reader.fixed32());
+
+            continue;
           }
+
           break;
         case 38:
-          if ((tag & 7) === 2) {
+          if (tag == 305) {
+            message.repeatedFixed64.push(longToNumber(reader.fixed64() as Long));
+            continue;
+          }
+
+          if (tag == 306) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedFixed64.push(longToNumber(reader.fixed64() as Long));
             }
-          } else {
-            message.repeatedFixed64.push(longToNumber(reader.fixed64() as Long));
+
+            continue;
           }
+
           break;
         case 39:
-          if ((tag & 7) === 2) {
+          if (tag == 317) {
+            message.repeatedSfixed32.push(reader.sfixed32());
+            continue;
+          }
+
+          if (tag == 314) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedSfixed32.push(reader.sfixed32());
             }
-          } else {
-            message.repeatedSfixed32.push(reader.sfixed32());
+
+            continue;
           }
+
           break;
         case 40:
-          if ((tag & 7) === 2) {
+          if (tag == 321) {
+            message.repeatedSfixed64.push(longToNumber(reader.sfixed64() as Long));
+            continue;
+          }
+
+          if (tag == 322) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedSfixed64.push(longToNumber(reader.sfixed64() as Long));
             }
-          } else {
-            message.repeatedSfixed64.push(longToNumber(reader.sfixed64() as Long));
+
+            continue;
           }
+
           break;
         case 41:
-          if ((tag & 7) === 2) {
+          if (tag == 333) {
+            message.repeatedFloat.push(reader.float());
+            continue;
+          }
+
+          if (tag == 330) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedFloat.push(reader.float());
             }
-          } else {
-            message.repeatedFloat.push(reader.float());
+
+            continue;
           }
+
           break;
         case 42:
-          if ((tag & 7) === 2) {
+          if (tag == 337) {
+            message.repeatedDouble.push(reader.double());
+            continue;
+          }
+
+          if (tag == 338) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedDouble.push(reader.double());
             }
-          } else {
-            message.repeatedDouble.push(reader.double());
+
+            continue;
           }
+
           break;
         case 43:
-          if ((tag & 7) === 2) {
+          if (tag == 344) {
+            message.repeatedBool.push(reader.bool());
+            continue;
+          }
+
+          if (tag == 346) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedBool.push(reader.bool());
             }
-          } else {
-            message.repeatedBool.push(reader.bool());
+
+            continue;
           }
+
           break;
         case 44:
+          if (tag != 354) {
+            break;
+          }
+
           message.repeatedString.push(reader.string());
-          break;
+          continue;
         case 45:
+          if (tag != 362) {
+            break;
+          }
+
           message.repeatedBytes.push(reader.bytes());
-          break;
+          continue;
         case 48:
+          if (tag != 386) {
+            break;
+          }
+
           message.repeatedNestedMessage.push(TestAllTypesProto3_NestedMessage.decode(reader, reader.uint32()));
-          break;
+          continue;
         case 49:
+          if (tag != 394) {
+            break;
+          }
+
           message.repeatedForeignMessage.push(ForeignMessage.decode(reader, reader.uint32()));
-          break;
+          continue;
         case 51:
-          if ((tag & 7) === 2) {
+          if (tag == 408) {
+            message.repeatedNestedEnum.push(reader.int32() as any);
+            continue;
+          }
+
+          if (tag == 410) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedNestedEnum.push(reader.int32() as any);
             }
-          } else {
-            message.repeatedNestedEnum.push(reader.int32() as any);
+
+            continue;
           }
+
           break;
         case 52:
-          if ((tag & 7) === 2) {
+          if (tag == 416) {
+            message.repeatedForeignEnum.push(reader.int32() as any);
+            continue;
+          }
+
+          if (tag == 418) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedForeignEnum.push(reader.int32() as any);
             }
-          } else {
-            message.repeatedForeignEnum.push(reader.int32() as any);
+
+            continue;
           }
+
           break;
         case 54:
+          if (tag != 434) {
+            break;
+          }
+
           message.repeatedStringPiece.push(reader.string());
-          break;
+          continue;
         case 55:
+          if (tag != 442) {
+            break;
+          }
+
           message.repeatedCord.push(reader.string());
-          break;
+          continue;
         case 75:
-          if ((tag & 7) === 2) {
+          if (tag == 600) {
+            message.packedInt32.push(reader.int32());
+            continue;
+          }
+
+          if (tag == 602) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedInt32.push(reader.int32());
             }
-          } else {
-            message.packedInt32.push(reader.int32());
+
+            continue;
           }
+
           break;
         case 76:
-          if ((tag & 7) === 2) {
+          if (tag == 608) {
+            message.packedInt64.push(longToNumber(reader.int64() as Long));
+            continue;
+          }
+
+          if (tag == 610) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedInt64.push(longToNumber(reader.int64() as Long));
             }
-          } else {
-            message.packedInt64.push(longToNumber(reader.int64() as Long));
+
+            continue;
           }
+
           break;
         case 77:
-          if ((tag & 7) === 2) {
+          if (tag == 616) {
+            message.packedUint32.push(reader.uint32());
+            continue;
+          }
+
+          if (tag == 618) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedUint32.push(reader.uint32());
             }
-          } else {
-            message.packedUint32.push(reader.uint32());
+
+            continue;
           }
+
           break;
         case 78:
-          if ((tag & 7) === 2) {
+          if (tag == 624) {
+            message.packedUint64.push(longToNumber(reader.uint64() as Long));
+            continue;
+          }
+
+          if (tag == 626) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedUint64.push(longToNumber(reader.uint64() as Long));
             }
-          } else {
-            message.packedUint64.push(longToNumber(reader.uint64() as Long));
+
+            continue;
           }
+
           break;
         case 79:
-          if ((tag & 7) === 2) {
+          if (tag == 632) {
+            message.packedSint32.push(reader.sint32());
+            continue;
+          }
+
+          if (tag == 634) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedSint32.push(reader.sint32());
             }
-          } else {
-            message.packedSint32.push(reader.sint32());
+
+            continue;
           }
+
           break;
         case 80:
-          if ((tag & 7) === 2) {
+          if (tag == 640) {
+            message.packedSint64.push(longToNumber(reader.sint64() as Long));
+            continue;
+          }
+
+          if (tag == 642) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedSint64.push(longToNumber(reader.sint64() as Long));
             }
-          } else {
-            message.packedSint64.push(longToNumber(reader.sint64() as Long));
+
+            continue;
           }
+
           break;
         case 81:
-          if ((tag & 7) === 2) {
+          if (tag == 653) {
+            message.packedFixed32.push(reader.fixed32());
+            continue;
+          }
+
+          if (tag == 650) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedFixed32.push(reader.fixed32());
             }
-          } else {
-            message.packedFixed32.push(reader.fixed32());
+
+            continue;
           }
+
           break;
         case 82:
-          if ((tag & 7) === 2) {
+          if (tag == 657) {
+            message.packedFixed64.push(longToNumber(reader.fixed64() as Long));
+            continue;
+          }
+
+          if (tag == 658) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedFixed64.push(longToNumber(reader.fixed64() as Long));
             }
-          } else {
-            message.packedFixed64.push(longToNumber(reader.fixed64() as Long));
+
+            continue;
           }
+
           break;
         case 83:
-          if ((tag & 7) === 2) {
+          if (tag == 669) {
+            message.packedSfixed32.push(reader.sfixed32());
+            continue;
+          }
+
+          if (tag == 666) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedSfixed32.push(reader.sfixed32());
             }
-          } else {
-            message.packedSfixed32.push(reader.sfixed32());
+
+            continue;
           }
+
           break;
         case 84:
-          if ((tag & 7) === 2) {
+          if (tag == 673) {
+            message.packedSfixed64.push(longToNumber(reader.sfixed64() as Long));
+            continue;
+          }
+
+          if (tag == 674) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedSfixed64.push(longToNumber(reader.sfixed64() as Long));
             }
-          } else {
-            message.packedSfixed64.push(longToNumber(reader.sfixed64() as Long));
+
+            continue;
           }
+
           break;
         case 85:
-          if ((tag & 7) === 2) {
+          if (tag == 685) {
+            message.packedFloat.push(reader.float());
+            continue;
+          }
+
+          if (tag == 682) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedFloat.push(reader.float());
             }
-          } else {
-            message.packedFloat.push(reader.float());
+
+            continue;
           }
+
           break;
         case 86:
-          if ((tag & 7) === 2) {
+          if (tag == 689) {
+            message.packedDouble.push(reader.double());
+            continue;
+          }
+
+          if (tag == 690) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedDouble.push(reader.double());
             }
-          } else {
-            message.packedDouble.push(reader.double());
+
+            continue;
           }
+
           break;
         case 87:
-          if ((tag & 7) === 2) {
+          if (tag == 696) {
+            message.packedBool.push(reader.bool());
+            continue;
+          }
+
+          if (tag == 698) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedBool.push(reader.bool());
             }
-          } else {
-            message.packedBool.push(reader.bool());
+
+            continue;
           }
+
           break;
         case 88:
-          if ((tag & 7) === 2) {
+          if (tag == 704) {
+            message.packedNestedEnum.push(reader.int32() as any);
+            continue;
+          }
+
+          if (tag == 706) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedNestedEnum.push(reader.int32() as any);
             }
-          } else {
-            message.packedNestedEnum.push(reader.int32() as any);
+
+            continue;
           }
+
           break;
         case 89:
-          if ((tag & 7) === 2) {
+          if (tag == 712) {
+            message.unpackedInt32.push(reader.int32());
+            continue;
+          }
+
+          if (tag == 714) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedInt32.push(reader.int32());
             }
-          } else {
-            message.unpackedInt32.push(reader.int32());
+
+            continue;
           }
+
           break;
         case 90:
-          if ((tag & 7) === 2) {
+          if (tag == 720) {
+            message.unpackedInt64.push(longToNumber(reader.int64() as Long));
+            continue;
+          }
+
+          if (tag == 722) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedInt64.push(longToNumber(reader.int64() as Long));
             }
-          } else {
-            message.unpackedInt64.push(longToNumber(reader.int64() as Long));
+
+            continue;
           }
+
           break;
         case 91:
-          if ((tag & 7) === 2) {
+          if (tag == 728) {
+            message.unpackedUint32.push(reader.uint32());
+            continue;
+          }
+
+          if (tag == 730) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedUint32.push(reader.uint32());
             }
-          } else {
-            message.unpackedUint32.push(reader.uint32());
+
+            continue;
           }
+
           break;
         case 92:
-          if ((tag & 7) === 2) {
+          if (tag == 736) {
+            message.unpackedUint64.push(longToNumber(reader.uint64() as Long));
+            continue;
+          }
+
+          if (tag == 738) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedUint64.push(longToNumber(reader.uint64() as Long));
             }
-          } else {
-            message.unpackedUint64.push(longToNumber(reader.uint64() as Long));
+
+            continue;
           }
+
           break;
         case 93:
-          if ((tag & 7) === 2) {
+          if (tag == 744) {
+            message.unpackedSint32.push(reader.sint32());
+            continue;
+          }
+
+          if (tag == 746) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedSint32.push(reader.sint32());
             }
-          } else {
-            message.unpackedSint32.push(reader.sint32());
+
+            continue;
           }
+
           break;
         case 94:
-          if ((tag & 7) === 2) {
+          if (tag == 752) {
+            message.unpackedSint64.push(longToNumber(reader.sint64() as Long));
+            continue;
+          }
+
+          if (tag == 754) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedSint64.push(longToNumber(reader.sint64() as Long));
             }
-          } else {
-            message.unpackedSint64.push(longToNumber(reader.sint64() as Long));
+
+            continue;
           }
+
           break;
         case 95:
-          if ((tag & 7) === 2) {
+          if (tag == 765) {
+            message.unpackedFixed32.push(reader.fixed32());
+            continue;
+          }
+
+          if (tag == 762) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedFixed32.push(reader.fixed32());
             }
-          } else {
-            message.unpackedFixed32.push(reader.fixed32());
+
+            continue;
           }
+
           break;
         case 96:
-          if ((tag & 7) === 2) {
+          if (tag == 769) {
+            message.unpackedFixed64.push(longToNumber(reader.fixed64() as Long));
+            continue;
+          }
+
+          if (tag == 770) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedFixed64.push(longToNumber(reader.fixed64() as Long));
             }
-          } else {
-            message.unpackedFixed64.push(longToNumber(reader.fixed64() as Long));
+
+            continue;
           }
+
           break;
         case 97:
-          if ((tag & 7) === 2) {
+          if (tag == 781) {
+            message.unpackedSfixed32.push(reader.sfixed32());
+            continue;
+          }
+
+          if (tag == 778) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedSfixed32.push(reader.sfixed32());
             }
-          } else {
-            message.unpackedSfixed32.push(reader.sfixed32());
+
+            continue;
           }
+
           break;
         case 98:
-          if ((tag & 7) === 2) {
+          if (tag == 785) {
+            message.unpackedSfixed64.push(longToNumber(reader.sfixed64() as Long));
+            continue;
+          }
+
+          if (tag == 786) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedSfixed64.push(longToNumber(reader.sfixed64() as Long));
             }
-          } else {
-            message.unpackedSfixed64.push(longToNumber(reader.sfixed64() as Long));
+
+            continue;
           }
+
           break;
         case 99:
-          if ((tag & 7) === 2) {
+          if (tag == 797) {
+            message.unpackedFloat.push(reader.float());
+            continue;
+          }
+
+          if (tag == 794) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedFloat.push(reader.float());
             }
-          } else {
-            message.unpackedFloat.push(reader.float());
+
+            continue;
           }
+
           break;
         case 100:
-          if ((tag & 7) === 2) {
+          if (tag == 801) {
+            message.unpackedDouble.push(reader.double());
+            continue;
+          }
+
+          if (tag == 802) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedDouble.push(reader.double());
             }
-          } else {
-            message.unpackedDouble.push(reader.double());
+
+            continue;
           }
+
           break;
         case 101:
-          if ((tag & 7) === 2) {
+          if (tag == 808) {
+            message.unpackedBool.push(reader.bool());
+            continue;
+          }
+
+          if (tag == 810) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedBool.push(reader.bool());
             }
-          } else {
-            message.unpackedBool.push(reader.bool());
+
+            continue;
           }
+
           break;
         case 102:
-          if ((tag & 7) === 2) {
+          if (tag == 816) {
+            message.unpackedNestedEnum.push(reader.int32() as any);
+            continue;
+          }
+
+          if (tag == 818) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedNestedEnum.push(reader.int32() as any);
             }
-          } else {
-            message.unpackedNestedEnum.push(reader.int32() as any);
+
+            continue;
           }
+
           break;
         case 56:
+          if (tag != 450) {
+            break;
+          }
+
           const entry56 = TestAllTypesProto3_MapInt32Int32Entry.decode(reader, reader.uint32());
           if (entry56.value !== undefined) {
             message.mapInt32Int32.set(entry56.key, entry56.value);
           }
-          break;
+          continue;
         case 57:
+          if (tag != 458) {
+            break;
+          }
+
           const entry57 = TestAllTypesProto3_MapInt64Int64Entry.decode(reader, reader.uint32());
           if (entry57.value !== undefined) {
             message.mapInt64Int64.set(entry57.key, entry57.value);
           }
-          break;
+          continue;
         case 58:
+          if (tag != 466) {
+            break;
+          }
+
           const entry58 = TestAllTypesProto3_MapUint32Uint32Entry.decode(reader, reader.uint32());
           if (entry58.value !== undefined) {
             message.mapUint32Uint32.set(entry58.key, entry58.value);
           }
-          break;
+          continue;
         case 59:
+          if (tag != 474) {
+            break;
+          }
+
           const entry59 = TestAllTypesProto3_MapUint64Uint64Entry.decode(reader, reader.uint32());
           if (entry59.value !== undefined) {
             message.mapUint64Uint64.set(entry59.key, entry59.value);
           }
-          break;
+          continue;
         case 60:
+          if (tag != 482) {
+            break;
+          }
+
           const entry60 = TestAllTypesProto3_MapSint32Sint32Entry.decode(reader, reader.uint32());
           if (entry60.value !== undefined) {
             message.mapSint32Sint32.set(entry60.key, entry60.value);
           }
-          break;
+          continue;
         case 61:
+          if (tag != 490) {
+            break;
+          }
+
           const entry61 = TestAllTypesProto3_MapSint64Sint64Entry.decode(reader, reader.uint32());
           if (entry61.value !== undefined) {
             message.mapSint64Sint64.set(entry61.key, entry61.value);
           }
-          break;
+          continue;
         case 62:
+          if (tag != 498) {
+            break;
+          }
+
           const entry62 = TestAllTypesProto3_MapFixed32Fixed32Entry.decode(reader, reader.uint32());
           if (entry62.value !== undefined) {
             message.mapFixed32Fixed32.set(entry62.key, entry62.value);
           }
-          break;
+          continue;
         case 63:
+          if (tag != 506) {
+            break;
+          }
+
           const entry63 = TestAllTypesProto3_MapFixed64Fixed64Entry.decode(reader, reader.uint32());
           if (entry63.value !== undefined) {
             message.mapFixed64Fixed64.set(entry63.key, entry63.value);
           }
-          break;
+          continue;
         case 64:
+          if (tag != 514) {
+            break;
+          }
+
           const entry64 = TestAllTypesProto3_MapSfixed32Sfixed32Entry.decode(reader, reader.uint32());
           if (entry64.value !== undefined) {
             message.mapSfixed32Sfixed32.set(entry64.key, entry64.value);
           }
-          break;
+          continue;
         case 65:
+          if (tag != 522) {
+            break;
+          }
+
           const entry65 = TestAllTypesProto3_MapSfixed64Sfixed64Entry.decode(reader, reader.uint32());
           if (entry65.value !== undefined) {
             message.mapSfixed64Sfixed64.set(entry65.key, entry65.value);
           }
-          break;
+          continue;
         case 66:
+          if (tag != 530) {
+            break;
+          }
+
           const entry66 = TestAllTypesProto3_MapInt32FloatEntry.decode(reader, reader.uint32());
           if (entry66.value !== undefined) {
             message.mapInt32Float.set(entry66.key, entry66.value);
           }
-          break;
+          continue;
         case 67:
+          if (tag != 538) {
+            break;
+          }
+
           const entry67 = TestAllTypesProto3_MapInt32DoubleEntry.decode(reader, reader.uint32());
           if (entry67.value !== undefined) {
             message.mapInt32Double.set(entry67.key, entry67.value);
           }
-          break;
+          continue;
         case 68:
+          if (tag != 546) {
+            break;
+          }
+
           const entry68 = TestAllTypesProto3_MapBoolBoolEntry.decode(reader, reader.uint32());
           if (entry68.value !== undefined) {
             message.mapBoolBool.set(entry68.key, entry68.value);
           }
-          break;
+          continue;
         case 69:
+          if (tag != 554) {
+            break;
+          }
+
           const entry69 = TestAllTypesProto3_MapStringStringEntry.decode(reader, reader.uint32());
           if (entry69.value !== undefined) {
             message.mapStringString.set(entry69.key, entry69.value);
           }
-          break;
+          continue;
         case 70:
+          if (tag != 562) {
+            break;
+          }
+
           const entry70 = TestAllTypesProto3_MapStringBytesEntry.decode(reader, reader.uint32());
           if (entry70.value !== undefined) {
             message.mapStringBytes.set(entry70.key, entry70.value);
           }
-          break;
+          continue;
         case 71:
+          if (tag != 570) {
+            break;
+          }
+
           const entry71 = TestAllTypesProto3_MapStringNestedMessageEntry.decode(reader, reader.uint32());
           if (entry71.value !== undefined) {
             message.mapStringNestedMessage.set(entry71.key, entry71.value);
           }
-          break;
+          continue;
         case 72:
+          if (tag != 578) {
+            break;
+          }
+
           const entry72 = TestAllTypesProto3_MapStringForeignMessageEntry.decode(reader, reader.uint32());
           if (entry72.value !== undefined) {
             message.mapStringForeignMessage.set(entry72.key, entry72.value);
           }
-          break;
+          continue;
         case 73:
+          if (tag != 586) {
+            break;
+          }
+
           const entry73 = TestAllTypesProto3_MapStringNestedEnumEntry.decode(reader, reader.uint32());
           if (entry73.value !== undefined) {
             message.mapStringNestedEnum.set(entry73.key, entry73.value);
           }
-          break;
+          continue;
         case 74:
+          if (tag != 594) {
+            break;
+          }
+
           const entry74 = TestAllTypesProto3_MapStringForeignEnumEntry.decode(reader, reader.uint32());
           if (entry74.value !== undefined) {
             message.mapStringForeignEnum.set(entry74.key, entry74.value);
           }
-          break;
+          continue;
         case 111:
+          if (tag != 888) {
+            break;
+          }
+
           message.oneofField = { $case: "oneofUint32", oneofUint32: reader.uint32() };
-          break;
+          continue;
         case 112:
+          if (tag != 898) {
+            break;
+          }
+
           message.oneofField = {
             $case: "oneofNestedMessage",
             oneofNestedMessage: TestAllTypesProto3_NestedMessage.decode(reader, reader.uint32()),
           };
-          break;
+          continue;
         case 113:
+          if (tag != 906) {
+            break;
+          }
+
           message.oneofField = { $case: "oneofString", oneofString: reader.string() };
-          break;
+          continue;
         case 114:
+          if (tag != 914) {
+            break;
+          }
+
           message.oneofField = { $case: "oneofBytes", oneofBytes: reader.bytes() };
-          break;
+          continue;
         case 115:
+          if (tag != 920) {
+            break;
+          }
+
           message.oneofField = { $case: "oneofBool", oneofBool: reader.bool() };
-          break;
+          continue;
         case 116:
+          if (tag != 928) {
+            break;
+          }
+
           message.oneofField = { $case: "oneofUint64", oneofUint64: longToNumber(reader.uint64() as Long) };
-          break;
+          continue;
         case 117:
+          if (tag != 941) {
+            break;
+          }
+
           message.oneofField = { $case: "oneofFloat", oneofFloat: reader.float() };
-          break;
+          continue;
         case 118:
+          if (tag != 945) {
+            break;
+          }
+
           message.oneofField = { $case: "oneofDouble", oneofDouble: reader.double() };
-          break;
+          continue;
         case 119:
+          if (tag != 952) {
+            break;
+          }
+
           message.oneofField = { $case: "oneofEnum", oneofEnum: reader.int32() as any };
-          break;
+          continue;
         case 120:
+          if (tag != 960) {
+            break;
+          }
+
           message.oneofField = { $case: "oneofNullValue", oneofNullValue: reader.int32() as any };
-          break;
+          continue;
         case 201:
+          if (tag != 1610) {
+            break;
+          }
+
           message.optionalBoolWrapper = BoolValue.decode(reader, reader.uint32()).value;
-          break;
+          continue;
         case 202:
+          if (tag != 1618) {
+            break;
+          }
+
           message.optionalInt32Wrapper = Int32Value.decode(reader, reader.uint32()).value;
-          break;
+          continue;
         case 203:
+          if (tag != 1626) {
+            break;
+          }
+
           message.optionalInt64Wrapper = Int64Value.decode(reader, reader.uint32()).value;
-          break;
+          continue;
         case 204:
+          if (tag != 1634) {
+            break;
+          }
+
           message.optionalUint32Wrapper = UInt32Value.decode(reader, reader.uint32()).value;
-          break;
+          continue;
         case 205:
+          if (tag != 1642) {
+            break;
+          }
+
           message.optionalUint64Wrapper = UInt64Value.decode(reader, reader.uint32()).value;
-          break;
+          continue;
         case 206:
+          if (tag != 1650) {
+            break;
+          }
+
           message.optionalFloatWrapper = FloatValue.decode(reader, reader.uint32()).value;
-          break;
+          continue;
         case 207:
+          if (tag != 1658) {
+            break;
+          }
+
           message.optionalDoubleWrapper = DoubleValue.decode(reader, reader.uint32()).value;
-          break;
+          continue;
         case 208:
+          if (tag != 1666) {
+            break;
+          }
+
           message.optionalStringWrapper = StringValue.decode(reader, reader.uint32()).value;
-          break;
+          continue;
         case 209:
+          if (tag != 1674) {
+            break;
+          }
+
           message.optionalBytesWrapper = BytesValue.decode(reader, reader.uint32()).value;
-          break;
+          continue;
         case 211:
+          if (tag != 1690) {
+            break;
+          }
+
           message.repeatedBoolWrapper.push(BoolValue.decode(reader, reader.uint32()).value);
-          break;
+          continue;
         case 212:
+          if (tag != 1698) {
+            break;
+          }
+
           message.repeatedInt32Wrapper.push(Int32Value.decode(reader, reader.uint32()).value);
-          break;
+          continue;
         case 213:
+          if (tag != 1706) {
+            break;
+          }
+
           message.repeatedInt64Wrapper.push(Int64Value.decode(reader, reader.uint32()).value);
-          break;
+          continue;
         case 214:
+          if (tag != 1714) {
+            break;
+          }
+
           message.repeatedUint32Wrapper.push(UInt32Value.decode(reader, reader.uint32()).value);
-          break;
+          continue;
         case 215:
+          if (tag != 1722) {
+            break;
+          }
+
           message.repeatedUint64Wrapper.push(UInt64Value.decode(reader, reader.uint32()).value);
-          break;
+          continue;
         case 216:
+          if (tag != 1730) {
+            break;
+          }
+
           message.repeatedFloatWrapper.push(FloatValue.decode(reader, reader.uint32()).value);
-          break;
+          continue;
         case 217:
+          if (tag != 1738) {
+            break;
+          }
+
           message.repeatedDoubleWrapper.push(DoubleValue.decode(reader, reader.uint32()).value);
-          break;
+          continue;
         case 218:
+          if (tag != 1746) {
+            break;
+          }
+
           message.repeatedStringWrapper.push(StringValue.decode(reader, reader.uint32()).value);
-          break;
+          continue;
         case 219:
+          if (tag != 1754) {
+            break;
+          }
+
           message.repeatedBytesWrapper.push(BytesValue.decode(reader, reader.uint32()).value);
-          break;
+          continue;
         case 301:
+          if (tag != 2410) {
+            break;
+          }
+
           message.optionalDuration = Duration.decode(reader, reader.uint32());
-          break;
+          continue;
         case 302:
+          if (tag != 2418) {
+            break;
+          }
+
           message.optionalTimestamp = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
-          break;
+          continue;
         case 303:
+          if (tag != 2426) {
+            break;
+          }
+
           message.optionalFieldMask = FieldMask.unwrap(FieldMask.decode(reader, reader.uint32()));
-          break;
+          continue;
         case 304:
+          if (tag != 2434) {
+            break;
+          }
+
           message.optionalStruct = Struct.unwrap(Struct.decode(reader, reader.uint32()));
-          break;
+          continue;
         case 305:
+          if (tag != 2442) {
+            break;
+          }
+
           message.optionalAny = Any.decode(reader, reader.uint32());
-          break;
+          continue;
         case 306:
+          if (tag != 2450) {
+            break;
+          }
+
           message.optionalValue = Value.unwrap(Value.decode(reader, reader.uint32()));
-          break;
+          continue;
         case 307:
+          if (tag != 2456) {
+            break;
+          }
+
           message.optionalNullValue = reader.int32() as any;
-          break;
+          continue;
         case 311:
+          if (tag != 2490) {
+            break;
+          }
+
           message.repeatedDuration.push(Duration.decode(reader, reader.uint32()));
-          break;
+          continue;
         case 312:
+          if (tag != 2498) {
+            break;
+          }
+
           message.repeatedTimestamp.push(fromTimestamp(Timestamp.decode(reader, reader.uint32())));
-          break;
+          continue;
         case 313:
+          if (tag != 2506) {
+            break;
+          }
+
           message.repeatedFieldmask.push(FieldMask.unwrap(FieldMask.decode(reader, reader.uint32())));
-          break;
+          continue;
         case 324:
+          if (tag != 2594) {
+            break;
+          }
+
           message.repeatedStruct.push(Struct.unwrap(Struct.decode(reader, reader.uint32())));
-          break;
+          continue;
         case 315:
+          if (tag != 2522) {
+            break;
+          }
+
           message.repeatedAny.push(Any.decode(reader, reader.uint32()));
-          break;
+          continue;
         case 316:
+          if (tag != 2530) {
+            break;
+          }
+
           message.repeatedValue.push(Value.unwrap(Value.decode(reader, reader.uint32())));
-          break;
+          continue;
         case 317:
+          if (tag != 2538) {
+            break;
+          }
+
           message.repeatedListValue.push(ListValue.unwrap(ListValue.decode(reader, reader.uint32())));
-          break;
+          continue;
         case 401:
+          if (tag != 3208) {
+            break;
+          }
+
           message.fieldname1 = reader.int32();
-          break;
+          continue;
         case 402:
+          if (tag != 3216) {
+            break;
+          }
+
           message.fieldName2 = reader.int32();
-          break;
+          continue;
         case 403:
+          if (tag != 3224) {
+            break;
+          }
+
           message.FieldName3 = reader.int32();
-          break;
+          continue;
         case 404:
+          if (tag != 3232) {
+            break;
+          }
+
           message.fieldName4 = reader.int32();
-          break;
+          continue;
         case 405:
+          if (tag != 3240) {
+            break;
+          }
+
           message.field0name5 = reader.int32();
-          break;
+          continue;
         case 406:
+          if (tag != 3248) {
+            break;
+          }
+
           message.field0Name6 = reader.int32();
-          break;
+          continue;
         case 407:
+          if (tag != 3256) {
+            break;
+          }
+
           message.fieldName7 = reader.int32();
-          break;
+          continue;
         case 408:
+          if (tag != 3264) {
+            break;
+          }
+
           message.FieldName8 = reader.int32();
-          break;
+          continue;
         case 409:
+          if (tag != 3272) {
+            break;
+          }
+
           message.fieldName9 = reader.int32();
-          break;
+          continue;
         case 410:
+          if (tag != 3280) {
+            break;
+          }
+
           message.FieldName10 = reader.int32();
-          break;
+          continue;
         case 411:
+          if (tag != 3288) {
+            break;
+          }
+
           message.fieldName11 = reader.int32();
-          break;
+          continue;
         case 412:
+          if (tag != 3296) {
+            break;
+          }
+
           message.FIELDName12 = reader.int32();
-          break;
+          continue;
         case 413:
+          if (tag != 3304) {
+            break;
+          }
+
           message.FieldName13 = reader.int32();
-          break;
+          continue;
         case 414:
+          if (tag != 3312) {
+            break;
+          }
+
           message.FieldName14 = reader.int32();
-          break;
+          continue;
         case 415:
+          if (tag != 3320) {
+            break;
+          }
+
           message.fieldName15 = reader.int32();
-          break;
+          continue;
         case 416:
+          if (tag != 3328) {
+            break;
+          }
+
           message.fieldName16 = reader.int32();
-          break;
+          continue;
         case 417:
+          if (tag != 3336) {
+            break;
+          }
+
           message.fieldName17 = reader.int32();
-          break;
+          continue;
         case 418:
+          if (tag != 3344) {
+            break;
+          }
+
           message.FieldName18 = reader.int32();
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
+          continue;
       }
+      if ((tag & 7) == 4 || tag == 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
     }
     return message;
   },
@@ -2967,7 +3658,7 @@ export const TestAllTypesProto3 = {
       const m = new Map();
       (object.mapInt32Int32 as Map<number, number> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(Number(key), Number(value));
+          m.set(key, Number(value));
         }
       });
       return m;
@@ -2976,7 +3667,7 @@ export const TestAllTypesProto3 = {
       const m = new Map();
       (object.mapInt64Int64 as Map<number, number> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(Number(key), Number(value));
+          m.set(key, Number(value));
         }
       });
       return m;
@@ -2985,7 +3676,7 @@ export const TestAllTypesProto3 = {
       const m = new Map();
       (object.mapUint32Uint32 as Map<number, number> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(Number(key), Number(value));
+          m.set(key, Number(value));
         }
       });
       return m;
@@ -2994,7 +3685,7 @@ export const TestAllTypesProto3 = {
       const m = new Map();
       (object.mapUint64Uint64 as Map<number, number> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(Number(key), Number(value));
+          m.set(key, Number(value));
         }
       });
       return m;
@@ -3003,7 +3694,7 @@ export const TestAllTypesProto3 = {
       const m = new Map();
       (object.mapSint32Sint32 as Map<number, number> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(Number(key), Number(value));
+          m.set(key, Number(value));
         }
       });
       return m;
@@ -3012,7 +3703,7 @@ export const TestAllTypesProto3 = {
       const m = new Map();
       (object.mapSint64Sint64 as Map<number, number> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(Number(key), Number(value));
+          m.set(key, Number(value));
         }
       });
       return m;
@@ -3021,7 +3712,7 @@ export const TestAllTypesProto3 = {
       const m = new Map();
       (object.mapFixed32Fixed32 as Map<number, number> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(Number(key), Number(value));
+          m.set(key, Number(value));
         }
       });
       return m;
@@ -3030,7 +3721,7 @@ export const TestAllTypesProto3 = {
       const m = new Map();
       (object.mapFixed64Fixed64 as Map<number, number> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(Number(key), Number(value));
+          m.set(key, Number(value));
         }
       });
       return m;
@@ -3039,7 +3730,7 @@ export const TestAllTypesProto3 = {
       const m = new Map();
       (object.mapSfixed32Sfixed32 as Map<number, number> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(Number(key), Number(value));
+          m.set(key, Number(value));
         }
       });
       return m;
@@ -3048,7 +3739,7 @@ export const TestAllTypesProto3 = {
       const m = new Map();
       (object.mapSfixed64Sfixed64 as Map<number, number> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(Number(key), Number(value));
+          m.set(key, Number(value));
         }
       });
       return m;
@@ -3057,7 +3748,7 @@ export const TestAllTypesProto3 = {
       const m = new Map();
       (object.mapInt32Float as Map<number, number> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(Number(key), Number(value));
+          m.set(key, Number(value));
         }
       });
       return m;
@@ -3066,7 +3757,7 @@ export const TestAllTypesProto3 = {
       const m = new Map();
       (object.mapInt32Double as Map<number, number> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(Number(key), Number(value));
+          m.set(key, Number(value));
         }
       });
       return m;
@@ -3075,7 +3766,7 @@ export const TestAllTypesProto3 = {
       const m = new Map();
       (object.mapBoolBool as Map<boolean, boolean> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(Number(key), Boolean(value));
+          m.set(key, Boolean(value));
         }
       });
       return m;
@@ -3283,22 +3974,31 @@ export const TestAllTypesProto3_NestedMessage = {
   },
 
   decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_NestedMessage {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_NestedMessage();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
+          if (tag != 8) {
+            break;
+          }
+
           message.a = reader.int32();
-          break;
+          continue;
         case 2:
+          if (tag != 18) {
+            break;
+          }
+
           message.corecursive = TestAllTypesProto3.decode(reader, reader.uint32());
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
+          continue;
       }
+      if ((tag & 7) == 4 || tag == 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
     }
     return message;
   },
@@ -3352,22 +4052,31 @@ export const TestAllTypesProto3_MapInt32Int32Entry = {
   },
 
   decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapInt32Int32Entry {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapInt32Int32Entry();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
+          if (tag != 8) {
+            break;
+          }
+
           message.key = reader.int32();
-          break;
+          continue;
         case 2:
+          if (tag != 16) {
+            break;
+          }
+
           message.value = reader.int32();
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
+          continue;
       }
+      if ((tag & 7) == 4 || tag == 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
     }
     return message;
   },
@@ -3415,22 +4124,31 @@ export const TestAllTypesProto3_MapInt64Int64Entry = {
   },
 
   decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapInt64Int64Entry {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapInt64Int64Entry();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
+          if (tag != 8) {
+            break;
+          }
+
           message.key = longToNumber(reader.int64() as Long);
-          break;
+          continue;
         case 2:
+          if (tag != 16) {
+            break;
+          }
+
           message.value = longToNumber(reader.int64() as Long);
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
+          continue;
       }
+      if ((tag & 7) == 4 || tag == 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
     }
     return message;
   },
@@ -3478,22 +4196,31 @@ export const TestAllTypesProto3_MapUint32Uint32Entry = {
   },
 
   decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapUint32Uint32Entry {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapUint32Uint32Entry();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
+          if (tag != 8) {
+            break;
+          }
+
           message.key = reader.uint32();
-          break;
+          continue;
         case 2:
+          if (tag != 16) {
+            break;
+          }
+
           message.value = reader.uint32();
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
+          continue;
       }
+      if ((tag & 7) == 4 || tag == 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
     }
     return message;
   },
@@ -3541,22 +4268,31 @@ export const TestAllTypesProto3_MapUint64Uint64Entry = {
   },
 
   decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapUint64Uint64Entry {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapUint64Uint64Entry();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
+          if (tag != 8) {
+            break;
+          }
+
           message.key = longToNumber(reader.uint64() as Long);
-          break;
+          continue;
         case 2:
+          if (tag != 16) {
+            break;
+          }
+
           message.value = longToNumber(reader.uint64() as Long);
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
+          continue;
       }
+      if ((tag & 7) == 4 || tag == 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
     }
     return message;
   },
@@ -3604,22 +4340,31 @@ export const TestAllTypesProto3_MapSint32Sint32Entry = {
   },
 
   decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapSint32Sint32Entry {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapSint32Sint32Entry();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
+          if (tag != 8) {
+            break;
+          }
+
           message.key = reader.sint32();
-          break;
+          continue;
         case 2:
+          if (tag != 16) {
+            break;
+          }
+
           message.value = reader.sint32();
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
+          continue;
       }
+      if ((tag & 7) == 4 || tag == 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
     }
     return message;
   },
@@ -3667,22 +4412,31 @@ export const TestAllTypesProto3_MapSint64Sint64Entry = {
   },
 
   decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapSint64Sint64Entry {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapSint64Sint64Entry();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
+          if (tag != 8) {
+            break;
+          }
+
           message.key = longToNumber(reader.sint64() as Long);
-          break;
+          continue;
         case 2:
+          if (tag != 16) {
+            break;
+          }
+
           message.value = longToNumber(reader.sint64() as Long);
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
+          continue;
       }
+      if ((tag & 7) == 4 || tag == 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
     }
     return message;
   },
@@ -3730,22 +4484,31 @@ export const TestAllTypesProto3_MapFixed32Fixed32Entry = {
   },
 
   decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapFixed32Fixed32Entry {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapFixed32Fixed32Entry();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
+          if (tag != 13) {
+            break;
+          }
+
           message.key = reader.fixed32();
-          break;
+          continue;
         case 2:
+          if (tag != 21) {
+            break;
+          }
+
           message.value = reader.fixed32();
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
+          continue;
       }
+      if ((tag & 7) == 4 || tag == 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
     }
     return message;
   },
@@ -3793,22 +4556,31 @@ export const TestAllTypesProto3_MapFixed64Fixed64Entry = {
   },
 
   decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapFixed64Fixed64Entry {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapFixed64Fixed64Entry();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
+          if (tag != 9) {
+            break;
+          }
+
           message.key = longToNumber(reader.fixed64() as Long);
-          break;
+          continue;
         case 2:
+          if (tag != 17) {
+            break;
+          }
+
           message.value = longToNumber(reader.fixed64() as Long);
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
+          continue;
       }
+      if ((tag & 7) == 4 || tag == 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
     }
     return message;
   },
@@ -3856,22 +4628,31 @@ export const TestAllTypesProto3_MapSfixed32Sfixed32Entry = {
   },
 
   decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapSfixed32Sfixed32Entry {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapSfixed32Sfixed32Entry();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
+          if (tag != 13) {
+            break;
+          }
+
           message.key = reader.sfixed32();
-          break;
+          continue;
         case 2:
+          if (tag != 21) {
+            break;
+          }
+
           message.value = reader.sfixed32();
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
+          continue;
       }
+      if ((tag & 7) == 4 || tag == 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
     }
     return message;
   },
@@ -3919,22 +4700,31 @@ export const TestAllTypesProto3_MapSfixed64Sfixed64Entry = {
   },
 
   decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapSfixed64Sfixed64Entry {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapSfixed64Sfixed64Entry();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
+          if (tag != 9) {
+            break;
+          }
+
           message.key = longToNumber(reader.sfixed64() as Long);
-          break;
+          continue;
         case 2:
+          if (tag != 17) {
+            break;
+          }
+
           message.value = longToNumber(reader.sfixed64() as Long);
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
+          continue;
       }
+      if ((tag & 7) == 4 || tag == 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
     }
     return message;
   },
@@ -3982,22 +4772,31 @@ export const TestAllTypesProto3_MapInt32FloatEntry = {
   },
 
   decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapInt32FloatEntry {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapInt32FloatEntry();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
+          if (tag != 8) {
+            break;
+          }
+
           message.key = reader.int32();
-          break;
+          continue;
         case 2:
+          if (tag != 21) {
+            break;
+          }
+
           message.value = reader.float();
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
+          continue;
       }
+      if ((tag & 7) == 4 || tag == 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
     }
     return message;
   },
@@ -4045,22 +4844,31 @@ export const TestAllTypesProto3_MapInt32DoubleEntry = {
   },
 
   decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapInt32DoubleEntry {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapInt32DoubleEntry();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
+          if (tag != 8) {
+            break;
+          }
+
           message.key = reader.int32();
-          break;
+          continue;
         case 2:
+          if (tag != 17) {
+            break;
+          }
+
           message.value = reader.double();
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
+          continue;
       }
+      if ((tag & 7) == 4 || tag == 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
     }
     return message;
   },
@@ -4108,22 +4916,31 @@ export const TestAllTypesProto3_MapBoolBoolEntry = {
   },
 
   decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapBoolBoolEntry {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapBoolBoolEntry();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
+          if (tag != 8) {
+            break;
+          }
+
           message.key = reader.bool();
-          break;
+          continue;
         case 2:
+          if (tag != 16) {
+            break;
+          }
+
           message.value = reader.bool();
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
+          continue;
       }
+      if ((tag & 7) == 4 || tag == 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
     }
     return message;
   },
@@ -4174,22 +4991,31 @@ export const TestAllTypesProto3_MapStringStringEntry = {
   },
 
   decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapStringStringEntry {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapStringStringEntry();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
+          if (tag != 10) {
+            break;
+          }
+
           message.key = reader.string();
-          break;
+          continue;
         case 2:
+          if (tag != 18) {
+            break;
+          }
+
           message.value = reader.string();
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
+          continue;
       }
+      if ((tag & 7) == 4 || tag == 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
     }
     return message;
   },
@@ -4237,22 +5063,31 @@ export const TestAllTypesProto3_MapStringBytesEntry = {
   },
 
   decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapStringBytesEntry {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapStringBytesEntry();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
+          if (tag != 10) {
+            break;
+          }
+
           message.key = reader.string();
-          break;
+          continue;
         case 2:
+          if (tag != 18) {
+            break;
+          }
+
           message.value = reader.bytes();
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
+          continue;
       }
+      if ((tag & 7) == 4 || tag == 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
     }
     return message;
   },
@@ -4307,22 +5142,31 @@ export const TestAllTypesProto3_MapStringNestedMessageEntry = {
   },
 
   decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapStringNestedMessageEntry {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapStringNestedMessageEntry();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
+          if (tag != 10) {
+            break;
+          }
+
           message.key = reader.string();
-          break;
+          continue;
         case 2:
+          if (tag != 18) {
+            break;
+          }
+
           message.value = TestAllTypesProto3_NestedMessage.decode(reader, reader.uint32());
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
+          continue;
       }
+      if ((tag & 7) == 4 || tag == 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
     }
     return message;
   },
@@ -4379,22 +5223,31 @@ export const TestAllTypesProto3_MapStringForeignMessageEntry = {
   },
 
   decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapStringForeignMessageEntry {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapStringForeignMessageEntry();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
+          if (tag != 10) {
+            break;
+          }
+
           message.key = reader.string();
-          break;
+          continue;
         case 2:
+          if (tag != 18) {
+            break;
+          }
+
           message.value = ForeignMessage.decode(reader, reader.uint32());
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
+          continue;
       }
+      if ((tag & 7) == 4 || tag == 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
     }
     return message;
   },
@@ -4447,22 +5300,31 @@ export const TestAllTypesProto3_MapStringNestedEnumEntry = {
   },
 
   decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapStringNestedEnumEntry {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapStringNestedEnumEntry();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
+          if (tag != 10) {
+            break;
+          }
+
           message.key = reader.string();
-          break;
+          continue;
         case 2:
+          if (tag != 16) {
+            break;
+          }
+
           message.value = reader.int32() as any;
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
+          continue;
       }
+      if ((tag & 7) == 4 || tag == 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
     }
     return message;
   },
@@ -4513,22 +5375,31 @@ export const TestAllTypesProto3_MapStringForeignEnumEntry = {
   },
 
   decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto3_MapStringForeignEnumEntry {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseTestAllTypesProto3_MapStringForeignEnumEntry();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
+          if (tag != 10) {
+            break;
+          }
+
           message.key = reader.string();
-          break;
+          continue;
         case 2:
+          if (tag != 16) {
+            break;
+          }
+
           message.value = reader.int32() as any;
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
+          continue;
       }
+      if ((tag & 7) == 4 || tag == 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
     }
     return message;
   },
@@ -4576,19 +5447,24 @@ export const ForeignMessage = {
   },
 
   decode(input: _m0.Reader | Uint8Array, length?: number): ForeignMessage {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseForeignMessage();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
+          if (tag != 8) {
+            break;
+          }
+
           message.c = reader.int32();
-          break;
-        default:
-          reader.skipType(tag & 7);
-          break;
+          continue;
       }
+      if ((tag & 7) == 4 || tag == 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
     }
     return message;
   },
@@ -4624,16 +5500,17 @@ export const NullHypothesisProto3 = {
   },
 
   decode(input: _m0.Reader | Uint8Array, length?: number): NullHypothesisProto3 {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseNullHypothesisProto3();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
-        default:
-          reader.skipType(tag & 7);
-          break;
       }
+      if ((tag & 7) == 4 || tag == 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
     }
     return message;
   },
@@ -4667,16 +5544,17 @@ export const EnumOnlyProto3 = {
   },
 
   decode(input: _m0.Reader | Uint8Array, length?: number): EnumOnlyProto3 {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEnumOnlyProto3();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
-        default:
-          reader.skipType(tag & 7);
-          break;
       }
+      if ((tag & 7) == 4 || tag == 0) {
+        break;
+      }
+      reader.skipType(tag & 7);
     }
     return message;
   },
