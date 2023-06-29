@@ -43,6 +43,7 @@ test: $(BIN)/conformance_test_runner  ## Run conformance tests
 	cd impl/protobuf-es;     PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
 	cd impl/protobuf-ts;     PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
 	cd impl/protoc-gen-ts;   PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
+	cd impl/protoscript;     PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
 	cd impl/baseline;        PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
 	node report.js
 
@@ -54,6 +55,7 @@ testci: ## Run conformance tests in CI
 	cd impl/protobuf-es;     PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
 	cd impl/protobuf-ts;     PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
 	cd impl/protoc-gen-ts;   PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
+	cd impl/protoscript;     PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
 	cd impl/baseline;        PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
 	node report.js
 
