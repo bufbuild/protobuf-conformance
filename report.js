@@ -22,6 +22,7 @@ const protobufJs = countFailures("impl/protobuf.js/failing_tests.txt");
 const protobufTs = countFailures("impl/protobuf-ts/failing_tests.txt");
 const tsProto = countFailures("impl/ts-proto/failing_tests.txt");
 const protocGenTs = countFailures("impl/protoc-gen-ts/failing_tests.txt");
+const protoscript = countFailures("impl/protoscript/failing_tests.txt");
 
 const percentages = (property) => (failures, base) => {
   const total = base[property];
@@ -51,6 +52,7 @@ const table = `
 |-----------------------------------------|:------------------:|:------------------:|:------------------:|:-------------------------------------:|:----------------------------------------:|
 | [Protobuf-ES](impl/protobuf-es)         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | ${required(protobufEs, baseline)}     | ${recommended(protobufEs, baseline)}     |
 | [protobuf-ts](impl/protobuf-ts)         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | ${required(protobufTs, baseline)}     | ${recommended(protobufTs, baseline)}     |
+| [protoscript](impl/protoscript)         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | ${required(protoscript, baseline)}    | ${recommended(protoscript, baseline)}    |
 | [google-protobuf](impl/google-protobuf) | :heavy_check_mark: | :x:                | :heavy_check_mark: | ${required(googleProtobuf, baseline)} | ${recommended(googleProtobuf, baseline)} |
 | [protobuf.js](impl/protobuf.js)         | :heavy_check_mark: | :heavy_check_mark: | :x:                | ${required(protobufJs, baseline)}     | ${recommended(protobufJs, baseline)}     |
 | [protoc-gen-ts](impl/protoc-gen-ts)     | :x:                | :heavy_check_mark: | :heavy_check_mark: | ${required(protocGenTs, baseline)}    | ${recommended(protocGenTs, baseline)}    |
