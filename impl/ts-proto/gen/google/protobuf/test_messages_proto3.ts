@@ -1181,173 +1181,174 @@ export const TestAllTypesProto3 = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          if (tag != 8) {
+          if (tag !== 8) {
             break;
           }
 
           message.optionalInt32 = reader.int32();
           continue;
         case 2:
-          if (tag != 16) {
+          if (tag !== 16) {
             break;
           }
 
           message.optionalInt64 = longToNumber(reader.int64() as Long);
           continue;
         case 3:
-          if (tag != 24) {
+          if (tag !== 24) {
             break;
           }
 
           message.optionalUint32 = reader.uint32();
           continue;
         case 4:
-          if (tag != 32) {
+          if (tag !== 32) {
             break;
           }
 
           message.optionalUint64 = longToNumber(reader.uint64() as Long);
           continue;
         case 5:
-          if (tag != 40) {
+          if (tag !== 40) {
             break;
           }
 
           message.optionalSint32 = reader.sint32();
           continue;
         case 6:
-          if (tag != 48) {
+          if (tag !== 48) {
             break;
           }
 
           message.optionalSint64 = longToNumber(reader.sint64() as Long);
           continue;
         case 7:
-          if (tag != 61) {
+          if (tag !== 61) {
             break;
           }
 
           message.optionalFixed32 = reader.fixed32();
           continue;
         case 8:
-          if (tag != 65) {
+          if (tag !== 65) {
             break;
           }
 
           message.optionalFixed64 = longToNumber(reader.fixed64() as Long);
           continue;
         case 9:
-          if (tag != 77) {
+          if (tag !== 77) {
             break;
           }
 
           message.optionalSfixed32 = reader.sfixed32();
           continue;
         case 10:
-          if (tag != 81) {
+          if (tag !== 81) {
             break;
           }
 
           message.optionalSfixed64 = longToNumber(reader.sfixed64() as Long);
           continue;
         case 11:
-          if (tag != 93) {
+          if (tag !== 93) {
             break;
           }
 
           message.optionalFloat = reader.float();
           continue;
         case 12:
-          if (tag != 97) {
+          if (tag !== 97) {
             break;
           }
 
           message.optionalDouble = reader.double();
           continue;
         case 13:
-          if (tag != 104) {
+          if (tag !== 104) {
             break;
           }
 
           message.optionalBool = reader.bool();
           continue;
         case 14:
-          if (tag != 114) {
+          if (tag !== 114) {
             break;
           }
 
           message.optionalString = reader.string();
           continue;
         case 15:
-          if (tag != 122) {
+          if (tag !== 122) {
             break;
           }
 
           message.optionalBytes = reader.bytes();
           continue;
         case 18:
-          if (tag != 146) {
+          if (tag !== 146) {
             break;
           }
 
           message.optionalNestedMessage = TestAllTypesProto3_NestedMessage.decode(reader, reader.uint32());
           continue;
         case 19:
-          if (tag != 154) {
+          if (tag !== 154) {
             break;
           }
 
           message.optionalForeignMessage = ForeignMessage.decode(reader, reader.uint32());
           continue;
         case 21:
-          if (tag != 168) {
+          if (tag !== 168) {
             break;
           }
 
           message.optionalNestedEnum = reader.int32() as any;
           continue;
         case 22:
-          if (tag != 176) {
+          if (tag !== 176) {
             break;
           }
 
           message.optionalForeignEnum = reader.int32() as any;
           continue;
         case 23:
-          if (tag != 184) {
+          if (tag !== 184) {
             break;
           }
 
           message.optionalAliasedEnum = reader.int32() as any;
           continue;
         case 24:
-          if (tag != 194) {
+          if (tag !== 194) {
             break;
           }
 
           message.optionalStringPiece = reader.string();
           continue;
         case 25:
-          if (tag != 202) {
+          if (tag !== 202) {
             break;
           }
 
           message.optionalCord = reader.string();
           continue;
         case 27:
-          if (tag != 218) {
+          if (tag !== 218) {
             break;
           }
 
           message.recursiveMessage = TestAllTypesProto3.decode(reader, reader.uint32());
           continue;
         case 31:
-          if (tag == 248) {
+          if (tag === 248) {
             message.repeatedInt32.push(reader.int32());
+
             continue;
           }
 
-          if (tag == 250) {
+          if (tag === 250) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedInt32.push(reader.int32());
@@ -1358,12 +1359,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 32:
-          if (tag == 256) {
+          if (tag === 256) {
             message.repeatedInt64.push(longToNumber(reader.int64() as Long));
+
             continue;
           }
 
-          if (tag == 258) {
+          if (tag === 258) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedInt64.push(longToNumber(reader.int64() as Long));
@@ -1374,12 +1376,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 33:
-          if (tag == 264) {
+          if (tag === 264) {
             message.repeatedUint32.push(reader.uint32());
+
             continue;
           }
 
-          if (tag == 266) {
+          if (tag === 266) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedUint32.push(reader.uint32());
@@ -1390,12 +1393,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 34:
-          if (tag == 272) {
+          if (tag === 272) {
             message.repeatedUint64.push(longToNumber(reader.uint64() as Long));
+
             continue;
           }
 
-          if (tag == 274) {
+          if (tag === 274) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedUint64.push(longToNumber(reader.uint64() as Long));
@@ -1406,12 +1410,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 35:
-          if (tag == 280) {
+          if (tag === 280) {
             message.repeatedSint32.push(reader.sint32());
+
             continue;
           }
 
-          if (tag == 282) {
+          if (tag === 282) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedSint32.push(reader.sint32());
@@ -1422,12 +1427,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 36:
-          if (tag == 288) {
+          if (tag === 288) {
             message.repeatedSint64.push(longToNumber(reader.sint64() as Long));
+
             continue;
           }
 
-          if (tag == 290) {
+          if (tag === 290) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedSint64.push(longToNumber(reader.sint64() as Long));
@@ -1438,12 +1444,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 37:
-          if (tag == 301) {
+          if (tag === 301) {
             message.repeatedFixed32.push(reader.fixed32());
+
             continue;
           }
 
-          if (tag == 298) {
+          if (tag === 298) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedFixed32.push(reader.fixed32());
@@ -1454,12 +1461,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 38:
-          if (tag == 305) {
+          if (tag === 305) {
             message.repeatedFixed64.push(longToNumber(reader.fixed64() as Long));
+
             continue;
           }
 
-          if (tag == 306) {
+          if (tag === 306) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedFixed64.push(longToNumber(reader.fixed64() as Long));
@@ -1470,12 +1478,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 39:
-          if (tag == 317) {
+          if (tag === 317) {
             message.repeatedSfixed32.push(reader.sfixed32());
+
             continue;
           }
 
-          if (tag == 314) {
+          if (tag === 314) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedSfixed32.push(reader.sfixed32());
@@ -1486,12 +1495,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 40:
-          if (tag == 321) {
+          if (tag === 321) {
             message.repeatedSfixed64.push(longToNumber(reader.sfixed64() as Long));
+
             continue;
           }
 
-          if (tag == 322) {
+          if (tag === 322) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedSfixed64.push(longToNumber(reader.sfixed64() as Long));
@@ -1502,12 +1512,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 41:
-          if (tag == 333) {
+          if (tag === 333) {
             message.repeatedFloat.push(reader.float());
+
             continue;
           }
 
-          if (tag == 330) {
+          if (tag === 330) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedFloat.push(reader.float());
@@ -1518,12 +1529,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 42:
-          if (tag == 337) {
+          if (tag === 337) {
             message.repeatedDouble.push(reader.double());
+
             continue;
           }
 
-          if (tag == 338) {
+          if (tag === 338) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedDouble.push(reader.double());
@@ -1534,12 +1546,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 43:
-          if (tag == 344) {
+          if (tag === 344) {
             message.repeatedBool.push(reader.bool());
+
             continue;
           }
 
-          if (tag == 346) {
+          if (tag === 346) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedBool.push(reader.bool());
@@ -1550,40 +1563,41 @@ export const TestAllTypesProto3 = {
 
           break;
         case 44:
-          if (tag != 354) {
+          if (tag !== 354) {
             break;
           }
 
           message.repeatedString.push(reader.string());
           continue;
         case 45:
-          if (tag != 362) {
+          if (tag !== 362) {
             break;
           }
 
           message.repeatedBytes.push(reader.bytes());
           continue;
         case 48:
-          if (tag != 386) {
+          if (tag !== 386) {
             break;
           }
 
           message.repeatedNestedMessage.push(TestAllTypesProto3_NestedMessage.decode(reader, reader.uint32()));
           continue;
         case 49:
-          if (tag != 394) {
+          if (tag !== 394) {
             break;
           }
 
           message.repeatedForeignMessage.push(ForeignMessage.decode(reader, reader.uint32()));
           continue;
         case 51:
-          if (tag == 408) {
+          if (tag === 408) {
             message.repeatedNestedEnum.push(reader.int32() as any);
+
             continue;
           }
 
-          if (tag == 410) {
+          if (tag === 410) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedNestedEnum.push(reader.int32() as any);
@@ -1594,12 +1608,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 52:
-          if (tag == 416) {
+          if (tag === 416) {
             message.repeatedForeignEnum.push(reader.int32() as any);
+
             continue;
           }
 
-          if (tag == 418) {
+          if (tag === 418) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.repeatedForeignEnum.push(reader.int32() as any);
@@ -1610,26 +1625,27 @@ export const TestAllTypesProto3 = {
 
           break;
         case 54:
-          if (tag != 434) {
+          if (tag !== 434) {
             break;
           }
 
           message.repeatedStringPiece.push(reader.string());
           continue;
         case 55:
-          if (tag != 442) {
+          if (tag !== 442) {
             break;
           }
 
           message.repeatedCord.push(reader.string());
           continue;
         case 75:
-          if (tag == 600) {
+          if (tag === 600) {
             message.packedInt32.push(reader.int32());
+
             continue;
           }
 
-          if (tag == 602) {
+          if (tag === 602) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedInt32.push(reader.int32());
@@ -1640,12 +1656,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 76:
-          if (tag == 608) {
+          if (tag === 608) {
             message.packedInt64.push(longToNumber(reader.int64() as Long));
+
             continue;
           }
 
-          if (tag == 610) {
+          if (tag === 610) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedInt64.push(longToNumber(reader.int64() as Long));
@@ -1656,12 +1673,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 77:
-          if (tag == 616) {
+          if (tag === 616) {
             message.packedUint32.push(reader.uint32());
+
             continue;
           }
 
-          if (tag == 618) {
+          if (tag === 618) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedUint32.push(reader.uint32());
@@ -1672,12 +1690,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 78:
-          if (tag == 624) {
+          if (tag === 624) {
             message.packedUint64.push(longToNumber(reader.uint64() as Long));
+
             continue;
           }
 
-          if (tag == 626) {
+          if (tag === 626) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedUint64.push(longToNumber(reader.uint64() as Long));
@@ -1688,12 +1707,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 79:
-          if (tag == 632) {
+          if (tag === 632) {
             message.packedSint32.push(reader.sint32());
+
             continue;
           }
 
-          if (tag == 634) {
+          if (tag === 634) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedSint32.push(reader.sint32());
@@ -1704,12 +1724,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 80:
-          if (tag == 640) {
+          if (tag === 640) {
             message.packedSint64.push(longToNumber(reader.sint64() as Long));
+
             continue;
           }
 
-          if (tag == 642) {
+          if (tag === 642) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedSint64.push(longToNumber(reader.sint64() as Long));
@@ -1720,12 +1741,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 81:
-          if (tag == 653) {
+          if (tag === 653) {
             message.packedFixed32.push(reader.fixed32());
+
             continue;
           }
 
-          if (tag == 650) {
+          if (tag === 650) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedFixed32.push(reader.fixed32());
@@ -1736,12 +1758,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 82:
-          if (tag == 657) {
+          if (tag === 657) {
             message.packedFixed64.push(longToNumber(reader.fixed64() as Long));
+
             continue;
           }
 
-          if (tag == 658) {
+          if (tag === 658) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedFixed64.push(longToNumber(reader.fixed64() as Long));
@@ -1752,12 +1775,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 83:
-          if (tag == 669) {
+          if (tag === 669) {
             message.packedSfixed32.push(reader.sfixed32());
+
             continue;
           }
 
-          if (tag == 666) {
+          if (tag === 666) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedSfixed32.push(reader.sfixed32());
@@ -1768,12 +1792,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 84:
-          if (tag == 673) {
+          if (tag === 673) {
             message.packedSfixed64.push(longToNumber(reader.sfixed64() as Long));
+
             continue;
           }
 
-          if (tag == 674) {
+          if (tag === 674) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedSfixed64.push(longToNumber(reader.sfixed64() as Long));
@@ -1784,12 +1809,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 85:
-          if (tag == 685) {
+          if (tag === 685) {
             message.packedFloat.push(reader.float());
+
             continue;
           }
 
-          if (tag == 682) {
+          if (tag === 682) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedFloat.push(reader.float());
@@ -1800,12 +1826,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 86:
-          if (tag == 689) {
+          if (tag === 689) {
             message.packedDouble.push(reader.double());
+
             continue;
           }
 
-          if (tag == 690) {
+          if (tag === 690) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedDouble.push(reader.double());
@@ -1816,12 +1843,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 87:
-          if (tag == 696) {
+          if (tag === 696) {
             message.packedBool.push(reader.bool());
+
             continue;
           }
 
-          if (tag == 698) {
+          if (tag === 698) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedBool.push(reader.bool());
@@ -1832,12 +1860,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 88:
-          if (tag == 704) {
+          if (tag === 704) {
             message.packedNestedEnum.push(reader.int32() as any);
+
             continue;
           }
 
-          if (tag == 706) {
+          if (tag === 706) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.packedNestedEnum.push(reader.int32() as any);
@@ -1848,12 +1877,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 89:
-          if (tag == 712) {
+          if (tag === 712) {
             message.unpackedInt32.push(reader.int32());
+
             continue;
           }
 
-          if (tag == 714) {
+          if (tag === 714) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedInt32.push(reader.int32());
@@ -1864,12 +1894,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 90:
-          if (tag == 720) {
+          if (tag === 720) {
             message.unpackedInt64.push(longToNumber(reader.int64() as Long));
+
             continue;
           }
 
-          if (tag == 722) {
+          if (tag === 722) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedInt64.push(longToNumber(reader.int64() as Long));
@@ -1880,12 +1911,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 91:
-          if (tag == 728) {
+          if (tag === 728) {
             message.unpackedUint32.push(reader.uint32());
+
             continue;
           }
 
-          if (tag == 730) {
+          if (tag === 730) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedUint32.push(reader.uint32());
@@ -1896,12 +1928,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 92:
-          if (tag == 736) {
+          if (tag === 736) {
             message.unpackedUint64.push(longToNumber(reader.uint64() as Long));
+
             continue;
           }
 
-          if (tag == 738) {
+          if (tag === 738) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedUint64.push(longToNumber(reader.uint64() as Long));
@@ -1912,12 +1945,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 93:
-          if (tag == 744) {
+          if (tag === 744) {
             message.unpackedSint32.push(reader.sint32());
+
             continue;
           }
 
-          if (tag == 746) {
+          if (tag === 746) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedSint32.push(reader.sint32());
@@ -1928,12 +1962,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 94:
-          if (tag == 752) {
+          if (tag === 752) {
             message.unpackedSint64.push(longToNumber(reader.sint64() as Long));
+
             continue;
           }
 
-          if (tag == 754) {
+          if (tag === 754) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedSint64.push(longToNumber(reader.sint64() as Long));
@@ -1944,12 +1979,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 95:
-          if (tag == 765) {
+          if (tag === 765) {
             message.unpackedFixed32.push(reader.fixed32());
+
             continue;
           }
 
-          if (tag == 762) {
+          if (tag === 762) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedFixed32.push(reader.fixed32());
@@ -1960,12 +1996,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 96:
-          if (tag == 769) {
+          if (tag === 769) {
             message.unpackedFixed64.push(longToNumber(reader.fixed64() as Long));
+
             continue;
           }
 
-          if (tag == 770) {
+          if (tag === 770) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedFixed64.push(longToNumber(reader.fixed64() as Long));
@@ -1976,12 +2013,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 97:
-          if (tag == 781) {
+          if (tag === 781) {
             message.unpackedSfixed32.push(reader.sfixed32());
+
             continue;
           }
 
-          if (tag == 778) {
+          if (tag === 778) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedSfixed32.push(reader.sfixed32());
@@ -1992,12 +2030,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 98:
-          if (tag == 785) {
+          if (tag === 785) {
             message.unpackedSfixed64.push(longToNumber(reader.sfixed64() as Long));
+
             continue;
           }
 
-          if (tag == 786) {
+          if (tag === 786) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedSfixed64.push(longToNumber(reader.sfixed64() as Long));
@@ -2008,12 +2047,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 99:
-          if (tag == 797) {
+          if (tag === 797) {
             message.unpackedFloat.push(reader.float());
+
             continue;
           }
 
-          if (tag == 794) {
+          if (tag === 794) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedFloat.push(reader.float());
@@ -2024,12 +2064,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 100:
-          if (tag == 801) {
+          if (tag === 801) {
             message.unpackedDouble.push(reader.double());
+
             continue;
           }
 
-          if (tag == 802) {
+          if (tag === 802) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedDouble.push(reader.double());
@@ -2040,12 +2081,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 101:
-          if (tag == 808) {
+          if (tag === 808) {
             message.unpackedBool.push(reader.bool());
+
             continue;
           }
 
-          if (tag == 810) {
+          if (tag === 810) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedBool.push(reader.bool());
@@ -2056,12 +2098,13 @@ export const TestAllTypesProto3 = {
 
           break;
         case 102:
-          if (tag == 816) {
+          if (tag === 816) {
             message.unpackedNestedEnum.push(reader.int32() as any);
+
             continue;
           }
 
-          if (tag == 818) {
+          if (tag === 818) {
             const end2 = reader.uint32() + reader.pos;
             while (reader.pos < end2) {
               message.unpackedNestedEnum.push(reader.int32() as any);
@@ -2072,7 +2115,7 @@ export const TestAllTypesProto3 = {
 
           break;
         case 56:
-          if (tag != 450) {
+          if (tag !== 450) {
             break;
           }
 
@@ -2082,7 +2125,7 @@ export const TestAllTypesProto3 = {
           }
           continue;
         case 57:
-          if (tag != 458) {
+          if (tag !== 458) {
             break;
           }
 
@@ -2092,7 +2135,7 @@ export const TestAllTypesProto3 = {
           }
           continue;
         case 58:
-          if (tag != 466) {
+          if (tag !== 466) {
             break;
           }
 
@@ -2102,7 +2145,7 @@ export const TestAllTypesProto3 = {
           }
           continue;
         case 59:
-          if (tag != 474) {
+          if (tag !== 474) {
             break;
           }
 
@@ -2112,7 +2155,7 @@ export const TestAllTypesProto3 = {
           }
           continue;
         case 60:
-          if (tag != 482) {
+          if (tag !== 482) {
             break;
           }
 
@@ -2122,7 +2165,7 @@ export const TestAllTypesProto3 = {
           }
           continue;
         case 61:
-          if (tag != 490) {
+          if (tag !== 490) {
             break;
           }
 
@@ -2132,7 +2175,7 @@ export const TestAllTypesProto3 = {
           }
           continue;
         case 62:
-          if (tag != 498) {
+          if (tag !== 498) {
             break;
           }
 
@@ -2142,7 +2185,7 @@ export const TestAllTypesProto3 = {
           }
           continue;
         case 63:
-          if (tag != 506) {
+          if (tag !== 506) {
             break;
           }
 
@@ -2152,7 +2195,7 @@ export const TestAllTypesProto3 = {
           }
           continue;
         case 64:
-          if (tag != 514) {
+          if (tag !== 514) {
             break;
           }
 
@@ -2162,7 +2205,7 @@ export const TestAllTypesProto3 = {
           }
           continue;
         case 65:
-          if (tag != 522) {
+          if (tag !== 522) {
             break;
           }
 
@@ -2172,7 +2215,7 @@ export const TestAllTypesProto3 = {
           }
           continue;
         case 66:
-          if (tag != 530) {
+          if (tag !== 530) {
             break;
           }
 
@@ -2182,7 +2225,7 @@ export const TestAllTypesProto3 = {
           }
           continue;
         case 67:
-          if (tag != 538) {
+          if (tag !== 538) {
             break;
           }
 
@@ -2192,7 +2235,7 @@ export const TestAllTypesProto3 = {
           }
           continue;
         case 68:
-          if (tag != 546) {
+          if (tag !== 546) {
             break;
           }
 
@@ -2202,7 +2245,7 @@ export const TestAllTypesProto3 = {
           }
           continue;
         case 69:
-          if (tag != 554) {
+          if (tag !== 554) {
             break;
           }
 
@@ -2212,7 +2255,7 @@ export const TestAllTypesProto3 = {
           }
           continue;
         case 70:
-          if (tag != 562) {
+          if (tag !== 562) {
             break;
           }
 
@@ -2222,7 +2265,7 @@ export const TestAllTypesProto3 = {
           }
           continue;
         case 71:
-          if (tag != 570) {
+          if (tag !== 570) {
             break;
           }
 
@@ -2232,7 +2275,7 @@ export const TestAllTypesProto3 = {
           }
           continue;
         case 72:
-          if (tag != 578) {
+          if (tag !== 578) {
             break;
           }
 
@@ -2242,7 +2285,7 @@ export const TestAllTypesProto3 = {
           }
           continue;
         case 73:
-          if (tag != 586) {
+          if (tag !== 586) {
             break;
           }
 
@@ -2252,7 +2295,7 @@ export const TestAllTypesProto3 = {
           }
           continue;
         case 74:
-          if (tag != 594) {
+          if (tag !== 594) {
             break;
           }
 
@@ -2262,14 +2305,14 @@ export const TestAllTypesProto3 = {
           }
           continue;
         case 111:
-          if (tag != 888) {
+          if (tag !== 888) {
             break;
           }
 
           message.oneofField = { $case: "oneofUint32", oneofUint32: reader.uint32() };
           continue;
         case 112:
-          if (tag != 898) {
+          if (tag !== 898) {
             break;
           }
 
@@ -2279,413 +2322,413 @@ export const TestAllTypesProto3 = {
           };
           continue;
         case 113:
-          if (tag != 906) {
+          if (tag !== 906) {
             break;
           }
 
           message.oneofField = { $case: "oneofString", oneofString: reader.string() };
           continue;
         case 114:
-          if (tag != 914) {
+          if (tag !== 914) {
             break;
           }
 
           message.oneofField = { $case: "oneofBytes", oneofBytes: reader.bytes() };
           continue;
         case 115:
-          if (tag != 920) {
+          if (tag !== 920) {
             break;
           }
 
           message.oneofField = { $case: "oneofBool", oneofBool: reader.bool() };
           continue;
         case 116:
-          if (tag != 928) {
+          if (tag !== 928) {
             break;
           }
 
           message.oneofField = { $case: "oneofUint64", oneofUint64: longToNumber(reader.uint64() as Long) };
           continue;
         case 117:
-          if (tag != 941) {
+          if (tag !== 941) {
             break;
           }
 
           message.oneofField = { $case: "oneofFloat", oneofFloat: reader.float() };
           continue;
         case 118:
-          if (tag != 945) {
+          if (tag !== 945) {
             break;
           }
 
           message.oneofField = { $case: "oneofDouble", oneofDouble: reader.double() };
           continue;
         case 119:
-          if (tag != 952) {
+          if (tag !== 952) {
             break;
           }
 
           message.oneofField = { $case: "oneofEnum", oneofEnum: reader.int32() as any };
           continue;
         case 120:
-          if (tag != 960) {
+          if (tag !== 960) {
             break;
           }
 
           message.oneofField = { $case: "oneofNullValue", oneofNullValue: reader.int32() as any };
           continue;
         case 201:
-          if (tag != 1610) {
+          if (tag !== 1610) {
             break;
           }
 
           message.optionalBoolWrapper = BoolValue.decode(reader, reader.uint32()).value;
           continue;
         case 202:
-          if (tag != 1618) {
+          if (tag !== 1618) {
             break;
           }
 
           message.optionalInt32Wrapper = Int32Value.decode(reader, reader.uint32()).value;
           continue;
         case 203:
-          if (tag != 1626) {
+          if (tag !== 1626) {
             break;
           }
 
           message.optionalInt64Wrapper = Int64Value.decode(reader, reader.uint32()).value;
           continue;
         case 204:
-          if (tag != 1634) {
+          if (tag !== 1634) {
             break;
           }
 
           message.optionalUint32Wrapper = UInt32Value.decode(reader, reader.uint32()).value;
           continue;
         case 205:
-          if (tag != 1642) {
+          if (tag !== 1642) {
             break;
           }
 
           message.optionalUint64Wrapper = UInt64Value.decode(reader, reader.uint32()).value;
           continue;
         case 206:
-          if (tag != 1650) {
+          if (tag !== 1650) {
             break;
           }
 
           message.optionalFloatWrapper = FloatValue.decode(reader, reader.uint32()).value;
           continue;
         case 207:
-          if (tag != 1658) {
+          if (tag !== 1658) {
             break;
           }
 
           message.optionalDoubleWrapper = DoubleValue.decode(reader, reader.uint32()).value;
           continue;
         case 208:
-          if (tag != 1666) {
+          if (tag !== 1666) {
             break;
           }
 
           message.optionalStringWrapper = StringValue.decode(reader, reader.uint32()).value;
           continue;
         case 209:
-          if (tag != 1674) {
+          if (tag !== 1674) {
             break;
           }
 
           message.optionalBytesWrapper = BytesValue.decode(reader, reader.uint32()).value;
           continue;
         case 211:
-          if (tag != 1690) {
+          if (tag !== 1690) {
             break;
           }
 
           message.repeatedBoolWrapper.push(BoolValue.decode(reader, reader.uint32()).value);
           continue;
         case 212:
-          if (tag != 1698) {
+          if (tag !== 1698) {
             break;
           }
 
           message.repeatedInt32Wrapper.push(Int32Value.decode(reader, reader.uint32()).value);
           continue;
         case 213:
-          if (tag != 1706) {
+          if (tag !== 1706) {
             break;
           }
 
           message.repeatedInt64Wrapper.push(Int64Value.decode(reader, reader.uint32()).value);
           continue;
         case 214:
-          if (tag != 1714) {
+          if (tag !== 1714) {
             break;
           }
 
           message.repeatedUint32Wrapper.push(UInt32Value.decode(reader, reader.uint32()).value);
           continue;
         case 215:
-          if (tag != 1722) {
+          if (tag !== 1722) {
             break;
           }
 
           message.repeatedUint64Wrapper.push(UInt64Value.decode(reader, reader.uint32()).value);
           continue;
         case 216:
-          if (tag != 1730) {
+          if (tag !== 1730) {
             break;
           }
 
           message.repeatedFloatWrapper.push(FloatValue.decode(reader, reader.uint32()).value);
           continue;
         case 217:
-          if (tag != 1738) {
+          if (tag !== 1738) {
             break;
           }
 
           message.repeatedDoubleWrapper.push(DoubleValue.decode(reader, reader.uint32()).value);
           continue;
         case 218:
-          if (tag != 1746) {
+          if (tag !== 1746) {
             break;
           }
 
           message.repeatedStringWrapper.push(StringValue.decode(reader, reader.uint32()).value);
           continue;
         case 219:
-          if (tag != 1754) {
+          if (tag !== 1754) {
             break;
           }
 
           message.repeatedBytesWrapper.push(BytesValue.decode(reader, reader.uint32()).value);
           continue;
         case 301:
-          if (tag != 2410) {
+          if (tag !== 2410) {
             break;
           }
 
           message.optionalDuration = Duration.decode(reader, reader.uint32());
           continue;
         case 302:
-          if (tag != 2418) {
+          if (tag !== 2418) {
             break;
           }
 
           message.optionalTimestamp = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
           continue;
         case 303:
-          if (tag != 2426) {
+          if (tag !== 2426) {
             break;
           }
 
           message.optionalFieldMask = FieldMask.unwrap(FieldMask.decode(reader, reader.uint32()));
           continue;
         case 304:
-          if (tag != 2434) {
+          if (tag !== 2434) {
             break;
           }
 
           message.optionalStruct = Struct.unwrap(Struct.decode(reader, reader.uint32()));
           continue;
         case 305:
-          if (tag != 2442) {
+          if (tag !== 2442) {
             break;
           }
 
           message.optionalAny = Any.decode(reader, reader.uint32());
           continue;
         case 306:
-          if (tag != 2450) {
+          if (tag !== 2450) {
             break;
           }
 
           message.optionalValue = Value.unwrap(Value.decode(reader, reader.uint32()));
           continue;
         case 307:
-          if (tag != 2456) {
+          if (tag !== 2456) {
             break;
           }
 
           message.optionalNullValue = reader.int32() as any;
           continue;
         case 311:
-          if (tag != 2490) {
+          if (tag !== 2490) {
             break;
           }
 
           message.repeatedDuration.push(Duration.decode(reader, reader.uint32()));
           continue;
         case 312:
-          if (tag != 2498) {
+          if (tag !== 2498) {
             break;
           }
 
           message.repeatedTimestamp.push(fromTimestamp(Timestamp.decode(reader, reader.uint32())));
           continue;
         case 313:
-          if (tag != 2506) {
+          if (tag !== 2506) {
             break;
           }
 
           message.repeatedFieldmask.push(FieldMask.unwrap(FieldMask.decode(reader, reader.uint32())));
           continue;
         case 324:
-          if (tag != 2594) {
+          if (tag !== 2594) {
             break;
           }
 
           message.repeatedStruct.push(Struct.unwrap(Struct.decode(reader, reader.uint32())));
           continue;
         case 315:
-          if (tag != 2522) {
+          if (tag !== 2522) {
             break;
           }
 
           message.repeatedAny.push(Any.decode(reader, reader.uint32()));
           continue;
         case 316:
-          if (tag != 2530) {
+          if (tag !== 2530) {
             break;
           }
 
           message.repeatedValue.push(Value.unwrap(Value.decode(reader, reader.uint32())));
           continue;
         case 317:
-          if (tag != 2538) {
+          if (tag !== 2538) {
             break;
           }
 
           message.repeatedListValue.push(ListValue.unwrap(ListValue.decode(reader, reader.uint32())));
           continue;
         case 401:
-          if (tag != 3208) {
+          if (tag !== 3208) {
             break;
           }
 
           message.fieldname1 = reader.int32();
           continue;
         case 402:
-          if (tag != 3216) {
+          if (tag !== 3216) {
             break;
           }
 
           message.fieldName2 = reader.int32();
           continue;
         case 403:
-          if (tag != 3224) {
+          if (tag !== 3224) {
             break;
           }
 
           message.FieldName3 = reader.int32();
           continue;
         case 404:
-          if (tag != 3232) {
+          if (tag !== 3232) {
             break;
           }
 
           message.fieldName4 = reader.int32();
           continue;
         case 405:
-          if (tag != 3240) {
+          if (tag !== 3240) {
             break;
           }
 
           message.field0name5 = reader.int32();
           continue;
         case 406:
-          if (tag != 3248) {
+          if (tag !== 3248) {
             break;
           }
 
           message.field0Name6 = reader.int32();
           continue;
         case 407:
-          if (tag != 3256) {
+          if (tag !== 3256) {
             break;
           }
 
           message.fieldName7 = reader.int32();
           continue;
         case 408:
-          if (tag != 3264) {
+          if (tag !== 3264) {
             break;
           }
 
           message.FieldName8 = reader.int32();
           continue;
         case 409:
-          if (tag != 3272) {
+          if (tag !== 3272) {
             break;
           }
 
           message.fieldName9 = reader.int32();
           continue;
         case 410:
-          if (tag != 3280) {
+          if (tag !== 3280) {
             break;
           }
 
           message.FieldName10 = reader.int32();
           continue;
         case 411:
-          if (tag != 3288) {
+          if (tag !== 3288) {
             break;
           }
 
           message.fieldName11 = reader.int32();
           continue;
         case 412:
-          if (tag != 3296) {
+          if (tag !== 3296) {
             break;
           }
 
           message.FIELDName12 = reader.int32();
           continue;
         case 413:
-          if (tag != 3304) {
+          if (tag !== 3304) {
             break;
           }
 
           message.FieldName13 = reader.int32();
           continue;
         case 414:
-          if (tag != 3312) {
+          if (tag !== 3312) {
             break;
           }
 
           message.FieldName14 = reader.int32();
           continue;
         case 415:
-          if (tag != 3320) {
+          if (tag !== 3320) {
             break;
           }
 
           message.fieldName15 = reader.int32();
           continue;
         case 416:
-          if (tag != 3328) {
+          if (tag !== 3328) {
             break;
           }
 
           message.fieldName16 = reader.int32();
           continue;
         case 417:
-          if (tag != 3336) {
+          if (tag !== 3336) {
             break;
           }
 
           message.fieldName17 = reader.int32();
           continue;
         case 418:
-          if (tag != 3344) {
+          if (tag !== 3344) {
             break;
           }
 
           message.FieldName18 = reader.int32();
           continue;
       }
-      if ((tag & 7) == 4 || tag == 0) {
+      if ((tag & 7) === 4 || tag === 0) {
         break;
       }
       reader.skipType(tag & 7);
@@ -3981,21 +4024,21 @@ export const TestAllTypesProto3_NestedMessage = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          if (tag != 8) {
+          if (tag !== 8) {
             break;
           }
 
           message.a = reader.int32();
           continue;
         case 2:
-          if (tag != 18) {
+          if (tag !== 18) {
             break;
           }
 
           message.corecursive = TestAllTypesProto3.decode(reader, reader.uint32());
           continue;
       }
-      if ((tag & 7) == 4 || tag == 0) {
+      if ((tag & 7) === 4 || tag === 0) {
         break;
       }
       reader.skipType(tag & 7);
@@ -4059,21 +4102,21 @@ export const TestAllTypesProto3_MapInt32Int32Entry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          if (tag != 8) {
+          if (tag !== 8) {
             break;
           }
 
           message.key = reader.int32();
           continue;
         case 2:
-          if (tag != 16) {
+          if (tag !== 16) {
             break;
           }
 
           message.value = reader.int32();
           continue;
       }
-      if ((tag & 7) == 4 || tag == 0) {
+      if ((tag & 7) === 4 || tag === 0) {
         break;
       }
       reader.skipType(tag & 7);
@@ -4131,21 +4174,21 @@ export const TestAllTypesProto3_MapInt64Int64Entry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          if (tag != 8) {
+          if (tag !== 8) {
             break;
           }
 
           message.key = longToNumber(reader.int64() as Long);
           continue;
         case 2:
-          if (tag != 16) {
+          if (tag !== 16) {
             break;
           }
 
           message.value = longToNumber(reader.int64() as Long);
           continue;
       }
-      if ((tag & 7) == 4 || tag == 0) {
+      if ((tag & 7) === 4 || tag === 0) {
         break;
       }
       reader.skipType(tag & 7);
@@ -4203,21 +4246,21 @@ export const TestAllTypesProto3_MapUint32Uint32Entry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          if (tag != 8) {
+          if (tag !== 8) {
             break;
           }
 
           message.key = reader.uint32();
           continue;
         case 2:
-          if (tag != 16) {
+          if (tag !== 16) {
             break;
           }
 
           message.value = reader.uint32();
           continue;
       }
-      if ((tag & 7) == 4 || tag == 0) {
+      if ((tag & 7) === 4 || tag === 0) {
         break;
       }
       reader.skipType(tag & 7);
@@ -4275,21 +4318,21 @@ export const TestAllTypesProto3_MapUint64Uint64Entry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          if (tag != 8) {
+          if (tag !== 8) {
             break;
           }
 
           message.key = longToNumber(reader.uint64() as Long);
           continue;
         case 2:
-          if (tag != 16) {
+          if (tag !== 16) {
             break;
           }
 
           message.value = longToNumber(reader.uint64() as Long);
           continue;
       }
-      if ((tag & 7) == 4 || tag == 0) {
+      if ((tag & 7) === 4 || tag === 0) {
         break;
       }
       reader.skipType(tag & 7);
@@ -4347,21 +4390,21 @@ export const TestAllTypesProto3_MapSint32Sint32Entry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          if (tag != 8) {
+          if (tag !== 8) {
             break;
           }
 
           message.key = reader.sint32();
           continue;
         case 2:
-          if (tag != 16) {
+          if (tag !== 16) {
             break;
           }
 
           message.value = reader.sint32();
           continue;
       }
-      if ((tag & 7) == 4 || tag == 0) {
+      if ((tag & 7) === 4 || tag === 0) {
         break;
       }
       reader.skipType(tag & 7);
@@ -4419,21 +4462,21 @@ export const TestAllTypesProto3_MapSint64Sint64Entry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          if (tag != 8) {
+          if (tag !== 8) {
             break;
           }
 
           message.key = longToNumber(reader.sint64() as Long);
           continue;
         case 2:
-          if (tag != 16) {
+          if (tag !== 16) {
             break;
           }
 
           message.value = longToNumber(reader.sint64() as Long);
           continue;
       }
-      if ((tag & 7) == 4 || tag == 0) {
+      if ((tag & 7) === 4 || tag === 0) {
         break;
       }
       reader.skipType(tag & 7);
@@ -4491,21 +4534,21 @@ export const TestAllTypesProto3_MapFixed32Fixed32Entry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          if (tag != 13) {
+          if (tag !== 13) {
             break;
           }
 
           message.key = reader.fixed32();
           continue;
         case 2:
-          if (tag != 21) {
+          if (tag !== 21) {
             break;
           }
 
           message.value = reader.fixed32();
           continue;
       }
-      if ((tag & 7) == 4 || tag == 0) {
+      if ((tag & 7) === 4 || tag === 0) {
         break;
       }
       reader.skipType(tag & 7);
@@ -4563,21 +4606,21 @@ export const TestAllTypesProto3_MapFixed64Fixed64Entry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          if (tag != 9) {
+          if (tag !== 9) {
             break;
           }
 
           message.key = longToNumber(reader.fixed64() as Long);
           continue;
         case 2:
-          if (tag != 17) {
+          if (tag !== 17) {
             break;
           }
 
           message.value = longToNumber(reader.fixed64() as Long);
           continue;
       }
-      if ((tag & 7) == 4 || tag == 0) {
+      if ((tag & 7) === 4 || tag === 0) {
         break;
       }
       reader.skipType(tag & 7);
@@ -4635,21 +4678,21 @@ export const TestAllTypesProto3_MapSfixed32Sfixed32Entry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          if (tag != 13) {
+          if (tag !== 13) {
             break;
           }
 
           message.key = reader.sfixed32();
           continue;
         case 2:
-          if (tag != 21) {
+          if (tag !== 21) {
             break;
           }
 
           message.value = reader.sfixed32();
           continue;
       }
-      if ((tag & 7) == 4 || tag == 0) {
+      if ((tag & 7) === 4 || tag === 0) {
         break;
       }
       reader.skipType(tag & 7);
@@ -4707,21 +4750,21 @@ export const TestAllTypesProto3_MapSfixed64Sfixed64Entry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          if (tag != 9) {
+          if (tag !== 9) {
             break;
           }
 
           message.key = longToNumber(reader.sfixed64() as Long);
           continue;
         case 2:
-          if (tag != 17) {
+          if (tag !== 17) {
             break;
           }
 
           message.value = longToNumber(reader.sfixed64() as Long);
           continue;
       }
-      if ((tag & 7) == 4 || tag == 0) {
+      if ((tag & 7) === 4 || tag === 0) {
         break;
       }
       reader.skipType(tag & 7);
@@ -4779,21 +4822,21 @@ export const TestAllTypesProto3_MapInt32FloatEntry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          if (tag != 8) {
+          if (tag !== 8) {
             break;
           }
 
           message.key = reader.int32();
           continue;
         case 2:
-          if (tag != 21) {
+          if (tag !== 21) {
             break;
           }
 
           message.value = reader.float();
           continue;
       }
-      if ((tag & 7) == 4 || tag == 0) {
+      if ((tag & 7) === 4 || tag === 0) {
         break;
       }
       reader.skipType(tag & 7);
@@ -4851,21 +4894,21 @@ export const TestAllTypesProto3_MapInt32DoubleEntry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          if (tag != 8) {
+          if (tag !== 8) {
             break;
           }
 
           message.key = reader.int32();
           continue;
         case 2:
-          if (tag != 17) {
+          if (tag !== 17) {
             break;
           }
 
           message.value = reader.double();
           continue;
       }
-      if ((tag & 7) == 4 || tag == 0) {
+      if ((tag & 7) === 4 || tag === 0) {
         break;
       }
       reader.skipType(tag & 7);
@@ -4923,21 +4966,21 @@ export const TestAllTypesProto3_MapBoolBoolEntry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          if (tag != 8) {
+          if (tag !== 8) {
             break;
           }
 
           message.key = reader.bool();
           continue;
         case 2:
-          if (tag != 16) {
+          if (tag !== 16) {
             break;
           }
 
           message.value = reader.bool();
           continue;
       }
-      if ((tag & 7) == 4 || tag == 0) {
+      if ((tag & 7) === 4 || tag === 0) {
         break;
       }
       reader.skipType(tag & 7);
@@ -4998,21 +5041,21 @@ export const TestAllTypesProto3_MapStringStringEntry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          if (tag != 10) {
+          if (tag !== 10) {
             break;
           }
 
           message.key = reader.string();
           continue;
         case 2:
-          if (tag != 18) {
+          if (tag !== 18) {
             break;
           }
 
           message.value = reader.string();
           continue;
       }
-      if ((tag & 7) == 4 || tag == 0) {
+      if ((tag & 7) === 4 || tag === 0) {
         break;
       }
       reader.skipType(tag & 7);
@@ -5070,21 +5113,21 @@ export const TestAllTypesProto3_MapStringBytesEntry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          if (tag != 10) {
+          if (tag !== 10) {
             break;
           }
 
           message.key = reader.string();
           continue;
         case 2:
-          if (tag != 18) {
+          if (tag !== 18) {
             break;
           }
 
           message.value = reader.bytes();
           continue;
       }
-      if ((tag & 7) == 4 || tag == 0) {
+      if ((tag & 7) === 4 || tag === 0) {
         break;
       }
       reader.skipType(tag & 7);
@@ -5149,21 +5192,21 @@ export const TestAllTypesProto3_MapStringNestedMessageEntry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          if (tag != 10) {
+          if (tag !== 10) {
             break;
           }
 
           message.key = reader.string();
           continue;
         case 2:
-          if (tag != 18) {
+          if (tag !== 18) {
             break;
           }
 
           message.value = TestAllTypesProto3_NestedMessage.decode(reader, reader.uint32());
           continue;
       }
-      if ((tag & 7) == 4 || tag == 0) {
+      if ((tag & 7) === 4 || tag === 0) {
         break;
       }
       reader.skipType(tag & 7);
@@ -5230,21 +5273,21 @@ export const TestAllTypesProto3_MapStringForeignMessageEntry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          if (tag != 10) {
+          if (tag !== 10) {
             break;
           }
 
           message.key = reader.string();
           continue;
         case 2:
-          if (tag != 18) {
+          if (tag !== 18) {
             break;
           }
 
           message.value = ForeignMessage.decode(reader, reader.uint32());
           continue;
       }
-      if ((tag & 7) == 4 || tag == 0) {
+      if ((tag & 7) === 4 || tag === 0) {
         break;
       }
       reader.skipType(tag & 7);
@@ -5307,21 +5350,21 @@ export const TestAllTypesProto3_MapStringNestedEnumEntry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          if (tag != 10) {
+          if (tag !== 10) {
             break;
           }
 
           message.key = reader.string();
           continue;
         case 2:
-          if (tag != 16) {
+          if (tag !== 16) {
             break;
           }
 
           message.value = reader.int32() as any;
           continue;
       }
-      if ((tag & 7) == 4 || tag == 0) {
+      if ((tag & 7) === 4 || tag === 0) {
         break;
       }
       reader.skipType(tag & 7);
@@ -5382,21 +5425,21 @@ export const TestAllTypesProto3_MapStringForeignEnumEntry = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          if (tag != 10) {
+          if (tag !== 10) {
             break;
           }
 
           message.key = reader.string();
           continue;
         case 2:
-          if (tag != 16) {
+          if (tag !== 16) {
             break;
           }
 
           message.value = reader.int32() as any;
           continue;
       }
-      if ((tag & 7) == 4 || tag == 0) {
+      if ((tag & 7) === 4 || tag === 0) {
         break;
       }
       reader.skipType(tag & 7);
@@ -5454,14 +5497,14 @@ export const ForeignMessage = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          if (tag != 8) {
+          if (tag !== 8) {
             break;
           }
 
           message.c = reader.int32();
           continue;
       }
-      if ((tag & 7) == 4 || tag == 0) {
+      if ((tag & 7) === 4 || tag === 0) {
         break;
       }
       reader.skipType(tag & 7);
@@ -5507,7 +5550,7 @@ export const NullHypothesisProto3 = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
       }
-      if ((tag & 7) == 4 || tag == 0) {
+      if ((tag & 7) === 4 || tag === 0) {
         break;
       }
       reader.skipType(tag & 7);
@@ -5551,7 +5594,7 @@ export const EnumOnlyProto3 = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
       }
-      if ((tag & 7) == 4 || tag == 0) {
+      if ((tag & 7) === 4 || tag === 0) {
         break;
       }
       reader.skipType(tag & 7);
@@ -5641,8 +5684,8 @@ function toTimestamp(date: Date): Timestamp {
 }
 
 function fromTimestamp(t: Timestamp): Date {
-  let millis = t.seconds * 1_000;
-  millis += t.nanos / 1_000_000;
+  let millis = (t.seconds || 0) * 1_000;
+  millis += (t.nanos || 0) / 1_000_000;
   return new Date(millis);
 }
 
