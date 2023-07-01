@@ -6,7 +6,7 @@
     "@bufbuild/buf": "^1.15.0",
     "@types/node": "^20.3.2",
     "esbuild": "^0.18.10",
-    "typescript": "^5.0.4"
+    "typescript": "^5.1.6"
   },
   "dependencies": {
     "ts-proto": "^1.148.1"
