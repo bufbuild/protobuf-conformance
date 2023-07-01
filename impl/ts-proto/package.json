@@ -4,7 +4,7 @@
   "type": "module",
   "devDependencies": {
     "@bufbuild/buf": "^1.15.0",
-    "@types/node": "^20.3.2",
+    "@types/node": "^20.3.3",
     "esbuild": "^0.18.10",
     "typescript": "^5.0.4"
   },
