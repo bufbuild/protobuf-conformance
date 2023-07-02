@@ -8,8 +8,8 @@
   },
   "devDependencies": {
     "@bufbuild/buf": "^1.23.1",
-    "@types/node": "^20.3.2",
+    "@types/node": "^20.3.3",
     "tsx": "^3.12.7",
-    "typescript": "^5.0.4"
+    "typescript": "^5.1.6"
   }
 }
