@@ -489,7 +489,7 @@ function createBaseTestAllTypesProto3(): TestAllTypesProto3 {
     optionalDouble: 0,
     optionalBool: false,
     optionalString: "",
-    optionalBytes: new Uint8Array(),
+    optionalBytes: new Uint8Array(0),
     optionalNestedMessage: undefined,
     optionalForeignMessage: undefined,
     optionalNestedEnum: 0,
@@ -2752,7 +2752,7 @@ export const TestAllTypesProto3 = {
       optionalDouble: isSet(object.optionalDouble) ? Number(object.optionalDouble) : 0,
       optionalBool: isSet(object.optionalBool) ? Boolean(object.optionalBool) : false,
       optionalString: isSet(object.optionalString) ? String(object.optionalString) : "",
-      optionalBytes: isSet(object.optionalBytes) ? bytesFromBase64(object.optionalBytes) : new Uint8Array(),
+      optionalBytes: isSet(object.optionalBytes) ? bytesFromBase64(object.optionalBytes) : new Uint8Array(0),
       optionalNestedMessage: isSet(object.optionalNestedMessage)
         ? TestAllTypesProto3_NestedMessage.fromJSON(object.optionalNestedMessage)
         : undefined,
@@ -3089,7 +3089,7 @@ export const TestAllTypesProto3 = {
     message.optionalString !== undefined && (obj.optionalString = message.optionalString);
     message.optionalBytes !== undefined &&
       (obj.optionalBytes = base64FromBytes(
-        message.optionalBytes !== undefined ? message.optionalBytes : new Uint8Array(),
+        message.optionalBytes !== undefined ? message.optionalBytes : new Uint8Array(0),
       ));
     message.optionalNestedMessage !== undefined && (obj.optionalNestedMessage = message.optionalNestedMessage
       ? TestAllTypesProto3_NestedMessage.toJSON(message.optionalNestedMessage)
@@ -3180,7 +3180,7 @@ export const TestAllTypesProto3 = {
       obj.repeatedString = [];
     }
     if (message.repeatedBytes) {
-      obj.repeatedBytes = message.repeatedBytes.map((e) => base64FromBytes(e !== undefined ? e : new Uint8Array()));
+      obj.repeatedBytes = message.repeatedBytes.map((e) => base64FromBytes(e !== undefined ? e : new Uint8Array(0)));
     } else {
       obj.repeatedBytes = [];
     }
@@ -3630,7 +3630,7 @@ export const TestAllTypesProto3 = {
     message.optionalDouble = object.optionalDouble ?? 0;
     message.optionalBool = object.optionalBool ?? false;
     message.optionalString = object.optionalString ?? "";
-    message.optionalBytes = object.optionalBytes ?? new Uint8Array();
+    message.optionalBytes = object.optionalBytes ?? new Uint8Array(0);
     message.optionalNestedMessage =
       (object.optionalNestedMessage !== undefined && object.optionalNestedMessage !== null)
         ? TestAllTypesProto3_NestedMessage.fromPartial(object.optionalNestedMessage)
@@ -5091,7 +5091,7 @@ export const TestAllTypesProto3_MapStringStringEntry = {
 };
 
 function createBaseTestAllTypesProto3_MapStringBytesEntry(): TestAllTypesProto3_MapStringBytesEntry {
-  return { key: "", value: new Uint8Array() };
+  return { key: "", value: new Uint8Array(0) };
 }
 
 export const TestAllTypesProto3_MapStringBytesEntry = {
@@ -5138,7 +5138,7 @@ export const TestAllTypesProto3_MapStringBytesEntry = {
   fromJSON(object: any): TestAllTypesProto3_MapStringBytesEntry {
     return {
       key: isSet(object.key) ? String(object.key) : "",
-      value: isSet(object.value) ? bytesFromBase64(object.value) : new Uint8Array(),
+      value: isSet(object.value) ? bytesFromBase64(object.value) : new Uint8Array(0),
     };
   },
 
@@ -5146,7 +5146,7 @@ export const TestAllTypesProto3_MapStringBytesEntry = {
     const obj: any = {};
     message.key !== undefined && (obj.key = message.key);
     message.value !== undefined &&
-      (obj.value = base64FromBytes(message.value !== undefined ? message.value : new Uint8Array()));
+      (obj.value = base64FromBytes(message.value !== undefined ? message.value : new Uint8Array(0)));
     return obj;
   },
 
@@ -5161,7 +5161,7 @@ export const TestAllTypesProto3_MapStringBytesEntry = {
   ): TestAllTypesProto3_MapStringBytesEntry {
     const message = createBaseTestAllTypesProto3_MapStringBytesEntry();
     message.key = object.key ?? "";
-    message.value = object.value ?? new Uint8Array();
+    message.value = object.value ?? new Uint8Array(0);
     return message;
   },
 };

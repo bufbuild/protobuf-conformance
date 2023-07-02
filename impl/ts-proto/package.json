@@ -9,6 +9,6 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
-    "ts-proto": "^1.148.1"
+    "ts-proto": "^1.150.1"
   }
 }
