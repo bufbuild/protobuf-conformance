@@ -135,14 +135,15 @@ export const DoubleValue = {
 
   toJSON(message: DoubleValue): unknown {
     const obj: any = {};
-    message.value !== undefined && (obj.value = message.value);
+    if (message.value !== 0) {
+      obj.value = message.value;
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<DoubleValue>, I>>(base?: I): DoubleValue {
-    return DoubleValue.fromPartial(base ?? {});
+    return DoubleValue.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<DoubleValue>, I>>(object: I): DoubleValue {
     const message = createBaseDoubleValue();
     message.value = object.value ?? 0;
@@ -191,14 +192,15 @@ export const FloatValue = {
 
   toJSON(message: FloatValue): unknown {
     const obj: any = {};
-    message.value !== undefined && (obj.value = message.value);
+    if (message.value !== 0) {
+      obj.value = message.value;
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<FloatValue>, I>>(base?: I): FloatValue {
-    return FloatValue.fromPartial(base ?? {});
+    return FloatValue.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<FloatValue>, I>>(object: I): FloatValue {
     const message = createBaseFloatValue();
     message.value = object.value ?? 0;
@@ -247,14 +249,15 @@ export const Int64Value = {
 
   toJSON(message: Int64Value): unknown {
     const obj: any = {};
-    message.value !== undefined && (obj.value = Math.round(message.value));
+    if (message.value !== 0) {
+      obj.value = Math.round(message.value);
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<Int64Value>, I>>(base?: I): Int64Value {
-    return Int64Value.fromPartial(base ?? {});
+    return Int64Value.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<Int64Value>, I>>(object: I): Int64Value {
     const message = createBaseInt64Value();
     message.value = object.value ?? 0;
@@ -303,14 +306,15 @@ export const UInt64Value = {
 
   toJSON(message: UInt64Value): unknown {
     const obj: any = {};
-    message.value !== undefined && (obj.value = Math.round(message.value));
+    if (message.value !== 0) {
+      obj.value = Math.round(message.value);
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<UInt64Value>, I>>(base?: I): UInt64Value {
-    return UInt64Value.fromPartial(base ?? {});
+    return UInt64Value.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<UInt64Value>, I>>(object: I): UInt64Value {
     const message = createBaseUInt64Value();
     message.value = object.value ?? 0;
@@ -359,14 +363,15 @@ export const Int32Value = {
 
   toJSON(message: Int32Value): unknown {
     const obj: any = {};
-    message.value !== undefined && (obj.value = Math.round(message.value));
+    if (message.value !== 0) {
+      obj.value = Math.round(message.value);
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<Int32Value>, I>>(base?: I): Int32Value {
-    return Int32Value.fromPartial(base ?? {});
+    return Int32Value.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<Int32Value>, I>>(object: I): Int32Value {
     const message = createBaseInt32Value();
     message.value = object.value ?? 0;
@@ -415,14 +420,15 @@ export const UInt32Value = {
 
   toJSON(message: UInt32Value): unknown {
     const obj: any = {};
-    message.value !== undefined && (obj.value = Math.round(message.value));
+    if (message.value !== 0) {
+      obj.value = Math.round(message.value);
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<UInt32Value>, I>>(base?: I): UInt32Value {
-    return UInt32Value.fromPartial(base ?? {});
+    return UInt32Value.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<UInt32Value>, I>>(object: I): UInt32Value {
     const message = createBaseUInt32Value();
     message.value = object.value ?? 0;
@@ -471,14 +477,15 @@ export const BoolValue = {
 
   toJSON(message: BoolValue): unknown {
     const obj: any = {};
-    message.value !== undefined && (obj.value = message.value);
+    if (message.value === true) {
+      obj.value = message.value;
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<BoolValue>, I>>(base?: I): BoolValue {
-    return BoolValue.fromPartial(base ?? {});
+    return BoolValue.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<BoolValue>, I>>(object: I): BoolValue {
     const message = createBaseBoolValue();
     message.value = object.value ?? false;
@@ -527,14 +534,15 @@ export const StringValue = {
 
   toJSON(message: StringValue): unknown {
     const obj: any = {};
-    message.value !== undefined && (obj.value = message.value);
+    if (message.value !== "") {
+      obj.value = message.value;
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<StringValue>, I>>(base?: I): StringValue {
-    return StringValue.fromPartial(base ?? {});
+    return StringValue.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<StringValue>, I>>(object: I): StringValue {
     const message = createBaseStringValue();
     message.value = object.value ?? "";
@@ -583,15 +591,15 @@ export const BytesValue = {
 
   toJSON(message: BytesValue): unknown {
     const obj: any = {};
-    message.value !== undefined &&
-      (obj.value = base64FromBytes(message.value !== undefined ? message.value : new Uint8Array(0)));
+    if (message.value.length !== 0) {
+      obj.value = base64FromBytes(message.value);
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<BytesValue>, I>>(base?: I): BytesValue {
-    return BytesValue.fromPartial(base ?? {});
+    return BytesValue.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<BytesValue>, I>>(object: I): BytesValue {
     const message = createBaseBytesValue();
     message.value = object.value ?? new Uint8Array(0);
@@ -599,10 +607,10 @@ export const BytesValue = {
   },
 };
 
-declare var self: any | undefined;
-declare var window: any | undefined;
-declare var global: any | undefined;
-var tsProtoGlobalThis: any = (() => {
+declare const self: any | undefined;
+declare const window: any | undefined;
+declare const global: any | undefined;
+const tsProtoGlobalThis: any = (() => {
   if (typeof globalThis !== "undefined") {
     return globalThis;
   }

@@ -173,7 +173,8 @@ export interface TestAllTypesProto3 {
     | { $case: "oneofFloat"; oneofFloat: number }
     | { $case: "oneofDouble"; oneofDouble: number }
     | { $case: "oneofEnum"; oneofEnum: TestAllTypesProto3_NestedEnum }
-    | { $case: "oneofNullValue"; oneofNullValue: NullValue };
+    | { $case: "oneofNullValue"; oneofNullValue: NullValue }
+    | undefined;
   /** Well-known types */
   optionalBoolWrapper: boolean | undefined;
   optionalInt32Wrapper: number | undefined;
@@ -3073,547 +3074,522 @@ export const TestAllTypesProto3 = {
 
   toJSON(message: TestAllTypesProto3): unknown {
     const obj: any = {};
-    message.optionalInt32 !== undefined && (obj.optionalInt32 = Math.round(message.optionalInt32));
-    message.optionalInt64 !== undefined && (obj.optionalInt64 = Math.round(message.optionalInt64));
-    message.optionalUint32 !== undefined && (obj.optionalUint32 = Math.round(message.optionalUint32));
-    message.optionalUint64 !== undefined && (obj.optionalUint64 = Math.round(message.optionalUint64));
-    message.optionalSint32 !== undefined && (obj.optionalSint32 = Math.round(message.optionalSint32));
-    message.optionalSint64 !== undefined && (obj.optionalSint64 = Math.round(message.optionalSint64));
-    message.optionalFixed32 !== undefined && (obj.optionalFixed32 = Math.round(message.optionalFixed32));
-    message.optionalFixed64 !== undefined && (obj.optionalFixed64 = Math.round(message.optionalFixed64));
-    message.optionalSfixed32 !== undefined && (obj.optionalSfixed32 = Math.round(message.optionalSfixed32));
-    message.optionalSfixed64 !== undefined && (obj.optionalSfixed64 = Math.round(message.optionalSfixed64));
-    message.optionalFloat !== undefined && (obj.optionalFloat = message.optionalFloat);
-    message.optionalDouble !== undefined && (obj.optionalDouble = message.optionalDouble);
-    message.optionalBool !== undefined && (obj.optionalBool = message.optionalBool);
-    message.optionalString !== undefined && (obj.optionalString = message.optionalString);
-    message.optionalBytes !== undefined &&
-      (obj.optionalBytes = base64FromBytes(
-        message.optionalBytes !== undefined ? message.optionalBytes : new Uint8Array(0),
-      ));
-    message.optionalNestedMessage !== undefined && (obj.optionalNestedMessage = message.optionalNestedMessage
-      ? TestAllTypesProto3_NestedMessage.toJSON(message.optionalNestedMessage)
-      : undefined);
-    message.optionalForeignMessage !== undefined && (obj.optionalForeignMessage = message.optionalForeignMessage
-      ? ForeignMessage.toJSON(message.optionalForeignMessage)
-      : undefined);
-    message.optionalNestedEnum !== undefined &&
-      (obj.optionalNestedEnum = testAllTypesProto3_NestedEnumToJSON(message.optionalNestedEnum));
-    message.optionalForeignEnum !== undefined &&
-      (obj.optionalForeignEnum = foreignEnumToJSON(message.optionalForeignEnum));
-    message.optionalAliasedEnum !== undefined &&
-      (obj.optionalAliasedEnum = testAllTypesProto3_AliasedEnumToJSON(message.optionalAliasedEnum));
-    message.optionalStringPiece !== undefined && (obj.optionalStringPiece = message.optionalStringPiece);
-    message.optionalCord !== undefined && (obj.optionalCord = message.optionalCord);
-    message.recursiveMessage !== undefined &&
-      (obj.recursiveMessage = message.recursiveMessage
-        ? TestAllTypesProto3.toJSON(message.recursiveMessage)
-        : undefined);
-    if (message.repeatedInt32) {
+    if (message.optionalInt32 !== 0) {
+      obj.optionalInt32 = Math.round(message.optionalInt32);
+    }
+    if (message.optionalInt64 !== 0) {
+      obj.optionalInt64 = Math.round(message.optionalInt64);
+    }
+    if (message.optionalUint32 !== 0) {
+      obj.optionalUint32 = Math.round(message.optionalUint32);
+    }
+    if (message.optionalUint64 !== 0) {
+      obj.optionalUint64 = Math.round(message.optionalUint64);
+    }
+    if (message.optionalSint32 !== 0) {
+      obj.optionalSint32 = Math.round(message.optionalSint32);
+    }
+    if (message.optionalSint64 !== 0) {
+      obj.optionalSint64 = Math.round(message.optionalSint64);
+    }
+    if (message.optionalFixed32 !== 0) {
+      obj.optionalFixed32 = Math.round(message.optionalFixed32);
+    }
+    if (message.optionalFixed64 !== 0) {
+      obj.optionalFixed64 = Math.round(message.optionalFixed64);
+    }
+    if (message.optionalSfixed32 !== 0) {
+      obj.optionalSfixed32 = Math.round(message.optionalSfixed32);
+    }
+    if (message.optionalSfixed64 !== 0) {
+      obj.optionalSfixed64 = Math.round(message.optionalSfixed64);
+    }
+    if (message.optionalFloat !== 0) {
+      obj.optionalFloat = message.optionalFloat;
+    }
+    if (message.optionalDouble !== 0) {
+      obj.optionalDouble = message.optionalDouble;
+    }
+    if (message.optionalBool === true) {
+      obj.optionalBool = message.optionalBool;
+    }
+    if (message.optionalString !== "") {
+      obj.optionalString = message.optionalString;
+    }
+    if (message.optionalBytes.length !== 0) {
+      obj.optionalBytes = base64FromBytes(message.optionalBytes);
+    }
+    if (message.optionalNestedMessage !== undefined) {
+      obj.optionalNestedMessage = TestAllTypesProto3_NestedMessage.toJSON(message.optionalNestedMessage);
+    }
+    if (message.optionalForeignMessage !== undefined) {
+      obj.optionalForeignMessage = ForeignMessage.toJSON(message.optionalForeignMessage);
+    }
+    if (message.optionalNestedEnum !== 0) {
+      obj.optionalNestedEnum = testAllTypesProto3_NestedEnumToJSON(message.optionalNestedEnum);
+    }
+    if (message.optionalForeignEnum !== 0) {
+      obj.optionalForeignEnum = foreignEnumToJSON(message.optionalForeignEnum);
+    }
+    if (message.optionalAliasedEnum !== 0) {
+      obj.optionalAliasedEnum = testAllTypesProto3_AliasedEnumToJSON(message.optionalAliasedEnum);
+    }
+    if (message.optionalStringPiece !== "") {
+      obj.optionalStringPiece = message.optionalStringPiece;
+    }
+    if (message.optionalCord !== "") {
+      obj.optionalCord = message.optionalCord;
+    }
+    if (message.recursiveMessage !== undefined) {
+      obj.recursiveMessage = TestAllTypesProto3.toJSON(message.recursiveMessage);
+    }
+    if (message.repeatedInt32?.length) {
       obj.repeatedInt32 = message.repeatedInt32.map((e) => Math.round(e));
-    } else {
-      obj.repeatedInt32 = [];
     }
-    if (message.repeatedInt64) {
+    if (message.repeatedInt64?.length) {
       obj.repeatedInt64 = message.repeatedInt64.map((e) => Math.round(e));
-    } else {
-      obj.repeatedInt64 = [];
     }
-    if (message.repeatedUint32) {
+    if (message.repeatedUint32?.length) {
       obj.repeatedUint32 = message.repeatedUint32.map((e) => Math.round(e));
-    } else {
-      obj.repeatedUint32 = [];
     }
-    if (message.repeatedUint64) {
+    if (message.repeatedUint64?.length) {
       obj.repeatedUint64 = message.repeatedUint64.map((e) => Math.round(e));
-    } else {
-      obj.repeatedUint64 = [];
     }
-    if (message.repeatedSint32) {
+    if (message.repeatedSint32?.length) {
       obj.repeatedSint32 = message.repeatedSint32.map((e) => Math.round(e));
-    } else {
-      obj.repeatedSint32 = [];
     }
-    if (message.repeatedSint64) {
+    if (message.repeatedSint64?.length) {
       obj.repeatedSint64 = message.repeatedSint64.map((e) => Math.round(e));
-    } else {
-      obj.repeatedSint64 = [];
     }
-    if (message.repeatedFixed32) {
+    if (message.repeatedFixed32?.length) {
       obj.repeatedFixed32 = message.repeatedFixed32.map((e) => Math.round(e));
-    } else {
-      obj.repeatedFixed32 = [];
     }
-    if (message.repeatedFixed64) {
+    if (message.repeatedFixed64?.length) {
       obj.repeatedFixed64 = message.repeatedFixed64.map((e) => Math.round(e));
-    } else {
-      obj.repeatedFixed64 = [];
     }
-    if (message.repeatedSfixed32) {
+    if (message.repeatedSfixed32?.length) {
       obj.repeatedSfixed32 = message.repeatedSfixed32.map((e) => Math.round(e));
-    } else {
-      obj.repeatedSfixed32 = [];
     }
-    if (message.repeatedSfixed64) {
+    if (message.repeatedSfixed64?.length) {
       obj.repeatedSfixed64 = message.repeatedSfixed64.map((e) => Math.round(e));
-    } else {
-      obj.repeatedSfixed64 = [];
     }
-    if (message.repeatedFloat) {
-      obj.repeatedFloat = message.repeatedFloat.map((e) => e);
-    } else {
-      obj.repeatedFloat = [];
+    if (message.repeatedFloat?.length) {
+      obj.repeatedFloat = message.repeatedFloat;
     }
-    if (message.repeatedDouble) {
-      obj.repeatedDouble = message.repeatedDouble.map((e) => e);
-    } else {
-      obj.repeatedDouble = [];
+    if (message.repeatedDouble?.length) {
+      obj.repeatedDouble = message.repeatedDouble;
     }
-    if (message.repeatedBool) {
-      obj.repeatedBool = message.repeatedBool.map((e) => e);
-    } else {
-      obj.repeatedBool = [];
+    if (message.repeatedBool?.length) {
+      obj.repeatedBool = message.repeatedBool;
     }
-    if (message.repeatedString) {
-      obj.repeatedString = message.repeatedString.map((e) => e);
-    } else {
-      obj.repeatedString = [];
+    if (message.repeatedString?.length) {
+      obj.repeatedString = message.repeatedString;
     }
-    if (message.repeatedBytes) {
-      obj.repeatedBytes = message.repeatedBytes.map((e) => base64FromBytes(e !== undefined ? e : new Uint8Array(0)));
-    } else {
-      obj.repeatedBytes = [];
+    if (message.repeatedBytes?.length) {
+      obj.repeatedBytes = message.repeatedBytes.map((e) => base64FromBytes(e));
     }
-    if (message.repeatedNestedMessage) {
-      obj.repeatedNestedMessage = message.repeatedNestedMessage.map((e) =>
-        e ? TestAllTypesProto3_NestedMessage.toJSON(e) : undefined
-      );
-    } else {
-      obj.repeatedNestedMessage = [];
+    if (message.repeatedNestedMessage?.length) {
+      obj.repeatedNestedMessage = message.repeatedNestedMessage.map((e) => TestAllTypesProto3_NestedMessage.toJSON(e));
     }
-    if (message.repeatedForeignMessage) {
-      obj.repeatedForeignMessage = message.repeatedForeignMessage.map((e) => e ? ForeignMessage.toJSON(e) : undefined);
-    } else {
-      obj.repeatedForeignMessage = [];
+    if (message.repeatedForeignMessage?.length) {
+      obj.repeatedForeignMessage = message.repeatedForeignMessage.map((e) => ForeignMessage.toJSON(e));
     }
-    if (message.repeatedNestedEnum) {
+    if (message.repeatedNestedEnum?.length) {
       obj.repeatedNestedEnum = message.repeatedNestedEnum.map((e) => testAllTypesProto3_NestedEnumToJSON(e));
-    } else {
-      obj.repeatedNestedEnum = [];
     }
-    if (message.repeatedForeignEnum) {
+    if (message.repeatedForeignEnum?.length) {
       obj.repeatedForeignEnum = message.repeatedForeignEnum.map((e) => foreignEnumToJSON(e));
-    } else {
-      obj.repeatedForeignEnum = [];
     }
-    if (message.repeatedStringPiece) {
-      obj.repeatedStringPiece = message.repeatedStringPiece.map((e) => e);
-    } else {
-      obj.repeatedStringPiece = [];
+    if (message.repeatedStringPiece?.length) {
+      obj.repeatedStringPiece = message.repeatedStringPiece;
     }
-    if (message.repeatedCord) {
-      obj.repeatedCord = message.repeatedCord.map((e) => e);
-    } else {
-      obj.repeatedCord = [];
+    if (message.repeatedCord?.length) {
+      obj.repeatedCord = message.repeatedCord;
     }
-    if (message.packedInt32) {
+    if (message.packedInt32?.length) {
       obj.packedInt32 = message.packedInt32.map((e) => Math.round(e));
-    } else {
-      obj.packedInt32 = [];
     }
-    if (message.packedInt64) {
+    if (message.packedInt64?.length) {
       obj.packedInt64 = message.packedInt64.map((e) => Math.round(e));
-    } else {
-      obj.packedInt64 = [];
     }
-    if (message.packedUint32) {
+    if (message.packedUint32?.length) {
       obj.packedUint32 = message.packedUint32.map((e) => Math.round(e));
-    } else {
-      obj.packedUint32 = [];
     }
-    if (message.packedUint64) {
+    if (message.packedUint64?.length) {
       obj.packedUint64 = message.packedUint64.map((e) => Math.round(e));
-    } else {
-      obj.packedUint64 = [];
     }
-    if (message.packedSint32) {
+    if (message.packedSint32?.length) {
       obj.packedSint32 = message.packedSint32.map((e) => Math.round(e));
-    } else {
-      obj.packedSint32 = [];
     }
-    if (message.packedSint64) {
+    if (message.packedSint64?.length) {
       obj.packedSint64 = message.packedSint64.map((e) => Math.round(e));
-    } else {
-      obj.packedSint64 = [];
     }
-    if (message.packedFixed32) {
+    if (message.packedFixed32?.length) {
       obj.packedFixed32 = message.packedFixed32.map((e) => Math.round(e));
-    } else {
-      obj.packedFixed32 = [];
     }
-    if (message.packedFixed64) {
+    if (message.packedFixed64?.length) {
       obj.packedFixed64 = message.packedFixed64.map((e) => Math.round(e));
-    } else {
-      obj.packedFixed64 = [];
     }
-    if (message.packedSfixed32) {
+    if (message.packedSfixed32?.length) {
       obj.packedSfixed32 = message.packedSfixed32.map((e) => Math.round(e));
-    } else {
-      obj.packedSfixed32 = [];
     }
-    if (message.packedSfixed64) {
+    if (message.packedSfixed64?.length) {
       obj.packedSfixed64 = message.packedSfixed64.map((e) => Math.round(e));
-    } else {
-      obj.packedSfixed64 = [];
     }
-    if (message.packedFloat) {
-      obj.packedFloat = message.packedFloat.map((e) => e);
-    } else {
-      obj.packedFloat = [];
+    if (message.packedFloat?.length) {
+      obj.packedFloat = message.packedFloat;
     }
-    if (message.packedDouble) {
-      obj.packedDouble = message.packedDouble.map((e) => e);
-    } else {
-      obj.packedDouble = [];
+    if (message.packedDouble?.length) {
+      obj.packedDouble = message.packedDouble;
     }
-    if (message.packedBool) {
-      obj.packedBool = message.packedBool.map((e) => e);
-    } else {
-      obj.packedBool = [];
+    if (message.packedBool?.length) {
+      obj.packedBool = message.packedBool;
     }
-    if (message.packedNestedEnum) {
+    if (message.packedNestedEnum?.length) {
       obj.packedNestedEnum = message.packedNestedEnum.map((e) => testAllTypesProto3_NestedEnumToJSON(e));
-    } else {
-      obj.packedNestedEnum = [];
     }
-    if (message.unpackedInt32) {
+    if (message.unpackedInt32?.length) {
       obj.unpackedInt32 = message.unpackedInt32.map((e) => Math.round(e));
-    } else {
-      obj.unpackedInt32 = [];
     }
-    if (message.unpackedInt64) {
+    if (message.unpackedInt64?.length) {
       obj.unpackedInt64 = message.unpackedInt64.map((e) => Math.round(e));
-    } else {
-      obj.unpackedInt64 = [];
     }
-    if (message.unpackedUint32) {
+    if (message.unpackedUint32?.length) {
       obj.unpackedUint32 = message.unpackedUint32.map((e) => Math.round(e));
-    } else {
-      obj.unpackedUint32 = [];
     }
-    if (message.unpackedUint64) {
+    if (message.unpackedUint64?.length) {
       obj.unpackedUint64 = message.unpackedUint64.map((e) => Math.round(e));
-    } else {
-      obj.unpackedUint64 = [];
     }
-    if (message.unpackedSint32) {
+    if (message.unpackedSint32?.length) {
       obj.unpackedSint32 = message.unpackedSint32.map((e) => Math.round(e));
-    } else {
-      obj.unpackedSint32 = [];
     }
-    if (message.unpackedSint64) {
+    if (message.unpackedSint64?.length) {
       obj.unpackedSint64 = message.unpackedSint64.map((e) => Math.round(e));
-    } else {
-      obj.unpackedSint64 = [];
     }
-    if (message.unpackedFixed32) {
+    if (message.unpackedFixed32?.length) {
       obj.unpackedFixed32 = message.unpackedFixed32.map((e) => Math.round(e));
-    } else {
-      obj.unpackedFixed32 = [];
     }
-    if (message.unpackedFixed64) {
+    if (message.unpackedFixed64?.length) {
       obj.unpackedFixed64 = message.unpackedFixed64.map((e) => Math.round(e));
-    } else {
-      obj.unpackedFixed64 = [];
     }
-    if (message.unpackedSfixed32) {
+    if (message.unpackedSfixed32?.length) {
       obj.unpackedSfixed32 = message.unpackedSfixed32.map((e) => Math.round(e));
-    } else {
-      obj.unpackedSfixed32 = [];
     }
-    if (message.unpackedSfixed64) {
+    if (message.unpackedSfixed64?.length) {
       obj.unpackedSfixed64 = message.unpackedSfixed64.map((e) => Math.round(e));
-    } else {
-      obj.unpackedSfixed64 = [];
     }
-    if (message.unpackedFloat) {
-      obj.unpackedFloat = message.unpackedFloat.map((e) => e);
-    } else {
-      obj.unpackedFloat = [];
+    if (message.unpackedFloat?.length) {
+      obj.unpackedFloat = message.unpackedFloat;
     }
-    if (message.unpackedDouble) {
-      obj.unpackedDouble = message.unpackedDouble.map((e) => e);
-    } else {
-      obj.unpackedDouble = [];
+    if (message.unpackedDouble?.length) {
+      obj.unpackedDouble = message.unpackedDouble;
     }
-    if (message.unpackedBool) {
-      obj.unpackedBool = message.unpackedBool.map((e) => e);
-    } else {
-      obj.unpackedBool = [];
+    if (message.unpackedBool?.length) {
+      obj.unpackedBool = message.unpackedBool;
     }
-    if (message.unpackedNestedEnum) {
+    if (message.unpackedNestedEnum?.length) {
       obj.unpackedNestedEnum = message.unpackedNestedEnum.map((e) => testAllTypesProto3_NestedEnumToJSON(e));
-    } else {
-      obj.unpackedNestedEnum = [];
     }
-    obj.mapInt32Int32 = {};
-    if (message.mapInt32Int32) {
+    if (message.mapInt32Int32?.size) {
+      obj.mapInt32Int32 = {};
       message.mapInt32Int32.forEach((v, k) => {
         obj.mapInt32Int32[k] = Math.round(v);
       });
     }
-    obj.mapInt64Int64 = {};
-    if (message.mapInt64Int64) {
+    if (message.mapInt64Int64?.size) {
+      obj.mapInt64Int64 = {};
       message.mapInt64Int64.forEach((v, k) => {
         obj.mapInt64Int64[k] = Math.round(v);
       });
     }
-    obj.mapUint32Uint32 = {};
-    if (message.mapUint32Uint32) {
+    if (message.mapUint32Uint32?.size) {
+      obj.mapUint32Uint32 = {};
       message.mapUint32Uint32.forEach((v, k) => {
         obj.mapUint32Uint32[k] = Math.round(v);
       });
     }
-    obj.mapUint64Uint64 = {};
-    if (message.mapUint64Uint64) {
+    if (message.mapUint64Uint64?.size) {
+      obj.mapUint64Uint64 = {};
       message.mapUint64Uint64.forEach((v, k) => {
         obj.mapUint64Uint64[k] = Math.round(v);
       });
     }
-    obj.mapSint32Sint32 = {};
-    if (message.mapSint32Sint32) {
+    if (message.mapSint32Sint32?.size) {
+      obj.mapSint32Sint32 = {};
       message.mapSint32Sint32.forEach((v, k) => {
         obj.mapSint32Sint32[k] = Math.round(v);
       });
     }
-    obj.mapSint64Sint64 = {};
-    if (message.mapSint64Sint64) {
+    if (message.mapSint64Sint64?.size) {
+      obj.mapSint64Sint64 = {};
       message.mapSint64Sint64.forEach((v, k) => {
         obj.mapSint64Sint64[k] = Math.round(v);
       });
     }
-    obj.mapFixed32Fixed32 = {};
-    if (message.mapFixed32Fixed32) {
+    if (message.mapFixed32Fixed32?.size) {
+      obj.mapFixed32Fixed32 = {};
       message.mapFixed32Fixed32.forEach((v, k) => {
         obj.mapFixed32Fixed32[k] = Math.round(v);
       });
     }
-    obj.mapFixed64Fixed64 = {};
-    if (message.mapFixed64Fixed64) {
+    if (message.mapFixed64Fixed64?.size) {
+      obj.mapFixed64Fixed64 = {};
       message.mapFixed64Fixed64.forEach((v, k) => {
         obj.mapFixed64Fixed64[k] = Math.round(v);
       });
     }
-    obj.mapSfixed32Sfixed32 = {};
-    if (message.mapSfixed32Sfixed32) {
+    if (message.mapSfixed32Sfixed32?.size) {
+      obj.mapSfixed32Sfixed32 = {};
       message.mapSfixed32Sfixed32.forEach((v, k) => {
         obj.mapSfixed32Sfixed32[k] = Math.round(v);
       });
     }
-    obj.mapSfixed64Sfixed64 = {};
-    if (message.mapSfixed64Sfixed64) {
+    if (message.mapSfixed64Sfixed64?.size) {
+      obj.mapSfixed64Sfixed64 = {};
       message.mapSfixed64Sfixed64.forEach((v, k) => {
         obj.mapSfixed64Sfixed64[k] = Math.round(v);
       });
     }
-    obj.mapInt32Float = {};
-    if (message.mapInt32Float) {
+    if (message.mapInt32Float?.size) {
+      obj.mapInt32Float = {};
       message.mapInt32Float.forEach((v, k) => {
         obj.mapInt32Float[k] = v;
       });
     }
-    obj.mapInt32Double = {};
-    if (message.mapInt32Double) {
+    if (message.mapInt32Double?.size) {
+      obj.mapInt32Double = {};
       message.mapInt32Double.forEach((v, k) => {
         obj.mapInt32Double[k] = v;
       });
     }
-    obj.mapBoolBool = {};
-    if (message.mapBoolBool) {
+    if (message.mapBoolBool?.size) {
+      obj.mapBoolBool = {};
       message.mapBoolBool.forEach((v, k) => {
         obj.mapBoolBool[k] = v;
       });
     }
-    obj.mapStringString = {};
-    if (message.mapStringString) {
+    if (message.mapStringString?.size) {
+      obj.mapStringString = {};
       message.mapStringString.forEach((v, k) => {
         obj.mapStringString[k] = v;
       });
     }
-    obj.mapStringBytes = {};
-    if (message.mapStringBytes) {
+    if (message.mapStringBytes?.size) {
+      obj.mapStringBytes = {};
       message.mapStringBytes.forEach((v, k) => {
         obj.mapStringBytes[k] = base64FromBytes(v);
       });
     }
-    obj.mapStringNestedMessage = {};
-    if (message.mapStringNestedMessage) {
+    if (message.mapStringNestedMessage?.size) {
+      obj.mapStringNestedMessage = {};
       message.mapStringNestedMessage.forEach((v, k) => {
         obj.mapStringNestedMessage[k] = TestAllTypesProto3_NestedMessage.toJSON(v);
       });
     }
-    obj.mapStringForeignMessage = {};
-    if (message.mapStringForeignMessage) {
+    if (message.mapStringForeignMessage?.size) {
+      obj.mapStringForeignMessage = {};
       message.mapStringForeignMessage.forEach((v, k) => {
         obj.mapStringForeignMessage[k] = ForeignMessage.toJSON(v);
       });
     }
-    obj.mapStringNestedEnum = {};
-    if (message.mapStringNestedEnum) {
+    if (message.mapStringNestedEnum?.size) {
+      obj.mapStringNestedEnum = {};
       message.mapStringNestedEnum.forEach((v, k) => {
         obj.mapStringNestedEnum[k] = testAllTypesProto3_NestedEnumToJSON(v);
       });
     }
-    obj.mapStringForeignEnum = {};
-    if (message.mapStringForeignEnum) {
+    if (message.mapStringForeignEnum?.size) {
+      obj.mapStringForeignEnum = {};
       message.mapStringForeignEnum.forEach((v, k) => {
         obj.mapStringForeignEnum[k] = foreignEnumToJSON(v);
       });
     }
-    message.oneofField?.$case === "oneofUint32" && (obj.oneofUint32 = Math.round(message.oneofField?.oneofUint32));
-    message.oneofField?.$case === "oneofNestedMessage" &&
-      (obj.oneofNestedMessage = message.oneofField?.oneofNestedMessage
-        ? TestAllTypesProto3_NestedMessage.toJSON(message.oneofField?.oneofNestedMessage)
-        : undefined);
-    message.oneofField?.$case === "oneofString" && (obj.oneofString = message.oneofField?.oneofString);
-    message.oneofField?.$case === "oneofBytes" && (obj.oneofBytes = message.oneofField?.oneofBytes !== undefined
-      ? base64FromBytes(message.oneofField?.oneofBytes)
-      : undefined);
-    message.oneofField?.$case === "oneofBool" && (obj.oneofBool = message.oneofField?.oneofBool);
-    message.oneofField?.$case === "oneofUint64" && (obj.oneofUint64 = Math.round(message.oneofField?.oneofUint64));
-    message.oneofField?.$case === "oneofFloat" && (obj.oneofFloat = message.oneofField?.oneofFloat);
-    message.oneofField?.$case === "oneofDouble" && (obj.oneofDouble = message.oneofField?.oneofDouble);
-    message.oneofField?.$case === "oneofEnum" && (obj.oneofEnum = message.oneofField?.oneofEnum !== undefined
-      ? testAllTypesProto3_NestedEnumToJSON(message.oneofField?.oneofEnum)
-      : undefined);
-    message.oneofField?.$case === "oneofNullValue" &&
-      (obj.oneofNullValue = message.oneofField?.oneofNullValue !== undefined
-        ? nullValueToJSON(message.oneofField?.oneofNullValue)
-        : undefined);
-    message.optionalBoolWrapper !== undefined && (obj.optionalBoolWrapper = message.optionalBoolWrapper);
-    message.optionalInt32Wrapper !== undefined && (obj.optionalInt32Wrapper = message.optionalInt32Wrapper);
-    message.optionalInt64Wrapper !== undefined && (obj.optionalInt64Wrapper = message.optionalInt64Wrapper);
-    message.optionalUint32Wrapper !== undefined && (obj.optionalUint32Wrapper = message.optionalUint32Wrapper);
-    message.optionalUint64Wrapper !== undefined && (obj.optionalUint64Wrapper = message.optionalUint64Wrapper);
-    message.optionalFloatWrapper !== undefined && (obj.optionalFloatWrapper = message.optionalFloatWrapper);
-    message.optionalDoubleWrapper !== undefined && (obj.optionalDoubleWrapper = message.optionalDoubleWrapper);
-    message.optionalStringWrapper !== undefined && (obj.optionalStringWrapper = message.optionalStringWrapper);
-    message.optionalBytesWrapper !== undefined && (obj.optionalBytesWrapper = message.optionalBytesWrapper);
-    if (message.repeatedBoolWrapper) {
-      obj.repeatedBoolWrapper = message.repeatedBoolWrapper.map((e) => e);
-    } else {
-      obj.repeatedBoolWrapper = [];
+    if (message.oneofField?.$case === "oneofUint32") {
+      obj.oneofUint32 = Math.round(message.oneofField.oneofUint32);
     }
-    if (message.repeatedInt32Wrapper) {
-      obj.repeatedInt32Wrapper = message.repeatedInt32Wrapper.map((e) => e);
-    } else {
-      obj.repeatedInt32Wrapper = [];
+    if (message.oneofField?.$case === "oneofNestedMessage") {
+      obj.oneofNestedMessage = TestAllTypesProto3_NestedMessage.toJSON(message.oneofField.oneofNestedMessage);
     }
-    if (message.repeatedInt64Wrapper) {
-      obj.repeatedInt64Wrapper = message.repeatedInt64Wrapper.map((e) => e);
-    } else {
-      obj.repeatedInt64Wrapper = [];
+    if (message.oneofField?.$case === "oneofString") {
+      obj.oneofString = message.oneofField.oneofString;
     }
-    if (message.repeatedUint32Wrapper) {
-      obj.repeatedUint32Wrapper = message.repeatedUint32Wrapper.map((e) => e);
-    } else {
-      obj.repeatedUint32Wrapper = [];
+    if (message.oneofField?.$case === "oneofBytes") {
+      obj.oneofBytes = base64FromBytes(message.oneofField.oneofBytes);
     }
-    if (message.repeatedUint64Wrapper) {
-      obj.repeatedUint64Wrapper = message.repeatedUint64Wrapper.map((e) => e);
-    } else {
-      obj.repeatedUint64Wrapper = [];
+    if (message.oneofField?.$case === "oneofBool") {
+      obj.oneofBool = message.oneofField.oneofBool;
     }
-    if (message.repeatedFloatWrapper) {
-      obj.repeatedFloatWrapper = message.repeatedFloatWrapper.map((e) => e);
-    } else {
-      obj.repeatedFloatWrapper = [];
+    if (message.oneofField?.$case === "oneofUint64") {
+      obj.oneofUint64 = Math.round(message.oneofField.oneofUint64);
     }
-    if (message.repeatedDoubleWrapper) {
-      obj.repeatedDoubleWrapper = message.repeatedDoubleWrapper.map((e) => e);
-    } else {
-      obj.repeatedDoubleWrapper = [];
+    if (message.oneofField?.$case === "oneofFloat") {
+      obj.oneofFloat = message.oneofField.oneofFloat;
     }
-    if (message.repeatedStringWrapper) {
-      obj.repeatedStringWrapper = message.repeatedStringWrapper.map((e) => e);
-    } else {
-      obj.repeatedStringWrapper = [];
+    if (message.oneofField?.$case === "oneofDouble") {
+      obj.oneofDouble = message.oneofField.oneofDouble;
     }
-    if (message.repeatedBytesWrapper) {
-      obj.repeatedBytesWrapper = message.repeatedBytesWrapper.map((e) => e);
-    } else {
-      obj.repeatedBytesWrapper = [];
+    if (message.oneofField?.$case === "oneofEnum") {
+      obj.oneofEnum = testAllTypesProto3_NestedEnumToJSON(message.oneofField.oneofEnum);
     }
-    message.optionalDuration !== undefined &&
-      (obj.optionalDuration = message.optionalDuration ? Duration.toJSON(message.optionalDuration) : undefined);
-    message.optionalTimestamp !== undefined && (obj.optionalTimestamp = message.optionalTimestamp.toISOString());
-    message.optionalFieldMask !== undefined &&
-      (obj.optionalFieldMask = FieldMask.toJSON(FieldMask.wrap(message.optionalFieldMask)));
-    message.optionalStruct !== undefined && (obj.optionalStruct = message.optionalStruct);
-    message.optionalAny !== undefined &&
-      (obj.optionalAny = message.optionalAny ? Any.toJSON(message.optionalAny) : undefined);
-    message.optionalValue !== undefined && (obj.optionalValue = message.optionalValue);
-    message.optionalNullValue !== undefined && (obj.optionalNullValue = nullValueToJSON(message.optionalNullValue));
-    if (message.repeatedDuration) {
-      obj.repeatedDuration = message.repeatedDuration.map((e) => e ? Duration.toJSON(e) : undefined);
-    } else {
-      obj.repeatedDuration = [];
+    if (message.oneofField?.$case === "oneofNullValue") {
+      obj.oneofNullValue = nullValueToJSON(message.oneofField.oneofNullValue);
     }
-    if (message.repeatedTimestamp) {
+    if (message.optionalBoolWrapper !== undefined) {
+      obj.optionalBoolWrapper = message.optionalBoolWrapper;
+    }
+    if (message.optionalInt32Wrapper !== undefined) {
+      obj.optionalInt32Wrapper = message.optionalInt32Wrapper;
+    }
+    if (message.optionalInt64Wrapper !== undefined) {
+      obj.optionalInt64Wrapper = message.optionalInt64Wrapper;
+    }
+    if (message.optionalUint32Wrapper !== undefined) {
+      obj.optionalUint32Wrapper = message.optionalUint32Wrapper;
+    }
+    if (message.optionalUint64Wrapper !== undefined) {
+      obj.optionalUint64Wrapper = message.optionalUint64Wrapper;
+    }
+    if (message.optionalFloatWrapper !== undefined) {
+      obj.optionalFloatWrapper = message.optionalFloatWrapper;
+    }
+    if (message.optionalDoubleWrapper !== undefined) {
+      obj.optionalDoubleWrapper = message.optionalDoubleWrapper;
+    }
+    if (message.optionalStringWrapper !== undefined) {
+      obj.optionalStringWrapper = message.optionalStringWrapper;
+    }
+    if (message.optionalBytesWrapper !== undefined) {
+      obj.optionalBytesWrapper = message.optionalBytesWrapper;
+    }
+    if (message.repeatedBoolWrapper?.length) {
+      obj.repeatedBoolWrapper = message.repeatedBoolWrapper;
+    }
+    if (message.repeatedInt32Wrapper?.length) {
+      obj.repeatedInt32Wrapper = message.repeatedInt32Wrapper;
+    }
+    if (message.repeatedInt64Wrapper?.length) {
+      obj.repeatedInt64Wrapper = message.repeatedInt64Wrapper;
+    }
+    if (message.repeatedUint32Wrapper?.length) {
+      obj.repeatedUint32Wrapper = message.repeatedUint32Wrapper;
+    }
+    if (message.repeatedUint64Wrapper?.length) {
+      obj.repeatedUint64Wrapper = message.repeatedUint64Wrapper;
+    }
+    if (message.repeatedFloatWrapper?.length) {
+      obj.repeatedFloatWrapper = message.repeatedFloatWrapper;
+    }
+    if (message.repeatedDoubleWrapper?.length) {
+      obj.repeatedDoubleWrapper = message.repeatedDoubleWrapper;
+    }
+    if (message.repeatedStringWrapper?.length) {
+      obj.repeatedStringWrapper = message.repeatedStringWrapper;
+    }
+    if (message.repeatedBytesWrapper?.length) {
+      obj.repeatedBytesWrapper = message.repeatedBytesWrapper;
+    }
+    if (message.optionalDuration !== undefined) {
+      obj.optionalDuration = Duration.toJSON(message.optionalDuration);
+    }
+    if (message.optionalTimestamp !== undefined) {
+      obj.optionalTimestamp = message.optionalTimestamp.toISOString();
+    }
+    if (message.optionalFieldMask !== undefined) {
+      obj.optionalFieldMask = FieldMask.toJSON(FieldMask.wrap(message.optionalFieldMask));
+    }
+    if (message.optionalStruct !== undefined) {
+      obj.optionalStruct = message.optionalStruct;
+    }
+    if (message.optionalAny !== undefined) {
+      obj.optionalAny = Any.toJSON(message.optionalAny);
+    }
+    if (message.optionalValue !== undefined) {
+      obj.optionalValue = message.optionalValue;
+    }
+    if (message.optionalNullValue !== 0) {
+      obj.optionalNullValue = nullValueToJSON(message.optionalNullValue);
+    }
+    if (message.repeatedDuration?.length) {
+      obj.repeatedDuration = message.repeatedDuration.map((e) => Duration.toJSON(e));
+    }
+    if (message.repeatedTimestamp?.length) {
       obj.repeatedTimestamp = message.repeatedTimestamp.map((e) => e.toISOString());
-    } else {
-      obj.repeatedTimestamp = [];
     }
-    if (message.repeatedFieldmask) {
+    if (message.repeatedFieldmask?.length) {
       obj.repeatedFieldmask = message.repeatedFieldmask.map((e) => FieldMask.toJSON(FieldMask.wrap(e)));
-    } else {
-      obj.repeatedFieldmask = [];
     }
-    if (message.repeatedStruct) {
-      obj.repeatedStruct = message.repeatedStruct.map((e) => e);
-    } else {
-      obj.repeatedStruct = [];
+    if (message.repeatedStruct?.length) {
+      obj.repeatedStruct = message.repeatedStruct;
     }
-    if (message.repeatedAny) {
-      obj.repeatedAny = message.repeatedAny.map((e) => e ? Any.toJSON(e) : undefined);
-    } else {
-      obj.repeatedAny = [];
+    if (message.repeatedAny?.length) {
+      obj.repeatedAny = message.repeatedAny.map((e) => Any.toJSON(e));
     }
-    if (message.repeatedValue) {
-      obj.repeatedValue = message.repeatedValue.map((e) => e);
-    } else {
-      obj.repeatedValue = [];
+    if (message.repeatedValue?.length) {
+      obj.repeatedValue = message.repeatedValue;
     }
-    if (message.repeatedListValue) {
-      obj.repeatedListValue = message.repeatedListValue.map((e) => e);
-    } else {
-      obj.repeatedListValue = [];
+    if (message.repeatedListValue?.length) {
+      obj.repeatedListValue = message.repeatedListValue;
     }
-    message.fieldname1 !== undefined && (obj.fieldname1 = Math.round(message.fieldname1));
-    message.fieldName2 !== undefined && (obj.fieldName2 = Math.round(message.fieldName2));
-    message.FieldName3 !== undefined && (obj.FieldName3 = Math.round(message.FieldName3));
-    message.fieldName4 !== undefined && (obj.fieldName4 = Math.round(message.fieldName4));
-    message.field0name5 !== undefined && (obj.field0name5 = Math.round(message.field0name5));
-    message.field0Name6 !== undefined && (obj.field0Name6 = Math.round(message.field0Name6));
-    message.fieldName7 !== undefined && (obj.fieldName7 = Math.round(message.fieldName7));
-    message.FieldName8 !== undefined && (obj.FieldName8 = Math.round(message.FieldName8));
-    message.fieldName9 !== undefined && (obj.fieldName9 = Math.round(message.fieldName9));
-    message.FieldName10 !== undefined && (obj.FieldName10 = Math.round(message.FieldName10));
-    message.fieldName11 !== undefined && (obj.FIELDNAME11 = Math.round(message.fieldName11));
-    message.FIELDName12 !== undefined && (obj.FIELDName12 = Math.round(message.FIELDName12));
-    message.FieldName13 !== undefined && (obj.FieldName13 = Math.round(message.FieldName13));
-    message.FieldName14 !== undefined && (obj.FieldName14 = Math.round(message.FieldName14));
-    message.fieldName15 !== undefined && (obj.fieldName15 = Math.round(message.fieldName15));
-    message.fieldName16 !== undefined && (obj.fieldName16 = Math.round(message.fieldName16));
-    message.fieldName17 !== undefined && (obj.fieldName17 = Math.round(message.fieldName17));
-    message.FieldName18 !== undefined && (obj.FieldName18 = Math.round(message.FieldName18));
+    if (message.fieldname1 !== 0) {
+      obj.fieldname1 = Math.round(message.fieldname1);
+    }
+    if (message.fieldName2 !== 0) {
+      obj.fieldName2 = Math.round(message.fieldName2);
+    }
+    if (message.FieldName3 !== 0) {
+      obj.FieldName3 = Math.round(message.FieldName3);
+    }
+    if (message.fieldName4 !== 0) {
+      obj.fieldName4 = Math.round(message.fieldName4);
+    }
+    if (message.field0name5 !== 0) {
+      obj.field0name5 = Math.round(message.field0name5);
+    }
+    if (message.field0Name6 !== 0) {
+      obj.field0Name6 = Math.round(message.field0Name6);
+    }
+    if (message.fieldName7 !== 0) {
+      obj.fieldName7 = Math.round(message.fieldName7);
+    }
+    if (message.FieldName8 !== 0) {
+      obj.FieldName8 = Math.round(message.FieldName8);
+    }
+    if (message.fieldName9 !== 0) {
+      obj.fieldName9 = Math.round(message.fieldName9);
+    }
+    if (message.FieldName10 !== 0) {
+      obj.FieldName10 = Math.round(message.FieldName10);
+    }
+    if (message.fieldName11 !== 0) {
+      obj.FIELDNAME11 = Math.round(message.fieldName11);
+    }
+    if (message.FIELDName12 !== 0) {
+      obj.FIELDName12 = Math.round(message.FIELDName12);
+    }
+    if (message.FieldName13 !== 0) {
+      obj.FieldName13 = Math.round(message.FieldName13);
+    }
+    if (message.FieldName14 !== 0) {
+      obj.FieldName14 = Math.round(message.FieldName14);
+    }
+    if (message.fieldName15 !== 0) {
+      obj.fieldName15 = Math.round(message.fieldName15);
+    }
+    if (message.fieldName16 !== 0) {
+      obj.fieldName16 = Math.round(message.fieldName16);
+    }
+    if (message.fieldName17 !== 0) {
+      obj.fieldName17 = Math.round(message.fieldName17);
+    }
+    if (message.FieldName18 !== 0) {
+      obj.FieldName18 = Math.round(message.FieldName18);
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<TestAllTypesProto3>, I>>(base?: I): TestAllTypesProto3 {
-    return TestAllTypesProto3.fromPartial(base ?? {});
+    return TestAllTypesProto3.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3>, I>>(object: I): TestAllTypesProto3 {
     const message = createBaseTestAllTypesProto3();
     message.optionalInt32 = object.optionalInt32 ?? 0;
@@ -4055,18 +4031,20 @@ export const TestAllTypesProto3_NestedMessage = {
 
   toJSON(message: TestAllTypesProto3_NestedMessage): unknown {
     const obj: any = {};
-    message.a !== undefined && (obj.a = Math.round(message.a));
-    message.corecursive !== undefined &&
-      (obj.corecursive = message.corecursive ? TestAllTypesProto3.toJSON(message.corecursive) : undefined);
+    if (message.a !== 0) {
+      obj.a = Math.round(message.a);
+    }
+    if (message.corecursive !== undefined) {
+      obj.corecursive = TestAllTypesProto3.toJSON(message.corecursive);
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<TestAllTypesProto3_NestedMessage>, I>>(
     base?: I,
   ): TestAllTypesProto3_NestedMessage {
-    return TestAllTypesProto3_NestedMessage.fromPartial(base ?? {});
+    return TestAllTypesProto3_NestedMessage.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_NestedMessage>, I>>(
     object: I,
   ): TestAllTypesProto3_NestedMessage {
@@ -4130,17 +4108,20 @@ export const TestAllTypesProto3_MapInt32Int32Entry = {
 
   toJSON(message: TestAllTypesProto3_MapInt32Int32Entry): unknown {
     const obj: any = {};
-    message.key !== undefined && (obj.key = Math.round(message.key));
-    message.value !== undefined && (obj.value = Math.round(message.value));
+    if (message.key !== 0) {
+      obj.key = Math.round(message.key);
+    }
+    if (message.value !== 0) {
+      obj.value = Math.round(message.value);
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<TestAllTypesProto3_MapInt32Int32Entry>, I>>(
     base?: I,
   ): TestAllTypesProto3_MapInt32Int32Entry {
-    return TestAllTypesProto3_MapInt32Int32Entry.fromPartial(base ?? {});
+    return TestAllTypesProto3_MapInt32Int32Entry.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapInt32Int32Entry>, I>>(
     object: I,
   ): TestAllTypesProto3_MapInt32Int32Entry {
@@ -4202,17 +4183,20 @@ export const TestAllTypesProto3_MapInt64Int64Entry = {
 
   toJSON(message: TestAllTypesProto3_MapInt64Int64Entry): unknown {
     const obj: any = {};
-    message.key !== undefined && (obj.key = Math.round(message.key));
-    message.value !== undefined && (obj.value = Math.round(message.value));
+    if (message.key !== 0) {
+      obj.key = Math.round(message.key);
+    }
+    if (message.value !== 0) {
+      obj.value = Math.round(message.value);
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<TestAllTypesProto3_MapInt64Int64Entry>, I>>(
     base?: I,
   ): TestAllTypesProto3_MapInt64Int64Entry {
-    return TestAllTypesProto3_MapInt64Int64Entry.fromPartial(base ?? {});
+    return TestAllTypesProto3_MapInt64Int64Entry.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapInt64Int64Entry>, I>>(
     object: I,
   ): TestAllTypesProto3_MapInt64Int64Entry {
@@ -4274,17 +4258,20 @@ export const TestAllTypesProto3_MapUint32Uint32Entry = {
 
   toJSON(message: TestAllTypesProto3_MapUint32Uint32Entry): unknown {
     const obj: any = {};
-    message.key !== undefined && (obj.key = Math.round(message.key));
-    message.value !== undefined && (obj.value = Math.round(message.value));
+    if (message.key !== 0) {
+      obj.key = Math.round(message.key);
+    }
+    if (message.value !== 0) {
+      obj.value = Math.round(message.value);
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<TestAllTypesProto3_MapUint32Uint32Entry>, I>>(
     base?: I,
   ): TestAllTypesProto3_MapUint32Uint32Entry {
-    return TestAllTypesProto3_MapUint32Uint32Entry.fromPartial(base ?? {});
+    return TestAllTypesProto3_MapUint32Uint32Entry.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapUint32Uint32Entry>, I>>(
     object: I,
   ): TestAllTypesProto3_MapUint32Uint32Entry {
@@ -4346,17 +4333,20 @@ export const TestAllTypesProto3_MapUint64Uint64Entry = {
 
   toJSON(message: TestAllTypesProto3_MapUint64Uint64Entry): unknown {
     const obj: any = {};
-    message.key !== undefined && (obj.key = Math.round(message.key));
-    message.value !== undefined && (obj.value = Math.round(message.value));
+    if (message.key !== 0) {
+      obj.key = Math.round(message.key);
+    }
+    if (message.value !== 0) {
+      obj.value = Math.round(message.value);
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<TestAllTypesProto3_MapUint64Uint64Entry>, I>>(
     base?: I,
   ): TestAllTypesProto3_MapUint64Uint64Entry {
-    return TestAllTypesProto3_MapUint64Uint64Entry.fromPartial(base ?? {});
+    return TestAllTypesProto3_MapUint64Uint64Entry.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapUint64Uint64Entry>, I>>(
     object: I,
   ): TestAllTypesProto3_MapUint64Uint64Entry {
@@ -4418,17 +4408,20 @@ export const TestAllTypesProto3_MapSint32Sint32Entry = {
 
   toJSON(message: TestAllTypesProto3_MapSint32Sint32Entry): unknown {
     const obj: any = {};
-    message.key !== undefined && (obj.key = Math.round(message.key));
-    message.value !== undefined && (obj.value = Math.round(message.value));
+    if (message.key !== 0) {
+      obj.key = Math.round(message.key);
+    }
+    if (message.value !== 0) {
+      obj.value = Math.round(message.value);
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<TestAllTypesProto3_MapSint32Sint32Entry>, I>>(
     base?: I,
   ): TestAllTypesProto3_MapSint32Sint32Entry {
-    return TestAllTypesProto3_MapSint32Sint32Entry.fromPartial(base ?? {});
+    return TestAllTypesProto3_MapSint32Sint32Entry.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapSint32Sint32Entry>, I>>(
     object: I,
   ): TestAllTypesProto3_MapSint32Sint32Entry {
@@ -4490,17 +4483,20 @@ export const TestAllTypesProto3_MapSint64Sint64Entry = {
 
   toJSON(message: TestAllTypesProto3_MapSint64Sint64Entry): unknown {
     const obj: any = {};
-    message.key !== undefined && (obj.key = Math.round(message.key));
-    message.value !== undefined && (obj.value = Math.round(message.value));
+    if (message.key !== 0) {
+      obj.key = Math.round(message.key);
+    }
+    if (message.value !== 0) {
+      obj.value = Math.round(message.value);
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<TestAllTypesProto3_MapSint64Sint64Entry>, I>>(
     base?: I,
   ): TestAllTypesProto3_MapSint64Sint64Entry {
-    return TestAllTypesProto3_MapSint64Sint64Entry.fromPartial(base ?? {});
+    return TestAllTypesProto3_MapSint64Sint64Entry.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapSint64Sint64Entry>, I>>(
     object: I,
   ): TestAllTypesProto3_MapSint64Sint64Entry {
@@ -4562,17 +4558,20 @@ export const TestAllTypesProto3_MapFixed32Fixed32Entry = {
 
   toJSON(message: TestAllTypesProto3_MapFixed32Fixed32Entry): unknown {
     const obj: any = {};
-    message.key !== undefined && (obj.key = Math.round(message.key));
-    message.value !== undefined && (obj.value = Math.round(message.value));
+    if (message.key !== 0) {
+      obj.key = Math.round(message.key);
+    }
+    if (message.value !== 0) {
+      obj.value = Math.round(message.value);
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<TestAllTypesProto3_MapFixed32Fixed32Entry>, I>>(
     base?: I,
   ): TestAllTypesProto3_MapFixed32Fixed32Entry {
-    return TestAllTypesProto3_MapFixed32Fixed32Entry.fromPartial(base ?? {});
+    return TestAllTypesProto3_MapFixed32Fixed32Entry.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapFixed32Fixed32Entry>, I>>(
     object: I,
   ): TestAllTypesProto3_MapFixed32Fixed32Entry {
@@ -4634,17 +4633,20 @@ export const TestAllTypesProto3_MapFixed64Fixed64Entry = {
 
   toJSON(message: TestAllTypesProto3_MapFixed64Fixed64Entry): unknown {
     const obj: any = {};
-    message.key !== undefined && (obj.key = Math.round(message.key));
-    message.value !== undefined && (obj.value = Math.round(message.value));
+    if (message.key !== 0) {
+      obj.key = Math.round(message.key);
+    }
+    if (message.value !== 0) {
+      obj.value = Math.round(message.value);
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<TestAllTypesProto3_MapFixed64Fixed64Entry>, I>>(
     base?: I,
   ): TestAllTypesProto3_MapFixed64Fixed64Entry {
-    return TestAllTypesProto3_MapFixed64Fixed64Entry.fromPartial(base ?? {});
+    return TestAllTypesProto3_MapFixed64Fixed64Entry.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapFixed64Fixed64Entry>, I>>(
     object: I,
   ): TestAllTypesProto3_MapFixed64Fixed64Entry {
@@ -4706,17 +4708,20 @@ export const TestAllTypesProto3_MapSfixed32Sfixed32Entry = {
 
   toJSON(message: TestAllTypesProto3_MapSfixed32Sfixed32Entry): unknown {
     const obj: any = {};
-    message.key !== undefined && (obj.key = Math.round(message.key));
-    message.value !== undefined && (obj.value = Math.round(message.value));
+    if (message.key !== 0) {
+      obj.key = Math.round(message.key);
+    }
+    if (message.value !== 0) {
+      obj.value = Math.round(message.value);
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<TestAllTypesProto3_MapSfixed32Sfixed32Entry>, I>>(
     base?: I,
   ): TestAllTypesProto3_MapSfixed32Sfixed32Entry {
-    return TestAllTypesProto3_MapSfixed32Sfixed32Entry.fromPartial(base ?? {});
+    return TestAllTypesProto3_MapSfixed32Sfixed32Entry.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapSfixed32Sfixed32Entry>, I>>(
     object: I,
   ): TestAllTypesProto3_MapSfixed32Sfixed32Entry {
@@ -4778,17 +4783,20 @@ export const TestAllTypesProto3_MapSfixed64Sfixed64Entry = {
 
   toJSON(message: TestAllTypesProto3_MapSfixed64Sfixed64Entry): unknown {
     const obj: any = {};
-    message.key !== undefined && (obj.key = Math.round(message.key));
-    message.value !== undefined && (obj.value = Math.round(message.value));
+    if (message.key !== 0) {
+      obj.key = Math.round(message.key);
+    }
+    if (message.value !== 0) {
+      obj.value = Math.round(message.value);
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<TestAllTypesProto3_MapSfixed64Sfixed64Entry>, I>>(
     base?: I,
   ): TestAllTypesProto3_MapSfixed64Sfixed64Entry {
-    return TestAllTypesProto3_MapSfixed64Sfixed64Entry.fromPartial(base ?? {});
+    return TestAllTypesProto3_MapSfixed64Sfixed64Entry.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapSfixed64Sfixed64Entry>, I>>(
     object: I,
   ): TestAllTypesProto3_MapSfixed64Sfixed64Entry {
@@ -4850,17 +4858,20 @@ export const TestAllTypesProto3_MapInt32FloatEntry = {
 
   toJSON(message: TestAllTypesProto3_MapInt32FloatEntry): unknown {
     const obj: any = {};
-    message.key !== undefined && (obj.key = Math.round(message.key));
-    message.value !== undefined && (obj.value = message.value);
+    if (message.key !== 0) {
+      obj.key = Math.round(message.key);
+    }
+    if (message.value !== 0) {
+      obj.value = message.value;
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<TestAllTypesProto3_MapInt32FloatEntry>, I>>(
     base?: I,
   ): TestAllTypesProto3_MapInt32FloatEntry {
-    return TestAllTypesProto3_MapInt32FloatEntry.fromPartial(base ?? {});
+    return TestAllTypesProto3_MapInt32FloatEntry.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapInt32FloatEntry>, I>>(
     object: I,
   ): TestAllTypesProto3_MapInt32FloatEntry {
@@ -4922,17 +4933,20 @@ export const TestAllTypesProto3_MapInt32DoubleEntry = {
 
   toJSON(message: TestAllTypesProto3_MapInt32DoubleEntry): unknown {
     const obj: any = {};
-    message.key !== undefined && (obj.key = Math.round(message.key));
-    message.value !== undefined && (obj.value = message.value);
+    if (message.key !== 0) {
+      obj.key = Math.round(message.key);
+    }
+    if (message.value !== 0) {
+      obj.value = message.value;
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<TestAllTypesProto3_MapInt32DoubleEntry>, I>>(
     base?: I,
   ): TestAllTypesProto3_MapInt32DoubleEntry {
-    return TestAllTypesProto3_MapInt32DoubleEntry.fromPartial(base ?? {});
+    return TestAllTypesProto3_MapInt32DoubleEntry.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapInt32DoubleEntry>, I>>(
     object: I,
   ): TestAllTypesProto3_MapInt32DoubleEntry {
@@ -4997,17 +5011,20 @@ export const TestAllTypesProto3_MapBoolBoolEntry = {
 
   toJSON(message: TestAllTypesProto3_MapBoolBoolEntry): unknown {
     const obj: any = {};
-    message.key !== undefined && (obj.key = message.key);
-    message.value !== undefined && (obj.value = message.value);
+    if (message.key === true) {
+      obj.key = message.key;
+    }
+    if (message.value === true) {
+      obj.value = message.value;
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<TestAllTypesProto3_MapBoolBoolEntry>, I>>(
     base?: I,
   ): TestAllTypesProto3_MapBoolBoolEntry {
-    return TestAllTypesProto3_MapBoolBoolEntry.fromPartial(base ?? {});
+    return TestAllTypesProto3_MapBoolBoolEntry.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapBoolBoolEntry>, I>>(
     object: I,
   ): TestAllTypesProto3_MapBoolBoolEntry {
@@ -5069,17 +5086,20 @@ export const TestAllTypesProto3_MapStringStringEntry = {
 
   toJSON(message: TestAllTypesProto3_MapStringStringEntry): unknown {
     const obj: any = {};
-    message.key !== undefined && (obj.key = message.key);
-    message.value !== undefined && (obj.value = message.value);
+    if (message.key !== "") {
+      obj.key = message.key;
+    }
+    if (message.value !== "") {
+      obj.value = message.value;
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<TestAllTypesProto3_MapStringStringEntry>, I>>(
     base?: I,
   ): TestAllTypesProto3_MapStringStringEntry {
-    return TestAllTypesProto3_MapStringStringEntry.fromPartial(base ?? {});
+    return TestAllTypesProto3_MapStringStringEntry.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapStringStringEntry>, I>>(
     object: I,
   ): TestAllTypesProto3_MapStringStringEntry {
@@ -5144,18 +5164,20 @@ export const TestAllTypesProto3_MapStringBytesEntry = {
 
   toJSON(message: TestAllTypesProto3_MapStringBytesEntry): unknown {
     const obj: any = {};
-    message.key !== undefined && (obj.key = message.key);
-    message.value !== undefined &&
-      (obj.value = base64FromBytes(message.value !== undefined ? message.value : new Uint8Array(0)));
+    if (message.key !== "") {
+      obj.key = message.key;
+    }
+    if (message.value.length !== 0) {
+      obj.value = base64FromBytes(message.value);
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<TestAllTypesProto3_MapStringBytesEntry>, I>>(
     base?: I,
   ): TestAllTypesProto3_MapStringBytesEntry {
-    return TestAllTypesProto3_MapStringBytesEntry.fromPartial(base ?? {});
+    return TestAllTypesProto3_MapStringBytesEntry.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapStringBytesEntry>, I>>(
     object: I,
   ): TestAllTypesProto3_MapStringBytesEntry {
@@ -5223,18 +5245,20 @@ export const TestAllTypesProto3_MapStringNestedMessageEntry = {
 
   toJSON(message: TestAllTypesProto3_MapStringNestedMessageEntry): unknown {
     const obj: any = {};
-    message.key !== undefined && (obj.key = message.key);
-    message.value !== undefined &&
-      (obj.value = message.value ? TestAllTypesProto3_NestedMessage.toJSON(message.value) : undefined);
+    if (message.key !== "") {
+      obj.key = message.key;
+    }
+    if (message.value !== undefined) {
+      obj.value = TestAllTypesProto3_NestedMessage.toJSON(message.value);
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<TestAllTypesProto3_MapStringNestedMessageEntry>, I>>(
     base?: I,
   ): TestAllTypesProto3_MapStringNestedMessageEntry {
-    return TestAllTypesProto3_MapStringNestedMessageEntry.fromPartial(base ?? {});
+    return TestAllTypesProto3_MapStringNestedMessageEntry.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapStringNestedMessageEntry>, I>>(
     object: I,
   ): TestAllTypesProto3_MapStringNestedMessageEntry {
@@ -5304,17 +5328,20 @@ export const TestAllTypesProto3_MapStringForeignMessageEntry = {
 
   toJSON(message: TestAllTypesProto3_MapStringForeignMessageEntry): unknown {
     const obj: any = {};
-    message.key !== undefined && (obj.key = message.key);
-    message.value !== undefined && (obj.value = message.value ? ForeignMessage.toJSON(message.value) : undefined);
+    if (message.key !== "") {
+      obj.key = message.key;
+    }
+    if (message.value !== undefined) {
+      obj.value = ForeignMessage.toJSON(message.value);
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<TestAllTypesProto3_MapStringForeignMessageEntry>, I>>(
     base?: I,
   ): TestAllTypesProto3_MapStringForeignMessageEntry {
-    return TestAllTypesProto3_MapStringForeignMessageEntry.fromPartial(base ?? {});
+    return TestAllTypesProto3_MapStringForeignMessageEntry.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapStringForeignMessageEntry>, I>>(
     object: I,
   ): TestAllTypesProto3_MapStringForeignMessageEntry {
@@ -5381,17 +5408,20 @@ export const TestAllTypesProto3_MapStringNestedEnumEntry = {
 
   toJSON(message: TestAllTypesProto3_MapStringNestedEnumEntry): unknown {
     const obj: any = {};
-    message.key !== undefined && (obj.key = message.key);
-    message.value !== undefined && (obj.value = testAllTypesProto3_NestedEnumToJSON(message.value));
+    if (message.key !== "") {
+      obj.key = message.key;
+    }
+    if (message.value !== 0) {
+      obj.value = testAllTypesProto3_NestedEnumToJSON(message.value);
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<TestAllTypesProto3_MapStringNestedEnumEntry>, I>>(
     base?: I,
   ): TestAllTypesProto3_MapStringNestedEnumEntry {
-    return TestAllTypesProto3_MapStringNestedEnumEntry.fromPartial(base ?? {});
+    return TestAllTypesProto3_MapStringNestedEnumEntry.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapStringNestedEnumEntry>, I>>(
     object: I,
   ): TestAllTypesProto3_MapStringNestedEnumEntry {
@@ -5456,17 +5486,20 @@ export const TestAllTypesProto3_MapStringForeignEnumEntry = {
 
   toJSON(message: TestAllTypesProto3_MapStringForeignEnumEntry): unknown {
     const obj: any = {};
-    message.key !== undefined && (obj.key = message.key);
-    message.value !== undefined && (obj.value = foreignEnumToJSON(message.value));
+    if (message.key !== "") {
+      obj.key = message.key;
+    }
+    if (message.value !== 0) {
+      obj.value = foreignEnumToJSON(message.value);
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<TestAllTypesProto3_MapStringForeignEnumEntry>, I>>(
     base?: I,
   ): TestAllTypesProto3_MapStringForeignEnumEntry {
-    return TestAllTypesProto3_MapStringForeignEnumEntry.fromPartial(base ?? {});
+    return TestAllTypesProto3_MapStringForeignEnumEntry.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<TestAllTypesProto3_MapStringForeignEnumEntry>, I>>(
     object: I,
   ): TestAllTypesProto3_MapStringForeignEnumEntry {
@@ -5518,14 +5551,15 @@ export const ForeignMessage = {
 
   toJSON(message: ForeignMessage): unknown {
     const obj: any = {};
-    message.c !== undefined && (obj.c = Math.round(message.c));
+    if (message.c !== 0) {
+      obj.c = Math.round(message.c);
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<ForeignMessage>, I>>(base?: I): ForeignMessage {
-    return ForeignMessage.fromPartial(base ?? {});
+    return ForeignMessage.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<ForeignMessage>, I>>(object: I): ForeignMessage {
     const message = createBaseForeignMessage();
     message.c = object.c ?? 0;
@@ -5568,9 +5602,8 @@ export const NullHypothesisProto3 = {
   },
 
   create<I extends Exact<DeepPartial<NullHypothesisProto3>, I>>(base?: I): NullHypothesisProto3 {
-    return NullHypothesisProto3.fromPartial(base ?? {});
+    return NullHypothesisProto3.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<NullHypothesisProto3>, I>>(_: I): NullHypothesisProto3 {
     const message = createBaseNullHypothesisProto3();
     return message;
@@ -5612,19 +5645,18 @@ export const EnumOnlyProto3 = {
   },
 
   create<I extends Exact<DeepPartial<EnumOnlyProto3>, I>>(base?: I): EnumOnlyProto3 {
-    return EnumOnlyProto3.fromPartial(base ?? {});
+    return EnumOnlyProto3.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<EnumOnlyProto3>, I>>(_: I): EnumOnlyProto3 {
     const message = createBaseEnumOnlyProto3();
     return message;
   },
 };
 
-declare var self: any | undefined;
-declare var window: any | undefined;
-declare var global: any | undefined;
-var tsProtoGlobalThis: any = (() => {
+declare const self: any | undefined;
+declare const window: any | undefined;
+declare const global: any | undefined;
+const tsProtoGlobalThis: any = (() => {
   if (typeof globalThis !== "undefined") {
     return globalThis;
   }

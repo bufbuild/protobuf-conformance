@@ -179,16 +179,18 @@ export const Any = {
 
   toJSON(message: Any): unknown {
     const obj: any = {};
-    message.typeUrl !== undefined && (obj.typeUrl = message.typeUrl);
-    message.value !== undefined &&
-      (obj.value = base64FromBytes(message.value !== undefined ? message.value : new Uint8Array(0)));
+    if (message.typeUrl !== "") {
+      obj.typeUrl = message.typeUrl;
+    }
+    if (message.value.length !== 0) {
+      obj.value = base64FromBytes(message.value);
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<Any>, I>>(base?: I): Any {
-    return Any.fromPartial(base ?? {});
+    return Any.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<Any>, I>>(object: I): Any {
     const message = createBaseAny();
     message.typeUrl = object.typeUrl ?? "";
@@ -197,10 +199,10 @@ export const Any = {
   },
 };
 
-declare var self: any | undefined;
-declare var window: any | undefined;
-declare var global: any | undefined;
-var tsProtoGlobalThis: any = (() => {
+declare const self: any | undefined;
+declare const window: any | undefined;
+declare const global: any | undefined;
+const tsProtoGlobalThis: any = (() => {
   if (typeof globalThis !== "undefined") {
     return globalThis;
   }

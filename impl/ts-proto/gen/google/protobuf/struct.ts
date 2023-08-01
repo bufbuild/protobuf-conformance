@@ -68,7 +68,8 @@ export interface Value {
     | { $case: "stringValue"; stringValue: string }
     | { $case: "boolValue"; boolValue: boolean }
     | { $case: "structValue"; structValue: { [key: string]: any } | undefined }
-    | { $case: "listValue"; listValue: Array<any> | undefined };
+    | { $case: "listValue"; listValue: Array<any> | undefined }
+    | undefined;
 }
 
 /**
@@ -134,8 +135,8 @@ export const Struct = {
 
   toJSON(message: Struct): unknown {
     const obj: any = {};
-    obj.fields = {};
-    if (message.fields) {
+    if (message.fields?.size) {
+      obj.fields = {};
       message.fields.forEach((v, k) => {
         obj.fields[k] = v;
       });
@@ -144,9 +145,8 @@ export const Struct = {
   },
 
   create<I extends Exact<DeepPartial<Struct>, I>>(base?: I): Struct {
-    return Struct.fromPartial(base ?? {});
+    return Struct.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<Struct>, I>>(object: I): Struct {
     const message = createBaseStruct();
     message.fields = (() => {
@@ -231,15 +231,18 @@ export const Struct_FieldsEntry = {
 
   toJSON(message: Struct_FieldsEntry): unknown {
     const obj: any = {};
-    message.key !== undefined && (obj.key = message.key);
-    message.value !== undefined && (obj.value = message.value);
+    if (message.key !== "") {
+      obj.key = message.key;
+    }
+    if (message.value !== undefined) {
+      obj.value = message.value;
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<Struct_FieldsEntry>, I>>(base?: I): Struct_FieldsEntry {
-    return Struct_FieldsEntry.fromPartial(base ?? {});
+    return Struct_FieldsEntry.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<Struct_FieldsEntry>, I>>(object: I): Struct_FieldsEntry {
     const message = createBaseStruct_FieldsEntry();
     message.key = object.key ?? "";
@@ -355,20 +358,30 @@ export const Value = {
 
   toJSON(message: Value): unknown {
     const obj: any = {};
-    message.kind?.$case === "nullValue" &&
-      (obj.nullValue = message.kind?.nullValue !== undefined ? nullValueToJSON(message.kind?.nullValue) : undefined);
-    message.kind?.$case === "numberValue" && (obj.numberValue = message.kind?.numberValue);
-    message.kind?.$case === "stringValue" && (obj.stringValue = message.kind?.stringValue);
-    message.kind?.$case === "boolValue" && (obj.boolValue = message.kind?.boolValue);
-    message.kind?.$case === "structValue" && (obj.structValue = message.kind?.structValue);
-    message.kind?.$case === "listValue" && (obj.listValue = message.kind?.listValue);
+    if (message.kind?.$case === "nullValue") {
+      obj.nullValue = nullValueToJSON(message.kind.nullValue);
+    }
+    if (message.kind?.$case === "numberValue") {
+      obj.numberValue = message.kind.numberValue;
+    }
+    if (message.kind?.$case === "stringValue") {
+      obj.stringValue = message.kind.stringValue;
+    }
+    if (message.kind?.$case === "boolValue") {
+      obj.boolValue = message.kind.boolValue;
+    }
+    if (message.kind?.$case === "structValue") {
+      obj.structValue = message.kind.structValue;
+    }
+    if (message.kind?.$case === "listValue") {
+      obj.listValue = message.kind.listValue;
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<Value>, I>>(base?: I): Value {
-    return Value.fromPartial(base ?? {});
+    return Value.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<Value>, I>>(object: I): Value {
     const message = createBaseValue();
     if (object.kind?.$case === "nullValue" && object.kind?.nullValue !== undefined && object.kind?.nullValue !== null) {
@@ -484,18 +497,15 @@ export const ListValue = {
 
   toJSON(message: ListValue): unknown {
     const obj: any = {};
-    if (message.values) {
-      obj.values = message.values.map((e) => e);
-    } else {
-      obj.values = [];
+    if (message.values?.length) {
+      obj.values = message.values;
     }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<ListValue>, I>>(base?: I): ListValue {
-    return ListValue.fromPartial(base ?? {});
+    return ListValue.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<ListValue>, I>>(object: I): ListValue {
     const message = createBaseListValue();
     message.values = object.values?.map((e) => e) || [];
@@ -517,10 +527,10 @@ export const ListValue = {
   },
 };
 
-declare var self: any | undefined;
-declare var window: any | undefined;
-declare var global: any | undefined;
-var tsProtoGlobalThis: any = (() => {
+declare const self: any | undefined;
+declare const window: any | undefined;
+declare const global: any | undefined;
+const tsProtoGlobalThis: any = (() => {
   if (typeof globalThis !== "undefined") {
     return globalThis;
   }
