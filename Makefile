@@ -6,126 +6,70 @@ SHELL := bash
 MAKEFLAGS += --warn-undefined-variables
 MAKEFLAGS += --no-builtin-rules
 MAKEFLAGS += --no-print-directory
-CONNECT := @bufbuild/connect@latest
-CONNECT_WEB := @bufbuild/connect-web@latest
-CONNECT_NODE := @bufbuild/connect-node@latest
-CONNECT_FASTIFY := @bufbuild/connect-fastify@latest
-CONNECT_EXPRESS := @bufbuild/connect-express@latest
-PROTOC_GEN_CONNECT_ES := @bufbuild/protoc-gen-connect-es@latest
-PROTOBUF := @bufbuild/protobuf@latest
-PROTOC_GEN_ES := @bufbuild/protoc-gen-es@latest
-BUF := @bufbuild/buf@latest
+TMP   = .tmp
+BIN   = .tmp/bin
+PB   =  .tmp/protobuf-$(GOOGLE_PROTOBUF_VERSION)
+LICENSE_HEADER_YEAR_RANGE := 2023
+GOOGLE_PROTOBUF_VERSION = 23.4
+BAZEL_VERSION = 5.4.0
 
-# All project directories that use npm
-NPM_PROJS = angular \
-			astro \
-			express \
-			fastify \
-			nextjs \
-			plain \
-			react/cra \
-			react/esbuild \
-			react/parcel \
-			react/rollup \
-			react/vite \
-			react/webpack \
-			react/webpack-cjs \
-			react-native \
-			svelte \
-			vanilla-node \
-			vue
+$(PB): Makefile
+	echo $(PB)
+	@mkdir -p $(TMP)
+	curl -L https://github.com/protocolbuffers/protobuf/releases/download/v$(GOOGLE_PROTOBUF_VERSION)/protobuf-$(GOOGLE_PROTOBUF_VERSION).tar.gz \
+		> $(TMP)/protobuf-$(GOOGLE_PROTOBUF_VERSION).tar.gz
+	tar -xzf $(TMP)/protobuf-$(GOOGLE_PROTOBUF_VERSION).tar.gz -C $(TMP)/
 
-# All project directories that use yarn
-YARN_PROJS = react/yarn-pnp \
-			 react/yarn-unplugged
-# All project directories that use pnpm
-PNPM_PROJS = remix
-
-.PHONY: update
-update:: ## Update all projects
-
-.PHONY: test
-test:: ## Test all projects
-
-define updatenpmfunc
-.PHONY: update$(notdir $(1))
-update$(notdir $(1)):
-	@echo $(1) ---------- ;\
-	npm --prefix $(1) i -D $(CONNECT) $(CONNECT_WEB) $(PROTOC_GEN_CONNECT_ES) $(PROTOBUF) $(PROTOC_GEN_ES) $(BUF) ;\
-	if [ "$(1)" == "fastify" ]; then \
-	   npm --prefix $(1) i -D $(CONNECT_NODE) $(CONNECT_FASTIFY) ;\
-	elif [ "$(1)" == "express" ]; then \
-	   npm --prefix $(1) i -D $(CONNECT_NODE) $(CONNECT_EXPRESS) ;\
-	elif [ "$(1)" == "vanilla-node" ]; then \
-	   npm --prefix $(1) i -D $(CONNECT_NODE) ;\
-	fi ;\
-	npm --prefix $(1) run buf:generate || exit 1 ;\
-
-update:: update$(notdir $(1))
-endef
-
-define testnpmfunc
-.PHONY: test$(notdir $(1))
-test$(notdir $(1)):
-	@echo $(1) ---------- ;\
-	npm --prefix $(1) install || exit 1 ;\
-	npm --prefix $(1) run build || exit 1 ;\
-	npm --prefix $(1) run buf:generate || exit 1 ;\
-	npm --prefix $(1) run test || exit 1 ;\
-
-test:: test$(notdir $(1))
-endef
-
-define updateyarnfunc
-.PHONY: update$(notdir $(1))
-update$(notdir $(1)):
-	@echo $(1) ---------- ;\
-	yarn --cwd $(1) add $(CONNECT) $(CONNECT_WEB) $(PROTOC_GEN_CONNECT_ES) $(PROTOBUF) $(PROTOC_GEN_ES) $(BUF) ;\
-	yarn --cwd $(1) buf:generate || exit 1 ;\
-
-update:: update$(notdir $(1))
-endef
-
-define testyarnfunc
-.PHONY: test$(notdir $(1))
-test$(notdir $(1)):
-	@echo $(1) ---------- ;\
-	yarn --cwd $(1) install || exit 1 ;\
-	yarn --cwd $(1) build || exit 1 ;\
-	yarn --cwd $(1) buf:generate || exit 1 ;\
-	yarn --cwd $(1) test || exit 1 ;\
-
-test:: test$(notdir $(1))
-endef
-
-define updatepnpmfunc
-.PHONY: update$(notdir $(1))
-update$(notdir $(1)):
-	@echo $(1) ---------- ;\
-	pnpm --prefix $(1) i -D $(CONNECT) $(CONNECT_WEB) $(PROTOC_GEN_CONNECT_ES) $(PROTOBUF) $(PROTOC_GEN_ES) $(BUF) ;\
-	pnpm --prefix $(1) run buf:generate || exit 1 ;\
-
-update:: update$(notdir $(1))
-endef
-
-define testpnpmfunc
-.PHONY: test$(notdir $(1))
-test$(notdir $(1)):
-	@echo $(1) ---------- ;\
-	pnpm --prefix $(1) install || exit 1 ;\
-	pnpm --prefix $(1) run build || exit 1 ;\
-	pnpm --prefix $(1) run buf:generate || exit 1 ;\
-	pnpm --prefix $(1) run test || exit 1 ;\
-
-test:: test$(notdir $(1))
-endef
-
-$(foreach npmproj,$(sort $(NPM_PROJS)),$(eval $(call updatenpmfunc,$(npmproj))))
-$(foreach npmproj,$(sort $(NPM_PROJS)),$(eval $(call testnpmfunc,$(npmproj))))
-$(foreach yarnproj,$(sort $(YARN_PROJS)),$(eval $(call updateyarnfunc,$(yarnproj))))
-$(foreach yarnproj,$(sort $(YARN_PROJS)),$(eval $(call testyarnfunc,$(yarnproj))))
-$(foreach pnpmproj,$(sort $(PNPM_PROJS)),$(eval $(call updatepnpmfunc,$(pnpmproj))))
-$(foreach pnpmproj,$(sort $(PNPM_PROJS)),$(eval $(call testpnpmfunc,$(pnpmproj))))
+$(BIN)/conformance_test_runner: $(PB) Makefile
+	@mkdir -p $(@D)
+	cd $(PB) && USE_BAZEL_VERSION=$(BAZEL_VERSION) bazel build test_messages_proto3_cc_proto conformance:conformance_proto conformance:conformance_test conformance:conformance_test_runner
+	cp -f $(PB)/bazel-bin/conformance/conformance_test_runner $(@D)
+	@cp $(PB)/conformance/conformance.proto proto/conformance
+	@cp $(PB)/src/google/protobuf/test_messages*.proto proto/google/protobuf/
+	@touch $(@)
 
 .PHONY: all
-all: test
+all: test license  ## Run conformance tests and update license headers
+
+.PHONY: help
+help: ## Describe useful make targets
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "%-30s %s\n", $$1, $$2}'
+
+.PHONY: test
+test: $(BIN)/conformance_test_runner  ## Run conformance tests
+	cd impl/ts-proto;        PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
+	cd impl/protobuf.js;     PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
+	cd impl/google-protobuf; PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
+	cd impl/protobuf-es;     PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
+	cd impl/protobuf-ts;     PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
+	cd impl/protoc-gen-ts;   PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
+	cd impl/protoscript;     PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
+	cd impl/baseline;        PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
+	node report.js
+
+.PHONY: testci
+testci: ## Run conformance tests in CI
+	cd impl/ts-proto;        PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
+	cd impl/protobuf.js;     PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
+	cd impl/google-protobuf; PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
+	cd impl/protobuf-es;     PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
+	cd impl/protobuf-ts;     PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
+	cd impl/protoc-gen-ts;   PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
+	cd impl/protoscript;     PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
+	cd impl/baseline;        PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
+	node report.js
+
+.PHONY: license
+license: Makefile ## Updates license headers
+	GOBIN=$(abspath $(BIN)) go install github.com/bufbuild/buf/private/pkg/licenseheader/cmd/license-header@v1.1.0
+	$(BIN)/license-header \
+		--license-type "apache" \
+		--copyright-holder "Buf Technologies, Inc." \
+		--year-range "$(LICENSE_HEADER_YEAR_RANGE)" \
+		report.js
+
+.PHONY: checkdiff
+checkdiff:
+	@# Used in CI to verify that `make` doesn't produce a diff
+	test -z "$$(git status --porcelain | tee /dev/stderr)"
+
