@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "devDependencies": {
-    "@bufbuild/buf": "^1.23.1",
+    "@bufbuild/buf": "^1.25.0",
     "@types/node": "^20.4.5",
     "esbuild": "^0.18.17",
     "typescript": "^5.1.6"
