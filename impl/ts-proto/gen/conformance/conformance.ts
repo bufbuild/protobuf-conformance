@@ -142,7 +142,8 @@ export interface ConformanceRequest {
     | { $case: "protobufPayload"; protobufPayload: Uint8Array }
     | { $case: "jsonPayload"; jsonPayload: string }
     | { $case: "jspbPayload"; jspbPayload: string }
-    | { $case: "textPayload"; textPayload: string };
+    | { $case: "textPayload"; textPayload: string }
+    | undefined;
   /** Which format should the testee serialize its message to? */
   requestedOutputFormat: WireFormat;
   /**
@@ -179,7 +180,8 @@ export interface ConformanceResponse {
     | { $case: "jsonPayload"; jsonPayload: string }
     | { $case: "skipped"; skipped: string }
     | { $case: "jspbPayload"; jspbPayload: string }
-    | { $case: "textPayload"; textPayload: string };
+    | { $case: "textPayload"; textPayload: string }
+    | undefined;
 }
 
 /** Encoding options for jspb format. */
@@ -229,18 +231,15 @@ export const FailureSet = {
 
   toJSON(message: FailureSet): unknown {
     const obj: any = {};
-    if (message.failure) {
-      obj.failure = message.failure.map((e) => e);
-    } else {
-      obj.failure = [];
+    if (message.failure?.length) {
+      obj.failure = message.failure;
     }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<FailureSet>, I>>(base?: I): FailureSet {
-    return FailureSet.fromPartial(base ?? {});
+    return FailureSet.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<FailureSet>, I>>(object: I): FailureSet {
     const message = createBaseFailureSet();
     message.failure = object.failure?.map((e) => e) || [];
@@ -395,28 +394,39 @@ export const ConformanceRequest = {
 
   toJSON(message: ConformanceRequest): unknown {
     const obj: any = {};
-    message.payload?.$case === "protobufPayload" &&
-      (obj.protobufPayload = message.payload?.protobufPayload !== undefined
-        ? base64FromBytes(message.payload?.protobufPayload)
-        : undefined);
-    message.payload?.$case === "jsonPayload" && (obj.jsonPayload = message.payload?.jsonPayload);
-    message.payload?.$case === "jspbPayload" && (obj.jspbPayload = message.payload?.jspbPayload);
-    message.payload?.$case === "textPayload" && (obj.textPayload = message.payload?.textPayload);
-    message.requestedOutputFormat !== undefined &&
-      (obj.requestedOutputFormat = wireFormatToJSON(message.requestedOutputFormat));
-    message.messageType !== undefined && (obj.messageType = message.messageType);
-    message.testCategory !== undefined && (obj.testCategory = testCategoryToJSON(message.testCategory));
-    message.jspbEncodingOptions !== undefined && (obj.jspbEncodingOptions = message.jspbEncodingOptions
-      ? JspbEncodingConfig.toJSON(message.jspbEncodingOptions)
-      : undefined);
-    message.printUnknownFields !== undefined && (obj.printUnknownFields = message.printUnknownFields);
+    if (message.payload?.$case === "protobufPayload") {
+      obj.protobufPayload = base64FromBytes(message.payload.protobufPayload);
+    }
+    if (message.payload?.$case === "jsonPayload") {
+      obj.jsonPayload = message.payload.jsonPayload;
+    }
+    if (message.payload?.$case === "jspbPayload") {
+      obj.jspbPayload = message.payload.jspbPayload;
+    }
+    if (message.payload?.$case === "textPayload") {
+      obj.textPayload = message.payload.textPayload;
+    }
+    if (message.requestedOutputFormat !== 0) {
+      obj.requestedOutputFormat = wireFormatToJSON(message.requestedOutputFormat);
+    }
+    if (message.messageType !== "") {
+      obj.messageType = message.messageType;
+    }
+    if (message.testCategory !== 0) {
+      obj.testCategory = testCategoryToJSON(message.testCategory);
+    }
+    if (message.jspbEncodingOptions !== undefined) {
+      obj.jspbEncodingOptions = JspbEncodingConfig.toJSON(message.jspbEncodingOptions);
+    }
+    if (message.printUnknownFields === true) {
+      obj.printUnknownFields = message.printUnknownFields;
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<ConformanceRequest>, I>>(base?: I): ConformanceRequest {
-    return ConformanceRequest.fromPartial(base ?? {});
+    return ConformanceRequest.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<ConformanceRequest>, I>>(object: I): ConformanceRequest {
     const message = createBaseConformanceRequest();
     if (
@@ -601,24 +611,39 @@ export const ConformanceResponse = {
 
   toJSON(message: ConformanceResponse): unknown {
     const obj: any = {};
-    message.result?.$case === "parseError" && (obj.parseError = message.result?.parseError);
-    message.result?.$case === "serializeError" && (obj.serializeError = message.result?.serializeError);
-    message.result?.$case === "timeoutError" && (obj.timeoutError = message.result?.timeoutError);
-    message.result?.$case === "runtimeError" && (obj.runtimeError = message.result?.runtimeError);
-    message.result?.$case === "protobufPayload" && (obj.protobufPayload = message.result?.protobufPayload !== undefined
-      ? base64FromBytes(message.result?.protobufPayload)
-      : undefined);
-    message.result?.$case === "jsonPayload" && (obj.jsonPayload = message.result?.jsonPayload);
-    message.result?.$case === "skipped" && (obj.skipped = message.result?.skipped);
-    message.result?.$case === "jspbPayload" && (obj.jspbPayload = message.result?.jspbPayload);
-    message.result?.$case === "textPayload" && (obj.textPayload = message.result?.textPayload);
+    if (message.result?.$case === "parseError") {
+      obj.parseError = message.result.parseError;
+    }
+    if (message.result?.$case === "serializeError") {
+      obj.serializeError = message.result.serializeError;
+    }
+    if (message.result?.$case === "timeoutError") {
+      obj.timeoutError = message.result.timeoutError;
+    }
+    if (message.result?.$case === "runtimeError") {
+      obj.runtimeError = message.result.runtimeError;
+    }
+    if (message.result?.$case === "protobufPayload") {
+      obj.protobufPayload = base64FromBytes(message.result.protobufPayload);
+    }
+    if (message.result?.$case === "jsonPayload") {
+      obj.jsonPayload = message.result.jsonPayload;
+    }
+    if (message.result?.$case === "skipped") {
+      obj.skipped = message.result.skipped;
+    }
+    if (message.result?.$case === "jspbPayload") {
+      obj.jspbPayload = message.result.jspbPayload;
+    }
+    if (message.result?.$case === "textPayload") {
+      obj.textPayload = message.result.textPayload;
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<ConformanceResponse>, I>>(base?: I): ConformanceResponse {
-    return ConformanceResponse.fromPartial(base ?? {});
+    return ConformanceResponse.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<ConformanceResponse>, I>>(object: I): ConformanceResponse {
     const message = createBaseConformanceResponse();
     if (
@@ -727,14 +752,15 @@ export const JspbEncodingConfig = {
 
   toJSON(message: JspbEncodingConfig): unknown {
     const obj: any = {};
-    message.useJspbArrayAnyFormat !== undefined && (obj.useJspbArrayAnyFormat = message.useJspbArrayAnyFormat);
+    if (message.useJspbArrayAnyFormat === true) {
+      obj.useJspbArrayAnyFormat = message.useJspbArrayAnyFormat;
+    }
     return obj;
   },
 
   create<I extends Exact<DeepPartial<JspbEncodingConfig>, I>>(base?: I): JspbEncodingConfig {
-    return JspbEncodingConfig.fromPartial(base ?? {});
+    return JspbEncodingConfig.fromPartial(base ?? ({} as any));
   },
-
   fromPartial<I extends Exact<DeepPartial<JspbEncodingConfig>, I>>(object: I): JspbEncodingConfig {
     const message = createBaseJspbEncodingConfig();
     message.useJspbArrayAnyFormat = object.useJspbArrayAnyFormat ?? false;
@@ -742,10 +768,10 @@ export const JspbEncodingConfig = {
   },
 };
 
-declare var self: any | undefined;
-declare var window: any | undefined;
-declare var global: any | undefined;
-var tsProtoGlobalThis: any = (() => {
+declare const self: any | undefined;
+declare const window: any | undefined;
+declare const global: any | undefined;
+const tsProtoGlobalThis: any = (() => {
   if (typeof globalThis !== "undefined") {
     return globalThis;
   }
