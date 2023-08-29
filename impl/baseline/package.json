@@ -10,6 +10,6 @@
     "@bufbuild/buf": "^1.25.0",
     "@types/node": "^20.4.5",
     "tsx": "^3.12.7",
-    "typescript": "^5.1.6"
+    "typescript": "^5.2.2"
   }
 }
