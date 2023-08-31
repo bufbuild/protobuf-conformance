@@ -3,7 +3,6 @@
 import { readSync, writeSync } from "fs";
 
 import * as protos from "./gen/protos_pb.js";
-import type { Writer } from "protobufjs";
 
 const { Any, Struct, Value, Int32Value, FieldMask, Duration, Timestamp } =
   protos.google.protobuf;
@@ -64,7 +63,7 @@ function main() {
 }
 
 interface Result {
-  [s: string]: Uint8Array | string | Writer;
+  [s: string]: Uint8Array | string;
 }
 
 function test(request: protos.conformance.ConformanceRequest): Result {
@@ -122,14 +121,14 @@ function test(request: protos.conformance.ConformanceRequest): Result {
       case 1: // PROTOBUF
         return {
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          protobufPayload: payloadType.encode(payload as any),
+          protobufPayload: payloadType.encode(payload as any).finish(),
         };
 
       case 2: // JSON:
         return {
           jsonPayload: JSON.stringify(
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            payloadType.toObject(payload as any)
+            payloadType.toObject(payload as any, {json: true, bytes: String})
           ),
         };
 
