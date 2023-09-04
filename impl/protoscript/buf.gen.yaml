@@ -1,6 +1,6 @@
 version: v1
 plugins:
   - name: protoscript
-    path: node_modules/protoscript/compiler.js
+    path: node_modules/protoscript/dist/compiler.js
     opt: language=typescript
     out: gen

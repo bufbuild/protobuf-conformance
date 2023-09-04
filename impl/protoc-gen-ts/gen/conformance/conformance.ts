@@ -149,7 +149,7 @@ export namespace conformance {
             }
         }
         get protobuf_payload() {
-            return pb_1.Message.getFieldWithDefault(this, 1, new Uint8Array()) as Uint8Array;
+            return pb_1.Message.getFieldWithDefault(this, 1, new Uint8Array(0)) as Uint8Array;
         }
         set protobuf_payload(value: Uint8Array) {
             pb_1.Message.setOneofField(this, 1, this.#one_of_decls[0], value);
@@ -543,7 +543,7 @@ export namespace conformance {
             return pb_1.Message.getField(this, 2) != null;
         }
         get protobuf_payload() {
-            return pb_1.Message.getFieldWithDefault(this, 3, new Uint8Array()) as Uint8Array;
+            return pb_1.Message.getFieldWithDefault(this, 3, new Uint8Array(0)) as Uint8Array;
         }
         set protobuf_payload(value: Uint8Array) {
             pb_1.Message.setOneofField(this, 3, this.#one_of_decls[0], value);

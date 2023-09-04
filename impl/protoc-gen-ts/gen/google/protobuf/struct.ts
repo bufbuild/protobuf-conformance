@@ -46,7 +46,7 @@ export namespace google.protobuf {
                     [key: string]: ReturnType<typeof Value.prototype.toObject>;
                 };
             } = {};
-            if (this.fields.size > 0) {
+            if (this.fields != null) {
                 data.fields = (Object.fromEntries)((Array.from)(this.fields).map(([key, value]) => [key, value.toObject()]));
             }
             return data;

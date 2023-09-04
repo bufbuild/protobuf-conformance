@@ -852,7 +852,7 @@ export namespace protobuf_test_messages.proto3 {
             pb_1.Message.setField(this, 14, value);
         }
         get optional_bytes() {
-            return pb_1.Message.getFieldWithDefault(this, 15, new Uint8Array()) as Uint8Array;
+            return pb_1.Message.getFieldWithDefault(this, 15, new Uint8Array(0)) as Uint8Array;
         }
         set optional_bytes(value: Uint8Array) {
             pb_1.Message.setField(this, 15, value);
@@ -1017,13 +1017,13 @@ export namespace protobuf_test_messages.proto3 {
             pb_1.Message.setRepeatedWrapperField(this, 49, value);
         }
         get repeated_nested_enum() {
-            return pb_1.Message.getFieldWithDefault(this, 51, TestAllTypesProto3.NestedEnum.FOO) as TestAllTypesProto3.NestedEnum[];
+            return pb_1.Message.getFieldWithDefault(this, 51, []) as TestAllTypesProto3.NestedEnum[];
         }
         set repeated_nested_enum(value: TestAllTypesProto3.NestedEnum[]) {
             pb_1.Message.setField(this, 51, value);
         }
         get repeated_foreign_enum() {
-            return pb_1.Message.getFieldWithDefault(this, 52, ForeignEnum.FOREIGN_FOO) as ForeignEnum[];
+            return pb_1.Message.getFieldWithDefault(this, 52, []) as ForeignEnum[];
         }
         set repeated_foreign_enum(value: ForeignEnum[]) {
             pb_1.Message.setField(this, 52, value);
@@ -1119,7 +1119,7 @@ export namespace protobuf_test_messages.proto3 {
             pb_1.Message.setField(this, 87, value);
         }
         get packed_nested_enum() {
-            return pb_1.Message.getFieldWithDefault(this, 88, TestAllTypesProto3.NestedEnum.FOO) as TestAllTypesProto3.NestedEnum[];
+            return pb_1.Message.getFieldWithDefault(this, 88, []) as TestAllTypesProto3.NestedEnum[];
         }
         set packed_nested_enum(value: TestAllTypesProto3.NestedEnum[]) {
             pb_1.Message.setField(this, 88, value);
@@ -1203,7 +1203,7 @@ export namespace protobuf_test_messages.proto3 {
             pb_1.Message.setField(this, 101, value);
         }
         get unpacked_nested_enum() {
-            return pb_1.Message.getFieldWithDefault(this, 102, TestAllTypesProto3.NestedEnum.FOO) as TestAllTypesProto3.NestedEnum[];
+            return pb_1.Message.getFieldWithDefault(this, 102, []) as TestAllTypesProto3.NestedEnum[];
         }
         set unpacked_nested_enum(value: TestAllTypesProto3.NestedEnum[]) {
             pb_1.Message.setField(this, 102, value);
@@ -1350,7 +1350,7 @@ export namespace protobuf_test_messages.proto3 {
             return pb_1.Message.getField(this, 113) != null;
         }
         get oneof_bytes() {
-            return pb_1.Message.getFieldWithDefault(this, 114, new Uint8Array()) as Uint8Array;
+            return pb_1.Message.getFieldWithDefault(this, 114, new Uint8Array(0)) as Uint8Array;
         }
         set oneof_bytes(value: Uint8Array) {
             pb_1.Message.setOneofField(this, 114, this.#one_of_decls[0], value);
@@ -2830,61 +2830,61 @@ export namespace protobuf_test_messages.proto3 {
             if (this.unpacked_nested_enum != null) {
                 data.unpacked_nested_enum = this.unpacked_nested_enum;
             }
-            if (this.map_int32_int32.size > 0) {
+            if (this.map_int32_int32 != null) {
                 data.map_int32_int32 = (Object.fromEntries)(this.map_int32_int32);
             }
-            if (this.map_int64_int64.size > 0) {
+            if (this.map_int64_int64 != null) {
                 data.map_int64_int64 = (Object.fromEntries)(this.map_int64_int64);
             }
-            if (this.map_uint32_uint32.size > 0) {
+            if (this.map_uint32_uint32 != null) {
                 data.map_uint32_uint32 = (Object.fromEntries)(this.map_uint32_uint32);
             }
-            if (this.map_uint64_uint64.size > 0) {
+            if (this.map_uint64_uint64 != null) {
                 data.map_uint64_uint64 = (Object.fromEntries)(this.map_uint64_uint64);
             }
-            if (this.map_sint32_sint32.size > 0) {
+            if (this.map_sint32_sint32 != null) {
                 data.map_sint32_sint32 = (Object.fromEntries)(this.map_sint32_sint32);
             }
-            if (this.map_sint64_sint64.size > 0) {
+            if (this.map_sint64_sint64 != null) {
                 data.map_sint64_sint64 = (Object.fromEntries)(this.map_sint64_sint64);
             }
-            if (this.map_fixed32_fixed32.size > 0) {
+            if (this.map_fixed32_fixed32 != null) {
                 data.map_fixed32_fixed32 = (Object.fromEntries)(this.map_fixed32_fixed32);
             }
-            if (this.map_fixed64_fixed64.size > 0) {
+            if (this.map_fixed64_fixed64 != null) {
                 data.map_fixed64_fixed64 = (Object.fromEntries)(this.map_fixed64_fixed64);
             }
-            if (this.map_sfixed32_sfixed32.size > 0) {
+            if (this.map_sfixed32_sfixed32 != null) {
                 data.map_sfixed32_sfixed32 = (Object.fromEntries)(this.map_sfixed32_sfixed32);
             }
-            if (this.map_sfixed64_sfixed64.size > 0) {
+            if (this.map_sfixed64_sfixed64 != null) {
                 data.map_sfixed64_sfixed64 = (Object.fromEntries)(this.map_sfixed64_sfixed64);
             }
-            if (this.map_int32_float.size > 0) {
+            if (this.map_int32_float != null) {
                 data.map_int32_float = (Object.fromEntries)(this.map_int32_float);
             }
-            if (this.map_int32_double.size > 0) {
+            if (this.map_int32_double != null) {
                 data.map_int32_double = (Object.fromEntries)(this.map_int32_double);
             }
-            if (this.map_bool_bool.size > 0) {
+            if (this.map_bool_bool != null) {
                 data.map_bool_bool = (Object.fromEntries)(this.map_bool_bool);
             }
-            if (this.map_string_string.size > 0) {
+            if (this.map_string_string != null) {
                 data.map_string_string = (Object.fromEntries)(this.map_string_string);
             }
-            if (this.map_string_bytes.size > 0) {
+            if (this.map_string_bytes != null) {
                 data.map_string_bytes = (Object.fromEntries)(this.map_string_bytes);
             }
-            if (this.map_string_nested_message.size > 0) {
+            if (this.map_string_nested_message != null) {
                 data.map_string_nested_message = (Object.fromEntries)((Array.from)(this.map_string_nested_message).map(([key, value]) => [key, value.toObject()]));
             }
-            if (this.map_string_foreign_message.size > 0) {
+            if (this.map_string_foreign_message != null) {
                 data.map_string_foreign_message = (Object.fromEntries)((Array.from)(this.map_string_foreign_message).map(([key, value]) => [key, value.toObject()]));
             }
-            if (this.map_string_nested_enum.size > 0) {
+            if (this.map_string_nested_enum != null) {
                 data.map_string_nested_enum = (Object.fromEntries)(this.map_string_nested_enum);
             }
-            if (this.map_string_foreign_enum.size > 0) {
+            if (this.map_string_foreign_enum != null) {
                 data.map_string_foreign_enum = (Object.fromEntries)(this.map_string_foreign_enum);
             }
             if (this.oneof_uint32 != null) {
