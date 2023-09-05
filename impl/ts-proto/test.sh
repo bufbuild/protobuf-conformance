@@ -4,14 +4,18 @@ set -euo pipefail
 # install dependencies
 npm ci
 
-# ts-proto v1.139 crashes when compiling test_messages_proto2.proto
+# generate code
 rm -rf gen/*
-npx buf generate ../../proto --exclude-path ../../proto/google/protobuf/test_messages_proto2.proto
+npx buf generate ../../proto
 
-# ts-proto v1.139 generates duplicate case statements for AliasedEnum
+# ts-proto v1.157.0 generates code with type errors - we ignore them to run the conformance suite
+#gen/google/protobuf/test_messages_proto2.ts:2792:19 - error TS2345: Argument of type 'number' is not assignable to parameter of type 'boolean'.
+#gen/google/protobuf/test_messages_proto2.ts:3190:25 - error TS2538: Type 'boolean' cannot be used as an index type.
+#gen/google/protobuf/test_messages_proto3.ts:2922:19 - error TS2345: Argument of type 'number' is not assignable to parameter of type 'boolean'.
+#gen/google/protobuf/test_messages_proto3.ts:3368:25 - error TS2538: Type 'boolean' cannot be used as an index type.
 npx tsc --noEmit || true
 
-# we use esbuild to transpile and bundle for Node.js, silencing the warnings
+# we use esbuild to transpile and bundle for Node.js
 echo > runner.js "#!/usr/bin/env node"
 chmod +x runner.js
 npx esbuild runner.ts --bundle --platform=node --format=esm --log-override:duplicate-case=silent >>runner.js

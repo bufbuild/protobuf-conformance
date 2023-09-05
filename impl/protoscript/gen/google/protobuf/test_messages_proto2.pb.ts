@@ -2,7 +2,7 @@
 // Source: google/protobuf/test_messages_proto2.proto
 /* eslint-disable */
 
-import type { ByteSource } from "protoscript";
+import type { ByteSource, PartialDeep } from "protoscript";
 import {
   BinaryReader,
   BinaryWriter,
@@ -532,10 +532,10 @@ export const TestAllTypesProto2 = {
   /**
    * Serializes TestAllTypesProto2 to protobuf.
    */
-  encode: function (msg: Partial<TestAllTypesProto2>): Uint8Array {
+  encode: function (msg: PartialDeep<TestAllTypesProto2>): Uint8Array {
     return TestAllTypesProto2._writeMessage(
       msg,
-      new BinaryWriter()
+      new BinaryWriter(),
     ).getResultBuffer();
   },
 
@@ -545,7 +545,7 @@ export const TestAllTypesProto2 = {
   decode: function (bytes: ByteSource): TestAllTypesProto2 {
     return TestAllTypesProto2._readMessage(
       TestAllTypesProto2.initialize(),
-      new BinaryReader(bytes)
+      new BinaryReader(bytes),
     );
   },
 
@@ -693,8 +693,8 @@ export const TestAllTypesProto2 = {
    * @private
    */
   _writeMessage: function (
-    msg: Partial<TestAllTypesProto2>,
-    writer: BinaryWriter
+    msg: PartialDeep<TestAllTypesProto2>,
+    writer: BinaryWriter,
   ): BinaryWriter {
     if (msg.optionalInt32) {
       writer.writeInt32(1, msg.optionalInt32);
@@ -745,14 +745,14 @@ export const TestAllTypesProto2 = {
       writer.writeMessage(
         18,
         msg.optionalNestedMessage,
-        TestAllTypesProto2.NestedMessage._writeMessage
+        TestAllTypesProto2.NestedMessage._writeMessage,
       );
     }
     if (msg.optionalForeignMessage) {
       writer.writeMessage(
         19,
         msg.optionalForeignMessage,
-        ForeignMessageProto2._writeMessage
+        ForeignMessageProto2._writeMessage,
       );
     }
     if (
@@ -761,7 +761,7 @@ export const TestAllTypesProto2 = {
     ) {
       writer.writeEnum(
         21,
-        TestAllTypesProto2.NestedEnum._toInt(msg.optionalNestedEnum)
+        TestAllTypesProto2.NestedEnum._toInt(msg.optionalNestedEnum),
       );
     }
     if (
@@ -780,7 +780,7 @@ export const TestAllTypesProto2 = {
       writer.writeMessage(
         27,
         msg.recursiveMessage,
-        TestAllTypesProto2._writeMessage
+        TestAllTypesProto2._writeMessage,
       );
     }
     if (msg.repeatedInt32?.length) {
@@ -789,7 +789,7 @@ export const TestAllTypesProto2 = {
     if (msg.repeatedInt64?.length) {
       writer.writePackedInt64String(
         32,
-        msg.repeatedInt64.map((x) => x.toString() as any)
+        msg.repeatedInt64.map((x) => x.toString() as any),
       );
     }
     if (msg.repeatedUint32?.length) {
@@ -798,7 +798,7 @@ export const TestAllTypesProto2 = {
     if (msg.repeatedUint64?.length) {
       writer.writePackedUint64String(
         34,
-        msg.repeatedUint64.map((x) => x.toString() as any)
+        msg.repeatedUint64.map((x) => x.toString() as any),
       );
     }
     if (msg.repeatedSint32?.length) {
@@ -807,7 +807,7 @@ export const TestAllTypesProto2 = {
     if (msg.repeatedSint64?.length) {
       writer.writePackedSint64String(
         36,
-        msg.repeatedSint64.map((x) => x.toString() as any)
+        msg.repeatedSint64.map((x) => x.toString() as any),
       );
     }
     if (msg.repeatedFixed32?.length) {
@@ -816,7 +816,7 @@ export const TestAllTypesProto2 = {
     if (msg.repeatedFixed64?.length) {
       writer.writePackedFixed64String(
         38,
-        msg.repeatedFixed64.map((x) => x.toString() as any)
+        msg.repeatedFixed64.map((x) => x.toString() as any),
       );
     }
     if (msg.repeatedSfixed32?.length) {
@@ -825,7 +825,7 @@ export const TestAllTypesProto2 = {
     if (msg.repeatedSfixed64?.length) {
       writer.writePackedSfixed64String(
         40,
-        msg.repeatedSfixed64.map((x) => x.toString() as any)
+        msg.repeatedSfixed64.map((x) => x.toString() as any),
       );
     }
     if (msg.repeatedFloat?.length) {
@@ -847,26 +847,26 @@ export const TestAllTypesProto2 = {
       writer.writeRepeatedMessage(
         48,
         msg.repeatedNestedMessage as any,
-        TestAllTypesProto2.NestedMessage._writeMessage
+        TestAllTypesProto2.NestedMessage._writeMessage,
       );
     }
     if (msg.repeatedForeignMessage?.length) {
       writer.writeRepeatedMessage(
         49,
         msg.repeatedForeignMessage as any,
-        ForeignMessageProto2._writeMessage
+        ForeignMessageProto2._writeMessage,
       );
     }
     if (msg.repeatedNestedEnum?.length) {
       writer.writePackedEnum(
         51,
-        msg.repeatedNestedEnum.map(TestAllTypesProto2.NestedEnum._toInt)
+        msg.repeatedNestedEnum.map(TestAllTypesProto2.NestedEnum._toInt),
       );
     }
     if (msg.repeatedForeignEnum?.length) {
       writer.writePackedEnum(
         52,
-        msg.repeatedForeignEnum.map(ForeignEnumProto2._toInt)
+        msg.repeatedForeignEnum.map(ForeignEnumProto2._toInt),
       );
     }
     if (msg.repeatedStringPiece?.length) {
@@ -881,7 +881,7 @@ export const TestAllTypesProto2 = {
     if (msg.packedInt64?.length) {
       writer.writePackedInt64String(
         76,
-        msg.packedInt64.map((x) => x.toString() as any)
+        msg.packedInt64.map((x) => x.toString() as any),
       );
     }
     if (msg.packedUint32?.length) {
@@ -890,7 +890,7 @@ export const TestAllTypesProto2 = {
     if (msg.packedUint64?.length) {
       writer.writePackedUint64String(
         78,
-        msg.packedUint64.map((x) => x.toString() as any)
+        msg.packedUint64.map((x) => x.toString() as any),
       );
     }
     if (msg.packedSint32?.length) {
@@ -899,7 +899,7 @@ export const TestAllTypesProto2 = {
     if (msg.packedSint64?.length) {
       writer.writePackedSint64String(
         80,
-        msg.packedSint64.map((x) => x.toString() as any)
+        msg.packedSint64.map((x) => x.toString() as any),
       );
     }
     if (msg.packedFixed32?.length) {
@@ -908,7 +908,7 @@ export const TestAllTypesProto2 = {
     if (msg.packedFixed64?.length) {
       writer.writePackedFixed64String(
         82,
-        msg.packedFixed64.map((x) => x.toString() as any)
+        msg.packedFixed64.map((x) => x.toString() as any),
       );
     }
     if (msg.packedSfixed32?.length) {
@@ -917,7 +917,7 @@ export const TestAllTypesProto2 = {
     if (msg.packedSfixed64?.length) {
       writer.writePackedSfixed64String(
         84,
-        msg.packedSfixed64.map((x) => x.toString() as any)
+        msg.packedSfixed64.map((x) => x.toString() as any),
       );
     }
     if (msg.packedFloat?.length) {
@@ -932,7 +932,7 @@ export const TestAllTypesProto2 = {
     if (msg.packedNestedEnum?.length) {
       writer.writePackedEnum(
         88,
-        msg.packedNestedEnum.map(TestAllTypesProto2.NestedEnum._toInt)
+        msg.packedNestedEnum.map(TestAllTypesProto2.NestedEnum._toInt),
       );
     }
     if (msg.unpackedInt32?.length) {
@@ -941,7 +941,7 @@ export const TestAllTypesProto2 = {
     if (msg.unpackedInt64?.length) {
       writer.writePackedInt64String(
         90,
-        msg.unpackedInt64.map((x) => x.toString() as any)
+        msg.unpackedInt64.map((x) => x.toString() as any),
       );
     }
     if (msg.unpackedUint32?.length) {
@@ -950,7 +950,7 @@ export const TestAllTypesProto2 = {
     if (msg.unpackedUint64?.length) {
       writer.writePackedUint64String(
         92,
-        msg.unpackedUint64.map((x) => x.toString() as any)
+        msg.unpackedUint64.map((x) => x.toString() as any),
       );
     }
     if (msg.unpackedSint32?.length) {
@@ -959,7 +959,7 @@ export const TestAllTypesProto2 = {
     if (msg.unpackedSint64?.length) {
       writer.writePackedSint64String(
         94,
-        msg.unpackedSint64.map((x) => x.toString() as any)
+        msg.unpackedSint64.map((x) => x.toString() as any),
       );
     }
     if (msg.unpackedFixed32?.length) {
@@ -968,7 +968,7 @@ export const TestAllTypesProto2 = {
     if (msg.unpackedFixed64?.length) {
       writer.writePackedFixed64String(
         96,
-        msg.unpackedFixed64.map((x) => x.toString() as any)
+        msg.unpackedFixed64.map((x) => x.toString() as any),
       );
     }
     if (msg.unpackedSfixed32?.length) {
@@ -977,7 +977,7 @@ export const TestAllTypesProto2 = {
     if (msg.unpackedSfixed64?.length) {
       writer.writePackedSfixed64String(
         98,
-        msg.unpackedSfixed64.map((x) => x.toString() as any)
+        msg.unpackedSfixed64.map((x) => x.toString() as any),
       );
     }
     if (msg.unpackedFloat?.length) {
@@ -992,7 +992,7 @@ export const TestAllTypesProto2 = {
     if (msg.unpackedNestedEnum?.length) {
       writer.writePackedEnum(
         102,
-        msg.unpackedNestedEnum.map(TestAllTypesProto2.NestedEnum._toInt)
+        msg.unpackedNestedEnum.map(TestAllTypesProto2.NestedEnum._toInt),
       );
     }
     if (msg.mapInt32Int32) {
@@ -1002,7 +1002,7 @@ export const TestAllTypesProto2 = {
           key: key as any,
           value: value as any,
         })) as any,
-        TestAllTypesProto2.MapInt32Int32._writeMessage
+        TestAllTypesProto2.MapInt32Int32._writeMessage,
       );
     }
     if (msg.mapInt64Int64) {
@@ -1012,7 +1012,7 @@ export const TestAllTypesProto2 = {
           key: key as any,
           value: value as any,
         })) as any,
-        TestAllTypesProto2.MapInt64Int64._writeMessage
+        TestAllTypesProto2.MapInt64Int64._writeMessage,
       );
     }
     if (msg.mapUint32Uint32) {
@@ -1022,7 +1022,7 @@ export const TestAllTypesProto2 = {
           key: key as any,
           value: value as any,
         })) as any,
-        TestAllTypesProto2.MapUint32Uint32._writeMessage
+        TestAllTypesProto2.MapUint32Uint32._writeMessage,
       );
     }
     if (msg.mapUint64Uint64) {
@@ -1032,7 +1032,7 @@ export const TestAllTypesProto2 = {
           key: key as any,
           value: value as any,
         })) as any,
-        TestAllTypesProto2.MapUint64Uint64._writeMessage
+        TestAllTypesProto2.MapUint64Uint64._writeMessage,
       );
     }
     if (msg.mapSint32Sint32) {
@@ -1042,7 +1042,7 @@ export const TestAllTypesProto2 = {
           key: key as any,
           value: value as any,
         })) as any,
-        TestAllTypesProto2.MapSint32Sint32._writeMessage
+        TestAllTypesProto2.MapSint32Sint32._writeMessage,
       );
     }
     if (msg.mapSint64Sint64) {
@@ -1052,7 +1052,7 @@ export const TestAllTypesProto2 = {
           key: key as any,
           value: value as any,
         })) as any,
-        TestAllTypesProto2.MapSint64Sint64._writeMessage
+        TestAllTypesProto2.MapSint64Sint64._writeMessage,
       );
     }
     if (msg.mapFixed32Fixed32) {
@@ -1062,7 +1062,7 @@ export const TestAllTypesProto2 = {
           key: key as any,
           value: value as any,
         })) as any,
-        TestAllTypesProto2.MapFixed32Fixed32._writeMessage
+        TestAllTypesProto2.MapFixed32Fixed32._writeMessage,
       );
     }
     if (msg.mapFixed64Fixed64) {
@@ -1072,7 +1072,7 @@ export const TestAllTypesProto2 = {
           key: key as any,
           value: value as any,
         })) as any,
-        TestAllTypesProto2.MapFixed64Fixed64._writeMessage
+        TestAllTypesProto2.MapFixed64Fixed64._writeMessage,
       );
     }
     if (msg.mapSfixed32Sfixed32) {
@@ -1082,7 +1082,7 @@ export const TestAllTypesProto2 = {
           key: key as any,
           value: value as any,
         })) as any,
-        TestAllTypesProto2.MapSfixed32Sfixed32._writeMessage
+        TestAllTypesProto2.MapSfixed32Sfixed32._writeMessage,
       );
     }
     if (msg.mapSfixed64Sfixed64) {
@@ -1092,7 +1092,7 @@ export const TestAllTypesProto2 = {
           key: key as any,
           value: value as any,
         })) as any,
-        TestAllTypesProto2.MapSfixed64Sfixed64._writeMessage
+        TestAllTypesProto2.MapSfixed64Sfixed64._writeMessage,
       );
     }
     if (msg.mapInt32Float) {
@@ -1102,7 +1102,7 @@ export const TestAllTypesProto2 = {
           key: key as any,
           value: value as any,
         })) as any,
-        TestAllTypesProto2.MapInt32Float._writeMessage
+        TestAllTypesProto2.MapInt32Float._writeMessage,
       );
     }
     if (msg.mapInt32Double) {
@@ -1112,7 +1112,7 @@ export const TestAllTypesProto2 = {
           key: key as any,
           value: value as any,
         })) as any,
-        TestAllTypesProto2.MapInt32Double._writeMessage
+        TestAllTypesProto2.MapInt32Double._writeMessage,
       );
     }
     if (msg.mapBoolBool) {
@@ -1122,7 +1122,7 @@ export const TestAllTypesProto2 = {
           key: key as any,
           value: value as any,
         })) as any,
-        TestAllTypesProto2.MapBoolBool._writeMessage
+        TestAllTypesProto2.MapBoolBool._writeMessage,
       );
     }
     if (msg.mapStringString) {
@@ -1132,7 +1132,7 @@ export const TestAllTypesProto2 = {
           key: key as any,
           value: value as any,
         })) as any,
-        TestAllTypesProto2.MapStringString._writeMessage
+        TestAllTypesProto2.MapStringString._writeMessage,
       );
     }
     if (msg.mapStringBytes) {
@@ -1142,7 +1142,7 @@ export const TestAllTypesProto2 = {
           key: key as any,
           value: value as any,
         })) as any,
-        TestAllTypesProto2.MapStringBytes._writeMessage
+        TestAllTypesProto2.MapStringBytes._writeMessage,
       );
     }
     if (msg.mapStringNestedMessage) {
@@ -1152,7 +1152,7 @@ export const TestAllTypesProto2 = {
           key: key as any,
           value: value as any,
         })) as any,
-        TestAllTypesProto2.MapStringNestedMessage._writeMessage
+        TestAllTypesProto2.MapStringNestedMessage._writeMessage,
       );
     }
     if (msg.mapStringForeignMessage) {
@@ -1162,7 +1162,7 @@ export const TestAllTypesProto2 = {
           key: key as any,
           value: value as any,
         })) as any,
-        TestAllTypesProto2.MapStringForeignMessage._writeMessage
+        TestAllTypesProto2.MapStringForeignMessage._writeMessage,
       );
     }
     if (msg.mapStringNestedEnum) {
@@ -1172,7 +1172,7 @@ export const TestAllTypesProto2 = {
           key: key as any,
           value: value as any,
         })) as any,
-        TestAllTypesProto2.MapStringNestedEnum._writeMessage
+        TestAllTypesProto2.MapStringNestedEnum._writeMessage,
       );
     }
     if (msg.mapStringForeignEnum) {
@@ -1182,7 +1182,7 @@ export const TestAllTypesProto2 = {
           key: key as any,
           value: value as any,
         })) as any,
-        TestAllTypesProto2.MapStringForeignEnum._writeMessage
+        TestAllTypesProto2.MapStringForeignEnum._writeMessage,
       );
     }
     if (msg.oneofUint32 != undefined) {
@@ -1192,7 +1192,7 @@ export const TestAllTypesProto2 = {
       writer.writeMessage(
         112,
         msg.oneofNestedMessage,
-        TestAllTypesProto2.NestedMessage._writeMessage
+        TestAllTypesProto2.NestedMessage._writeMessage,
       );
     }
     if (msg.oneofString != undefined) {
@@ -1216,7 +1216,7 @@ export const TestAllTypesProto2 = {
     if (msg.oneofEnum != undefined) {
       writer.writeEnum(
         119,
-        TestAllTypesProto2.NestedEnum._toInt(msg.oneofEnum)
+        TestAllTypesProto2.NestedEnum._toInt(msg.oneofEnum),
       );
     }
     if (msg.defaultInt32) {
@@ -1326,7 +1326,7 @@ export const TestAllTypesProto2 = {
    */
   _readMessage: function (
     msg: TestAllTypesProto2,
-    reader: BinaryReader
+    reader: BinaryReader,
   ): TestAllTypesProto2 {
     while (reader.nextField()) {
       const field = reader.getFieldNumber();
@@ -1394,26 +1394,26 @@ export const TestAllTypesProto2 = {
         case 18: {
           reader.readMessage(
             msg.optionalNestedMessage,
-            TestAllTypesProto2.NestedMessage._readMessage
+            TestAllTypesProto2.NestedMessage._readMessage,
           );
           break;
         }
         case 19: {
           reader.readMessage(
             msg.optionalForeignMessage,
-            ForeignMessageProto2._readMessage
+            ForeignMessageProto2._readMessage,
           );
           break;
         }
         case 21: {
           msg.optionalNestedEnum = TestAllTypesProto2.NestedEnum._fromInt(
-            reader.readEnum()
+            reader.readEnum(),
           );
           break;
         }
         case 22: {
           msg.optionalForeignEnum = ForeignEnumProto2._fromInt(
-            reader.readEnum()
+            reader.readEnum(),
           );
           break;
         }
@@ -1426,9 +1426,10 @@ export const TestAllTypesProto2 = {
           break;
         }
         case 27: {
+          msg.recursiveMessage = TestAllTypesProto2.initialize();
           reader.readMessage(
             msg.recursiveMessage,
-            TestAllTypesProto2._readMessage
+            TestAllTypesProto2._readMessage,
           );
           break;
         }
@@ -1443,7 +1444,7 @@ export const TestAllTypesProto2 = {
         case 32: {
           if (reader.isDelimited()) {
             msg.repeatedInt64.push(
-              ...reader.readPackedInt64String().map(BigInt)
+              ...reader.readPackedInt64String().map(BigInt),
             );
           } else {
             msg.repeatedInt64.push(BigInt(reader.readInt64String()));
@@ -1461,7 +1462,7 @@ export const TestAllTypesProto2 = {
         case 34: {
           if (reader.isDelimited()) {
             msg.repeatedUint64.push(
-              ...reader.readPackedUint64String().map(BigInt)
+              ...reader.readPackedUint64String().map(BigInt),
             );
           } else {
             msg.repeatedUint64.push(BigInt(reader.readUint64String()));
@@ -1479,7 +1480,7 @@ export const TestAllTypesProto2 = {
         case 36: {
           if (reader.isDelimited()) {
             msg.repeatedSint64.push(
-              ...reader.readPackedSint64String().map(BigInt)
+              ...reader.readPackedSint64String().map(BigInt),
             );
           } else {
             msg.repeatedSint64.push(BigInt(reader.readSint64String()));
@@ -1497,7 +1498,7 @@ export const TestAllTypesProto2 = {
         case 38: {
           if (reader.isDelimited()) {
             msg.repeatedFixed64.push(
-              ...reader.readPackedFixed64String().map(BigInt)
+              ...reader.readPackedFixed64String().map(BigInt),
             );
           } else {
             msg.repeatedFixed64.push(BigInt(reader.readFixed64String()));
@@ -1515,7 +1516,7 @@ export const TestAllTypesProto2 = {
         case 40: {
           if (reader.isDelimited()) {
             msg.repeatedSfixed64.push(
-              ...reader.readPackedSfixed64String().map(BigInt)
+              ...reader.readPackedSfixed64String().map(BigInt),
             );
           } else {
             msg.repeatedSfixed64.push(BigInt(reader.readSfixed64String()));
@@ -1571,11 +1572,11 @@ export const TestAllTypesProto2 = {
             msg.repeatedNestedEnum.push(
               ...reader
                 .readPackedEnum()
-                .map(TestAllTypesProto2.NestedEnum._fromInt)
+                .map(TestAllTypesProto2.NestedEnum._fromInt),
             );
           } else {
             msg.repeatedNestedEnum.push(
-              TestAllTypesProto2.NestedEnum._fromInt(reader.readEnum())
+              TestAllTypesProto2.NestedEnum._fromInt(reader.readEnum()),
             );
           }
           break;
@@ -1583,11 +1584,11 @@ export const TestAllTypesProto2 = {
         case 52: {
           if (reader.isDelimited()) {
             msg.repeatedForeignEnum.push(
-              ...reader.readPackedEnum().map(ForeignEnumProto2._fromInt)
+              ...reader.readPackedEnum().map(ForeignEnumProto2._fromInt),
             );
           } else {
             msg.repeatedForeignEnum.push(
-              ForeignEnumProto2._fromInt(reader.readEnum())
+              ForeignEnumProto2._fromInt(reader.readEnum()),
             );
           }
           break;
@@ -1627,7 +1628,7 @@ export const TestAllTypesProto2 = {
         case 78: {
           if (reader.isDelimited()) {
             msg.packedUint64.push(
-              ...reader.readPackedUint64String().map(BigInt)
+              ...reader.readPackedUint64String().map(BigInt),
             );
           } else {
             msg.packedUint64.push(BigInt(reader.readUint64String()));
@@ -1645,7 +1646,7 @@ export const TestAllTypesProto2 = {
         case 80: {
           if (reader.isDelimited()) {
             msg.packedSint64.push(
-              ...reader.readPackedSint64String().map(BigInt)
+              ...reader.readPackedSint64String().map(BigInt),
             );
           } else {
             msg.packedSint64.push(BigInt(reader.readSint64String()));
@@ -1663,7 +1664,7 @@ export const TestAllTypesProto2 = {
         case 82: {
           if (reader.isDelimited()) {
             msg.packedFixed64.push(
-              ...reader.readPackedFixed64String().map(BigInt)
+              ...reader.readPackedFixed64String().map(BigInt),
             );
           } else {
             msg.packedFixed64.push(BigInt(reader.readFixed64String()));
@@ -1681,7 +1682,7 @@ export const TestAllTypesProto2 = {
         case 84: {
           if (reader.isDelimited()) {
             msg.packedSfixed64.push(
-              ...reader.readPackedSfixed64String().map(BigInt)
+              ...reader.readPackedSfixed64String().map(BigInt),
             );
           } else {
             msg.packedSfixed64.push(BigInt(reader.readSfixed64String()));
@@ -1717,11 +1718,11 @@ export const TestAllTypesProto2 = {
             msg.packedNestedEnum.push(
               ...reader
                 .readPackedEnum()
-                .map(TestAllTypesProto2.NestedEnum._fromInt)
+                .map(TestAllTypesProto2.NestedEnum._fromInt),
             );
           } else {
             msg.packedNestedEnum.push(
-              TestAllTypesProto2.NestedEnum._fromInt(reader.readEnum())
+              TestAllTypesProto2.NestedEnum._fromInt(reader.readEnum()),
             );
           }
           break;
@@ -1737,7 +1738,7 @@ export const TestAllTypesProto2 = {
         case 90: {
           if (reader.isDelimited()) {
             msg.unpackedInt64.push(
-              ...reader.readPackedInt64String().map(BigInt)
+              ...reader.readPackedInt64String().map(BigInt),
             );
           } else {
             msg.unpackedInt64.push(BigInt(reader.readInt64String()));
@@ -1755,7 +1756,7 @@ export const TestAllTypesProto2 = {
         case 92: {
           if (reader.isDelimited()) {
             msg.unpackedUint64.push(
-              ...reader.readPackedUint64String().map(BigInt)
+              ...reader.readPackedUint64String().map(BigInt),
             );
           } else {
             msg.unpackedUint64.push(BigInt(reader.readUint64String()));
@@ -1773,7 +1774,7 @@ export const TestAllTypesProto2 = {
         case 94: {
           if (reader.isDelimited()) {
             msg.unpackedSint64.push(
-              ...reader.readPackedSint64String().map(BigInt)
+              ...reader.readPackedSint64String().map(BigInt),
             );
           } else {
             msg.unpackedSint64.push(BigInt(reader.readSint64String()));
@@ -1791,7 +1792,7 @@ export const TestAllTypesProto2 = {
         case 96: {
           if (reader.isDelimited()) {
             msg.unpackedFixed64.push(
-              ...reader.readPackedFixed64String().map(BigInt)
+              ...reader.readPackedFixed64String().map(BigInt),
             );
           } else {
             msg.unpackedFixed64.push(BigInt(reader.readFixed64String()));
@@ -1809,7 +1810,7 @@ export const TestAllTypesProto2 = {
         case 98: {
           if (reader.isDelimited()) {
             msg.unpackedSfixed64.push(
-              ...reader.readPackedSfixed64String().map(BigInt)
+              ...reader.readPackedSfixed64String().map(BigInt),
             );
           } else {
             msg.unpackedSfixed64.push(BigInt(reader.readSfixed64String()));
@@ -1845,11 +1846,11 @@ export const TestAllTypesProto2 = {
             msg.unpackedNestedEnum.push(
               ...reader
                 .readPackedEnum()
-                .map(TestAllTypesProto2.NestedEnum._fromInt)
+                .map(TestAllTypesProto2.NestedEnum._fromInt),
             );
           } else {
             msg.unpackedNestedEnum.push(
-              TestAllTypesProto2.NestedEnum._fromInt(reader.readEnum())
+              TestAllTypesProto2.NestedEnum._fromInt(reader.readEnum()),
             );
           }
           break;
@@ -1858,7 +1859,7 @@ export const TestAllTypesProto2 = {
           const map = {} as TestAllTypesProto2.MapInt32Int32;
           reader.readMessage(
             map,
-            TestAllTypesProto2.MapInt32Int32._readMessage
+            TestAllTypesProto2.MapInt32Int32._readMessage,
           );
           msg.mapInt32Int32[map.key.toString()] = map.value;
           break;
@@ -1867,7 +1868,7 @@ export const TestAllTypesProto2 = {
           const map = {} as TestAllTypesProto2.MapInt64Int64;
           reader.readMessage(
             map,
-            TestAllTypesProto2.MapInt64Int64._readMessage
+            TestAllTypesProto2.MapInt64Int64._readMessage,
           );
           msg.mapInt64Int64[map.key.toString()] = map.value;
           break;
@@ -1876,7 +1877,7 @@ export const TestAllTypesProto2 = {
           const map = {} as TestAllTypesProto2.MapUint32Uint32;
           reader.readMessage(
             map,
-            TestAllTypesProto2.MapUint32Uint32._readMessage
+            TestAllTypesProto2.MapUint32Uint32._readMessage,
           );
           msg.mapUint32Uint32[map.key.toString()] = map.value;
           break;
@@ -1885,7 +1886,7 @@ export const TestAllTypesProto2 = {
           const map = {} as TestAllTypesProto2.MapUint64Uint64;
           reader.readMessage(
             map,
-            TestAllTypesProto2.MapUint64Uint64._readMessage
+            TestAllTypesProto2.MapUint64Uint64._readMessage,
           );
           msg.mapUint64Uint64[map.key.toString()] = map.value;
           break;
@@ -1894,7 +1895,7 @@ export const TestAllTypesProto2 = {
           const map = {} as TestAllTypesProto2.MapSint32Sint32;
           reader.readMessage(
             map,
-            TestAllTypesProto2.MapSint32Sint32._readMessage
+            TestAllTypesProto2.MapSint32Sint32._readMessage,
           );
           msg.mapSint32Sint32[map.key.toString()] = map.value;
           break;
@@ -1903,7 +1904,7 @@ export const TestAllTypesProto2 = {
           const map = {} as TestAllTypesProto2.MapSint64Sint64;
           reader.readMessage(
             map,
-            TestAllTypesProto2.MapSint64Sint64._readMessage
+            TestAllTypesProto2.MapSint64Sint64._readMessage,
           );
           msg.mapSint64Sint64[map.key.toString()] = map.value;
           break;
@@ -1912,7 +1913,7 @@ export const TestAllTypesProto2 = {
           const map = {} as TestAllTypesProto2.MapFixed32Fixed32;
           reader.readMessage(
             map,
-            TestAllTypesProto2.MapFixed32Fixed32._readMessage
+            TestAllTypesProto2.MapFixed32Fixed32._readMessage,
           );
           msg.mapFixed32Fixed32[map.key.toString()] = map.value;
           break;
@@ -1921,7 +1922,7 @@ export const TestAllTypesProto2 = {
           const map = {} as TestAllTypesProto2.MapFixed64Fixed64;
           reader.readMessage(
             map,
-            TestAllTypesProto2.MapFixed64Fixed64._readMessage
+            TestAllTypesProto2.MapFixed64Fixed64._readMessage,
           );
           msg.mapFixed64Fixed64[map.key.toString()] = map.value;
           break;
@@ -1930,7 +1931,7 @@ export const TestAllTypesProto2 = {
           const map = {} as TestAllTypesProto2.MapSfixed32Sfixed32;
           reader.readMessage(
             map,
-            TestAllTypesProto2.MapSfixed32Sfixed32._readMessage
+            TestAllTypesProto2.MapSfixed32Sfixed32._readMessage,
           );
           msg.mapSfixed32Sfixed32[map.key.toString()] = map.value;
           break;
@@ -1939,7 +1940,7 @@ export const TestAllTypesProto2 = {
           const map = {} as TestAllTypesProto2.MapSfixed64Sfixed64;
           reader.readMessage(
             map,
-            TestAllTypesProto2.MapSfixed64Sfixed64._readMessage
+            TestAllTypesProto2.MapSfixed64Sfixed64._readMessage,
           );
           msg.mapSfixed64Sfixed64[map.key.toString()] = map.value;
           break;
@@ -1948,7 +1949,7 @@ export const TestAllTypesProto2 = {
           const map = {} as TestAllTypesProto2.MapInt32Float;
           reader.readMessage(
             map,
-            TestAllTypesProto2.MapInt32Float._readMessage
+            TestAllTypesProto2.MapInt32Float._readMessage,
           );
           msg.mapInt32Float[map.key.toString()] = map.value;
           break;
@@ -1957,7 +1958,7 @@ export const TestAllTypesProto2 = {
           const map = {} as TestAllTypesProto2.MapInt32Double;
           reader.readMessage(
             map,
-            TestAllTypesProto2.MapInt32Double._readMessage
+            TestAllTypesProto2.MapInt32Double._readMessage,
           );
           msg.mapInt32Double[map.key.toString()] = map.value;
           break;
@@ -1972,7 +1973,7 @@ export const TestAllTypesProto2 = {
           const map = {} as TestAllTypesProto2.MapStringString;
           reader.readMessage(
             map,
-            TestAllTypesProto2.MapStringString._readMessage
+            TestAllTypesProto2.MapStringString._readMessage,
           );
           msg.mapStringString[map.key.toString()] = map.value;
           break;
@@ -1981,7 +1982,7 @@ export const TestAllTypesProto2 = {
           const map = {} as TestAllTypesProto2.MapStringBytes;
           reader.readMessage(
             map,
-            TestAllTypesProto2.MapStringBytes._readMessage
+            TestAllTypesProto2.MapStringBytes._readMessage,
           );
           msg.mapStringBytes[map.key.toString()] = map.value;
           break;
@@ -1990,7 +1991,7 @@ export const TestAllTypesProto2 = {
           const map = {} as TestAllTypesProto2.MapStringNestedMessage;
           reader.readMessage(
             map,
-            TestAllTypesProto2.MapStringNestedMessage._readMessage
+            TestAllTypesProto2.MapStringNestedMessage._readMessage,
           );
           msg.mapStringNestedMessage[map.key.toString()] = map.value;
           break;
@@ -1999,7 +2000,7 @@ export const TestAllTypesProto2 = {
           const map = {} as TestAllTypesProto2.MapStringForeignMessage;
           reader.readMessage(
             map,
-            TestAllTypesProto2.MapStringForeignMessage._readMessage
+            TestAllTypesProto2.MapStringForeignMessage._readMessage,
           );
           msg.mapStringForeignMessage[map.key.toString()] = map.value;
           break;
@@ -2008,7 +2009,7 @@ export const TestAllTypesProto2 = {
           const map = {} as TestAllTypesProto2.MapStringNestedEnum;
           reader.readMessage(
             map,
-            TestAllTypesProto2.MapStringNestedEnum._readMessage
+            TestAllTypesProto2.MapStringNestedEnum._readMessage,
           );
           msg.mapStringNestedEnum[map.key.toString()] = map.value;
           break;
@@ -2017,7 +2018,7 @@ export const TestAllTypesProto2 = {
           const map = {} as TestAllTypesProto2.MapStringForeignEnum;
           reader.readMessage(
             map,
-            TestAllTypesProto2.MapStringForeignEnum._readMessage
+            TestAllTypesProto2.MapStringForeignEnum._readMessage,
           );
           msg.mapStringForeignEnum[map.key.toString()] = map.value;
           break;
@@ -2031,7 +2032,7 @@ export const TestAllTypesProto2 = {
             TestAllTypesProto2.NestedMessage.initialize();
           reader.readMessage(
             msg.oneofNestedMessage,
-            TestAllTypesProto2.NestedMessage._readMessage
+            TestAllTypesProto2.NestedMessage._readMessage,
           );
           break;
         }
@@ -2061,7 +2062,7 @@ export const TestAllTypesProto2 = {
         }
         case 119: {
           msg.oneofEnum = TestAllTypesProto2.NestedEnum._fromInt(
-            reader.readEnum()
+            reader.readEnum(),
           );
           break;
         }
@@ -2264,11 +2265,11 @@ export const TestAllTypesProto2 = {
      * Serializes TestAllTypesProto2.NestedMessage to protobuf.
      */
     encode: function (
-      msg: Partial<TestAllTypesProto2.NestedMessage>
+      msg: PartialDeep<TestAllTypesProto2.NestedMessage>,
     ): Uint8Array {
       return TestAllTypesProto2.NestedMessage._writeMessage(
         msg,
-        new BinaryWriter()
+        new BinaryWriter(),
       ).getResultBuffer();
     },
 
@@ -2278,7 +2279,7 @@ export const TestAllTypesProto2 = {
     decode: function (bytes: ByteSource): TestAllTypesProto2.NestedMessage {
       return TestAllTypesProto2.NestedMessage._readMessage(
         TestAllTypesProto2.NestedMessage.initialize(),
-        new BinaryReader(bytes)
+        new BinaryReader(bytes),
       );
     },
 
@@ -2296,8 +2297,8 @@ export const TestAllTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.NestedMessage>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllTypesProto2.NestedMessage>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.a) {
         writer.writeInt32(1, msg.a);
@@ -2306,7 +2307,7 @@ export const TestAllTypesProto2 = {
         writer.writeMessage(
           2,
           msg.corecursive,
-          TestAllTypesProto2._writeMessage
+          TestAllTypesProto2._writeMessage,
         );
       }
       return writer;
@@ -2317,7 +2318,7 @@ export const TestAllTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.NestedMessage,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllTypesProto2.NestedMessage {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -2327,9 +2328,10 @@ export const TestAllTypesProto2 = {
             break;
           }
           case 2: {
+            msg.corecursive = TestAllTypesProto2.initialize();
             reader.readMessage(
               msg.corecursive,
-              TestAllTypesProto2._readMessage
+              TestAllTypesProto2._readMessage,
             );
             break;
           }
@@ -2348,8 +2350,8 @@ export const TestAllTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapInt32Int32>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllTypesProto2.MapInt32Int32>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.key) {
         writer.writeInt32(1, msg.key);
@@ -2365,7 +2367,7 @@ export const TestAllTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapInt32Int32,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllTypesProto2.MapInt32Int32 {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -2393,8 +2395,8 @@ export const TestAllTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapInt64Int64>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllTypesProto2.MapInt64Int64>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.key) {
         writer.writeInt64String(1, msg.key.toString() as any);
@@ -2410,7 +2412,7 @@ export const TestAllTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapInt64Int64,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllTypesProto2.MapInt64Int64 {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -2438,8 +2440,8 @@ export const TestAllTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapUint32Uint32>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllTypesProto2.MapUint32Uint32>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.key) {
         writer.writeUint32(1, msg.key);
@@ -2455,7 +2457,7 @@ export const TestAllTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapUint32Uint32,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllTypesProto2.MapUint32Uint32 {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -2483,8 +2485,8 @@ export const TestAllTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapUint64Uint64>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllTypesProto2.MapUint64Uint64>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.key) {
         writer.writeUint64String(1, msg.key.toString() as any);
@@ -2500,7 +2502,7 @@ export const TestAllTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapUint64Uint64,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllTypesProto2.MapUint64Uint64 {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -2528,8 +2530,8 @@ export const TestAllTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapSint32Sint32>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllTypesProto2.MapSint32Sint32>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.key) {
         writer.writeSint32(1, msg.key);
@@ -2545,7 +2547,7 @@ export const TestAllTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapSint32Sint32,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllTypesProto2.MapSint32Sint32 {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -2573,8 +2575,8 @@ export const TestAllTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapSint64Sint64>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllTypesProto2.MapSint64Sint64>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.key) {
         writer.writeSint64String(1, msg.key.toString() as any);
@@ -2590,7 +2592,7 @@ export const TestAllTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapSint64Sint64,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllTypesProto2.MapSint64Sint64 {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -2618,8 +2620,8 @@ export const TestAllTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapFixed32Fixed32>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllTypesProto2.MapFixed32Fixed32>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.key) {
         writer.writeFixed32(1, msg.key);
@@ -2635,7 +2637,7 @@ export const TestAllTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapFixed32Fixed32,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllTypesProto2.MapFixed32Fixed32 {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -2663,8 +2665,8 @@ export const TestAllTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapFixed64Fixed64>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllTypesProto2.MapFixed64Fixed64>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.key) {
         writer.writeFixed64String(1, msg.key.toString() as any);
@@ -2680,7 +2682,7 @@ export const TestAllTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapFixed64Fixed64,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllTypesProto2.MapFixed64Fixed64 {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -2708,8 +2710,8 @@ export const TestAllTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapSfixed32Sfixed32>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllTypesProto2.MapSfixed32Sfixed32>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.key) {
         writer.writeSfixed32(1, msg.key);
@@ -2725,7 +2727,7 @@ export const TestAllTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapSfixed32Sfixed32,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllTypesProto2.MapSfixed32Sfixed32 {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -2753,8 +2755,8 @@ export const TestAllTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapSfixed64Sfixed64>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllTypesProto2.MapSfixed64Sfixed64>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.key) {
         writer.writeSfixed64String(1, msg.key.toString() as any);
@@ -2770,7 +2772,7 @@ export const TestAllTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapSfixed64Sfixed64,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllTypesProto2.MapSfixed64Sfixed64 {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -2798,8 +2800,8 @@ export const TestAllTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapInt32Float>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllTypesProto2.MapInt32Float>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.key) {
         writer.writeInt32(1, msg.key);
@@ -2815,7 +2817,7 @@ export const TestAllTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapInt32Float,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllTypesProto2.MapInt32Float {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -2843,8 +2845,8 @@ export const TestAllTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapInt32Double>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllTypesProto2.MapInt32Double>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.key) {
         writer.writeInt32(1, msg.key);
@@ -2860,7 +2862,7 @@ export const TestAllTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapInt32Double,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllTypesProto2.MapInt32Double {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -2888,8 +2890,8 @@ export const TestAllTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapBoolBool>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllTypesProto2.MapBoolBool>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.key) {
         writer.writeBool(1, msg.key);
@@ -2905,7 +2907,7 @@ export const TestAllTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapBoolBool,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllTypesProto2.MapBoolBool {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -2933,8 +2935,8 @@ export const TestAllTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapStringString>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllTypesProto2.MapStringString>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.key) {
         writer.writeString(1, msg.key);
@@ -2950,7 +2952,7 @@ export const TestAllTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapStringString,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllTypesProto2.MapStringString {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -2978,8 +2980,8 @@ export const TestAllTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapStringBytes>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllTypesProto2.MapStringBytes>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.key) {
         writer.writeString(1, msg.key);
@@ -2995,7 +2997,7 @@ export const TestAllTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapStringBytes,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllTypesProto2.MapStringBytes {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -3023,8 +3025,8 @@ export const TestAllTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapStringNestedMessage>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllTypesProto2.MapStringNestedMessage>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.key) {
         writer.writeString(1, msg.key);
@@ -3033,7 +3035,7 @@ export const TestAllTypesProto2 = {
         writer.writeMessage(
           2,
           msg.value,
-          TestAllTypesProto2.NestedMessage._writeMessage
+          TestAllTypesProto2.NestedMessage._writeMessage,
         );
       }
       return writer;
@@ -3044,7 +3046,7 @@ export const TestAllTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapStringNestedMessage,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllTypesProto2.MapStringNestedMessage {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -3057,7 +3059,7 @@ export const TestAllTypesProto2 = {
             msg.value = TestAllTypesProto2.NestedMessage.initialize();
             reader.readMessage(
               msg.value,
-              TestAllTypesProto2.NestedMessage._readMessage
+              TestAllTypesProto2.NestedMessage._readMessage,
             );
             break;
           }
@@ -3076,8 +3078,8 @@ export const TestAllTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapStringForeignMessage>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllTypesProto2.MapStringForeignMessage>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.key) {
         writer.writeString(1, msg.key);
@@ -3093,7 +3095,7 @@ export const TestAllTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapStringForeignMessage,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllTypesProto2.MapStringForeignMessage {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -3122,8 +3124,8 @@ export const TestAllTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapStringNestedEnum>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllTypesProto2.MapStringNestedEnum>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.key) {
         writer.writeString(1, msg.key);
@@ -3139,7 +3141,7 @@ export const TestAllTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapStringNestedEnum,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllTypesProto2.MapStringNestedEnum {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -3150,7 +3152,7 @@ export const TestAllTypesProto2 = {
           }
           case 2: {
             msg.value = TestAllTypesProto2.NestedEnum._fromInt(
-              reader.readEnum()
+              reader.readEnum(),
             );
             break;
           }
@@ -3169,8 +3171,8 @@ export const TestAllTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapStringForeignEnum>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllTypesProto2.MapStringForeignEnum>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.key) {
         writer.writeString(1, msg.key);
@@ -3186,7 +3188,7 @@ export const TestAllTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapStringForeignEnum,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllTypesProto2.MapStringForeignEnum {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -3213,10 +3215,10 @@ export const TestAllTypesProto2 = {
     /**
      * Serializes TestAllTypesProto2.Data to protobuf.
      */
-    encode: function (msg: Partial<TestAllTypesProto2.Data>): Uint8Array {
+    encode: function (msg: PartialDeep<TestAllTypesProto2.Data>): Uint8Array {
       return TestAllTypesProto2.Data._writeMessage(
         msg,
-        new BinaryWriter()
+        new BinaryWriter(),
       ).getResultBuffer();
     },
 
@@ -3226,7 +3228,7 @@ export const TestAllTypesProto2 = {
     decode: function (bytes: ByteSource): TestAllTypesProto2.Data {
       return TestAllTypesProto2.Data._readMessage(
         TestAllTypesProto2.Data.initialize(),
-        new BinaryReader(bytes)
+        new BinaryReader(bytes),
       );
     },
 
@@ -3244,8 +3246,8 @@ export const TestAllTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.Data>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllTypesProto2.Data>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.groupInt32) {
         writer.writeInt32(202, msg.groupInt32);
@@ -3261,7 +3263,7 @@ export const TestAllTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.Data,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllTypesProto2.Data {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -3289,7 +3291,7 @@ export const TestAllTypesProto2 = {
      * Serializes TestAllTypesProto2.MessageSetCorrect to protobuf.
      */
     encode: function (
-      _msg?: Partial<TestAllTypesProto2.MessageSetCorrect>
+      _msg?: PartialDeep<TestAllTypesProto2.MessageSetCorrect>,
     ): Uint8Array {
       return new Uint8Array();
     },
@@ -3298,7 +3300,7 @@ export const TestAllTypesProto2 = {
      * Deserializes TestAllTypesProto2.MessageSetCorrect from protobuf.
      */
     decode: function (
-      _bytes?: ByteSource
+      _bytes?: ByteSource,
     ): TestAllTypesProto2.MessageSetCorrect {
       return {};
     },
@@ -3314,8 +3316,8 @@ export const TestAllTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      _msg: Partial<TestAllTypesProto2.MessageSetCorrect>,
-      writer: BinaryWriter
+      _msg: PartialDeep<TestAllTypesProto2.MessageSetCorrect>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       return writer;
     },
@@ -3325,7 +3327,7 @@ export const TestAllTypesProto2 = {
      */
     _readMessage: function (
       _msg: TestAllTypesProto2.MessageSetCorrect,
-      _reader: BinaryReader
+      _reader: BinaryReader,
     ): TestAllTypesProto2.MessageSetCorrect {
       return _msg;
     },
@@ -3336,11 +3338,11 @@ export const TestAllTypesProto2 = {
      * Serializes TestAllTypesProto2.MessageSetCorrectExtension1 to protobuf.
      */
     encode: function (
-      msg: Partial<TestAllTypesProto2.MessageSetCorrectExtension1>
+      msg: PartialDeep<TestAllTypesProto2.MessageSetCorrectExtension1>,
     ): Uint8Array {
       return TestAllTypesProto2.MessageSetCorrectExtension1._writeMessage(
         msg,
-        new BinaryWriter()
+        new BinaryWriter(),
       ).getResultBuffer();
     },
 
@@ -3348,11 +3350,11 @@ export const TestAllTypesProto2 = {
      * Deserializes TestAllTypesProto2.MessageSetCorrectExtension1 from protobuf.
      */
     decode: function (
-      bytes: ByteSource
+      bytes: ByteSource,
     ): TestAllTypesProto2.MessageSetCorrectExtension1 {
       return TestAllTypesProto2.MessageSetCorrectExtension1._readMessage(
         TestAllTypesProto2.MessageSetCorrectExtension1.initialize(),
-        new BinaryReader(bytes)
+        new BinaryReader(bytes),
       );
     },
 
@@ -3369,8 +3371,8 @@ export const TestAllTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MessageSetCorrectExtension1>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllTypesProto2.MessageSetCorrectExtension1>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.str) {
         writer.writeString(25, msg.str);
@@ -3383,7 +3385,7 @@ export const TestAllTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MessageSetCorrectExtension1,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllTypesProto2.MessageSetCorrectExtension1 {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -3407,11 +3409,11 @@ export const TestAllTypesProto2 = {
      * Serializes TestAllTypesProto2.MessageSetCorrectExtension2 to protobuf.
      */
     encode: function (
-      msg: Partial<TestAllTypesProto2.MessageSetCorrectExtension2>
+      msg: PartialDeep<TestAllTypesProto2.MessageSetCorrectExtension2>,
     ): Uint8Array {
       return TestAllTypesProto2.MessageSetCorrectExtension2._writeMessage(
         msg,
-        new BinaryWriter()
+        new BinaryWriter(),
       ).getResultBuffer();
     },
 
@@ -3419,11 +3421,11 @@ export const TestAllTypesProto2 = {
      * Deserializes TestAllTypesProto2.MessageSetCorrectExtension2 from protobuf.
      */
     decode: function (
-      bytes: ByteSource
+      bytes: ByteSource,
     ): TestAllTypesProto2.MessageSetCorrectExtension2 {
       return TestAllTypesProto2.MessageSetCorrectExtension2._readMessage(
         TestAllTypesProto2.MessageSetCorrectExtension2.initialize(),
-        new BinaryReader(bytes)
+        new BinaryReader(bytes),
       );
     },
 
@@ -3440,8 +3442,8 @@ export const TestAllTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MessageSetCorrectExtension2>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllTypesProto2.MessageSetCorrectExtension2>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.i) {
         writer.writeInt32(9, msg.i);
@@ -3454,7 +3456,7 @@ export const TestAllTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MessageSetCorrectExtension2,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllTypesProto2.MessageSetCorrectExtension2 {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -3478,10 +3480,10 @@ export const ForeignMessageProto2 = {
   /**
    * Serializes ForeignMessageProto2 to protobuf.
    */
-  encode: function (msg: Partial<ForeignMessageProto2>): Uint8Array {
+  encode: function (msg: PartialDeep<ForeignMessageProto2>): Uint8Array {
     return ForeignMessageProto2._writeMessage(
       msg,
-      new BinaryWriter()
+      new BinaryWriter(),
     ).getResultBuffer();
   },
 
@@ -3491,7 +3493,7 @@ export const ForeignMessageProto2 = {
   decode: function (bytes: ByteSource): ForeignMessageProto2 {
     return ForeignMessageProto2._readMessage(
       ForeignMessageProto2.initialize(),
-      new BinaryReader(bytes)
+      new BinaryReader(bytes),
     );
   },
 
@@ -3508,8 +3510,8 @@ export const ForeignMessageProto2 = {
    * @private
    */
   _writeMessage: function (
-    msg: Partial<ForeignMessageProto2>,
-    writer: BinaryWriter
+    msg: PartialDeep<ForeignMessageProto2>,
+    writer: BinaryWriter,
   ): BinaryWriter {
     if (msg.c) {
       writer.writeInt32(1, msg.c);
@@ -3522,7 +3524,7 @@ export const ForeignMessageProto2 = {
    */
   _readMessage: function (
     msg: ForeignMessageProto2,
-    reader: BinaryReader
+    reader: BinaryReader,
   ): ForeignMessageProto2 {
     while (reader.nextField()) {
       const field = reader.getFieldNumber();
@@ -3545,10 +3547,10 @@ export const UnknownToTestAllTypes = {
   /**
    * Serializes UnknownToTestAllTypes to protobuf.
    */
-  encode: function (msg: Partial<UnknownToTestAllTypes>): Uint8Array {
+  encode: function (msg: PartialDeep<UnknownToTestAllTypes>): Uint8Array {
     return UnknownToTestAllTypes._writeMessage(
       msg,
-      new BinaryWriter()
+      new BinaryWriter(),
     ).getResultBuffer();
   },
 
@@ -3558,7 +3560,7 @@ export const UnknownToTestAllTypes = {
   decode: function (bytes: ByteSource): UnknownToTestAllTypes {
     return UnknownToTestAllTypes._readMessage(
       UnknownToTestAllTypes.initialize(),
-      new BinaryReader(bytes)
+      new BinaryReader(bytes),
     );
   },
 
@@ -3579,8 +3581,8 @@ export const UnknownToTestAllTypes = {
    * @private
    */
   _writeMessage: function (
-    msg: Partial<UnknownToTestAllTypes>,
-    writer: BinaryWriter
+    msg: PartialDeep<UnknownToTestAllTypes>,
+    writer: BinaryWriter,
   ): BinaryWriter {
     if (msg.optionalInt32) {
       writer.writeInt32(1001, msg.optionalInt32);
@@ -3592,7 +3594,7 @@ export const UnknownToTestAllTypes = {
       writer.writeMessage(
         1003,
         msg.nestedMessage,
-        ForeignMessageProto2._writeMessage
+        ForeignMessageProto2._writeMessage,
       );
     }
     if (msg.optionalBool) {
@@ -3609,7 +3611,7 @@ export const UnknownToTestAllTypes = {
    */
   _readMessage: function (
     msg: UnknownToTestAllTypes,
-    reader: BinaryReader
+    reader: BinaryReader,
   ): UnknownToTestAllTypes {
     while (reader.nextField()) {
       const field = reader.getFieldNumber();
@@ -3625,7 +3627,7 @@ export const UnknownToTestAllTypes = {
         case 1003: {
           reader.readMessage(
             msg.nestedMessage,
-            ForeignMessageProto2._readMessage
+            ForeignMessageProto2._readMessage,
           );
           break;
         }
@@ -3655,11 +3657,11 @@ export const UnknownToTestAllTypes = {
      * Serializes UnknownToTestAllTypes.OptionalGroup to protobuf.
      */
     encode: function (
-      msg: Partial<UnknownToTestAllTypes.OptionalGroup>
+      msg: PartialDeep<UnknownToTestAllTypes.OptionalGroup>,
     ): Uint8Array {
       return UnknownToTestAllTypes.OptionalGroup._writeMessage(
         msg,
-        new BinaryWriter()
+        new BinaryWriter(),
       ).getResultBuffer();
     },
 
@@ -3669,7 +3671,7 @@ export const UnknownToTestAllTypes = {
     decode: function (bytes: ByteSource): UnknownToTestAllTypes.OptionalGroup {
       return UnknownToTestAllTypes.OptionalGroup._readMessage(
         UnknownToTestAllTypes.OptionalGroup.initialize(),
-        new BinaryReader(bytes)
+        new BinaryReader(bytes),
       );
     },
 
@@ -3686,8 +3688,8 @@ export const UnknownToTestAllTypes = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<UnknownToTestAllTypes.OptionalGroup>,
-      writer: BinaryWriter
+      msg: PartialDeep<UnknownToTestAllTypes.OptionalGroup>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.a) {
         writer.writeInt32(1, msg.a);
@@ -3700,7 +3702,7 @@ export const UnknownToTestAllTypes = {
      */
     _readMessage: function (
       msg: UnknownToTestAllTypes.OptionalGroup,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): UnknownToTestAllTypes.OptionalGroup {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -3724,7 +3726,7 @@ export const NullHypothesisProto2 = {
   /**
    * Serializes NullHypothesisProto2 to protobuf.
    */
-  encode: function (_msg?: Partial<NullHypothesisProto2>): Uint8Array {
+  encode: function (_msg?: PartialDeep<NullHypothesisProto2>): Uint8Array {
     return new Uint8Array();
   },
 
@@ -3746,8 +3748,8 @@ export const NullHypothesisProto2 = {
    * @private
    */
   _writeMessage: function (
-    _msg: Partial<NullHypothesisProto2>,
-    writer: BinaryWriter
+    _msg: PartialDeep<NullHypothesisProto2>,
+    writer: BinaryWriter,
   ): BinaryWriter {
     return writer;
   },
@@ -3757,7 +3759,7 @@ export const NullHypothesisProto2 = {
    */
   _readMessage: function (
     _msg: NullHypothesisProto2,
-    _reader: BinaryReader
+    _reader: BinaryReader,
   ): NullHypothesisProto2 {
     return _msg;
   },
@@ -3767,7 +3769,7 @@ export const EnumOnlyProto2 = {
   /**
    * Serializes EnumOnlyProto2 to protobuf.
    */
-  encode: function (_msg?: Partial<EnumOnlyProto2>): Uint8Array {
+  encode: function (_msg?: PartialDeep<EnumOnlyProto2>): Uint8Array {
     return new Uint8Array();
   },
 
@@ -3789,8 +3791,8 @@ export const EnumOnlyProto2 = {
    * @private
    */
   _writeMessage: function (
-    _msg: Partial<EnumOnlyProto2>,
-    writer: BinaryWriter
+    _msg: PartialDeep<EnumOnlyProto2>,
+    writer: BinaryWriter,
   ): BinaryWriter {
     return writer;
   },
@@ -3800,7 +3802,7 @@ export const EnumOnlyProto2 = {
    */
   _readMessage: function (
     _msg: EnumOnlyProto2,
-    _reader: BinaryReader
+    _reader: BinaryReader,
   ): EnumOnlyProto2 {
     return _msg;
   },
@@ -3849,10 +3851,10 @@ export const OneStringProto2 = {
   /**
    * Serializes OneStringProto2 to protobuf.
    */
-  encode: function (msg: Partial<OneStringProto2>): Uint8Array {
+  encode: function (msg: PartialDeep<OneStringProto2>): Uint8Array {
     return OneStringProto2._writeMessage(
       msg,
-      new BinaryWriter()
+      new BinaryWriter(),
     ).getResultBuffer();
   },
 
@@ -3862,7 +3864,7 @@ export const OneStringProto2 = {
   decode: function (bytes: ByteSource): OneStringProto2 {
     return OneStringProto2._readMessage(
       OneStringProto2.initialize(),
-      new BinaryReader(bytes)
+      new BinaryReader(bytes),
     );
   },
 
@@ -3879,8 +3881,8 @@ export const OneStringProto2 = {
    * @private
    */
   _writeMessage: function (
-    msg: Partial<OneStringProto2>,
-    writer: BinaryWriter
+    msg: PartialDeep<OneStringProto2>,
+    writer: BinaryWriter,
   ): BinaryWriter {
     if (msg.data) {
       writer.writeString(1, msg.data);
@@ -3893,7 +3895,7 @@ export const OneStringProto2 = {
    */
   _readMessage: function (
     msg: OneStringProto2,
-    reader: BinaryReader
+    reader: BinaryReader,
   ): OneStringProto2 {
     while (reader.nextField()) {
       const field = reader.getFieldNumber();
@@ -3916,10 +3918,10 @@ export const ProtoWithKeywords = {
   /**
    * Serializes ProtoWithKeywords to protobuf.
    */
-  encode: function (msg: Partial<ProtoWithKeywords>): Uint8Array {
+  encode: function (msg: PartialDeep<ProtoWithKeywords>): Uint8Array {
     return ProtoWithKeywords._writeMessage(
       msg,
-      new BinaryWriter()
+      new BinaryWriter(),
     ).getResultBuffer();
   },
 
@@ -3929,7 +3931,7 @@ export const ProtoWithKeywords = {
   decode: function (bytes: ByteSource): ProtoWithKeywords {
     return ProtoWithKeywords._readMessage(
       ProtoWithKeywords.initialize(),
-      new BinaryReader(bytes)
+      new BinaryReader(bytes),
     );
   },
 
@@ -3948,8 +3950,8 @@ export const ProtoWithKeywords = {
    * @private
    */
   _writeMessage: function (
-    msg: Partial<ProtoWithKeywords>,
-    writer: BinaryWriter
+    msg: PartialDeep<ProtoWithKeywords>,
+    writer: BinaryWriter,
   ): BinaryWriter {
     if (msg.inline) {
       writer.writeInt32(1, msg.inline);
@@ -3968,7 +3970,7 @@ export const ProtoWithKeywords = {
    */
   _readMessage: function (
     msg: ProtoWithKeywords,
-    reader: BinaryReader
+    reader: BinaryReader,
   ): ProtoWithKeywords {
     while (reader.nextField()) {
       const field = reader.getFieldNumber();
@@ -3999,10 +4001,10 @@ export const TestAllRequiredTypesProto2 = {
   /**
    * Serializes TestAllRequiredTypesProto2 to protobuf.
    */
-  encode: function (msg: Partial<TestAllRequiredTypesProto2>): Uint8Array {
+  encode: function (msg: PartialDeep<TestAllRequiredTypesProto2>): Uint8Array {
     return TestAllRequiredTypesProto2._writeMessage(
       msg,
-      new BinaryWriter()
+      new BinaryWriter(),
     ).getResultBuffer();
   },
 
@@ -4012,7 +4014,7 @@ export const TestAllRequiredTypesProto2 = {
   decode: function (bytes: ByteSource): TestAllRequiredTypesProto2 {
     return TestAllRequiredTypesProto2._readMessage(
       TestAllRequiredTypesProto2.initialize(),
-      new BinaryReader(bytes)
+      new BinaryReader(bytes),
     );
   },
 
@@ -4067,8 +4069,8 @@ export const TestAllRequiredTypesProto2 = {
    * @private
    */
   _writeMessage: function (
-    msg: Partial<TestAllRequiredTypesProto2>,
-    writer: BinaryWriter
+    msg: PartialDeep<TestAllRequiredTypesProto2>,
+    writer: BinaryWriter,
   ): BinaryWriter {
     if (msg.requiredInt32) {
       writer.writeInt32(1, msg.requiredInt32);
@@ -4119,14 +4121,14 @@ export const TestAllRequiredTypesProto2 = {
       writer.writeMessage(
         18,
         msg.requiredNestedMessage,
-        TestAllRequiredTypesProto2.NestedMessage._writeMessage
+        TestAllRequiredTypesProto2.NestedMessage._writeMessage,
       );
     }
     if (msg.requiredForeignMessage) {
       writer.writeMessage(
         19,
         msg.requiredForeignMessage,
-        ForeignMessageProto2._writeMessage
+        ForeignMessageProto2._writeMessage,
       );
     }
     if (
@@ -4135,7 +4137,7 @@ export const TestAllRequiredTypesProto2 = {
     ) {
       writer.writeEnum(
         21,
-        TestAllRequiredTypesProto2.NestedEnum._toInt(msg.requiredNestedEnum)
+        TestAllRequiredTypesProto2.NestedEnum._toInt(msg.requiredNestedEnum),
       );
     }
     if (
@@ -4154,14 +4156,14 @@ export const TestAllRequiredTypesProto2 = {
       writer.writeMessage(
         27,
         msg.recursiveMessage,
-        TestAllRequiredTypesProto2._writeMessage
+        TestAllRequiredTypesProto2._writeMessage,
       );
     }
     if (msg.optionalRecursiveMessage) {
       writer.writeMessage(
         28,
         msg.optionalRecursiveMessage,
-        TestAllRequiredTypesProto2._writeMessage
+        TestAllRequiredTypesProto2._writeMessage,
       );
     }
     if (msg.defaultInt32) {
@@ -4217,7 +4219,7 @@ export const TestAllRequiredTypesProto2 = {
    */
   _readMessage: function (
     msg: TestAllRequiredTypesProto2,
-    reader: BinaryReader
+    reader: BinaryReader,
   ): TestAllRequiredTypesProto2 {
     while (reader.nextField()) {
       const field = reader.getFieldNumber();
@@ -4285,14 +4287,14 @@ export const TestAllRequiredTypesProto2 = {
         case 18: {
           reader.readMessage(
             msg.requiredNestedMessage,
-            TestAllRequiredTypesProto2.NestedMessage._readMessage
+            TestAllRequiredTypesProto2.NestedMessage._readMessage,
           );
           break;
         }
         case 19: {
           reader.readMessage(
             msg.requiredForeignMessage,
-            ForeignMessageProto2._readMessage
+            ForeignMessageProto2._readMessage,
           );
           break;
         }
@@ -4303,7 +4305,7 @@ export const TestAllRequiredTypesProto2 = {
         }
         case 22: {
           msg.requiredForeignEnum = ForeignEnumProto2._fromInt(
-            reader.readEnum()
+            reader.readEnum(),
           );
           break;
         }
@@ -4316,16 +4318,19 @@ export const TestAllRequiredTypesProto2 = {
           break;
         }
         case 27: {
+          msg.recursiveMessage = TestAllRequiredTypesProto2.initialize();
           reader.readMessage(
             msg.recursiveMessage,
-            TestAllRequiredTypesProto2._readMessage
+            TestAllRequiredTypesProto2._readMessage,
           );
           break;
         }
         case 28: {
+          msg.optionalRecursiveMessage =
+            TestAllRequiredTypesProto2.initialize();
           reader.readMessage(
             msg.optionalRecursiveMessage,
-            TestAllRequiredTypesProto2._readMessage
+            TestAllRequiredTypesProto2._readMessage,
           );
           break;
         }
@@ -4456,11 +4461,11 @@ export const TestAllRequiredTypesProto2 = {
      * Serializes TestAllRequiredTypesProto2.NestedMessage to protobuf.
      */
     encode: function (
-      msg: Partial<TestAllRequiredTypesProto2.NestedMessage>
+      msg: PartialDeep<TestAllRequiredTypesProto2.NestedMessage>,
     ): Uint8Array {
       return TestAllRequiredTypesProto2.NestedMessage._writeMessage(
         msg,
-        new BinaryWriter()
+        new BinaryWriter(),
       ).getResultBuffer();
     },
 
@@ -4468,11 +4473,11 @@ export const TestAllRequiredTypesProto2 = {
      * Deserializes TestAllRequiredTypesProto2.NestedMessage from protobuf.
      */
     decode: function (
-      bytes: ByteSource
+      bytes: ByteSource,
     ): TestAllRequiredTypesProto2.NestedMessage {
       return TestAllRequiredTypesProto2.NestedMessage._readMessage(
         TestAllRequiredTypesProto2.NestedMessage.initialize(),
-        new BinaryReader(bytes)
+        new BinaryReader(bytes),
       );
     },
 
@@ -4491,8 +4496,8 @@ export const TestAllRequiredTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllRequiredTypesProto2.NestedMessage>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllRequiredTypesProto2.NestedMessage>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.a) {
         writer.writeInt32(1, msg.a);
@@ -4501,14 +4506,14 @@ export const TestAllRequiredTypesProto2 = {
         writer.writeMessage(
           2,
           msg.corecursive,
-          TestAllRequiredTypesProto2._writeMessage
+          TestAllRequiredTypesProto2._writeMessage,
         );
       }
       if (msg.optionalCorecursive) {
         writer.writeMessage(
           3,
           msg.optionalCorecursive,
-          TestAllRequiredTypesProto2._writeMessage
+          TestAllRequiredTypesProto2._writeMessage,
         );
       }
       return writer;
@@ -4519,7 +4524,7 @@ export const TestAllRequiredTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllRequiredTypesProto2.NestedMessage,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllRequiredTypesProto2.NestedMessage {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -4529,16 +4534,18 @@ export const TestAllRequiredTypesProto2 = {
             break;
           }
           case 2: {
+            msg.corecursive = TestAllRequiredTypesProto2.initialize();
             reader.readMessage(
               msg.corecursive,
-              TestAllRequiredTypesProto2._readMessage
+              TestAllRequiredTypesProto2._readMessage,
             );
             break;
           }
           case 3: {
+            msg.optionalCorecursive = TestAllRequiredTypesProto2.initialize();
             reader.readMessage(
               msg.optionalCorecursive,
-              TestAllRequiredTypesProto2._readMessage
+              TestAllRequiredTypesProto2._readMessage,
             );
             break;
           }
@@ -4557,11 +4564,11 @@ export const TestAllRequiredTypesProto2 = {
      * Serializes TestAllRequiredTypesProto2.Data to protobuf.
      */
     encode: function (
-      msg: Partial<TestAllRequiredTypesProto2.Data>
+      msg: PartialDeep<TestAllRequiredTypesProto2.Data>,
     ): Uint8Array {
       return TestAllRequiredTypesProto2.Data._writeMessage(
         msg,
-        new BinaryWriter()
+        new BinaryWriter(),
       ).getResultBuffer();
     },
 
@@ -4571,7 +4578,7 @@ export const TestAllRequiredTypesProto2 = {
     decode: function (bytes: ByteSource): TestAllRequiredTypesProto2.Data {
       return TestAllRequiredTypesProto2.Data._readMessage(
         TestAllRequiredTypesProto2.Data.initialize(),
-        new BinaryReader(bytes)
+        new BinaryReader(bytes),
       );
     },
 
@@ -4589,8 +4596,8 @@ export const TestAllRequiredTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllRequiredTypesProto2.Data>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllRequiredTypesProto2.Data>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.groupInt32) {
         writer.writeInt32(202, msg.groupInt32);
@@ -4606,7 +4613,7 @@ export const TestAllRequiredTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllRequiredTypesProto2.Data,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllRequiredTypesProto2.Data {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -4634,7 +4641,7 @@ export const TestAllRequiredTypesProto2 = {
      * Serializes TestAllRequiredTypesProto2.MessageSetCorrect to protobuf.
      */
     encode: function (
-      _msg?: Partial<TestAllRequiredTypesProto2.MessageSetCorrect>
+      _msg?: PartialDeep<TestAllRequiredTypesProto2.MessageSetCorrect>,
     ): Uint8Array {
       return new Uint8Array();
     },
@@ -4643,7 +4650,7 @@ export const TestAllRequiredTypesProto2 = {
      * Deserializes TestAllRequiredTypesProto2.MessageSetCorrect from protobuf.
      */
     decode: function (
-      _bytes?: ByteSource
+      _bytes?: ByteSource,
     ): TestAllRequiredTypesProto2.MessageSetCorrect {
       return {};
     },
@@ -4659,8 +4666,8 @@ export const TestAllRequiredTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      _msg: Partial<TestAllRequiredTypesProto2.MessageSetCorrect>,
-      writer: BinaryWriter
+      _msg: PartialDeep<TestAllRequiredTypesProto2.MessageSetCorrect>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       return writer;
     },
@@ -4670,7 +4677,7 @@ export const TestAllRequiredTypesProto2 = {
      */
     _readMessage: function (
       _msg: TestAllRequiredTypesProto2.MessageSetCorrect,
-      _reader: BinaryReader
+      _reader: BinaryReader,
     ): TestAllRequiredTypesProto2.MessageSetCorrect {
       return _msg;
     },
@@ -4681,11 +4688,11 @@ export const TestAllRequiredTypesProto2 = {
      * Serializes TestAllRequiredTypesProto2.MessageSetCorrectExtension1 to protobuf.
      */
     encode: function (
-      msg: Partial<TestAllRequiredTypesProto2.MessageSetCorrectExtension1>
+      msg: PartialDeep<TestAllRequiredTypesProto2.MessageSetCorrectExtension1>,
     ): Uint8Array {
       return TestAllRequiredTypesProto2.MessageSetCorrectExtension1._writeMessage(
         msg,
-        new BinaryWriter()
+        new BinaryWriter(),
       ).getResultBuffer();
     },
 
@@ -4693,11 +4700,11 @@ export const TestAllRequiredTypesProto2 = {
      * Deserializes TestAllRequiredTypesProto2.MessageSetCorrectExtension1 from protobuf.
      */
     decode: function (
-      bytes: ByteSource
+      bytes: ByteSource,
     ): TestAllRequiredTypesProto2.MessageSetCorrectExtension1 {
       return TestAllRequiredTypesProto2.MessageSetCorrectExtension1._readMessage(
         TestAllRequiredTypesProto2.MessageSetCorrectExtension1.initialize(),
-        new BinaryReader(bytes)
+        new BinaryReader(bytes),
       );
     },
 
@@ -4715,8 +4722,8 @@ export const TestAllRequiredTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllRequiredTypesProto2.MessageSetCorrectExtension1>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllRequiredTypesProto2.MessageSetCorrectExtension1>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.str) {
         writer.writeString(25, msg.str);
@@ -4729,7 +4736,7 @@ export const TestAllRequiredTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllRequiredTypesProto2.MessageSetCorrectExtension1,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllRequiredTypesProto2.MessageSetCorrectExtension1 {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -4753,11 +4760,11 @@ export const TestAllRequiredTypesProto2 = {
      * Serializes TestAllRequiredTypesProto2.MessageSetCorrectExtension2 to protobuf.
      */
     encode: function (
-      msg: Partial<TestAllRequiredTypesProto2.MessageSetCorrectExtension2>
+      msg: PartialDeep<TestAllRequiredTypesProto2.MessageSetCorrectExtension2>,
     ): Uint8Array {
       return TestAllRequiredTypesProto2.MessageSetCorrectExtension2._writeMessage(
         msg,
-        new BinaryWriter()
+        new BinaryWriter(),
       ).getResultBuffer();
     },
 
@@ -4765,11 +4772,11 @@ export const TestAllRequiredTypesProto2 = {
      * Deserializes TestAllRequiredTypesProto2.MessageSetCorrectExtension2 from protobuf.
      */
     decode: function (
-      bytes: ByteSource
+      bytes: ByteSource,
     ): TestAllRequiredTypesProto2.MessageSetCorrectExtension2 {
       return TestAllRequiredTypesProto2.MessageSetCorrectExtension2._readMessage(
         TestAllRequiredTypesProto2.MessageSetCorrectExtension2.initialize(),
-        new BinaryReader(bytes)
+        new BinaryReader(bytes),
       );
     },
 
@@ -4787,8 +4794,8 @@ export const TestAllRequiredTypesProto2 = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllRequiredTypesProto2.MessageSetCorrectExtension2>,
-      writer: BinaryWriter
+      msg: PartialDeep<TestAllRequiredTypesProto2.MessageSetCorrectExtension2>,
+      writer: BinaryWriter,
     ): BinaryWriter {
       if (msg.i) {
         writer.writeInt32(9, msg.i);
@@ -4801,7 +4808,7 @@ export const TestAllRequiredTypesProto2 = {
      */
     _readMessage: function (
       msg: TestAllRequiredTypesProto2.MessageSetCorrectExtension2,
-      reader: BinaryReader
+      reader: BinaryReader,
     ): TestAllRequiredTypesProto2.MessageSetCorrectExtension2 {
       while (reader.nextField()) {
         const field = reader.getFieldNumber();
@@ -4875,7 +4882,7 @@ export const TestAllTypesProto2JSON = {
   /**
    * Serializes TestAllTypesProto2 to JSON.
    */
-  encode: function (msg: Partial<TestAllTypesProto2>): string {
+  encode: function (msg: PartialDeep<TestAllTypesProto2>): string {
     return JSON.stringify(TestAllTypesProto2JSON._writeMessage(msg));
   },
 
@@ -4885,7 +4892,7 @@ export const TestAllTypesProto2JSON = {
   decode: function (json: string): TestAllTypesProto2 {
     return TestAllTypesProto2JSON._readMessage(
       TestAllTypesProto2JSON.initialize(),
-      JSON.parse(json)
+      JSON.parse(json),
     );
   },
 
@@ -4915,7 +4922,7 @@ export const TestAllTypesProto2JSON = {
       optionalForeignEnum: ForeignEnumProto2._fromInt(0),
       optionalStringPiece: "",
       optionalCord: "",
-      recursiveMessage: TestAllTypesProto2JSON.initialize(),
+      recursiveMessage: undefined,
       repeatedInt32: [],
       repeatedInt64: [],
       repeatedUint32: [],
@@ -5033,7 +5040,7 @@ export const TestAllTypesProto2JSON = {
    * @private
    */
   _writeMessage: function (
-    msg: Partial<TestAllTypesProto2>
+    msg: PartialDeep<TestAllTypesProto2>,
   ): Record<string, unknown> {
     const json: Record<string, unknown> = {};
     if (msg.optionalInt32) {
@@ -5084,7 +5091,7 @@ export const TestAllTypesProto2JSON = {
     if (msg.optionalNestedMessage) {
       const _optionalNestedMessage_ =
         TestAllTypesProto2JSON.NestedMessage._writeMessage(
-          msg.optionalNestedMessage
+          msg.optionalNestedMessage,
         );
       if (Object.keys(_optionalNestedMessage_).length > 0) {
         json["optionalNestedMessage"] = _optionalNestedMessage_;
@@ -5092,7 +5099,7 @@ export const TestAllTypesProto2JSON = {
     }
     if (msg.optionalForeignMessage) {
       const _optionalForeignMessage_ = ForeignMessageProto2JSON._writeMessage(
-        msg.optionalForeignMessage
+        msg.optionalForeignMessage,
       );
       if (Object.keys(_optionalForeignMessage_).length > 0) {
         json["optionalForeignMessage"] = _optionalForeignMessage_;
@@ -5118,7 +5125,7 @@ export const TestAllTypesProto2JSON = {
     }
     if (msg.recursiveMessage) {
       const _recursiveMessage_ = TestAllTypesProto2JSON._writeMessage(
-        msg.recursiveMessage
+        msg.recursiveMessage,
       );
       if (Object.keys(_recursiveMessage_).length > 0) {
         json["recursiveMessage"] = _recursiveMessage_;
@@ -5171,12 +5178,12 @@ export const TestAllTypesProto2JSON = {
     }
     if (msg.repeatedNestedMessage?.length) {
       json["repeatedNestedMessage"] = msg.repeatedNestedMessage.map(
-        TestAllTypesProto2JSON.NestedMessage._writeMessage
+        TestAllTypesProto2JSON.NestedMessage._writeMessage,
       );
     }
     if (msg.repeatedForeignMessage?.length) {
       json["repeatedForeignMessage"] = msg.repeatedForeignMessage.map(
-        ForeignMessageProto2JSON._writeMessage
+        ForeignMessageProto2JSON._writeMessage,
       );
     }
     if (msg.repeatedNestedEnum?.length) {
@@ -5280,7 +5287,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(msg.mapInt32Int32)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapInt32Int32._writeMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
       if (Object.keys(_mapInt32Int32_).length > 0) {
         json["mapInt32Int32"] = _mapInt32Int32_;
@@ -5291,7 +5298,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(msg.mapInt64Int64)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapInt64Int64._writeMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
       if (Object.keys(_mapInt64Int64_).length > 0) {
         json["mapInt64Int64"] = _mapInt64Int64_;
@@ -5302,7 +5309,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(msg.mapUint32Uint32)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapUint32Uint32._writeMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
       if (Object.keys(_mapUint32Uint32_).length > 0) {
         json["mapUint32Uint32"] = _mapUint32Uint32_;
@@ -5313,7 +5320,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(msg.mapUint64Uint64)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapUint64Uint64._writeMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
       if (Object.keys(_mapUint64Uint64_).length > 0) {
         json["mapUint64Uint64"] = _mapUint64Uint64_;
@@ -5324,7 +5331,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(msg.mapSint32Sint32)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapSint32Sint32._writeMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
       if (Object.keys(_mapSint32Sint32_).length > 0) {
         json["mapSint32Sint32"] = _mapSint32Sint32_;
@@ -5335,7 +5342,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(msg.mapSint64Sint64)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapSint64Sint64._writeMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
       if (Object.keys(_mapSint64Sint64_).length > 0) {
         json["mapSint64Sint64"] = _mapSint64Sint64_;
@@ -5346,7 +5353,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(msg.mapFixed32Fixed32)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapFixed32Fixed32._writeMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
       if (Object.keys(_mapFixed32Fixed32_).length > 0) {
         json["mapFixed32Fixed32"] = _mapFixed32Fixed32_;
@@ -5357,7 +5364,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(msg.mapFixed64Fixed64)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapFixed64Fixed64._writeMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
       if (Object.keys(_mapFixed64Fixed64_).length > 0) {
         json["mapFixed64Fixed64"] = _mapFixed64Fixed64_;
@@ -5368,7 +5375,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(msg.mapSfixed32Sfixed32)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapSfixed32Sfixed32._writeMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
       if (Object.keys(_mapSfixed32Sfixed32_).length > 0) {
         json["mapSfixed32Sfixed32"] = _mapSfixed32Sfixed32_;
@@ -5379,7 +5386,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(msg.mapSfixed64Sfixed64)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapSfixed64Sfixed64._writeMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
       if (Object.keys(_mapSfixed64Sfixed64_).length > 0) {
         json["mapSfixed64Sfixed64"] = _mapSfixed64Sfixed64_;
@@ -5390,7 +5397,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(msg.mapInt32Float)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapInt32Float._writeMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
       if (Object.keys(_mapInt32Float_).length > 0) {
         json["mapInt32Float"] = _mapInt32Float_;
@@ -5401,7 +5408,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(msg.mapInt32Double)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapInt32Double._writeMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
       if (Object.keys(_mapInt32Double_).length > 0) {
         json["mapInt32Double"] = _mapInt32Double_;
@@ -5412,7 +5419,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(msg.mapBoolBool)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapBoolBool._writeMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
       if (Object.keys(_mapBoolBool_).length > 0) {
         json["mapBoolBool"] = _mapBoolBool_;
@@ -5423,7 +5430,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(msg.mapStringString)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapStringString._writeMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
       if (Object.keys(_mapStringString_).length > 0) {
         json["mapStringString"] = _mapStringString_;
@@ -5434,7 +5441,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(msg.mapStringBytes)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapStringBytes._writeMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
       if (Object.keys(_mapStringBytes_).length > 0) {
         json["mapStringBytes"] = _mapStringBytes_;
@@ -5445,7 +5452,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(msg.mapStringNestedMessage)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapStringNestedMessage._writeMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
       if (Object.keys(_mapStringNestedMessage_).length > 0) {
         json["mapStringNestedMessage"] = _mapStringNestedMessage_;
@@ -5456,7 +5463,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(msg.mapStringForeignMessage)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapStringForeignMessage._writeMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
       if (Object.keys(_mapStringForeignMessage_).length > 0) {
         json["mapStringForeignMessage"] = _mapStringForeignMessage_;
@@ -5467,7 +5474,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(msg.mapStringNestedEnum)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapStringNestedEnum._writeMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
       if (Object.keys(_mapStringNestedEnum_).length > 0) {
         json["mapStringNestedEnum"] = _mapStringNestedEnum_;
@@ -5478,7 +5485,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(msg.mapStringForeignEnum)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapStringForeignEnum._writeMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
       if (Object.keys(_mapStringForeignEnum_).length > 0) {
         json["mapStringForeignEnum"] = _mapStringForeignEnum_;
@@ -5490,7 +5497,7 @@ export const TestAllTypesProto2JSON = {
     if (msg.oneofNestedMessage != undefined) {
       const _oneofNestedMessage_ =
         TestAllTypesProto2JSON.NestedMessage._writeMessage(
-          msg.oneofNestedMessage
+          msg.oneofNestedMessage,
         );
       json["oneofNestedMessage"] = _oneofNestedMessage_;
     }
@@ -5622,7 +5629,7 @@ export const TestAllTypesProto2JSON = {
    */
   _readMessage: function (
     msg: TestAllTypesProto2,
-    json: any
+    json: any,
   ): TestAllTypesProto2 {
     const _optionalInt32_ = json["optionalInt32"] ?? json["optional_int32"];
     if (_optionalInt32_) {
@@ -5691,19 +5698,18 @@ export const TestAllTypesProto2JSON = {
     const _optionalNestedMessage_ =
       json["optionalNestedMessage"] ?? json["optional_nested_message"];
     if (_optionalNestedMessage_) {
-      const m = TestAllTypesProto2JSON.NestedMessage.initialize();
       TestAllTypesProto2JSON.NestedMessage._readMessage(
-        m,
-        _optionalNestedMessage_
+        msg.optionalNestedMessage,
+        _optionalNestedMessage_,
       );
-      msg.optionalNestedMessage = m;
     }
     const _optionalForeignMessage_ =
       json["optionalForeignMessage"] ?? json["optional_foreign_message"];
     if (_optionalForeignMessage_) {
-      const m = ForeignMessageProto2JSON.initialize();
-      ForeignMessageProto2JSON._readMessage(m, _optionalForeignMessage_);
-      msg.optionalForeignMessage = m;
+      ForeignMessageProto2JSON._readMessage(
+        msg.optionalForeignMessage,
+        _optionalForeignMessage_,
+      );
     }
     const _optionalNestedEnum_ =
       json["optionalNestedEnum"] ?? json["optional_nested_enum"];
@@ -5727,9 +5733,11 @@ export const TestAllTypesProto2JSON = {
     const _recursiveMessage_ =
       json["recursiveMessage"] ?? json["recursive_message"];
     if (_recursiveMessage_) {
-      const m = TestAllTypesProto2JSON.initialize();
-      TestAllTypesProto2JSON._readMessage(m, _recursiveMessage_);
-      msg.recursiveMessage = m;
+      msg.recursiveMessage = TestAllTypesProto2JSON.initialize();
+      TestAllTypesProto2JSON._readMessage(
+        msg.recursiveMessage,
+        _recursiveMessage_,
+      );
     }
     const _repeatedInt32_ = json["repeatedInt32"] ?? json["repeated_int32"];
     if (_repeatedInt32_) {
@@ -5956,7 +5964,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(_mapInt32Int32_)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapInt32Int32._readMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
     }
     const _mapInt64Int64_ = json["mapInt64Int64"] ?? json["map_int64_int64"];
@@ -5965,7 +5973,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(_mapInt64Int64_)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapInt64Int64._readMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
     }
     const _mapUint32Uint32_ =
@@ -5975,7 +5983,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(_mapUint32Uint32_)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapUint32Uint32._readMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
     }
     const _mapUint64Uint64_ =
@@ -5985,7 +5993,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(_mapUint64Uint64_)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapUint64Uint64._readMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
     }
     const _mapSint32Sint32_ =
@@ -5995,7 +6003,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(_mapSint32Sint32_)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapSint32Sint32._readMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
     }
     const _mapSint64Sint64_ =
@@ -6005,7 +6013,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(_mapSint64Sint64_)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapSint64Sint64._readMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
     }
     const _mapFixed32Fixed32_ =
@@ -6015,7 +6023,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(_mapFixed32Fixed32_)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapFixed32Fixed32._readMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
     }
     const _mapFixed64Fixed64_ =
@@ -6025,7 +6033,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(_mapFixed64Fixed64_)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapFixed64Fixed64._readMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
     }
     const _mapSfixed32Sfixed32_ =
@@ -6035,7 +6043,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(_mapSfixed32Sfixed32_)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapSfixed32Sfixed32._readMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
     }
     const _mapSfixed64Sfixed64_ =
@@ -6045,7 +6053,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(_mapSfixed64Sfixed64_)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapSfixed64Sfixed64._readMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
     }
     const _mapInt32Float_ = json["mapInt32Float"] ?? json["map_int32_float"];
@@ -6054,7 +6062,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(_mapInt32Float_)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapInt32Float._readMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
     }
     const _mapInt32Double_ = json["mapInt32Double"] ?? json["map_int32_double"];
@@ -6063,7 +6071,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(_mapInt32Double_)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapInt32Double._readMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
     }
     const _mapBoolBool_ = json["mapBoolBool"] ?? json["map_bool_bool"];
@@ -6072,7 +6080,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(_mapBoolBool_)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapBoolBool._readMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
     }
     const _mapStringString_ =
@@ -6082,7 +6090,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(_mapStringString_)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapStringString._readMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
     }
     const _mapStringBytes_ = json["mapStringBytes"] ?? json["map_string_bytes"];
@@ -6091,7 +6099,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(_mapStringBytes_)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapStringBytes._readMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
     }
     const _mapStringNestedMessage_ =
@@ -6101,7 +6109,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(_mapStringNestedMessage_)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapStringNestedMessage._readMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
     }
     const _mapStringForeignMessage_ =
@@ -6111,7 +6119,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(_mapStringForeignMessage_)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapStringForeignMessage._readMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
     }
     const _mapStringNestedEnum_ =
@@ -6121,7 +6129,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(_mapStringNestedEnum_)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapStringNestedEnum._readMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
     }
     const _mapStringForeignEnum_ =
@@ -6131,7 +6139,7 @@ export const TestAllTypesProto2JSON = {
         Object.entries(_mapStringForeignEnum_)
           .map(([key, value]) => ({ key: key as any, value: value as any }))
           .map(TestAllTypesProto2JSON.MapStringForeignEnum._readMessage)
-          .map(({ key, value }) => [key, value])
+          .map(({ key, value }) => [key, value]),
       );
     }
     const _oneofUint32_ = json["oneofUint32"] ?? json["oneof_uint32"];
@@ -6141,12 +6149,12 @@ export const TestAllTypesProto2JSON = {
     const _oneofNestedMessage_ =
       json["oneofNestedMessage"] ?? json["oneof_nested_message"];
     if (_oneofNestedMessage_) {
-      const m = TestAllTypesProto2JSON.NestedMessage.initialize();
+      msg.oneofNestedMessage =
+        TestAllTypesProto2JSON.NestedMessage.initialize();
       TestAllTypesProto2JSON.NestedMessage._readMessage(
-        m,
-        _oneofNestedMessage_
+        msg.oneofNestedMessage,
+        _oneofNestedMessage_,
       );
-      msg.oneofNestedMessage = m;
     }
     const _oneofString_ = json["oneofString"] ?? json["oneof_string"];
     if (_oneofString_) {
@@ -6372,9 +6380,11 @@ export const TestAllTypesProto2JSON = {
     /**
      * Serializes TestAllTypesProto2.NestedMessage to JSON.
      */
-    encode: function (msg: Partial<TestAllTypesProto2.NestedMessage>): string {
+    encode: function (
+      msg: PartialDeep<TestAllTypesProto2.NestedMessage>,
+    ): string {
       return JSON.stringify(
-        TestAllTypesProto2JSON.NestedMessage._writeMessage(msg)
+        TestAllTypesProto2JSON.NestedMessage._writeMessage(msg),
       );
     },
 
@@ -6384,7 +6394,7 @@ export const TestAllTypesProto2JSON = {
     decode: function (json: string): TestAllTypesProto2.NestedMessage {
       return TestAllTypesProto2JSON.NestedMessage._readMessage(
         TestAllTypesProto2JSON.NestedMessage.initialize(),
-        JSON.parse(json)
+        JSON.parse(json),
       );
     },
 
@@ -6394,7 +6404,7 @@ export const TestAllTypesProto2JSON = {
     initialize: function (): TestAllTypesProto2.NestedMessage {
       return {
         a: 0,
-        corecursive: TestAllTypesProto2JSON.initialize(),
+        corecursive: undefined,
       };
     },
 
@@ -6402,7 +6412,7 @@ export const TestAllTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.NestedMessage>
+      msg: PartialDeep<TestAllTypesProto2.NestedMessage>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.a) {
@@ -6410,7 +6420,7 @@ export const TestAllTypesProto2JSON = {
       }
       if (msg.corecursive) {
         const _corecursive_ = TestAllTypesProto2JSON._writeMessage(
-          msg.corecursive
+          msg.corecursive,
         );
         if (Object.keys(_corecursive_).length > 0) {
           json["corecursive"] = _corecursive_;
@@ -6424,7 +6434,7 @@ export const TestAllTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.NestedMessage,
-      json: any
+      json: any,
     ): TestAllTypesProto2.NestedMessage {
       const _a_ = json["a"];
       if (_a_) {
@@ -6432,9 +6442,8 @@ export const TestAllTypesProto2JSON = {
       }
       const _corecursive_ = json["corecursive"];
       if (_corecursive_) {
-        const m = TestAllTypesProto2JSON.initialize();
-        TestAllTypesProto2JSON._readMessage(m, _corecursive_);
-        msg.corecursive = m;
+        msg.corecursive = TestAllTypesProto2JSON.initialize();
+        TestAllTypesProto2JSON._readMessage(msg.corecursive, _corecursive_);
       }
       return msg;
     },
@@ -6445,7 +6454,7 @@ export const TestAllTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapInt32Int32>
+      msg: PartialDeep<TestAllTypesProto2.MapInt32Int32>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.key) {
@@ -6462,7 +6471,7 @@ export const TestAllTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapInt32Int32,
-      json: any
+      json: any,
     ): TestAllTypesProto2.MapInt32Int32 {
       const _key_ = json["key"];
       if (_key_) {
@@ -6481,7 +6490,7 @@ export const TestAllTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapInt64Int64>
+      msg: PartialDeep<TestAllTypesProto2.MapInt64Int64>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.key) {
@@ -6498,7 +6507,7 @@ export const TestAllTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapInt64Int64,
-      json: any
+      json: any,
     ): TestAllTypesProto2.MapInt64Int64 {
       const _key_ = json["key"];
       if (_key_) {
@@ -6517,7 +6526,7 @@ export const TestAllTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapUint32Uint32>
+      msg: PartialDeep<TestAllTypesProto2.MapUint32Uint32>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.key) {
@@ -6534,7 +6543,7 @@ export const TestAllTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapUint32Uint32,
-      json: any
+      json: any,
     ): TestAllTypesProto2.MapUint32Uint32 {
       const _key_ = json["key"];
       if (_key_) {
@@ -6553,7 +6562,7 @@ export const TestAllTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapUint64Uint64>
+      msg: PartialDeep<TestAllTypesProto2.MapUint64Uint64>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.key) {
@@ -6570,7 +6579,7 @@ export const TestAllTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapUint64Uint64,
-      json: any
+      json: any,
     ): TestAllTypesProto2.MapUint64Uint64 {
       const _key_ = json["key"];
       if (_key_) {
@@ -6589,7 +6598,7 @@ export const TestAllTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapSint32Sint32>
+      msg: PartialDeep<TestAllTypesProto2.MapSint32Sint32>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.key) {
@@ -6606,7 +6615,7 @@ export const TestAllTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapSint32Sint32,
-      json: any
+      json: any,
     ): TestAllTypesProto2.MapSint32Sint32 {
       const _key_ = json["key"];
       if (_key_) {
@@ -6625,7 +6634,7 @@ export const TestAllTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapSint64Sint64>
+      msg: PartialDeep<TestAllTypesProto2.MapSint64Sint64>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.key) {
@@ -6642,7 +6651,7 @@ export const TestAllTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapSint64Sint64,
-      json: any
+      json: any,
     ): TestAllTypesProto2.MapSint64Sint64 {
       const _key_ = json["key"];
       if (_key_) {
@@ -6661,7 +6670,7 @@ export const TestAllTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapFixed32Fixed32>
+      msg: PartialDeep<TestAllTypesProto2.MapFixed32Fixed32>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.key) {
@@ -6678,7 +6687,7 @@ export const TestAllTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapFixed32Fixed32,
-      json: any
+      json: any,
     ): TestAllTypesProto2.MapFixed32Fixed32 {
       const _key_ = json["key"];
       if (_key_) {
@@ -6697,7 +6706,7 @@ export const TestAllTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapFixed64Fixed64>
+      msg: PartialDeep<TestAllTypesProto2.MapFixed64Fixed64>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.key) {
@@ -6714,7 +6723,7 @@ export const TestAllTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapFixed64Fixed64,
-      json: any
+      json: any,
     ): TestAllTypesProto2.MapFixed64Fixed64 {
       const _key_ = json["key"];
       if (_key_) {
@@ -6733,7 +6742,7 @@ export const TestAllTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapSfixed32Sfixed32>
+      msg: PartialDeep<TestAllTypesProto2.MapSfixed32Sfixed32>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.key) {
@@ -6750,7 +6759,7 @@ export const TestAllTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapSfixed32Sfixed32,
-      json: any
+      json: any,
     ): TestAllTypesProto2.MapSfixed32Sfixed32 {
       const _key_ = json["key"];
       if (_key_) {
@@ -6769,7 +6778,7 @@ export const TestAllTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapSfixed64Sfixed64>
+      msg: PartialDeep<TestAllTypesProto2.MapSfixed64Sfixed64>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.key) {
@@ -6786,7 +6795,7 @@ export const TestAllTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapSfixed64Sfixed64,
-      json: any
+      json: any,
     ): TestAllTypesProto2.MapSfixed64Sfixed64 {
       const _key_ = json["key"];
       if (_key_) {
@@ -6805,7 +6814,7 @@ export const TestAllTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapInt32Float>
+      msg: PartialDeep<TestAllTypesProto2.MapInt32Float>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.key) {
@@ -6822,7 +6831,7 @@ export const TestAllTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapInt32Float,
-      json: any
+      json: any,
     ): TestAllTypesProto2.MapInt32Float {
       const _key_ = json["key"];
       if (_key_) {
@@ -6841,7 +6850,7 @@ export const TestAllTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapInt32Double>
+      msg: PartialDeep<TestAllTypesProto2.MapInt32Double>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.key) {
@@ -6858,7 +6867,7 @@ export const TestAllTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapInt32Double,
-      json: any
+      json: any,
     ): TestAllTypesProto2.MapInt32Double {
       const _key_ = json["key"];
       if (_key_) {
@@ -6877,7 +6886,7 @@ export const TestAllTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapBoolBool>
+      msg: PartialDeep<TestAllTypesProto2.MapBoolBool>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.key) {
@@ -6894,7 +6903,7 @@ export const TestAllTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapBoolBool,
-      json: any
+      json: any,
     ): TestAllTypesProto2.MapBoolBool {
       const _key_ = json["key"];
       if (_key_) {
@@ -6913,7 +6922,7 @@ export const TestAllTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapStringString>
+      msg: PartialDeep<TestAllTypesProto2.MapStringString>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.key) {
@@ -6930,7 +6939,7 @@ export const TestAllTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapStringString,
-      json: any
+      json: any,
     ): TestAllTypesProto2.MapStringString {
       const _key_ = json["key"];
       if (_key_) {
@@ -6949,7 +6958,7 @@ export const TestAllTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapStringBytes>
+      msg: PartialDeep<TestAllTypesProto2.MapStringBytes>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.key) {
@@ -6966,7 +6975,7 @@ export const TestAllTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapStringBytes,
-      json: any
+      json: any,
     ): TestAllTypesProto2.MapStringBytes {
       const _key_ = json["key"];
       if (_key_) {
@@ -6985,7 +6994,7 @@ export const TestAllTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapStringNestedMessage>
+      msg: PartialDeep<TestAllTypesProto2.MapStringNestedMessage>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.key) {
@@ -6993,7 +7002,7 @@ export const TestAllTypesProto2JSON = {
       }
       if (msg.value) {
         const _value_ = TestAllTypesProto2JSON.NestedMessage._writeMessage(
-          msg.value
+          msg.value,
         );
         if (Object.keys(_value_).length > 0) {
           json["value"] = _value_;
@@ -7007,7 +7016,7 @@ export const TestAllTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapStringNestedMessage,
-      json: any
+      json: any,
     ): TestAllTypesProto2.MapStringNestedMessage {
       const _key_ = json["key"];
       if (_key_) {
@@ -7015,9 +7024,7 @@ export const TestAllTypesProto2JSON = {
       }
       const _value_ = json["value"];
       if (_value_) {
-        const m = TestAllTypesProto2JSON.NestedMessage.initialize();
-        TestAllTypesProto2JSON.NestedMessage._readMessage(m, _value_);
-        msg.value = m;
+        TestAllTypesProto2JSON.NestedMessage._readMessage(msg.value, _value_);
       }
       return msg;
     },
@@ -7028,7 +7035,7 @@ export const TestAllTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapStringForeignMessage>
+      msg: PartialDeep<TestAllTypesProto2.MapStringForeignMessage>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.key) {
@@ -7048,7 +7055,7 @@ export const TestAllTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapStringForeignMessage,
-      json: any
+      json: any,
     ): TestAllTypesProto2.MapStringForeignMessage {
       const _key_ = json["key"];
       if (_key_) {
@@ -7056,9 +7063,7 @@ export const TestAllTypesProto2JSON = {
       }
       const _value_ = json["value"];
       if (_value_) {
-        const m = ForeignMessageProto2JSON.initialize();
-        ForeignMessageProto2JSON._readMessage(m, _value_);
-        msg.value = m;
+        ForeignMessageProto2JSON._readMessage(msg.value, _value_);
       }
       return msg;
     },
@@ -7069,7 +7074,7 @@ export const TestAllTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapStringNestedEnum>
+      msg: PartialDeep<TestAllTypesProto2.MapStringNestedEnum>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.key) {
@@ -7086,7 +7091,7 @@ export const TestAllTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapStringNestedEnum,
-      json: any
+      json: any,
     ): TestAllTypesProto2.MapStringNestedEnum {
       const _key_ = json["key"];
       if (_key_) {
@@ -7105,7 +7110,7 @@ export const TestAllTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MapStringForeignEnum>
+      msg: PartialDeep<TestAllTypesProto2.MapStringForeignEnum>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.key) {
@@ -7122,7 +7127,7 @@ export const TestAllTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MapStringForeignEnum,
-      json: any
+      json: any,
     ): TestAllTypesProto2.MapStringForeignEnum {
       const _key_ = json["key"];
       if (_key_) {
@@ -7140,7 +7145,7 @@ export const TestAllTypesProto2JSON = {
     /**
      * Serializes TestAllTypesProto2.Data to JSON.
      */
-    encode: function (msg: Partial<TestAllTypesProto2.Data>): string {
+    encode: function (msg: PartialDeep<TestAllTypesProto2.Data>): string {
       return JSON.stringify(TestAllTypesProto2JSON.Data._writeMessage(msg));
     },
 
@@ -7150,7 +7155,7 @@ export const TestAllTypesProto2JSON = {
     decode: function (json: string): TestAllTypesProto2.Data {
       return TestAllTypesProto2JSON.Data._readMessage(
         TestAllTypesProto2JSON.Data.initialize(),
-        JSON.parse(json)
+        JSON.parse(json),
       );
     },
 
@@ -7168,7 +7173,7 @@ export const TestAllTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.Data>
+      msg: PartialDeep<TestAllTypesProto2.Data>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.groupInt32) {
@@ -7185,7 +7190,7 @@ export const TestAllTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.Data,
-      json: any
+      json: any,
     ): TestAllTypesProto2.Data {
       const _groupInt32_ = json["groupInt32"] ?? json["group_int32"];
       if (_groupInt32_) {
@@ -7204,7 +7209,7 @@ export const TestAllTypesProto2JSON = {
      * Serializes TestAllTypesProto2.MessageSetCorrect to JSON.
      */
     encode: function (
-      _msg?: Partial<TestAllTypesProto2.MessageSetCorrect>
+      _msg?: PartialDeep<TestAllTypesProto2.MessageSetCorrect>,
     ): string {
       return "{}";
     },
@@ -7227,7 +7232,7 @@ export const TestAllTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      _msg: Partial<TestAllTypesProto2.MessageSetCorrect>
+      _msg: PartialDeep<TestAllTypesProto2.MessageSetCorrect>,
     ): Record<string, unknown> {
       return {};
     },
@@ -7237,7 +7242,7 @@ export const TestAllTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MessageSetCorrect,
-      _json: any
+      _json: any,
     ): TestAllTypesProto2.MessageSetCorrect {
       return msg;
     },
@@ -7248,10 +7253,10 @@ export const TestAllTypesProto2JSON = {
      * Serializes TestAllTypesProto2.MessageSetCorrectExtension1 to JSON.
      */
     encode: function (
-      msg: Partial<TestAllTypesProto2.MessageSetCorrectExtension1>
+      msg: PartialDeep<TestAllTypesProto2.MessageSetCorrectExtension1>,
     ): string {
       return JSON.stringify(
-        TestAllTypesProto2JSON.MessageSetCorrectExtension1._writeMessage(msg)
+        TestAllTypesProto2JSON.MessageSetCorrectExtension1._writeMessage(msg),
       );
     },
 
@@ -7259,11 +7264,11 @@ export const TestAllTypesProto2JSON = {
      * Deserializes TestAllTypesProto2.MessageSetCorrectExtension1 from JSON.
      */
     decode: function (
-      json: string
+      json: string,
     ): TestAllTypesProto2.MessageSetCorrectExtension1 {
       return TestAllTypesProto2JSON.MessageSetCorrectExtension1._readMessage(
         TestAllTypesProto2JSON.MessageSetCorrectExtension1.initialize(),
-        JSON.parse(json)
+        JSON.parse(json),
       );
     },
 
@@ -7280,7 +7285,7 @@ export const TestAllTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MessageSetCorrectExtension1>
+      msg: PartialDeep<TestAllTypesProto2.MessageSetCorrectExtension1>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.str) {
@@ -7294,7 +7299,7 @@ export const TestAllTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MessageSetCorrectExtension1,
-      json: any
+      json: any,
     ): TestAllTypesProto2.MessageSetCorrectExtension1 {
       const _str_ = json["str"];
       if (_str_) {
@@ -7309,10 +7314,10 @@ export const TestAllTypesProto2JSON = {
      * Serializes TestAllTypesProto2.MessageSetCorrectExtension2 to JSON.
      */
     encode: function (
-      msg: Partial<TestAllTypesProto2.MessageSetCorrectExtension2>
+      msg: PartialDeep<TestAllTypesProto2.MessageSetCorrectExtension2>,
     ): string {
       return JSON.stringify(
-        TestAllTypesProto2JSON.MessageSetCorrectExtension2._writeMessage(msg)
+        TestAllTypesProto2JSON.MessageSetCorrectExtension2._writeMessage(msg),
       );
     },
 
@@ -7320,11 +7325,11 @@ export const TestAllTypesProto2JSON = {
      * Deserializes TestAllTypesProto2.MessageSetCorrectExtension2 from JSON.
      */
     decode: function (
-      json: string
+      json: string,
     ): TestAllTypesProto2.MessageSetCorrectExtension2 {
       return TestAllTypesProto2JSON.MessageSetCorrectExtension2._readMessage(
         TestAllTypesProto2JSON.MessageSetCorrectExtension2.initialize(),
-        JSON.parse(json)
+        JSON.parse(json),
       );
     },
 
@@ -7341,7 +7346,7 @@ export const TestAllTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllTypesProto2.MessageSetCorrectExtension2>
+      msg: PartialDeep<TestAllTypesProto2.MessageSetCorrectExtension2>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.i) {
@@ -7355,7 +7360,7 @@ export const TestAllTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllTypesProto2.MessageSetCorrectExtension2,
-      json: any
+      json: any,
     ): TestAllTypesProto2.MessageSetCorrectExtension2 {
       const _i_ = json["i"];
       if (_i_) {
@@ -7370,7 +7375,7 @@ export const ForeignMessageProto2JSON = {
   /**
    * Serializes ForeignMessageProto2 to JSON.
    */
-  encode: function (msg: Partial<ForeignMessageProto2>): string {
+  encode: function (msg: PartialDeep<ForeignMessageProto2>): string {
     return JSON.stringify(ForeignMessageProto2JSON._writeMessage(msg));
   },
 
@@ -7380,7 +7385,7 @@ export const ForeignMessageProto2JSON = {
   decode: function (json: string): ForeignMessageProto2 {
     return ForeignMessageProto2JSON._readMessage(
       ForeignMessageProto2JSON.initialize(),
-      JSON.parse(json)
+      JSON.parse(json),
     );
   },
 
@@ -7397,7 +7402,7 @@ export const ForeignMessageProto2JSON = {
    * @private
    */
   _writeMessage: function (
-    msg: Partial<ForeignMessageProto2>
+    msg: PartialDeep<ForeignMessageProto2>,
   ): Record<string, unknown> {
     const json: Record<string, unknown> = {};
     if (msg.c) {
@@ -7411,7 +7416,7 @@ export const ForeignMessageProto2JSON = {
    */
   _readMessage: function (
     msg: ForeignMessageProto2,
-    json: any
+    json: any,
   ): ForeignMessageProto2 {
     const _c_ = json["c"];
     if (_c_) {
@@ -7425,7 +7430,7 @@ export const UnknownToTestAllTypesJSON = {
   /**
    * Serializes UnknownToTestAllTypes to JSON.
    */
-  encode: function (msg: Partial<UnknownToTestAllTypes>): string {
+  encode: function (msg: PartialDeep<UnknownToTestAllTypes>): string {
     return JSON.stringify(UnknownToTestAllTypesJSON._writeMessage(msg));
   },
 
@@ -7435,7 +7440,7 @@ export const UnknownToTestAllTypesJSON = {
   decode: function (json: string): UnknownToTestAllTypes {
     return UnknownToTestAllTypesJSON._readMessage(
       UnknownToTestAllTypesJSON.initialize(),
-      JSON.parse(json)
+      JSON.parse(json),
     );
   },
 
@@ -7456,7 +7461,7 @@ export const UnknownToTestAllTypesJSON = {
    * @private
    */
   _writeMessage: function (
-    msg: Partial<UnknownToTestAllTypes>
+    msg: PartialDeep<UnknownToTestAllTypes>,
   ): Record<string, unknown> {
     const json: Record<string, unknown> = {};
     if (msg.optionalInt32) {
@@ -7467,7 +7472,7 @@ export const UnknownToTestAllTypesJSON = {
     }
     if (msg.nestedMessage) {
       const _nestedMessage_ = ForeignMessageProto2JSON._writeMessage(
-        msg.nestedMessage
+        msg.nestedMessage,
       );
       if (Object.keys(_nestedMessage_).length > 0) {
         json["nestedMessage"] = _nestedMessage_;
@@ -7487,7 +7492,7 @@ export const UnknownToTestAllTypesJSON = {
    */
   _readMessage: function (
     msg: UnknownToTestAllTypes,
-    json: any
+    json: any,
   ): UnknownToTestAllTypes {
     const _optionalInt32_ = json["optionalInt32"] ?? json["optional_int32"];
     if (_optionalInt32_) {
@@ -7499,9 +7504,7 @@ export const UnknownToTestAllTypesJSON = {
     }
     const _nestedMessage_ = json["nestedMessage"] ?? json["nested_message"];
     if (_nestedMessage_) {
-      const m = ForeignMessageProto2JSON.initialize();
-      ForeignMessageProto2JSON._readMessage(m, _nestedMessage_);
-      msg.nestedMessage = m;
+      ForeignMessageProto2JSON._readMessage(msg.nestedMessage, _nestedMessage_);
     }
     const _optionalBool_ = json["optionalBool"] ?? json["optional_bool"];
     if (_optionalBool_) {
@@ -7519,10 +7522,10 @@ export const UnknownToTestAllTypesJSON = {
      * Serializes UnknownToTestAllTypes.OptionalGroup to JSON.
      */
     encode: function (
-      msg: Partial<UnknownToTestAllTypes.OptionalGroup>
+      msg: PartialDeep<UnknownToTestAllTypes.OptionalGroup>,
     ): string {
       return JSON.stringify(
-        UnknownToTestAllTypesJSON.OptionalGroup._writeMessage(msg)
+        UnknownToTestAllTypesJSON.OptionalGroup._writeMessage(msg),
       );
     },
 
@@ -7532,7 +7535,7 @@ export const UnknownToTestAllTypesJSON = {
     decode: function (json: string): UnknownToTestAllTypes.OptionalGroup {
       return UnknownToTestAllTypesJSON.OptionalGroup._readMessage(
         UnknownToTestAllTypesJSON.OptionalGroup.initialize(),
-        JSON.parse(json)
+        JSON.parse(json),
       );
     },
 
@@ -7549,7 +7552,7 @@ export const UnknownToTestAllTypesJSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<UnknownToTestAllTypes.OptionalGroup>
+      msg: PartialDeep<UnknownToTestAllTypes.OptionalGroup>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.a) {
@@ -7563,7 +7566,7 @@ export const UnknownToTestAllTypesJSON = {
      */
     _readMessage: function (
       msg: UnknownToTestAllTypes.OptionalGroup,
-      json: any
+      json: any,
     ): UnknownToTestAllTypes.OptionalGroup {
       const _a_ = json["a"];
       if (_a_) {
@@ -7578,7 +7581,7 @@ export const NullHypothesisProto2JSON = {
   /**
    * Serializes NullHypothesisProto2 to JSON.
    */
-  encode: function (_msg?: Partial<NullHypothesisProto2>): string {
+  encode: function (_msg?: PartialDeep<NullHypothesisProto2>): string {
     return "{}";
   },
 
@@ -7600,7 +7603,7 @@ export const NullHypothesisProto2JSON = {
    * @private
    */
   _writeMessage: function (
-    _msg: Partial<NullHypothesisProto2>
+    _msg: PartialDeep<NullHypothesisProto2>,
   ): Record<string, unknown> {
     return {};
   },
@@ -7610,7 +7613,7 @@ export const NullHypothesisProto2JSON = {
    */
   _readMessage: function (
     msg: NullHypothesisProto2,
-    _json: any
+    _json: any,
   ): NullHypothesisProto2 {
     return msg;
   },
@@ -7620,7 +7623,7 @@ export const EnumOnlyProto2JSON = {
   /**
    * Serializes EnumOnlyProto2 to JSON.
    */
-  encode: function (_msg?: Partial<EnumOnlyProto2>): string {
+  encode: function (_msg?: PartialDeep<EnumOnlyProto2>): string {
     return "{}";
   },
 
@@ -7642,7 +7645,7 @@ export const EnumOnlyProto2JSON = {
    * @private
    */
   _writeMessage: function (
-    _msg: Partial<EnumOnlyProto2>
+    _msg: PartialDeep<EnumOnlyProto2>,
   ): Record<string, unknown> {
     return {};
   },
@@ -7698,7 +7701,7 @@ export const OneStringProto2JSON = {
   /**
    * Serializes OneStringProto2 to JSON.
    */
-  encode: function (msg: Partial<OneStringProto2>): string {
+  encode: function (msg: PartialDeep<OneStringProto2>): string {
     return JSON.stringify(OneStringProto2JSON._writeMessage(msg));
   },
 
@@ -7708,7 +7711,7 @@ export const OneStringProto2JSON = {
   decode: function (json: string): OneStringProto2 {
     return OneStringProto2JSON._readMessage(
       OneStringProto2JSON.initialize(),
-      JSON.parse(json)
+      JSON.parse(json),
     );
   },
 
@@ -7725,7 +7728,7 @@ export const OneStringProto2JSON = {
    * @private
    */
   _writeMessage: function (
-    msg: Partial<OneStringProto2>
+    msg: PartialDeep<OneStringProto2>,
   ): Record<string, unknown> {
     const json: Record<string, unknown> = {};
     if (msg.data) {
@@ -7750,7 +7753,7 @@ export const ProtoWithKeywordsJSON = {
   /**
    * Serializes ProtoWithKeywords to JSON.
    */
-  encode: function (msg: Partial<ProtoWithKeywords>): string {
+  encode: function (msg: PartialDeep<ProtoWithKeywords>): string {
     return JSON.stringify(ProtoWithKeywordsJSON._writeMessage(msg));
   },
 
@@ -7760,7 +7763,7 @@ export const ProtoWithKeywordsJSON = {
   decode: function (json: string): ProtoWithKeywords {
     return ProtoWithKeywordsJSON._readMessage(
       ProtoWithKeywordsJSON.initialize(),
-      JSON.parse(json)
+      JSON.parse(json),
     );
   },
 
@@ -7779,7 +7782,7 @@ export const ProtoWithKeywordsJSON = {
    * @private
    */
   _writeMessage: function (
-    msg: Partial<ProtoWithKeywords>
+    msg: PartialDeep<ProtoWithKeywords>,
   ): Record<string, unknown> {
     const json: Record<string, unknown> = {};
     if (msg.inline) {
@@ -7799,7 +7802,7 @@ export const ProtoWithKeywordsJSON = {
    */
   _readMessage: function (
     msg: ProtoWithKeywords,
-    json: any
+    json: any,
   ): ProtoWithKeywords {
     const _inline_ = json["inline"];
     if (_inline_) {
@@ -7821,7 +7824,7 @@ export const TestAllRequiredTypesProto2JSON = {
   /**
    * Serializes TestAllRequiredTypesProto2 to JSON.
    */
-  encode: function (msg: Partial<TestAllRequiredTypesProto2>): string {
+  encode: function (msg: PartialDeep<TestAllRequiredTypesProto2>): string {
     return JSON.stringify(TestAllRequiredTypesProto2JSON._writeMessage(msg));
   },
 
@@ -7831,7 +7834,7 @@ export const TestAllRequiredTypesProto2JSON = {
   decode: function (json: string): TestAllRequiredTypesProto2 {
     return TestAllRequiredTypesProto2JSON._readMessage(
       TestAllRequiredTypesProto2JSON.initialize(),
-      JSON.parse(json)
+      JSON.parse(json),
     );
   },
 
@@ -7862,8 +7865,8 @@ export const TestAllRequiredTypesProto2JSON = {
       requiredForeignEnum: ForeignEnumProto2._fromInt(0),
       requiredStringPiece: "",
       requiredCord: "",
-      recursiveMessage: TestAllRequiredTypesProto2JSON.initialize(),
-      optionalRecursiveMessage: TestAllRequiredTypesProto2JSON.initialize(),
+      recursiveMessage: undefined,
+      optionalRecursiveMessage: undefined,
       defaultInt32: 0,
       defaultInt64: 0n,
       defaultUint32: 0,
@@ -7886,7 +7889,7 @@ export const TestAllRequiredTypesProto2JSON = {
    * @private
    */
   _writeMessage: function (
-    msg: Partial<TestAllRequiredTypesProto2>
+    msg: PartialDeep<TestAllRequiredTypesProto2>,
   ): Record<string, unknown> {
     const json: Record<string, unknown> = {};
     if (msg.requiredInt32) {
@@ -7937,7 +7940,7 @@ export const TestAllRequiredTypesProto2JSON = {
     if (msg.requiredNestedMessage) {
       const _requiredNestedMessage_ =
         TestAllRequiredTypesProto2JSON.NestedMessage._writeMessage(
-          msg.requiredNestedMessage
+          msg.requiredNestedMessage,
         );
       if (Object.keys(_requiredNestedMessage_).length > 0) {
         json["requiredNestedMessage"] = _requiredNestedMessage_;
@@ -7945,7 +7948,7 @@ export const TestAllRequiredTypesProto2JSON = {
     }
     if (msg.requiredForeignMessage) {
       const _requiredForeignMessage_ = ForeignMessageProto2JSON._writeMessage(
-        msg.requiredForeignMessage
+        msg.requiredForeignMessage,
       );
       if (Object.keys(_requiredForeignMessage_).length > 0) {
         json["requiredForeignMessage"] = _requiredForeignMessage_;
@@ -7971,7 +7974,7 @@ export const TestAllRequiredTypesProto2JSON = {
     }
     if (msg.recursiveMessage) {
       const _recursiveMessage_ = TestAllRequiredTypesProto2JSON._writeMessage(
-        msg.recursiveMessage
+        msg.recursiveMessage,
       );
       if (Object.keys(_recursiveMessage_).length > 0) {
         json["recursiveMessage"] = _recursiveMessage_;
@@ -7980,7 +7983,7 @@ export const TestAllRequiredTypesProto2JSON = {
     if (msg.optionalRecursiveMessage) {
       const _optionalRecursiveMessage_ =
         TestAllRequiredTypesProto2JSON._writeMessage(
-          msg.optionalRecursiveMessage
+          msg.optionalRecursiveMessage,
         );
       if (Object.keys(_optionalRecursiveMessage_).length > 0) {
         json["optionalRecursiveMessage"] = _optionalRecursiveMessage_;
@@ -8039,7 +8042,7 @@ export const TestAllRequiredTypesProto2JSON = {
    */
   _readMessage: function (
     msg: TestAllRequiredTypesProto2,
-    json: any
+    json: any,
   ): TestAllRequiredTypesProto2 {
     const _requiredInt32_ = json["requiredInt32"] ?? json["required_int32"];
     if (_requiredInt32_) {
@@ -8108,19 +8111,18 @@ export const TestAllRequiredTypesProto2JSON = {
     const _requiredNestedMessage_ =
       json["requiredNestedMessage"] ?? json["required_nested_message"];
     if (_requiredNestedMessage_) {
-      const m = TestAllRequiredTypesProto2JSON.NestedMessage.initialize();
       TestAllRequiredTypesProto2JSON.NestedMessage._readMessage(
-        m,
-        _requiredNestedMessage_
+        msg.requiredNestedMessage,
+        _requiredNestedMessage_,
       );
-      msg.requiredNestedMessage = m;
     }
     const _requiredForeignMessage_ =
       json["requiredForeignMessage"] ?? json["required_foreign_message"];
     if (_requiredForeignMessage_) {
-      const m = ForeignMessageProto2JSON.initialize();
-      ForeignMessageProto2JSON._readMessage(m, _requiredForeignMessage_);
-      msg.requiredForeignMessage = m;
+      ForeignMessageProto2JSON._readMessage(
+        msg.requiredForeignMessage,
+        _requiredForeignMessage_,
+      );
     }
     const _requiredNestedEnum_ =
       json["requiredNestedEnum"] ?? json["required_nested_enum"];
@@ -8144,19 +8146,21 @@ export const TestAllRequiredTypesProto2JSON = {
     const _recursiveMessage_ =
       json["recursiveMessage"] ?? json["recursive_message"];
     if (_recursiveMessage_) {
-      const m = TestAllRequiredTypesProto2JSON.initialize();
-      TestAllRequiredTypesProto2JSON._readMessage(m, _recursiveMessage_);
-      msg.recursiveMessage = m;
+      msg.recursiveMessage = TestAllRequiredTypesProto2JSON.initialize();
+      TestAllRequiredTypesProto2JSON._readMessage(
+        msg.recursiveMessage,
+        _recursiveMessage_,
+      );
     }
     const _optionalRecursiveMessage_ =
       json["optionalRecursiveMessage"] ?? json["optional_recursive_message"];
     if (_optionalRecursiveMessage_) {
-      const m = TestAllRequiredTypesProto2JSON.initialize();
+      msg.optionalRecursiveMessage =
+        TestAllRequiredTypesProto2JSON.initialize();
       TestAllRequiredTypesProto2JSON._readMessage(
-        m,
-        _optionalRecursiveMessage_
+        msg.optionalRecursiveMessage,
+        _optionalRecursiveMessage_,
       );
-      msg.optionalRecursiveMessage = m;
     }
     const _defaultInt32_ = json["defaultInt32"] ?? json["default_int32"];
     if (_defaultInt32_) {
@@ -8281,10 +8285,10 @@ export const TestAllRequiredTypesProto2JSON = {
      * Serializes TestAllRequiredTypesProto2.NestedMessage to JSON.
      */
     encode: function (
-      msg: Partial<TestAllRequiredTypesProto2.NestedMessage>
+      msg: PartialDeep<TestAllRequiredTypesProto2.NestedMessage>,
     ): string {
       return JSON.stringify(
-        TestAllRequiredTypesProto2JSON.NestedMessage._writeMessage(msg)
+        TestAllRequiredTypesProto2JSON.NestedMessage._writeMessage(msg),
       );
     },
 
@@ -8294,7 +8298,7 @@ export const TestAllRequiredTypesProto2JSON = {
     decode: function (json: string): TestAllRequiredTypesProto2.NestedMessage {
       return TestAllRequiredTypesProto2JSON.NestedMessage._readMessage(
         TestAllRequiredTypesProto2JSON.NestedMessage.initialize(),
-        JSON.parse(json)
+        JSON.parse(json),
       );
     },
 
@@ -8304,8 +8308,8 @@ export const TestAllRequiredTypesProto2JSON = {
     initialize: function (): TestAllRequiredTypesProto2.NestedMessage {
       return {
         a: 0,
-        corecursive: TestAllRequiredTypesProto2JSON.initialize(),
-        optionalCorecursive: TestAllRequiredTypesProto2JSON.initialize(),
+        corecursive: undefined,
+        optionalCorecursive: undefined,
       };
     },
 
@@ -8313,7 +8317,7 @@ export const TestAllRequiredTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllRequiredTypesProto2.NestedMessage>
+      msg: PartialDeep<TestAllRequiredTypesProto2.NestedMessage>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.a) {
@@ -8321,7 +8325,7 @@ export const TestAllRequiredTypesProto2JSON = {
       }
       if (msg.corecursive) {
         const _corecursive_ = TestAllRequiredTypesProto2JSON._writeMessage(
-          msg.corecursive
+          msg.corecursive,
         );
         if (Object.keys(_corecursive_).length > 0) {
           json["corecursive"] = _corecursive_;
@@ -8342,7 +8346,7 @@ export const TestAllRequiredTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllRequiredTypesProto2.NestedMessage,
-      json: any
+      json: any,
     ): TestAllRequiredTypesProto2.NestedMessage {
       const _a_ = json["a"];
       if (_a_) {
@@ -8350,16 +8354,20 @@ export const TestAllRequiredTypesProto2JSON = {
       }
       const _corecursive_ = json["corecursive"];
       if (_corecursive_) {
-        const m = TestAllRequiredTypesProto2JSON.initialize();
-        TestAllRequiredTypesProto2JSON._readMessage(m, _corecursive_);
-        msg.corecursive = m;
+        msg.corecursive = TestAllRequiredTypesProto2JSON.initialize();
+        TestAllRequiredTypesProto2JSON._readMessage(
+          msg.corecursive,
+          _corecursive_,
+        );
       }
       const _optionalCorecursive_ =
         json["optionalCorecursive"] ?? json["optional_corecursive"];
       if (_optionalCorecursive_) {
-        const m = TestAllRequiredTypesProto2JSON.initialize();
-        TestAllRequiredTypesProto2JSON._readMessage(m, _optionalCorecursive_);
-        msg.optionalCorecursive = m;
+        msg.optionalCorecursive = TestAllRequiredTypesProto2JSON.initialize();
+        TestAllRequiredTypesProto2JSON._readMessage(
+          msg.optionalCorecursive,
+          _optionalCorecursive_,
+        );
       }
       return msg;
     },
@@ -8369,9 +8377,11 @@ export const TestAllRequiredTypesProto2JSON = {
     /**
      * Serializes TestAllRequiredTypesProto2.Data to JSON.
      */
-    encode: function (msg: Partial<TestAllRequiredTypesProto2.Data>): string {
+    encode: function (
+      msg: PartialDeep<TestAllRequiredTypesProto2.Data>,
+    ): string {
       return JSON.stringify(
-        TestAllRequiredTypesProto2JSON.Data._writeMessage(msg)
+        TestAllRequiredTypesProto2JSON.Data._writeMessage(msg),
       );
     },
 
@@ -8381,7 +8391,7 @@ export const TestAllRequiredTypesProto2JSON = {
     decode: function (json: string): TestAllRequiredTypesProto2.Data {
       return TestAllRequiredTypesProto2JSON.Data._readMessage(
         TestAllRequiredTypesProto2JSON.Data.initialize(),
-        JSON.parse(json)
+        JSON.parse(json),
       );
     },
 
@@ -8399,7 +8409,7 @@ export const TestAllRequiredTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllRequiredTypesProto2.Data>
+      msg: PartialDeep<TestAllRequiredTypesProto2.Data>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.groupInt32) {
@@ -8416,7 +8426,7 @@ export const TestAllRequiredTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllRequiredTypesProto2.Data,
-      json: any
+      json: any,
     ): TestAllRequiredTypesProto2.Data {
       const _groupInt32_ = json["groupInt32"] ?? json["group_int32"];
       if (_groupInt32_) {
@@ -8435,7 +8445,7 @@ export const TestAllRequiredTypesProto2JSON = {
      * Serializes TestAllRequiredTypesProto2.MessageSetCorrect to JSON.
      */
     encode: function (
-      _msg?: Partial<TestAllRequiredTypesProto2.MessageSetCorrect>
+      _msg?: PartialDeep<TestAllRequiredTypesProto2.MessageSetCorrect>,
     ): string {
       return "{}";
     },
@@ -8444,7 +8454,7 @@ export const TestAllRequiredTypesProto2JSON = {
      * Deserializes TestAllRequiredTypesProto2.MessageSetCorrect from JSON.
      */
     decode: function (
-      _json?: string
+      _json?: string,
     ): TestAllRequiredTypesProto2.MessageSetCorrect {
       return {};
     },
@@ -8460,7 +8470,7 @@ export const TestAllRequiredTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      _msg: Partial<TestAllRequiredTypesProto2.MessageSetCorrect>
+      _msg: PartialDeep<TestAllRequiredTypesProto2.MessageSetCorrect>,
     ): Record<string, unknown> {
       return {};
     },
@@ -8470,7 +8480,7 @@ export const TestAllRequiredTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllRequiredTypesProto2.MessageSetCorrect,
-      _json: any
+      _json: any,
     ): TestAllRequiredTypesProto2.MessageSetCorrect {
       return msg;
     },
@@ -8481,12 +8491,12 @@ export const TestAllRequiredTypesProto2JSON = {
      * Serializes TestAllRequiredTypesProto2.MessageSetCorrectExtension1 to JSON.
      */
     encode: function (
-      msg: Partial<TestAllRequiredTypesProto2.MessageSetCorrectExtension1>
+      msg: PartialDeep<TestAllRequiredTypesProto2.MessageSetCorrectExtension1>,
     ): string {
       return JSON.stringify(
         TestAllRequiredTypesProto2JSON.MessageSetCorrectExtension1._writeMessage(
-          msg
-        )
+          msg,
+        ),
       );
     },
 
@@ -8494,11 +8504,11 @@ export const TestAllRequiredTypesProto2JSON = {
      * Deserializes TestAllRequiredTypesProto2.MessageSetCorrectExtension1 from JSON.
      */
     decode: function (
-      json: string
+      json: string,
     ): TestAllRequiredTypesProto2.MessageSetCorrectExtension1 {
       return TestAllRequiredTypesProto2JSON.MessageSetCorrectExtension1._readMessage(
         TestAllRequiredTypesProto2JSON.MessageSetCorrectExtension1.initialize(),
-        JSON.parse(json)
+        JSON.parse(json),
       );
     },
 
@@ -8516,7 +8526,7 @@ export const TestAllRequiredTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllRequiredTypesProto2.MessageSetCorrectExtension1>
+      msg: PartialDeep<TestAllRequiredTypesProto2.MessageSetCorrectExtension1>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.str) {
@@ -8530,7 +8540,7 @@ export const TestAllRequiredTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllRequiredTypesProto2.MessageSetCorrectExtension1,
-      json: any
+      json: any,
     ): TestAllRequiredTypesProto2.MessageSetCorrectExtension1 {
       const _str_ = json["str"];
       if (_str_) {
@@ -8545,12 +8555,12 @@ export const TestAllRequiredTypesProto2JSON = {
      * Serializes TestAllRequiredTypesProto2.MessageSetCorrectExtension2 to JSON.
      */
     encode: function (
-      msg: Partial<TestAllRequiredTypesProto2.MessageSetCorrectExtension2>
+      msg: PartialDeep<TestAllRequiredTypesProto2.MessageSetCorrectExtension2>,
     ): string {
       return JSON.stringify(
         TestAllRequiredTypesProto2JSON.MessageSetCorrectExtension2._writeMessage(
-          msg
-        )
+          msg,
+        ),
       );
     },
 
@@ -8558,11 +8568,11 @@ export const TestAllRequiredTypesProto2JSON = {
      * Deserializes TestAllRequiredTypesProto2.MessageSetCorrectExtension2 from JSON.
      */
     decode: function (
-      json: string
+      json: string,
     ): TestAllRequiredTypesProto2.MessageSetCorrectExtension2 {
       return TestAllRequiredTypesProto2JSON.MessageSetCorrectExtension2._readMessage(
         TestAllRequiredTypesProto2JSON.MessageSetCorrectExtension2.initialize(),
-        JSON.parse(json)
+        JSON.parse(json),
       );
     },
 
@@ -8580,7 +8590,7 @@ export const TestAllRequiredTypesProto2JSON = {
      * @private
      */
     _writeMessage: function (
-      msg: Partial<TestAllRequiredTypesProto2.MessageSetCorrectExtension2>
+      msg: PartialDeep<TestAllRequiredTypesProto2.MessageSetCorrectExtension2>,
     ): Record<string, unknown> {
       const json: Record<string, unknown> = {};
       if (msg.i) {
@@ -8594,7 +8604,7 @@ export const TestAllRequiredTypesProto2JSON = {
      */
     _readMessage: function (
       msg: TestAllRequiredTypesProto2.MessageSetCorrectExtension2,
-      json: any
+      json: any,
     ): TestAllRequiredTypesProto2.MessageSetCorrectExtension2 {
       const _i_ = json["i"];
       if (_i_) {

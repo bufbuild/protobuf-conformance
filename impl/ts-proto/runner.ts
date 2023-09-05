@@ -20,6 +20,7 @@ import {
   WireFormat,
 } from "./gen/conformance/conformance.js";
 import { TestAllTypesProto3 } from "./gen/google/protobuf/test_messages_proto3.js";
+import { TestAllTypesProto2 } from "./gen/google/protobuf/test_messages_proto2.js";
 
 function main() {
   let testCount = 0;
@@ -48,14 +49,19 @@ function test(request: ConformanceRequest): ConformanceResponse["result"] {
     };
   }
 
-  // Only proto3 is supported because the proto2 test messages use a group, which ts_proto does not support
-  if (
-    request.messageType !== "protobuf_test_messages.proto3.TestAllTypesProto3"
-  ) {
-    return {
-      $case: "runtimeError",
-      runtimeError: `unknown request message type ${request.messageType}`,
-    };
+  let messageType: typeof TestAllTypesProto3 | typeof TestAllTypesProto2;
+  switch (request.messageType) {
+      case "protobuf_test_messages.proto3.TestAllTypesProto3":
+          messageType = TestAllTypesProto3;
+          break;
+      case "protobuf_test_messages.proto2.TestAllTypesProto2":
+          messageType = TestAllTypesProto2;
+          break;
+      default:
+          return {
+              $case: "runtimeError",
+              runtimeError: `unknown request message type ${request.messageType}`,
+          };
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -64,11 +70,11 @@ function test(request: ConformanceRequest): ConformanceResponse["result"] {
   try {
     switch (request?.payload?.$case) {
       case "protobufPayload":
-        payload = TestAllTypesProto3.decode(request.payload.protobufPayload);
+        payload = messageType.decode(request.payload.protobufPayload);
         break;
 
       case "jsonPayload":
-        TestAllTypesProto3.fromJSON(request.payload.jsonPayload);
+        messageType.fromJSON(request.payload.jsonPayload);
         break;
 
       default:
@@ -92,13 +98,13 @@ function test(request: ConformanceRequest): ConformanceResponse["result"] {
       case WireFormat.PROTOBUF:
         return {
           $case: "protobufPayload",
-          protobufPayload: TestAllTypesProto3.encode(payload).finish(),
+          protobufPayload: messageType.encode(payload).finish(),
         };
 
       case WireFormat.JSON:
         return {
           $case: "jsonPayload",
-          jsonPayload: JSON.stringify(TestAllTypesProto3.toJSON(payload)),
+          jsonPayload: JSON.stringify(messageType.toJSON(payload)),
         };
 
       case WireFormat.JSPB:
