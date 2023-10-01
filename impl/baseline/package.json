@@ -9,7 +9,7 @@
   "devDependencies": {
     "@bufbuild/buf": "^1.26.1",
     "@types/node": "^20.5.7",
-    "tsx": "^3.12.8",
+    "tsx": "^3.13.0",
     "typescript": "^5.2.2"
   }
 }
