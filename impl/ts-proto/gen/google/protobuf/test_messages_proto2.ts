@@ -22,7 +22,7 @@ export function foreignEnumProto2FromJSON(object: any): ForeignEnumProto2 {
     case "FOREIGN_BAZ":
       return ForeignEnumProto2.FOREIGN_BAZ;
     default:
-      throw new tsProtoGlobalThis.Error("Unrecognized enum value " + object + " for enum ForeignEnumProto2");
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum ForeignEnumProto2");
   }
 }
 
@@ -35,7 +35,7 @@ export function foreignEnumProto2ToJSON(object: ForeignEnumProto2): string {
     case ForeignEnumProto2.FOREIGN_BAZ:
       return "FOREIGN_BAZ";
     default:
-      throw new tsProtoGlobalThis.Error("Unrecognized enum value " + object + " for enum ForeignEnumProto2");
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum ForeignEnumProto2");
   }
 }
 
@@ -223,9 +223,7 @@ export function testAllTypesProto2_NestedEnumFromJSON(object: any): TestAllTypes
     case "NEG":
       return TestAllTypesProto2_NestedEnum.NEG;
     default:
-      throw new tsProtoGlobalThis.Error(
-        "Unrecognized enum value " + object + " for enum TestAllTypesProto2_NestedEnum",
-      );
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum TestAllTypesProto2_NestedEnum");
   }
 }
 
@@ -240,9 +238,7 @@ export function testAllTypesProto2_NestedEnumToJSON(object: TestAllTypesProto2_N
     case TestAllTypesProto2_NestedEnum.NEG:
       return "NEG";
     default:
-      throw new tsProtoGlobalThis.Error(
-        "Unrecognized enum value " + object + " for enum TestAllTypesProto2_NestedEnum",
-      );
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum TestAllTypesProto2_NestedEnum");
   }
 }
 
@@ -401,7 +397,7 @@ export function enumOnlyProto2_BoolFromJSON(object: any): EnumOnlyProto2_Bool {
     case "kTrue":
       return EnumOnlyProto2_Bool.kTrue;
     default:
-      throw new tsProtoGlobalThis.Error("Unrecognized enum value " + object + " for enum EnumOnlyProto2_Bool");
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum EnumOnlyProto2_Bool");
   }
 }
 
@@ -412,7 +408,7 @@ export function enumOnlyProto2_BoolToJSON(object: EnumOnlyProto2_Bool): string {
     case EnumOnlyProto2_Bool.kTrue:
       return "kTrue";
     default:
-      throw new tsProtoGlobalThis.Error("Unrecognized enum value " + object + " for enum EnumOnlyProto2_Bool");
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum EnumOnlyProto2_Bool");
   }
 }
 
@@ -495,7 +491,7 @@ export function testAllRequiredTypesProto2_NestedEnumFromJSON(object: any): Test
     case "NEG":
       return TestAllRequiredTypesProto2_NestedEnum.NEG;
     default:
-      throw new tsProtoGlobalThis.Error(
+      throw new globalThis.Error(
         "Unrecognized enum value " + object + " for enum TestAllRequiredTypesProto2_NestedEnum",
       );
   }
@@ -512,7 +508,7 @@ export function testAllRequiredTypesProto2_NestedEnumToJSON(object: TestAllRequi
     case TestAllRequiredTypesProto2_NestedEnum.NEG:
       return "NEG";
     default:
-      throw new tsProtoGlobalThis.Error(
+      throw new globalThis.Error(
         "Unrecognized enum value " + object + " for enum TestAllRequiredTypesProto2_NestedEnum",
       );
   }
@@ -973,66 +969,66 @@ export const TestAllTypesProto2 = {
       writer.int32(v);
     }
     writer.ldelim();
-    (message.mapInt32Int32).forEach((value, key) => {
+    message.mapInt32Int32.forEach((value, key) => {
       TestAllTypesProto2_MapInt32Int32Entry.encode({ key: key as any, value }, writer.uint32(450).fork()).ldelim();
     });
-    (message.mapInt64Int64).forEach((value, key) => {
+    message.mapInt64Int64.forEach((value, key) => {
       TestAllTypesProto2_MapInt64Int64Entry.encode({ key: key as any, value }, writer.uint32(458).fork()).ldelim();
     });
-    (message.mapUint32Uint32).forEach((value, key) => {
+    message.mapUint32Uint32.forEach((value, key) => {
       TestAllTypesProto2_MapUint32Uint32Entry.encode({ key: key as any, value }, writer.uint32(466).fork()).ldelim();
     });
-    (message.mapUint64Uint64).forEach((value, key) => {
+    message.mapUint64Uint64.forEach((value, key) => {
       TestAllTypesProto2_MapUint64Uint64Entry.encode({ key: key as any, value }, writer.uint32(474).fork()).ldelim();
     });
-    (message.mapSint32Sint32).forEach((value, key) => {
+    message.mapSint32Sint32.forEach((value, key) => {
       TestAllTypesProto2_MapSint32Sint32Entry.encode({ key: key as any, value }, writer.uint32(482).fork()).ldelim();
     });
-    (message.mapSint64Sint64).forEach((value, key) => {
+    message.mapSint64Sint64.forEach((value, key) => {
       TestAllTypesProto2_MapSint64Sint64Entry.encode({ key: key as any, value }, writer.uint32(490).fork()).ldelim();
     });
-    (message.mapFixed32Fixed32).forEach((value, key) => {
+    message.mapFixed32Fixed32.forEach((value, key) => {
       TestAllTypesProto2_MapFixed32Fixed32Entry.encode({ key: key as any, value }, writer.uint32(498).fork()).ldelim();
     });
-    (message.mapFixed64Fixed64).forEach((value, key) => {
+    message.mapFixed64Fixed64.forEach((value, key) => {
       TestAllTypesProto2_MapFixed64Fixed64Entry.encode({ key: key as any, value }, writer.uint32(506).fork()).ldelim();
     });
-    (message.mapSfixed32Sfixed32).forEach((value, key) => {
+    message.mapSfixed32Sfixed32.forEach((value, key) => {
       TestAllTypesProto2_MapSfixed32Sfixed32Entry.encode({ key: key as any, value }, writer.uint32(514).fork())
         .ldelim();
     });
-    (message.mapSfixed64Sfixed64).forEach((value, key) => {
+    message.mapSfixed64Sfixed64.forEach((value, key) => {
       TestAllTypesProto2_MapSfixed64Sfixed64Entry.encode({ key: key as any, value }, writer.uint32(522).fork())
         .ldelim();
     });
-    (message.mapInt32Float).forEach((value, key) => {
+    message.mapInt32Float.forEach((value, key) => {
       TestAllTypesProto2_MapInt32FloatEntry.encode({ key: key as any, value }, writer.uint32(530).fork()).ldelim();
     });
-    (message.mapInt32Double).forEach((value, key) => {
+    message.mapInt32Double.forEach((value, key) => {
       TestAllTypesProto2_MapInt32DoubleEntry.encode({ key: key as any, value }, writer.uint32(538).fork()).ldelim();
     });
-    (message.mapBoolBool).forEach((value, key) => {
+    message.mapBoolBool.forEach((value, key) => {
       TestAllTypesProto2_MapBoolBoolEntry.encode({ key: key as any, value }, writer.uint32(546).fork()).ldelim();
     });
-    (message.mapStringString).forEach((value, key) => {
+    message.mapStringString.forEach((value, key) => {
       TestAllTypesProto2_MapStringStringEntry.encode({ key: key as any, value }, writer.uint32(554).fork()).ldelim();
     });
-    (message.mapStringBytes).forEach((value, key) => {
+    message.mapStringBytes.forEach((value, key) => {
       TestAllTypesProto2_MapStringBytesEntry.encode({ key: key as any, value }, writer.uint32(562).fork()).ldelim();
     });
-    (message.mapStringNestedMessage).forEach((value, key) => {
+    message.mapStringNestedMessage.forEach((value, key) => {
       TestAllTypesProto2_MapStringNestedMessageEntry.encode({ key: key as any, value }, writer.uint32(570).fork())
         .ldelim();
     });
-    (message.mapStringForeignMessage).forEach((value, key) => {
+    message.mapStringForeignMessage.forEach((value, key) => {
       TestAllTypesProto2_MapStringForeignMessageEntry.encode({ key: key as any, value }, writer.uint32(578).fork())
         .ldelim();
     });
-    (message.mapStringNestedEnum).forEach((value, key) => {
+    message.mapStringNestedEnum.forEach((value, key) => {
       TestAllTypesProto2_MapStringNestedEnumEntry.encode({ key: key as any, value }, writer.uint32(586).fork())
         .ldelim();
     });
-    (message.mapStringForeignEnum).forEach((value, key) => {
+    message.mapStringForeignEnum.forEach((value, key) => {
       TestAllTypesProto2_MapStringForeignEnumEntry.encode({ key: key as any, value }, writer.uint32(594).fork())
         .ldelim();
     });
@@ -2610,20 +2606,20 @@ export const TestAllTypesProto2 = {
 
   fromJSON(object: any): TestAllTypesProto2 {
     return {
-      optionalInt32: isSet(object.optionalInt32) ? Number(object.optionalInt32) : 0,
-      optionalInt64: isSet(object.optionalInt64) ? Number(object.optionalInt64) : 0,
-      optionalUint32: isSet(object.optionalUint32) ? Number(object.optionalUint32) : 0,
-      optionalUint64: isSet(object.optionalUint64) ? Number(object.optionalUint64) : 0,
-      optionalSint32: isSet(object.optionalSint32) ? Number(object.optionalSint32) : 0,
-      optionalSint64: isSet(object.optionalSint64) ? Number(object.optionalSint64) : 0,
-      optionalFixed32: isSet(object.optionalFixed32) ? Number(object.optionalFixed32) : 0,
-      optionalFixed64: isSet(object.optionalFixed64) ? Number(object.optionalFixed64) : 0,
-      optionalSfixed32: isSet(object.optionalSfixed32) ? Number(object.optionalSfixed32) : 0,
-      optionalSfixed64: isSet(object.optionalSfixed64) ? Number(object.optionalSfixed64) : 0,
-      optionalFloat: isSet(object.optionalFloat) ? Number(object.optionalFloat) : 0,
-      optionalDouble: isSet(object.optionalDouble) ? Number(object.optionalDouble) : 0,
-      optionalBool: isSet(object.optionalBool) ? Boolean(object.optionalBool) : false,
-      optionalString: isSet(object.optionalString) ? String(object.optionalString) : "",
+      optionalInt32: isSet(object.optionalInt32) ? globalThis.Number(object.optionalInt32) : 0,
+      optionalInt64: isSet(object.optionalInt64) ? globalThis.Number(object.optionalInt64) : 0,
+      optionalUint32: isSet(object.optionalUint32) ? globalThis.Number(object.optionalUint32) : 0,
+      optionalUint64: isSet(object.optionalUint64) ? globalThis.Number(object.optionalUint64) : 0,
+      optionalSint32: isSet(object.optionalSint32) ? globalThis.Number(object.optionalSint32) : 0,
+      optionalSint64: isSet(object.optionalSint64) ? globalThis.Number(object.optionalSint64) : 0,
+      optionalFixed32: isSet(object.optionalFixed32) ? globalThis.Number(object.optionalFixed32) : 0,
+      optionalFixed64: isSet(object.optionalFixed64) ? globalThis.Number(object.optionalFixed64) : 0,
+      optionalSfixed32: isSet(object.optionalSfixed32) ? globalThis.Number(object.optionalSfixed32) : 0,
+      optionalSfixed64: isSet(object.optionalSfixed64) ? globalThis.Number(object.optionalSfixed64) : 0,
+      optionalFloat: isSet(object.optionalFloat) ? globalThis.Number(object.optionalFloat) : 0,
+      optionalDouble: isSet(object.optionalDouble) ? globalThis.Number(object.optionalDouble) : 0,
+      optionalBool: isSet(object.optionalBool) ? globalThis.Boolean(object.optionalBool) : false,
+      optionalString: isSet(object.optionalString) ? globalThis.String(object.optionalString) : "",
       optionalBytes: isSet(object.optionalBytes) ? bytesFromBase64(object.optionalBytes) : new Uint8Array(0),
       optionalNestedMessage: isSet(object.optionalNestedMessage)
         ? TestAllTypesProto2_NestedMessage.fromJSON(object.optionalNestedMessage)
@@ -2637,159 +2633,233 @@ export const TestAllTypesProto2 = {
       optionalForeignEnum: isSet(object.optionalForeignEnum)
         ? foreignEnumProto2FromJSON(object.optionalForeignEnum)
         : 0,
-      optionalStringPiece: isSet(object.optionalStringPiece) ? String(object.optionalStringPiece) : "",
-      optionalCord: isSet(object.optionalCord) ? String(object.optionalCord) : "",
+      optionalStringPiece: isSet(object.optionalStringPiece) ? globalThis.String(object.optionalStringPiece) : "",
+      optionalCord: isSet(object.optionalCord) ? globalThis.String(object.optionalCord) : "",
       recursiveMessage: isSet(object.recursiveMessage)
         ? TestAllTypesProto2.fromJSON(object.recursiveMessage)
         : undefined,
-      repeatedInt32: Array.isArray(object?.repeatedInt32) ? object.repeatedInt32.map((e: any) => Number(e)) : [],
-      repeatedInt64: Array.isArray(object?.repeatedInt64) ? object.repeatedInt64.map((e: any) => Number(e)) : [],
-      repeatedUint32: Array.isArray(object?.repeatedUint32) ? object.repeatedUint32.map((e: any) => Number(e)) : [],
-      repeatedUint64: Array.isArray(object?.repeatedUint64) ? object.repeatedUint64.map((e: any) => Number(e)) : [],
-      repeatedSint32: Array.isArray(object?.repeatedSint32) ? object.repeatedSint32.map((e: any) => Number(e)) : [],
-      repeatedSint64: Array.isArray(object?.repeatedSint64) ? object.repeatedSint64.map((e: any) => Number(e)) : [],
-      repeatedFixed32: Array.isArray(object?.repeatedFixed32) ? object.repeatedFixed32.map((e: any) => Number(e)) : [],
-      repeatedFixed64: Array.isArray(object?.repeatedFixed64) ? object.repeatedFixed64.map((e: any) => Number(e)) : [],
-      repeatedSfixed32: Array.isArray(object?.repeatedSfixed32)
-        ? object.repeatedSfixed32.map((e: any) => Number(e))
+      repeatedInt32: globalThis.Array.isArray(object?.repeatedInt32)
+        ? object.repeatedInt32.map((e: any) => globalThis.Number(e))
         : [],
-      repeatedSfixed64: Array.isArray(object?.repeatedSfixed64)
-        ? object.repeatedSfixed64.map((e: any) => Number(e))
+      repeatedInt64: globalThis.Array.isArray(object?.repeatedInt64)
+        ? object.repeatedInt64.map((e: any) => globalThis.Number(e))
         : [],
-      repeatedFloat: Array.isArray(object?.repeatedFloat) ? object.repeatedFloat.map((e: any) => Number(e)) : [],
-      repeatedDouble: Array.isArray(object?.repeatedDouble) ? object.repeatedDouble.map((e: any) => Number(e)) : [],
-      repeatedBool: Array.isArray(object?.repeatedBool) ? object.repeatedBool.map((e: any) => Boolean(e)) : [],
-      repeatedString: Array.isArray(object?.repeatedString) ? object.repeatedString.map((e: any) => String(e)) : [],
-      repeatedBytes: Array.isArray(object?.repeatedBytes)
+      repeatedUint32: globalThis.Array.isArray(object?.repeatedUint32)
+        ? object.repeatedUint32.map((e: any) => globalThis.Number(e))
+        : [],
+      repeatedUint64: globalThis.Array.isArray(object?.repeatedUint64)
+        ? object.repeatedUint64.map((e: any) => globalThis.Number(e))
+        : [],
+      repeatedSint32: globalThis.Array.isArray(object?.repeatedSint32)
+        ? object.repeatedSint32.map((e: any) => globalThis.Number(e))
+        : [],
+      repeatedSint64: globalThis.Array.isArray(object?.repeatedSint64)
+        ? object.repeatedSint64.map((e: any) => globalThis.Number(e))
+        : [],
+      repeatedFixed32: globalThis.Array.isArray(object?.repeatedFixed32)
+        ? object.repeatedFixed32.map((e: any) => globalThis.Number(e))
+        : [],
+      repeatedFixed64: globalThis.Array.isArray(object?.repeatedFixed64)
+        ? object.repeatedFixed64.map((e: any) => globalThis.Number(e))
+        : [],
+      repeatedSfixed32: globalThis.Array.isArray(object?.repeatedSfixed32)
+        ? object.repeatedSfixed32.map((e: any) => globalThis.Number(e))
+        : [],
+      repeatedSfixed64: globalThis.Array.isArray(object?.repeatedSfixed64)
+        ? object.repeatedSfixed64.map((e: any) => globalThis.Number(e))
+        : [],
+      repeatedFloat: globalThis.Array.isArray(object?.repeatedFloat)
+        ? object.repeatedFloat.map((e: any) => globalThis.Number(e))
+        : [],
+      repeatedDouble: globalThis.Array.isArray(object?.repeatedDouble)
+        ? object.repeatedDouble.map((e: any) => globalThis.Number(e))
+        : [],
+      repeatedBool: globalThis.Array.isArray(object?.repeatedBool)
+        ? object.repeatedBool.map((e: any) => globalThis.Boolean(e))
+        : [],
+      repeatedString: globalThis.Array.isArray(object?.repeatedString)
+        ? object.repeatedString.map((e: any) => globalThis.String(e))
+        : [],
+      repeatedBytes: globalThis.Array.isArray(object?.repeatedBytes)
         ? object.repeatedBytes.map((e: any) => bytesFromBase64(e))
         : [],
-      repeatedNestedMessage: Array.isArray(object?.repeatedNestedMessage)
+      repeatedNestedMessage: globalThis.Array.isArray(object?.repeatedNestedMessage)
         ? object.repeatedNestedMessage.map((e: any) => TestAllTypesProto2_NestedMessage.fromJSON(e))
         : [],
-      repeatedForeignMessage: Array.isArray(object?.repeatedForeignMessage)
+      repeatedForeignMessage: globalThis.Array.isArray(object?.repeatedForeignMessage)
         ? object.repeatedForeignMessage.map((e: any) => ForeignMessageProto2.fromJSON(e))
         : [],
-      repeatedNestedEnum: Array.isArray(object?.repeatedNestedEnum)
+      repeatedNestedEnum: globalThis.Array.isArray(object?.repeatedNestedEnum)
         ? object.repeatedNestedEnum.map((e: any) => testAllTypesProto2_NestedEnumFromJSON(e))
         : [],
-      repeatedForeignEnum: Array.isArray(object?.repeatedForeignEnum)
+      repeatedForeignEnum: globalThis.Array.isArray(object?.repeatedForeignEnum)
         ? object.repeatedForeignEnum.map((e: any) => foreignEnumProto2FromJSON(e))
         : [],
-      repeatedStringPiece: Array.isArray(object?.repeatedStringPiece)
-        ? object.repeatedStringPiece.map((e: any) => String(e))
+      repeatedStringPiece: globalThis.Array.isArray(object?.repeatedStringPiece)
+        ? object.repeatedStringPiece.map((e: any) => globalThis.String(e))
         : [],
-      repeatedCord: Array.isArray(object?.repeatedCord) ? object.repeatedCord.map((e: any) => String(e)) : [],
-      packedInt32: Array.isArray(object?.packedInt32) ? object.packedInt32.map((e: any) => Number(e)) : [],
-      packedInt64: Array.isArray(object?.packedInt64) ? object.packedInt64.map((e: any) => Number(e)) : [],
-      packedUint32: Array.isArray(object?.packedUint32) ? object.packedUint32.map((e: any) => Number(e)) : [],
-      packedUint64: Array.isArray(object?.packedUint64) ? object.packedUint64.map((e: any) => Number(e)) : [],
-      packedSint32: Array.isArray(object?.packedSint32) ? object.packedSint32.map((e: any) => Number(e)) : [],
-      packedSint64: Array.isArray(object?.packedSint64) ? object.packedSint64.map((e: any) => Number(e)) : [],
-      packedFixed32: Array.isArray(object?.packedFixed32) ? object.packedFixed32.map((e: any) => Number(e)) : [],
-      packedFixed64: Array.isArray(object?.packedFixed64) ? object.packedFixed64.map((e: any) => Number(e)) : [],
-      packedSfixed32: Array.isArray(object?.packedSfixed32) ? object.packedSfixed32.map((e: any) => Number(e)) : [],
-      packedSfixed64: Array.isArray(object?.packedSfixed64) ? object.packedSfixed64.map((e: any) => Number(e)) : [],
-      packedFloat: Array.isArray(object?.packedFloat) ? object.packedFloat.map((e: any) => Number(e)) : [],
-      packedDouble: Array.isArray(object?.packedDouble) ? object.packedDouble.map((e: any) => Number(e)) : [],
-      packedBool: Array.isArray(object?.packedBool) ? object.packedBool.map((e: any) => Boolean(e)) : [],
-      packedNestedEnum: Array.isArray(object?.packedNestedEnum)
+      repeatedCord: globalThis.Array.isArray(object?.repeatedCord)
+        ? object.repeatedCord.map((e: any) => globalThis.String(e))
+        : [],
+      packedInt32: globalThis.Array.isArray(object?.packedInt32)
+        ? object.packedInt32.map((e: any) => globalThis.Number(e))
+        : [],
+      packedInt64: globalThis.Array.isArray(object?.packedInt64)
+        ? object.packedInt64.map((e: any) => globalThis.Number(e))
+        : [],
+      packedUint32: globalThis.Array.isArray(object?.packedUint32)
+        ? object.packedUint32.map((e: any) => globalThis.Number(e))
+        : [],
+      packedUint64: globalThis.Array.isArray(object?.packedUint64)
+        ? object.packedUint64.map((e: any) => globalThis.Number(e))
+        : [],
+      packedSint32: globalThis.Array.isArray(object?.packedSint32)
+        ? object.packedSint32.map((e: any) => globalThis.Number(e))
+        : [],
+      packedSint64: globalThis.Array.isArray(object?.packedSint64)
+        ? object.packedSint64.map((e: any) => globalThis.Number(e))
+        : [],
+      packedFixed32: globalThis.Array.isArray(object?.packedFixed32)
+        ? object.packedFixed32.map((e: any) => globalThis.Number(e))
+        : [],
+      packedFixed64: globalThis.Array.isArray(object?.packedFixed64)
+        ? object.packedFixed64.map((e: any) => globalThis.Number(e))
+        : [],
+      packedSfixed32: globalThis.Array.isArray(object?.packedSfixed32)
+        ? object.packedSfixed32.map((e: any) => globalThis.Number(e))
+        : [],
+      packedSfixed64: globalThis.Array.isArray(object?.packedSfixed64)
+        ? object.packedSfixed64.map((e: any) => globalThis.Number(e))
+        : [],
+      packedFloat: globalThis.Array.isArray(object?.packedFloat)
+        ? object.packedFloat.map((e: any) => globalThis.Number(e))
+        : [],
+      packedDouble: globalThis.Array.isArray(object?.packedDouble)
+        ? object.packedDouble.map((e: any) => globalThis.Number(e))
+        : [],
+      packedBool: globalThis.Array.isArray(object?.packedBool)
+        ? object.packedBool.map((e: any) => globalThis.Boolean(e))
+        : [],
+      packedNestedEnum: globalThis.Array.isArray(object?.packedNestedEnum)
         ? object.packedNestedEnum.map((e: any) => testAllTypesProto2_NestedEnumFromJSON(e))
         : [],
-      unpackedInt32: Array.isArray(object?.unpackedInt32) ? object.unpackedInt32.map((e: any) => Number(e)) : [],
-      unpackedInt64: Array.isArray(object?.unpackedInt64) ? object.unpackedInt64.map((e: any) => Number(e)) : [],
-      unpackedUint32: Array.isArray(object?.unpackedUint32) ? object.unpackedUint32.map((e: any) => Number(e)) : [],
-      unpackedUint64: Array.isArray(object?.unpackedUint64) ? object.unpackedUint64.map((e: any) => Number(e)) : [],
-      unpackedSint32: Array.isArray(object?.unpackedSint32) ? object.unpackedSint32.map((e: any) => Number(e)) : [],
-      unpackedSint64: Array.isArray(object?.unpackedSint64) ? object.unpackedSint64.map((e: any) => Number(e)) : [],
-      unpackedFixed32: Array.isArray(object?.unpackedFixed32) ? object.unpackedFixed32.map((e: any) => Number(e)) : [],
-      unpackedFixed64: Array.isArray(object?.unpackedFixed64) ? object.unpackedFixed64.map((e: any) => Number(e)) : [],
-      unpackedSfixed32: Array.isArray(object?.unpackedSfixed32)
-        ? object.unpackedSfixed32.map((e: any) => Number(e))
+      unpackedInt32: globalThis.Array.isArray(object?.unpackedInt32)
+        ? object.unpackedInt32.map((e: any) => globalThis.Number(e))
         : [],
-      unpackedSfixed64: Array.isArray(object?.unpackedSfixed64)
-        ? object.unpackedSfixed64.map((e: any) => Number(e))
+      unpackedInt64: globalThis.Array.isArray(object?.unpackedInt64)
+        ? object.unpackedInt64.map((e: any) => globalThis.Number(e))
         : [],
-      unpackedFloat: Array.isArray(object?.unpackedFloat) ? object.unpackedFloat.map((e: any) => Number(e)) : [],
-      unpackedDouble: Array.isArray(object?.unpackedDouble) ? object.unpackedDouble.map((e: any) => Number(e)) : [],
-      unpackedBool: Array.isArray(object?.unpackedBool) ? object.unpackedBool.map((e: any) => Boolean(e)) : [],
-      unpackedNestedEnum: Array.isArray(object?.unpackedNestedEnum)
+      unpackedUint32: globalThis.Array.isArray(object?.unpackedUint32)
+        ? object.unpackedUint32.map((e: any) => globalThis.Number(e))
+        : [],
+      unpackedUint64: globalThis.Array.isArray(object?.unpackedUint64)
+        ? object.unpackedUint64.map((e: any) => globalThis.Number(e))
+        : [],
+      unpackedSint32: globalThis.Array.isArray(object?.unpackedSint32)
+        ? object.unpackedSint32.map((e: any) => globalThis.Number(e))
+        : [],
+      unpackedSint64: globalThis.Array.isArray(object?.unpackedSint64)
+        ? object.unpackedSint64.map((e: any) => globalThis.Number(e))
+        : [],
+      unpackedFixed32: globalThis.Array.isArray(object?.unpackedFixed32)
+        ? object.unpackedFixed32.map((e: any) => globalThis.Number(e))
+        : [],
+      unpackedFixed64: globalThis.Array.isArray(object?.unpackedFixed64)
+        ? object.unpackedFixed64.map((e: any) => globalThis.Number(e))
+        : [],
+      unpackedSfixed32: globalThis.Array.isArray(object?.unpackedSfixed32)
+        ? object.unpackedSfixed32.map((e: any) => globalThis.Number(e))
+        : [],
+      unpackedSfixed64: globalThis.Array.isArray(object?.unpackedSfixed64)
+        ? object.unpackedSfixed64.map((e: any) => globalThis.Number(e))
+        : [],
+      unpackedFloat: globalThis.Array.isArray(object?.unpackedFloat)
+        ? object.unpackedFloat.map((e: any) => globalThis.Number(e))
+        : [],
+      unpackedDouble: globalThis.Array.isArray(object?.unpackedDouble)
+        ? object.unpackedDouble.map((e: any) => globalThis.Number(e))
+        : [],
+      unpackedBool: globalThis.Array.isArray(object?.unpackedBool)
+        ? object.unpackedBool.map((e: any) => globalThis.Boolean(e))
+        : [],
+      unpackedNestedEnum: globalThis.Array.isArray(object?.unpackedNestedEnum)
         ? object.unpackedNestedEnum.map((e: any) => testAllTypesProto2_NestedEnumFromJSON(e))
         : [],
       mapInt32Int32: isObject(object.mapInt32Int32)
         ? Object.entries(object.mapInt32Int32).reduce<Map<number, number>>((acc, [key, value]) => {
-          acc.set(Number(key), Number(value));
+          acc.set(globalThis.Number(key), Number(value));
           return acc;
         }, new Map())
         : new Map(),
       mapInt64Int64: isObject(object.mapInt64Int64)
         ? Object.entries(object.mapInt64Int64).reduce<Map<number, number>>((acc, [key, value]) => {
-          acc.set(Number(key), Number(value));
+          acc.set(globalThis.Number(key), Number(value));
           return acc;
         }, new Map())
         : new Map(),
       mapUint32Uint32: isObject(object.mapUint32Uint32)
         ? Object.entries(object.mapUint32Uint32).reduce<Map<number, number>>((acc, [key, value]) => {
-          acc.set(Number(key), Number(value));
+          acc.set(globalThis.Number(key), Number(value));
           return acc;
         }, new Map())
         : new Map(),
       mapUint64Uint64: isObject(object.mapUint64Uint64)
         ? Object.entries(object.mapUint64Uint64).reduce<Map<number, number>>((acc, [key, value]) => {
-          acc.set(Number(key), Number(value));
+          acc.set(globalThis.Number(key), Number(value));
           return acc;
         }, new Map())
         : new Map(),
       mapSint32Sint32: isObject(object.mapSint32Sint32)
         ? Object.entries(object.mapSint32Sint32).reduce<Map<number, number>>((acc, [key, value]) => {
-          acc.set(Number(key), Number(value));
+          acc.set(globalThis.Number(key), Number(value));
           return acc;
         }, new Map())
         : new Map(),
       mapSint64Sint64: isObject(object.mapSint64Sint64)
         ? Object.entries(object.mapSint64Sint64).reduce<Map<number, number>>((acc, [key, value]) => {
-          acc.set(Number(key), Number(value));
+          acc.set(globalThis.Number(key), Number(value));
           return acc;
         }, new Map())
         : new Map(),
       mapFixed32Fixed32: isObject(object.mapFixed32Fixed32)
         ? Object.entries(object.mapFixed32Fixed32).reduce<Map<number, number>>((acc, [key, value]) => {
-          acc.set(Number(key), Number(value));
+          acc.set(globalThis.Number(key), Number(value));
           return acc;
         }, new Map())
         : new Map(),
       mapFixed64Fixed64: isObject(object.mapFixed64Fixed64)
         ? Object.entries(object.mapFixed64Fixed64).reduce<Map<number, number>>((acc, [key, value]) => {
-          acc.set(Number(key), Number(value));
+          acc.set(globalThis.Number(key), Number(value));
           return acc;
         }, new Map())
         : new Map(),
       mapSfixed32Sfixed32: isObject(object.mapSfixed32Sfixed32)
         ? Object.entries(object.mapSfixed32Sfixed32).reduce<Map<number, number>>((acc, [key, value]) => {
-          acc.set(Number(key), Number(value));
+          acc.set(globalThis.Number(key), Number(value));
           return acc;
         }, new Map())
         : new Map(),
       mapSfixed64Sfixed64: isObject(object.mapSfixed64Sfixed64)
         ? Object.entries(object.mapSfixed64Sfixed64).reduce<Map<number, number>>((acc, [key, value]) => {
-          acc.set(Number(key), Number(value));
+          acc.set(globalThis.Number(key), Number(value));
           return acc;
         }, new Map())
         : new Map(),
       mapInt32Float: isObject(object.mapInt32Float)
         ? Object.entries(object.mapInt32Float).reduce<Map<number, number>>((acc, [key, value]) => {
-          acc.set(Number(key), Number(value));
+          acc.set(globalThis.Number(key), Number(value));
           return acc;
         }, new Map())
         : new Map(),
       mapInt32Double: isObject(object.mapInt32Double)
         ? Object.entries(object.mapInt32Double).reduce<Map<number, number>>((acc, [key, value]) => {
-          acc.set(Number(key), Number(value));
+          acc.set(globalThis.Number(key), Number(value));
           return acc;
         }, new Map())
         : new Map(),
       mapBoolBool: isObject(object.mapBoolBool)
         ? Object.entries(object.mapBoolBool).reduce<Map<boolean, boolean>>((acc, [key, value]) => {
-          acc.set(Number(key), Boolean(value));
+          acc.set(globalThis.Boolean(key), Boolean(value));
           return acc;
         }, new Map())
         : new Map(),
@@ -2839,61 +2909,61 @@ export const TestAllTypesProto2 = {
         }, new Map())
         : new Map(),
       oneofField: isSet(object.oneofUint32)
-        ? { $case: "oneofUint32", oneofUint32: Number(object.oneofUint32) }
+        ? { $case: "oneofUint32", oneofUint32: globalThis.Number(object.oneofUint32) }
         : isSet(object.oneofNestedMessage)
         ? {
           $case: "oneofNestedMessage",
           oneofNestedMessage: TestAllTypesProto2_NestedMessage.fromJSON(object.oneofNestedMessage),
         }
         : isSet(object.oneofString)
-        ? { $case: "oneofString", oneofString: String(object.oneofString) }
+        ? { $case: "oneofString", oneofString: globalThis.String(object.oneofString) }
         : isSet(object.oneofBytes)
         ? { $case: "oneofBytes", oneofBytes: bytesFromBase64(object.oneofBytes) }
         : isSet(object.oneofBool)
-        ? { $case: "oneofBool", oneofBool: Boolean(object.oneofBool) }
+        ? { $case: "oneofBool", oneofBool: globalThis.Boolean(object.oneofBool) }
         : isSet(object.oneofUint64)
-        ? { $case: "oneofUint64", oneofUint64: Number(object.oneofUint64) }
+        ? { $case: "oneofUint64", oneofUint64: globalThis.Number(object.oneofUint64) }
         : isSet(object.oneofFloat)
-        ? { $case: "oneofFloat", oneofFloat: Number(object.oneofFloat) }
+        ? { $case: "oneofFloat", oneofFloat: globalThis.Number(object.oneofFloat) }
         : isSet(object.oneofDouble)
-        ? { $case: "oneofDouble", oneofDouble: Number(object.oneofDouble) }
+        ? { $case: "oneofDouble", oneofDouble: globalThis.Number(object.oneofDouble) }
         : isSet(object.oneofEnum)
         ? { $case: "oneofEnum", oneofEnum: testAllTypesProto2_NestedEnumFromJSON(object.oneofEnum) }
         : undefined,
       data: isSet(object.data) ? TestAllTypesProto2_Data.fromJSON(object.data) : undefined,
-      defaultInt32: isSet(object.defaultInt32) ? Number(object.defaultInt32) : 0,
-      defaultInt64: isSet(object.defaultInt64) ? Number(object.defaultInt64) : 0,
-      defaultUint32: isSet(object.defaultUint32) ? Number(object.defaultUint32) : 0,
-      defaultUint64: isSet(object.defaultUint64) ? Number(object.defaultUint64) : 0,
-      defaultSint32: isSet(object.defaultSint32) ? Number(object.defaultSint32) : 0,
-      defaultSint64: isSet(object.defaultSint64) ? Number(object.defaultSint64) : 0,
-      defaultFixed32: isSet(object.defaultFixed32) ? Number(object.defaultFixed32) : 0,
-      defaultFixed64: isSet(object.defaultFixed64) ? Number(object.defaultFixed64) : 0,
-      defaultSfixed32: isSet(object.defaultSfixed32) ? Number(object.defaultSfixed32) : 0,
-      defaultSfixed64: isSet(object.defaultSfixed64) ? Number(object.defaultSfixed64) : 0,
-      defaultFloat: isSet(object.defaultFloat) ? Number(object.defaultFloat) : 0,
-      defaultDouble: isSet(object.defaultDouble) ? Number(object.defaultDouble) : 0,
-      defaultBool: isSet(object.defaultBool) ? Boolean(object.defaultBool) : false,
-      defaultString: isSet(object.defaultString) ? String(object.defaultString) : "",
+      defaultInt32: isSet(object.defaultInt32) ? globalThis.Number(object.defaultInt32) : 0,
+      defaultInt64: isSet(object.defaultInt64) ? globalThis.Number(object.defaultInt64) : 0,
+      defaultUint32: isSet(object.defaultUint32) ? globalThis.Number(object.defaultUint32) : 0,
+      defaultUint64: isSet(object.defaultUint64) ? globalThis.Number(object.defaultUint64) : 0,
+      defaultSint32: isSet(object.defaultSint32) ? globalThis.Number(object.defaultSint32) : 0,
+      defaultSint64: isSet(object.defaultSint64) ? globalThis.Number(object.defaultSint64) : 0,
+      defaultFixed32: isSet(object.defaultFixed32) ? globalThis.Number(object.defaultFixed32) : 0,
+      defaultFixed64: isSet(object.defaultFixed64) ? globalThis.Number(object.defaultFixed64) : 0,
+      defaultSfixed32: isSet(object.defaultSfixed32) ? globalThis.Number(object.defaultSfixed32) : 0,
+      defaultSfixed64: isSet(object.defaultSfixed64) ? globalThis.Number(object.defaultSfixed64) : 0,
+      defaultFloat: isSet(object.defaultFloat) ? globalThis.Number(object.defaultFloat) : 0,
+      defaultDouble: isSet(object.defaultDouble) ? globalThis.Number(object.defaultDouble) : 0,
+      defaultBool: isSet(object.defaultBool) ? globalThis.Boolean(object.defaultBool) : false,
+      defaultString: isSet(object.defaultString) ? globalThis.String(object.defaultString) : "",
       defaultBytes: isSet(object.defaultBytes) ? bytesFromBase64(object.defaultBytes) : new Uint8Array(0),
-      fieldname1: isSet(object.fieldname1) ? Number(object.fieldname1) : 0,
-      fieldName2: isSet(object.fieldName2) ? Number(object.fieldName2) : 0,
-      FieldName3: isSet(object.FieldName3) ? Number(object.FieldName3) : 0,
-      fieldName4: isSet(object.fieldName4) ? Number(object.fieldName4) : 0,
-      field0name5: isSet(object.field0name5) ? Number(object.field0name5) : 0,
-      field0Name6: isSet(object.field0Name6) ? Number(object.field0Name6) : 0,
-      fieldName7: isSet(object.fieldName7) ? Number(object.fieldName7) : 0,
-      FieldName8: isSet(object.FieldName8) ? Number(object.FieldName8) : 0,
-      fieldName9: isSet(object.fieldName9) ? Number(object.fieldName9) : 0,
-      FieldName10: isSet(object.FieldName10) ? Number(object.FieldName10) : 0,
-      fieldName11: isSet(object.FIELDNAME11) ? Number(object.FIELDNAME11) : 0,
-      FIELDName12: isSet(object.FIELDName12) ? Number(object.FIELDName12) : 0,
-      FieldName13: isSet(object.FieldName13) ? Number(object.FieldName13) : 0,
-      FieldName14: isSet(object.FieldName14) ? Number(object.FieldName14) : 0,
-      fieldName15: isSet(object.fieldName15) ? Number(object.fieldName15) : 0,
-      fieldName16: isSet(object.fieldName16) ? Number(object.fieldName16) : 0,
-      fieldName17: isSet(object.fieldName17) ? Number(object.fieldName17) : 0,
-      FieldName18: isSet(object.FieldName18) ? Number(object.FieldName18) : 0,
+      fieldname1: isSet(object.fieldname1) ? globalThis.Number(object.fieldname1) : 0,
+      fieldName2: isSet(object.fieldName2) ? globalThis.Number(object.fieldName2) : 0,
+      FieldName3: isSet(object.FieldName3) ? globalThis.Number(object.FieldName3) : 0,
+      fieldName4: isSet(object.fieldName4) ? globalThis.Number(object.fieldName4) : 0,
+      field0name5: isSet(object.field0name5) ? globalThis.Number(object.field0name5) : 0,
+      field0Name6: isSet(object.field0Name6) ? globalThis.Number(object.field0Name6) : 0,
+      fieldName7: isSet(object.fieldName7) ? globalThis.Number(object.fieldName7) : 0,
+      FieldName8: isSet(object.FieldName8) ? globalThis.Number(object.FieldName8) : 0,
+      fieldName9: isSet(object.fieldName9) ? globalThis.Number(object.fieldName9) : 0,
+      FieldName10: isSet(object.FieldName10) ? globalThis.Number(object.FieldName10) : 0,
+      fieldName11: isSet(object.FIELDNAME11) ? globalThis.Number(object.FIELDNAME11) : 0,
+      FIELDName12: isSet(object.FIELDName12) ? globalThis.Number(object.FIELDName12) : 0,
+      FieldName13: isSet(object.FieldName13) ? globalThis.Number(object.FieldName13) : 0,
+      FieldName14: isSet(object.FieldName14) ? globalThis.Number(object.FieldName14) : 0,
+      fieldName15: isSet(object.fieldName15) ? globalThis.Number(object.fieldName15) : 0,
+      fieldName16: isSet(object.fieldName16) ? globalThis.Number(object.fieldName16) : 0,
+      fieldName17: isSet(object.fieldName17) ? globalThis.Number(object.fieldName17) : 0,
+      FieldName18: isSet(object.FieldName18) ? globalThis.Number(object.FieldName18) : 0,
     };
   },
 
@@ -3187,7 +3257,7 @@ export const TestAllTypesProto2 = {
     if (message.mapBoolBool?.size) {
       obj.mapBoolBool = {};
       message.mapBoolBool.forEach((v, k) => {
-        obj.mapBoolBool[k] = v;
+        obj.mapBoolBool[globalThis.String(k)] = v;
       });
     }
     if (message.mapStringString?.size) {
@@ -3448,7 +3518,7 @@ export const TestAllTypesProto2 = {
       const m = new Map();
       (object.mapInt32Int32 as Map<number, number> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(key, Number(value));
+          m.set(key, globalThis.Number(value));
         }
       });
       return m;
@@ -3457,7 +3527,7 @@ export const TestAllTypesProto2 = {
       const m = new Map();
       (object.mapInt64Int64 as Map<number, number> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(key, Number(value));
+          m.set(key, globalThis.Number(value));
         }
       });
       return m;
@@ -3466,7 +3536,7 @@ export const TestAllTypesProto2 = {
       const m = new Map();
       (object.mapUint32Uint32 as Map<number, number> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(key, Number(value));
+          m.set(key, globalThis.Number(value));
         }
       });
       return m;
@@ -3475,7 +3545,7 @@ export const TestAllTypesProto2 = {
       const m = new Map();
       (object.mapUint64Uint64 as Map<number, number> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(key, Number(value));
+          m.set(key, globalThis.Number(value));
         }
       });
       return m;
@@ -3484,7 +3554,7 @@ export const TestAllTypesProto2 = {
       const m = new Map();
       (object.mapSint32Sint32 as Map<number, number> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(key, Number(value));
+          m.set(key, globalThis.Number(value));
         }
       });
       return m;
@@ -3493,7 +3563,7 @@ export const TestAllTypesProto2 = {
       const m = new Map();
       (object.mapSint64Sint64 as Map<number, number> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(key, Number(value));
+          m.set(key, globalThis.Number(value));
         }
       });
       return m;
@@ -3502,7 +3572,7 @@ export const TestAllTypesProto2 = {
       const m = new Map();
       (object.mapFixed32Fixed32 as Map<number, number> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(key, Number(value));
+          m.set(key, globalThis.Number(value));
         }
       });
       return m;
@@ -3511,7 +3581,7 @@ export const TestAllTypesProto2 = {
       const m = new Map();
       (object.mapFixed64Fixed64 as Map<number, number> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(key, Number(value));
+          m.set(key, globalThis.Number(value));
         }
       });
       return m;
@@ -3520,7 +3590,7 @@ export const TestAllTypesProto2 = {
       const m = new Map();
       (object.mapSfixed32Sfixed32 as Map<number, number> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(key, Number(value));
+          m.set(key, globalThis.Number(value));
         }
       });
       return m;
@@ -3529,7 +3599,7 @@ export const TestAllTypesProto2 = {
       const m = new Map();
       (object.mapSfixed64Sfixed64 as Map<number, number> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(key, Number(value));
+          m.set(key, globalThis.Number(value));
         }
       });
       return m;
@@ -3538,7 +3608,7 @@ export const TestAllTypesProto2 = {
       const m = new Map();
       (object.mapInt32Float as Map<number, number> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(key, Number(value));
+          m.set(key, globalThis.Number(value));
         }
       });
       return m;
@@ -3547,7 +3617,7 @@ export const TestAllTypesProto2 = {
       const m = new Map();
       (object.mapInt32Double as Map<number, number> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(key, Number(value));
+          m.set(key, globalThis.Number(value));
         }
       });
       return m;
@@ -3556,7 +3626,7 @@ export const TestAllTypesProto2 = {
       const m = new Map();
       (object.mapBoolBool as Map<boolean, boolean> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(key, Boolean(value));
+          m.set(key, globalThis.Boolean(value));
         }
       });
       return m;
@@ -3565,7 +3635,7 @@ export const TestAllTypesProto2 = {
       const m = new Map();
       (object.mapStringString as Map<string, string> ?? new Map()).forEach((value, key) => {
         if (value !== undefined) {
-          m.set(key, String(value));
+          m.set(key, globalThis.String(value));
         }
       });
       return m;
@@ -3770,7 +3840,7 @@ export const TestAllTypesProto2_NestedMessage = {
 
   fromJSON(object: any): TestAllTypesProto2_NestedMessage {
     return {
-      a: isSet(object.a) ? Number(object.a) : 0,
+      a: isSet(object.a) ? globalThis.Number(object.a) : 0,
       corecursive: isSet(object.corecursive) ? TestAllTypesProto2.fromJSON(object.corecursive) : undefined,
     };
   },
@@ -3849,7 +3919,10 @@ export const TestAllTypesProto2_MapInt32Int32Entry = {
   },
 
   fromJSON(object: any): TestAllTypesProto2_MapInt32Int32Entry {
-    return { key: isSet(object.key) ? Number(object.key) : 0, value: isSet(object.value) ? Number(object.value) : 0 };
+    return {
+      key: isSet(object.key) ? globalThis.Number(object.key) : 0,
+      value: isSet(object.value) ? globalThis.Number(object.value) : 0,
+    };
   },
 
   toJSON(message: TestAllTypesProto2_MapInt32Int32Entry): unknown {
@@ -3924,7 +3997,10 @@ export const TestAllTypesProto2_MapInt64Int64Entry = {
   },
 
   fromJSON(object: any): TestAllTypesProto2_MapInt64Int64Entry {
-    return { key: isSet(object.key) ? Number(object.key) : 0, value: isSet(object.value) ? Number(object.value) : 0 };
+    return {
+      key: isSet(object.key) ? globalThis.Number(object.key) : 0,
+      value: isSet(object.value) ? globalThis.Number(object.value) : 0,
+    };
   },
 
   toJSON(message: TestAllTypesProto2_MapInt64Int64Entry): unknown {
@@ -3999,7 +4075,10 @@ export const TestAllTypesProto2_MapUint32Uint32Entry = {
   },
 
   fromJSON(object: any): TestAllTypesProto2_MapUint32Uint32Entry {
-    return { key: isSet(object.key) ? Number(object.key) : 0, value: isSet(object.value) ? Number(object.value) : 0 };
+    return {
+      key: isSet(object.key) ? globalThis.Number(object.key) : 0,
+      value: isSet(object.value) ? globalThis.Number(object.value) : 0,
+    };
   },
 
   toJSON(message: TestAllTypesProto2_MapUint32Uint32Entry): unknown {
@@ -4074,7 +4153,10 @@ export const TestAllTypesProto2_MapUint64Uint64Entry = {
   },
 
   fromJSON(object: any): TestAllTypesProto2_MapUint64Uint64Entry {
-    return { key: isSet(object.key) ? Number(object.key) : 0, value: isSet(object.value) ? Number(object.value) : 0 };
+    return {
+      key: isSet(object.key) ? globalThis.Number(object.key) : 0,
+      value: isSet(object.value) ? globalThis.Number(object.value) : 0,
+    };
   },
 
   toJSON(message: TestAllTypesProto2_MapUint64Uint64Entry): unknown {
@@ -4149,7 +4231,10 @@ export const TestAllTypesProto2_MapSint32Sint32Entry = {
   },
 
   fromJSON(object: any): TestAllTypesProto2_MapSint32Sint32Entry {
-    return { key: isSet(object.key) ? Number(object.key) : 0, value: isSet(object.value) ? Number(object.value) : 0 };
+    return {
+      key: isSet(object.key) ? globalThis.Number(object.key) : 0,
+      value: isSet(object.value) ? globalThis.Number(object.value) : 0,
+    };
   },
 
   toJSON(message: TestAllTypesProto2_MapSint32Sint32Entry): unknown {
@@ -4224,7 +4309,10 @@ export const TestAllTypesProto2_MapSint64Sint64Entry = {
   },
 
   fromJSON(object: any): TestAllTypesProto2_MapSint64Sint64Entry {
-    return { key: isSet(object.key) ? Number(object.key) : 0, value: isSet(object.value) ? Number(object.value) : 0 };
+    return {
+      key: isSet(object.key) ? globalThis.Number(object.key) : 0,
+      value: isSet(object.value) ? globalThis.Number(object.value) : 0,
+    };
   },
 
   toJSON(message: TestAllTypesProto2_MapSint64Sint64Entry): unknown {
@@ -4299,7 +4387,10 @@ export const TestAllTypesProto2_MapFixed32Fixed32Entry = {
   },
 
   fromJSON(object: any): TestAllTypesProto2_MapFixed32Fixed32Entry {
-    return { key: isSet(object.key) ? Number(object.key) : 0, value: isSet(object.value) ? Number(object.value) : 0 };
+    return {
+      key: isSet(object.key) ? globalThis.Number(object.key) : 0,
+      value: isSet(object.value) ? globalThis.Number(object.value) : 0,
+    };
   },
 
   toJSON(message: TestAllTypesProto2_MapFixed32Fixed32Entry): unknown {
@@ -4374,7 +4465,10 @@ export const TestAllTypesProto2_MapFixed64Fixed64Entry = {
   },
 
   fromJSON(object: any): TestAllTypesProto2_MapFixed64Fixed64Entry {
-    return { key: isSet(object.key) ? Number(object.key) : 0, value: isSet(object.value) ? Number(object.value) : 0 };
+    return {
+      key: isSet(object.key) ? globalThis.Number(object.key) : 0,
+      value: isSet(object.value) ? globalThis.Number(object.value) : 0,
+    };
   },
 
   toJSON(message: TestAllTypesProto2_MapFixed64Fixed64Entry): unknown {
@@ -4449,7 +4543,10 @@ export const TestAllTypesProto2_MapSfixed32Sfixed32Entry = {
   },
 
   fromJSON(object: any): TestAllTypesProto2_MapSfixed32Sfixed32Entry {
-    return { key: isSet(object.key) ? Number(object.key) : 0, value: isSet(object.value) ? Number(object.value) : 0 };
+    return {
+      key: isSet(object.key) ? globalThis.Number(object.key) : 0,
+      value: isSet(object.value) ? globalThis.Number(object.value) : 0,
+    };
   },
 
   toJSON(message: TestAllTypesProto2_MapSfixed32Sfixed32Entry): unknown {
@@ -4524,7 +4621,10 @@ export const TestAllTypesProto2_MapSfixed64Sfixed64Entry = {
   },
 
   fromJSON(object: any): TestAllTypesProto2_MapSfixed64Sfixed64Entry {
-    return { key: isSet(object.key) ? Number(object.key) : 0, value: isSet(object.value) ? Number(object.value) : 0 };
+    return {
+      key: isSet(object.key) ? globalThis.Number(object.key) : 0,
+      value: isSet(object.value) ? globalThis.Number(object.value) : 0,
+    };
   },
 
   toJSON(message: TestAllTypesProto2_MapSfixed64Sfixed64Entry): unknown {
@@ -4599,7 +4699,10 @@ export const TestAllTypesProto2_MapInt32FloatEntry = {
   },
 
   fromJSON(object: any): TestAllTypesProto2_MapInt32FloatEntry {
-    return { key: isSet(object.key) ? Number(object.key) : 0, value: isSet(object.value) ? Number(object.value) : 0 };
+    return {
+      key: isSet(object.key) ? globalThis.Number(object.key) : 0,
+      value: isSet(object.value) ? globalThis.Number(object.value) : 0,
+    };
   },
 
   toJSON(message: TestAllTypesProto2_MapInt32FloatEntry): unknown {
@@ -4674,7 +4777,10 @@ export const TestAllTypesProto2_MapInt32DoubleEntry = {
   },
 
   fromJSON(object: any): TestAllTypesProto2_MapInt32DoubleEntry {
-    return { key: isSet(object.key) ? Number(object.key) : 0, value: isSet(object.value) ? Number(object.value) : 0 };
+    return {
+      key: isSet(object.key) ? globalThis.Number(object.key) : 0,
+      value: isSet(object.value) ? globalThis.Number(object.value) : 0,
+    };
   },
 
   toJSON(message: TestAllTypesProto2_MapInt32DoubleEntry): unknown {
@@ -4750,8 +4856,8 @@ export const TestAllTypesProto2_MapBoolBoolEntry = {
 
   fromJSON(object: any): TestAllTypesProto2_MapBoolBoolEntry {
     return {
-      key: isSet(object.key) ? Boolean(object.key) : false,
-      value: isSet(object.value) ? Boolean(object.value) : false,
+      key: isSet(object.key) ? globalThis.Boolean(object.key) : false,
+      value: isSet(object.value) ? globalThis.Boolean(object.value) : false,
     };
   },
 
@@ -4827,7 +4933,10 @@ export const TestAllTypesProto2_MapStringStringEntry = {
   },
 
   fromJSON(object: any): TestAllTypesProto2_MapStringStringEntry {
-    return { key: isSet(object.key) ? String(object.key) : "", value: isSet(object.value) ? String(object.value) : "" };
+    return {
+      key: isSet(object.key) ? globalThis.String(object.key) : "",
+      value: isSet(object.value) ? globalThis.String(object.value) : "",
+    };
   },
 
   toJSON(message: TestAllTypesProto2_MapStringStringEntry): unknown {
@@ -4903,7 +5012,7 @@ export const TestAllTypesProto2_MapStringBytesEntry = {
 
   fromJSON(object: any): TestAllTypesProto2_MapStringBytesEntry {
     return {
-      key: isSet(object.key) ? String(object.key) : "",
+      key: isSet(object.key) ? globalThis.String(object.key) : "",
       value: isSet(object.value) ? bytesFromBase64(object.value) : new Uint8Array(0),
     };
   },
@@ -4984,7 +5093,7 @@ export const TestAllTypesProto2_MapStringNestedMessageEntry = {
 
   fromJSON(object: any): TestAllTypesProto2_MapStringNestedMessageEntry {
     return {
-      key: isSet(object.key) ? String(object.key) : "",
+      key: isSet(object.key) ? globalThis.String(object.key) : "",
       value: isSet(object.value) ? TestAllTypesProto2_NestedMessage.fromJSON(object.value) : undefined,
     };
   },
@@ -5067,7 +5176,7 @@ export const TestAllTypesProto2_MapStringForeignMessageEntry = {
 
   fromJSON(object: any): TestAllTypesProto2_MapStringForeignMessageEntry {
     return {
-      key: isSet(object.key) ? String(object.key) : "",
+      key: isSet(object.key) ? globalThis.String(object.key) : "",
       value: isSet(object.value) ? ForeignMessageProto2.fromJSON(object.value) : undefined,
     };
   },
@@ -5147,7 +5256,7 @@ export const TestAllTypesProto2_MapStringNestedEnumEntry = {
 
   fromJSON(object: any): TestAllTypesProto2_MapStringNestedEnumEntry {
     return {
-      key: isSet(object.key) ? String(object.key) : "",
+      key: isSet(object.key) ? globalThis.String(object.key) : "",
       value: isSet(object.value) ? testAllTypesProto2_NestedEnumFromJSON(object.value) : 0,
     };
   },
@@ -5225,7 +5334,7 @@ export const TestAllTypesProto2_MapStringForeignEnumEntry = {
 
   fromJSON(object: any): TestAllTypesProto2_MapStringForeignEnumEntry {
     return {
-      key: isSet(object.key) ? String(object.key) : "",
+      key: isSet(object.key) ? globalThis.String(object.key) : "",
       value: isSet(object.value) ? foreignEnumProto2FromJSON(object.value) : 0,
     };
   },
@@ -5303,8 +5412,8 @@ export const TestAllTypesProto2_Data = {
 
   fromJSON(object: any): TestAllTypesProto2_Data {
     return {
-      groupInt32: isSet(object.groupInt32) ? Number(object.groupInt32) : 0,
-      groupUint32: isSet(object.groupUint32) ? Number(object.groupUint32) : 0,
+      groupInt32: isSet(object.groupInt32) ? globalThis.Number(object.groupInt32) : 0,
+      groupUint32: isSet(object.groupUint32) ? globalThis.Number(object.groupUint32) : 0,
     };
   },
 
@@ -5416,7 +5525,7 @@ export const TestAllTypesProto2_MessageSetCorrectExtension1 = {
   },
 
   fromJSON(object: any): TestAllTypesProto2_MessageSetCorrectExtension1 {
-    return { str: isSet(object.str) ? String(object.str) : "" };
+    return { str: isSet(object.str) ? globalThis.String(object.str) : "" };
   },
 
   toJSON(message: TestAllTypesProto2_MessageSetCorrectExtension1): unknown {
@@ -5480,7 +5589,7 @@ export const TestAllTypesProto2_MessageSetCorrectExtension2 = {
   },
 
   fromJSON(object: any): TestAllTypesProto2_MessageSetCorrectExtension2 {
-    return { i: isSet(object.i) ? Number(object.i) : 0 };
+    return { i: isSet(object.i) ? globalThis.Number(object.i) : 0 };
   },
 
   toJSON(message: TestAllTypesProto2_MessageSetCorrectExtension2): unknown {
@@ -5541,7 +5650,7 @@ export const ForeignMessageProto2 = {
   },
 
   fromJSON(object: any): ForeignMessageProto2 {
-    return { c: isSet(object.c) ? Number(object.c) : 0 };
+    return { c: isSet(object.c) ? globalThis.Number(object.c) : 0 };
   },
 
   toJSON(message: ForeignMessageProto2): unknown {
@@ -5668,14 +5777,16 @@ export const UnknownToTestAllTypes = {
 
   fromJSON(object: any): UnknownToTestAllTypes {
     return {
-      optionalInt32: isSet(object.optionalInt32) ? Number(object.optionalInt32) : 0,
-      optionalString: isSet(object.optionalString) ? String(object.optionalString) : "",
+      optionalInt32: isSet(object.optionalInt32) ? globalThis.Number(object.optionalInt32) : 0,
+      optionalString: isSet(object.optionalString) ? globalThis.String(object.optionalString) : "",
       nestedMessage: isSet(object.nestedMessage) ? ForeignMessageProto2.fromJSON(object.nestedMessage) : undefined,
       optionalgroup: isSet(object.optionalgroup)
         ? UnknownToTestAllTypes_OptionalGroup.fromJSON(object.optionalgroup)
         : undefined,
-      optionalBool: isSet(object.optionalBool) ? Boolean(object.optionalBool) : false,
-      repeatedInt32: Array.isArray(object?.repeatedInt32) ? object.repeatedInt32.map((e: any) => Number(e)) : [],
+      optionalBool: isSet(object.optionalBool) ? globalThis.Boolean(object.optionalBool) : false,
+      repeatedInt32: globalThis.Array.isArray(object?.repeatedInt32)
+        ? object.repeatedInt32.map((e: any) => globalThis.Number(e))
+        : [],
     };
   },
 
@@ -5757,7 +5868,7 @@ export const UnknownToTestAllTypes_OptionalGroup = {
   },
 
   fromJSON(object: any): UnknownToTestAllTypes_OptionalGroup {
-    return { a: isSet(object.a) ? Number(object.a) : 0 };
+    return { a: isSet(object.a) ? globalThis.Number(object.a) : 0 };
   },
 
   toJSON(message: UnknownToTestAllTypes_OptionalGroup): unknown {
@@ -5904,7 +6015,7 @@ export const OneStringProto2 = {
   },
 
   fromJSON(object: any): OneStringProto2 {
-    return { data: isSet(object.data) ? String(object.data) : "" };
+    return { data: isSet(object.data) ? globalThis.String(object.data) : "" };
   },
 
   toJSON(message: OneStringProto2): unknown {
@@ -5982,9 +6093,9 @@ export const ProtoWithKeywords = {
 
   fromJSON(object: any): ProtoWithKeywords {
     return {
-      inline: isSet(object.inline) ? Number(object.inline) : 0,
-      concept: isSet(object.concept) ? String(object.concept) : "",
-      requires: Array.isArray(object?.requires) ? object.requires.map((e: any) => String(e)) : [],
+      inline: isSet(object.inline) ? globalThis.Number(object.inline) : 0,
+      concept: isSet(object.concept) ? globalThis.String(object.concept) : "",
+      requires: globalThis.Array.isArray(object?.requires) ? object.requires.map((e: any) => globalThis.String(e)) : [],
     };
   },
 
@@ -6472,20 +6583,20 @@ export const TestAllRequiredTypesProto2 = {
 
   fromJSON(object: any): TestAllRequiredTypesProto2 {
     return {
-      requiredInt32: isSet(object.requiredInt32) ? Number(object.requiredInt32) : 0,
-      requiredInt64: isSet(object.requiredInt64) ? Number(object.requiredInt64) : 0,
-      requiredUint32: isSet(object.requiredUint32) ? Number(object.requiredUint32) : 0,
-      requiredUint64: isSet(object.requiredUint64) ? Number(object.requiredUint64) : 0,
-      requiredSint32: isSet(object.requiredSint32) ? Number(object.requiredSint32) : 0,
-      requiredSint64: isSet(object.requiredSint64) ? Number(object.requiredSint64) : 0,
-      requiredFixed32: isSet(object.requiredFixed32) ? Number(object.requiredFixed32) : 0,
-      requiredFixed64: isSet(object.requiredFixed64) ? Number(object.requiredFixed64) : 0,
-      requiredSfixed32: isSet(object.requiredSfixed32) ? Number(object.requiredSfixed32) : 0,
-      requiredSfixed64: isSet(object.requiredSfixed64) ? Number(object.requiredSfixed64) : 0,
-      requiredFloat: isSet(object.requiredFloat) ? Number(object.requiredFloat) : 0,
-      requiredDouble: isSet(object.requiredDouble) ? Number(object.requiredDouble) : 0,
-      requiredBool: isSet(object.requiredBool) ? Boolean(object.requiredBool) : false,
-      requiredString: isSet(object.requiredString) ? String(object.requiredString) : "",
+      requiredInt32: isSet(object.requiredInt32) ? globalThis.Number(object.requiredInt32) : 0,
+      requiredInt64: isSet(object.requiredInt64) ? globalThis.Number(object.requiredInt64) : 0,
+      requiredUint32: isSet(object.requiredUint32) ? globalThis.Number(object.requiredUint32) : 0,
+      requiredUint64: isSet(object.requiredUint64) ? globalThis.Number(object.requiredUint64) : 0,
+      requiredSint32: isSet(object.requiredSint32) ? globalThis.Number(object.requiredSint32) : 0,
+      requiredSint64: isSet(object.requiredSint64) ? globalThis.Number(object.requiredSint64) : 0,
+      requiredFixed32: isSet(object.requiredFixed32) ? globalThis.Number(object.requiredFixed32) : 0,
+      requiredFixed64: isSet(object.requiredFixed64) ? globalThis.Number(object.requiredFixed64) : 0,
+      requiredSfixed32: isSet(object.requiredSfixed32) ? globalThis.Number(object.requiredSfixed32) : 0,
+      requiredSfixed64: isSet(object.requiredSfixed64) ? globalThis.Number(object.requiredSfixed64) : 0,
+      requiredFloat: isSet(object.requiredFloat) ? globalThis.Number(object.requiredFloat) : 0,
+      requiredDouble: isSet(object.requiredDouble) ? globalThis.Number(object.requiredDouble) : 0,
+      requiredBool: isSet(object.requiredBool) ? globalThis.Boolean(object.requiredBool) : false,
+      requiredString: isSet(object.requiredString) ? globalThis.String(object.requiredString) : "",
       requiredBytes: isSet(object.requiredBytes) ? bytesFromBase64(object.requiredBytes) : new Uint8Array(0),
       requiredNestedMessage: isSet(object.requiredNestedMessage)
         ? TestAllRequiredTypesProto2_NestedMessage.fromJSON(object.requiredNestedMessage)
@@ -6499,8 +6610,8 @@ export const TestAllRequiredTypesProto2 = {
       requiredForeignEnum: isSet(object.requiredForeignEnum)
         ? foreignEnumProto2FromJSON(object.requiredForeignEnum)
         : 0,
-      requiredStringPiece: isSet(object.requiredStringPiece) ? String(object.requiredStringPiece) : "",
-      requiredCord: isSet(object.requiredCord) ? String(object.requiredCord) : "",
+      requiredStringPiece: isSet(object.requiredStringPiece) ? globalThis.String(object.requiredStringPiece) : "",
+      requiredCord: isSet(object.requiredCord) ? globalThis.String(object.requiredCord) : "",
       recursiveMessage: isSet(object.recursiveMessage)
         ? TestAllRequiredTypesProto2.fromJSON(object.recursiveMessage)
         : undefined,
@@ -6508,20 +6619,20 @@ export const TestAllRequiredTypesProto2 = {
         ? TestAllRequiredTypesProto2.fromJSON(object.optionalRecursiveMessage)
         : undefined,
       data: isSet(object.data) ? TestAllRequiredTypesProto2_Data.fromJSON(object.data) : undefined,
-      defaultInt32: isSet(object.defaultInt32) ? Number(object.defaultInt32) : 0,
-      defaultInt64: isSet(object.defaultInt64) ? Number(object.defaultInt64) : 0,
-      defaultUint32: isSet(object.defaultUint32) ? Number(object.defaultUint32) : 0,
-      defaultUint64: isSet(object.defaultUint64) ? Number(object.defaultUint64) : 0,
-      defaultSint32: isSet(object.defaultSint32) ? Number(object.defaultSint32) : 0,
-      defaultSint64: isSet(object.defaultSint64) ? Number(object.defaultSint64) : 0,
-      defaultFixed32: isSet(object.defaultFixed32) ? Number(object.defaultFixed32) : 0,
-      defaultFixed64: isSet(object.defaultFixed64) ? Number(object.defaultFixed64) : 0,
-      defaultSfixed32: isSet(object.defaultSfixed32) ? Number(object.defaultSfixed32) : 0,
-      defaultSfixed64: isSet(object.defaultSfixed64) ? Number(object.defaultSfixed64) : 0,
-      defaultFloat: isSet(object.defaultFloat) ? Number(object.defaultFloat) : 0,
-      defaultDouble: isSet(object.defaultDouble) ? Number(object.defaultDouble) : 0,
-      defaultBool: isSet(object.defaultBool) ? Boolean(object.defaultBool) : false,
-      defaultString: isSet(object.defaultString) ? String(object.defaultString) : "",
+      defaultInt32: isSet(object.defaultInt32) ? globalThis.Number(object.defaultInt32) : 0,
+      defaultInt64: isSet(object.defaultInt64) ? globalThis.Number(object.defaultInt64) : 0,
+      defaultUint32: isSet(object.defaultUint32) ? globalThis.Number(object.defaultUint32) : 0,
+      defaultUint64: isSet(object.defaultUint64) ? globalThis.Number(object.defaultUint64) : 0,
+      defaultSint32: isSet(object.defaultSint32) ? globalThis.Number(object.defaultSint32) : 0,
+      defaultSint64: isSet(object.defaultSint64) ? globalThis.Number(object.defaultSint64) : 0,
+      defaultFixed32: isSet(object.defaultFixed32) ? globalThis.Number(object.defaultFixed32) : 0,
+      defaultFixed64: isSet(object.defaultFixed64) ? globalThis.Number(object.defaultFixed64) : 0,
+      defaultSfixed32: isSet(object.defaultSfixed32) ? globalThis.Number(object.defaultSfixed32) : 0,
+      defaultSfixed64: isSet(object.defaultSfixed64) ? globalThis.Number(object.defaultSfixed64) : 0,
+      defaultFloat: isSet(object.defaultFloat) ? globalThis.Number(object.defaultFloat) : 0,
+      defaultDouble: isSet(object.defaultDouble) ? globalThis.Number(object.defaultDouble) : 0,
+      defaultBool: isSet(object.defaultBool) ? globalThis.Boolean(object.defaultBool) : false,
+      defaultString: isSet(object.defaultString) ? globalThis.String(object.defaultString) : "",
       defaultBytes: isSet(object.defaultBytes) ? bytesFromBase64(object.defaultBytes) : new Uint8Array(0),
     };
   },
@@ -6766,7 +6877,7 @@ export const TestAllRequiredTypesProto2_NestedMessage = {
 
   fromJSON(object: any): TestAllRequiredTypesProto2_NestedMessage {
     return {
-      a: isSet(object.a) ? Number(object.a) : 0,
+      a: isSet(object.a) ? globalThis.Number(object.a) : 0,
       corecursive: isSet(object.corecursive) ? TestAllRequiredTypesProto2.fromJSON(object.corecursive) : undefined,
       optionalCorecursive: isSet(object.optionalCorecursive)
         ? TestAllRequiredTypesProto2.fromJSON(object.optionalCorecursive)
@@ -6855,8 +6966,8 @@ export const TestAllRequiredTypesProto2_Data = {
 
   fromJSON(object: any): TestAllRequiredTypesProto2_Data {
     return {
-      groupInt32: isSet(object.groupInt32) ? Number(object.groupInt32) : 0,
-      groupUint32: isSet(object.groupUint32) ? Number(object.groupUint32) : 0,
+      groupInt32: isSet(object.groupInt32) ? globalThis.Number(object.groupInt32) : 0,
+      groupUint32: isSet(object.groupUint32) ? globalThis.Number(object.groupUint32) : 0,
     };
   },
 
@@ -6970,7 +7081,7 @@ export const TestAllRequiredTypesProto2_MessageSetCorrectExtension1 = {
   },
 
   fromJSON(object: any): TestAllRequiredTypesProto2_MessageSetCorrectExtension1 {
-    return { str: isSet(object.str) ? String(object.str) : "" };
+    return { str: isSet(object.str) ? globalThis.String(object.str) : "" };
   },
 
   toJSON(message: TestAllRequiredTypesProto2_MessageSetCorrectExtension1): unknown {
@@ -7034,7 +7145,7 @@ export const TestAllRequiredTypesProto2_MessageSetCorrectExtension2 = {
   },
 
   fromJSON(object: any): TestAllRequiredTypesProto2_MessageSetCorrectExtension2 {
-    return { i: isSet(object.i) ? Number(object.i) : 0 };
+    return { i: isSet(object.i) ? globalThis.Number(object.i) : 0 };
   },
 
   toJSON(message: TestAllRequiredTypesProto2_MessageSetCorrectExtension2): unknown {
@@ -7059,30 +7170,11 @@ export const TestAllRequiredTypesProto2_MessageSetCorrectExtension2 = {
   },
 };
 
-declare const self: any | undefined;
-declare const window: any | undefined;
-declare const global: any | undefined;
-const tsProtoGlobalThis: any = (() => {
-  if (typeof globalThis !== "undefined") {
-    return globalThis;
-  }
-  if (typeof self !== "undefined") {
-    return self;
-  }
-  if (typeof window !== "undefined") {
-    return window;
-  }
-  if (typeof global !== "undefined") {
-    return global;
-  }
-  throw "Unable to locate global object";
-})();
-
 function bytesFromBase64(b64: string): Uint8Array {
-  if (tsProtoGlobalThis.Buffer) {
-    return Uint8Array.from(tsProtoGlobalThis.Buffer.from(b64, "base64"));
+  if (globalThis.Buffer) {
+    return Uint8Array.from(globalThis.Buffer.from(b64, "base64"));
   } else {
-    const bin = tsProtoGlobalThis.atob(b64);
+    const bin = globalThis.atob(b64);
     const arr = new Uint8Array(bin.length);
     for (let i = 0; i < bin.length; ++i) {
       arr[i] = bin.charCodeAt(i);
@@ -7092,21 +7184,22 @@ function bytesFromBase64(b64: string): Uint8Array {
 }
 
 function base64FromBytes(arr: Uint8Array): string {
-  if (tsProtoGlobalThis.Buffer) {
-    return tsProtoGlobalThis.Buffer.from(arr).toString("base64");
+  if (globalThis.Buffer) {
+    return globalThis.Buffer.from(arr).toString("base64");
   } else {
     const bin: string[] = [];
     arr.forEach((byte) => {
-      bin.push(String.fromCharCode(byte));
+      bin.push(globalThis.String.fromCharCode(byte));
     });
-    return tsProtoGlobalThis.btoa(bin.join(""));
+    return globalThis.btoa(bin.join(""));
   }
 }
 
 type Builtin = Date | Function | Uint8Array | string | number | boolean | undefined;
 
 export type DeepPartial<T> = T extends Builtin ? T
-  : T extends Array<infer U> ? Array<DeepPartial<U>> : T extends ReadonlyArray<infer U> ? ReadonlyArray<DeepPartial<U>>
+  : T extends globalThis.Array<infer U> ? globalThis.Array<DeepPartial<U>>
+  : T extends ReadonlyArray<infer U> ? ReadonlyArray<DeepPartial<U>>
   : T extends { $case: string } ? { [K in keyof Omit<T, "$case">]?: DeepPartial<T[K]> } & { $case: T["$case"] }
   : T extends {} ? { [K in keyof T]?: DeepPartial<T[K]> }
   : Partial<T>;
@@ -7116,8 +7209,8 @@ export type Exact<P, I extends P> = P extends Builtin ? P
   : P & { [K in keyof P]: Exact<P[K], I[K]> } & { [K in Exclude<keyof I, KeysOfUnion<P>>]: never };
 
 function longToNumber(long: Long): number {
-  if (long.gt(Number.MAX_SAFE_INTEGER)) {
-    throw new tsProtoGlobalThis.Error("Value is larger than Number.MAX_SAFE_INTEGER");
+  if (long.gt(globalThis.Number.MAX_SAFE_INTEGER)) {
+    throw new globalThis.Error("Value is larger than Number.MAX_SAFE_INTEGER");
   }
   return long.toNumber();
 }
