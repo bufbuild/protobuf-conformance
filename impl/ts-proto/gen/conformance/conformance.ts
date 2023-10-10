@@ -30,7 +30,7 @@ export function wireFormatFromJSON(object: any): WireFormat {
     case "TEXT_FORMAT":
       return WireFormat.TEXT_FORMAT;
     default:
-      throw new tsProtoGlobalThis.Error("Unrecognized enum value " + object + " for enum WireFormat");
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum WireFormat");
   }
 }
 
@@ -47,7 +47,7 @@ export function wireFormatToJSON(object: WireFormat): string {
     case WireFormat.TEXT_FORMAT:
       return "TEXT_FORMAT";
     default:
-      throw new tsProtoGlobalThis.Error("Unrecognized enum value " + object + " for enum WireFormat");
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum WireFormat");
   }
 }
 
@@ -98,7 +98,7 @@ export function testCategoryFromJSON(object: any): TestCategory {
     case "TEXT_FORMAT_TEST":
       return TestCategory.TEXT_FORMAT_TEST;
     default:
-      throw new tsProtoGlobalThis.Error("Unrecognized enum value " + object + " for enum TestCategory");
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum TestCategory");
   }
 }
 
@@ -117,7 +117,7 @@ export function testCategoryToJSON(object: TestCategory): string {
     case TestCategory.TEXT_FORMAT_TEST:
       return "TEXT_FORMAT_TEST";
     default:
-      throw new tsProtoGlobalThis.Error("Unrecognized enum value " + object + " for enum TestCategory");
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum TestCategory");
   }
 }
 
@@ -226,7 +226,9 @@ export const FailureSet = {
   },
 
   fromJSON(object: any): FailureSet {
-    return { failure: Array.isArray(object?.failure) ? object.failure.map((e: any) => String(e)) : [] };
+    return {
+      failure: globalThis.Array.isArray(object?.failure) ? object.failure.map((e: any) => globalThis.String(e)) : [],
+    };
   },
 
   toJSON(message: FailureSet): unknown {
@@ -376,19 +378,19 @@ export const ConformanceRequest = {
       payload: isSet(object.protobufPayload)
         ? { $case: "protobufPayload", protobufPayload: bytesFromBase64(object.protobufPayload) }
         : isSet(object.jsonPayload)
-        ? { $case: "jsonPayload", jsonPayload: String(object.jsonPayload) }
+        ? { $case: "jsonPayload", jsonPayload: globalThis.String(object.jsonPayload) }
         : isSet(object.jspbPayload)
-        ? { $case: "jspbPayload", jspbPayload: String(object.jspbPayload) }
+        ? { $case: "jspbPayload", jspbPayload: globalThis.String(object.jspbPayload) }
         : isSet(object.textPayload)
-        ? { $case: "textPayload", textPayload: String(object.textPayload) }
+        ? { $case: "textPayload", textPayload: globalThis.String(object.textPayload) }
         : undefined,
       requestedOutputFormat: isSet(object.requestedOutputFormat) ? wireFormatFromJSON(object.requestedOutputFormat) : 0,
-      messageType: isSet(object.messageType) ? String(object.messageType) : "",
+      messageType: isSet(object.messageType) ? globalThis.String(object.messageType) : "",
       testCategory: isSet(object.testCategory) ? testCategoryFromJSON(object.testCategory) : 0,
       jspbEncodingOptions: isSet(object.jspbEncodingOptions)
         ? JspbEncodingConfig.fromJSON(object.jspbEncodingOptions)
         : undefined,
-      printUnknownFields: isSet(object.printUnknownFields) ? Boolean(object.printUnknownFields) : false,
+      printUnknownFields: isSet(object.printUnknownFields) ? globalThis.Boolean(object.printUnknownFields) : false,
     };
   },
 
@@ -588,23 +590,23 @@ export const ConformanceResponse = {
   fromJSON(object: any): ConformanceResponse {
     return {
       result: isSet(object.parseError)
-        ? { $case: "parseError", parseError: String(object.parseError) }
+        ? { $case: "parseError", parseError: globalThis.String(object.parseError) }
         : isSet(object.serializeError)
-        ? { $case: "serializeError", serializeError: String(object.serializeError) }
+        ? { $case: "serializeError", serializeError: globalThis.String(object.serializeError) }
         : isSet(object.timeoutError)
-        ? { $case: "timeoutError", timeoutError: String(object.timeoutError) }
+        ? { $case: "timeoutError", timeoutError: globalThis.String(object.timeoutError) }
         : isSet(object.runtimeError)
-        ? { $case: "runtimeError", runtimeError: String(object.runtimeError) }
+        ? { $case: "runtimeError", runtimeError: globalThis.String(object.runtimeError) }
         : isSet(object.protobufPayload)
         ? { $case: "protobufPayload", protobufPayload: bytesFromBase64(object.protobufPayload) }
         : isSet(object.jsonPayload)
-        ? { $case: "jsonPayload", jsonPayload: String(object.jsonPayload) }
+        ? { $case: "jsonPayload", jsonPayload: globalThis.String(object.jsonPayload) }
         : isSet(object.skipped)
-        ? { $case: "skipped", skipped: String(object.skipped) }
+        ? { $case: "skipped", skipped: globalThis.String(object.skipped) }
         : isSet(object.jspbPayload)
-        ? { $case: "jspbPayload", jspbPayload: String(object.jspbPayload) }
+        ? { $case: "jspbPayload", jspbPayload: globalThis.String(object.jspbPayload) }
         : isSet(object.textPayload)
-        ? { $case: "textPayload", textPayload: String(object.textPayload) }
+        ? { $case: "textPayload", textPayload: globalThis.String(object.textPayload) }
         : undefined,
     };
   },
@@ -746,7 +748,9 @@ export const JspbEncodingConfig = {
 
   fromJSON(object: any): JspbEncodingConfig {
     return {
-      useJspbArrayAnyFormat: isSet(object.useJspbArrayAnyFormat) ? Boolean(object.useJspbArrayAnyFormat) : false,
+      useJspbArrayAnyFormat: isSet(object.useJspbArrayAnyFormat)
+        ? globalThis.Boolean(object.useJspbArrayAnyFormat)
+        : false,
     };
   },
 
@@ -768,30 +772,11 @@ export const JspbEncodingConfig = {
   },
 };
 
-declare const self: any | undefined;
-declare const window: any | undefined;
-declare const global: any | undefined;
-const tsProtoGlobalThis: any = (() => {
-  if (typeof globalThis !== "undefined") {
-    return globalThis;
-  }
-  if (typeof self !== "undefined") {
-    return self;
-  }
-  if (typeof window !== "undefined") {
-    return window;
-  }
-  if (typeof global !== "undefined") {
-    return global;
-  }
-  throw "Unable to locate global object";
-})();
-
 function bytesFromBase64(b64: string): Uint8Array {
-  if (tsProtoGlobalThis.Buffer) {
-    return Uint8Array.from(tsProtoGlobalThis.Buffer.from(b64, "base64"));
+  if (globalThis.Buffer) {
+    return Uint8Array.from(globalThis.Buffer.from(b64, "base64"));
   } else {
-    const bin = tsProtoGlobalThis.atob(b64);
+    const bin = globalThis.atob(b64);
     const arr = new Uint8Array(bin.length);
     for (let i = 0; i < bin.length; ++i) {
       arr[i] = bin.charCodeAt(i);
@@ -801,21 +786,22 @@ function bytesFromBase64(b64: string): Uint8Array {
 }
 
 function base64FromBytes(arr: Uint8Array): string {
-  if (tsProtoGlobalThis.Buffer) {
-    return tsProtoGlobalThis.Buffer.from(arr).toString("base64");
+  if (globalThis.Buffer) {
+    return globalThis.Buffer.from(arr).toString("base64");
   } else {
     const bin: string[] = [];
     arr.forEach((byte) => {
-      bin.push(String.fromCharCode(byte));
+      bin.push(globalThis.String.fromCharCode(byte));
     });
-    return tsProtoGlobalThis.btoa(bin.join(""));
+    return globalThis.btoa(bin.join(""));
   }
 }
 
 type Builtin = Date | Function | Uint8Array | string | number | boolean | undefined;
 
 export type DeepPartial<T> = T extends Builtin ? T
-  : T extends Array<infer U> ? Array<DeepPartial<U>> : T extends ReadonlyArray<infer U> ? ReadonlyArray<DeepPartial<U>>
+  : T extends globalThis.Array<infer U> ? globalThis.Array<DeepPartial<U>>
+  : T extends ReadonlyArray<infer U> ? ReadonlyArray<DeepPartial<U>>
   : T extends { $case: string } ? { [K in keyof Omit<T, "$case">]?: DeepPartial<T[K]> } & { $case: T["$case"] }
   : T extends {} ? { [K in keyof T]?: DeepPartial<T[K]> }
   : Partial<T>;

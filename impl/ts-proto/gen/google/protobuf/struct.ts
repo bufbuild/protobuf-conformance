@@ -20,7 +20,7 @@ export function nullValueFromJSON(object: any): NullValue {
     case "NULL_VALUE":
       return NullValue.NULL_VALUE;
     default:
-      throw new tsProtoGlobalThis.Error("Unrecognized enum value " + object + " for enum NullValue");
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum NullValue");
   }
 }
 
@@ -29,7 +29,7 @@ export function nullValueToJSON(object: NullValue): string {
     case NullValue.NULL_VALUE:
       return "NULL_VALUE";
     default:
-      throw new tsProtoGlobalThis.Error("Unrecognized enum value " + object + " for enum NullValue");
+      throw new globalThis.Error("Unrecognized enum value " + object + " for enum NullValue");
   }
 }
 
@@ -88,7 +88,7 @@ function createBaseStruct(): Struct {
 
 export const Struct = {
   encode(message: Struct, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
-    (message.fields).forEach((value, key) => {
+    message.fields.forEach((value, key) => {
       if (value !== undefined) {
         Struct_FieldsEntry.encode({ key: key as any, value }, writer.uint32(10).fork()).ldelim();
       }
@@ -226,7 +226,10 @@ export const Struct_FieldsEntry = {
   },
 
   fromJSON(object: any): Struct_FieldsEntry {
-    return { key: isSet(object.key) ? String(object.key) : "", value: isSet(object?.value) ? object.value : undefined };
+    return {
+      key: isSet(object.key) ? globalThis.String(object.key) : "",
+      value: isSet(object?.value) ? object.value : undefined,
+    };
   },
 
   toJSON(message: Struct_FieldsEntry): unknown {
@@ -343,11 +346,11 @@ export const Value = {
       kind: isSet(object.nullValue)
         ? { $case: "nullValue", nullValue: nullValueFromJSON(object.nullValue) }
         : isSet(object.numberValue)
-        ? { $case: "numberValue", numberValue: Number(object.numberValue) }
+        ? { $case: "numberValue", numberValue: globalThis.Number(object.numberValue) }
         : isSet(object.stringValue)
-        ? { $case: "stringValue", stringValue: String(object.stringValue) }
+        ? { $case: "stringValue", stringValue: globalThis.String(object.stringValue) }
         : isSet(object.boolValue)
-        ? { $case: "boolValue", boolValue: Boolean(object.boolValue) }
+        ? { $case: "boolValue", boolValue: globalThis.Boolean(object.boolValue) }
         : isSet(object.structValue)
         ? { $case: "structValue", structValue: object.structValue }
         : isSet(object.listValue)
@@ -427,7 +430,7 @@ export const Value = {
       result.kind = { $case: "numberValue", numberValue: value };
     } else if (typeof value === "string") {
       result.kind = { $case: "stringValue", stringValue: value };
-    } else if (Array.isArray(value)) {
+    } else if (globalThis.Array.isArray(value)) {
       result.kind = { $case: "listValue", listValue: value };
     } else if (typeof value === "object") {
       result.kind = { $case: "structValue", structValue: value };
@@ -492,7 +495,7 @@ export const ListValue = {
   },
 
   fromJSON(object: any): ListValue {
-    return { values: Array.isArray(object?.values) ? [...object.values] : [] };
+    return { values: globalThis.Array.isArray(object?.values) ? [...object.values] : [] };
   },
 
   toJSON(message: ListValue): unknown {
@@ -519,7 +522,7 @@ export const ListValue = {
   },
 
   unwrap(message: ListValue): Array<any> {
-    if (message?.hasOwnProperty("values") && Array.isArray(message.values)) {
+    if (message?.hasOwnProperty("values") && globalThis.Array.isArray(message.values)) {
       return message.values;
     } else {
       return message as any;
@@ -527,29 +530,11 @@ export const ListValue = {
   },
 };
 
-declare const self: any | undefined;
-declare const window: any | undefined;
-declare const global: any | undefined;
-const tsProtoGlobalThis: any = (() => {
-  if (typeof globalThis !== "undefined") {
-    return globalThis;
-  }
-  if (typeof self !== "undefined") {
-    return self;
-  }
-  if (typeof window !== "undefined") {
-    return window;
-  }
-  if (typeof global !== "undefined") {
-    return global;
-  }
-  throw "Unable to locate global object";
-})();
-
 type Builtin = Date | Function | Uint8Array | string | number | boolean | undefined;
 
 export type DeepPartial<T> = T extends Builtin ? T
-  : T extends Array<infer U> ? Array<DeepPartial<U>> : T extends ReadonlyArray<infer U> ? ReadonlyArray<DeepPartial<U>>
+  : T extends globalThis.Array<infer U> ? globalThis.Array<DeepPartial<U>>
+  : T extends ReadonlyArray<infer U> ? ReadonlyArray<DeepPartial<U>>
   : T extends { $case: string } ? { [K in keyof Omit<T, "$case">]?: DeepPartial<T[K]> } & { $case: T["$case"] }
   : T extends {} ? { [K in keyof T]?: DeepPartial<T[K]> }
   : Partial<T>;
