@@ -247,6 +247,9 @@ Recommended.Proto3.JsonInput.FieldNameWithDoubleUnderscores.Validator
 Recommended.Proto3.JsonInput.FloatFieldInfinityNotQuoted
 Recommended.Proto3.JsonInput.FloatFieldNanNotQuoted
 Recommended.Proto3.JsonInput.FloatFieldNegativeInfinityNotQuoted
+Recommended.Proto3.JsonInput.IgnoreUnknownEnumStringValueInMapValue.ProtobufOutput
+Recommended.Proto3.JsonInput.IgnoreUnknownEnumStringValueInOptionalField.ProtobufOutput
+Recommended.Proto3.JsonInput.IgnoreUnknownEnumStringValueInRepeatedField.ProtobufOutput
 Recommended.Proto3.JsonInput.Int32MapFieldKeyNotQuoted
 Recommended.Proto3.JsonInput.Int64FieldBeString.Validator
 Recommended.Proto3.JsonInput.Int64MapFieldKeyNotQuoted
@@ -284,6 +287,9 @@ Recommended.Proto3.JsonInput.OneofZeroUint32.JsonOutput
 Recommended.Proto3.JsonInput.OneofZeroUint32.ProtobufOutput
 Recommended.Proto3.JsonInput.OneofZeroUint64.JsonOutput
 Recommended.Proto3.JsonInput.OneofZeroUint64.ProtobufOutput
+Recommended.Proto3.JsonInput.RejectUnknownEnumStringValueInMapValue
+Recommended.Proto3.JsonInput.RejectUnknownEnumStringValueInOptionalField
+Recommended.Proto3.JsonInput.RejectUnknownEnumStringValueInRepeatedField
 Recommended.Proto3.JsonInput.RepeatedFieldMessageElementIsNull
 Recommended.Proto3.JsonInput.RepeatedFieldPrimitiveElementIsNull
 Recommended.Proto3.JsonInput.RepeatedFieldTrailingComma
@@ -538,6 +544,8 @@ Recommended.Proto3.ProtobufInput.ValidDataScalarBinary.UINT32[9].ProtobufOutput
 Recommended.Proto3.ProtobufInput.ValidDataScalarBinary.UINT64[0].ProtobufOutput
 Recommended.Proto3.ProtobufInput.ValidDataScalarBinary.UINT64[1].ProtobufOutput
 Recommended.Proto3.ProtobufInput.ValidDataScalarBinary.UINT64[2].ProtobufOutput
+Recommended.ValueRejectInfNumberValue.JsonOutput
+Recommended.ValueRejectNanNumberValue.JsonOutput
 Required.DurationProtoInputTooLarge.JsonOutput
 Required.DurationProtoInputTooSmall.JsonOutput
 Required.Proto2.JsonInput.StoresDefaultPrimitive.Validator
@@ -1035,6 +1043,10 @@ Required.Proto3.JsonInput.DurationMaxValue.ProtobufOutput
 Required.Proto3.JsonInput.DurationMinValue.JsonOutput
 Required.Proto3.JsonInput.DurationMinValue.ProtobufOutput
 Required.Proto3.JsonInput.DurationMissingS
+Required.Proto3.JsonInput.DurationNegativeNanos.JsonOutput
+Required.Proto3.JsonInput.DurationNegativeNanos.ProtobufOutput
+Required.Proto3.JsonInput.DurationNegativeSeconds.JsonOutput
+Required.Proto3.JsonInput.DurationNegativeSeconds.ProtobufOutput
 Required.Proto3.JsonInput.DurationNull.JsonOutput
 Required.Proto3.JsonInput.DurationNull.ProtobufOutput
 Required.Proto3.JsonInput.DurationRepeatedValue.JsonOutput
@@ -2015,15 +2027,5 @@ Required.Proto3.ProtobufInput.ValidDataScalar.UINT64[2].JsonOutput
 Required.Proto3.ProtobufInput.ValidDataScalar.UINT64[2].ProtobufOutput
 Required.TimestampProtoInputTooLarge.JsonOutput
 Required.TimestampProtoInputTooSmall.JsonOutput
-Recommended.Proto3.JsonInput.IgnoreUnknownEnumStringValueInMapValue.ProtobufOutput
-Recommended.Proto3.JsonInput.IgnoreUnknownEnumStringValueInOptionalField.ProtobufOutput
-Recommended.Proto3.JsonInput.IgnoreUnknownEnumStringValueInRepeatedField.ProtobufOutput
-Recommended.Proto3.JsonInput.RejectUnknownEnumStringValueInMapValue
-Recommended.Proto3.JsonInput.RejectUnknownEnumStringValueInOptionalField
-Recommended.Proto3.JsonInput.RejectUnknownEnumStringValueInRepeatedField
-Recommended.ValueRejectInfNumberValue.JsonOutput
-Recommended.ValueRejectNanNumberValue.JsonOutput
-Required.Proto3.JsonInput.DurationNegativeNanos.JsonOutput
-Required.Proto3.JsonInput.DurationNegativeNanos.ProtobufOutput
-Required.Proto3.JsonInput.DurationNegativeSeconds.JsonOutput
-Required.Proto3.JsonInput.DurationNegativeSeconds.ProtobufOutput
+Required.Proto3.JsonInput.StringFieldEmbeddedNull.JsonOutput
+Required.Proto3.JsonInput.StringFieldEmbeddedNull.ProtobufOutput
