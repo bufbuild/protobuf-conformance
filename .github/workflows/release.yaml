@@ -3,7 +3,6 @@ on:
   push:
     tags:
       - v*
-  workflow_dispatch:
 permissions:
   contents: write
 jobs:
@@ -19,8 +18,7 @@ jobs:
       - name: Get Protobuf
         id: protobuf
         run: |
-          # tag=$(git describe --tags --abbrev=0 --exact-match)
-          tag=v24.4
+          tag=$(git describe --tags --abbrev=0 --exact-match)
           release_version="${tag:1}"
           curl -L https://github.com/protocolbuffers/protobuf/releases/download/${tag}/protobuf-${release_version}.tar.gz > ./protobuf.tar.gz
           echo "version=${release_version}" >> $GITHUB_OUTPUT
@@ -150,7 +148,7 @@ jobs:
       - name: Zip Binary
         run: |
           cd .tmp
-          zip -r ../conformance_test_runner-${{ needs.get-protobuf.outputs.version }}-linux-x86_64.zip ./bin ./include
+          zip -r ../conformance_test_runner-${{ needs.get-protobuf.outputs.version }}-osx-x86_64.zip ./bin ./include
 
       - name: Publish GitHub artifacts
         uses: softprops/action-gh-release@v1
