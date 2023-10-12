@@ -73,7 +73,7 @@ jobs:
 
       - name: Verify Binary
         run: |
-          .tmp/bin/conformance_test_runner --help 2>&1 | grep 'Usage: conformance-test-runner \[options\] <test-program>' || { echo "Build looks broken"; exit 1 }
+          .tmp/bin/conformance_test_runner --help 2>&1 | grep 'Usage: conformance-test-runner \[options\] <test-program>' || { echo "Build looks broken"; exit 1; }
 
       - name: Copy Protos
         run: |
@@ -135,7 +135,7 @@ jobs:
 
       - name: Verify Binary
         run: |
-          .tmp/bin/conformance_test_runner --help 2>&1 | grep 'Usage: conformance-test-runner \[options\] <test-program>' || { echo "Build looks broken"; exit 1 }
+          .tmp/bin/conformance_test_runner --help 2>&1 | grep 'Usage: conformance-test-runner \[options\] <test-program>' || { echo "Build looks broken"; exit 1; }
 
       - name: Copy Protos
         run: |
