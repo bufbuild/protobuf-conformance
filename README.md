@@ -34,12 +34,6 @@ Note: None of the libraries tested implement the text format so the results for 
 
 ## Running the tests
 
-First, verify that Bazel is installed. Using [Bazelisk](https://github.com/bazelbuild/bazelisk) is recommended.
-
 To run the conformance tests, run `make` from the repo root.
 
-## Troubleshooting
-
-If you are on Apple M1 and see the error `symbol not found in flat namespace (_CFRelease)`
-when building `protoc`, you may need to install XCode from the Apple App Store.
-
+Note that only Linux and OSX operating systems are supported.

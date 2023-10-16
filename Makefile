@@ -8,25 +8,23 @@ MAKEFLAGS += --no-builtin-rules
 MAKEFLAGS += --no-print-directory
 TMP   = .tmp
 BIN   = .tmp/bin
-PB   =  .tmp/protobuf-$(GOOGLE_PROTOBUF_VERSION)
+UNAME_OS := $(shell uname -s)
 LICENSE_HEADER_YEAR_RANGE := 2023
 GOOGLE_PROTOBUF_VERSION = 24.4
-BAZEL_VERSION = 5.4.0
 
-$(PB): Makefile
-	echo $(PB)
+ifeq ($(UNAME_OS),Darwin)
+	PLATFORM := osx-x86_64
+else ifeq ($(UNAME_OS),Linux)
+	PLATFORM := linux-x86_64
+endif
+
+$(BIN)/conformance_test_runner: Makefile
 	@mkdir -p $(TMP)
-	curl -L https://github.com/protocolbuffers/protobuf/releases/download/v$(GOOGLE_PROTOBUF_VERSION)/protobuf-$(GOOGLE_PROTOBUF_VERSION).tar.gz \
-		> $(TMP)/protobuf-$(GOOGLE_PROTOBUF_VERSION).tar.gz
-	tar -xzf $(TMP)/protobuf-$(GOOGLE_PROTOBUF_VERSION).tar.gz -C $(TMP)/
-
-$(BIN)/conformance_test_runner: $(PB) Makefile
-	@mkdir -p $(@D)
-	cd $(PB) && USE_BAZEL_VERSION=$(BAZEL_VERSION) bazel build test_messages_proto3_cc_proto conformance:conformance_proto conformance:conformance_test conformance:conformance_test_runner
-	cp -f $(PB)/bazel-bin/conformance/conformance_test_runner $(@D)
-	@cp $(PB)/conformance/conformance.proto proto/conformance
-	@cp $(PB)/src/google/protobuf/test_messages*.proto proto/google/protobuf/
-	@touch $(@)
+	curl -L https://github.com/bufbuild/protobuf-conformance/releases/download/v$(GOOGLE_PROTOBUF_VERSION)/conformance_test_runner-$(GOOGLE_PROTOBUF_VERSION)-$(PLATFORM).zip > $(TMP)/conformance-test-runner-$(GOOGLE_PROTOBUF_VERSION).zip
+	unzip $(TMP)/conformance-test-runner-$(GOOGLE_PROTOBUF_VERSION).zip -d $(TMP)/conformance_test_runner-$(GOOGLE_PROTOBUF_VERSION)
+	@cp -rf $(TMP)/conformance_test_runner-$(GOOGLE_PROTOBUF_VERSION)/bin/conformance_test_runner $(BIN)
+	@cp -rf $(TMP)/conformance_test_runner-$(GOOGLE_PROTOBUF_VERSION)/include/conformance/conformance.proto proto/conformance
+	@cp -rf $(TMP)/conformance_test_runner-$(GOOGLE_PROTOBUF_VERSION)/include/google/protobuf/test_messages*.proto proto/google/protobuf
 
 .PHONY: all
 all: test license  ## Run conformance tests and update license headers
