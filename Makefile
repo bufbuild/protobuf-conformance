@@ -19,12 +19,12 @@ else ifeq ($(UNAME_OS),Linux)
 endif
 
 $(BIN)/conformance_test_runner: Makefile
-	@mkdir -p $(TMP)
+	@mkdir -p $(@D)
 	curl -L https://github.com/bufbuild/protobuf-conformance/releases/download/v$(GOOGLE_PROTOBUF_VERSION)/conformance_test_runner-$(GOOGLE_PROTOBUF_VERSION)-$(PLATFORM).zip > $(TMP)/conformance-test-runner-$(GOOGLE_PROTOBUF_VERSION).zip
 	unzip -o $(TMP)/conformance-test-runner-$(GOOGLE_PROTOBUF_VERSION).zip -d $(TMP)/conformance_test_runner-$(GOOGLE_PROTOBUF_VERSION)
-	cp -rf $(TMP)/conformance_test_runner-$(GOOGLE_PROTOBUF_VERSION)/bin/conformance_test_runner $(BIN)
-	cp -rf $(TMP)/conformance_test_runner-$(GOOGLE_PROTOBUF_VERSION)/include/conformance/conformance.proto proto/conformance
-	cp -rf $(TMP)/conformance_test_runner-$(GOOGLE_PROTOBUF_VERSION)/include/google/protobuf/test_messages*.proto proto/google/protobuf
+	cp -f $(TMP)/conformance_test_runner-$(GOOGLE_PROTOBUF_VERSION)/bin/conformance_test_runner $(@D)
+	cp -f $(TMP)/conformance_test_runner-$(GOOGLE_PROTOBUF_VERSION)/include/conformance/conformance.proto proto/conformance
+	cp -f $(TMP)/conformance_test_runner-$(GOOGLE_PROTOBUF_VERSION)/include/google/protobuf/test_messages*.proto proto/google/protobuf
 
 .PHONY: all
 all: test license  ## Run conformance tests and update license headers
