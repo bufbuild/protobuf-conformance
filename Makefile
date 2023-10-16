@@ -21,10 +21,10 @@ endif
 $(BIN)/conformance_test_runner: Makefile
 	@mkdir -p $(TMP)
 	curl -L https://github.com/bufbuild/protobuf-conformance/releases/download/v$(GOOGLE_PROTOBUF_VERSION)/conformance_test_runner-$(GOOGLE_PROTOBUF_VERSION)-$(PLATFORM).zip > $(TMP)/conformance-test-runner-$(GOOGLE_PROTOBUF_VERSION).zip
-	unzip $(TMP)/conformance-test-runner-$(GOOGLE_PROTOBUF_VERSION).zip -d $(TMP)/conformance_test_runner-$(GOOGLE_PROTOBUF_VERSION)
-	@cp -rf $(TMP)/conformance_test_runner-$(GOOGLE_PROTOBUF_VERSION)/bin/conformance_test_runner $(BIN)
-	@cp -rf $(TMP)/conformance_test_runner-$(GOOGLE_PROTOBUF_VERSION)/include/conformance/conformance.proto proto/conformance
-	@cp -rf $(TMP)/conformance_test_runner-$(GOOGLE_PROTOBUF_VERSION)/include/google/protobuf/test_messages*.proto proto/google/protobuf
+	unzip -o $(TMP)/conformance-test-runner-$(GOOGLE_PROTOBUF_VERSION).zip -d $(TMP)/conformance_test_runner-$(GOOGLE_PROTOBUF_VERSION)
+	cp -rf $(TMP)/conformance_test_runner-$(GOOGLE_PROTOBUF_VERSION)/bin/conformance_test_runner $(BIN)
+	cp -rf $(TMP)/conformance_test_runner-$(GOOGLE_PROTOBUF_VERSION)/include/conformance/conformance.proto proto/conformance
+	cp -rf $(TMP)/conformance_test_runner-$(GOOGLE_PROTOBUF_VERSION)/include/google/protobuf/test_messages*.proto proto/google/protobuf
 
 .PHONY: all
 all: test license  ## Run conformance tests and update license headers
@@ -35,18 +35,6 @@ help: ## Describe useful make targets
 
 .PHONY: test
 test: $(BIN)/conformance_test_runner  ## Run conformance tests
-	cd impl/ts-proto;        PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
-	cd impl/protobuf.js;     PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
-	cd impl/google-protobuf; PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
-	cd impl/protobuf-es;     PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
-	cd impl/protobuf-ts;     PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
-	cd impl/protoc-gen-ts;   PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
-	cd impl/protoscript;     PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
-	cd impl/baseline;        PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
-	node report.js
-
-.PHONY: testci
-testci: ## Run conformance tests in CI
 	cd impl/ts-proto;        PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
 	cd impl/protobuf.js;     PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
 	cd impl/google-protobuf; PATH="$(abspath $(BIN)):$(PATH)" ./test.sh
