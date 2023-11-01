@@ -15,6 +15,10 @@ updates:
       timezone: UTC
       time: "07:00"
     open-pull-requests-limit: 50
+    groups:
+      baseline:
+        patterns:
+          - "*"
   - package-ecosystem: "npm"
     directory: "/impl/google-protobuf"
     schedule:
@@ -23,6 +27,10 @@ updates:
       timezone: UTC
       time: "07:00"
     open-pull-requests-limit: 50
+    groups:
+      google-protobuf:
+        patterns:
+          - "*"
   - package-ecosystem: "npm"
     directory: "/impl/protobuf-es"
     schedule:
@@ -31,6 +39,10 @@ updates:
       timezone: UTC
       time: "07:00"
     open-pull-requests-limit: 50
+    groups:
+      protobuf-es:
+        patterns:
+          - "*"
   - package-ecosystem: "npm"
     directory: "/impl/protobuf.js"
     schedule:
@@ -39,6 +51,10 @@ updates:
       timezone: UTC
       time: "07:00"
     open-pull-requests-limit: 50
+    groups:
+      protobuf-js:
+        patterns:
+          - "*"
   - package-ecosystem: "npm"
     directory: "/impl/ts-proto"
     schedule:
@@ -47,6 +63,10 @@ updates:
       timezone: UTC
       time: "07:00"
     open-pull-requests-limit: 50
+    groups:
+      ts-proto:
+        patterns:
+          - "*"
   - package-ecosystem: "npm"
     directory: "/impl/protobuf-ts"
     schedule:
@@ -55,3 +75,7 @@ updates:
       timezone: UTC
       time: "07:00"
     open-pull-requests-limit: 50
+    groups:
+      protobuf-ts:
+        patterns:
+          - "*"
