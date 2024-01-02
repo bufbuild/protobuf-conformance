@@ -24,7 +24,7 @@ jobs:
           echo "version=${release_version}" >> $GITHUB_OUTPUT
 
       - name: Upload Protobuf
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: protobuf
           path: ./protobuf.tar.gz
