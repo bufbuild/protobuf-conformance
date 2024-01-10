@@ -9,7 +9,7 @@ MAKEFLAGS += --no-print-directory
 TMP   = .tmp
 BIN   = .tmp/bin
 UNAME_OS := $(shell uname -s)
-LICENSE_HEADER_YEAR_RANGE := 2023
+LICENSE_HEADER_YEAR_RANGE := 2023-2024
 GOOGLE_PROTOBUF_VERSION = 25.1
 
 ifeq ($(UNAME_OS),Darwin)
