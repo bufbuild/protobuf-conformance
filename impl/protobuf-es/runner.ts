@@ -8,7 +8,7 @@ import {
   WireFormat,
 } from "./gen/conformance/conformance_pb.js";
 import { TestAllTypesProto3 } from "./gen/google/protobuf/test_messages_proto3_pb.js";
-import { TestAllTypesProto2 } from "./gen/google/protobuf/test_messages_proto2_pb.js";
+import { extension_int32, TestAllTypesProto2 } from "./gen/google/protobuf/test_messages_proto2_pb.js";
 import { readSync, writeSync } from "fs";
 import {
   Any,
@@ -31,7 +31,8 @@ const registry = createRegistry(
   Int32Value,
   TestAllTypesProto3,
   TestAllTypesProto2,
-  Any
+  Any,
+  extension_int32
 );
 
 function main() {
