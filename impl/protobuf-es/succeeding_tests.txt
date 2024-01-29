@@ -1,2 +1,0 @@
-Required.Proto2.JsonInput.AllFieldAcceptNull.JsonOutput
-Required.Proto2.JsonInput.AllFieldAcceptNull.ProtobufOutput
