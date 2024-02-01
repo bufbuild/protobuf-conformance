@@ -4,7 +4,7 @@
   "type": "module",
   "dependencies": {
     "long": "^5.2.3",
-    "protobufjs": "^7.2.5",
+    "protobufjs": "^7.2.6",
     "protobufjs-cli": "^1.1.2"
   },
   "devDependencies": {
