@@ -4,11 +4,11 @@
   "type": "module",
   "devDependencies": {
     "@bufbuild/buf": "^1.29.0",
-    "@types/node": "^20.11.14",
-    "esbuild": "^0.20.0",
+    "@types/node": "^20.11.24",
+    "esbuild": "^0.20.1",
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "ts-proto": "^1.167.2"
+    "ts-proto": "^1.167.9"
   }
 }
