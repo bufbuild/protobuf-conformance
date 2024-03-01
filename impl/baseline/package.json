@@ -3,13 +3,13 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@bufbuild/protobuf": "^1.7.1",
-    "@bufbuild/protoc-gen-es": "^1.7.1"
+    "@bufbuild/protobuf": "^1.7.2",
+    "@bufbuild/protoc-gen-es": "^1.7.2"
   },
   "devDependencies": {
     "@bufbuild/buf": "^1.29.0",
-    "@types/node": "^20.11.14",
-    "tsx": "^4.7.0",
+    "@types/node": "^20.11.24",
+    "tsx": "^4.7.1",
     "typescript": "^5.3.3"
   }
 }
