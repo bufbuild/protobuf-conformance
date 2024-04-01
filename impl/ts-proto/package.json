@@ -3,12 +3,12 @@
   "private": true,
   "type": "module",
   "devDependencies": {
-    "@bufbuild/buf": "^1.29.0",
-    "@types/node": "^20.11.24",
-    "esbuild": "^0.20.1",
-    "typescript": "^5.3.3"
+    "@bufbuild/buf": "^1.30.0",
+    "@types/node": "^20.12.2",
+    "esbuild": "^0.20.2",
+    "typescript": "^5.4.3"
   },
   "dependencies": {
-    "ts-proto": "^1.167.9"
+    "ts-proto": "^1.171.0"
   }
 }
