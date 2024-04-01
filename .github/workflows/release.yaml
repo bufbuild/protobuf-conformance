@@ -86,7 +86,7 @@ jobs:
           zip -r ../conformance_test_runner-${{ needs.get-protobuf.outputs.version }}-linux-x86_64.zip ./bin ./include
 
       - name: Publish GitHub artifacts
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           generate_release_notes: false
           body: Conformance runner binaries for Protobuf v${{ needs.get-protobuf.outputs.version }}
@@ -151,7 +151,7 @@ jobs:
           zip -r ../conformance_test_runner-${{ needs.get-protobuf.outputs.version }}-osx-x86_64.zip ./bin ./include
 
       - name: Publish GitHub artifacts
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           generate_release_notes: false
           body: Conformance runner binaries for Protobuf v${{ needs.get-protobuf.outputs.version }}
