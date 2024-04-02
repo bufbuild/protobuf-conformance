@@ -50,28 +50,28 @@ export function foreignEnumProto2ToJSON(object: ForeignEnumProto2): string {
  */
 export interface TestAllTypesProto2 {
   /** Singular */
-  optionalInt32: number;
-  optionalInt64: number;
-  optionalUint32: number;
-  optionalUint64: number;
-  optionalSint32: number;
-  optionalSint64: number;
-  optionalFixed32: number;
-  optionalFixed64: number;
-  optionalSfixed32: number;
-  optionalSfixed64: number;
-  optionalFloat: number;
-  optionalDouble: number;
-  optionalBool: boolean;
-  optionalString: string;
-  optionalBytes: Uint8Array;
-  optionalNestedMessage: TestAllTypesProto2_NestedMessage | undefined;
-  optionalForeignMessage: ForeignMessageProto2 | undefined;
-  optionalNestedEnum: TestAllTypesProto2_NestedEnum;
-  optionalForeignEnum: ForeignEnumProto2;
-  optionalStringPiece: string;
-  optionalCord: string;
-  recursiveMessage:
+  optionalInt32?: number | undefined;
+  optionalInt64?: number | undefined;
+  optionalUint32?: number | undefined;
+  optionalUint64?: number | undefined;
+  optionalSint32?: number | undefined;
+  optionalSint64?: number | undefined;
+  optionalFixed32?: number | undefined;
+  optionalFixed64?: number | undefined;
+  optionalSfixed32?: number | undefined;
+  optionalSfixed64?: number | undefined;
+  optionalFloat?: number | undefined;
+  optionalDouble?: number | undefined;
+  optionalBool?: boolean | undefined;
+  optionalString?: string | undefined;
+  optionalBytes?: Uint8Array | undefined;
+  optionalNestedMessage?: TestAllTypesProto2_NestedMessage | undefined;
+  optionalForeignMessage?: ForeignMessageProto2 | undefined;
+  optionalNestedEnum?: TestAllTypesProto2_NestedEnum | undefined;
+  optionalForeignEnum?: ForeignEnumProto2 | undefined;
+  optionalStringPiece?: string | undefined;
+  optionalCord?: string | undefined;
+  recursiveMessage?:
     | TestAllTypesProto2
     | undefined;
   /** Repeated */
@@ -157,47 +157,49 @@ export interface TestAllTypesProto2 {
     | { $case: "oneofDouble"; oneofDouble: number }
     | { $case: "oneofEnum"; oneofEnum: TestAllTypesProto2_NestedEnum }
     | undefined;
-  data:
+  data?:
     | TestAllTypesProto2_Data
     | undefined;
   /** default values */
-  defaultInt32: number;
-  defaultInt64: number;
-  defaultUint32: number;
-  defaultUint64: number;
-  defaultSint32: number;
-  defaultSint64: number;
-  defaultFixed32: number;
-  defaultFixed64: number;
-  defaultSfixed32: number;
-  defaultSfixed64: number;
-  defaultFloat: number;
-  defaultDouble: number;
-  defaultBool: boolean;
-  defaultString: string;
-  defaultBytes: Uint8Array;
+  defaultInt32?: number | undefined;
+  defaultInt64?: number | undefined;
+  defaultUint32?: number | undefined;
+  defaultUint64?: number | undefined;
+  defaultSint32?: number | undefined;
+  defaultSint64?: number | undefined;
+  defaultFixed32?: number | undefined;
+  defaultFixed64?: number | undefined;
+  defaultSfixed32?: number | undefined;
+  defaultSfixed64?: number | undefined;
+  defaultFloat?: number | undefined;
+  defaultDouble?: number | undefined;
+  defaultBool?: boolean | undefined;
+  defaultString?: string | undefined;
+  defaultBytes?:
+    | Uint8Array
+    | undefined;
   /**
    * Test field-name-to-JSON-name convention.
    * (protobuf says names can be any valid C/C++ identifier.)
    */
-  fieldname1: number;
-  fieldName2: number;
-  FieldName3: number;
-  fieldName4: number;
-  field0name5: number;
-  field0Name6: number;
-  fieldName7: number;
-  FieldName8: number;
-  fieldName9: number;
-  FieldName10: number;
-  fieldName11: number;
-  FIELDName12: number;
-  FieldName13: number;
-  FieldName14: number;
-  fieldName15: number;
-  fieldName16: number;
-  fieldName17: number;
-  FieldName18: number;
+  fieldname1?: number | undefined;
+  fieldName2?: number | undefined;
+  FieldName3?: number | undefined;
+  fieldName4?: number | undefined;
+  field0name5?: number | undefined;
+  field0Name6?: number | undefined;
+  fieldName7?: number | undefined;
+  FieldName8?: number | undefined;
+  fieldName9?: number | undefined;
+  FieldName10?: number | undefined;
+  fieldName11?: number | undefined;
+  FIELDName12?: number | undefined;
+  FieldName13?: number | undefined;
+  FieldName14?: number | undefined;
+  fieldName15?: number | undefined;
+  fieldName16?: number | undefined;
+  fieldName17?: number | undefined;
+  FieldName18?: number | undefined;
 }
 
 export enum TestAllTypesProto2_NestedEnum {
@@ -243,8 +245,8 @@ export function testAllTypesProto2_NestedEnumToJSON(object: TestAllTypesProto2_N
 }
 
 export interface TestAllTypesProto2_NestedMessage {
-  a: number;
-  corecursive: TestAllTypesProto2 | undefined;
+  a?: number | undefined;
+  corecursive?: TestAllTypesProto2 | undefined;
 }
 
 export interface TestAllTypesProto2_MapInt32Int32Entry {
@@ -344,8 +346,8 @@ export interface TestAllTypesProto2_MapStringForeignEnumEntry {
 
 /** groups */
 export interface TestAllTypesProto2_Data {
-  groupInt32: number;
-  groupUint32: number;
+  groupInt32?: number | undefined;
+  groupUint32?: number | undefined;
 }
 
 /** message_set test case. */
@@ -353,28 +355,28 @@ export interface TestAllTypesProto2_MessageSetCorrect {
 }
 
 export interface TestAllTypesProto2_MessageSetCorrectExtension1 {
-  str: string;
+  str?: string | undefined;
 }
 
 export interface TestAllTypesProto2_MessageSetCorrectExtension2 {
-  i: number;
+  i?: number | undefined;
 }
 
 export interface ForeignMessageProto2 {
-  c: number;
+  c?: number | undefined;
 }
 
 export interface UnknownToTestAllTypes {
-  optionalInt32: number;
-  optionalString: string;
-  nestedMessage: ForeignMessageProto2 | undefined;
-  optionalgroup: UnknownToTestAllTypes_OptionalGroup | undefined;
-  optionalBool: boolean;
+  optionalInt32?: number | undefined;
+  optionalString?: string | undefined;
+  nestedMessage?: ForeignMessageProto2 | undefined;
+  optionalgroup?: UnknownToTestAllTypes_OptionalGroup | undefined;
+  optionalBool?: boolean | undefined;
   repeatedInt32: number[];
 }
 
 export interface UnknownToTestAllTypes_OptionalGroup {
-  a: number;
+  a?: number | undefined;
 }
 
 export interface NullHypothesisProto2 {
@@ -413,12 +415,12 @@ export function enumOnlyProto2_BoolToJSON(object: EnumOnlyProto2_Bool): string {
 }
 
 export interface OneStringProto2 {
-  data: string;
+  data?: string | undefined;
 }
 
 export interface ProtoWithKeywords {
-  inline: number;
-  concept: string;
+  inline?: number | undefined;
+  concept?: string | undefined;
   requires: string[];
 }
 
@@ -446,7 +448,7 @@ export interface TestAllRequiredTypesProto2 {
   requiredStringPiece: string;
   requiredCord: string;
   recursiveMessage: TestAllRequiredTypesProto2 | undefined;
-  optionalRecursiveMessage: TestAllRequiredTypesProto2 | undefined;
+  optionalRecursiveMessage?: TestAllRequiredTypesProto2 | undefined;
   data:
     | TestAllRequiredTypesProto2_Data
     | undefined;
@@ -517,7 +519,7 @@ export function testAllRequiredTypesProto2_NestedEnumToJSON(object: TestAllRequi
 export interface TestAllRequiredTypesProto2_NestedMessage {
   a: number;
   corecursive: TestAllRequiredTypesProto2 | undefined;
-  optionalCorecursive: TestAllRequiredTypesProto2 | undefined;
+  optionalCorecursive?: TestAllRequiredTypesProto2 | undefined;
 }
 
 /** groups */
@@ -632,20 +634,20 @@ function createBaseTestAllTypesProto2(): TestAllTypesProto2 {
     mapStringForeignEnum: new Map(),
     oneofField: undefined,
     data: undefined,
-    defaultInt32: 0,
-    defaultInt64: 0,
-    defaultUint32: 0,
-    defaultUint64: 0,
-    defaultSint32: 0,
-    defaultSint64: 0,
-    defaultFixed32: 0,
-    defaultFixed64: 0,
-    defaultSfixed32: 0,
-    defaultSfixed64: 0,
-    defaultFloat: 0,
-    defaultDouble: 0,
-    defaultBool: false,
-    defaultString: "",
+    defaultInt32: -123456789,
+    defaultInt64: -9123456789123456789,
+    defaultUint32: 2123456789,
+    defaultUint64: 10123456789123456789,
+    defaultSint32: -123456789,
+    defaultSint64: -9123456789123456789,
+    defaultFixed32: 2123456789,
+    defaultFixed64: 10123456789123456789,
+    defaultSfixed32: -123456789,
+    defaultSfixed64: -9123456789123456789,
+    defaultFloat: 9e+09,
+    defaultDouble: 7e+22,
+    defaultBool: true,
+    defaultString: "Rosebud",
     defaultBytes: new Uint8Array(0),
     fieldname1: 0,
     fieldName2: 0,
@@ -670,49 +672,49 @@ function createBaseTestAllTypesProto2(): TestAllTypesProto2 {
 
 export const TestAllTypesProto2 = {
   encode(message: TestAllTypesProto2, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
-    if (message.optionalInt32 !== 0) {
+    if (message.optionalInt32 !== undefined && message.optionalInt32 !== 0) {
       writer.uint32(8).int32(message.optionalInt32);
     }
-    if (message.optionalInt64 !== 0) {
+    if (message.optionalInt64 !== undefined && message.optionalInt64 !== 0) {
       writer.uint32(16).int64(message.optionalInt64);
     }
-    if (message.optionalUint32 !== 0) {
+    if (message.optionalUint32 !== undefined && message.optionalUint32 !== 0) {
       writer.uint32(24).uint32(message.optionalUint32);
     }
-    if (message.optionalUint64 !== 0) {
+    if (message.optionalUint64 !== undefined && message.optionalUint64 !== 0) {
       writer.uint32(32).uint64(message.optionalUint64);
     }
-    if (message.optionalSint32 !== 0) {
+    if (message.optionalSint32 !== undefined && message.optionalSint32 !== 0) {
       writer.uint32(40).sint32(message.optionalSint32);
     }
-    if (message.optionalSint64 !== 0) {
+    if (message.optionalSint64 !== undefined && message.optionalSint64 !== 0) {
       writer.uint32(48).sint64(message.optionalSint64);
     }
-    if (message.optionalFixed32 !== 0) {
+    if (message.optionalFixed32 !== undefined && message.optionalFixed32 !== 0) {
       writer.uint32(61).fixed32(message.optionalFixed32);
     }
-    if (message.optionalFixed64 !== 0) {
+    if (message.optionalFixed64 !== undefined && message.optionalFixed64 !== 0) {
       writer.uint32(65).fixed64(message.optionalFixed64);
     }
-    if (message.optionalSfixed32 !== 0) {
+    if (message.optionalSfixed32 !== undefined && message.optionalSfixed32 !== 0) {
       writer.uint32(77).sfixed32(message.optionalSfixed32);
     }
-    if (message.optionalSfixed64 !== 0) {
+    if (message.optionalSfixed64 !== undefined && message.optionalSfixed64 !== 0) {
       writer.uint32(81).sfixed64(message.optionalSfixed64);
     }
-    if (message.optionalFloat !== 0) {
+    if (message.optionalFloat !== undefined && message.optionalFloat !== 0) {
       writer.uint32(93).float(message.optionalFloat);
     }
-    if (message.optionalDouble !== 0) {
+    if (message.optionalDouble !== undefined && message.optionalDouble !== 0) {
       writer.uint32(97).double(message.optionalDouble);
     }
-    if (message.optionalBool === true) {
+    if (message.optionalBool !== undefined && message.optionalBool !== false) {
       writer.uint32(104).bool(message.optionalBool);
     }
-    if (message.optionalString !== "") {
+    if (message.optionalString !== undefined && message.optionalString !== "") {
       writer.uint32(114).string(message.optionalString);
     }
-    if (message.optionalBytes.length !== 0) {
+    if (message.optionalBytes !== undefined && message.optionalBytes.length !== 0) {
       writer.uint32(122).bytes(message.optionalBytes);
     }
     if (message.optionalNestedMessage !== undefined) {
@@ -721,16 +723,16 @@ export const TestAllTypesProto2 = {
     if (message.optionalForeignMessage !== undefined) {
       ForeignMessageProto2.encode(message.optionalForeignMessage, writer.uint32(154).fork()).ldelim();
     }
-    if (message.optionalNestedEnum !== 0) {
+    if (message.optionalNestedEnum !== undefined && message.optionalNestedEnum !== 0) {
       writer.uint32(168).int32(message.optionalNestedEnum);
     }
-    if (message.optionalForeignEnum !== 0) {
+    if (message.optionalForeignEnum !== undefined && message.optionalForeignEnum !== 0) {
       writer.uint32(176).int32(message.optionalForeignEnum);
     }
-    if (message.optionalStringPiece !== "") {
+    if (message.optionalStringPiece !== undefined && message.optionalStringPiece !== "") {
       writer.uint32(194).string(message.optionalStringPiece);
     }
-    if (message.optionalCord !== "") {
+    if (message.optionalCord !== undefined && message.optionalCord !== "") {
       writer.uint32(202).string(message.optionalCord);
     }
     if (message.recursiveMessage !== undefined) {
@@ -1065,103 +1067,103 @@ export const TestAllTypesProto2 = {
     if (message.data !== undefined) {
       TestAllTypesProto2_Data.encode(message.data, writer.uint32(1611)).uint32(1612);
     }
-    if (message.defaultInt32 !== 0) {
+    if (message.defaultInt32 !== undefined && message.defaultInt32 !== -123456789) {
       writer.uint32(1928).int32(message.defaultInt32);
     }
-    if (message.defaultInt64 !== 0) {
+    if (message.defaultInt64 !== undefined && message.defaultInt64 !== -9123456789123456789) {
       writer.uint32(1936).int64(message.defaultInt64);
     }
-    if (message.defaultUint32 !== 0) {
+    if (message.defaultUint32 !== undefined && message.defaultUint32 !== 2123456789) {
       writer.uint32(1944).uint32(message.defaultUint32);
     }
-    if (message.defaultUint64 !== 0) {
+    if (message.defaultUint64 !== undefined && message.defaultUint64 !== 10123456789123456789) {
       writer.uint32(1952).uint64(message.defaultUint64);
     }
-    if (message.defaultSint32 !== 0) {
+    if (message.defaultSint32 !== undefined && message.defaultSint32 !== -123456789) {
       writer.uint32(1960).sint32(message.defaultSint32);
     }
-    if (message.defaultSint64 !== 0) {
+    if (message.defaultSint64 !== undefined && message.defaultSint64 !== -9123456789123456789) {
       writer.uint32(1968).sint64(message.defaultSint64);
     }
-    if (message.defaultFixed32 !== 0) {
+    if (message.defaultFixed32 !== undefined && message.defaultFixed32 !== 2123456789) {
       writer.uint32(1981).fixed32(message.defaultFixed32);
     }
-    if (message.defaultFixed64 !== 0) {
+    if (message.defaultFixed64 !== undefined && message.defaultFixed64 !== 10123456789123456789) {
       writer.uint32(1985).fixed64(message.defaultFixed64);
     }
-    if (message.defaultSfixed32 !== 0) {
+    if (message.defaultSfixed32 !== undefined && message.defaultSfixed32 !== -123456789) {
       writer.uint32(1997).sfixed32(message.defaultSfixed32);
     }
-    if (message.defaultSfixed64 !== 0) {
+    if (message.defaultSfixed64 !== undefined && message.defaultSfixed64 !== -9123456789123456789) {
       writer.uint32(2001).sfixed64(message.defaultSfixed64);
     }
-    if (message.defaultFloat !== 0) {
+    if (message.defaultFloat !== undefined && message.defaultFloat !== 9e+09) {
       writer.uint32(2013).float(message.defaultFloat);
     }
-    if (message.defaultDouble !== 0) {
+    if (message.defaultDouble !== undefined && message.defaultDouble !== 7e+22) {
       writer.uint32(2017).double(message.defaultDouble);
     }
-    if (message.defaultBool === true) {
+    if (message.defaultBool !== undefined && message.defaultBool !== true) {
       writer.uint32(2024).bool(message.defaultBool);
     }
-    if (message.defaultString !== "") {
+    if (message.defaultString !== undefined && message.defaultString !== "Rosebud") {
       writer.uint32(2034).string(message.defaultString);
     }
-    if (message.defaultBytes.length !== 0) {
+    if (message.defaultBytes !== undefined && message.defaultBytes.length !== 0) {
       writer.uint32(2042).bytes(message.defaultBytes);
     }
-    if (message.fieldname1 !== 0) {
+    if (message.fieldname1 !== undefined && message.fieldname1 !== 0) {
       writer.uint32(3208).int32(message.fieldname1);
     }
-    if (message.fieldName2 !== 0) {
+    if (message.fieldName2 !== undefined && message.fieldName2 !== 0) {
       writer.uint32(3216).int32(message.fieldName2);
     }
-    if (message.FieldName3 !== 0) {
+    if (message.FieldName3 !== undefined && message.FieldName3 !== 0) {
       writer.uint32(3224).int32(message.FieldName3);
     }
-    if (message.fieldName4 !== 0) {
+    if (message.fieldName4 !== undefined && message.fieldName4 !== 0) {
       writer.uint32(3232).int32(message.fieldName4);
     }
-    if (message.field0name5 !== 0) {
+    if (message.field0name5 !== undefined && message.field0name5 !== 0) {
       writer.uint32(3240).int32(message.field0name5);
     }
-    if (message.field0Name6 !== 0) {
+    if (message.field0Name6 !== undefined && message.field0Name6 !== 0) {
       writer.uint32(3248).int32(message.field0Name6);
     }
-    if (message.fieldName7 !== 0) {
+    if (message.fieldName7 !== undefined && message.fieldName7 !== 0) {
       writer.uint32(3256).int32(message.fieldName7);
     }
-    if (message.FieldName8 !== 0) {
+    if (message.FieldName8 !== undefined && message.FieldName8 !== 0) {
       writer.uint32(3264).int32(message.FieldName8);
     }
-    if (message.fieldName9 !== 0) {
+    if (message.fieldName9 !== undefined && message.fieldName9 !== 0) {
       writer.uint32(3272).int32(message.fieldName9);
     }
-    if (message.FieldName10 !== 0) {
+    if (message.FieldName10 !== undefined && message.FieldName10 !== 0) {
       writer.uint32(3280).int32(message.FieldName10);
     }
-    if (message.fieldName11 !== 0) {
+    if (message.fieldName11 !== undefined && message.fieldName11 !== 0) {
       writer.uint32(3288).int32(message.fieldName11);
     }
-    if (message.FIELDName12 !== 0) {
+    if (message.FIELDName12 !== undefined && message.FIELDName12 !== 0) {
       writer.uint32(3296).int32(message.FIELDName12);
     }
-    if (message.FieldName13 !== 0) {
+    if (message.FieldName13 !== undefined && message.FieldName13 !== 0) {
       writer.uint32(3304).int32(message.FieldName13);
     }
-    if (message.FieldName14 !== 0) {
+    if (message.FieldName14 !== undefined && message.FieldName14 !== 0) {
       writer.uint32(3312).int32(message.FieldName14);
     }
-    if (message.fieldName15 !== 0) {
+    if (message.fieldName15 !== undefined && message.fieldName15 !== 0) {
       writer.uint32(3320).int32(message.fieldName15);
     }
-    if (message.fieldName16 !== 0) {
+    if (message.fieldName16 !== undefined && message.fieldName16 !== 0) {
       writer.uint32(3328).int32(message.fieldName16);
     }
-    if (message.fieldName17 !== 0) {
+    if (message.fieldName17 !== undefined && message.fieldName17 !== 0) {
       writer.uint32(3336).int32(message.fieldName17);
     }
-    if (message.FieldName18 !== 0) {
+    if (message.FieldName18 !== undefined && message.FieldName18 !== 0) {
       writer.uint32(3344).int32(message.FieldName18);
     }
     return writer;
@@ -2931,20 +2933,20 @@ export const TestAllTypesProto2 = {
         ? { $case: "oneofEnum", oneofEnum: testAllTypesProto2_NestedEnumFromJSON(object.oneofEnum) }
         : undefined,
       data: isSet(object.data) ? TestAllTypesProto2_Data.fromJSON(object.data) : undefined,
-      defaultInt32: isSet(object.defaultInt32) ? globalThis.Number(object.defaultInt32) : 0,
-      defaultInt64: isSet(object.defaultInt64) ? globalThis.Number(object.defaultInt64) : 0,
-      defaultUint32: isSet(object.defaultUint32) ? globalThis.Number(object.defaultUint32) : 0,
-      defaultUint64: isSet(object.defaultUint64) ? globalThis.Number(object.defaultUint64) : 0,
-      defaultSint32: isSet(object.defaultSint32) ? globalThis.Number(object.defaultSint32) : 0,
-      defaultSint64: isSet(object.defaultSint64) ? globalThis.Number(object.defaultSint64) : 0,
-      defaultFixed32: isSet(object.defaultFixed32) ? globalThis.Number(object.defaultFixed32) : 0,
-      defaultFixed64: isSet(object.defaultFixed64) ? globalThis.Number(object.defaultFixed64) : 0,
-      defaultSfixed32: isSet(object.defaultSfixed32) ? globalThis.Number(object.defaultSfixed32) : 0,
-      defaultSfixed64: isSet(object.defaultSfixed64) ? globalThis.Number(object.defaultSfixed64) : 0,
-      defaultFloat: isSet(object.defaultFloat) ? globalThis.Number(object.defaultFloat) : 0,
-      defaultDouble: isSet(object.defaultDouble) ? globalThis.Number(object.defaultDouble) : 0,
-      defaultBool: isSet(object.defaultBool) ? globalThis.Boolean(object.defaultBool) : false,
-      defaultString: isSet(object.defaultString) ? globalThis.String(object.defaultString) : "",
+      defaultInt32: isSet(object.defaultInt32) ? globalThis.Number(object.defaultInt32) : -123456789,
+      defaultInt64: isSet(object.defaultInt64) ? globalThis.Number(object.defaultInt64) : -9123456789123456789,
+      defaultUint32: isSet(object.defaultUint32) ? globalThis.Number(object.defaultUint32) : 2123456789,
+      defaultUint64: isSet(object.defaultUint64) ? globalThis.Number(object.defaultUint64) : 10123456789123456789,
+      defaultSint32: isSet(object.defaultSint32) ? globalThis.Number(object.defaultSint32) : -123456789,
+      defaultSint64: isSet(object.defaultSint64) ? globalThis.Number(object.defaultSint64) : -9123456789123456789,
+      defaultFixed32: isSet(object.defaultFixed32) ? globalThis.Number(object.defaultFixed32) : 2123456789,
+      defaultFixed64: isSet(object.defaultFixed64) ? globalThis.Number(object.defaultFixed64) : 10123456789123456789,
+      defaultSfixed32: isSet(object.defaultSfixed32) ? globalThis.Number(object.defaultSfixed32) : -123456789,
+      defaultSfixed64: isSet(object.defaultSfixed64) ? globalThis.Number(object.defaultSfixed64) : -9123456789123456789,
+      defaultFloat: isSet(object.defaultFloat) ? globalThis.Number(object.defaultFloat) : 9e+09,
+      defaultDouble: isSet(object.defaultDouble) ? globalThis.Number(object.defaultDouble) : 7e+22,
+      defaultBool: isSet(object.defaultBool) ? globalThis.Boolean(object.defaultBool) : true,
+      defaultString: isSet(object.defaultString) ? globalThis.String(object.defaultString) : "Rosebud",
       defaultBytes: isSet(object.defaultBytes) ? bytesFromBase64(object.defaultBytes) : new Uint8Array(0),
       fieldname1: isSet(object.fieldname1) ? globalThis.Number(object.fieldname1) : 0,
       fieldName2: isSet(object.fieldName2) ? globalThis.Number(object.fieldName2) : 0,
@@ -2969,49 +2971,49 @@ export const TestAllTypesProto2 = {
 
   toJSON(message: TestAllTypesProto2): unknown {
     const obj: any = {};
-    if (message.optionalInt32 !== 0) {
+    if (message.optionalInt32 !== undefined && message.optionalInt32 !== 0) {
       obj.optionalInt32 = Math.round(message.optionalInt32);
     }
-    if (message.optionalInt64 !== 0) {
+    if (message.optionalInt64 !== undefined && message.optionalInt64 !== 0) {
       obj.optionalInt64 = Math.round(message.optionalInt64);
     }
-    if (message.optionalUint32 !== 0) {
+    if (message.optionalUint32 !== undefined && message.optionalUint32 !== 0) {
       obj.optionalUint32 = Math.round(message.optionalUint32);
     }
-    if (message.optionalUint64 !== 0) {
+    if (message.optionalUint64 !== undefined && message.optionalUint64 !== 0) {
       obj.optionalUint64 = Math.round(message.optionalUint64);
     }
-    if (message.optionalSint32 !== 0) {
+    if (message.optionalSint32 !== undefined && message.optionalSint32 !== 0) {
       obj.optionalSint32 = Math.round(message.optionalSint32);
     }
-    if (message.optionalSint64 !== 0) {
+    if (message.optionalSint64 !== undefined && message.optionalSint64 !== 0) {
       obj.optionalSint64 = Math.round(message.optionalSint64);
     }
-    if (message.optionalFixed32 !== 0) {
+    if (message.optionalFixed32 !== undefined && message.optionalFixed32 !== 0) {
       obj.optionalFixed32 = Math.round(message.optionalFixed32);
     }
-    if (message.optionalFixed64 !== 0) {
+    if (message.optionalFixed64 !== undefined && message.optionalFixed64 !== 0) {
       obj.optionalFixed64 = Math.round(message.optionalFixed64);
     }
-    if (message.optionalSfixed32 !== 0) {
+    if (message.optionalSfixed32 !== undefined && message.optionalSfixed32 !== 0) {
       obj.optionalSfixed32 = Math.round(message.optionalSfixed32);
     }
-    if (message.optionalSfixed64 !== 0) {
+    if (message.optionalSfixed64 !== undefined && message.optionalSfixed64 !== 0) {
       obj.optionalSfixed64 = Math.round(message.optionalSfixed64);
     }
-    if (message.optionalFloat !== 0) {
+    if (message.optionalFloat !== undefined && message.optionalFloat !== 0) {
       obj.optionalFloat = message.optionalFloat;
     }
-    if (message.optionalDouble !== 0) {
+    if (message.optionalDouble !== undefined && message.optionalDouble !== 0) {
       obj.optionalDouble = message.optionalDouble;
     }
-    if (message.optionalBool === true) {
+    if (message.optionalBool !== undefined && message.optionalBool !== false) {
       obj.optionalBool = message.optionalBool;
     }
-    if (message.optionalString !== "") {
+    if (message.optionalString !== undefined && message.optionalString !== "") {
       obj.optionalString = message.optionalString;
     }
-    if (message.optionalBytes.length !== 0) {
+    if (message.optionalBytes !== undefined && message.optionalBytes.length !== 0) {
       obj.optionalBytes = base64FromBytes(message.optionalBytes);
     }
     if (message.optionalNestedMessage !== undefined) {
@@ -3020,16 +3022,16 @@ export const TestAllTypesProto2 = {
     if (message.optionalForeignMessage !== undefined) {
       obj.optionalForeignMessage = ForeignMessageProto2.toJSON(message.optionalForeignMessage);
     }
-    if (message.optionalNestedEnum !== 0) {
+    if (message.optionalNestedEnum !== undefined && message.optionalNestedEnum !== 0) {
       obj.optionalNestedEnum = testAllTypesProto2_NestedEnumToJSON(message.optionalNestedEnum);
     }
-    if (message.optionalForeignEnum !== 0) {
+    if (message.optionalForeignEnum !== undefined && message.optionalForeignEnum !== 0) {
       obj.optionalForeignEnum = foreignEnumProto2ToJSON(message.optionalForeignEnum);
     }
-    if (message.optionalStringPiece !== "") {
+    if (message.optionalStringPiece !== undefined && message.optionalStringPiece !== "") {
       obj.optionalStringPiece = message.optionalStringPiece;
     }
-    if (message.optionalCord !== "") {
+    if (message.optionalCord !== undefined && message.optionalCord !== "") {
       obj.optionalCord = message.optionalCord;
     }
     if (message.recursiveMessage !== undefined) {
@@ -3326,103 +3328,103 @@ export const TestAllTypesProto2 = {
     if (message.data !== undefined) {
       obj.data = TestAllTypesProto2_Data.toJSON(message.data);
     }
-    if (message.defaultInt32 !== 0) {
+    if (message.defaultInt32 !== undefined && message.defaultInt32 !== -123456789) {
       obj.defaultInt32 = Math.round(message.defaultInt32);
     }
-    if (message.defaultInt64 !== 0) {
+    if (message.defaultInt64 !== undefined && message.defaultInt64 !== -9123456789123456789) {
       obj.defaultInt64 = Math.round(message.defaultInt64);
     }
-    if (message.defaultUint32 !== 0) {
+    if (message.defaultUint32 !== undefined && message.defaultUint32 !== 2123456789) {
       obj.defaultUint32 = Math.round(message.defaultUint32);
     }
-    if (message.defaultUint64 !== 0) {
+    if (message.defaultUint64 !== undefined && message.defaultUint64 !== 10123456789123456789) {
       obj.defaultUint64 = Math.round(message.defaultUint64);
     }
-    if (message.defaultSint32 !== 0) {
+    if (message.defaultSint32 !== undefined && message.defaultSint32 !== -123456789) {
       obj.defaultSint32 = Math.round(message.defaultSint32);
     }
-    if (message.defaultSint64 !== 0) {
+    if (message.defaultSint64 !== undefined && message.defaultSint64 !== -9123456789123456789) {
       obj.defaultSint64 = Math.round(message.defaultSint64);
     }
-    if (message.defaultFixed32 !== 0) {
+    if (message.defaultFixed32 !== undefined && message.defaultFixed32 !== 2123456789) {
       obj.defaultFixed32 = Math.round(message.defaultFixed32);
     }
-    if (message.defaultFixed64 !== 0) {
+    if (message.defaultFixed64 !== undefined && message.defaultFixed64 !== 10123456789123456789) {
       obj.defaultFixed64 = Math.round(message.defaultFixed64);
     }
-    if (message.defaultSfixed32 !== 0) {
+    if (message.defaultSfixed32 !== undefined && message.defaultSfixed32 !== -123456789) {
       obj.defaultSfixed32 = Math.round(message.defaultSfixed32);
     }
-    if (message.defaultSfixed64 !== 0) {
+    if (message.defaultSfixed64 !== undefined && message.defaultSfixed64 !== -9123456789123456789) {
       obj.defaultSfixed64 = Math.round(message.defaultSfixed64);
     }
-    if (message.defaultFloat !== 0) {
+    if (message.defaultFloat !== undefined && message.defaultFloat !== 9e+09) {
       obj.defaultFloat = message.defaultFloat;
     }
-    if (message.defaultDouble !== 0) {
+    if (message.defaultDouble !== undefined && message.defaultDouble !== 7e+22) {
       obj.defaultDouble = message.defaultDouble;
     }
-    if (message.defaultBool === true) {
+    if (message.defaultBool !== undefined && message.defaultBool !== true) {
       obj.defaultBool = message.defaultBool;
     }
-    if (message.defaultString !== "") {
+    if (message.defaultString !== undefined && message.defaultString !== "Rosebud") {
       obj.defaultString = message.defaultString;
     }
-    if (message.defaultBytes.length !== 0) {
+    if (message.defaultBytes !== undefined && message.defaultBytes.length !== 0) {
       obj.defaultBytes = base64FromBytes(message.defaultBytes);
     }
-    if (message.fieldname1 !== 0) {
+    if (message.fieldname1 !== undefined && message.fieldname1 !== 0) {
       obj.fieldname1 = Math.round(message.fieldname1);
     }
-    if (message.fieldName2 !== 0) {
+    if (message.fieldName2 !== undefined && message.fieldName2 !== 0) {
       obj.fieldName2 = Math.round(message.fieldName2);
     }
-    if (message.FieldName3 !== 0) {
+    if (message.FieldName3 !== undefined && message.FieldName3 !== 0) {
       obj.FieldName3 = Math.round(message.FieldName3);
     }
-    if (message.fieldName4 !== 0) {
+    if (message.fieldName4 !== undefined && message.fieldName4 !== 0) {
       obj.fieldName4 = Math.round(message.fieldName4);
     }
-    if (message.field0name5 !== 0) {
+    if (message.field0name5 !== undefined && message.field0name5 !== 0) {
       obj.field0name5 = Math.round(message.field0name5);
     }
-    if (message.field0Name6 !== 0) {
+    if (message.field0Name6 !== undefined && message.field0Name6 !== 0) {
       obj.field0Name6 = Math.round(message.field0Name6);
     }
-    if (message.fieldName7 !== 0) {
+    if (message.fieldName7 !== undefined && message.fieldName7 !== 0) {
       obj.fieldName7 = Math.round(message.fieldName7);
     }
-    if (message.FieldName8 !== 0) {
+    if (message.FieldName8 !== undefined && message.FieldName8 !== 0) {
       obj.FieldName8 = Math.round(message.FieldName8);
     }
-    if (message.fieldName9 !== 0) {
+    if (message.fieldName9 !== undefined && message.fieldName9 !== 0) {
       obj.fieldName9 = Math.round(message.fieldName9);
     }
-    if (message.FieldName10 !== 0) {
+    if (message.FieldName10 !== undefined && message.FieldName10 !== 0) {
       obj.FieldName10 = Math.round(message.FieldName10);
     }
-    if (message.fieldName11 !== 0) {
+    if (message.fieldName11 !== undefined && message.fieldName11 !== 0) {
       obj.FIELDNAME11 = Math.round(message.fieldName11);
     }
-    if (message.FIELDName12 !== 0) {
+    if (message.FIELDName12 !== undefined && message.FIELDName12 !== 0) {
       obj.FIELDName12 = Math.round(message.FIELDName12);
     }
-    if (message.FieldName13 !== 0) {
+    if (message.FieldName13 !== undefined && message.FieldName13 !== 0) {
       obj.FieldName13 = Math.round(message.FieldName13);
     }
-    if (message.FieldName14 !== 0) {
+    if (message.FieldName14 !== undefined && message.FieldName14 !== 0) {
       obj.FieldName14 = Math.round(message.FieldName14);
     }
-    if (message.fieldName15 !== 0) {
+    if (message.fieldName15 !== undefined && message.fieldName15 !== 0) {
       obj.fieldName15 = Math.round(message.fieldName15);
     }
-    if (message.fieldName16 !== 0) {
+    if (message.fieldName16 !== undefined && message.fieldName16 !== 0) {
       obj.fieldName16 = Math.round(message.fieldName16);
     }
-    if (message.fieldName17 !== 0) {
+    if (message.fieldName17 !== undefined && message.fieldName17 !== 0) {
       obj.fieldName17 = Math.round(message.fieldName17);
     }
-    if (message.FieldName18 !== 0) {
+    if (message.FieldName18 !== undefined && message.FieldName18 !== 0) {
       obj.FieldName18 = Math.round(message.FieldName18);
     }
     return obj;
@@ -3756,20 +3758,20 @@ export const TestAllTypesProto2 = {
     message.data = (object.data !== undefined && object.data !== null)
       ? TestAllTypesProto2_Data.fromPartial(object.data)
       : undefined;
-    message.defaultInt32 = object.defaultInt32 ?? 0;
-    message.defaultInt64 = object.defaultInt64 ?? 0;
-    message.defaultUint32 = object.defaultUint32 ?? 0;
-    message.defaultUint64 = object.defaultUint64 ?? 0;
-    message.defaultSint32 = object.defaultSint32 ?? 0;
-    message.defaultSint64 = object.defaultSint64 ?? 0;
-    message.defaultFixed32 = object.defaultFixed32 ?? 0;
-    message.defaultFixed64 = object.defaultFixed64 ?? 0;
-    message.defaultSfixed32 = object.defaultSfixed32 ?? 0;
-    message.defaultSfixed64 = object.defaultSfixed64 ?? 0;
-    message.defaultFloat = object.defaultFloat ?? 0;
-    message.defaultDouble = object.defaultDouble ?? 0;
-    message.defaultBool = object.defaultBool ?? false;
-    message.defaultString = object.defaultString ?? "";
+    message.defaultInt32 = object.defaultInt32 ?? -123456789;
+    message.defaultInt64 = object.defaultInt64 ?? -9123456789123456789;
+    message.defaultUint32 = object.defaultUint32 ?? 2123456789;
+    message.defaultUint64 = object.defaultUint64 ?? 10123456789123456789;
+    message.defaultSint32 = object.defaultSint32 ?? -123456789;
+    message.defaultSint64 = object.defaultSint64 ?? -9123456789123456789;
+    message.defaultFixed32 = object.defaultFixed32 ?? 2123456789;
+    message.defaultFixed64 = object.defaultFixed64 ?? 10123456789123456789;
+    message.defaultSfixed32 = object.defaultSfixed32 ?? -123456789;
+    message.defaultSfixed64 = object.defaultSfixed64 ?? -9123456789123456789;
+    message.defaultFloat = object.defaultFloat ?? 9e+09;
+    message.defaultDouble = object.defaultDouble ?? 7e+22;
+    message.defaultBool = object.defaultBool ?? true;
+    message.defaultString = object.defaultString ?? "Rosebud";
     message.defaultBytes = object.defaultBytes ?? new Uint8Array(0);
     message.fieldname1 = object.fieldname1 ?? 0;
     message.fieldName2 = object.fieldName2 ?? 0;
@@ -3799,7 +3801,7 @@ function createBaseTestAllTypesProto2_NestedMessage(): TestAllTypesProto2_Nested
 
 export const TestAllTypesProto2_NestedMessage = {
   encode(message: TestAllTypesProto2_NestedMessage, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
-    if (message.a !== 0) {
+    if (message.a !== undefined && message.a !== 0) {
       writer.uint32(8).int32(message.a);
     }
     if (message.corecursive !== undefined) {
@@ -3847,7 +3849,7 @@ export const TestAllTypesProto2_NestedMessage = {
 
   toJSON(message: TestAllTypesProto2_NestedMessage): unknown {
     const obj: any = {};
-    if (message.a !== 0) {
+    if (message.a !== undefined && message.a !== 0) {
       obj.a = Math.round(message.a);
     }
     if (message.corecursive !== undefined) {
@@ -4815,10 +4817,10 @@ function createBaseTestAllTypesProto2_MapBoolBoolEntry(): TestAllTypesProto2_Map
 
 export const TestAllTypesProto2_MapBoolBoolEntry = {
   encode(message: TestAllTypesProto2_MapBoolBoolEntry, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
-    if (message.key === true) {
+    if (message.key !== false) {
       writer.uint32(8).bool(message.key);
     }
-    if (message.value === true) {
+    if (message.value !== false) {
       writer.uint32(16).bool(message.value);
     }
     return writer;
@@ -4863,10 +4865,10 @@ export const TestAllTypesProto2_MapBoolBoolEntry = {
 
   toJSON(message: TestAllTypesProto2_MapBoolBoolEntry): unknown {
     const obj: any = {};
-    if (message.key === true) {
+    if (message.key !== false) {
       obj.key = message.key;
     }
-    if (message.value === true) {
+    if (message.value !== false) {
       obj.value = message.value;
     }
     return obj;
@@ -5371,10 +5373,10 @@ function createBaseTestAllTypesProto2_Data(): TestAllTypesProto2_Data {
 
 export const TestAllTypesProto2_Data = {
   encode(message: TestAllTypesProto2_Data, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
-    if (message.groupInt32 !== 0) {
+    if (message.groupInt32 !== undefined && message.groupInt32 !== 0) {
       writer.uint32(1616).int32(message.groupInt32);
     }
-    if (message.groupUint32 !== 0) {
+    if (message.groupUint32 !== undefined && message.groupUint32 !== 0) {
       writer.uint32(1624).uint32(message.groupUint32);
     }
     return writer;
@@ -5419,10 +5421,10 @@ export const TestAllTypesProto2_Data = {
 
   toJSON(message: TestAllTypesProto2_Data): unknown {
     const obj: any = {};
-    if (message.groupInt32 !== 0) {
+    if (message.groupInt32 !== undefined && message.groupInt32 !== 0) {
       obj.groupInt32 = Math.round(message.groupInt32);
     }
-    if (message.groupUint32 !== 0) {
+    if (message.groupUint32 !== undefined && message.groupUint32 !== 0) {
       obj.groupUint32 = Math.round(message.groupUint32);
     }
     return obj;
@@ -5495,7 +5497,7 @@ export const TestAllTypesProto2_MessageSetCorrectExtension1 = {
     message: TestAllTypesProto2_MessageSetCorrectExtension1,
     writer: _m0.Writer = _m0.Writer.create(),
   ): _m0.Writer {
-    if (message.str !== "") {
+    if (message.str !== undefined && message.str !== "") {
       writer.uint32(202).string(message.str);
     }
     return writer;
@@ -5530,7 +5532,7 @@ export const TestAllTypesProto2_MessageSetCorrectExtension1 = {
 
   toJSON(message: TestAllTypesProto2_MessageSetCorrectExtension1): unknown {
     const obj: any = {};
-    if (message.str !== "") {
+    if (message.str !== undefined && message.str !== "") {
       obj.str = message.str;
     }
     return obj;
@@ -5559,7 +5561,7 @@ export const TestAllTypesProto2_MessageSetCorrectExtension2 = {
     message: TestAllTypesProto2_MessageSetCorrectExtension2,
     writer: _m0.Writer = _m0.Writer.create(),
   ): _m0.Writer {
-    if (message.i !== 0) {
+    if (message.i !== undefined && message.i !== 0) {
       writer.uint32(72).int32(message.i);
     }
     return writer;
@@ -5594,7 +5596,7 @@ export const TestAllTypesProto2_MessageSetCorrectExtension2 = {
 
   toJSON(message: TestAllTypesProto2_MessageSetCorrectExtension2): unknown {
     const obj: any = {};
-    if (message.i !== 0) {
+    if (message.i !== undefined && message.i !== 0) {
       obj.i = Math.round(message.i);
     }
     return obj;
@@ -5620,7 +5622,7 @@ function createBaseForeignMessageProto2(): ForeignMessageProto2 {
 
 export const ForeignMessageProto2 = {
   encode(message: ForeignMessageProto2, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
-    if (message.c !== 0) {
+    if (message.c !== undefined && message.c !== 0) {
       writer.uint32(8).int32(message.c);
     }
     return writer;
@@ -5655,7 +5657,7 @@ export const ForeignMessageProto2 = {
 
   toJSON(message: ForeignMessageProto2): unknown {
     const obj: any = {};
-    if (message.c !== 0) {
+    if (message.c !== undefined && message.c !== 0) {
       obj.c = Math.round(message.c);
     }
     return obj;
@@ -5684,10 +5686,10 @@ function createBaseUnknownToTestAllTypes(): UnknownToTestAllTypes {
 
 export const UnknownToTestAllTypes = {
   encode(message: UnknownToTestAllTypes, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
-    if (message.optionalInt32 !== 0) {
+    if (message.optionalInt32 !== undefined && message.optionalInt32 !== 0) {
       writer.uint32(8008).int32(message.optionalInt32);
     }
-    if (message.optionalString !== "") {
+    if (message.optionalString !== undefined && message.optionalString !== "") {
       writer.uint32(8018).string(message.optionalString);
     }
     if (message.nestedMessage !== undefined) {
@@ -5696,7 +5698,7 @@ export const UnknownToTestAllTypes = {
     if (message.optionalgroup !== undefined) {
       UnknownToTestAllTypes_OptionalGroup.encode(message.optionalgroup, writer.uint32(8035)).uint32(8036);
     }
-    if (message.optionalBool === true) {
+    if (message.optionalBool !== undefined && message.optionalBool !== false) {
       writer.uint32(8048).bool(message.optionalBool);
     }
     writer.uint32(8090).fork();
@@ -5792,10 +5794,10 @@ export const UnknownToTestAllTypes = {
 
   toJSON(message: UnknownToTestAllTypes): unknown {
     const obj: any = {};
-    if (message.optionalInt32 !== 0) {
+    if (message.optionalInt32 !== undefined && message.optionalInt32 !== 0) {
       obj.optionalInt32 = Math.round(message.optionalInt32);
     }
-    if (message.optionalString !== "") {
+    if (message.optionalString !== undefined && message.optionalString !== "") {
       obj.optionalString = message.optionalString;
     }
     if (message.nestedMessage !== undefined) {
@@ -5804,7 +5806,7 @@ export const UnknownToTestAllTypes = {
     if (message.optionalgroup !== undefined) {
       obj.optionalgroup = UnknownToTestAllTypes_OptionalGroup.toJSON(message.optionalgroup);
     }
-    if (message.optionalBool === true) {
+    if (message.optionalBool !== undefined && message.optionalBool !== false) {
       obj.optionalBool = message.optionalBool;
     }
     if (message.repeatedInt32?.length) {
@@ -5838,7 +5840,7 @@ function createBaseUnknownToTestAllTypes_OptionalGroup(): UnknownToTestAllTypes_
 
 export const UnknownToTestAllTypes_OptionalGroup = {
   encode(message: UnknownToTestAllTypes_OptionalGroup, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
-    if (message.a !== 0) {
+    if (message.a !== undefined && message.a !== 0) {
       writer.uint32(8).int32(message.a);
     }
     return writer;
@@ -5873,7 +5875,7 @@ export const UnknownToTestAllTypes_OptionalGroup = {
 
   toJSON(message: UnknownToTestAllTypes_OptionalGroup): unknown {
     const obj: any = {};
-    if (message.a !== 0) {
+    if (message.a !== undefined && message.a !== 0) {
       obj.a = Math.round(message.a);
     }
     return obj;
@@ -5985,7 +5987,7 @@ function createBaseOneStringProto2(): OneStringProto2 {
 
 export const OneStringProto2 = {
   encode(message: OneStringProto2, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
-    if (message.data !== "") {
+    if (message.data !== undefined && message.data !== "") {
       writer.uint32(10).string(message.data);
     }
     return writer;
@@ -6020,7 +6022,7 @@ export const OneStringProto2 = {
 
   toJSON(message: OneStringProto2): unknown {
     const obj: any = {};
-    if (message.data !== "") {
+    if (message.data !== undefined && message.data !== "") {
       obj.data = message.data;
     }
     return obj;
@@ -6042,10 +6044,10 @@ function createBaseProtoWithKeywords(): ProtoWithKeywords {
 
 export const ProtoWithKeywords = {
   encode(message: ProtoWithKeywords, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
-    if (message.inline !== 0) {
+    if (message.inline !== undefined && message.inline !== 0) {
       writer.uint32(8).int32(message.inline);
     }
-    if (message.concept !== "") {
+    if (message.concept !== undefined && message.concept !== "") {
       writer.uint32(18).string(message.concept);
     }
     for (const v of message.requires) {
@@ -6101,10 +6103,10 @@ export const ProtoWithKeywords = {
 
   toJSON(message: ProtoWithKeywords): unknown {
     const obj: any = {};
-    if (message.inline !== 0) {
+    if (message.inline !== undefined && message.inline !== 0) {
       obj.inline = Math.round(message.inline);
     }
-    if (message.concept !== "") {
+    if (message.concept !== undefined && message.concept !== "") {
       obj.concept = message.concept;
     }
     if (message.requires?.length) {
@@ -6151,20 +6153,20 @@ function createBaseTestAllRequiredTypesProto2(): TestAllRequiredTypesProto2 {
     recursiveMessage: undefined,
     optionalRecursiveMessage: undefined,
     data: undefined,
-    defaultInt32: 0,
-    defaultInt64: 0,
-    defaultUint32: 0,
-    defaultUint64: 0,
-    defaultSint32: 0,
-    defaultSint64: 0,
-    defaultFixed32: 0,
-    defaultFixed64: 0,
-    defaultSfixed32: 0,
-    defaultSfixed64: 0,
-    defaultFloat: 0,
-    defaultDouble: 0,
-    defaultBool: false,
-    defaultString: "",
+    defaultInt32: -123456789,
+    defaultInt64: -9123456789123456789,
+    defaultUint32: 2123456789,
+    defaultUint64: 10123456789123456789,
+    defaultSint32: -123456789,
+    defaultSint64: -9123456789123456789,
+    defaultFixed32: 2123456789,
+    defaultFixed64: 10123456789123456789,
+    defaultSfixed32: -123456789,
+    defaultSfixed64: -9123456789123456789,
+    defaultFloat: 9e+09,
+    defaultDouble: 7e+22,
+    defaultBool: true,
+    defaultString: "Rosebud",
     defaultBytes: new Uint8Array(0),
   };
 }
@@ -6207,7 +6209,7 @@ export const TestAllRequiredTypesProto2 = {
     if (message.requiredDouble !== 0) {
       writer.uint32(97).double(message.requiredDouble);
     }
-    if (message.requiredBool === true) {
+    if (message.requiredBool !== false) {
       writer.uint32(104).bool(message.requiredBool);
     }
     if (message.requiredString !== "") {
@@ -6244,46 +6246,46 @@ export const TestAllRequiredTypesProto2 = {
     if (message.data !== undefined) {
       TestAllRequiredTypesProto2_Data.encode(message.data, writer.uint32(1611)).uint32(1612);
     }
-    if (message.defaultInt32 !== 0) {
+    if (message.defaultInt32 !== -123456789) {
       writer.uint32(1928).int32(message.defaultInt32);
     }
-    if (message.defaultInt64 !== 0) {
+    if (message.defaultInt64 !== -9123456789123456789) {
       writer.uint32(1936).int64(message.defaultInt64);
     }
-    if (message.defaultUint32 !== 0) {
+    if (message.defaultUint32 !== 2123456789) {
       writer.uint32(1944).uint32(message.defaultUint32);
     }
-    if (message.defaultUint64 !== 0) {
+    if (message.defaultUint64 !== 10123456789123456789) {
       writer.uint32(1952).uint64(message.defaultUint64);
     }
-    if (message.defaultSint32 !== 0) {
+    if (message.defaultSint32 !== -123456789) {
       writer.uint32(1960).sint32(message.defaultSint32);
     }
-    if (message.defaultSint64 !== 0) {
+    if (message.defaultSint64 !== -9123456789123456789) {
       writer.uint32(1968).sint64(message.defaultSint64);
     }
-    if (message.defaultFixed32 !== 0) {
+    if (message.defaultFixed32 !== 2123456789) {
       writer.uint32(1981).fixed32(message.defaultFixed32);
     }
-    if (message.defaultFixed64 !== 0) {
+    if (message.defaultFixed64 !== 10123456789123456789) {
       writer.uint32(1985).fixed64(message.defaultFixed64);
     }
-    if (message.defaultSfixed32 !== 0) {
+    if (message.defaultSfixed32 !== -123456789) {
       writer.uint32(1997).sfixed32(message.defaultSfixed32);
     }
-    if (message.defaultSfixed64 !== 0) {
+    if (message.defaultSfixed64 !== -9123456789123456789) {
       writer.uint32(2001).sfixed64(message.defaultSfixed64);
     }
-    if (message.defaultFloat !== 0) {
+    if (message.defaultFloat !== 9e+09) {
       writer.uint32(2013).float(message.defaultFloat);
     }
-    if (message.defaultDouble !== 0) {
+    if (message.defaultDouble !== 7e+22) {
       writer.uint32(2017).double(message.defaultDouble);
     }
-    if (message.defaultBool === true) {
+    if (message.defaultBool !== true) {
       writer.uint32(2024).bool(message.defaultBool);
     }
-    if (message.defaultString !== "") {
+    if (message.defaultString !== "Rosebud") {
       writer.uint32(2034).string(message.defaultString);
     }
     if (message.defaultBytes.length !== 0) {
@@ -6619,20 +6621,20 @@ export const TestAllRequiredTypesProto2 = {
         ? TestAllRequiredTypesProto2.fromJSON(object.optionalRecursiveMessage)
         : undefined,
       data: isSet(object.data) ? TestAllRequiredTypesProto2_Data.fromJSON(object.data) : undefined,
-      defaultInt32: isSet(object.defaultInt32) ? globalThis.Number(object.defaultInt32) : 0,
-      defaultInt64: isSet(object.defaultInt64) ? globalThis.Number(object.defaultInt64) : 0,
-      defaultUint32: isSet(object.defaultUint32) ? globalThis.Number(object.defaultUint32) : 0,
-      defaultUint64: isSet(object.defaultUint64) ? globalThis.Number(object.defaultUint64) : 0,
-      defaultSint32: isSet(object.defaultSint32) ? globalThis.Number(object.defaultSint32) : 0,
-      defaultSint64: isSet(object.defaultSint64) ? globalThis.Number(object.defaultSint64) : 0,
-      defaultFixed32: isSet(object.defaultFixed32) ? globalThis.Number(object.defaultFixed32) : 0,
-      defaultFixed64: isSet(object.defaultFixed64) ? globalThis.Number(object.defaultFixed64) : 0,
-      defaultSfixed32: isSet(object.defaultSfixed32) ? globalThis.Number(object.defaultSfixed32) : 0,
-      defaultSfixed64: isSet(object.defaultSfixed64) ? globalThis.Number(object.defaultSfixed64) : 0,
-      defaultFloat: isSet(object.defaultFloat) ? globalThis.Number(object.defaultFloat) : 0,
-      defaultDouble: isSet(object.defaultDouble) ? globalThis.Number(object.defaultDouble) : 0,
-      defaultBool: isSet(object.defaultBool) ? globalThis.Boolean(object.defaultBool) : false,
-      defaultString: isSet(object.defaultString) ? globalThis.String(object.defaultString) : "",
+      defaultInt32: isSet(object.defaultInt32) ? globalThis.Number(object.defaultInt32) : -123456789,
+      defaultInt64: isSet(object.defaultInt64) ? globalThis.Number(object.defaultInt64) : -9123456789123456789,
+      defaultUint32: isSet(object.defaultUint32) ? globalThis.Number(object.defaultUint32) : 2123456789,
+      defaultUint64: isSet(object.defaultUint64) ? globalThis.Number(object.defaultUint64) : 10123456789123456789,
+      defaultSint32: isSet(object.defaultSint32) ? globalThis.Number(object.defaultSint32) : -123456789,
+      defaultSint64: isSet(object.defaultSint64) ? globalThis.Number(object.defaultSint64) : -9123456789123456789,
+      defaultFixed32: isSet(object.defaultFixed32) ? globalThis.Number(object.defaultFixed32) : 2123456789,
+      defaultFixed64: isSet(object.defaultFixed64) ? globalThis.Number(object.defaultFixed64) : 10123456789123456789,
+      defaultSfixed32: isSet(object.defaultSfixed32) ? globalThis.Number(object.defaultSfixed32) : -123456789,
+      defaultSfixed64: isSet(object.defaultSfixed64) ? globalThis.Number(object.defaultSfixed64) : -9123456789123456789,
+      defaultFloat: isSet(object.defaultFloat) ? globalThis.Number(object.defaultFloat) : 9e+09,
+      defaultDouble: isSet(object.defaultDouble) ? globalThis.Number(object.defaultDouble) : 7e+22,
+      defaultBool: isSet(object.defaultBool) ? globalThis.Boolean(object.defaultBool) : true,
+      defaultString: isSet(object.defaultString) ? globalThis.String(object.defaultString) : "Rosebud",
       defaultBytes: isSet(object.defaultBytes) ? bytesFromBase64(object.defaultBytes) : new Uint8Array(0),
     };
   },
@@ -6675,7 +6677,7 @@ export const TestAllRequiredTypesProto2 = {
     if (message.requiredDouble !== 0) {
       obj.requiredDouble = message.requiredDouble;
     }
-    if (message.requiredBool === true) {
+    if (message.requiredBool !== false) {
       obj.requiredBool = message.requiredBool;
     }
     if (message.requiredString !== "") {
@@ -6711,46 +6713,46 @@ export const TestAllRequiredTypesProto2 = {
     if (message.data !== undefined) {
       obj.data = TestAllRequiredTypesProto2_Data.toJSON(message.data);
     }
-    if (message.defaultInt32 !== 0) {
+    if (message.defaultInt32 !== -123456789) {
       obj.defaultInt32 = Math.round(message.defaultInt32);
     }
-    if (message.defaultInt64 !== 0) {
+    if (message.defaultInt64 !== -9123456789123456789) {
       obj.defaultInt64 = Math.round(message.defaultInt64);
     }
-    if (message.defaultUint32 !== 0) {
+    if (message.defaultUint32 !== 2123456789) {
       obj.defaultUint32 = Math.round(message.defaultUint32);
     }
-    if (message.defaultUint64 !== 0) {
+    if (message.defaultUint64 !== 10123456789123456789) {
       obj.defaultUint64 = Math.round(message.defaultUint64);
     }
-    if (message.defaultSint32 !== 0) {
+    if (message.defaultSint32 !== -123456789) {
       obj.defaultSint32 = Math.round(message.defaultSint32);
     }
-    if (message.defaultSint64 !== 0) {
+    if (message.defaultSint64 !== -9123456789123456789) {
       obj.defaultSint64 = Math.round(message.defaultSint64);
     }
-    if (message.defaultFixed32 !== 0) {
+    if (message.defaultFixed32 !== 2123456789) {
       obj.defaultFixed32 = Math.round(message.defaultFixed32);
     }
-    if (message.defaultFixed64 !== 0) {
+    if (message.defaultFixed64 !== 10123456789123456789) {
       obj.defaultFixed64 = Math.round(message.defaultFixed64);
     }
-    if (message.defaultSfixed32 !== 0) {
+    if (message.defaultSfixed32 !== -123456789) {
       obj.defaultSfixed32 = Math.round(message.defaultSfixed32);
     }
-    if (message.defaultSfixed64 !== 0) {
+    if (message.defaultSfixed64 !== -9123456789123456789) {
       obj.defaultSfixed64 = Math.round(message.defaultSfixed64);
     }
-    if (message.defaultFloat !== 0) {
+    if (message.defaultFloat !== 9e+09) {
       obj.defaultFloat = message.defaultFloat;
     }
-    if (message.defaultDouble !== 0) {
+    if (message.defaultDouble !== 7e+22) {
       obj.defaultDouble = message.defaultDouble;
     }
-    if (message.defaultBool === true) {
+    if (message.defaultBool !== true) {
       obj.defaultBool = message.defaultBool;
     }
-    if (message.defaultString !== "") {
+    if (message.defaultString !== "Rosebud") {
       obj.defaultString = message.defaultString;
     }
     if (message.defaultBytes.length !== 0) {
@@ -6801,20 +6803,20 @@ export const TestAllRequiredTypesProto2 = {
     message.data = (object.data !== undefined && object.data !== null)
       ? TestAllRequiredTypesProto2_Data.fromPartial(object.data)
       : undefined;
-    message.defaultInt32 = object.defaultInt32 ?? 0;
-    message.defaultInt64 = object.defaultInt64 ?? 0;
-    message.defaultUint32 = object.defaultUint32 ?? 0;
-    message.defaultUint64 = object.defaultUint64 ?? 0;
-    message.defaultSint32 = object.defaultSint32 ?? 0;
-    message.defaultSint64 = object.defaultSint64 ?? 0;
-    message.defaultFixed32 = object.defaultFixed32 ?? 0;
-    message.defaultFixed64 = object.defaultFixed64 ?? 0;
-    message.defaultSfixed32 = object.defaultSfixed32 ?? 0;
-    message.defaultSfixed64 = object.defaultSfixed64 ?? 0;
-    message.defaultFloat = object.defaultFloat ?? 0;
-    message.defaultDouble = object.defaultDouble ?? 0;
-    message.defaultBool = object.defaultBool ?? false;
-    message.defaultString = object.defaultString ?? "";
+    message.defaultInt32 = object.defaultInt32 ?? -123456789;
+    message.defaultInt64 = object.defaultInt64 ?? -9123456789123456789;
+    message.defaultUint32 = object.defaultUint32 ?? 2123456789;
+    message.defaultUint64 = object.defaultUint64 ?? 10123456789123456789;
+    message.defaultSint32 = object.defaultSint32 ?? -123456789;
+    message.defaultSint64 = object.defaultSint64 ?? -9123456789123456789;
+    message.defaultFixed32 = object.defaultFixed32 ?? 2123456789;
+    message.defaultFixed64 = object.defaultFixed64 ?? 10123456789123456789;
+    message.defaultSfixed32 = object.defaultSfixed32 ?? -123456789;
+    message.defaultSfixed64 = object.defaultSfixed64 ?? -9123456789123456789;
+    message.defaultFloat = object.defaultFloat ?? 9e+09;
+    message.defaultDouble = object.defaultDouble ?? 7e+22;
+    message.defaultBool = object.defaultBool ?? true;
+    message.defaultString = object.defaultString ?? "Rosebud";
     message.defaultBytes = object.defaultBytes ?? new Uint8Array(0);
     return message;
   },
