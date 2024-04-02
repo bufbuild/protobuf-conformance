@@ -651,7 +651,7 @@ export const TestAllTypesProto3 = {
     if (message.optionalDouble !== 0) {
       writer.uint32(97).double(message.optionalDouble);
     }
-    if (message.optionalBool === true) {
+    if (message.optionalBool !== false) {
       writer.uint32(104).bool(message.optionalBool);
     }
     if (message.optionalString !== "") {
@@ -3178,7 +3178,7 @@ export const TestAllTypesProto3 = {
     if (message.optionalDouble !== 0) {
       obj.optionalDouble = message.optionalDouble;
     }
-    if (message.optionalBool === true) {
+    if (message.optionalBool !== false) {
       obj.optionalBool = message.optionalBool;
     }
     if (message.optionalString !== "") {
@@ -5067,10 +5067,10 @@ function createBaseTestAllTypesProto3_MapBoolBoolEntry(): TestAllTypesProto3_Map
 
 export const TestAllTypesProto3_MapBoolBoolEntry = {
   encode(message: TestAllTypesProto3_MapBoolBoolEntry, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
-    if (message.key === true) {
+    if (message.key !== false) {
       writer.uint32(8).bool(message.key);
     }
-    if (message.value === true) {
+    if (message.value !== false) {
       writer.uint32(16).bool(message.value);
     }
     return writer;
@@ -5115,10 +5115,10 @@ export const TestAllTypesProto3_MapBoolBoolEntry = {
 
   toJSON(message: TestAllTypesProto3_MapBoolBoolEntry): unknown {
     const obj: any = {};
-    if (message.key === true) {
+    if (message.key !== false) {
       obj.key = message.key;
     }
-    if (message.value === true) {
+    if (message.value !== false) {
       obj.value = message.value;
     }
     return obj;

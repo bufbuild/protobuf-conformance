@@ -288,7 +288,7 @@ export const ConformanceRequest = {
     if (message.jspbEncodingOptions !== undefined) {
       JspbEncodingConfig.encode(message.jspbEncodingOptions, writer.uint32(50).fork()).ldelim();
     }
-    if (message.printUnknownFields === true) {
+    if (message.printUnknownFields !== false) {
       writer.uint32(72).bool(message.printUnknownFields);
     }
     return writer;
@@ -420,7 +420,7 @@ export const ConformanceRequest = {
     if (message.jspbEncodingOptions !== undefined) {
       obj.jspbEncodingOptions = JspbEncodingConfig.toJSON(message.jspbEncodingOptions);
     }
-    if (message.printUnknownFields === true) {
+    if (message.printUnknownFields !== false) {
       obj.printUnknownFields = message.printUnknownFields;
     }
     return obj;
@@ -717,7 +717,7 @@ function createBaseJspbEncodingConfig(): JspbEncodingConfig {
 
 export const JspbEncodingConfig = {
   encode(message: JspbEncodingConfig, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
-    if (message.useJspbArrayAnyFormat === true) {
+    if (message.useJspbArrayAnyFormat !== false) {
       writer.uint32(8).bool(message.useJspbArrayAnyFormat);
     }
     return writer;
@@ -756,7 +756,7 @@ export const JspbEncodingConfig = {
 
   toJSON(message: JspbEncodingConfig): unknown {
     const obj: any = {};
-    if (message.useJspbArrayAnyFormat === true) {
+    if (message.useJspbArrayAnyFormat !== false) {
       obj.useJspbArrayAnyFormat = message.useJspbArrayAnyFormat;
     }
     return obj;
