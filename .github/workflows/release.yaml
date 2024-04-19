@@ -76,6 +76,7 @@ jobs:
       - name: Copy Protos
         run: |
           mkdir -p .tmp/include/conformance
+          mkdir -p .tmp/include/conformance/test_protos
           mkdir -p .tmp/include/google/protobuf
           cp ./protobuf-${{ needs.get-protobuf.outputs.version }}/conformance/conformance.proto .tmp/include/conformance
           cp ./protobuf-${{ needs.get-protobuf.outputs.version }}/conformance/test_protos/test_messages*.proto .tmp/include/conformance/test_protos
@@ -142,6 +143,7 @@ jobs:
       - name: Copy Protos
         run: |
           mkdir -p .tmp/include/conformance
+          mkdir -p .tmp/include/conformance/test_protos
           mkdir -p .tmp/include/google/protobuf
           cp ./protobuf-${{ needs.get-protobuf.outputs.version }}/conformance/conformance.proto .tmp/include/conformance
           cp ./protobuf-${{ needs.get-protobuf.outputs.version }}/conformance/test_protos/test_messages*.proto .tmp/include/conformance/test_protos
