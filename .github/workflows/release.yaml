@@ -78,6 +78,7 @@ jobs:
           mkdir -p .tmp/include/conformance
           mkdir -p .tmp/include/google/protobuf
           cp ./protobuf-${{ needs.get-protobuf.outputs.version }}/conformance/conformance.proto .tmp/include/conformance
+          cp ./protobuf-${{ needs.get-protobuf.outputs.version }}/conformance/test_protos/test_messages*.proto .tmp/include/conformance/test_protos
           cp ./protobuf-${{ needs.get-protobuf.outputs.version }}/src/google/protobuf/test_messages*.proto .tmp/include/google/protobuf
 
       - name: Zip Binary
@@ -143,6 +144,7 @@ jobs:
           mkdir -p .tmp/include/conformance
           mkdir -p .tmp/include/google/protobuf
           cp ./protobuf-${{ needs.get-protobuf.outputs.version }}/conformance/conformance.proto .tmp/include/conformance
+          cp ./protobuf-${{ needs.get-protobuf.outputs.version }}/conformance/test_protos/test_messages*.proto .tmp/include/conformance/test_protos
           cp ./protobuf-${{ needs.get-protobuf.outputs.version }}/src/google/protobuf/test_messages*.proto .tmp/include/google/protobuf
 
       - name: Zip Binary
