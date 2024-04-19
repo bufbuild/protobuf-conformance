@@ -1611,9 +1611,3 @@ Required.Proto3.ProtobufInput.ValidDataScalar.UINT64[1].ProtobufOutput
 Required.Proto3.ProtobufInput.ValidDataScalar.UINT64[2].ProtobufOutput
 Required.Proto3.TimestampProtoInputTooLarge.JsonOutput
 Required.Proto3.TimestampProtoInputTooSmall.JsonOutput
-Recommended.Proto2.JsonInput.IgnoreUnknownEnumStringValueInMapPart.ProtobufOutput
-Recommended.Proto2.JsonInput.IgnoreUnknownEnumStringValueInRepeatedPart.ProtobufOutput
-Recommended.Proto3.JsonInput.IgnoreUnknownEnumStringValueInMapPart.ProtobufOutput
-Recommended.Proto3.JsonInput.IgnoreUnknownEnumStringValueInRepeatedPart.ProtobufOutput
-Required.Proto2.ProtobufInput.UnknownOrdering.ProtobufOutput
-Required.Proto3.ProtobufInput.UnknownOrdering.ProtobufOutput

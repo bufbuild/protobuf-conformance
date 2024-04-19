@@ -157,9 +157,8 @@ export interface TestAllTypesProto2 {
     | { $case: "oneofDouble"; oneofDouble: number }
     | { $case: "oneofEnum"; oneofEnum: TestAllTypesProto2_NestedEnum }
     | undefined;
-  data?: TestAllTypesProto2_Data | undefined;
-  multiwordgroupfield?:
-    | TestAllTypesProto2_MultiWordGroupField
+  data?:
+    | TestAllTypesProto2_Data
     | undefined;
   /** default values */
   defaultInt32?: number | undefined;
@@ -351,11 +350,6 @@ export interface TestAllTypesProto2_Data {
   groupUint32?: number | undefined;
 }
 
-export interface TestAllTypesProto2_MultiWordGroupField {
-  groupInt32?: number | undefined;
-  groupUint32?: number | undefined;
-}
-
 /** message_set test case. */
 export interface TestAllTypesProto2_MessageSetCorrect {
 }
@@ -370,11 +364,6 @@ export interface TestAllTypesProto2_MessageSetCorrectExtension2 {
 
 export interface ForeignMessageProto2 {
   c?: number | undefined;
-}
-
-export interface GroupField {
-  groupInt32?: number | undefined;
-  groupUint32?: number | undefined;
 }
 
 export interface UnknownToTestAllTypes {
@@ -645,7 +634,6 @@ function createBaseTestAllTypesProto2(): TestAllTypesProto2 {
     mapStringForeignEnum: new Map(),
     oneofField: undefined,
     data: undefined,
-    multiwordgroupfield: undefined,
     defaultInt32: -123456789,
     defaultInt64: -9123456789123456789,
     defaultUint32: 2123456789,
@@ -1078,9 +1066,6 @@ export const TestAllTypesProto2 = {
     }
     if (message.data !== undefined) {
       TestAllTypesProto2_Data.encode(message.data, writer.uint32(1611)).uint32(1612);
-    }
-    if (message.multiwordgroupfield !== undefined) {
-      TestAllTypesProto2_MultiWordGroupField.encode(message.multiwordgroupfield, writer.uint32(1635)).uint32(1636);
     }
     if (message.defaultInt32 !== undefined && message.defaultInt32 !== -123456789) {
       writer.uint32(1928).int32(message.defaultInt32);
@@ -2381,13 +2366,6 @@ export const TestAllTypesProto2 = {
 
           message.data = TestAllTypesProto2_Data.decode(reader);
           continue;
-        case 204:
-          if (tag !== 1635) {
-            break;
-          }
-
-          message.multiwordgroupfield = TestAllTypesProto2_MultiWordGroupField.decode(reader);
-          continue;
         case 241:
           if (tag !== 1928) {
             break;
@@ -2955,9 +2933,6 @@ export const TestAllTypesProto2 = {
         ? { $case: "oneofEnum", oneofEnum: testAllTypesProto2_NestedEnumFromJSON(object.oneofEnum) }
         : undefined,
       data: isSet(object.data) ? TestAllTypesProto2_Data.fromJSON(object.data) : undefined,
-      multiwordgroupfield: isSet(object.multiwordgroupfield)
-        ? TestAllTypesProto2_MultiWordGroupField.fromJSON(object.multiwordgroupfield)
-        : undefined,
       defaultInt32: isSet(object.defaultInt32) ? globalThis.Number(object.defaultInt32) : -123456789,
       defaultInt64: isSet(object.defaultInt64) ? globalThis.Number(object.defaultInt64) : -9123456789123456789,
       defaultUint32: isSet(object.defaultUint32) ? globalThis.Number(object.defaultUint32) : 2123456789,
@@ -3352,9 +3327,6 @@ export const TestAllTypesProto2 = {
     }
     if (message.data !== undefined) {
       obj.data = TestAllTypesProto2_Data.toJSON(message.data);
-    }
-    if (message.multiwordgroupfield !== undefined) {
-      obj.multiwordgroupfield = TestAllTypesProto2_MultiWordGroupField.toJSON(message.multiwordgroupfield);
     }
     if (message.defaultInt32 !== undefined && message.defaultInt32 !== -123456789) {
       obj.defaultInt32 = Math.round(message.defaultInt32);
@@ -3785,9 +3757,6 @@ export const TestAllTypesProto2 = {
     }
     message.data = (object.data !== undefined && object.data !== null)
       ? TestAllTypesProto2_Data.fromPartial(object.data)
-      : undefined;
-    message.multiwordgroupfield = (object.multiwordgroupfield !== undefined && object.multiwordgroupfield !== null)
-      ? TestAllTypesProto2_MultiWordGroupField.fromPartial(object.multiwordgroupfield)
       : undefined;
     message.defaultInt32 = object.defaultInt32 ?? -123456789;
     message.defaultInt64 = object.defaultInt64 ?? -9123456789123456789;
@@ -5472,84 +5441,6 @@ export const TestAllTypesProto2_Data = {
   },
 };
 
-function createBaseTestAllTypesProto2_MultiWordGroupField(): TestAllTypesProto2_MultiWordGroupField {
-  return { groupInt32: 0, groupUint32: 0 };
-}
-
-export const TestAllTypesProto2_MultiWordGroupField = {
-  encode(message: TestAllTypesProto2_MultiWordGroupField, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
-    if (message.groupInt32 !== undefined && message.groupInt32 !== 0) {
-      writer.uint32(1640).int32(message.groupInt32);
-    }
-    if (message.groupUint32 !== undefined && message.groupUint32 !== 0) {
-      writer.uint32(1648).uint32(message.groupUint32);
-    }
-    return writer;
-  },
-
-  decode(input: _m0.Reader | Uint8Array, length?: number): TestAllTypesProto2_MultiWordGroupField {
-    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
-    let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseTestAllTypesProto2_MultiWordGroupField();
-    while (reader.pos < end) {
-      const tag = reader.uint32();
-      switch (tag >>> 3) {
-        case 205:
-          if (tag !== 1640) {
-            break;
-          }
-
-          message.groupInt32 = reader.int32();
-          continue;
-        case 206:
-          if (tag !== 1648) {
-            break;
-          }
-
-          message.groupUint32 = reader.uint32();
-          continue;
-      }
-      if ((tag & 7) === 4 || tag === 0) {
-        break;
-      }
-      reader.skipType(tag & 7);
-    }
-    return message;
-  },
-
-  fromJSON(object: any): TestAllTypesProto2_MultiWordGroupField {
-    return {
-      groupInt32: isSet(object.groupInt32) ? globalThis.Number(object.groupInt32) : 0,
-      groupUint32: isSet(object.groupUint32) ? globalThis.Number(object.groupUint32) : 0,
-    };
-  },
-
-  toJSON(message: TestAllTypesProto2_MultiWordGroupField): unknown {
-    const obj: any = {};
-    if (message.groupInt32 !== undefined && message.groupInt32 !== 0) {
-      obj.groupInt32 = Math.round(message.groupInt32);
-    }
-    if (message.groupUint32 !== undefined && message.groupUint32 !== 0) {
-      obj.groupUint32 = Math.round(message.groupUint32);
-    }
-    return obj;
-  },
-
-  create<I extends Exact<DeepPartial<TestAllTypesProto2_MultiWordGroupField>, I>>(
-    base?: I,
-  ): TestAllTypesProto2_MultiWordGroupField {
-    return TestAllTypesProto2_MultiWordGroupField.fromPartial(base ?? ({} as any));
-  },
-  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto2_MultiWordGroupField>, I>>(
-    object: I,
-  ): TestAllTypesProto2_MultiWordGroupField {
-    const message = createBaseTestAllTypesProto2_MultiWordGroupField();
-    message.groupInt32 = object.groupInt32 ?? 0;
-    message.groupUint32 = object.groupUint32 ?? 0;
-    return message;
-  },
-};
-
 function createBaseTestAllTypesProto2_MessageSetCorrect(): TestAllTypesProto2_MessageSetCorrect {
   return {};
 }
@@ -5778,80 +5669,6 @@ export const ForeignMessageProto2 = {
   fromPartial<I extends Exact<DeepPartial<ForeignMessageProto2>, I>>(object: I): ForeignMessageProto2 {
     const message = createBaseForeignMessageProto2();
     message.c = object.c ?? 0;
-    return message;
-  },
-};
-
-function createBaseGroupField(): GroupField {
-  return { groupInt32: 0, groupUint32: 0 };
-}
-
-export const GroupField = {
-  encode(message: GroupField, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
-    if (message.groupInt32 !== undefined && message.groupInt32 !== 0) {
-      writer.uint32(976).int32(message.groupInt32);
-    }
-    if (message.groupUint32 !== undefined && message.groupUint32 !== 0) {
-      writer.uint32(984).uint32(message.groupUint32);
-    }
-    return writer;
-  },
-
-  decode(input: _m0.Reader | Uint8Array, length?: number): GroupField {
-    const reader = input instanceof _m0.Reader ? input : _m0.Reader.create(input);
-    let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseGroupField();
-    while (reader.pos < end) {
-      const tag = reader.uint32();
-      switch (tag >>> 3) {
-        case 122:
-          if (tag !== 976) {
-            break;
-          }
-
-          message.groupInt32 = reader.int32();
-          continue;
-        case 123:
-          if (tag !== 984) {
-            break;
-          }
-
-          message.groupUint32 = reader.uint32();
-          continue;
-      }
-      if ((tag & 7) === 4 || tag === 0) {
-        break;
-      }
-      reader.skipType(tag & 7);
-    }
-    return message;
-  },
-
-  fromJSON(object: any): GroupField {
-    return {
-      groupInt32: isSet(object.groupInt32) ? globalThis.Number(object.groupInt32) : 0,
-      groupUint32: isSet(object.groupUint32) ? globalThis.Number(object.groupUint32) : 0,
-    };
-  },
-
-  toJSON(message: GroupField): unknown {
-    const obj: any = {};
-    if (message.groupInt32 !== undefined && message.groupInt32 !== 0) {
-      obj.groupInt32 = Math.round(message.groupInt32);
-    }
-    if (message.groupUint32 !== undefined && message.groupUint32 !== 0) {
-      obj.groupUint32 = Math.round(message.groupUint32);
-    }
-    return obj;
-  },
-
-  create<I extends Exact<DeepPartial<GroupField>, I>>(base?: I): GroupField {
-    return GroupField.fromPartial(base ?? ({} as any));
-  },
-  fromPartial<I extends Exact<DeepPartial<GroupField>, I>>(object: I): GroupField {
-    const message = createBaseGroupField();
-    message.groupInt32 = object.groupInt32 ?? 0;
-    message.groupUint32 = object.groupUint32 ?? 0;
     return message;
   },
 };

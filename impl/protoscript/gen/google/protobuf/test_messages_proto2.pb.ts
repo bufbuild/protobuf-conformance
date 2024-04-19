@@ -198,10 +198,10 @@ export interface TestAllTypesProto2 {
   oneofDouble?: number | null | undefined;
   oneofEnum?: TestAllTypesProto2.NestedEnum | null | undefined;
   defaultInt32: number;
-  defaultInt64: bigint;
   /**
    * default values
    */
+  defaultInt64: bigint;
   defaultUint32: number;
   defaultUint64: bigint;
   defaultSint32: number;
@@ -216,11 +216,11 @@ export interface TestAllTypesProto2 {
   defaultString: string;
   defaultBytes: Uint8Array;
   fieldname1: number;
-  fieldName2: number;
   /**
    * Test field-name-to-JSON-name convention.
    * (protobuf says names can be any valid C/C++ identifier.)
    */
+  fieldName2: number;
   fieldName3: number;
   fieldName4: number;
   field0name5: number;
@@ -350,11 +350,6 @@ export declare namespace TestAllTypesProto2 {
     groupUint32: number;
   }
 
-  export interface MultiWordGroupField {
-    groupInt32: number;
-    groupUint32: number;
-  }
-
   /**
    * message_set test case.
    */
@@ -371,11 +366,6 @@ export declare namespace TestAllTypesProto2 {
 
 export interface ForeignMessageProto2 {
   c: number;
-}
-
-export interface GroupField {
-  groupInt32: number;
-  groupUint32: number;
 }
 
 export interface UnknownToTestAllTypes {
@@ -3296,85 +3286,6 @@ export const TestAllTypesProto2 = {
     },
   },
 
-  MultiWordGroupField: {
-    /**
-     * Serializes TestAllTypesProto2.MultiWordGroupField to protobuf.
-     */
-    encode: function (
-      msg: PartialDeep<TestAllTypesProto2.MultiWordGroupField>,
-    ): Uint8Array {
-      return TestAllTypesProto2.MultiWordGroupField._writeMessage(
-        msg,
-        new BinaryWriter(),
-      ).getResultBuffer();
-    },
-
-    /**
-     * Deserializes TestAllTypesProto2.MultiWordGroupField from protobuf.
-     */
-    decode: function (
-      bytes: ByteSource,
-    ): TestAllTypesProto2.MultiWordGroupField {
-      return TestAllTypesProto2.MultiWordGroupField._readMessage(
-        TestAllTypesProto2.MultiWordGroupField.initialize(),
-        new BinaryReader(bytes),
-      );
-    },
-
-    /**
-     * Initializes TestAllTypesProto2.MultiWordGroupField with all fields set to their default value.
-     */
-    initialize: function (): TestAllTypesProto2.MultiWordGroupField {
-      return {
-        groupInt32: 0,
-        groupUint32: 0,
-      };
-    },
-
-    /**
-     * @private
-     */
-    _writeMessage: function (
-      msg: PartialDeep<TestAllTypesProto2.MultiWordGroupField>,
-      writer: BinaryWriter,
-    ): BinaryWriter {
-      if (msg.groupInt32) {
-        writer.writeInt32(205, msg.groupInt32);
-      }
-      if (msg.groupUint32) {
-        writer.writeUint32(206, msg.groupUint32);
-      }
-      return writer;
-    },
-
-    /**
-     * @private
-     */
-    _readMessage: function (
-      msg: TestAllTypesProto2.MultiWordGroupField,
-      reader: BinaryReader,
-    ): TestAllTypesProto2.MultiWordGroupField {
-      while (reader.nextField()) {
-        const field = reader.getFieldNumber();
-        switch (field) {
-          case 205: {
-            msg.groupInt32 = reader.readInt32();
-            break;
-          }
-          case 206: {
-            msg.groupUint32 = reader.readUint32();
-            break;
-          }
-          default: {
-            reader.skipField();
-            break;
-          }
-        }
-      }
-      return msg;
-    },
-  },
-
   MessageSetCorrect: {
     /**
      * Serializes TestAllTypesProto2.MessageSetCorrect to protobuf.
@@ -3620,75 +3531,6 @@ export const ForeignMessageProto2 = {
       switch (field) {
         case 1: {
           msg.c = reader.readInt32();
-          break;
-        }
-        default: {
-          reader.skipField();
-          break;
-        }
-      }
-    }
-    return msg;
-  },
-};
-
-export const GroupField = {
-  /**
-   * Serializes GroupField to protobuf.
-   */
-  encode: function (msg: PartialDeep<GroupField>): Uint8Array {
-    return GroupField._writeMessage(msg, new BinaryWriter()).getResultBuffer();
-  },
-
-  /**
-   * Deserializes GroupField from protobuf.
-   */
-  decode: function (bytes: ByteSource): GroupField {
-    return GroupField._readMessage(
-      GroupField.initialize(),
-      new BinaryReader(bytes),
-    );
-  },
-
-  /**
-   * Initializes GroupField with all fields set to their default value.
-   */
-  initialize: function (): GroupField {
-    return {
-      groupInt32: 0,
-      groupUint32: 0,
-    };
-  },
-
-  /**
-   * @private
-   */
-  _writeMessage: function (
-    msg: PartialDeep<GroupField>,
-    writer: BinaryWriter,
-  ): BinaryWriter {
-    if (msg.groupInt32) {
-      writer.writeInt32(122, msg.groupInt32);
-    }
-    if (msg.groupUint32) {
-      writer.writeUint32(123, msg.groupUint32);
-    }
-    return writer;
-  },
-
-  /**
-   * @private
-   */
-  _readMessage: function (msg: GroupField, reader: BinaryReader): GroupField {
-    while (reader.nextField()) {
-      const field = reader.getFieldNumber();
-      switch (field) {
-        case 122: {
-          msg.groupInt32 = reader.readInt32();
-          break;
-        }
-        case 123: {
-          msg.groupUint32 = reader.readUint32();
           break;
         }
         default: {
@@ -7362,73 +7204,6 @@ export const TestAllTypesProto2JSON = {
     },
   },
 
-  MultiWordGroupField: {
-    /**
-     * Serializes TestAllTypesProto2.MultiWordGroupField to JSON.
-     */
-    encode: function (
-      msg: PartialDeep<TestAllTypesProto2.MultiWordGroupField>,
-    ): string {
-      return JSON.stringify(
-        TestAllTypesProto2JSON.MultiWordGroupField._writeMessage(msg),
-      );
-    },
-
-    /**
-     * Deserializes TestAllTypesProto2.MultiWordGroupField from JSON.
-     */
-    decode: function (json: string): TestAllTypesProto2.MultiWordGroupField {
-      return TestAllTypesProto2JSON.MultiWordGroupField._readMessage(
-        TestAllTypesProto2JSON.MultiWordGroupField.initialize(),
-        JSON.parse(json),
-      );
-    },
-
-    /**
-     * Initializes TestAllTypesProto2.MultiWordGroupField with all fields set to their default value.
-     */
-    initialize: function (): TestAllTypesProto2.MultiWordGroupField {
-      return {
-        groupInt32: 0,
-        groupUint32: 0,
-      };
-    },
-
-    /**
-     * @private
-     */
-    _writeMessage: function (
-      msg: PartialDeep<TestAllTypesProto2.MultiWordGroupField>,
-    ): Record<string, unknown> {
-      const json: Record<string, unknown> = {};
-      if (msg.groupInt32) {
-        json["groupInt32"] = msg.groupInt32;
-      }
-      if (msg.groupUint32) {
-        json["groupUint32"] = msg.groupUint32;
-      }
-      return json;
-    },
-
-    /**
-     * @private
-     */
-    _readMessage: function (
-      msg: TestAllTypesProto2.MultiWordGroupField,
-      json: any,
-    ): TestAllTypesProto2.MultiWordGroupField {
-      const _groupInt32_ = json["groupInt32"] ?? json["group_int32"];
-      if (_groupInt32_) {
-        msg.groupInt32 = _groupInt32_;
-      }
-      const _groupUint32_ = json["groupUint32"] ?? json["group_uint32"];
-      if (_groupUint32_) {
-        msg.groupUint32 = _groupUint32_;
-      }
-      return msg;
-    },
-  },
-
   MessageSetCorrect: {
     /**
      * Serializes TestAllTypesProto2.MessageSetCorrect to JSON.
@@ -7646,66 +7421,6 @@ export const ForeignMessageProto2JSON = {
     const _c_ = json["c"];
     if (_c_) {
       msg.c = _c_;
-    }
-    return msg;
-  },
-};
-
-export const GroupFieldJSON = {
-  /**
-   * Serializes GroupField to JSON.
-   */
-  encode: function (msg: PartialDeep<GroupField>): string {
-    return JSON.stringify(GroupFieldJSON._writeMessage(msg));
-  },
-
-  /**
-   * Deserializes GroupField from JSON.
-   */
-  decode: function (json: string): GroupField {
-    return GroupFieldJSON._readMessage(
-      GroupFieldJSON.initialize(),
-      JSON.parse(json),
-    );
-  },
-
-  /**
-   * Initializes GroupField with all fields set to their default value.
-   */
-  initialize: function (): GroupField {
-    return {
-      groupInt32: 0,
-      groupUint32: 0,
-    };
-  },
-
-  /**
-   * @private
-   */
-  _writeMessage: function (
-    msg: PartialDeep<GroupField>,
-  ): Record<string, unknown> {
-    const json: Record<string, unknown> = {};
-    if (msg.groupInt32) {
-      json["groupInt32"] = msg.groupInt32;
-    }
-    if (msg.groupUint32) {
-      json["groupUint32"] = msg.groupUint32;
-    }
-    return json;
-  },
-
-  /**
-   * @private
-   */
-  _readMessage: function (msg: GroupField, json: any): GroupField {
-    const _groupInt32_ = json["groupInt32"] ?? json["group_int32"];
-    if (_groupInt32_) {
-      msg.groupInt32 = _groupInt32_;
-    }
-    const _groupUint32_ = json["groupUint32"] ?? json["group_uint32"];
-    if (_groupUint32_) {
-      msg.groupUint32 = _groupUint32_;
     }
     return msg;
   },
