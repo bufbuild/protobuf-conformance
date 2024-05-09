@@ -27,7 +27,7 @@ $(BIN)/conformance_test_runner: Makefile
 	cp -f $(TMP)/conformance_test_runner-$(GOOGLE_PROTOBUF_VERSION)/include/google/protobuf/test_messages*.proto proto/google/protobuf
 
 .PHONY: all
-all: test license  ## Run conformance tests and update license headers
+all: test license  ## Run conformance tests and update license headers.
 
 .PHONY: help
 help: ## Describe useful make targets
