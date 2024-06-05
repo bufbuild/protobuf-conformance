@@ -10,6 +10,7 @@ TMP   = .tmp
 BIN   = .tmp/bin
 UNAME_OS := $(shell uname -s)
 LICENSE_HEADER_YEAR_RANGE := 2023-2024
+# Version 27.1
 GOOGLE_PROTOBUF_VERSION = 26.1
 
 ifeq ($(UNAME_OS),Darwin)
