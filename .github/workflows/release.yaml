@@ -97,7 +97,7 @@ jobs:
             ./conformance_test_runner-${{ needs.get-protobuf.outputs.version }}-linux-x86_64.zip
 
   build-darwin_x86_64:
-    runs-on: macos-11
+    runs-on: macos-12
     needs: get-protobuf
     steps:
       - name: Checkout
