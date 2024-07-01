@@ -18,6 +18,9 @@ npx tsc --noEmit || true
 # we use esbuild to transpile and bundle for Node.js
 echo > runner.js "#!/usr/bin/env node"
 chmod +x runner.js
+# esbuild v0.22.0 introduced a breaking change where packages are now omitted from the bundle by default when targeting node.
+# see https://github.com/evanw/esbuild/releases/tag/v0.22.0
+# To go back to the previous default behavior, users now need to specify packages=bundle
 npx esbuild runner.ts --bundle --platform=node --packages=bundle --format=esm --log-override:duplicate-case=silent >>runner.js
 
 # finally, run the tests
