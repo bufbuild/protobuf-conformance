@@ -4,11 +4,11 @@
   "type": "module",
   "dependencies": {
     "long": "^5.2.3",
-    "protobufjs": "^7.3.0",
+    "protobufjs": "^7.3.2",
     "protobufjs-cli": "^1.1.2"
   },
   "devDependencies": {
-    "typescript": "^5.4.5",
-    "tsx": "^4.11.0"
+    "typescript": "^5.5.2",
+    "tsx": "^4.16.0"
   }
 }
