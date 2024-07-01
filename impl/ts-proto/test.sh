@@ -18,7 +18,7 @@ npx tsc --noEmit || true
 # we use esbuild to transpile and bundle for Node.js
 echo > runner.js "#!/usr/bin/env node"
 chmod +x runner.js
-npx esbuild runner.ts --bundle --platform=node --format=esm --log-override:duplicate-case=silent >>runner.js
+npx esbuild runner.ts --bundle --platform=node --packages=bundle --format=esm --log-override:duplicate-case=silent >>runner.js
 
 # finally, run the tests
 conformance_test_runner --enforce_recommended \
