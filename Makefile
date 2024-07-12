@@ -46,13 +46,9 @@ test: $(BIN)/conformance_test_runner  ## Run conformance tests
 	node report.js
 
 .PHONY: license
-license: Makefile ## Updates license headers
-	GOBIN=$(abspath $(BIN)) go install github.com/bufbuild/buf/private/pkg/licenseheader/cmd/license-header@v1.1.0
-	$(BIN)/license-header \
-		--license-type "apache" \
-		--copyright-holder "Buf Technologies, Inc." \
-		--year-range "$(LICENSE_HEADER_YEAR_RANGE)" \
-		report.js
+license: ## Updates license headers
+	npm ci
+	npm run license-header
 
 .PHONY: checkdiff
 checkdiff:
