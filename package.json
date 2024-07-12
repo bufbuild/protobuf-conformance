@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "license-header": "license-header --ignore 'proto/**' --ignore 'impl/*/gen/**'"
+    "license-header": "license-header --ignore 'proto/**' --ignore 'impl/*/gen/**' --ignore 'impl/protobuf.js/wrapper.js'"
   },
   "licenseHeader": {
     "licenseType": "apache",
