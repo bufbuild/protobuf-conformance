@@ -27,7 +27,7 @@ esac
 
 curl -sSL \
   "https://github.com/protocolbuffers/protobuf-javascript/releases/download/v${version}/protobuf-javascript-${version}-${platform}.tar.gz" \
-  | tar xz -C . --strip-components 1
+  | tar xz -C . --strip-components 1 bin/protoc-gen-js
 
 # generate code
 rm -rf gen/*
