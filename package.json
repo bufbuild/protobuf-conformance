@@ -1,5 +1,16 @@
 {
   "name": "protobuf-conformance",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "license-header": "license-header --ignore 'proto/**' --ignore 'impl/*/gen/**'"
+  },
+  "licenseHeader": {
+    "licenseType": "apache",
+    "yearRange": "2023-2024",
+    "copyrightHolder": "Buf Technologies, Inc."
+  },
+  "dependencies": {
+    "@bufbuild/license-header": "^0.0.4"
+  }
 }
