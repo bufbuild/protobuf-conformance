@@ -15,38 +15,44 @@
 // limitations under the License.
 
 import {
-  ConformanceRequest,
-  ConformanceResponse,
-  FailureSet,
+  type ConformanceRequest,
+  ConformanceRequestSchema,
+  type ConformanceResponse,
+  ConformanceResponseSchema,
+  FailureSetSchema,
   TestCategory,
   WireFormat,
 } from "./gen/conformance/conformance_pb.js";
-import { TestAllTypesProto3 } from "./gen/google/protobuf/test_messages_proto3_pb.js";
-import { extension_int32, TestAllTypesProto2 } from "./gen/google/protobuf/test_messages_proto2_pb.js";
 import { readSync, writeSync } from "fs";
+import { file_google_protobuf_test_messages_proto3 } from "./gen/google/protobuf/test_messages_proto3_pb.js";
+import { file_google_protobuf_test_messages_proto2 } from "./gen/google/protobuf/test_messages_proto2_pb.js";
 import {
-  Any,
+  file_google_protobuf_any,
+  file_google_protobuf_duration,
+  file_google_protobuf_field_mask,
+  file_google_protobuf_struct,
+  file_google_protobuf_timestamp,
+  file_google_protobuf_wrappers,
+} from "@bufbuild/protobuf/wkt";
+import {
   createRegistry,
-  Duration,
-  FieldMask,
-  Int32Value,
-  Message,
-  Struct,
-  Timestamp,
-  Value,
+  create,
+  toBinary,
+  fromBinary,
+  toJsonString,
+  fromJsonString,
+  type Message,
 } from "@bufbuild/protobuf";
 
 const registry = createRegistry(
-  Value,
-  Struct,
-  FieldMask,
-  Timestamp,
-  Duration,
-  Int32Value,
-  TestAllTypesProto3,
-  TestAllTypesProto2,
-  Any,
-  extension_int32
+  file_google_protobuf_test_messages_proto2,
+  file_google_protobuf_test_messages_proto3,
+  file_google_protobuf_any,
+  file_google_protobuf_struct,
+  file_google_protobuf_field_mask,
+  file_google_protobuf_timestamp,
+  file_google_protobuf_duration,
+  file_google_protobuf_wrappers,
 );
 
 function main() {
@@ -57,23 +63,26 @@ function main() {
     }
   } catch (e) {
     process.stderr.write(
-      `conformance.ts: exiting after ${testCount} tests: ${String(e)}`
+      `conformance.ts: exiting after ${testCount} tests: ${String(e)}`,
     );
     process.exit(1);
   }
 }
 
 function test(request: ConformanceRequest): ConformanceResponse["result"] {
-  if (request.messageType === FailureSet.typeName) {
+  if (request.messageType === FailureSetSchema.typeName) {
     // > The conformance runner will request a list of failures as the first request.
     // > This will be known by message_type == "conformance.FailureSet", a conformance
     // > test should return a serialized FailureSet in protobuf_payload.
-    const failureSet = new FailureSet();
-    return { case: "protobufPayload", value: failureSet.toBinary() };
+    const failureSet = create(FailureSetSchema);
+    return {
+      case: "protobufPayload",
+      value: toBinary(FailureSetSchema, failureSet),
+    };
   }
 
-  const payloadType = registry.findMessage(request.messageType);
-  if (!payloadType) {
+  const payloadSchema = registry.getMessage(request.messageType);
+  if (!payloadSchema) {
     return {
       case: "runtimeError",
       value: `unknown request message type ${request.messageType}`,
@@ -85,15 +94,15 @@ function test(request: ConformanceRequest): ConformanceResponse["result"] {
   try {
     switch (request.payload.case) {
       case "protobufPayload":
-        payload = payloadType.fromBinary(request.payload.value);
+        payload = fromBinary(payloadSchema, request.payload.value);
         break;
 
       case "jsonPayload":
-        payload = payloadType.fromJsonString(request.payload.value, {
+        payload = fromJsonString(payloadSchema, request.payload.value, {
           ignoreUnknownFields:
             request.testCategory ===
             TestCategory.JSON_IGNORE_UNKNOWN_PARSING_TEST,
-          typeRegistry: registry,
+          registry,
         });
         break;
 
@@ -118,14 +127,14 @@ function test(request: ConformanceRequest): ConformanceResponse["result"] {
       case WireFormat.PROTOBUF:
         return {
           case: "protobufPayload",
-          value: payload.toBinary(),
+          value: toBinary(payloadSchema, payload),
         };
 
       case WireFormat.JSON:
         return {
           case: "jsonPayload",
-          value: payload.toJsonString({
-            typeRegistry: registry,
+          value: toJsonString(payloadSchema, payload, {
+            registry,
           }),
         };
 
@@ -152,7 +161,7 @@ function test(request: ConformanceRequest): ConformanceResponse["result"] {
 // Returns true if the test ran successfully, false on legitimate EOF.
 // If EOF is encountered in an unexpected place, raises IOError.
 function testIo(
-  test: (request: ConformanceRequest) => ConformanceResponse["result"]
+  test: (request: ConformanceRequest) => ConformanceResponse["result"],
 ): boolean {
   setBlockingStdout();
   const requestLengthBuf = readBuffer(4);
@@ -164,10 +173,10 @@ function testIo(
   if (serializedRequest === "EOF") {
     throw "Failed to read request.";
   }
-  const request = ConformanceRequest.fromBinary(serializedRequest);
-  const response = new ConformanceResponse();
+  const request = fromBinary(ConformanceRequestSchema, serializedRequest);
+  const response = create(ConformanceResponseSchema);
   response.result = test(request);
-  const serializedResponse = response.toBinary();
+  const serializedResponse = toBinary(ConformanceResponseSchema, response);
   const responseLengthBuf = Buffer.alloc(4);
   responseLengthBuf.writeInt32LE(serializedResponse.length, 0);
   writeBuffer(responseLengthBuf);
@@ -201,7 +210,7 @@ function writeBuffer(buffer: Buffer): void {
       1,
       buffer,
       totalWritten,
-      buffer.length - totalWritten
+      buffer.length - totalWritten,
     );
   }
 }
