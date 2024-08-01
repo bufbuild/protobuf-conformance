@@ -87,8 +87,8 @@ function test(request: ConformanceRequest): ConformanceResponse["result"] {
     };
   }
 
-  const payloadDesc = registry.getMessage(request.messageType);
-  if (!payloadDesc) {
+  const payloadSchema = registry.getMessage(request.messageType);
+  if (!payloadSchema) {
     return {
       case: "runtimeError",
       value: `unknown request message type ${request.messageType}`,
@@ -100,11 +100,11 @@ function test(request: ConformanceRequest): ConformanceResponse["result"] {
   try {
     switch (request.payload.case) {
       case "protobufPayload":
-        payload = fromBinary(payloadDesc, request.payload.value);
+        payload = fromBinary(payloadSchema, request.payload.value);
         break;
 
       case "jsonPayload":
-        payload = fromJsonString(payloadDesc, request.payload.value, {
+        payload = fromJsonString(payloadSchema, request.payload.value, {
           ignoreUnknownFields:
             request.testCategory ===
             TestCategory.JSON_IGNORE_UNKNOWN_PARSING_TEST,
@@ -133,13 +133,13 @@ function test(request: ConformanceRequest): ConformanceResponse["result"] {
       case WireFormat.PROTOBUF:
         return {
           case: "protobufPayload",
-          value: toBinary(payloadDesc, payload),
+          value: toBinary(payloadSchema, payload),
         };
 
       case WireFormat.JSON:
         return {
           case: "jsonPayload",
-          value: toJsonString(payloadDesc, payload, {
+          value: toJsonString(payloadSchema, payload, {
             registry,
           }),
         };
