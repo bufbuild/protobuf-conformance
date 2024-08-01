@@ -14,10 +14,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import { create, fromBinary, toBinary } from "@bufbuild/protobuf";
 import {
-  ConformanceRequest,
-  ConformanceResponse,
-  FailureSet,
+  type ConformanceRequest,
+  ConformanceRequestSchema,
+  type ConformanceResponse,
+  ConformanceResponseSchema,
+  FailureSetSchema,
 } from "./gen/conformance/conformance_pb.js";
 import { readSync, writeSync } from "fs";
 
@@ -29,30 +32,33 @@ function main() {
     }
   } catch (e) {
     process.stderr.write(
-      `conformance.ts: exiting after ${testCount} tests: ${String(e)}`
+      `conformance.ts: exiting after ${testCount} tests: ${String(e)}`,
     );
     process.exit(1);
   }
 }
 
 function test(request: ConformanceRequest): ConformanceResponse["result"] {
-  if (request.messageType === FailureSet.typeName) {
+  if (request.messageType === FailureSetSchema.typeName) {
     // > The conformance runner will request a list of failures as the first request.
     // > This will be known by message_type == "conformance.FailureSet", a conformance
     // > test should return a serialized FailureSet in protobuf_payload.
-    const failureSet = new FailureSet();
-    return { case: "protobufPayload", value: failureSet.toBinary() };
+    const failureSet = create(FailureSetSchema);
+    return {
+      case: "protobufPayload",
+      value: toBinary(FailureSetSchema, failureSet),
+    };
   }
   return {
     case: "runtimeError",
-    value: "not implemented"
+    value: "not implemented",
   };
 }
 
 // Returns true if the test ran successfully, false on legitimate EOF.
 // If EOF is encountered in an unexpected place, raises IOError.
 function testIo(
-  test: (request: ConformanceRequest) => ConformanceResponse["result"]
+  test: (request: ConformanceRequest) => ConformanceResponse["result"],
 ): boolean {
   setBlockingStdout();
   const requestLengthBuf = readBuffer(4);
@@ -64,10 +70,10 @@ function testIo(
   if (serializedRequest === "EOF") {
     throw "Failed to read request.";
   }
-  const request = ConformanceRequest.fromBinary(serializedRequest);
-  const response = new ConformanceResponse();
+  const request = fromBinary(ConformanceRequestSchema, serializedRequest);
+  const response = create(ConformanceResponseSchema);
   response.result = test(request);
-  const serializedResponse = response.toBinary();
+  const serializedResponse = toBinary(ConformanceResponseSchema, response);
   const responseLengthBuf = Buffer.alloc(4);
   responseLengthBuf.writeInt32LE(serializedResponse.length, 0);
   writeBuffer(responseLengthBuf);
@@ -101,7 +107,7 @@ function writeBuffer(buffer: Buffer): void {
       1,
       buffer,
       totalWritten,
-      buffer.length - totalWritten
+      buffer.length - totalWritten,
     );
   }
 }

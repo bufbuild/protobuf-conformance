@@ -10,7 +10,8 @@
     "yearRange": "2023-2024",
     "copyrightHolder": "Buf Technologies, Inc."
   },
-  "dependencies": {
-    "@bufbuild/license-header": "^0.0.4"
+  "devDependencies": {
+    "@bufbuild/license-header": "^0.0.4",
+    "prettier": "^3.3.3"
   }
 }
