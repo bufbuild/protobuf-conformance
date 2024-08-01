@@ -23,20 +23,16 @@ import {
   TestCategory,
   WireFormat,
 } from "./gen/conformance/conformance_pb.js";
-import { TestAllTypesProto3Schema } from "./gen/google/protobuf/test_messages_proto3_pb.js";
-import {
-  extension_int32,
-  TestAllTypesProto2Schema,
-} from "./gen/google/protobuf/test_messages_proto2_pb.js";
 import { readSync, writeSync } from "fs";
+import { file_google_protobuf_test_messages_proto3 } from "./gen/google/protobuf/test_messages_proto3_pb.js";
+import { file_google_protobuf_test_messages_proto2 } from "./gen/google/protobuf/test_messages_proto2_pb.js";
 import {
-  AnySchema,
-  DurationSchema,
-  FieldMaskSchema,
-  Int32ValueSchema,
-  StructSchema,
-  TimestampSchema,
-  ValueSchema,
+  file_google_protobuf_any,
+  file_google_protobuf_duration,
+  file_google_protobuf_field_mask,
+  file_google_protobuf_struct,
+  file_google_protobuf_timestamp,
+  file_google_protobuf_wrappers,
 } from "@bufbuild/protobuf/wkt";
 import {
   createRegistry,
@@ -49,16 +45,14 @@ import {
 } from "@bufbuild/protobuf";
 
 const registry = createRegistry(
-  ValueSchema,
-  StructSchema,
-  FieldMaskSchema,
-  TimestampSchema,
-  DurationSchema,
-  Int32ValueSchema,
-  TestAllTypesProto3Schema,
-  TestAllTypesProto2Schema,
-  AnySchema,
-  extension_int32,
+  file_google_protobuf_test_messages_proto2,
+  file_google_protobuf_test_messages_proto3,
+  file_google_protobuf_any,
+  file_google_protobuf_struct,
+  file_google_protobuf_field_mask,
+  file_google_protobuf_timestamp,
+  file_google_protobuf_duration,
+  file_google_protobuf_wrappers,
 );
 
 function main() {
