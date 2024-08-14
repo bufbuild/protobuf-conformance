@@ -1,14 +1,9 @@
 {
-  "include": [
-    "**/*.ts"
-  ],
-  "exclude": [
-    "vendor",
-  ],
+  "include": ["**/*.ts"],
+  "exclude": ["vendor"],
   "compilerOptions": {
     "esModuleInterop": true,
     "target": "es2020",
-    "importsNotUsedAsValues": "error",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitAny": true,

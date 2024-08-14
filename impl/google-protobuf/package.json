@@ -1,10 +1,23 @@
 {
   "name": "google-protobuf-conformance",
+  "conformanceMeta": {
+    "name": "google-protobuf",
+    "githubUrl": "https://github.com/protocolbuffers/protobuf-javascript",
+    "editions": false,
+    "javascript": true,
+    "typescript": false,
+    "standardPlugin": true
+  },
   "private": true,
+  "scripts": {
+    "pregenerate": "bash pregenerate.sh",
+    "generate": "buf generate",
+    "test": "conformance_test_runner --enforce_recommended --failure_list failing_tests.txt --text_format_failure_list failing_tests_text_format.txt --output_dir . runner.js"
+  },
   "dependencies": {
     "google-protobuf": "^3.21.4"
   },
   "devDependencies": {
-    "@bufbuild/buf": "^1.35.1"
+    "@bufbuild/buf": "^1.36.0"
   }
 }

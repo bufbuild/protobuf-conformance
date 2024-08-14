@@ -1,6 +1,8 @@
-version: v1
+version: v2
+clean: true
+inputs:
+  - directory: ../../proto
 plugins:
-  - name: js
-    path: ./protoc-gen-js
+  - local: ["./protoc-gen-js"]
     opt: import_style=commonjs,binary
     out: gen

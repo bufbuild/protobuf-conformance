@@ -68,7 +68,7 @@ function writeBuffer(buffer) {
       1,
       buffer,
       totalWritten,
-      buffer.length - totalWritten
+      buffer.length - totalWritten,
     );
   }
 }
@@ -130,7 +130,7 @@ function doTest(request) {
   ) {
     try {
       const testMessage = TestAllTypesProto2.deserializeBinary(
-        request.getProtobufPayload()
+        request.getProtobufPayload(),
       );
       response.setProtobufPayload(testMessage.serializeBinary());
     } catch (err) {
@@ -142,7 +142,7 @@ function doTest(request) {
   ) {
     try {
       const testMessage = TestAllTypesProto3.deserializeBinary(
-        request.getProtobufPayload()
+        request.getProtobufPayload(),
       );
       response.setProtobufPayload(testMessage.serializeBinary());
     } catch (err) {
@@ -150,7 +150,7 @@ function doTest(request) {
     }
   } else {
     throw new Error(
-      `Payload message not supported: ${request.getMessageType()}.`
+      `Payload message not supported: ${request.getMessageType()}.`,
     );
   }
 

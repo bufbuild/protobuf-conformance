@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // Copyright 2023-2024 Buf Technologies, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -30,7 +32,7 @@ function main() {
     }
   } catch (e) {
     process.stderr.write(
-      `conformance.ts: exiting after ${testCount} tests: ${String(e)}`
+      `conformance.ts: exiting after ${testCount} tests: ${String(e)}`,
     );
     process.exit(1);
   }
@@ -51,17 +53,17 @@ function test(request: ConformanceRequest): ConformanceResponse["result"] {
 
   let messageType: typeof TestAllTypesProto3 | typeof TestAllTypesProto2;
   switch (request.messageType) {
-      case "protobuf_test_messages.proto3.TestAllTypesProto3":
-          messageType = TestAllTypesProto3;
-          break;
-      case "protobuf_test_messages.proto2.TestAllTypesProto2":
-          messageType = TestAllTypesProto2;
-          break;
-      default:
-          return {
-              $case: "runtimeError",
-              runtimeError: `unknown request message type ${request.messageType}`,
-          };
+    case "protobuf_test_messages.proto3.TestAllTypesProto3":
+      messageType = TestAllTypesProto3;
+      break;
+    case "protobuf_test_messages.proto2.TestAllTypesProto2":
+      messageType = TestAllTypesProto2;
+      break;
+    default:
+      return {
+        $case: "runtimeError",
+        runtimeError: `unknown request message type ${request.messageType}`,
+      };
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -179,7 +181,7 @@ function writeBuffer(buffer: Buffer): void {
       1,
       buffer,
       totalWritten,
-      buffer.length - totalWritten
+      buffer.length - totalWritten,
     );
   }
 }
