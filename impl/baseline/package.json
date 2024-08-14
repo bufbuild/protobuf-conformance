@@ -1,13 +1,26 @@
 {
   "name": "baseline",
+  "conformanceMeta": {
+    "name": "baseline",
+    "githubUrl": "https://github.com/bufbuild/protobuf-conformance",
+    "editions": true,
+    "javascript": true,
+    "typescript": true,
+    "standardPlugin": true
+  },
   "private": true,
   "type": "module",
+  "scripts": {
+    "generate": "buf generate",
+    "build": "tsc --noEmit",
+    "test": "conformance_test_runner --enforce_recommended --failure_list failing_tests.txt --text_format_failure_list failing_tests_text_format.txt --output_dir . runner.ts"
+  },
   "dependencies": {
     "@bufbuild/protobuf": "^2.0.0",
     "@bufbuild/protoc-gen-es": "^2.0.0"
   },
   "devDependencies": {
-    "@bufbuild/buf": "^1.35.1",
+    "@bufbuild/buf": "^1.36.0",
     "@types/node": "^22.0.2",
     "tsx": "^4.16.4",
     "typescript": "^5.5.4"

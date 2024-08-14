@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# install dependencies
-npm ci
+# clean src/gen
+rm -rf gen/*
 
 # protoc-gen-js is not available via NPM. we download it from the GitHub
 # release page https://github.com/protocolbuffers/protobuf-javascript/releases
@@ -28,13 +28,3 @@ esac
 curl -sSL \
   "https://github.com/protocolbuffers/protobuf-javascript/releases/download/v${version}/protobuf-javascript-${version}-${platform}.tar.gz" \
   | tar xz -C . --strip-components 1 bin/protoc-gen-js
-
-# generate code
-rm -rf gen/*
-npx buf generate ../../proto
-
-# finally, run the tests
-conformance_test_runner --enforce_recommended \
-  --failure_list failing_tests.txt \
-  --text_format_failure_list failing_tests_text_format.txt \
-  --output_dir . runner.js

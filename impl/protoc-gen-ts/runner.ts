@@ -14,7 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import {Message} from "google-protobuf";
+import { Message } from "google-protobuf";
 import { conformance } from "./gen/conformance/conformance";
 import { protobuf_test_messages } from "./gen/google/protobuf/test_messages_proto3";
 import { google as googleAny } from "./gen/google/protobuf/any";
@@ -29,7 +29,7 @@ type MessageCtor = {
   new (): Message;
   deserialize(bytes: Uint8Array): Message;
   fromObject(object: unknown): Message;
-}
+};
 
 const registry: Record<string, MessageCtor> = {
   "google.protobuf.Any": googleAny.protobuf.Any,
@@ -38,7 +38,8 @@ const registry: Record<string, MessageCtor> = {
   "google.protobuf.Struct": googleStruct.protobuf.Struct,
   "google.protobuf.Value": googleStruct.protobuf.Value,
   "google.protobuf.Timestamp": googleTimestamp.protobuf.Timestamp,
-  "protobuf_test_messages.proto3.TestAllTypesProto3": protobuf_test_messages.proto3.TestAllTypesProto3
+  "protobuf_test_messages.proto3.TestAllTypesProto3":
+    protobuf_test_messages.proto3.TestAllTypesProto3,
 };
 
 function main() {
@@ -49,13 +50,16 @@ function main() {
     }
   } catch (e) {
     process.stderr.write(
-        `conformance.ts: exiting after ${testCount} tests: ${String(e)}`
+      `conformance.ts: exiting after ${testCount} tests: ${String(e)}`,
     );
     process.exit(1);
   }
 }
 
-function test(request: conformance.ConformanceRequest, response: conformance.ConformanceResponse): void {
+function test(
+  request: conformance.ConformanceRequest,
+  response: conformance.ConformanceResponse,
+): void {
   if (request.message_type === "conformance.FailureSet") {
     // > The conformance runner will request a list of failures as the first request.
     // > This will be known by message_type == "conformance.FailureSet", a conformance
@@ -75,7 +79,7 @@ function test(request: conformance.ConformanceRequest, response: conformance.Con
   try {
     switch (request.payload) {
       case "protobuf_payload":
-        payload = payloadType.deserialize(request.protobuf_payload)
+        payload = payloadType.deserialize(request.protobuf_payload);
         break;
       case "json_payload":
         payload = payloadType.fromObject(JSON.parse(request.json_payload));
@@ -119,7 +123,10 @@ function test(request: conformance.ConformanceRequest, response: conformance.Con
 // Returns true if the test ran successfully, false on legitimate EOF.
 // If EOF is encountered in an unexpected place, raises IOError.
 function testIo(
-    test: (request: conformance.ConformanceRequest, response: conformance.ConformanceResponse) => void
+  test: (
+    request: conformance.ConformanceRequest,
+    response: conformance.ConformanceResponse,
+  ) => void,
 ): boolean {
   setBlockingStdout();
   const requestLengthBuf = readBuffer(4);
@@ -165,10 +172,10 @@ function writeBuffer(buffer: Buffer): void {
   let totalWritten = 0;
   while (totalWritten < buffer.length) {
     totalWritten += writeSync(
-        1,
-        buffer,
-        totalWritten,
-        buffer.length - totalWritten
+      1,
+      buffer,
+      totalWritten,
+      buffer.length - totalWritten,
     );
   }
 }

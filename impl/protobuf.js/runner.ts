@@ -70,7 +70,7 @@ function main() {
     }
   } catch (e) {
     process.stderr.write(
-      `conformance.ts: exiting after ${testCount} tests: ${String(e)}`
+      `conformance.ts: exiting after ${testCount} tests: ${String(e)}`,
     );
     process.exit(1);
   }
@@ -113,7 +113,7 @@ function test(request: protos.conformance.ConformanceRequest): Result {
       // if (request.testCategory === TestCategory.JSON_IGNORE_UNKNOWN_PARSING_TEST;
       // Further, we first have to parse the string payload into a JSON object and then call fromObject
       payload = payloadType.fromObject(
-        JSON.parse(request.jsonPayload) as MessageType
+        JSON.parse(request.jsonPayload) as MessageType,
       );
     } else {
       // We use a failure list instead of skipping, because that is more transparent.
@@ -142,7 +142,7 @@ function test(request: protos.conformance.ConformanceRequest): Result {
         return {
           jsonPayload: JSON.stringify(
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            payloadType.toObject(payload as any, {json: true, bytes: String})
+            payloadType.toObject(payload as any, { json: true, bytes: String }),
           ),
         };
 
@@ -168,7 +168,7 @@ function test(request: protos.conformance.ConformanceRequest): Result {
 // Returns true if the test ran successfully, false on legitimate EOF.
 // If EOF is encountered in an unexpected place, raises IOError.
 function testIo(
-  test: (request: protos.conformance.ConformanceRequest) => Result
+  test: (request: protos.conformance.ConformanceRequest) => Result,
 ): boolean {
   setBlockingStdout();
   const requestLengthBuf = readBuffer(4);
@@ -217,7 +217,7 @@ function writeBuffer(buffer: Buffer): void {
       1,
       buffer,
       totalWritten,
-      buffer.length - totalWritten
+      buffer.length - totalWritten,
     );
   }
 }

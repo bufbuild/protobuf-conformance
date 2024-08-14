@@ -20,8 +20,14 @@ import {
   FailureSet,
   WireFormat,
 } from "./gen/conformance/conformance.pb.js";
-import { TestAllTypesProto2, TestAllTypesProto2JSON } from "./gen/google/protobuf/test_messages_proto2.pb.js";
-import { TestAllTypesProto3, TestAllTypesProto3JSON } from "./gen/google/protobuf/test_messages_proto3.pb.js";
+import {
+  TestAllTypesProto2,
+  TestAllTypesProto2JSON,
+} from "./gen/google/protobuf/test_messages_proto2.pb.js";
+import {
+  TestAllTypesProto3,
+  TestAllTypesProto3JSON,
+} from "./gen/google/protobuf/test_messages_proto3.pb.js";
 import { readSync, writeSync } from "fs";
 
 const proto2serializer = {
@@ -29,14 +35,14 @@ const proto2serializer = {
   decodeJson: TestAllTypesProto2JSON.decode.bind(TestAllTypesProto2JSON),
   encodeProtobuf: TestAllTypesProto2.encode.bind(TestAllTypesProto2),
   encodeJson: TestAllTypesProto2JSON.encode.bind(TestAllTypesProto2JSON),
-}
+};
 
 const proto3serializer = {
   decodeProtobuf: TestAllTypesProto3.decode.bind(TestAllTypesProto3),
   decodeJson: TestAllTypesProto3JSON.decode.bind(TestAllTypesProto3JSON),
   encodeProtobuf: TestAllTypesProto3.encode.bind(TestAllTypesProto3),
   encodeJson: TestAllTypesProto3JSON.encode.bind(TestAllTypesProto3JSON),
-}
+};
 
 function main() {
   let testCount = 0;
@@ -46,7 +52,7 @@ function main() {
     }
   } catch (e) {
     process.stderr.write(
-      `conformance.ts: exiting after ${testCount} tests: ${String(e)}`
+      `conformance.ts: exiting after ${testCount} tests: ${String(e)}`,
     );
     process.exit(1);
   }
@@ -58,30 +64,30 @@ function test(request: ConformanceRequest): ConformanceResponse {
     // > This will be known by message_type == "conformance.FailureSet", a conformance
     // > test should return a serialized FailureSet in protobuf_payload.
     return {
-      protobufPayload: FailureSet.encode({})
+      protobufPayload: FailureSet.encode({}),
     };
   }
 
-  const serializer = request.messageType === "protobuf_test_messages.proto3.TestAllTypesProto3"
-    ? proto3serializer
-    : request.messageType === "protobuf_test_messages.proto2.TestAllTypesProto2"
-      ? proto2serializer
-      : undefined;
+  const serializer =
+    request.messageType === "protobuf_test_messages.proto3.TestAllTypesProto3"
+      ? proto3serializer
+      : request.messageType ===
+          "protobuf_test_messages.proto2.TestAllTypesProto2"
+        ? proto2serializer
+        : undefined;
 
   if (!serializer) {
-    return { runtimeError: `unknown request message type ${request.messageType}` };
+    return {
+      runtimeError: `unknown request message type ${request.messageType}`,
+    };
   }
 
   let testMessage: object;
   try {
     if (request.protobufPayload) {
-      testMessage = serializer.decodeProtobuf(
-        request.protobufPayload
-      );
+      testMessage = serializer.decodeProtobuf(request.protobufPayload);
     } else if (request.jsonPayload) {
-      testMessage = serializer.decodeJson(
-        request.jsonPayload
-      );
+      testMessage = serializer.decodeJson(request.jsonPayload);
     } else {
       // We use a failure list instead of skipping, because that is more transparent.
       return { runtimeError: `${request} not supported` };
@@ -110,7 +116,9 @@ function test(request: ConformanceRequest): ConformanceResponse {
         return { skipped: "Text format not supported." };
 
       default:
-        return { runtimeError: `unknown requested output format ${request.requestedOutputFormat}` };
+        return {
+          runtimeError: `unknown requested output format ${request.requestedOutputFormat}`,
+        };
     }
   } catch (err) {
     // > If the input was successfully parsed but errors occurred when
@@ -123,7 +131,7 @@ function test(request: ConformanceRequest): ConformanceResponse {
 // Returns true if the test ran successfully, false on legitimate EOF.
 // If EOF is encountered in an unexpected place, raises IOError.
 function testIo(
-  test: (request: ConformanceRequest) => ConformanceResponse
+  test: (request: ConformanceRequest) => ConformanceResponse,
 ): boolean {
   setBlockingStdout();
 
@@ -176,7 +184,7 @@ function writeBuffer(buffer: Buffer): void {
       1,
       buffer,
       totalWritten,
-      buffer.length - totalWritten
+      buffer.length - totalWritten,
     );
   }
 }

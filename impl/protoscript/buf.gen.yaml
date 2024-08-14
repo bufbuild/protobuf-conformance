@@ -1,6 +1,8 @@
-version: v1
+version: v2
+clean: true
+inputs:
+  - directory: ../../proto
 plugins:
-  - name: protoscript
-    path: node_modules/protoscript/dist/compiler.js
+  - local: ["node_modules/protoscript/dist/compiler.js"]
     opt: language=typescript
     out: gen

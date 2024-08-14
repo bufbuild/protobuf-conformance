@@ -1,20 +1,26 @@
 {
   "name": "protoc-gen-ts",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "conformanceMeta": {
+    "name": "protoc-gen-ts",
+    "githubUrl": "https://github.com/thesayyn/protoc-gen-ts",
+    "editions": false,
+    "javascript": false,
+    "typescript": true,
+    "standardPlugin": true
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "generate": "bash generate.sh",
+    "build": "bash build.sh",
+    "test": "conformance_test_runner --enforce_recommended --failure_list failing_tests.txt --text_format_failure_list failing_tests_text_format.txt --output_dir . runner.ts"
+  },
   "dependencies": {
-    "@bufbuild/buf": "^1.27.0",
     "@types/google-protobuf": "^3.15.7",
     "@types/node": "^20.8.4",
     "google-protobuf": "^3.21.2",
     "protoc-gen-ts": "^0.8.7",
     "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "@bufbuild/buf": "^1.36.0"
   }
 }
