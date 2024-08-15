@@ -1341,3 +1341,9 @@ Required.Proto2.ProtobufInput.ValidDataScalar.SINT64[3].ProtobufOutput
 Required.Proto3.ProtobufInput.ValidDataScalar.INT64[3].ProtobufOutput
 Required.Proto3.ProtobufInput.ValidDataScalar.SFIXED64[3].ProtobufOutput
 Required.Proto3.ProtobufInput.ValidDataScalar.SINT64[3].ProtobufOutput
+Recommended.Proto2.JsonInput.IgnoreUnknownEnumStringValueInMapPart.ProtobufOutput
+Recommended.Proto2.JsonInput.IgnoreUnknownEnumStringValueInRepeatedPart.ProtobufOutput
+Recommended.Proto3.JsonInput.IgnoreUnknownEnumStringValueInMapPart.ProtobufOutput
+Recommended.Proto3.JsonInput.IgnoreUnknownEnumStringValueInRepeatedPart.ProtobufOutput
+Required.Proto2.ProtobufInput.UnknownOrdering.ProtobufOutput
+Required.Proto3.ProtobufInput.UnknownOrdering.ProtobufOutput

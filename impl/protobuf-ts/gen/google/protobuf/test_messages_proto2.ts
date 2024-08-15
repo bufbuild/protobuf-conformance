@@ -674,6 +674,19 @@ export interface TestAllTypesProto2_Data {
     groupUint32?: number;
 }
 /**
+ * @generated from protobuf message protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField
+ */
+export interface TestAllTypesProto2_MultiWordGroupField {
+    /**
+     * @generated from protobuf field: optional int32 group_int32 = 205;
+     */
+    groupInt32?: number;
+    /**
+     * @generated from protobuf field: optional uint32 group_uint32 = 206;
+     */
+    groupUint32?: number;
+}
+/**
  * message_set test case.
  *
  * @generated from protobuf message protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect
@@ -729,6 +742,19 @@ export interface ForeignMessageProto2 {
      * @generated from protobuf field: optional int32 c = 1;
      */
     c?: number;
+}
+/**
+ * @generated from protobuf message protobuf_test_messages.proto2.GroupField
+ */
+export interface GroupField {
+    /**
+     * @generated from protobuf field: optional int32 group_int32 = 122;
+     */
+    groupInt32?: number;
+    /**
+     * @generated from protobuf field: optional uint32 group_uint32 = 123;
+     */
+    groupUint32?: number;
 }
 /**
  * @generated from protobuf message protobuf_test_messages.proto2.UnknownToTestAllTypes
@@ -2777,6 +2803,59 @@ class TestAllTypesProto2_Data$Type extends MessageType<TestAllTypesProto2_Data> 
  */
 export const TestAllTypesProto2_Data = new TestAllTypesProto2_Data$Type();
 // @generated message type with reflection information, may provide speed optimized methods
+class TestAllTypesProto2_MultiWordGroupField$Type extends MessageType<TestAllTypesProto2_MultiWordGroupField> {
+    constructor() {
+        super("protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField", [
+            { no: 205, name: "group_int32", kind: "scalar", opt: true, T: 5 /*ScalarType.INT32*/ },
+            { no: 206, name: "group_uint32", kind: "scalar", opt: true, T: 13 /*ScalarType.UINT32*/ }
+        ]);
+    }
+    create(value?: PartialMessage<TestAllTypesProto2_MultiWordGroupField>): TestAllTypesProto2_MultiWordGroupField {
+        const message = globalThis.Object.create((this.messagePrototype!));
+        if (value !== undefined)
+            reflectionMergePartial<TestAllTypesProto2_MultiWordGroupField>(this, message, value);
+        return message;
+    }
+    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: TestAllTypesProto2_MultiWordGroupField): TestAllTypesProto2_MultiWordGroupField {
+        let message = target ?? this.create(), end = reader.pos + length;
+        while (reader.pos < end) {
+            let [fieldNo, wireType] = reader.tag();
+            switch (fieldNo) {
+                case /* optional int32 group_int32 */ 205:
+                    message.groupInt32 = reader.int32();
+                    break;
+                case /* optional uint32 group_uint32 */ 206:
+                    message.groupUint32 = reader.uint32();
+                    break;
+                default:
+                    let u = options.readUnknownField;
+                    if (u === "throw")
+                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
+                    let d = reader.skip(wireType);
+                    if (u !== false)
+                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
+            }
+        }
+        return message;
+    }
+    internalBinaryWrite(message: TestAllTypesProto2_MultiWordGroupField, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
+        /* optional int32 group_int32 = 205; */
+        if (message.groupInt32 !== undefined)
+            writer.tag(205, WireType.Varint).int32(message.groupInt32);
+        /* optional uint32 group_uint32 = 206; */
+        if (message.groupUint32 !== undefined)
+            writer.tag(206, WireType.Varint).uint32(message.groupUint32);
+        let u = options.writeUnknownFields;
+        if (u !== false)
+            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+        return writer;
+    }
+}
+/**
+ * @generated MessageType for protobuf message protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField
+ */
+export const TestAllTypesProto2_MultiWordGroupField = new TestAllTypesProto2_MultiWordGroupField$Type();
+// @generated message type with reflection information, may provide speed optimized methods
 class TestAllTypesProto2_MessageSetCorrect$Type extends MessageType<TestAllTypesProto2_MessageSetCorrect> {
     constructor() {
         super("protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect", []);
@@ -2939,6 +3018,59 @@ class ForeignMessageProto2$Type extends MessageType<ForeignMessageProto2> {
  * @generated MessageType for protobuf message protobuf_test_messages.proto2.ForeignMessageProto2
  */
 export const ForeignMessageProto2 = new ForeignMessageProto2$Type();
+// @generated message type with reflection information, may provide speed optimized methods
+class GroupField$Type extends MessageType<GroupField> {
+    constructor() {
+        super("protobuf_test_messages.proto2.GroupField", [
+            { no: 122, name: "group_int32", kind: "scalar", opt: true, T: 5 /*ScalarType.INT32*/ },
+            { no: 123, name: "group_uint32", kind: "scalar", opt: true, T: 13 /*ScalarType.UINT32*/ }
+        ]);
+    }
+    create(value?: PartialMessage<GroupField>): GroupField {
+        const message = globalThis.Object.create((this.messagePrototype!));
+        if (value !== undefined)
+            reflectionMergePartial<GroupField>(this, message, value);
+        return message;
+    }
+    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: GroupField): GroupField {
+        let message = target ?? this.create(), end = reader.pos + length;
+        while (reader.pos < end) {
+            let [fieldNo, wireType] = reader.tag();
+            switch (fieldNo) {
+                case /* optional int32 group_int32 */ 122:
+                    message.groupInt32 = reader.int32();
+                    break;
+                case /* optional uint32 group_uint32 */ 123:
+                    message.groupUint32 = reader.uint32();
+                    break;
+                default:
+                    let u = options.readUnknownField;
+                    if (u === "throw")
+                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
+                    let d = reader.skip(wireType);
+                    if (u !== false)
+                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
+            }
+        }
+        return message;
+    }
+    internalBinaryWrite(message: GroupField, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
+        /* optional int32 group_int32 = 122; */
+        if (message.groupInt32 !== undefined)
+            writer.tag(122, WireType.Varint).int32(message.groupInt32);
+        /* optional uint32 group_uint32 = 123; */
+        if (message.groupUint32 !== undefined)
+            writer.tag(123, WireType.Varint).uint32(message.groupUint32);
+        let u = options.writeUnknownFields;
+        if (u !== false)
+            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+        return writer;
+    }
+}
+/**
+ * @generated MessageType for protobuf message protobuf_test_messages.proto2.GroupField
+ */
+export const GroupField = new GroupField$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class UnknownToTestAllTypes$Type extends MessageType<UnknownToTestAllTypes> {
     constructor() {

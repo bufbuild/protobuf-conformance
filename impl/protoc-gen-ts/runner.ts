@@ -68,6 +68,15 @@ function test(
     return;
   }
 
+  // Returning a runtime error for the test Required.Proto3.ProtobufInput.UnknownOrdering.ProtobufOutput
+  // crashes the runner.
+  if (
+    is_Required_Proto3_ProtobufInput_UnknownOrdering_ProtobufOutput(request)
+  ) {
+    response.protobuf_payload = new Uint8Array();
+    return;
+  }
+
   const payloadType = registry[request.message_type];
   if (!payloadType) {
     response.runtime_error = `unknown request message type ${request.message_type}`;
@@ -118,6 +127,42 @@ function test(
     // > this field.
     response.serialize_error = String(err);
   }
+}
+
+function is_Required_Proto3_ProtobufInput_UnknownOrdering_ProtobufOutput(
+  request: conformance.ConformanceRequest,
+) {
+  if (request.test_category != conformance.TestCategory.BINARY_TEST) {
+    return false;
+  }
+  if (request.requested_output_format != conformance.WireFormat.PROTOBUF) {
+    return false;
+  }
+  if (
+    request.message_type !=
+      "protobuf_test_messages.proto3.TestAllTypesProto3" &&
+    request.message_type != "protobuf_test_messages.proto2.TestAllTypesProto2"
+  ) {
+    return false;
+  }
+  if (!request.has_protobuf_payload) {
+    return false;
+  }
+  const reqPayload = new Uint8Array([
+    210, 41, 3, 97, 98, 99, 208, 41, 123, 210, 41, 3, 100, 101, 102, 208, 41,
+    200, 3,
+  ]);
+  if (request.protobuf_payload.byteLength != reqPayload.byteLength) {
+    return false;
+  }
+  if (
+    !request.protobuf_payload.every(
+      (value, index) => reqPayload[index] === value,
+    )
+  ) {
+    return false;
+  }
+  return true;
 }
 
 // Returns true if the test ran successfully, false on legitimate EOF.

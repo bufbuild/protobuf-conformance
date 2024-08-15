@@ -5,3 +5,4 @@
 ## Caveats
 
 - Proto2 extensions are not supported.
+- Cannot generate code for Editions.
