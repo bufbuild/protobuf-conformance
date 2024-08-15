@@ -21,7 +21,9 @@ import {
   type ConformanceResponse,
   ConformanceResponseSchema,
   FailureSetSchema,
-} from "./gen/conformance/conformance_pb.js";
+  TestCategory,
+  WireFormat,
+} from "./gen/conformance_pb.js";
 import { readSync, writeSync } from "fs";
 
 function main() {
@@ -49,10 +51,57 @@ function test(request: ConformanceRequest): ConformanceResponse["result"] {
       value: toBinary(FailureSetSchema, failureSet),
     };
   }
+  // Returning a runtime error for the test Required.Proto3.ProtobufInput.UnknownOrdering.ProtobufOutput
+  // crashes the runner.
+  if (
+    is_Required_Proto3_ProtobufInput_UnknownOrdering_ProtobufOutput(request)
+  ) {
+    return {
+      case: "protobufPayload",
+      value: new Uint8Array(),
+    };
+  }
   return {
     case: "runtimeError",
     value: "not implemented",
   };
+}
+
+function is_Required_Proto3_ProtobufInput_UnknownOrdering_ProtobufOutput(
+  request: ConformanceRequest,
+) {
+  if (request.testCategory != TestCategory.BINARY_TEST) {
+    return false;
+  }
+  if (request.requestedOutputFormat != WireFormat.PROTOBUF) {
+    return false;
+  }
+  if (
+    request.messageType != "protobuf_test_messages.proto3.TestAllTypesProto3" &&
+    request.messageType != "protobuf_test_messages.proto2.TestAllTypesProto2" &&
+    request.messageType !=
+      "protobuf_test_messages.editions.proto2.TestAllTypesProto2" &&
+    request.messageType !=
+      "protobuf_test_messages.editions.proto3.TestAllTypesProto3"
+  ) {
+    return false;
+  }
+  if (request.payload.case != "protobufPayload") {
+    return false;
+  }
+  const reqPayload = new Uint8Array([
+    210, 41, 3, 97, 98, 99, 208, 41, 123, 210, 41, 3, 100, 101, 102, 208, 41,
+    200, 3,
+  ]);
+  if (request.payload.value.byteLength != reqPayload.byteLength) {
+    return false;
+  }
+  if (
+    !request.payload.value.every((value, index) => reqPayload[index] === value)
+  ) {
+    return false;
+  }
+  return true;
 }
 
 // Returns true if the test ran successfully, false on legitimate EOF.

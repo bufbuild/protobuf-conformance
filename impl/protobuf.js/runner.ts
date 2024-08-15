@@ -20,13 +20,13 @@ import * as protos from "./gen/protos_pb.js";
 
 const { Any, Struct, Value, Int32Value, FieldMask, Duration, Timestamp } =
   protos.google.protobuf;
-const { TestAllTypesProto2 } = protos.protobuf_test_messages.proto2;
+// const { TestAllTypesProto2 } = protos.protobuf_test_messages.proto2;
 const { TestAllTypesProto3 } = protos.protobuf_test_messages.proto3;
 const { ConformanceRequest, ConformanceResponse, FailureSet } =
   protos.conformance;
 
 type MessageType =
-  | protos.protobuf_test_messages.proto2.TestAllTypesProto2
+  // | protos.protobuf_test_messages.proto2.TestAllTypesProto2
   | protos.protobuf_test_messages.proto3.TestAllTypesProto3
   | protos.google.protobuf.Struct
   | protos.google.protobuf.Value
@@ -37,9 +37,8 @@ type MessageType =
   | protos.google.protobuf.Timestamp;
 
 interface Registry {
-  [s: string]:
-    | typeof TestAllTypesProto2
-    | typeof TestAllTypesProto3
+  [s: string]: // | typeof TestAllTypesProto2
+  | typeof TestAllTypesProto3
     | typeof Struct
     | typeof Value
     | typeof FieldMask
@@ -51,7 +50,7 @@ interface Registry {
 }
 
 const registry: Registry = {
-  "protobuf_test_messages.proto2.TestAllTypesProto2": TestAllTypesProto2,
+  // "protobuf_test_messages.proto2.TestAllTypesProto2": TestAllTypesProto2,
   "protobuf_test_messages.proto3.TestAllTypesProto3": TestAllTypesProto3,
   "google.protobuf.Struct": Struct,
   "google.protobuf.Value": Value,
@@ -88,6 +87,16 @@ function test(request: protos.conformance.ConformanceRequest): Result {
     const failureSet = FailureSet.create();
     return {
       protobufPayload: FailureSet.encode(failureSet).finish(),
+    };
+  }
+
+  // Returning a runtime error for the test Required.Proto3.ProtobufInput.UnknownOrdering.ProtobufOutput
+  // crashes the runner.
+  if (
+    is_Required_Proto3_ProtobufInput_UnknownOrdering_ProtobufOutput(request)
+  ) {
+    return {
+      protobufPayload: new Uint8Array(),
     };
   }
 
@@ -163,6 +172,41 @@ function test(request: protos.conformance.ConformanceRequest): Result {
     // > this field.
     return { serializeError: String(err) };
   }
+}
+
+function is_Required_Proto3_ProtobufInput_UnknownOrdering_ProtobufOutput(
+  request: protos.conformance.ConformanceRequest,
+) {
+  if (request.testCategory != protos.conformance.TestCategory.BINARY_TEST) {
+    return false;
+  }
+  if (request.requestedOutputFormat != protos.conformance.WireFormat.PROTOBUF) {
+    return false;
+  }
+  if (
+    request.messageType != "protobuf_test_messages.proto3.TestAllTypesProto3" &&
+    request.messageType != "protobuf_test_messages.proto2.TestAllTypesProto2"
+  ) {
+    return false;
+  }
+  if (!request.protobufPayload) {
+    return false;
+  }
+  const reqPayload = new Uint8Array([
+    210, 41, 3, 97, 98, 99, 208, 41, 123, 210, 41, 3, 100, 101, 102, 208, 41,
+    200, 3,
+  ]);
+  if (request.protobufPayload.byteLength != reqPayload.byteLength) {
+    return false;
+  }
+  if (
+    !request.protobufPayload.every(
+      (value, index) => reqPayload[index] === value,
+    )
+  ) {
+    return false;
+  }
+  return true;
 }
 
 // Returns true if the test ran successfully, false on legitimate EOF.

@@ -4,4 +4,5 @@
 
 ## Caveats
 
-Compiles BigInt literals, so TypeScript must target ES2020.
+- Generates BigInt literals, so TypeScript must target ES2020.
+- Cannot generate code for Editions.
