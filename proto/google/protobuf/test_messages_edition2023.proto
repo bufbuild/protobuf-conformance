@@ -1,3 +1,10 @@
+// Protocol Buffers - Google's data interchange format
+// Copyright 2024 Google Inc.  All rights reserved.
+//
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file or at
+// https://developers.google.com/open-source/licenses/bsd
+
 edition = "2023";
 
 package protobuf_test_messages.editions;
@@ -6,6 +13,10 @@ option features.message_encoding = DELIMITED;
 option java_package = "com.google.protobuf_test_messages.edition2023";
 option java_multiple_files = true;
 option objc_class_prefix = "Editions";
+
+message ComplexMessage {
+  int32 d = 1;
+}
 
 message TestAllTypesEdition2023 {
   message NestedMessage {
