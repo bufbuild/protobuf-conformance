@@ -405,3 +405,10 @@ Required.Proto3.TextFormatInput.Uint64FieldMaxValueOctal.ProtobufOutput
 Required.Proto3.TextFormatInput.Uint64FieldMaxValueOctal.TextFormatOutput
 Required.Proto3.TextFormatInput.Uint64FieldTooLargeHex
 Required.Proto3.TextFormatInput.Uint64FieldTooLargeOctal
+Required.Proto2.TextFormatInput.ClosedEnumFieldByNumber.ProtobufOutput # Failed to parse input or produce output.
+Required.Proto2.TextFormatInput.ClosedEnumFieldByNumber.TextFormatOutput # Failed to parse input or produce output.
+Required.Proto2.TextFormatInput.ClosedEnumFieldWithUnknownNumber # Should have failed to parse, but didn't.
+Required.Proto3.TextFormatInput.ClosedEnumFieldByNumber.ProtobufOutput # Failed to parse input or produce output.
+Required.Proto3.TextFormatInput.ClosedEnumFieldByNumber.TextFormatOutput # Failed to parse input or produce output.
+Required.Proto3.TextFormatInput.ClosedEnumFieldWithUnknownNumber.ProtobufOutput # Failed to parse input or produce output.
+Required.Proto3.TextFormatInput.ClosedEnumFieldWithUnknownNumber.TextFormatOutput # Failed to parse input or produce output.

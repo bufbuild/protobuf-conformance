@@ -20,40 +20,76 @@ export namespace conformance {
         JSPB_TEST = 4,
         TEXT_FORMAT_TEST = 5
     }
-    export class FailureSet extends pb_1.Message {
+    export class TestStatus extends pb_1.Message {
         #one_of_decls: number[][] = [];
         constructor(data?: any[] | {
-            failure?: string[];
+            name?: string;
+            failure_message?: string;
+            matched_name?: string;
         }) {
             super();
-            pb_1.Message.initialize(this, Array.isArray(data) ? data : [], 0, -1, [1], this.#one_of_decls);
+            pb_1.Message.initialize(this, Array.isArray(data) ? data : [], 0, -1, [], this.#one_of_decls);
             if (!Array.isArray(data) && typeof data == "object") {
-                if ("failure" in data && data.failure != undefined) {
-                    this.failure = data.failure;
+                if ("name" in data && data.name != undefined) {
+                    this.name = data.name;
+                }
+                if ("failure_message" in data && data.failure_message != undefined) {
+                    this.failure_message = data.failure_message;
+                }
+                if ("matched_name" in data && data.matched_name != undefined) {
+                    this.matched_name = data.matched_name;
                 }
             }
         }
-        get failure() {
-            return pb_1.Message.getFieldWithDefault(this, 1, []) as string[];
+        get name() {
+            return pb_1.Message.getFieldWithDefault(this, 1, "") as string;
         }
-        set failure(value: string[]) {
+        set name(value: string) {
             pb_1.Message.setField(this, 1, value);
         }
+        get failure_message() {
+            return pb_1.Message.getFieldWithDefault(this, 2, "") as string;
+        }
+        set failure_message(value: string) {
+            pb_1.Message.setField(this, 2, value);
+        }
+        get matched_name() {
+            return pb_1.Message.getFieldWithDefault(this, 3, "") as string;
+        }
+        set matched_name(value: string) {
+            pb_1.Message.setField(this, 3, value);
+        }
         static fromObject(data: {
-            failure?: string[];
-        }): FailureSet {
-            const message = new FailureSet({});
-            if (data.failure != null) {
-                message.failure = data.failure;
+            name?: string;
+            failure_message?: string;
+            matched_name?: string;
+        }): TestStatus {
+            const message = new TestStatus({});
+            if (data.name != null) {
+                message.name = data.name;
+            }
+            if (data.failure_message != null) {
+                message.failure_message = data.failure_message;
+            }
+            if (data.matched_name != null) {
+                message.matched_name = data.matched_name;
             }
             return message;
         }
         toObject() {
             const data: {
-                failure?: string[];
+                name?: string;
+                failure_message?: string;
+                matched_name?: string;
             } = {};
-            if (this.failure != null) {
-                data.failure = this.failure;
+            if (this.name != null) {
+                data.name = this.name;
+            }
+            if (this.failure_message != null) {
+                data.failure_message = this.failure_message;
+            }
+            if (this.matched_name != null) {
+                data.matched_name = this.matched_name;
             }
             return data;
         }
@@ -61,8 +97,85 @@ export namespace conformance {
         serialize(w: pb_1.BinaryWriter): void;
         serialize(w?: pb_1.BinaryWriter): Uint8Array | void {
             const writer = w || new pb_1.BinaryWriter();
-            if (this.failure.length)
-                writer.writeRepeatedString(1, this.failure);
+            if (this.name.length)
+                writer.writeString(1, this.name);
+            if (this.failure_message.length)
+                writer.writeString(2, this.failure_message);
+            if (this.matched_name.length)
+                writer.writeString(3, this.matched_name);
+            if (!w)
+                return writer.getResultBuffer();
+        }
+        static deserialize(bytes: Uint8Array | pb_1.BinaryReader): TestStatus {
+            const reader = bytes instanceof pb_1.BinaryReader ? bytes : new pb_1.BinaryReader(bytes), message = new TestStatus();
+            while (reader.nextField()) {
+                if (reader.isEndGroup())
+                    break;
+                switch (reader.getFieldNumber()) {
+                    case 1:
+                        message.name = reader.readString();
+                        break;
+                    case 2:
+                        message.failure_message = reader.readString();
+                        break;
+                    case 3:
+                        message.matched_name = reader.readString();
+                        break;
+                    default: reader.skipField();
+                }
+            }
+            return message;
+        }
+        serializeBinary(): Uint8Array {
+            return this.serialize();
+        }
+        static deserializeBinary(bytes: Uint8Array): TestStatus {
+            return TestStatus.deserialize(bytes);
+        }
+    }
+    export class FailureSet extends pb_1.Message {
+        #one_of_decls: number[][] = [];
+        constructor(data?: any[] | {
+            test?: TestStatus[];
+        }) {
+            super();
+            pb_1.Message.initialize(this, Array.isArray(data) ? data : [], 0, -1, [2], this.#one_of_decls);
+            if (!Array.isArray(data) && typeof data == "object") {
+                if ("test" in data && data.test != undefined) {
+                    this.test = data.test;
+                }
+            }
+        }
+        get test() {
+            return pb_1.Message.getRepeatedWrapperField(this, TestStatus, 2) as TestStatus[];
+        }
+        set test(value: TestStatus[]) {
+            pb_1.Message.setRepeatedWrapperField(this, 2, value);
+        }
+        static fromObject(data: {
+            test?: ReturnType<typeof TestStatus.prototype.toObject>[];
+        }): FailureSet {
+            const message = new FailureSet({});
+            if (data.test != null) {
+                message.test = data.test.map(item => TestStatus.fromObject(item));
+            }
+            return message;
+        }
+        toObject() {
+            const data: {
+                test?: ReturnType<typeof TestStatus.prototype.toObject>[];
+            } = {};
+            if (this.test != null) {
+                data.test = this.test.map((item: TestStatus) => item.toObject());
+            }
+            return data;
+        }
+        serialize(): Uint8Array;
+        serialize(w: pb_1.BinaryWriter): void;
+        serialize(w?: pb_1.BinaryWriter): Uint8Array | void {
+            const writer = w || new pb_1.BinaryWriter();
+            if (this.test.length)
+                writer.writeRepeatedMessage(2, this.test, (item: TestStatus) => item.serialize(writer));
             if (!w)
                 return writer.getResultBuffer();
         }
@@ -72,8 +185,8 @@ export namespace conformance {
                 if (reader.isEndGroup())
                     break;
                 switch (reader.getFieldNumber()) {
-                    case 1:
-                        pb_1.Message.addToRepeatedField(message, 1, reader.readString());
+                    case 2:
+                        reader.readMessage(message.test, () => pb_1.Message.addToRepeatedWrapperField(message, 2, TestStatus.deserialize(reader), TestStatus));
                         break;
                     default: reader.skipField();
                 }

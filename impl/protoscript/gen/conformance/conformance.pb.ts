@@ -30,12 +30,27 @@ export type TestCategory =
   | "TEXT_FORMAT_TEST";
 
 /**
+ * Meant to encapsulate all types of tests: successes, skips, failures, etc.
+ * Therefore, this may or may not have a failure message. Failure messages
+ * may be truncated for our failure lists.
+ */
+export interface TestStatus {
+  name: string;
+  failureMessage: string;
+  /**
+   * What an actual test name matched to in a failure list. Can be wildcarded or
+   * an exact match without wildcards.
+   */
+  matchedName: string;
+}
+
+/**
  * The conformance runner will request a list of failures as the first request.
  * This will be known by message_type == "conformance.FailureSet", a conformance
  * test should return a serialized FailureSet in protobuf_payload.
  */
 export interface FailureSet {
-  failure: string[];
+  test: TestStatus[];
 }
 
 /**
@@ -297,6 +312,83 @@ export const TestCategory = {
   },
 } as const;
 
+export const TestStatus = {
+  /**
+   * Serializes TestStatus to protobuf.
+   */
+  encode: function (msg: PartialDeep<TestStatus>): Uint8Array {
+    return TestStatus._writeMessage(msg, new BinaryWriter()).getResultBuffer();
+  },
+
+  /**
+   * Deserializes TestStatus from protobuf.
+   */
+  decode: function (bytes: ByteSource): TestStatus {
+    return TestStatus._readMessage(
+      TestStatus.initialize(),
+      new BinaryReader(bytes),
+    );
+  },
+
+  /**
+   * Initializes TestStatus with all fields set to their default value.
+   */
+  initialize: function (): TestStatus {
+    return {
+      name: "",
+      failureMessage: "",
+      matchedName: "",
+    };
+  },
+
+  /**
+   * @private
+   */
+  _writeMessage: function (
+    msg: PartialDeep<TestStatus>,
+    writer: BinaryWriter,
+  ): BinaryWriter {
+    if (msg.name) {
+      writer.writeString(1, msg.name);
+    }
+    if (msg.failureMessage) {
+      writer.writeString(2, msg.failureMessage);
+    }
+    if (msg.matchedName) {
+      writer.writeString(3, msg.matchedName);
+    }
+    return writer;
+  },
+
+  /**
+   * @private
+   */
+  _readMessage: function (msg: TestStatus, reader: BinaryReader): TestStatus {
+    while (reader.nextField()) {
+      const field = reader.getFieldNumber();
+      switch (field) {
+        case 1: {
+          msg.name = reader.readString();
+          break;
+        }
+        case 2: {
+          msg.failureMessage = reader.readString();
+          break;
+        }
+        case 3: {
+          msg.matchedName = reader.readString();
+          break;
+        }
+        default: {
+          reader.skipField();
+          break;
+        }
+      }
+    }
+    return msg;
+  },
+};
+
 export const FailureSet = {
   /**
    * Serializes FailureSet to protobuf.
@@ -320,7 +412,7 @@ export const FailureSet = {
    */
   initialize: function (): FailureSet {
     return {
-      failure: [],
+      test: [],
     };
   },
 
@@ -331,8 +423,8 @@ export const FailureSet = {
     msg: PartialDeep<FailureSet>,
     writer: BinaryWriter,
   ): BinaryWriter {
-    if (msg.failure?.length) {
-      writer.writeRepeatedString(1, msg.failure);
+    if (msg.test?.length) {
+      writer.writeRepeatedMessage(2, msg.test as any, TestStatus._writeMessage);
     }
     return writer;
   },
@@ -344,8 +436,10 @@ export const FailureSet = {
     while (reader.nextField()) {
       const field = reader.getFieldNumber();
       switch (field) {
-        case 1: {
-          msg.failure.push(reader.readString());
+        case 2: {
+          const m = TestStatus.initialize();
+          reader.readMessage(m, TestStatus._readMessage);
+          msg.test.push(m);
           break;
         }
         default: {
@@ -843,6 +937,74 @@ export const TestCategoryJSON = {
   },
 } as const;
 
+export const TestStatusJSON = {
+  /**
+   * Serializes TestStatus to JSON.
+   */
+  encode: function (msg: PartialDeep<TestStatus>): string {
+    return JSON.stringify(TestStatusJSON._writeMessage(msg));
+  },
+
+  /**
+   * Deserializes TestStatus from JSON.
+   */
+  decode: function (json: string): TestStatus {
+    return TestStatusJSON._readMessage(
+      TestStatusJSON.initialize(),
+      JSON.parse(json),
+    );
+  },
+
+  /**
+   * Initializes TestStatus with all fields set to their default value.
+   */
+  initialize: function (): TestStatus {
+    return {
+      name: "",
+      failureMessage: "",
+      matchedName: "",
+    };
+  },
+
+  /**
+   * @private
+   */
+  _writeMessage: function (
+    msg: PartialDeep<TestStatus>,
+  ): Record<string, unknown> {
+    const json: Record<string, unknown> = {};
+    if (msg.name) {
+      json["name"] = msg.name;
+    }
+    if (msg.failureMessage) {
+      json["failureMessage"] = msg.failureMessage;
+    }
+    if (msg.matchedName) {
+      json["matchedName"] = msg.matchedName;
+    }
+    return json;
+  },
+
+  /**
+   * @private
+   */
+  _readMessage: function (msg: TestStatus, json: any): TestStatus {
+    const _name_ = json["name"];
+    if (_name_) {
+      msg.name = _name_;
+    }
+    const _failureMessage_ = json["failureMessage"] ?? json["failure_message"];
+    if (_failureMessage_) {
+      msg.failureMessage = _failureMessage_;
+    }
+    const _matchedName_ = json["matchedName"] ?? json["matched_name"];
+    if (_matchedName_) {
+      msg.matchedName = _matchedName_;
+    }
+    return msg;
+  },
+};
+
 export const FailureSetJSON = {
   /**
    * Serializes FailureSet to JSON.
@@ -866,7 +1028,7 @@ export const FailureSetJSON = {
    */
   initialize: function (): FailureSet {
     return {
-      failure: [],
+      test: [],
     };
   },
 
@@ -877,8 +1039,8 @@ export const FailureSetJSON = {
     msg: PartialDeep<FailureSet>,
   ): Record<string, unknown> {
     const json: Record<string, unknown> = {};
-    if (msg.failure?.length) {
-      json["failure"] = msg.failure;
+    if (msg.test?.length) {
+      json["test"] = msg.test.map(TestStatusJSON._writeMessage);
     }
     return json;
   },
@@ -887,9 +1049,13 @@ export const FailureSetJSON = {
    * @private
    */
   _readMessage: function (msg: FailureSet, json: any): FailureSet {
-    const _failure_ = json["failure"];
-    if (_failure_) {
-      msg.failure = _failure_;
+    const _test_ = json["test"];
+    if (_test_) {
+      for (const item of _test_) {
+        const m = TestStatusJSON.initialize();
+        TestStatusJSON._readMessage(m, item);
+        msg.test.push(m);
+      }
     }
     return msg;
   },

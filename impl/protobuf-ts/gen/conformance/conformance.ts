@@ -20,6 +20,30 @@ import type { PartialMessage } from "@protobuf-ts/runtime";
 import { reflectionMergePartial } from "@protobuf-ts/runtime";
 import { MessageType } from "@protobuf-ts/runtime";
 /**
+ * Meant to encapsulate all types of tests: successes, skips, failures, etc.
+ * Therefore, this may or may not have a failure message. Failure messages
+ * may be truncated for our failure lists.
+ *
+ * @generated from protobuf message conformance.TestStatus
+ */
+export interface TestStatus {
+    /**
+     * @generated from protobuf field: string name = 1;
+     */
+    name: string;
+    /**
+     * @generated from protobuf field: string failure_message = 2;
+     */
+    failureMessage: string;
+    /**
+     * What an actual test name matched to in a failure list. Can be wildcarded or
+     * an exact match without wildcards.
+     *
+     * @generated from protobuf field: string matched_name = 3;
+     */
+    matchedName: string;
+}
+/**
  * The conformance runner will request a list of failures as the first request.
  * This will be known by message_type == "conformance.FailureSet", a conformance
  * test should return a serialized FailureSet in protobuf_payload.
@@ -28,9 +52,9 @@ import { MessageType } from "@protobuf-ts/runtime";
  */
 export interface FailureSet {
     /**
-     * @generated from protobuf field: repeated string failure = 1;
+     * @generated from protobuf field: repeated conformance.TestStatus test = 2;
      */
-    failure: string[];
+    test: TestStatus[];
 }
 /**
  * Represents a single test case's input.  The testee should:
@@ -319,15 +343,78 @@ export enum TestCategory {
     TEXT_FORMAT_TEST = 5
 }
 // @generated message type with reflection information, may provide speed optimized methods
+class TestStatus$Type extends MessageType<TestStatus> {
+    constructor() {
+        super("conformance.TestStatus", [
+            { no: 1, name: "name", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+            { no: 2, name: "failure_message", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+            { no: 3, name: "matched_name", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
+        ]);
+    }
+    create(value?: PartialMessage<TestStatus>): TestStatus {
+        const message = globalThis.Object.create((this.messagePrototype!));
+        message.name = "";
+        message.failureMessage = "";
+        message.matchedName = "";
+        if (value !== undefined)
+            reflectionMergePartial<TestStatus>(this, message, value);
+        return message;
+    }
+    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: TestStatus): TestStatus {
+        let message = target ?? this.create(), end = reader.pos + length;
+        while (reader.pos < end) {
+            let [fieldNo, wireType] = reader.tag();
+            switch (fieldNo) {
+                case /* string name */ 1:
+                    message.name = reader.string();
+                    break;
+                case /* string failure_message */ 2:
+                    message.failureMessage = reader.string();
+                    break;
+                case /* string matched_name */ 3:
+                    message.matchedName = reader.string();
+                    break;
+                default:
+                    let u = options.readUnknownField;
+                    if (u === "throw")
+                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
+                    let d = reader.skip(wireType);
+                    if (u !== false)
+                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
+            }
+        }
+        return message;
+    }
+    internalBinaryWrite(message: TestStatus, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
+        /* string name = 1; */
+        if (message.name !== "")
+            writer.tag(1, WireType.LengthDelimited).string(message.name);
+        /* string failure_message = 2; */
+        if (message.failureMessage !== "")
+            writer.tag(2, WireType.LengthDelimited).string(message.failureMessage);
+        /* string matched_name = 3; */
+        if (message.matchedName !== "")
+            writer.tag(3, WireType.LengthDelimited).string(message.matchedName);
+        let u = options.writeUnknownFields;
+        if (u !== false)
+            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+        return writer;
+    }
+}
+/**
+ * @generated MessageType for protobuf message conformance.TestStatus
+ */
+export const TestStatus = new TestStatus$Type();
+// @generated message type with reflection information, may provide speed optimized methods
 class FailureSet$Type extends MessageType<FailureSet> {
     constructor() {
         super("conformance.FailureSet", [
-            { no: 1, name: "failure", kind: "scalar", repeat: 2 /*RepeatType.UNPACKED*/, T: 9 /*ScalarType.STRING*/ }
+            { no: 2, name: "test", kind: "message", repeat: 1 /*RepeatType.PACKED*/, T: () => TestStatus }
         ]);
     }
     create(value?: PartialMessage<FailureSet>): FailureSet {
         const message = globalThis.Object.create((this.messagePrototype!));
-        message.failure = [];
+        message.test = [];
         if (value !== undefined)
             reflectionMergePartial<FailureSet>(this, message, value);
         return message;
@@ -337,8 +424,8 @@ class FailureSet$Type extends MessageType<FailureSet> {
         while (reader.pos < end) {
             let [fieldNo, wireType] = reader.tag();
             switch (fieldNo) {
-                case /* repeated string failure */ 1:
-                    message.failure.push(reader.string());
+                case /* repeated conformance.TestStatus test */ 2:
+                    message.test.push(TestStatus.internalBinaryRead(reader, reader.uint32(), options));
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -352,9 +439,9 @@ class FailureSet$Type extends MessageType<FailureSet> {
         return message;
     }
     internalBinaryWrite(message: FailureSet, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* repeated string failure = 1; */
-        for (let i = 0; i < message.failure.length; i++)
-            writer.tag(1, WireType.LengthDelimited).string(message.failure[i]);
+        /* repeated conformance.TestStatus test = 2; */
+        for (let i = 0; i < message.test.length; i++)
+            TestStatus.internalBinaryWrite(message.test[i], writer.tag(2, WireType.LengthDelimited).fork(), options).join();
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
