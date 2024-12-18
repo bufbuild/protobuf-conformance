@@ -22,11 +22,120 @@ export namespace conformance {
         TEXT_FORMAT_TEST = 5
     }
 
+    /** Properties of a TestStatus. */
+    interface ITestStatus {
+
+        /** TestStatus name */
+        name?: (string|null);
+
+        /** TestStatus failureMessage */
+        failureMessage?: (string|null);
+
+        /** TestStatus matchedName */
+        matchedName?: (string|null);
+    }
+
+    /** Represents a TestStatus. */
+    class TestStatus implements ITestStatus {
+
+        /**
+         * Constructs a new TestStatus.
+         * @param [properties] Properties to set
+         */
+        constructor(properties?: conformance.ITestStatus);
+
+        /** TestStatus name. */
+        public name: string;
+
+        /** TestStatus failureMessage. */
+        public failureMessage: string;
+
+        /** TestStatus matchedName. */
+        public matchedName: string;
+
+        /**
+         * Creates a new TestStatus instance using the specified properties.
+         * @param [properties] Properties to set
+         * @returns TestStatus instance
+         */
+        public static create(properties?: conformance.ITestStatus): conformance.TestStatus;
+
+        /**
+         * Encodes the specified TestStatus message. Does not implicitly {@link conformance.TestStatus.verify|verify} messages.
+         * @param message TestStatus message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encode(message: conformance.ITestStatus, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Encodes the specified TestStatus message, length delimited. Does not implicitly {@link conformance.TestStatus.verify|verify} messages.
+         * @param message TestStatus message or plain object to encode
+         * @param [writer] Writer to encode to
+         * @returns Writer
+         */
+        public static encodeDelimited(message: conformance.ITestStatus, writer?: $protobuf.Writer): $protobuf.Writer;
+
+        /**
+         * Decodes a TestStatus message from the specified reader or buffer.
+         * @param reader Reader or buffer to decode from
+         * @param [length] Message length if known beforehand
+         * @returns TestStatus
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): conformance.TestStatus;
+
+        /**
+         * Decodes a TestStatus message from the specified reader or buffer, length delimited.
+         * @param reader Reader or buffer to decode from
+         * @returns TestStatus
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): conformance.TestStatus;
+
+        /**
+         * Verifies a TestStatus message.
+         * @param message Plain object to verify
+         * @returns `null` if valid, otherwise the reason why it is not
+         */
+        public static verify(message: { [k: string]: any }): (string|null);
+
+        /**
+         * Creates a TestStatus message from a plain object. Also converts values to their respective internal types.
+         * @param object Plain object
+         * @returns TestStatus
+         */
+        public static fromObject(object: { [k: string]: any }): conformance.TestStatus;
+
+        /**
+         * Creates a plain object from a TestStatus message. Also converts values to other types if specified.
+         * @param message TestStatus
+         * @param [options] Conversion options
+         * @returns Plain object
+         */
+        public static toObject(message: conformance.TestStatus, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+        /**
+         * Converts this TestStatus to JSON.
+         * @returns JSON object
+         */
+        public toJSON(): { [k: string]: any };
+
+        /**
+         * Gets the default type url for TestStatus
+         * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns The default type url
+         */
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
     /** Properties of a FailureSet. */
     interface IFailureSet {
 
-        /** FailureSet failure */
-        failure?: (string[]|null);
+        /** FailureSet test */
+        test?: (conformance.ITestStatus[]|null);
     }
 
     /** Represents a FailureSet. */
@@ -38,8 +147,8 @@ export namespace conformance {
          */
         constructor(properties?: conformance.IFailureSet);
 
-        /** FailureSet failure. */
-        public failure: string[];
+        /** FailureSet test. */
+        public test: conformance.ITestStatus[];
 
         /**
          * Creates a new FailureSet instance using the specified properties.

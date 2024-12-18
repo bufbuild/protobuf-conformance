@@ -128,12 +128,27 @@ export function testCategoryToJSON(object: TestCategory): string {
 }
 
 /**
+ * Meant to encapsulate all types of tests: successes, skips, failures, etc.
+ * Therefore, this may or may not have a failure message. Failure messages
+ * may be truncated for our failure lists.
+ */
+export interface TestStatus {
+  name: string;
+  failureMessage: string;
+  /**
+   * What an actual test name matched to in a failure list. Can be wildcarded or
+   * an exact match without wildcards.
+   */
+  matchedName: string;
+}
+
+/**
  * The conformance runner will request a list of failures as the first request.
  * This will be known by message_type == "conformance.FailureSet", a conformance
  * test should return a serialized FailureSet in protobuf_payload.
  */
 export interface FailureSet {
-  failure: string[];
+  test: TestStatus[];
 }
 
 /**
@@ -258,14 +273,106 @@ export interface JspbEncodingConfig {
   useJspbArrayAnyFormat: boolean;
 }
 
+function createBaseTestStatus(): TestStatus {
+  return { name: "", failureMessage: "", matchedName: "" };
+}
+
+export const TestStatus: MessageFns<TestStatus> = {
+  encode(message: TestStatus, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
+    if (message.name !== "") {
+      writer.uint32(10).string(message.name);
+    }
+    if (message.failureMessage !== "") {
+      writer.uint32(18).string(message.failureMessage);
+    }
+    if (message.matchedName !== "") {
+      writer.uint32(26).string(message.matchedName);
+    }
+    return writer;
+  },
+
+  decode(input: BinaryReader | Uint8Array, length?: number): TestStatus {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseTestStatus();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1: {
+          if (tag !== 10) {
+            break;
+          }
+
+          message.name = reader.string();
+          continue;
+        }
+        case 2: {
+          if (tag !== 18) {
+            break;
+          }
+
+          message.failureMessage = reader.string();
+          continue;
+        }
+        case 3: {
+          if (tag !== 26) {
+            break;
+          }
+
+          message.matchedName = reader.string();
+          continue;
+        }
+      }
+      if ((tag & 7) === 4 || tag === 0) {
+        break;
+      }
+      reader.skip(tag & 7);
+    }
+    return message;
+  },
+
+  fromJSON(object: any): TestStatus {
+    return {
+      name: isSet(object.name) ? globalThis.String(object.name) : "",
+      failureMessage: isSet(object.failureMessage) ? globalThis.String(object.failureMessage) : "",
+      matchedName: isSet(object.matchedName) ? globalThis.String(object.matchedName) : "",
+    };
+  },
+
+  toJSON(message: TestStatus): unknown {
+    const obj: any = {};
+    if (message.name !== "") {
+      obj.name = message.name;
+    }
+    if (message.failureMessage !== "") {
+      obj.failureMessage = message.failureMessage;
+    }
+    if (message.matchedName !== "") {
+      obj.matchedName = message.matchedName;
+    }
+    return obj;
+  },
+
+  create<I extends Exact<DeepPartial<TestStatus>, I>>(base?: I): TestStatus {
+    return TestStatus.fromPartial(base ?? ({} as any));
+  },
+  fromPartial<I extends Exact<DeepPartial<TestStatus>, I>>(object: I): TestStatus {
+    const message = createBaseTestStatus();
+    message.name = object.name ?? "";
+    message.failureMessage = object.failureMessage ?? "";
+    message.matchedName = object.matchedName ?? "";
+    return message;
+  },
+};
+
 function createBaseFailureSet(): FailureSet {
-  return { failure: [] };
+  return { test: [] };
 }
 
 export const FailureSet: MessageFns<FailureSet> = {
   encode(message: FailureSet, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
-    for (const v of message.failure) {
-      writer.uint32(10).string(v!);
+    for (const v of message.test) {
+      TestStatus.encode(v!, writer.uint32(18).fork()).join();
     }
     return writer;
   },
@@ -277,12 +384,12 @@ export const FailureSet: MessageFns<FailureSet> = {
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
-        case 1: {
-          if (tag !== 10) {
+        case 2: {
+          if (tag !== 18) {
             break;
           }
 
-          message.failure.push(reader.string());
+          message.test.push(TestStatus.decode(reader, reader.uint32()));
           continue;
         }
       }
@@ -295,15 +402,13 @@ export const FailureSet: MessageFns<FailureSet> = {
   },
 
   fromJSON(object: any): FailureSet {
-    return {
-      failure: globalThis.Array.isArray(object?.failure) ? object.failure.map((e: any) => globalThis.String(e)) : [],
-    };
+    return { test: globalThis.Array.isArray(object?.test) ? object.test.map((e: any) => TestStatus.fromJSON(e)) : [] };
   },
 
   toJSON(message: FailureSet): unknown {
     const obj: any = {};
-    if (message.failure?.length) {
-      obj.failure = message.failure;
+    if (message.test?.length) {
+      obj.test = message.test.map((e) => TestStatus.toJSON(e));
     }
     return obj;
   },
@@ -313,7 +418,7 @@ export const FailureSet: MessageFns<FailureSet> = {
   },
   fromPartial<I extends Exact<DeepPartial<FailureSet>, I>>(object: I): FailureSet {
     const message = createBaseFailureSet();
-    message.failure = object.failure?.map((e) => e) || [];
+    message.test = object.test?.map((e) => TestStatus.fromPartial(e)) || [];
     return message;
   },
 };

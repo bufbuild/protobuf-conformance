@@ -60,13 +60,263 @@ export const conformance = $root.conformance = (() => {
         return values;
     })();
 
+    conformance.TestStatus = (function() {
+
+        /**
+         * Properties of a TestStatus.
+         * @memberof conformance
+         * @interface ITestStatus
+         * @property {string|null} [name] TestStatus name
+         * @property {string|null} [failureMessage] TestStatus failureMessage
+         * @property {string|null} [matchedName] TestStatus matchedName
+         */
+
+        /**
+         * Constructs a new TestStatus.
+         * @memberof conformance
+         * @classdesc Represents a TestStatus.
+         * @implements ITestStatus
+         * @constructor
+         * @param {conformance.ITestStatus=} [properties] Properties to set
+         */
+        function TestStatus(properties) {
+            if (properties)
+                for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * TestStatus name.
+         * @member {string} name
+         * @memberof conformance.TestStatus
+         * @instance
+         */
+        TestStatus.prototype.name = "";
+
+        /**
+         * TestStatus failureMessage.
+         * @member {string} failureMessage
+         * @memberof conformance.TestStatus
+         * @instance
+         */
+        TestStatus.prototype.failureMessage = "";
+
+        /**
+         * TestStatus matchedName.
+         * @member {string} matchedName
+         * @memberof conformance.TestStatus
+         * @instance
+         */
+        TestStatus.prototype.matchedName = "";
+
+        /**
+         * Creates a new TestStatus instance using the specified properties.
+         * @function create
+         * @memberof conformance.TestStatus
+         * @static
+         * @param {conformance.ITestStatus=} [properties] Properties to set
+         * @returns {conformance.TestStatus} TestStatus instance
+         */
+        TestStatus.create = function create(properties) {
+            return new TestStatus(properties);
+        };
+
+        /**
+         * Encodes the specified TestStatus message. Does not implicitly {@link conformance.TestStatus.verify|verify} messages.
+         * @function encode
+         * @memberof conformance.TestStatus
+         * @static
+         * @param {conformance.ITestStatus} message TestStatus message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        TestStatus.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.name != null && Object.hasOwnProperty.call(message, "name"))
+                writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
+            if (message.failureMessage != null && Object.hasOwnProperty.call(message, "failureMessage"))
+                writer.uint32(/* id 2, wireType 2 =*/18).string(message.failureMessage);
+            if (message.matchedName != null && Object.hasOwnProperty.call(message, "matchedName"))
+                writer.uint32(/* id 3, wireType 2 =*/26).string(message.matchedName);
+            return writer;
+        };
+
+        /**
+         * Encodes the specified TestStatus message, length delimited. Does not implicitly {@link conformance.TestStatus.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof conformance.TestStatus
+         * @static
+         * @param {conformance.ITestStatus} message TestStatus message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        TestStatus.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a TestStatus message from the specified reader or buffer.
+         * @function decode
+         * @memberof conformance.TestStatus
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {conformance.TestStatus} TestStatus
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        TestStatus.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            let end = length === undefined ? reader.len : reader.pos + length, message = new $root.conformance.TestStatus();
+            while (reader.pos < end) {
+                let tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1: {
+                        message.name = reader.string();
+                        break;
+                    }
+                case 2: {
+                        message.failureMessage = reader.string();
+                        break;
+                    }
+                case 3: {
+                        message.matchedName = reader.string();
+                        break;
+                    }
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes a TestStatus message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof conformance.TestStatus
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {conformance.TestStatus} TestStatus
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        TestStatus.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a TestStatus message.
+         * @function verify
+         * @memberof conformance.TestStatus
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        TestStatus.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.name != null && message.hasOwnProperty("name"))
+                if (!$util.isString(message.name))
+                    return "name: string expected";
+            if (message.failureMessage != null && message.hasOwnProperty("failureMessage"))
+                if (!$util.isString(message.failureMessage))
+                    return "failureMessage: string expected";
+            if (message.matchedName != null && message.hasOwnProperty("matchedName"))
+                if (!$util.isString(message.matchedName))
+                    return "matchedName: string expected";
+            return null;
+        };
+
+        /**
+         * Creates a TestStatus message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof conformance.TestStatus
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {conformance.TestStatus} TestStatus
+         */
+        TestStatus.fromObject = function fromObject(object) {
+            if (object instanceof $root.conformance.TestStatus)
+                return object;
+            let message = new $root.conformance.TestStatus();
+            if (object.name != null)
+                message.name = String(object.name);
+            if (object.failureMessage != null)
+                message.failureMessage = String(object.failureMessage);
+            if (object.matchedName != null)
+                message.matchedName = String(object.matchedName);
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a TestStatus message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof conformance.TestStatus
+         * @static
+         * @param {conformance.TestStatus} message TestStatus
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        TestStatus.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            let object = {};
+            if (options.defaults) {
+                object.name = "";
+                object.failureMessage = "";
+                object.matchedName = "";
+            }
+            if (message.name != null && message.hasOwnProperty("name"))
+                object.name = message.name;
+            if (message.failureMessage != null && message.hasOwnProperty("failureMessage"))
+                object.failureMessage = message.failureMessage;
+            if (message.matchedName != null && message.hasOwnProperty("matchedName"))
+                object.matchedName = message.matchedName;
+            return object;
+        };
+
+        /**
+         * Converts this TestStatus to JSON.
+         * @function toJSON
+         * @memberof conformance.TestStatus
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        TestStatus.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Gets the default type url for TestStatus
+         * @function getTypeUrl
+         * @memberof conformance.TestStatus
+         * @static
+         * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+         * @returns {string} The default type url
+         */
+        TestStatus.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/conformance.TestStatus";
+        };
+
+        return TestStatus;
+    })();
+
     conformance.FailureSet = (function() {
 
         /**
          * Properties of a FailureSet.
          * @memberof conformance
          * @interface IFailureSet
-         * @property {Array.<string>|null} [failure] FailureSet failure
+         * @property {Array.<conformance.ITestStatus>|null} [test] FailureSet test
          */
 
         /**
@@ -78,7 +328,7 @@ export const conformance = $root.conformance = (() => {
          * @param {conformance.IFailureSet=} [properties] Properties to set
          */
         function FailureSet(properties) {
-            this.failure = [];
+            this.test = [];
             if (properties)
                 for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                     if (properties[keys[i]] != null)
@@ -86,12 +336,12 @@ export const conformance = $root.conformance = (() => {
         }
 
         /**
-         * FailureSet failure.
-         * @member {Array.<string>} failure
+         * FailureSet test.
+         * @member {Array.<conformance.ITestStatus>} test
          * @memberof conformance.FailureSet
          * @instance
          */
-        FailureSet.prototype.failure = $util.emptyArray;
+        FailureSet.prototype.test = $util.emptyArray;
 
         /**
          * Creates a new FailureSet instance using the specified properties.
@@ -117,9 +367,9 @@ export const conformance = $root.conformance = (() => {
         FailureSet.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.failure != null && message.failure.length)
-                for (let i = 0; i < message.failure.length; ++i)
-                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.failure[i]);
+            if (message.test != null && message.test.length)
+                for (let i = 0; i < message.test.length; ++i)
+                    $root.conformance.TestStatus.encode(message.test[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
             return writer;
         };
 
@@ -154,10 +404,10 @@ export const conformance = $root.conformance = (() => {
             while (reader.pos < end) {
                 let tag = reader.uint32();
                 switch (tag >>> 3) {
-                case 1: {
-                        if (!(message.failure && message.failure.length))
-                            message.failure = [];
-                        message.failure.push(reader.string());
+                case 2: {
+                        if (!(message.test && message.test.length))
+                            message.test = [];
+                        message.test.push($root.conformance.TestStatus.decode(reader, reader.uint32()));
                         break;
                     }
                 default:
@@ -195,12 +445,14 @@ export const conformance = $root.conformance = (() => {
         FailureSet.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            if (message.failure != null && message.hasOwnProperty("failure")) {
-                if (!Array.isArray(message.failure))
-                    return "failure: array expected";
-                for (let i = 0; i < message.failure.length; ++i)
-                    if (!$util.isString(message.failure[i]))
-                        return "failure: string[] expected";
+            if (message.test != null && message.hasOwnProperty("test")) {
+                if (!Array.isArray(message.test))
+                    return "test: array expected";
+                for (let i = 0; i < message.test.length; ++i) {
+                    let error = $root.conformance.TestStatus.verify(message.test[i]);
+                    if (error)
+                        return "test." + error;
+                }
             }
             return null;
         };
@@ -217,12 +469,15 @@ export const conformance = $root.conformance = (() => {
             if (object instanceof $root.conformance.FailureSet)
                 return object;
             let message = new $root.conformance.FailureSet();
-            if (object.failure) {
-                if (!Array.isArray(object.failure))
-                    throw TypeError(".conformance.FailureSet.failure: array expected");
-                message.failure = [];
-                for (let i = 0; i < object.failure.length; ++i)
-                    message.failure[i] = String(object.failure[i]);
+            if (object.test) {
+                if (!Array.isArray(object.test))
+                    throw TypeError(".conformance.FailureSet.test: array expected");
+                message.test = [];
+                for (let i = 0; i < object.test.length; ++i) {
+                    if (typeof object.test[i] !== "object")
+                        throw TypeError(".conformance.FailureSet.test: object expected");
+                    message.test[i] = $root.conformance.TestStatus.fromObject(object.test[i]);
+                }
             }
             return message;
         };
@@ -241,11 +496,11 @@ export const conformance = $root.conformance = (() => {
                 options = {};
             let object = {};
             if (options.arrays || options.defaults)
-                object.failure = [];
-            if (message.failure && message.failure.length) {
-                object.failure = [];
-                for (let j = 0; j < message.failure.length; ++j)
-                    object.failure[j] = message.failure[j];
+                object.test = [];
+            if (message.test && message.test.length) {
+                object.test = [];
+                for (let j = 0; j < message.test.length; ++j)
+                    object.test[j] = $root.conformance.TestStatus.toObject(message.test[j], options);
             }
             return object;
         };
