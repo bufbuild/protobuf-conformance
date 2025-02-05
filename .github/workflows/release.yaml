@@ -62,7 +62,7 @@ jobs:
         run: |
           tar -xf protobuf.tar.gz
           cd ./protobuf-${{ needs.get-protobuf.outputs.version }}
-          USE_BAZEL_VERSION=6.3.0 BAZEL_CXXOPTS="-std=c++17" bazel build conformance:conformance_test_runner
+          USE_BAZEL_VERSION=6.5.0 BAZEL_CXXOPTS="-std=c++17" bazel build conformance:conformance_test_runner
 
       - name: Rename Binary
         run: |
@@ -129,7 +129,7 @@ jobs:
         run: |
           tar -xf protobuf.tar.gz
           cd ./protobuf-${{ needs.get-protobuf.outputs.version }}
-          USE_BAZEL_VERSION=6.3.0 BAZEL_CXXOPTS="-std=c++17" bazel build conformance:conformance_test_runner
+          USE_BAZEL_VERSION=6.5.0 BAZEL_CXXOPTS="-std=c++17" bazel build conformance:conformance_test_runner
 
       - name: Rename Binary
         run: |
