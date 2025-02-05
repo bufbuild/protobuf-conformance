@@ -125,6 +125,7 @@ jobs:
           mv bazelisk-darwin-amd64 "${GITHUB_WORKSPACE}/bin/bazel"
           chmod +x "${GITHUB_WORKSPACE}/bin/bazel"
 
+
       - name: Build Binary
         run: |
           tar -xf protobuf.tar.gz
