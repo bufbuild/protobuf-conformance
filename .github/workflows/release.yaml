@@ -30,7 +30,7 @@ jobs:
           path: ./protobuf.tar.gz
 
   build-linux_x86_64:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     needs: get-protobuf
     steps:
       - name: Checkout
@@ -62,7 +62,7 @@ jobs:
         run: |
           tar -xf protobuf.tar.gz
           cd ./protobuf-${{ needs.get-protobuf.outputs.version }}
-          USE_BAZEL_VERSION=6.3.0 BAZEL_CXXOPTS="-std=c++14" bazel build conformance:conformance_test_runner --toolchain_resolution_debug=@bazel_tools//tools/cpp:toolchain_type
+          USE_BAZEL_VERSION=7.1.2 BAZEL_CXXOPTS="-std=c++17" bazel build conformance:conformance_test_runner
 
       - name: Rename Binary
         run: |
@@ -129,7 +129,7 @@ jobs:
         run: |
           tar -xf protobuf.tar.gz
           cd ./protobuf-${{ needs.get-protobuf.outputs.version }}
-          USE_BAZEL_VERSION=6.3.0 BAZEL_CXXOPTS="-std=c++14" bazel build conformance:conformance_test_runner --toolchain_resolution_debug=@bazel_tools//tools/cpp:toolchain_type
+          USE_BAZEL_VERSION=7.1.2 BAZEL_CXXOPTS="-std=c++17" bazel build conformance:conformance_test_runner
 
       - name: Rename Binary
         run: |
