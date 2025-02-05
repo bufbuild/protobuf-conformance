@@ -18,7 +18,7 @@ import { writeFileSync, mkdirSync } from "node:fs";
 import { unzipSync } from "fflate";
 
 // Version of the conformance test runner / upstream google-protobuf release
-const version = "29.3"; // 30.0-rc1
+const version = "29.3";
 const protoDirectory = new URL("../proto", import.meta.url).pathname;
 const runnerDirectory = new URL("../node_modules/.bin", import.meta.url)
   .pathname;
