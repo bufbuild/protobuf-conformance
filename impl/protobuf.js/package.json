@@ -17,12 +17,12 @@
     "test": "conformance_test_runner --maximum_edition PROTO3 --enforce_recommended --failure_list failing_tests.txt --text_format_failure_list failing_tests_text_format.txt --output_dir . runner.ts"
   },
   "dependencies": {
-    "long": "^5.2.4",
+    "long": "^5.3.1",
     "protobufjs": "^7.4.0",
     "protobufjs-cli": "^1.1.3"
   },
   "devDependencies": {
-    "typescript": "^5.7.3",
-    "tsx": "^4.19.2"
+    "typescript": "^5.8.2",
+    "tsx": "^4.19.3"
   }
 }
