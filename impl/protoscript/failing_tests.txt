@@ -1617,3 +1617,54 @@ Recommended.Proto3.JsonInput.IgnoreUnknownEnumStringValueInMapPart.ProtobufOutpu
 Recommended.Proto3.JsonInput.IgnoreUnknownEnumStringValueInRepeatedPart.ProtobufOutput
 Required.Proto2.ProtobufInput.UnknownOrdering.ProtobufOutput
 Required.Proto3.ProtobufInput.UnknownOrdering.ProtobufOutput
+Required.Proto2.JsonInput.DoubleFieldEmptyString # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.DoubleFieldQuotedExponentialValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }
+Required.Proto2.JsonInput.DoubleFieldStringValueNonNumeric # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.DoubleFieldStringValuePartiallyNumeric # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.FloatFieldEmptyString # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.FloatFieldQuotedExponentialValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }
+Required.Proto2.JsonInput.FloatFieldStringValueNonNumeric # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.FloatFieldStringValuePartiallyNumeric # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.Int32FieldEmptyString # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.Int32FieldQuotedExponentialValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }
+Required.Proto2.JsonInput.Int32FieldStringValueNonNumeric # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.Int32FieldStringValuePartiallyNumeric # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.Int32FieldStringValueZero.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }
+Required.Proto2.JsonInput.Int64FieldEmptyString # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.Uint32FieldEmptyString # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.Uint64FieldEmptyString # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.AnyNull.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
+Required.Proto3.JsonInput.AnyWithNoType.JsonOutput # Output was not equivalent to reference message: deleted: optional_any: { }
+Required.Proto3.JsonInput.AnyWithNoType.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
+Required.Proto3.JsonInput.AnyWktRepresentationWithBadType # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.AnyWktRepresentationWithEmptyTypeAndValue # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.DoubleFieldEmptyString # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.DoubleFieldQuotedExponentialValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
+Required.Proto3.JsonInput.DoubleFieldStringValueNonNumeric # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.DoubleFieldStringValuePartiallyNumeric # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.FloatFieldEmptyString # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.FloatFieldQuotedExponentialValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
+Required.Proto3.JsonInput.FloatFieldStringValueNonNumeric # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.FloatFieldStringValuePartiallyNumeric # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.Int32FieldEmptyString # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.Int32FieldQuotedExponentialValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
+Required.Proto3.JsonInput.Int32FieldStringValueNonNumeric # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.Int32FieldStringValuePartiallyNumeric # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.Int32FieldStringValueZero.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
+Required.Proto3.JsonInput.Int64FieldEmptyString # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.TimestampEpochValue.JsonOutput # Output was not equivalent to reference message: deleted: optional_timestamp: { }
+Required.Proto3.JsonInput.TimestampEpochValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
+Required.Proto3.JsonInput.TimestampLittleAfterEpochlValue.JsonOutput # Output was not equivalent to reference message: deleted: optional_timestamp: { seconds: 1 nanos: 1 }
+Required.Proto3.JsonInput.TimestampLittleAfterEpochlValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
+Required.Proto3.JsonInput.TimestampLittleBeforeEpochValue.JsonOutput # Output was not equivalent to reference message: deleted: optional_timestamp: { seconds: -2 nanos: 999999999 }
+Required.Proto3.JsonInput.TimestampLittleBeforeEpochValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
+Required.Proto3.JsonInput.TimestampNanoAfterEpochlValue.JsonOutput # Output was not equivalent to reference message: deleted: optional_timestamp: { nanos: 1 }
+Required.Proto3.JsonInput.TimestampNanoAfterEpochlValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
+Required.Proto3.JsonInput.TimestampNanoBeforeEpochValue.JsonOutput # Output was not equivalent to reference message: deleted: optional_timestamp: { seconds: -1 nanos: 999999999 }
+Required.Proto3.JsonInput.TimestampNanoBeforeEpochValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
+Required.Proto3.JsonInput.TimestampTenAndHalfSecondsAfterEpochValue.JsonOutput # Output was not equivalent to reference message: deleted: optional_timestamp: { seconds: 10 nanos: 500000000 }
+Required.Proto3.JsonInput.TimestampTenAndHalfSecondsAfterEpochValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
+Required.Proto3.JsonInput.TimestampTenAndHalfSecondsBeforeEpochValue.JsonOutput # Output was not equivalent to reference message: deleted: optional_timestamp: { seconds: -11 nanos: 500000000 }
+Required.Proto3.JsonInput.TimestampTenAndHalfSecondsBeforeEpochValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
+Required.Proto3.JsonInput.Uint32FieldEmptyString # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.Uint64FieldEmptyString # Should have failed to parse, but didn't.

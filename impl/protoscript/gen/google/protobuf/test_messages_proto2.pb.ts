@@ -488,6 +488,26 @@ export declare namespace TestAllRequiredTypesProto2 {
   }
 }
 
+export interface TestLargeOneof {
+  a1?: TestLargeOneof.A1 | null | undefined;
+  a2?: TestLargeOneof.A2 | null | undefined;
+  a3?: TestLargeOneof.A3 | null | undefined;
+  a4?: TestLargeOneof.A4 | null | undefined;
+  a5?: TestLargeOneof.A5 | null | undefined;
+}
+
+export declare namespace TestLargeOneof {
+  export interface A1 {}
+
+  export interface A2 {}
+
+  export interface A3 {}
+
+  export interface A4 {}
+
+  export interface A5 {}
+}
+
 //========================================//
 //        Protobuf Encode / Decode        //
 //========================================//
@@ -4986,6 +5006,325 @@ export const TestAllRequiredTypesProto2 = {
   },
 };
 
+export const TestLargeOneof = {
+  /**
+   * Serializes TestLargeOneof to protobuf.
+   */
+  encode: function (msg: PartialDeep<TestLargeOneof>): Uint8Array {
+    return TestLargeOneof._writeMessage(
+      msg,
+      new BinaryWriter(),
+    ).getResultBuffer();
+  },
+
+  /**
+   * Deserializes TestLargeOneof from protobuf.
+   */
+  decode: function (bytes: ByteSource): TestLargeOneof {
+    return TestLargeOneof._readMessage(
+      TestLargeOneof.initialize(),
+      new BinaryReader(bytes),
+    );
+  },
+
+  /**
+   * Initializes TestLargeOneof with all fields set to their default value.
+   */
+  initialize: function (): TestLargeOneof {
+    return {
+      a1: undefined,
+      a2: undefined,
+      a3: undefined,
+      a4: undefined,
+      a5: undefined,
+    };
+  },
+
+  /**
+   * @private
+   */
+  _writeMessage: function (
+    msg: PartialDeep<TestLargeOneof>,
+    writer: BinaryWriter,
+  ): BinaryWriter {
+    if (msg.a1 != undefined) {
+      writer.writeMessage(1, msg.a1, TestLargeOneof.A1._writeMessage);
+    }
+    if (msg.a2 != undefined) {
+      writer.writeMessage(2, msg.a2, TestLargeOneof.A2._writeMessage);
+    }
+    if (msg.a3 != undefined) {
+      writer.writeMessage(3, msg.a3, TestLargeOneof.A3._writeMessage);
+    }
+    if (msg.a4 != undefined) {
+      writer.writeMessage(4, msg.a4, TestLargeOneof.A4._writeMessage);
+    }
+    if (msg.a5 != undefined) {
+      writer.writeMessage(5, msg.a5, TestLargeOneof.A5._writeMessage);
+    }
+    return writer;
+  },
+
+  /**
+   * @private
+   */
+  _readMessage: function (
+    msg: TestLargeOneof,
+    reader: BinaryReader,
+  ): TestLargeOneof {
+    while (reader.nextField()) {
+      const field = reader.getFieldNumber();
+      switch (field) {
+        case 1: {
+          msg.a1 = TestLargeOneof.A1.initialize();
+          reader.readMessage(msg.a1, TestLargeOneof.A1._readMessage);
+          break;
+        }
+        case 2: {
+          msg.a2 = TestLargeOneof.A2.initialize();
+          reader.readMessage(msg.a2, TestLargeOneof.A2._readMessage);
+          break;
+        }
+        case 3: {
+          msg.a3 = TestLargeOneof.A3.initialize();
+          reader.readMessage(msg.a3, TestLargeOneof.A3._readMessage);
+          break;
+        }
+        case 4: {
+          msg.a4 = TestLargeOneof.A4.initialize();
+          reader.readMessage(msg.a4, TestLargeOneof.A4._readMessage);
+          break;
+        }
+        case 5: {
+          msg.a5 = TestLargeOneof.A5.initialize();
+          reader.readMessage(msg.a5, TestLargeOneof.A5._readMessage);
+          break;
+        }
+        default: {
+          reader.skipField();
+          break;
+        }
+      }
+    }
+    return msg;
+  },
+
+  A1: {
+    /**
+     * Serializes TestLargeOneof.A1 to protobuf.
+     */
+    encode: function (_msg?: PartialDeep<TestLargeOneof.A1>): Uint8Array {
+      return new Uint8Array();
+    },
+
+    /**
+     * Deserializes TestLargeOneof.A1 from protobuf.
+     */
+    decode: function (_bytes?: ByteSource): TestLargeOneof.A1 {
+      return {};
+    },
+
+    /**
+     * Initializes TestLargeOneof.A1 with all fields set to their default value.
+     */
+    initialize: function (): TestLargeOneof.A1 {
+      return {};
+    },
+
+    /**
+     * @private
+     */
+    _writeMessage: function (
+      _msg: PartialDeep<TestLargeOneof.A1>,
+      writer: BinaryWriter,
+    ): BinaryWriter {
+      return writer;
+    },
+
+    /**
+     * @private
+     */
+    _readMessage: function (
+      _msg: TestLargeOneof.A1,
+      _reader: BinaryReader,
+    ): TestLargeOneof.A1 {
+      return _msg;
+    },
+  },
+
+  A2: {
+    /**
+     * Serializes TestLargeOneof.A2 to protobuf.
+     */
+    encode: function (_msg?: PartialDeep<TestLargeOneof.A2>): Uint8Array {
+      return new Uint8Array();
+    },
+
+    /**
+     * Deserializes TestLargeOneof.A2 from protobuf.
+     */
+    decode: function (_bytes?: ByteSource): TestLargeOneof.A2 {
+      return {};
+    },
+
+    /**
+     * Initializes TestLargeOneof.A2 with all fields set to their default value.
+     */
+    initialize: function (): TestLargeOneof.A2 {
+      return {};
+    },
+
+    /**
+     * @private
+     */
+    _writeMessage: function (
+      _msg: PartialDeep<TestLargeOneof.A2>,
+      writer: BinaryWriter,
+    ): BinaryWriter {
+      return writer;
+    },
+
+    /**
+     * @private
+     */
+    _readMessage: function (
+      _msg: TestLargeOneof.A2,
+      _reader: BinaryReader,
+    ): TestLargeOneof.A2 {
+      return _msg;
+    },
+  },
+
+  A3: {
+    /**
+     * Serializes TestLargeOneof.A3 to protobuf.
+     */
+    encode: function (_msg?: PartialDeep<TestLargeOneof.A3>): Uint8Array {
+      return new Uint8Array();
+    },
+
+    /**
+     * Deserializes TestLargeOneof.A3 from protobuf.
+     */
+    decode: function (_bytes?: ByteSource): TestLargeOneof.A3 {
+      return {};
+    },
+
+    /**
+     * Initializes TestLargeOneof.A3 with all fields set to their default value.
+     */
+    initialize: function (): TestLargeOneof.A3 {
+      return {};
+    },
+
+    /**
+     * @private
+     */
+    _writeMessage: function (
+      _msg: PartialDeep<TestLargeOneof.A3>,
+      writer: BinaryWriter,
+    ): BinaryWriter {
+      return writer;
+    },
+
+    /**
+     * @private
+     */
+    _readMessage: function (
+      _msg: TestLargeOneof.A3,
+      _reader: BinaryReader,
+    ): TestLargeOneof.A3 {
+      return _msg;
+    },
+  },
+
+  A4: {
+    /**
+     * Serializes TestLargeOneof.A4 to protobuf.
+     */
+    encode: function (_msg?: PartialDeep<TestLargeOneof.A4>): Uint8Array {
+      return new Uint8Array();
+    },
+
+    /**
+     * Deserializes TestLargeOneof.A4 from protobuf.
+     */
+    decode: function (_bytes?: ByteSource): TestLargeOneof.A4 {
+      return {};
+    },
+
+    /**
+     * Initializes TestLargeOneof.A4 with all fields set to their default value.
+     */
+    initialize: function (): TestLargeOneof.A4 {
+      return {};
+    },
+
+    /**
+     * @private
+     */
+    _writeMessage: function (
+      _msg: PartialDeep<TestLargeOneof.A4>,
+      writer: BinaryWriter,
+    ): BinaryWriter {
+      return writer;
+    },
+
+    /**
+     * @private
+     */
+    _readMessage: function (
+      _msg: TestLargeOneof.A4,
+      _reader: BinaryReader,
+    ): TestLargeOneof.A4 {
+      return _msg;
+    },
+  },
+
+  A5: {
+    /**
+     * Serializes TestLargeOneof.A5 to protobuf.
+     */
+    encode: function (_msg?: PartialDeep<TestLargeOneof.A5>): Uint8Array {
+      return new Uint8Array();
+    },
+
+    /**
+     * Deserializes TestLargeOneof.A5 from protobuf.
+     */
+    decode: function (_bytes?: ByteSource): TestLargeOneof.A5 {
+      return {};
+    },
+
+    /**
+     * Initializes TestLargeOneof.A5 with all fields set to their default value.
+     */
+    initialize: function (): TestLargeOneof.A5 {
+      return {};
+    },
+
+    /**
+     * @private
+     */
+    _writeMessage: function (
+      _msg: PartialDeep<TestLargeOneof.A5>,
+      writer: BinaryWriter,
+    ): BinaryWriter {
+      return writer;
+    },
+
+    /**
+     * @private
+     */
+    _readMessage: function (
+      _msg: TestLargeOneof.A5,
+      _reader: BinaryReader,
+    ): TestLargeOneof.A5 {
+      return _msg;
+    },
+  },
+};
+
 //========================================//
 //          JSON Encode / Decode          //
 //========================================//
@@ -8895,6 +9234,310 @@ export const TestAllRequiredTypesProto2JSON = {
       if (_i_) {
         msg.i = _i_;
       }
+      return msg;
+    },
+  },
+};
+
+export const TestLargeOneofJSON = {
+  /**
+   * Serializes TestLargeOneof to JSON.
+   */
+  encode: function (msg: PartialDeep<TestLargeOneof>): string {
+    return JSON.stringify(TestLargeOneofJSON._writeMessage(msg));
+  },
+
+  /**
+   * Deserializes TestLargeOneof from JSON.
+   */
+  decode: function (json: string): TestLargeOneof {
+    return TestLargeOneofJSON._readMessage(
+      TestLargeOneofJSON.initialize(),
+      JSON.parse(json),
+    );
+  },
+
+  /**
+   * Initializes TestLargeOneof with all fields set to their default value.
+   */
+  initialize: function (): TestLargeOneof {
+    return {
+      a1: undefined,
+      a2: undefined,
+      a3: undefined,
+      a4: undefined,
+      a5: undefined,
+    };
+  },
+
+  /**
+   * @private
+   */
+  _writeMessage: function (
+    msg: PartialDeep<TestLargeOneof>,
+  ): Record<string, unknown> {
+    const json: Record<string, unknown> = {};
+    if (msg.a1 != undefined) {
+      const _a1_ = TestLargeOneofJSON.A1._writeMessage(msg.a1);
+      json["a1"] = _a1_;
+    }
+    if (msg.a2 != undefined) {
+      const _a2_ = TestLargeOneofJSON.A2._writeMessage(msg.a2);
+      json["a2"] = _a2_;
+    }
+    if (msg.a3 != undefined) {
+      const _a3_ = TestLargeOneofJSON.A3._writeMessage(msg.a3);
+      json["a3"] = _a3_;
+    }
+    if (msg.a4 != undefined) {
+      const _a4_ = TestLargeOneofJSON.A4._writeMessage(msg.a4);
+      json["a4"] = _a4_;
+    }
+    if (msg.a5 != undefined) {
+      const _a5_ = TestLargeOneofJSON.A5._writeMessage(msg.a5);
+      json["a5"] = _a5_;
+    }
+    return json;
+  },
+
+  /**
+   * @private
+   */
+  _readMessage: function (msg: TestLargeOneof, json: any): TestLargeOneof {
+    const _a1_ = json["a1"];
+    if (_a1_) {
+      msg.a1 = TestLargeOneofJSON.A1.initialize();
+      TestLargeOneofJSON.A1._readMessage(msg.a1, _a1_);
+    }
+    const _a2_ = json["a2"];
+    if (_a2_) {
+      msg.a2 = TestLargeOneofJSON.A2.initialize();
+      TestLargeOneofJSON.A2._readMessage(msg.a2, _a2_);
+    }
+    const _a3_ = json["a3"];
+    if (_a3_) {
+      msg.a3 = TestLargeOneofJSON.A3.initialize();
+      TestLargeOneofJSON.A3._readMessage(msg.a3, _a3_);
+    }
+    const _a4_ = json["a4"];
+    if (_a4_) {
+      msg.a4 = TestLargeOneofJSON.A4.initialize();
+      TestLargeOneofJSON.A4._readMessage(msg.a4, _a4_);
+    }
+    const _a5_ = json["a5"];
+    if (_a5_) {
+      msg.a5 = TestLargeOneofJSON.A5.initialize();
+      TestLargeOneofJSON.A5._readMessage(msg.a5, _a5_);
+    }
+    return msg;
+  },
+
+  A1: {
+    /**
+     * Serializes TestLargeOneof.A1 to JSON.
+     */
+    encode: function (_msg?: PartialDeep<TestLargeOneof.A1>): string {
+      return "{}";
+    },
+
+    /**
+     * Deserializes TestLargeOneof.A1 from JSON.
+     */
+    decode: function (_json?: string): TestLargeOneof.A1 {
+      return {};
+    },
+
+    /**
+     * Initializes TestLargeOneof.A1 with all fields set to their default value.
+     */
+    initialize: function (): TestLargeOneof.A1 {
+      return {};
+    },
+
+    /**
+     * @private
+     */
+    _writeMessage: function (
+      _msg: PartialDeep<TestLargeOneof.A1>,
+    ): Record<string, unknown> {
+      return {};
+    },
+
+    /**
+     * @private
+     */
+    _readMessage: function (
+      msg: TestLargeOneof.A1,
+      _json: any,
+    ): TestLargeOneof.A1 {
+      return msg;
+    },
+  },
+
+  A2: {
+    /**
+     * Serializes TestLargeOneof.A2 to JSON.
+     */
+    encode: function (_msg?: PartialDeep<TestLargeOneof.A2>): string {
+      return "{}";
+    },
+
+    /**
+     * Deserializes TestLargeOneof.A2 from JSON.
+     */
+    decode: function (_json?: string): TestLargeOneof.A2 {
+      return {};
+    },
+
+    /**
+     * Initializes TestLargeOneof.A2 with all fields set to their default value.
+     */
+    initialize: function (): TestLargeOneof.A2 {
+      return {};
+    },
+
+    /**
+     * @private
+     */
+    _writeMessage: function (
+      _msg: PartialDeep<TestLargeOneof.A2>,
+    ): Record<string, unknown> {
+      return {};
+    },
+
+    /**
+     * @private
+     */
+    _readMessage: function (
+      msg: TestLargeOneof.A2,
+      _json: any,
+    ): TestLargeOneof.A2 {
+      return msg;
+    },
+  },
+
+  A3: {
+    /**
+     * Serializes TestLargeOneof.A3 to JSON.
+     */
+    encode: function (_msg?: PartialDeep<TestLargeOneof.A3>): string {
+      return "{}";
+    },
+
+    /**
+     * Deserializes TestLargeOneof.A3 from JSON.
+     */
+    decode: function (_json?: string): TestLargeOneof.A3 {
+      return {};
+    },
+
+    /**
+     * Initializes TestLargeOneof.A3 with all fields set to their default value.
+     */
+    initialize: function (): TestLargeOneof.A3 {
+      return {};
+    },
+
+    /**
+     * @private
+     */
+    _writeMessage: function (
+      _msg: PartialDeep<TestLargeOneof.A3>,
+    ): Record<string, unknown> {
+      return {};
+    },
+
+    /**
+     * @private
+     */
+    _readMessage: function (
+      msg: TestLargeOneof.A3,
+      _json: any,
+    ): TestLargeOneof.A3 {
+      return msg;
+    },
+  },
+
+  A4: {
+    /**
+     * Serializes TestLargeOneof.A4 to JSON.
+     */
+    encode: function (_msg?: PartialDeep<TestLargeOneof.A4>): string {
+      return "{}";
+    },
+
+    /**
+     * Deserializes TestLargeOneof.A4 from JSON.
+     */
+    decode: function (_json?: string): TestLargeOneof.A4 {
+      return {};
+    },
+
+    /**
+     * Initializes TestLargeOneof.A4 with all fields set to their default value.
+     */
+    initialize: function (): TestLargeOneof.A4 {
+      return {};
+    },
+
+    /**
+     * @private
+     */
+    _writeMessage: function (
+      _msg: PartialDeep<TestLargeOneof.A4>,
+    ): Record<string, unknown> {
+      return {};
+    },
+
+    /**
+     * @private
+     */
+    _readMessage: function (
+      msg: TestLargeOneof.A4,
+      _json: any,
+    ): TestLargeOneof.A4 {
+      return msg;
+    },
+  },
+
+  A5: {
+    /**
+     * Serializes TestLargeOneof.A5 to JSON.
+     */
+    encode: function (_msg?: PartialDeep<TestLargeOneof.A5>): string {
+      return "{}";
+    },
+
+    /**
+     * Deserializes TestLargeOneof.A5 from JSON.
+     */
+    decode: function (_json?: string): TestLargeOneof.A5 {
+      return {};
+    },
+
+    /**
+     * Initializes TestLargeOneof.A5 with all fields set to their default value.
+     */
+    initialize: function (): TestLargeOneof.A5 {
+      return {};
+    },
+
+    /**
+     * @private
+     */
+    _writeMessage: function (
+      _msg: PartialDeep<TestLargeOneof.A5>,
+    ): Record<string, unknown> {
+      return {};
+    },
+
+    /**
+     * @private
+     */
+    _readMessage: function (
+      msg: TestLargeOneof.A5,
+      _json: any,
+    ): TestLargeOneof.A5 {
       return msg;
     },
   },

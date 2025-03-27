@@ -1081,6 +1081,72 @@ export enum TestAllRequiredTypesProto2_NestedEnum {
     NEG = -1
 }
 /**
+ * @generated from protobuf message protobuf_test_messages.proto2.TestLargeOneof
+ */
+export interface TestLargeOneof {
+    /**
+     * @generated from protobuf oneof: large_oneof
+     */
+    largeOneof: {
+        oneofKind: "a1";
+        /**
+         * @generated from protobuf field: protobuf_test_messages.proto2.TestLargeOneof.A1 a1 = 1;
+         */
+        a1: TestLargeOneof_A1;
+    } | {
+        oneofKind: "a2";
+        /**
+         * @generated from protobuf field: protobuf_test_messages.proto2.TestLargeOneof.A2 a2 = 2;
+         */
+        a2: TestLargeOneof_A2;
+    } | {
+        oneofKind: "a3";
+        /**
+         * @generated from protobuf field: protobuf_test_messages.proto2.TestLargeOneof.A3 a3 = 3;
+         */
+        a3: TestLargeOneof_A3;
+    } | {
+        oneofKind: "a4";
+        /**
+         * @generated from protobuf field: protobuf_test_messages.proto2.TestLargeOneof.A4 a4 = 4;
+         */
+        a4: TestLargeOneof_A4;
+    } | {
+        oneofKind: "a5";
+        /**
+         * @generated from protobuf field: protobuf_test_messages.proto2.TestLargeOneof.A5 a5 = 5;
+         */
+        a5: TestLargeOneof_A5;
+    } | {
+        oneofKind: undefined;
+    };
+}
+/**
+ * @generated from protobuf message protobuf_test_messages.proto2.TestLargeOneof.A1
+ */
+export interface TestLargeOneof_A1 {
+}
+/**
+ * @generated from protobuf message protobuf_test_messages.proto2.TestLargeOneof.A2
+ */
+export interface TestLargeOneof_A2 {
+}
+/**
+ * @generated from protobuf message protobuf_test_messages.proto2.TestLargeOneof.A3
+ */
+export interface TestLargeOneof_A3 {
+}
+/**
+ * @generated from protobuf message protobuf_test_messages.proto2.TestLargeOneof.A4
+ */
+export interface TestLargeOneof_A4 {
+}
+/**
+ * @generated from protobuf message protobuf_test_messages.proto2.TestLargeOneof.A5
+ */
+export interface TestLargeOneof_A5 {
+}
+/**
  * @generated from protobuf enum protobuf_test_messages.proto2.ForeignEnumProto2
  */
 export enum ForeignEnumProto2 {
@@ -3927,3 +3993,218 @@ class TestAllRequiredTypesProto2_MessageSetCorrectExtension2$Type extends Messag
  * @generated MessageType for protobuf message protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2
  */
 export const TestAllRequiredTypesProto2_MessageSetCorrectExtension2 = new TestAllRequiredTypesProto2_MessageSetCorrectExtension2$Type();
+// @generated message type with reflection information, may provide speed optimized methods
+class TestLargeOneof$Type extends MessageType<TestLargeOneof> {
+    constructor() {
+        super("protobuf_test_messages.proto2.TestLargeOneof", [
+            { no: 1, name: "a1", kind: "message", oneof: "largeOneof", T: () => TestLargeOneof_A1 },
+            { no: 2, name: "a2", kind: "message", oneof: "largeOneof", T: () => TestLargeOneof_A2 },
+            { no: 3, name: "a3", kind: "message", oneof: "largeOneof", T: () => TestLargeOneof_A3 },
+            { no: 4, name: "a4", kind: "message", oneof: "largeOneof", T: () => TestLargeOneof_A4 },
+            { no: 5, name: "a5", kind: "message", oneof: "largeOneof", T: () => TestLargeOneof_A5 }
+        ]);
+    }
+    create(value?: PartialMessage<TestLargeOneof>): TestLargeOneof {
+        const message = globalThis.Object.create((this.messagePrototype!));
+        message.largeOneof = { oneofKind: undefined };
+        if (value !== undefined)
+            reflectionMergePartial<TestLargeOneof>(this, message, value);
+        return message;
+    }
+    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: TestLargeOneof): TestLargeOneof {
+        let message = target ?? this.create(), end = reader.pos + length;
+        while (reader.pos < end) {
+            let [fieldNo, wireType] = reader.tag();
+            switch (fieldNo) {
+                case /* protobuf_test_messages.proto2.TestLargeOneof.A1 a1 */ 1:
+                    message.largeOneof = {
+                        oneofKind: "a1",
+                        a1: TestLargeOneof_A1.internalBinaryRead(reader, reader.uint32(), options, (message.largeOneof as any).a1)
+                    };
+                    break;
+                case /* protobuf_test_messages.proto2.TestLargeOneof.A2 a2 */ 2:
+                    message.largeOneof = {
+                        oneofKind: "a2",
+                        a2: TestLargeOneof_A2.internalBinaryRead(reader, reader.uint32(), options, (message.largeOneof as any).a2)
+                    };
+                    break;
+                case /* protobuf_test_messages.proto2.TestLargeOneof.A3 a3 */ 3:
+                    message.largeOneof = {
+                        oneofKind: "a3",
+                        a3: TestLargeOneof_A3.internalBinaryRead(reader, reader.uint32(), options, (message.largeOneof as any).a3)
+                    };
+                    break;
+                case /* protobuf_test_messages.proto2.TestLargeOneof.A4 a4 */ 4:
+                    message.largeOneof = {
+                        oneofKind: "a4",
+                        a4: TestLargeOneof_A4.internalBinaryRead(reader, reader.uint32(), options, (message.largeOneof as any).a4)
+                    };
+                    break;
+                case /* protobuf_test_messages.proto2.TestLargeOneof.A5 a5 */ 5:
+                    message.largeOneof = {
+                        oneofKind: "a5",
+                        a5: TestLargeOneof_A5.internalBinaryRead(reader, reader.uint32(), options, (message.largeOneof as any).a5)
+                    };
+                    break;
+                default:
+                    let u = options.readUnknownField;
+                    if (u === "throw")
+                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
+                    let d = reader.skip(wireType);
+                    if (u !== false)
+                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
+            }
+        }
+        return message;
+    }
+    internalBinaryWrite(message: TestLargeOneof, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
+        /* protobuf_test_messages.proto2.TestLargeOneof.A1 a1 = 1; */
+        if (message.largeOneof.oneofKind === "a1")
+            TestLargeOneof_A1.internalBinaryWrite(message.largeOneof.a1, writer.tag(1, WireType.LengthDelimited).fork(), options).join();
+        /* protobuf_test_messages.proto2.TestLargeOneof.A2 a2 = 2; */
+        if (message.largeOneof.oneofKind === "a2")
+            TestLargeOneof_A2.internalBinaryWrite(message.largeOneof.a2, writer.tag(2, WireType.LengthDelimited).fork(), options).join();
+        /* protobuf_test_messages.proto2.TestLargeOneof.A3 a3 = 3; */
+        if (message.largeOneof.oneofKind === "a3")
+            TestLargeOneof_A3.internalBinaryWrite(message.largeOneof.a3, writer.tag(3, WireType.LengthDelimited).fork(), options).join();
+        /* protobuf_test_messages.proto2.TestLargeOneof.A4 a4 = 4; */
+        if (message.largeOneof.oneofKind === "a4")
+            TestLargeOneof_A4.internalBinaryWrite(message.largeOneof.a4, writer.tag(4, WireType.LengthDelimited).fork(), options).join();
+        /* protobuf_test_messages.proto2.TestLargeOneof.A5 a5 = 5; */
+        if (message.largeOneof.oneofKind === "a5")
+            TestLargeOneof_A5.internalBinaryWrite(message.largeOneof.a5, writer.tag(5, WireType.LengthDelimited).fork(), options).join();
+        let u = options.writeUnknownFields;
+        if (u !== false)
+            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+        return writer;
+    }
+}
+/**
+ * @generated MessageType for protobuf message protobuf_test_messages.proto2.TestLargeOneof
+ */
+export const TestLargeOneof = new TestLargeOneof$Type();
+// @generated message type with reflection information, may provide speed optimized methods
+class TestLargeOneof_A1$Type extends MessageType<TestLargeOneof_A1> {
+    constructor() {
+        super("protobuf_test_messages.proto2.TestLargeOneof.A1", []);
+    }
+    create(value?: PartialMessage<TestLargeOneof_A1>): TestLargeOneof_A1 {
+        const message = globalThis.Object.create((this.messagePrototype!));
+        if (value !== undefined)
+            reflectionMergePartial<TestLargeOneof_A1>(this, message, value);
+        return message;
+    }
+    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: TestLargeOneof_A1): TestLargeOneof_A1 {
+        return target ?? this.create();
+    }
+    internalBinaryWrite(message: TestLargeOneof_A1, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
+        let u = options.writeUnknownFields;
+        if (u !== false)
+            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+        return writer;
+    }
+}
+/**
+ * @generated MessageType for protobuf message protobuf_test_messages.proto2.TestLargeOneof.A1
+ */
+export const TestLargeOneof_A1 = new TestLargeOneof_A1$Type();
+// @generated message type with reflection information, may provide speed optimized methods
+class TestLargeOneof_A2$Type extends MessageType<TestLargeOneof_A2> {
+    constructor() {
+        super("protobuf_test_messages.proto2.TestLargeOneof.A2", []);
+    }
+    create(value?: PartialMessage<TestLargeOneof_A2>): TestLargeOneof_A2 {
+        const message = globalThis.Object.create((this.messagePrototype!));
+        if (value !== undefined)
+            reflectionMergePartial<TestLargeOneof_A2>(this, message, value);
+        return message;
+    }
+    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: TestLargeOneof_A2): TestLargeOneof_A2 {
+        return target ?? this.create();
+    }
+    internalBinaryWrite(message: TestLargeOneof_A2, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
+        let u = options.writeUnknownFields;
+        if (u !== false)
+            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+        return writer;
+    }
+}
+/**
+ * @generated MessageType for protobuf message protobuf_test_messages.proto2.TestLargeOneof.A2
+ */
+export const TestLargeOneof_A2 = new TestLargeOneof_A2$Type();
+// @generated message type with reflection information, may provide speed optimized methods
+class TestLargeOneof_A3$Type extends MessageType<TestLargeOneof_A3> {
+    constructor() {
+        super("protobuf_test_messages.proto2.TestLargeOneof.A3", []);
+    }
+    create(value?: PartialMessage<TestLargeOneof_A3>): TestLargeOneof_A3 {
+        const message = globalThis.Object.create((this.messagePrototype!));
+        if (value !== undefined)
+            reflectionMergePartial<TestLargeOneof_A3>(this, message, value);
+        return message;
+    }
+    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: TestLargeOneof_A3): TestLargeOneof_A3 {
+        return target ?? this.create();
+    }
+    internalBinaryWrite(message: TestLargeOneof_A3, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
+        let u = options.writeUnknownFields;
+        if (u !== false)
+            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+        return writer;
+    }
+}
+/**
+ * @generated MessageType for protobuf message protobuf_test_messages.proto2.TestLargeOneof.A3
+ */
+export const TestLargeOneof_A3 = new TestLargeOneof_A3$Type();
+// @generated message type with reflection information, may provide speed optimized methods
+class TestLargeOneof_A4$Type extends MessageType<TestLargeOneof_A4> {
+    constructor() {
+        super("protobuf_test_messages.proto2.TestLargeOneof.A4", []);
+    }
+    create(value?: PartialMessage<TestLargeOneof_A4>): TestLargeOneof_A4 {
+        const message = globalThis.Object.create((this.messagePrototype!));
+        if (value !== undefined)
+            reflectionMergePartial<TestLargeOneof_A4>(this, message, value);
+        return message;
+    }
+    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: TestLargeOneof_A4): TestLargeOneof_A4 {
+        return target ?? this.create();
+    }
+    internalBinaryWrite(message: TestLargeOneof_A4, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
+        let u = options.writeUnknownFields;
+        if (u !== false)
+            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+        return writer;
+    }
+}
+/**
+ * @generated MessageType for protobuf message protobuf_test_messages.proto2.TestLargeOneof.A4
+ */
+export const TestLargeOneof_A4 = new TestLargeOneof_A4$Type();
+// @generated message type with reflection information, may provide speed optimized methods
+class TestLargeOneof_A5$Type extends MessageType<TestLargeOneof_A5> {
+    constructor() {
+        super("protobuf_test_messages.proto2.TestLargeOneof.A5", []);
+    }
+    create(value?: PartialMessage<TestLargeOneof_A5>): TestLargeOneof_A5 {
+        const message = globalThis.Object.create((this.messagePrototype!));
+        if (value !== undefined)
+            reflectionMergePartial<TestLargeOneof_A5>(this, message, value);
+        return message;
+    }
+    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: TestLargeOneof_A5): TestLargeOneof_A5 {
+        return target ?? this.create();
+    }
+    internalBinaryWrite(message: TestLargeOneof_A5, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
+        let u = options.writeUnknownFields;
+        if (u !== false)
+            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+        return writer;
+    }
+}
+/**
+ * @generated MessageType for protobuf message protobuf_test_messages.proto2.TestLargeOneof.A5
+ */
+export const TestLargeOneof_A5 = new TestLargeOneof_A5$Type();

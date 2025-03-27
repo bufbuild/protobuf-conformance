@@ -556,6 +556,31 @@ export interface TestAllRequiredTypesProto2_MessageSetCorrectExtension2 {
   i: number;
 }
 
+export interface TestLargeOneof {
+  largeOneof?:
+    | { $case: "a1"; a1: TestLargeOneof_A1 }
+    | { $case: "a2"; a2: TestLargeOneof_A2 }
+    | { $case: "a3"; a3: TestLargeOneof_A3 }
+    | { $case: "a4"; a4: TestLargeOneof_A4 }
+    | { $case: "a5"; a5: TestLargeOneof_A5 }
+    | undefined;
+}
+
+export interface TestLargeOneof_A1 {
+}
+
+export interface TestLargeOneof_A2 {
+}
+
+export interface TestLargeOneof_A3 {
+}
+
+export interface TestLargeOneof_A4 {
+}
+
+export interface TestLargeOneof_A5 {
+}
+
 function createBaseTestAllTypesProto2(): TestAllTypesProto2 {
   return {
     optionalInt32: 0,
@@ -7600,6 +7625,376 @@ export const TestAllRequiredTypesProto2_MessageSetCorrectExtension2: MessageFns<
   ): TestAllRequiredTypesProto2_MessageSetCorrectExtension2 {
     const message = createBaseTestAllRequiredTypesProto2_MessageSetCorrectExtension2();
     message.i = object.i ?? 0;
+    return message;
+  },
+};
+
+function createBaseTestLargeOneof(): TestLargeOneof {
+  return { largeOneof: undefined };
+}
+
+export const TestLargeOneof: MessageFns<TestLargeOneof> = {
+  encode(message: TestLargeOneof, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
+    switch (message.largeOneof?.$case) {
+      case "a1":
+        TestLargeOneof_A1.encode(message.largeOneof.a1, writer.uint32(10).fork()).join();
+        break;
+      case "a2":
+        TestLargeOneof_A2.encode(message.largeOneof.a2, writer.uint32(18).fork()).join();
+        break;
+      case "a3":
+        TestLargeOneof_A3.encode(message.largeOneof.a3, writer.uint32(26).fork()).join();
+        break;
+      case "a4":
+        TestLargeOneof_A4.encode(message.largeOneof.a4, writer.uint32(34).fork()).join();
+        break;
+      case "a5":
+        TestLargeOneof_A5.encode(message.largeOneof.a5, writer.uint32(42).fork()).join();
+        break;
+    }
+    return writer;
+  },
+
+  decode(input: BinaryReader | Uint8Array, length?: number): TestLargeOneof {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseTestLargeOneof();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1: {
+          if (tag !== 10) {
+            break;
+          }
+
+          message.largeOneof = { $case: "a1", a1: TestLargeOneof_A1.decode(reader, reader.uint32()) };
+          continue;
+        }
+        case 2: {
+          if (tag !== 18) {
+            break;
+          }
+
+          message.largeOneof = { $case: "a2", a2: TestLargeOneof_A2.decode(reader, reader.uint32()) };
+          continue;
+        }
+        case 3: {
+          if (tag !== 26) {
+            break;
+          }
+
+          message.largeOneof = { $case: "a3", a3: TestLargeOneof_A3.decode(reader, reader.uint32()) };
+          continue;
+        }
+        case 4: {
+          if (tag !== 34) {
+            break;
+          }
+
+          message.largeOneof = { $case: "a4", a4: TestLargeOneof_A4.decode(reader, reader.uint32()) };
+          continue;
+        }
+        case 5: {
+          if (tag !== 42) {
+            break;
+          }
+
+          message.largeOneof = { $case: "a5", a5: TestLargeOneof_A5.decode(reader, reader.uint32()) };
+          continue;
+        }
+      }
+      if ((tag & 7) === 4 || tag === 0) {
+        break;
+      }
+      reader.skip(tag & 7);
+    }
+    return message;
+  },
+
+  fromJSON(object: any): TestLargeOneof {
+    return {
+      largeOneof: isSet(object.a1)
+        ? { $case: "a1", a1: TestLargeOneof_A1.fromJSON(object.a1) }
+        : isSet(object.a2)
+        ? { $case: "a2", a2: TestLargeOneof_A2.fromJSON(object.a2) }
+        : isSet(object.a3)
+        ? { $case: "a3", a3: TestLargeOneof_A3.fromJSON(object.a3) }
+        : isSet(object.a4)
+        ? { $case: "a4", a4: TestLargeOneof_A4.fromJSON(object.a4) }
+        : isSet(object.a5)
+        ? { $case: "a5", a5: TestLargeOneof_A5.fromJSON(object.a5) }
+        : undefined,
+    };
+  },
+
+  toJSON(message: TestLargeOneof): unknown {
+    const obj: any = {};
+    if (message.largeOneof?.$case === "a1") {
+      obj.a1 = TestLargeOneof_A1.toJSON(message.largeOneof.a1);
+    } else if (message.largeOneof?.$case === "a2") {
+      obj.a2 = TestLargeOneof_A2.toJSON(message.largeOneof.a2);
+    } else if (message.largeOneof?.$case === "a3") {
+      obj.a3 = TestLargeOneof_A3.toJSON(message.largeOneof.a3);
+    } else if (message.largeOneof?.$case === "a4") {
+      obj.a4 = TestLargeOneof_A4.toJSON(message.largeOneof.a4);
+    } else if (message.largeOneof?.$case === "a5") {
+      obj.a5 = TestLargeOneof_A5.toJSON(message.largeOneof.a5);
+    }
+    return obj;
+  },
+
+  create<I extends Exact<DeepPartial<TestLargeOneof>, I>>(base?: I): TestLargeOneof {
+    return TestLargeOneof.fromPartial(base ?? ({} as any));
+  },
+  fromPartial<I extends Exact<DeepPartial<TestLargeOneof>, I>>(object: I): TestLargeOneof {
+    const message = createBaseTestLargeOneof();
+    switch (object.largeOneof?.$case) {
+      case "a1": {
+        if (object.largeOneof?.a1 !== undefined && object.largeOneof?.a1 !== null) {
+          message.largeOneof = { $case: "a1", a1: TestLargeOneof_A1.fromPartial(object.largeOneof.a1) };
+        }
+        break;
+      }
+      case "a2": {
+        if (object.largeOneof?.a2 !== undefined && object.largeOneof?.a2 !== null) {
+          message.largeOneof = { $case: "a2", a2: TestLargeOneof_A2.fromPartial(object.largeOneof.a2) };
+        }
+        break;
+      }
+      case "a3": {
+        if (object.largeOneof?.a3 !== undefined && object.largeOneof?.a3 !== null) {
+          message.largeOneof = { $case: "a3", a3: TestLargeOneof_A3.fromPartial(object.largeOneof.a3) };
+        }
+        break;
+      }
+      case "a4": {
+        if (object.largeOneof?.a4 !== undefined && object.largeOneof?.a4 !== null) {
+          message.largeOneof = { $case: "a4", a4: TestLargeOneof_A4.fromPartial(object.largeOneof.a4) };
+        }
+        break;
+      }
+      case "a5": {
+        if (object.largeOneof?.a5 !== undefined && object.largeOneof?.a5 !== null) {
+          message.largeOneof = { $case: "a5", a5: TestLargeOneof_A5.fromPartial(object.largeOneof.a5) };
+        }
+        break;
+      }
+    }
+    return message;
+  },
+};
+
+function createBaseTestLargeOneof_A1(): TestLargeOneof_A1 {
+  return {};
+}
+
+export const TestLargeOneof_A1: MessageFns<TestLargeOneof_A1> = {
+  encode(_: TestLargeOneof_A1, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
+    return writer;
+  },
+
+  decode(input: BinaryReader | Uint8Array, length?: number): TestLargeOneof_A1 {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseTestLargeOneof_A1();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+      }
+      if ((tag & 7) === 4 || tag === 0) {
+        break;
+      }
+      reader.skip(tag & 7);
+    }
+    return message;
+  },
+
+  fromJSON(_: any): TestLargeOneof_A1 {
+    return {};
+  },
+
+  toJSON(_: TestLargeOneof_A1): unknown {
+    const obj: any = {};
+    return obj;
+  },
+
+  create<I extends Exact<DeepPartial<TestLargeOneof_A1>, I>>(base?: I): TestLargeOneof_A1 {
+    return TestLargeOneof_A1.fromPartial(base ?? ({} as any));
+  },
+  fromPartial<I extends Exact<DeepPartial<TestLargeOneof_A1>, I>>(_: I): TestLargeOneof_A1 {
+    const message = createBaseTestLargeOneof_A1();
+    return message;
+  },
+};
+
+function createBaseTestLargeOneof_A2(): TestLargeOneof_A2 {
+  return {};
+}
+
+export const TestLargeOneof_A2: MessageFns<TestLargeOneof_A2> = {
+  encode(_: TestLargeOneof_A2, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
+    return writer;
+  },
+
+  decode(input: BinaryReader | Uint8Array, length?: number): TestLargeOneof_A2 {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseTestLargeOneof_A2();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+      }
+      if ((tag & 7) === 4 || tag === 0) {
+        break;
+      }
+      reader.skip(tag & 7);
+    }
+    return message;
+  },
+
+  fromJSON(_: any): TestLargeOneof_A2 {
+    return {};
+  },
+
+  toJSON(_: TestLargeOneof_A2): unknown {
+    const obj: any = {};
+    return obj;
+  },
+
+  create<I extends Exact<DeepPartial<TestLargeOneof_A2>, I>>(base?: I): TestLargeOneof_A2 {
+    return TestLargeOneof_A2.fromPartial(base ?? ({} as any));
+  },
+  fromPartial<I extends Exact<DeepPartial<TestLargeOneof_A2>, I>>(_: I): TestLargeOneof_A2 {
+    const message = createBaseTestLargeOneof_A2();
+    return message;
+  },
+};
+
+function createBaseTestLargeOneof_A3(): TestLargeOneof_A3 {
+  return {};
+}
+
+export const TestLargeOneof_A3: MessageFns<TestLargeOneof_A3> = {
+  encode(_: TestLargeOneof_A3, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
+    return writer;
+  },
+
+  decode(input: BinaryReader | Uint8Array, length?: number): TestLargeOneof_A3 {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseTestLargeOneof_A3();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+      }
+      if ((tag & 7) === 4 || tag === 0) {
+        break;
+      }
+      reader.skip(tag & 7);
+    }
+    return message;
+  },
+
+  fromJSON(_: any): TestLargeOneof_A3 {
+    return {};
+  },
+
+  toJSON(_: TestLargeOneof_A3): unknown {
+    const obj: any = {};
+    return obj;
+  },
+
+  create<I extends Exact<DeepPartial<TestLargeOneof_A3>, I>>(base?: I): TestLargeOneof_A3 {
+    return TestLargeOneof_A3.fromPartial(base ?? ({} as any));
+  },
+  fromPartial<I extends Exact<DeepPartial<TestLargeOneof_A3>, I>>(_: I): TestLargeOneof_A3 {
+    const message = createBaseTestLargeOneof_A3();
+    return message;
+  },
+};
+
+function createBaseTestLargeOneof_A4(): TestLargeOneof_A4 {
+  return {};
+}
+
+export const TestLargeOneof_A4: MessageFns<TestLargeOneof_A4> = {
+  encode(_: TestLargeOneof_A4, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
+    return writer;
+  },
+
+  decode(input: BinaryReader | Uint8Array, length?: number): TestLargeOneof_A4 {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseTestLargeOneof_A4();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+      }
+      if ((tag & 7) === 4 || tag === 0) {
+        break;
+      }
+      reader.skip(tag & 7);
+    }
+    return message;
+  },
+
+  fromJSON(_: any): TestLargeOneof_A4 {
+    return {};
+  },
+
+  toJSON(_: TestLargeOneof_A4): unknown {
+    const obj: any = {};
+    return obj;
+  },
+
+  create<I extends Exact<DeepPartial<TestLargeOneof_A4>, I>>(base?: I): TestLargeOneof_A4 {
+    return TestLargeOneof_A4.fromPartial(base ?? ({} as any));
+  },
+  fromPartial<I extends Exact<DeepPartial<TestLargeOneof_A4>, I>>(_: I): TestLargeOneof_A4 {
+    const message = createBaseTestLargeOneof_A4();
+    return message;
+  },
+};
+
+function createBaseTestLargeOneof_A5(): TestLargeOneof_A5 {
+  return {};
+}
+
+export const TestLargeOneof_A5: MessageFns<TestLargeOneof_A5> = {
+  encode(_: TestLargeOneof_A5, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
+    return writer;
+  },
+
+  decode(input: BinaryReader | Uint8Array, length?: number): TestLargeOneof_A5 {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseTestLargeOneof_A5();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+      }
+      if ((tag & 7) === 4 || tag === 0) {
+        break;
+      }
+      reader.skip(tag & 7);
+    }
+    return message;
+  },
+
+  fromJSON(_: any): TestLargeOneof_A5 {
+    return {};
+  },
+
+  toJSON(_: TestLargeOneof_A5): unknown {
+    const obj: any = {};
+    return obj;
+  },
+
+  create<I extends Exact<DeepPartial<TestLargeOneof_A5>, I>>(base?: I): TestLargeOneof_A5 {
+    return TestLargeOneof_A5.fromPartial(base ?? ({} as any));
+  },
+  fromPartial<I extends Exact<DeepPartial<TestLargeOneof_A5>, I>>(_: I): TestLargeOneof_A5 {
+    const message = createBaseTestLargeOneof_A5();
     return message;
   },
 };

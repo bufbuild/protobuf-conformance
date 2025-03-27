@@ -1648,59 +1648,119 @@ Required.Proto3.ProtobufInput.ValidDataScalar.UINT64[1].JsonOutput
 Required.Proto3.ProtobufInput.ValidDataScalar.UINT64[2].JsonOutput
 Required.Proto3.TimestampProtoInputTooLarge.JsonOutput
 Required.Proto3.TimestampProtoInputTooSmall.JsonOutput
-Required.Proto2.ProtobufInput.UnknownWireType6_Field0_Verion0
-Required.Proto2.ProtobufInput.UnknownWireType6_Field0_Verion1
-Required.Proto2.ProtobufInput.UnknownWireType6_Field0_Verion2
-Required.Proto2.ProtobufInput.UnknownWireType6_Field0_Verion3
-Required.Proto2.ProtobufInput.UnknownWireType6_Field1_Verion0
-Required.Proto2.ProtobufInput.UnknownWireType6_Field1_Verion1
-Required.Proto2.ProtobufInput.UnknownWireType6_Field1_Verion2
-Required.Proto2.ProtobufInput.UnknownWireType6_Field1_Verion3
-Required.Proto2.ProtobufInput.UnknownWireType6_Field2_Verion0
-Required.Proto2.ProtobufInput.UnknownWireType6_Field2_Verion1
-Required.Proto2.ProtobufInput.UnknownWireType6_Field2_Verion2
-Required.Proto2.ProtobufInput.UnknownWireType6_Field2_Verion3
-Required.Proto2.ProtobufInput.UnknownWireType6_Field3_Verion0
-Required.Proto2.ProtobufInput.UnknownWireType6_Field3_Verion1
-Required.Proto2.ProtobufInput.UnknownWireType6_Field3_Verion2
-Required.Proto2.ProtobufInput.UnknownWireType6_Field3_Verion3
-Required.Proto2.ProtobufInput.UnknownWireType7_Field0_Verion0
-Required.Proto2.ProtobufInput.UnknownWireType7_Field0_Verion1
-Required.Proto2.ProtobufInput.UnknownWireType7_Field0_Verion2
-Required.Proto2.ProtobufInput.UnknownWireType7_Field0_Verion3
-Required.Proto2.ProtobufInput.UnknownWireType7_Field1_Verion0
-Required.Proto2.ProtobufInput.UnknownWireType7_Field1_Verion1
-Required.Proto2.ProtobufInput.UnknownWireType7_Field1_Verion2
-Required.Proto2.ProtobufInput.UnknownWireType7_Field1_Verion3
-Required.Proto2.ProtobufInput.UnknownWireType7_Field2_Verion0
-Required.Proto2.ProtobufInput.UnknownWireType7_Field2_Verion1
-Required.Proto2.ProtobufInput.UnknownWireType7_Field2_Verion2
-Required.Proto2.ProtobufInput.UnknownWireType7_Field2_Verion3
-Required.Proto2.ProtobufInput.UnknownWireType7_Field3_Verion0
-Required.Proto2.ProtobufInput.UnknownWireType7_Field3_Verion1
-Required.Proto2.ProtobufInput.UnknownWireType7_Field3_Verion2
-Required.Proto2.ProtobufInput.UnknownWireType7_Field3_Verion3
-Required.Proto3.ProtobufInput.UnknownWireType6_Field1_Verion0
-Required.Proto3.ProtobufInput.UnknownWireType6_Field1_Verion1
-Required.Proto3.ProtobufInput.UnknownWireType6_Field1_Verion2
-Required.Proto3.ProtobufInput.UnknownWireType6_Field1_Verion3
-Required.Proto3.ProtobufInput.UnknownWireType6_Field2_Verion0
-Required.Proto3.ProtobufInput.UnknownWireType6_Field2_Verion1
-Required.Proto3.ProtobufInput.UnknownWireType6_Field2_Verion2
-Required.Proto3.ProtobufInput.UnknownWireType6_Field2_Verion3
-Required.Proto3.ProtobufInput.UnknownWireType6_Field3_Verion0
-Required.Proto3.ProtobufInput.UnknownWireType6_Field3_Verion1
-Required.Proto3.ProtobufInput.UnknownWireType6_Field3_Verion2
-Required.Proto3.ProtobufInput.UnknownWireType6_Field3_Verion3
-Required.Proto3.ProtobufInput.UnknownWireType7_Field1_Verion0
-Required.Proto3.ProtobufInput.UnknownWireType7_Field1_Verion1
-Required.Proto3.ProtobufInput.UnknownWireType7_Field1_Verion2
-Required.Proto3.ProtobufInput.UnknownWireType7_Field1_Verion3
-Required.Proto3.ProtobufInput.UnknownWireType7_Field2_Verion0
-Required.Proto3.ProtobufInput.UnknownWireType7_Field2_Verion1
-Required.Proto3.ProtobufInput.UnknownWireType7_Field2_Verion2
-Required.Proto3.ProtobufInput.UnknownWireType7_Field2_Verion3
-Required.Proto3.ProtobufInput.UnknownWireType7_Field3_Verion0
-Required.Proto3.ProtobufInput.UnknownWireType7_Field3_Verion1
-Required.Proto3.ProtobufInput.UnknownWireType7_Field3_Verion2
-Required.Proto3.ProtobufInput.UnknownWireType7_Field3_Verion3
+Required.Proto2.JsonInput.DoubleFieldEmptyString # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.DoubleFieldQuotedExponentialValue.JsonOutput # Failed to parse input or produce output.
+Required.Proto2.JsonInput.DoubleFieldQuotedExponentialValue.ProtobufOutput # Failed to parse input or produce output.
+Required.Proto2.JsonInput.DoubleFieldStringValueNonNumeric # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.DoubleFieldStringValuePartiallyNumeric # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.FloatFieldEmptyString # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.FloatFieldQuotedExponentialValue.JsonOutput # Failed to parse input or produce output.
+Required.Proto2.JsonInput.FloatFieldQuotedExponentialValue.ProtobufOutput # Failed to parse input or produce output.
+Required.Proto2.JsonInput.FloatFieldStringValueNonNumeric # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.FloatFieldStringValuePartiallyNumeric # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.Int32FieldEmptyString # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.Int32FieldQuotedExponentialValue.JsonOutput # Failed to parse input or produce output.
+Required.Proto2.JsonInput.Int32FieldQuotedExponentialValue.ProtobufOutput # Failed to parse input or produce output.
+Required.Proto2.JsonInput.Int32FieldStringValueNonNumeric # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.Int32FieldStringValuePartiallyNumeric # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.Int32FieldStringValueZero.JsonOutput # Failed to parse input or produce output.
+Required.Proto2.JsonInput.Int32FieldStringValueZero.ProtobufOutput # Failed to parse input or produce output.
+Required.Proto2.JsonInput.Int64FieldEmptyString # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.Uint32FieldEmptyString # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.Uint64FieldEmptyString # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.MismatchedGroupTags # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.MismatchedNestedGroupTags # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType6_Field0_Version0 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType6_Field0_Version1 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType6_Field0_Version2 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType6_Field0_Version3 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType6_Field1_Version0 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType6_Field1_Version1 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType6_Field1_Version2 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType6_Field1_Version3 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType6_Field2_Version0 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType6_Field2_Version1 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType6_Field2_Version2 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType6_Field2_Version3 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType6_Field3_Version0 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType6_Field3_Version1 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType6_Field3_Version2 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType6_Field3_Version3 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType7_Field0_Version0 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType7_Field0_Version1 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType7_Field0_Version2 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType7_Field0_Version3 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType7_Field1_Version0 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType7_Field1_Version1 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType7_Field1_Version2 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType7_Field1_Version3 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType7_Field2_Version0 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType7_Field2_Version1 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType7_Field2_Version2 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType7_Field2_Version3 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType7_Field3_Version0 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType7_Field3_Version1 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType7_Field3_Version2 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnknownWireType7_Field3_Version3 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnmatchedEndGroup # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnmatchedEndGroupNested # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnmatchedEndGroupNestedLen # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnmatchedEndGroupUnknown # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnmatchedEndGroupWithData # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnmatchedEndGroupWrongType # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnmatchedStartGroup # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnmatchedStartGroupNested # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnmatchedStartGroupNestedLen # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnmatchedStartGroupUnknown # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnmatchedStartGroupWithData # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.UnmatchedStartGroupWrongType # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.AnyWktRepresentationWithBadType # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.AnyWktRepresentationWithEmptyTypeAndValue # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.DoubleFieldEmptyString # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.DoubleFieldStringValueNonNumeric # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.DoubleFieldStringValuePartiallyNumeric # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.FloatFieldEmptyString # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.FloatFieldStringValueNonNumeric # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.FloatFieldStringValuePartiallyNumeric # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.Int32FieldEmptyString # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.Int32FieldStringValueNonNumeric # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.Int32FieldStringValuePartiallyNumeric # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.TimestampEpochValue.JsonOutput # Failed to parse input or produce output.
+Required.Proto3.JsonInput.TimestampEpochValue.ProtobufOutput # Failed to parse input or produce output.
+Required.Proto3.JsonInput.TimestampLittleAfterEpochlValue.JsonOutput # Failed to parse input or produce output.
+Required.Proto3.JsonInput.TimestampLittleAfterEpochlValue.ProtobufOutput # Failed to parse input or produce output.
+Required.Proto3.JsonInput.TimestampLittleBeforeEpochValue.JsonOutput # Failed to parse input or produce output.
+Required.Proto3.JsonInput.TimestampLittleBeforeEpochValue.ProtobufOutput # Failed to parse input or produce output.
+Required.Proto3.JsonInput.TimestampNanoAfterEpochlValue.JsonOutput # Failed to parse input or produce output.
+Required.Proto3.JsonInput.TimestampNanoAfterEpochlValue.ProtobufOutput # Failed to parse input or produce output.
+Required.Proto3.JsonInput.TimestampNanoBeforeEpochValue.JsonOutput # Failed to parse input or produce output.
+Required.Proto3.JsonInput.TimestampNanoBeforeEpochValue.ProtobufOutput # Failed to parse input or produce output.
+Required.Proto3.JsonInput.TimestampTenAndHalfSecondsAfterEpochValue.JsonOutput # Failed to parse input or produce output.
+Required.Proto3.JsonInput.TimestampTenAndHalfSecondsAfterEpochValue.ProtobufOutput # Failed to parse input or produce output.
+Required.Proto3.JsonInput.TimestampTenAndHalfSecondsBeforeEpochValue.JsonOutput # Failed to parse input or produce output.
+Required.Proto3.JsonInput.TimestampTenAndHalfSecondsBeforeEpochValue.ProtobufOutput # Failed to parse input or produce output.
+Required.Proto3.JsonInput.Uint32FieldEmptyString # Should have failed to parse, but didn't.
+Required.Proto3.ProtobufInput.UnknownWireType6_Field1_Version0 # Should have failed to parse, but didn't.
+Required.Proto3.ProtobufInput.UnknownWireType6_Field1_Version1 # Should have failed to parse, but didn't.
+Required.Proto3.ProtobufInput.UnknownWireType6_Field1_Version2 # Should have failed to parse, but didn't.
+Required.Proto3.ProtobufInput.UnknownWireType6_Field1_Version3 # Should have failed to parse, but didn't.
+Required.Proto3.ProtobufInput.UnknownWireType6_Field2_Version0 # Should have failed to parse, but didn't.
+Required.Proto3.ProtobufInput.UnknownWireType6_Field2_Version1 # Should have failed to parse, but didn't.
+Required.Proto3.ProtobufInput.UnknownWireType6_Field2_Version2 # Should have failed to parse, but didn't.
+Required.Proto3.ProtobufInput.UnknownWireType6_Field2_Version3 # Should have failed to parse, but didn't.
+Required.Proto3.ProtobufInput.UnknownWireType6_Field3_Version0 # Should have failed to parse, but didn't.
+Required.Proto3.ProtobufInput.UnknownWireType6_Field3_Version1 # Should have failed to parse, but didn't.
+Required.Proto3.ProtobufInput.UnknownWireType6_Field3_Version2 # Should have failed to parse, but didn't.
+Required.Proto3.ProtobufInput.UnknownWireType6_Field3_Version3 # Should have failed to parse, but didn't.
+Required.Proto3.ProtobufInput.UnknownWireType7_Field1_Version0 # Should have failed to parse, but didn't.
+Required.Proto3.ProtobufInput.UnknownWireType7_Field1_Version1 # Should have failed to parse, but didn't.
+Required.Proto3.ProtobufInput.UnknownWireType7_Field1_Version2 # Should have failed to parse, but didn't.
+Required.Proto3.ProtobufInput.UnknownWireType7_Field1_Version3 # Should have failed to parse, but didn't.
+Required.Proto3.ProtobufInput.UnknownWireType7_Field2_Version0 # Should have failed to parse, but didn't.
+Required.Proto3.ProtobufInput.UnknownWireType7_Field2_Version1 # Should have failed to parse, but didn't.
+Required.Proto3.ProtobufInput.UnknownWireType7_Field2_Version2 # Should have failed to parse, but didn't.
+Required.Proto3.ProtobufInput.UnknownWireType7_Field2_Version3 # Should have failed to parse, but didn't.
+Required.Proto3.ProtobufInput.UnknownWireType7_Field3_Version0 # Should have failed to parse, but didn't.
+Required.Proto3.ProtobufInput.UnknownWireType7_Field3_Version1 # Should have failed to parse, but didn't.
+Required.Proto3.ProtobufInput.UnknownWireType7_Field3_Version2 # Should have failed to parse, but didn't.
+Required.Proto3.ProtobufInput.UnknownWireType7_Field3_Version3 # Should have failed to parse, but didn't.
