@@ -1,6 +1,4 @@
 Recommended.Proto2.JsonInput.FieldNameExtension.Validator
-Required.Proto2.JsonInput.AllFieldAcceptNull.JsonOutput
-Required.Proto2.JsonInput.AllFieldAcceptNull.ProtobufOutput
 Required.Proto2.ProtobufInput.MismatchedGroupTags # Should have failed to parse, but didn't.
 Required.Proto2.ProtobufInput.MismatchedNestedGroupTags # Should have failed to parse, but didn't.
 Required.Proto3.JsonInput.AnyWktRepresentationWithEmptyTypeAndValue # Should have failed to parse, but didn't.
