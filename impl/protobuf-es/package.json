@@ -22,8 +22,8 @@
     "@bufbuild/protoc-gen-es": "^2.2.5"
   },
   "devDependencies": {
-    "@bufbuild/buf": "^1.50.0",
-    "@types/node": "^22.13.8",
+    "@bufbuild/buf": "^1.51.0",
+    "@types/node": "^22.13.15",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2"
   }
