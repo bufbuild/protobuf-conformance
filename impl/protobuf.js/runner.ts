@@ -119,7 +119,13 @@ function test(request: protos.conformance.ConformanceRequest): Result {
       case 2: // JSON:
         return {
           jsonPayload: JSON.stringify(
-            payloadType.toObject(payload, { json: true, bytes: String }),
+            // See https://github.com/protobufjs/protobuf.js?tab=readme-ov-file#toolset for toObject options
+            payloadType.toObject(payload, {
+              json: true,
+              bytes: String,
+              longs: String,
+              enums: String,
+            }),
           ),
         };
 
