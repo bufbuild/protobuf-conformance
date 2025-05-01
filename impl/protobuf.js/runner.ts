@@ -17,49 +17,20 @@
 import { readSync, writeSync } from "fs";
 
 import * as protos from "./gen/protos_pb.js";
+import * as $protobuf from "protobufjs";
 
-const { Any, Struct, Value, Int32Value, FieldMask, Duration, Timestamp } =
-  protos.google.protobuf;
-// const { TestAllTypesProto2 } = protos.protobuf_test_messages.proto2;
-const { TestAllTypesProto3 } = protos.protobuf_test_messages.proto3;
-const { ConformanceRequest, ConformanceResponse, FailureSet } =
-  protos.conformance;
-
-type MessageType =
-  // | protos.protobuf_test_messages.proto2.TestAllTypesProto2
-  | protos.protobuf_test_messages.proto3.TestAllTypesProto3
-  | protos.google.protobuf.Struct
-  | protos.google.protobuf.Value
-  | protos.google.protobuf.FieldMask
-  | protos.google.protobuf.Duration
-  | protos.google.protobuf.Int32Value
-  | protos.google.protobuf.Any
-  | protos.google.protobuf.Timestamp;
-
-interface Registry {
-  [s: string]: // | typeof TestAllTypesProto2
-  | typeof TestAllTypesProto3
-    | typeof Struct
-    | typeof Value
-    | typeof FieldMask
-    | typeof Duration
-    | typeof Int32Value
-    | typeof Any
-    | typeof Timestamp
-    | undefined;
-}
-
-const registry: Registry = {
-  // "protobuf_test_messages.proto2.TestAllTypesProto2": TestAllTypesProto2,
-  "protobuf_test_messages.proto3.TestAllTypesProto3": TestAllTypesProto3,
-  "google.protobuf.Struct": Struct,
-  "google.protobuf.Value": Value,
-  "google.protobuf.FieldMask": FieldMask,
-  "google.protobuf.Duration": Duration,
-  "google.protobuf.Int32Value": Int32Value,
-  "google.protobuf.Any": Any,
-  "google.protobuf.Timestamp": Timestamp,
-};
+const registry = {
+  // "protobuf_test_messages.proto2.TestAllTypesProto2": protos.protobuf_test_messages.proto2.TestAllTypesProto2,
+  "protobuf_test_messages.proto3.TestAllTypesProto3":
+    protos.protobuf_test_messages.proto3.TestAllTypesProto3,
+  "google.protobuf.Struct": protos.google.protobuf.Struct,
+  "google.protobuf.Value": protos.google.protobuf.Value,
+  "google.protobuf.FieldMask": protos.google.protobuf.FieldMask,
+  "google.protobuf.Duration": protos.google.protobuf.Duration,
+  "google.protobuf.Int32Value": protos.google.protobuf.Int32Value,
+  "google.protobuf.Any": protos.google.protobuf.Any,
+  "google.protobuf.Timestamp": protos.google.protobuf.Timestamp,
+} as unknown as Record<string, typeof $protobuf.Message>;
 
 function main() {
   let testCount = 0;
@@ -80,13 +51,14 @@ interface Result {
 }
 
 function test(request: protos.conformance.ConformanceRequest): Result {
-  if (request.messageType === FailureSet.name) {
+  if (request.messageType === protos.conformance.FailureSet.name) {
     // > The conformance runner will request a list of failures as the first request.
     // > This will be known by message_type == "conformance.FailureSet", a conformance
     // > test should return a serialized FailureSet in protobuf_payload.
-    const failureSet = FailureSet.create();
+    const failureSet = protos.conformance.FailureSet.create();
     return {
-      protobufPayload: FailureSet.encode(failureSet).finish(),
+      protobufPayload:
+        protos.conformance.FailureSet.encode(failureSet).finish(),
     };
   }
 
@@ -107,7 +79,7 @@ function test(request: protos.conformance.ConformanceRequest): Result {
     };
   }
 
-  let payload: MessageType;
+  let payload: $protobuf.Message;
 
   try {
     if (request.protobufPayload) {
@@ -121,9 +93,7 @@ function test(request: protos.conformance.ConformanceRequest): Result {
       // unused:
       // if (request.testCategory === TestCategory.JSON_IGNORE_UNKNOWN_PARSING_TEST;
       // Further, we first have to parse the string payload into a JSON object and then call fromObject
-      payload = payloadType.fromObject(
-        JSON.parse(request.jsonPayload) as MessageType,
-      );
+      payload = payloadType.fromObject(JSON.parse(request.jsonPayload));
     } else {
       // We use a failure list instead of skipping, because that is more transparent.
       return {
@@ -143,15 +113,13 @@ function test(request: protos.conformance.ConformanceRequest): Result {
     switch (request.requestedOutputFormat) {
       case 1: // PROTOBUF
         return {
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          protobufPayload: payloadType.encode(payload as any).finish(),
+          protobufPayload: payloadType.encode(payload).finish(),
         };
 
       case 2: // JSON:
         return {
           jsonPayload: JSON.stringify(
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            payloadType.toObject(payload as any, { json: true, bytes: String }),
+            payloadType.toObject(payload, { json: true, bytes: String }),
           ),
         };
 
@@ -224,10 +192,12 @@ function testIo(
   if (serializedRequest === "EOF") {
     throw "Failed to read request.";
   }
-  const request = ConformanceRequest.decode(serializedRequest);
+  const request =
+    protos.conformance.ConformanceRequest.decode(serializedRequest);
   const result = test(request);
-  const response = ConformanceResponse.create(result);
-  const serializedResponse = ConformanceResponse.encode(response).finish();
+  const response = protos.conformance.ConformanceResponse.create(result);
+  const serializedResponse =
+    protos.conformance.ConformanceResponse.encode(response).finish();
   const responseLengthBuf = Buffer.alloc(4);
   responseLengthBuf.writeInt32LE(serializedResponse.length, 0);
   writeBuffer(responseLengthBuf);
