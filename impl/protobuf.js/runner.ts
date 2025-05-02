@@ -20,9 +20,15 @@ import * as protos from "./gen/protos_pb.js";
 import * as $protobuf from "protobufjs";
 
 const registry = {
-  // "protobuf_test_messages.proto2.TestAllTypesProto2": protos.protobuf_test_messages.proto2.TestAllTypesProto2,
+  // "protobuf_test_messages.proto2.TestAllTypesProto2": protos.protobuf_test_messages.proto2.TestAllTypesProto2, // cannot use, fails to compile
   "protobuf_test_messages.proto3.TestAllTypesProto3":
     protos.protobuf_test_messages.proto3.TestAllTypesProto3,
+  "protobuf_test_messages.editions.TestAllTypesEdition2023":
+    protos.protobuf_test_messages.editions.TestAllTypesEdition2023,
+  "protobuf_test_messages.editions.proto2.TestAllTypesProto2":
+    protos.protobuf_test_messages.editions.proto2.TestAllTypesProto2,
+  "protobuf_test_messages.editions.proto3.TestAllTypesProto3":
+    protos.protobuf_test_messages.editions.proto3.TestAllTypesProto3,
   "google.protobuf.Struct": protos.google.protobuf.Struct,
   "google.protobuf.Value": protos.google.protobuf.Value,
   "google.protobuf.FieldMask": protos.google.protobuf.FieldMask,

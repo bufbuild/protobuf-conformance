@@ -3,7 +3,7 @@
   "conformanceMeta": {
     "name": "protobuf.js",
     "githubUrl": "https://github.com/protobufjs/protobuf.js",
-    "editions": false,
+    "editions": true,
     "javascript": true,
     "typescript": true,
     "standardPlugin": false
@@ -14,7 +14,7 @@
     "pregenerate": "rm -rf gen/*",
     "generate": "bash generate.sh",
     "build": "tsc --noEmit",
-    "test": "conformance_test_runner --maximum_edition PROTO3 --enforce_recommended --failure_list failing_tests.txt --text_format_failure_list failing_tests_text_format.txt --output_dir . runner.ts"
+    "test": "conformance_test_runner --maximum_edition 2023 --enforce_recommended --failure_list failing_tests.txt --text_format_failure_list failing_tests_text_format.txt runner.ts"
   },
   "dependencies": {
     "long": "^5.3.2",
