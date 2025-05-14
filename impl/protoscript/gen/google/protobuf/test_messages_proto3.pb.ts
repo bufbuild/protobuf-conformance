@@ -30,6 +30,7 @@ export type ForeignEnum = "FOREIGN_FOO" | "FOREIGN_BAR" | "FOREIGN_BAZ";
 export interface TestAllTypesProto3 {
   /**
    * Singular
+   * test [kotlin] comment
    */
   optionalInt32: number;
   optionalInt64: bigint;

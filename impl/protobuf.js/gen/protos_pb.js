@@ -15416,8 +15416,10 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                  * @property {Object.<string,number|Long>|null} [mapFixed64Fixed64] TestAllTypesProto2 mapFixed64Fixed64
                  * @property {Object.<string,number>|null} [mapSfixed32Sfixed32] TestAllTypesProto2 mapSfixed32Sfixed32
                  * @property {Object.<string,number|Long>|null} [mapSfixed64Sfixed64] TestAllTypesProto2 mapSfixed64Sfixed64
+                 * @property {Object.<string,boolean>|null} [mapInt32Bool] TestAllTypesProto2 mapInt32Bool
                  * @property {Object.<string,number>|null} [mapInt32Float] TestAllTypesProto2 mapInt32Float
                  * @property {Object.<string,number>|null} [mapInt32Double] TestAllTypesProto2 mapInt32Double
+                 * @property {Object.<string,protobuf_test_messages.editions.proto2.TestAllTypesProto2.INestedMessage>|null} [mapInt32NestedMessage] TestAllTypesProto2 mapInt32NestedMessage
                  * @property {Object.<string,boolean>|null} [mapBoolBool] TestAllTypesProto2 mapBoolBool
                  * @property {Object.<string,string>|null} [mapStringString] TestAllTypesProto2 mapStringString
                  * @property {Object.<string,Uint8Array>|null} [mapStringBytes] TestAllTypesProto2 mapStringBytes
@@ -15469,6 +15471,7 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                  * @property {number|null} [field__Name16] TestAllTypesProto2 field__Name16
                  * @property {number|null} [fieldName17__] TestAllTypesProto2 fieldName17__
                  * @property {number|null} [FieldName18__] TestAllTypesProto2 FieldName18__
+                 * @property {protobuf_test_messages.editions.proto2.TestAllTypesProto2.IMessageSetCorrect|null} [messageSetCorrect] TestAllTypesProto2 messageSetCorrect
                  * @property {number|null} [".protobuf_test_messages.editions.proto2.extensionInt32"] TestAllTypesProto2 .protobuf_test_messages.editions.proto2.extensionInt32
                  * @property {protobuf_test_messages.editions.proto2.IGroupField|null} [".protobuf_test_messages.editions.proto2.groupfield"] TestAllTypesProto2 .protobuf_test_messages.editions.proto2.groupfield
                  */
@@ -15541,8 +15544,10 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                     this.mapFixed64Fixed64 = {};
                     this.mapSfixed32Sfixed32 = {};
                     this.mapSfixed64Sfixed64 = {};
+                    this.mapInt32Bool = {};
                     this.mapInt32Float = {};
                     this.mapInt32Double = {};
+                    this.mapInt32NestedMessage = {};
                     this.mapBoolBool = {};
                     this.mapStringString = {};
                     this.mapStringBytes = {};
@@ -16205,6 +16210,14 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                 TestAllTypesProto2.prototype.mapSfixed64Sfixed64 = $util.emptyObject;
 
                 /**
+                 * TestAllTypesProto2 mapInt32Bool.
+                 * @member {Object.<string,boolean>} mapInt32Bool
+                 * @memberof protobuf_test_messages.editions.proto2.TestAllTypesProto2
+                 * @instance
+                 */
+                TestAllTypesProto2.prototype.mapInt32Bool = $util.emptyObject;
+
+                /**
                  * TestAllTypesProto2 mapInt32Float.
                  * @member {Object.<string,number>} mapInt32Float
                  * @memberof protobuf_test_messages.editions.proto2.TestAllTypesProto2
@@ -16219,6 +16232,14 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                  * @instance
                  */
                 TestAllTypesProto2.prototype.mapInt32Double = $util.emptyObject;
+
+                /**
+                 * TestAllTypesProto2 mapInt32NestedMessage.
+                 * @member {Object.<string,protobuf_test_messages.editions.proto2.TestAllTypesProto2.INestedMessage>} mapInt32NestedMessage
+                 * @memberof protobuf_test_messages.editions.proto2.TestAllTypesProto2
+                 * @instance
+                 */
+                TestAllTypesProto2.prototype.mapInt32NestedMessage = $util.emptyObject;
 
                 /**
                  * TestAllTypesProto2 mapBoolBool.
@@ -16629,6 +16650,14 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                 TestAllTypesProto2.prototype.FieldName18__ = 0;
 
                 /**
+                 * TestAllTypesProto2 messageSetCorrect.
+                 * @member {protobuf_test_messages.editions.proto2.TestAllTypesProto2.IMessageSetCorrect|null|undefined} messageSetCorrect
+                 * @memberof protobuf_test_messages.editions.proto2.TestAllTypesProto2
+                 * @instance
+                 */
+                TestAllTypesProto2.prototype.messageSetCorrect = null;
+
+                /**
                  * TestAllTypesProto2 .protobuf_test_messages.editions.proto2.extensionInt32.
                  * @member {number} .protobuf_test_messages.editions.proto2.extensionInt32
                  * @memberof protobuf_test_messages.editions.proto2.TestAllTypesProto2
@@ -16976,6 +17005,14 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                     if (message.unpackedNestedEnum != null && message.unpackedNestedEnum.length)
                         for (let i = 0; i < message.unpackedNestedEnum.length; ++i)
                             writer.uint32(/* id 102, wireType 0 =*/816).int32(message.unpackedNestedEnum[i]);
+                    if (message.mapInt32NestedMessage != null && Object.hasOwnProperty.call(message, "mapInt32NestedMessage"))
+                        for (let keys = Object.keys(message.mapInt32NestedMessage), i = 0; i < keys.length; ++i) {
+                            writer.uint32(/* id 103, wireType 2 =*/826).fork().uint32(/* id 1, wireType 0 =*/8).int32(keys[i]);
+                            $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.encode(message.mapInt32NestedMessage[keys[i]], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim().ldelim();
+                        }
+                    if (message.mapInt32Bool != null && Object.hasOwnProperty.call(message, "mapInt32Bool"))
+                        for (let keys = Object.keys(message.mapInt32Bool), i = 0; i < keys.length; ++i)
+                            writer.uint32(/* id 104, wireType 2 =*/834).fork().uint32(/* id 1, wireType 0 =*/8).int32(keys[i]).uint32(/* id 2, wireType 0 =*/16).bool(message.mapInt32Bool[keys[i]]).ldelim();
                     if (message.oneofUint32 != null && Object.hasOwnProperty.call(message, "oneofUint32"))
                         writer.uint32(/* id 111, wireType 0 =*/888).uint32(message.oneofUint32);
                     if (message.oneofNestedMessage != null && Object.hasOwnProperty.call(message, "oneofNestedMessage"))
@@ -17068,6 +17105,8 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                         writer.uint32(/* id 417, wireType 0 =*/3336).int32(message.fieldName17__);
                     if (message.FieldName18__ != null && Object.hasOwnProperty.call(message, "FieldName18__"))
                         writer.uint32(/* id 418, wireType 0 =*/3344).int32(message.FieldName18__);
+                    if (message.messageSetCorrect != null && Object.hasOwnProperty.call(message, "messageSetCorrect"))
+                        $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.encode(message.messageSetCorrect, writer.uint32(/* id 500, wireType 2 =*/4002).fork()).ldelim();
                     return writer;
                 };
 
@@ -17931,6 +17970,29 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                                 message.mapSfixed64Sfixed64[typeof key === "object" ? $util.longToHash(key) : key] = value;
                                 break;
                             }
+                        case 104: {
+                                if (message.mapInt32Bool === $util.emptyObject)
+                                    message.mapInt32Bool = {};
+                                let end2 = reader.uint32() + reader.pos;
+                                key = 0;
+                                value = false;
+                                while (reader.pos < end2) {
+                                    let tag2 = reader.uint32();
+                                    switch (tag2 >>> 3) {
+                                    case 1:
+                                        key = reader.int32();
+                                        break;
+                                    case 2:
+                                        value = reader.bool();
+                                        break;
+                                    default:
+                                        reader.skipType(tag2 & 7);
+                                        break;
+                                    }
+                                }
+                                message.mapInt32Bool[key] = value;
+                                break;
+                            }
                         case 66: {
                                 if (message.mapInt32Float === $util.emptyObject)
                                     message.mapInt32Float = {};
@@ -17975,6 +18037,29 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                                     }
                                 }
                                 message.mapInt32Double[key] = value;
+                                break;
+                            }
+                        case 103: {
+                                if (message.mapInt32NestedMessage === $util.emptyObject)
+                                    message.mapInt32NestedMessage = {};
+                                let end2 = reader.uint32() + reader.pos;
+                                key = 0;
+                                value = null;
+                                while (reader.pos < end2) {
+                                    let tag2 = reader.uint32();
+                                    switch (tag2 >>> 3) {
+                                    case 1:
+                                        key = reader.int32();
+                                        break;
+                                    case 2:
+                                        value = $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.decode(reader, reader.uint32());
+                                        break;
+                                    default:
+                                        reader.skipType(tag2 & 7);
+                                        break;
+                                    }
+                                }
+                                message.mapInt32NestedMessage[key] = value;
                                 break;
                             }
                         case 68: {
@@ -18312,6 +18397,10 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                             }
                         case 418: {
                                 message.FieldName18__ = reader.int32();
+                                break;
+                            }
+                        case 500: {
+                                message.messageSetCorrect = $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.decode(reader, reader.uint32());
                                 break;
                             }
                         case 120: {
@@ -18927,6 +19016,17 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                                 return "mapSfixed64Sfixed64: integer|Long{k:sfixed64} expected";
                         }
                     }
+                    if (message.mapInt32Bool != null && message.hasOwnProperty("mapInt32Bool")) {
+                        if (!$util.isObject(message.mapInt32Bool))
+                            return "mapInt32Bool: object expected";
+                        let key = Object.keys(message.mapInt32Bool);
+                        for (let i = 0; i < key.length; ++i) {
+                            if (!$util.key32Re.test(key[i]))
+                                return "mapInt32Bool: integer key{k:int32} expected";
+                            if (typeof message.mapInt32Bool[key[i]] !== "boolean")
+                                return "mapInt32Bool: boolean{k:int32} expected";
+                        }
+                    }
                     if (message.mapInt32Float != null && message.hasOwnProperty("mapInt32Float")) {
                         if (!$util.isObject(message.mapInt32Float))
                             return "mapInt32Float: object expected";
@@ -18947,6 +19047,20 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                                 return "mapInt32Double: integer key{k:int32} expected";
                             if (typeof message.mapInt32Double[key[i]] !== "number")
                                 return "mapInt32Double: number{k:int32} expected";
+                        }
+                    }
+                    if (message.mapInt32NestedMessage != null && message.hasOwnProperty("mapInt32NestedMessage")) {
+                        if (!$util.isObject(message.mapInt32NestedMessage))
+                            return "mapInt32NestedMessage: object expected";
+                        let key = Object.keys(message.mapInt32NestedMessage);
+                        for (let i = 0; i < key.length; ++i) {
+                            if (!$util.key32Re.test(key[i]))
+                                return "mapInt32NestedMessage: integer key{k:int32} expected";
+                            {
+                                let error = $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.verify(message.mapInt32NestedMessage[key[i]]);
+                                if (error)
+                                    return "mapInt32NestedMessage." + error;
+                            }
                         }
                     }
                     if (message.mapBoolBool != null && message.hasOwnProperty("mapBoolBool")) {
@@ -19205,6 +19319,11 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                     if (message.FieldName18__ != null && message.hasOwnProperty("FieldName18__"))
                         if (!$util.isInteger(message.FieldName18__))
                             return "FieldName18__: integer expected";
+                    if (message.messageSetCorrect != null && message.hasOwnProperty("messageSetCorrect")) {
+                        let error = $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.verify(message.messageSetCorrect);
+                        if (error)
+                            return "messageSetCorrect." + error;
+                    }
                     if (message[".protobuf_test_messages.editions.proto2.extensionInt32"] != null && message.hasOwnProperty(".protobuf_test_messages.editions.proto2.extensionInt32"))
                         if (!$util.isInteger(message[".protobuf_test_messages.editions.proto2.extensionInt32"]))
                             return ".protobuf_test_messages.editions.proto2.extensionInt32: integer expected";
@@ -20005,6 +20124,13 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                             else if (typeof object.mapSfixed64Sfixed64[keys[i]] === "object")
                                 message.mapSfixed64Sfixed64[keys[i]] = new $util.LongBits(object.mapSfixed64Sfixed64[keys[i]].low >>> 0, object.mapSfixed64Sfixed64[keys[i]].high >>> 0).toNumber();
                     }
+                    if (object.mapInt32Bool) {
+                        if (typeof object.mapInt32Bool !== "object")
+                            throw TypeError(".protobuf_test_messages.editions.proto2.TestAllTypesProto2.mapInt32Bool: object expected");
+                        message.mapInt32Bool = {};
+                        for (let keys = Object.keys(object.mapInt32Bool), i = 0; i < keys.length; ++i)
+                            message.mapInt32Bool[keys[i]] = Boolean(object.mapInt32Bool[keys[i]]);
+                    }
                     if (object.mapInt32Float) {
                         if (typeof object.mapInt32Float !== "object")
                             throw TypeError(".protobuf_test_messages.editions.proto2.TestAllTypesProto2.mapInt32Float: object expected");
@@ -20018,6 +20144,16 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                         message.mapInt32Double = {};
                         for (let keys = Object.keys(object.mapInt32Double), i = 0; i < keys.length; ++i)
                             message.mapInt32Double[keys[i]] = Number(object.mapInt32Double[keys[i]]);
+                    }
+                    if (object.mapInt32NestedMessage) {
+                        if (typeof object.mapInt32NestedMessage !== "object")
+                            throw TypeError(".protobuf_test_messages.editions.proto2.TestAllTypesProto2.mapInt32NestedMessage: object expected");
+                        message.mapInt32NestedMessage = {};
+                        for (let keys = Object.keys(object.mapInt32NestedMessage), i = 0; i < keys.length; ++i) {
+                            if (typeof object.mapInt32NestedMessage[keys[i]] !== "object")
+                                throw TypeError(".protobuf_test_messages.editions.proto2.TestAllTypesProto2.mapInt32NestedMessage: object expected");
+                            message.mapInt32NestedMessage[keys[i]] = $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.fromObject(object.mapInt32NestedMessage[keys[i]]);
+                        }
                     }
                     if (object.mapBoolBool) {
                         if (typeof object.mapBoolBool !== "object")
@@ -20286,6 +20422,11 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                         message.fieldName17__ = object.fieldName17__ | 0;
                     if (object.FieldName18__ != null)
                         message.FieldName18__ = object.FieldName18__ | 0;
+                    if (object.messageSetCorrect != null) {
+                        if (typeof object.messageSetCorrect !== "object")
+                            throw TypeError(".protobuf_test_messages.editions.proto2.TestAllTypesProto2.messageSetCorrect: object expected");
+                        message.messageSetCorrect = $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.fromObject(object.messageSetCorrect);
+                    }
                     if (object[".protobuf_test_messages.editions.proto2.extensionInt32"] != null)
                         message[".protobuf_test_messages.editions.proto2.extensionInt32"] = object[".protobuf_test_messages.editions.proto2.extensionInt32"] | 0;
                     if (object[".protobuf_test_messages.editions.proto2.groupfield"] != null) {
@@ -20380,6 +20521,8 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                         object.mapStringForeignMessage = {};
                         object.mapStringNestedEnum = {};
                         object.mapStringForeignEnum = {};
+                        object.mapInt32NestedMessage = {};
+                        object.mapInt32Bool = {};
                     }
                     if (options.defaults) {
                         object.optionalInt32 = 0;
@@ -20500,6 +20643,7 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                         object.field__Name16 = 0;
                         object.fieldName17__ = 0;
                         object.FieldName18__ = 0;
+                        object.messageSetCorrect = null;
                     }
                     if (message.optionalInt32 != null && message.hasOwnProperty("optionalInt32"))
                         object.optionalInt32 = message.optionalInt32;
@@ -20961,6 +21105,16 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                         for (let j = 0; j < message.unpackedNestedEnum.length; ++j)
                             object.unpackedNestedEnum[j] = options.enums === String ? $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum[message.unpackedNestedEnum[j]] === undefined ? message.unpackedNestedEnum[j] : $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum[message.unpackedNestedEnum[j]] : message.unpackedNestedEnum[j];
                     }
+                    if (message.mapInt32NestedMessage && (keys2 = Object.keys(message.mapInt32NestedMessage)).length) {
+                        object.mapInt32NestedMessage = {};
+                        for (let j = 0; j < keys2.length; ++j)
+                            object.mapInt32NestedMessage[keys2[j]] = $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.toObject(message.mapInt32NestedMessage[keys2[j]], options);
+                    }
+                    if (message.mapInt32Bool && (keys2 = Object.keys(message.mapInt32Bool)).length) {
+                        object.mapInt32Bool = {};
+                        for (let j = 0; j < keys2.length; ++j)
+                            object.mapInt32Bool[keys2[j]] = message.mapInt32Bool[keys2[j]];
+                    }
                     if (message.oneofUint32 != null && message.hasOwnProperty("oneofUint32")) {
                         object.oneofUint32 = message.oneofUint32;
                         if (options.oneofs)
@@ -21098,6 +21252,8 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                         object.fieldName17__ = message.fieldName17__;
                     if (message.FieldName18__ != null && message.hasOwnProperty("FieldName18__"))
                         object.FieldName18__ = message.FieldName18__;
+                    if (message.messageSetCorrect != null && message.hasOwnProperty("messageSetCorrect"))
+                        object.messageSetCorrect = $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.toObject(message.messageSetCorrect, options);
                     return object;
                 };
 
@@ -21845,6 +22001,7 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                      * @interface IMessageSetCorrect
                      * @property {protobuf_test_messages.editions.proto2.TestAllTypesProto2.IMessageSetCorrectExtension1|null} [".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension"] MessageSetCorrect .protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension
                      * @property {protobuf_test_messages.editions.proto2.TestAllTypesProto2.IMessageSetCorrectExtension2|null} [".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension"] MessageSetCorrect .protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension
+                     * @property {protobuf_test_messages.editions.proto2.TestAllTypesProto2.IExtensionWithOneof|null} [".protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"] MessageSetCorrect .protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof
                      */
 
                     /**
@@ -21879,6 +22036,14 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                     MessageSetCorrect.prototype[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension"] = null;
 
                     /**
+                     * MessageSetCorrect .protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof.
+                     * @member {protobuf_test_messages.editions.proto2.TestAllTypesProto2.IExtensionWithOneof|null|undefined} .protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof
+                     * @memberof protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect
+                     * @instance
+                     */
+                    MessageSetCorrect.prototype[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"] = null;
+
+                    /**
                      * Creates a new MessageSetCorrect instance using the specified properties.
                      * @function create
                      * @memberof protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect
@@ -21906,6 +22071,8 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                             $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.encode(message[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension"], writer.uint32(/* id 1547769, wireType 2 =*/12382154).fork()).ldelim();
                         if (message[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension"] != null && Object.hasOwnProperty.call(message, ".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension"))
                             $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.encode(message[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension"], writer.uint32(/* id 4135312, wireType 2 =*/33082498).fork()).ldelim();
+                        if (message[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"] != null && Object.hasOwnProperty.call(message, ".protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"))
+                            $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.encode(message[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"], writer.uint32(/* id 123456789, wireType 2 =*/987654314).fork()).ldelim();
                         return writer;
                     };
 
@@ -21948,6 +22115,10 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                                 }
                             case 4135312: {
                                     message[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension"] = $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.decode(reader, reader.uint32());
+                                    break;
+                                }
+                            case 123456789: {
+                                    message[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"] = $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.decode(reader, reader.uint32());
                                     break;
                                 }
                             default:
@@ -21995,6 +22166,11 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                             if (error)
                                 return ".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension." + error;
                         }
+                        if (message[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"] != null && message.hasOwnProperty(".protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof")) {
+                            let error = $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.verify(message[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"]);
+                            if (error)
+                                return ".protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof." + error;
+                        }
                         return null;
                     };
 
@@ -22020,6 +22196,11 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                                 throw TypeError(".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect..protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension: object expected");
                             message[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension"] = $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.fromObject(object[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension"]);
                         }
+                        if (object[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"] != null) {
+                            if (typeof object[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"] !== "object")
+                                throw TypeError(".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect..protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof: object expected");
+                            message[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"] = $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.fromObject(object[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"]);
+                        }
                         return message;
                     };
 
@@ -22039,11 +22220,14 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                         if (options.defaults) {
                             object[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension"] = null;
                             object[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension"] = null;
+                            object[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"] = null;
                         }
                         if (message[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension"] != null && message.hasOwnProperty(".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension"))
                             object[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension"] = $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.toObject(message[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension"], options);
                         if (message[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension"] != null && message.hasOwnProperty(".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension"))
                             object[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension"] = $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.toObject(message[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension"], options);
+                        if (message[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"] != null && message.hasOwnProperty(".protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"))
+                            object[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"] = $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.toObject(message[".protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"], options);
                         return object;
                     };
 
@@ -22484,6 +22668,258 @@ export const protobuf_test_messages = $root.protobuf_test_messages = (() => {
                     };
 
                     return MessageSetCorrectExtension2;
+                })();
+
+                TestAllTypesProto2.ExtensionWithOneof = (function() {
+
+                    /**
+                     * Properties of an ExtensionWithOneof.
+                     * @memberof protobuf_test_messages.editions.proto2.TestAllTypesProto2
+                     * @interface IExtensionWithOneof
+                     * @property {number|null} [a] ExtensionWithOneof a
+                     * @property {number|null} [b] ExtensionWithOneof b
+                     */
+
+                    /**
+                     * Constructs a new ExtensionWithOneof.
+                     * @memberof protobuf_test_messages.editions.proto2.TestAllTypesProto2
+                     * @classdesc Represents an ExtensionWithOneof.
+                     * @implements IExtensionWithOneof
+                     * @constructor
+                     * @param {protobuf_test_messages.editions.proto2.TestAllTypesProto2.IExtensionWithOneof=} [properties] Properties to set
+                     */
+                    function ExtensionWithOneof(properties) {
+                        if (properties)
+                            for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * ExtensionWithOneof a.
+                     * @member {number|null|undefined} a
+                     * @memberof protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof
+                     * @instance
+                     */
+                    ExtensionWithOneof.prototype.a = null;
+
+                    /**
+                     * ExtensionWithOneof b.
+                     * @member {number|null|undefined} b
+                     * @memberof protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof
+                     * @instance
+                     */
+                    ExtensionWithOneof.prototype.b = null;
+
+                    // OneOf field names bound to virtual getters and setters
+                    let $oneOfFields;
+
+                    /**
+                     * ExtensionWithOneof oneofField.
+                     * @member {"a"|"b"|undefined} oneofField
+                     * @memberof protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof
+                     * @instance
+                     */
+                    Object.defineProperty(ExtensionWithOneof.prototype, "oneofField", {
+                        get: $util.oneOfGetter($oneOfFields = ["a", "b"]),
+                        set: $util.oneOfSetter($oneOfFields)
+                    });
+
+                    /**
+                     * Creates a new ExtensionWithOneof instance using the specified properties.
+                     * @function create
+                     * @memberof protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof
+                     * @static
+                     * @param {protobuf_test_messages.editions.proto2.TestAllTypesProto2.IExtensionWithOneof=} [properties] Properties to set
+                     * @returns {protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof} ExtensionWithOneof instance
+                     */
+                    ExtensionWithOneof.create = function create(properties) {
+                        return new ExtensionWithOneof(properties);
+                    };
+
+                    /**
+                     * Encodes the specified ExtensionWithOneof message. Does not implicitly {@link protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.verify|verify} messages.
+                     * @function encode
+                     * @memberof protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof
+                     * @static
+                     * @param {protobuf_test_messages.editions.proto2.TestAllTypesProto2.IExtensionWithOneof} message ExtensionWithOneof message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    ExtensionWithOneof.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.a != null && Object.hasOwnProperty.call(message, "a"))
+                            writer.uint32(/* id 1, wireType 0 =*/8).int32(message.a);
+                        if (message.b != null && Object.hasOwnProperty.call(message, "b"))
+                            writer.uint32(/* id 2, wireType 0 =*/16).int32(message.b);
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified ExtensionWithOneof message, length delimited. Does not implicitly {@link protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof
+                     * @static
+                     * @param {protobuf_test_messages.editions.proto2.TestAllTypesProto2.IExtensionWithOneof} message ExtensionWithOneof message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    ExtensionWithOneof.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes an ExtensionWithOneof message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof} ExtensionWithOneof
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    ExtensionWithOneof.decode = function decode(reader, length, error) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        let end = length === undefined ? reader.len : reader.pos + length, message = new $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof();
+                        while (reader.pos < end) {
+                            let tag = reader.uint32();
+                            if (tag === error)
+                                break;
+                            switch (tag >>> 3) {
+                            case 1: {
+                                    message.a = reader.int32();
+                                    break;
+                                }
+                            case 2: {
+                                    message.b = reader.int32();
+                                    break;
+                                }
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes an ExtensionWithOneof message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof} ExtensionWithOneof
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    ExtensionWithOneof.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies an ExtensionWithOneof message.
+                     * @function verify
+                     * @memberof protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    ExtensionWithOneof.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        let properties = {};
+                        if (message.a != null && message.hasOwnProperty("a")) {
+                            properties.oneofField = 1;
+                            if (!$util.isInteger(message.a))
+                                return "a: integer expected";
+                        }
+                        if (message.b != null && message.hasOwnProperty("b")) {
+                            if (properties.oneofField === 1)
+                                return "oneofField: multiple values";
+                            properties.oneofField = 1;
+                            if (!$util.isInteger(message.b))
+                                return "b: integer expected";
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates an ExtensionWithOneof message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof} ExtensionWithOneof
+                     */
+                    ExtensionWithOneof.fromObject = function fromObject(object) {
+                        if (object instanceof $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof)
+                            return object;
+                        let message = new $root.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof();
+                        if (object.a != null)
+                            message.a = object.a | 0;
+                        if (object.b != null)
+                            message.b = object.b | 0;
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from an ExtensionWithOneof message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof
+                     * @static
+                     * @param {protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof} message ExtensionWithOneof
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    ExtensionWithOneof.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        let object = {};
+                        if (message.a != null && message.hasOwnProperty("a")) {
+                            object.a = message.a;
+                            if (options.oneofs)
+                                object.oneofField = "a";
+                        }
+                        if (message.b != null && message.hasOwnProperty("b")) {
+                            object.b = message.b;
+                            if (options.oneofs)
+                                object.oneofField = "b";
+                        }
+                        return object;
+                    };
+
+                    /**
+                     * Converts this ExtensionWithOneof to JSON.
+                     * @function toJSON
+                     * @memberof protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    ExtensionWithOneof.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    /**
+                     * Gets the default type url for ExtensionWithOneof
+                     * @function getTypeUrl
+                     * @memberof protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof
+                     * @static
+                     * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns {string} The default type url
+                     */
+                    ExtensionWithOneof.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                        if (typeUrlPrefix === undefined) {
+                            typeUrlPrefix = "type.googleapis.com";
+                        }
+                        return typeUrlPrefix + "/protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof";
+                    };
+
+                    return ExtensionWithOneof;
                 })();
 
                 return TestAllTypesProto2;

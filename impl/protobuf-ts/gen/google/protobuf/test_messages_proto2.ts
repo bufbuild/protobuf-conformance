@@ -394,6 +394,12 @@ export interface TestAllTypesProto2 {
         [key: string]: bigint;
     };
     /**
+     * @generated from protobuf field: map<int32, bool> map_int32_bool = 104;
+     */
+    mapInt32Bool: {
+        [key: number]: boolean;
+    };
+    /**
      * @generated from protobuf field: map<int32, float> map_int32_float = 66;
      */
     mapInt32Float: {
@@ -404,6 +410,12 @@ export interface TestAllTypesProto2 {
      */
     mapInt32Double: {
         [key: number]: number;
+    };
+    /**
+     * @generated from protobuf field: map<int32, protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage> map_int32_nested_message = 103;
+     */
+    mapInt32NestedMessage: {
+        [key: number]: TestAllTypesProto2_NestedMessage;
     };
     /**
      * @generated from protobuf field: map<bool, bool> map_bool_bool = 68;
@@ -644,6 +656,10 @@ export interface TestAllTypesProto2 {
      * @generated from protobuf field: optional int32 Field_name18__ = 418 [json_name = "FieldName18"];
      */
     fieldName18?: number;
+    /**
+     * @generated from protobuf field: optional protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect message_set_correct = 500;
+     */
+    messageSetCorrect?: TestAllTypesProto2_MessageSetCorrect;
 }
 /**
  * @generated from protobuf message protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage
@@ -710,6 +726,29 @@ export interface TestAllTypesProto2_MessageSetCorrectExtension2 {
      * @generated from protobuf field: optional int32 i = 9;
      */
     i?: number;
+}
+/**
+ * @generated from protobuf message protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof
+ */
+export interface TestAllTypesProto2_ExtensionWithOneof {
+    /**
+     * @generated from protobuf oneof: oneof_field
+     */
+    oneofField: {
+        oneofKind: "a";
+        /**
+         * @generated from protobuf field: int32 a = 1;
+         */
+        a: number;
+    } | {
+        oneofKind: "b";
+        /**
+         * @generated from protobuf field: int32 b = 2;
+         */
+        b: number;
+    } | {
+        oneofKind: undefined;
+    };
 }
 /**
  * @generated from protobuf enum protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum
@@ -1248,8 +1287,10 @@ class TestAllTypesProto2$Type extends MessageType<TestAllTypesProto2> {
             { no: 63, name: "map_fixed64_fixed64", kind: "map", K: 6 /*ScalarType.FIXED64*/, V: { kind: "scalar", T: 6 /*ScalarType.FIXED64*/, L: 0 /*LongType.BIGINT*/ } },
             { no: 64, name: "map_sfixed32_sfixed32", kind: "map", K: 15 /*ScalarType.SFIXED32*/, V: { kind: "scalar", T: 15 /*ScalarType.SFIXED32*/ } },
             { no: 65, name: "map_sfixed64_sfixed64", kind: "map", K: 16 /*ScalarType.SFIXED64*/, V: { kind: "scalar", T: 16 /*ScalarType.SFIXED64*/, L: 0 /*LongType.BIGINT*/ } },
+            { no: 104, name: "map_int32_bool", kind: "map", K: 5 /*ScalarType.INT32*/, V: { kind: "scalar", T: 8 /*ScalarType.BOOL*/ } },
             { no: 66, name: "map_int32_float", kind: "map", K: 5 /*ScalarType.INT32*/, V: { kind: "scalar", T: 2 /*ScalarType.FLOAT*/ } },
             { no: 67, name: "map_int32_double", kind: "map", K: 5 /*ScalarType.INT32*/, V: { kind: "scalar", T: 1 /*ScalarType.DOUBLE*/ } },
+            { no: 103, name: "map_int32_nested_message", kind: "map", K: 5 /*ScalarType.INT32*/, V: { kind: "message", T: () => TestAllTypesProto2_NestedMessage } },
             { no: 68, name: "map_bool_bool", kind: "map", K: 8 /*ScalarType.BOOL*/, V: { kind: "scalar", T: 8 /*ScalarType.BOOL*/ } },
             { no: 69, name: "map_string_string", kind: "map", K: 9 /*ScalarType.STRING*/, V: { kind: "scalar", T: 9 /*ScalarType.STRING*/ } },
             { no: 70, name: "map_string_bytes", kind: "map", K: 9 /*ScalarType.STRING*/, V: { kind: "scalar", T: 12 /*ScalarType.BYTES*/ } },
@@ -1298,7 +1339,8 @@ class TestAllTypesProto2$Type extends MessageType<TestAllTypesProto2> {
             { no: 415, name: "field__name15", kind: "scalar", opt: true, T: 5 /*ScalarType.INT32*/ },
             { no: 416, name: "field__Name16", kind: "scalar", opt: true, T: 5 /*ScalarType.INT32*/ },
             { no: 417, name: "field_name17__", kind: "scalar", opt: true, T: 5 /*ScalarType.INT32*/ },
-            { no: 418, name: "Field_name18__", kind: "scalar", jsonName: "FieldName18", opt: true, T: 5 /*ScalarType.INT32*/ }
+            { no: 418, name: "Field_name18__", kind: "scalar", jsonName: "FieldName18", opt: true, T: 5 /*ScalarType.INT32*/ },
+            { no: 500, name: "message_set_correct", kind: "message", T: () => TestAllTypesProto2_MessageSetCorrect }
         ]);
     }
     create(value?: PartialMessage<TestAllTypesProto2>): TestAllTypesProto2 {
@@ -1362,8 +1404,10 @@ class TestAllTypesProto2$Type extends MessageType<TestAllTypesProto2> {
         message.mapFixed64Fixed64 = {};
         message.mapSfixed32Sfixed32 = {};
         message.mapSfixed64Sfixed64 = {};
+        message.mapInt32Bool = {};
         message.mapInt32Float = {};
         message.mapInt32Double = {};
+        message.mapInt32NestedMessage = {};
         message.mapBoolBool = {};
         message.mapStringString = {};
         message.mapStringBytes = {};
@@ -1796,11 +1840,17 @@ class TestAllTypesProto2$Type extends MessageType<TestAllTypesProto2> {
                 case /* map<sfixed64, sfixed64> map_sfixed64_sfixed64 */ 65:
                     this.binaryReadMap65(message.mapSfixed64Sfixed64, reader, options);
                     break;
+                case /* map<int32, bool> map_int32_bool */ 104:
+                    this.binaryReadMap104(message.mapInt32Bool, reader, options);
+                    break;
                 case /* map<int32, float> map_int32_float */ 66:
                     this.binaryReadMap66(message.mapInt32Float, reader, options);
                     break;
                 case /* map<int32, double> map_int32_double */ 67:
                     this.binaryReadMap67(message.mapInt32Double, reader, options);
+                    break;
+                case /* map<int32, protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage> map_int32_nested_message */ 103:
+                    this.binaryReadMap103(message.mapInt32NestedMessage, reader, options);
                     break;
                 case /* map<bool, bool> map_bool_bool */ 68:
                     this.binaryReadMap68(message.mapBoolBool, reader, options);
@@ -1976,6 +2026,9 @@ class TestAllTypesProto2$Type extends MessageType<TestAllTypesProto2> {
                 case /* optional int32 Field_name18__ = 418 [json_name = "FieldName18"];*/ 418:
                     message.fieldName18 = reader.int32();
                     break;
+                case /* optional protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect message_set_correct */ 500:
+                    message.messageSetCorrect = TestAllTypesProto2_MessageSetCorrect.internalBinaryRead(reader, reader.uint32(), options, message.messageSetCorrect);
+                    break;
                 default:
                     let u = options.readUnknownField;
                     if (u === "throw")
@@ -2147,6 +2200,22 @@ class TestAllTypesProto2$Type extends MessageType<TestAllTypesProto2> {
         }
         map[key ?? "0"] = val ?? 0n;
     }
+    private binaryReadMap104(map: TestAllTypesProto2["mapInt32Bool"], reader: IBinaryReader, options: BinaryReadOptions): void {
+        let len = reader.uint32(), end = reader.pos + len, key: keyof TestAllTypesProto2["mapInt32Bool"] | undefined, val: TestAllTypesProto2["mapInt32Bool"][any] | undefined;
+        while (reader.pos < end) {
+            let [fieldNo, wireType] = reader.tag();
+            switch (fieldNo) {
+                case 1:
+                    key = reader.int32();
+                    break;
+                case 2:
+                    val = reader.bool();
+                    break;
+                default: throw new globalThis.Error("unknown map entry field for field protobuf_test_messages.proto2.TestAllTypesProto2.map_int32_bool");
+            }
+        }
+        map[key ?? 0] = val ?? false;
+    }
     private binaryReadMap66(map: TestAllTypesProto2["mapInt32Float"], reader: IBinaryReader, options: BinaryReadOptions): void {
         let len = reader.uint32(), end = reader.pos + len, key: keyof TestAllTypesProto2["mapInt32Float"] | undefined, val: TestAllTypesProto2["mapInt32Float"][any] | undefined;
         while (reader.pos < end) {
@@ -2178,6 +2247,22 @@ class TestAllTypesProto2$Type extends MessageType<TestAllTypesProto2> {
             }
         }
         map[key ?? 0] = val ?? 0;
+    }
+    private binaryReadMap103(map: TestAllTypesProto2["mapInt32NestedMessage"], reader: IBinaryReader, options: BinaryReadOptions): void {
+        let len = reader.uint32(), end = reader.pos + len, key: keyof TestAllTypesProto2["mapInt32NestedMessage"] | undefined, val: TestAllTypesProto2["mapInt32NestedMessage"][any] | undefined;
+        while (reader.pos < end) {
+            let [fieldNo, wireType] = reader.tag();
+            switch (fieldNo) {
+                case 1:
+                    key = reader.int32();
+                    break;
+                case 2:
+                    val = TestAllTypesProto2_NestedMessage.internalBinaryRead(reader, reader.uint32(), options);
+                    break;
+                default: throw new globalThis.Error("unknown map entry field for field protobuf_test_messages.proto2.TestAllTypesProto2.map_int32_nested_message");
+            }
+        }
+        map[key ?? 0] = val ?? TestAllTypesProto2_NestedMessage.create();
     }
     private binaryReadMap68(map: TestAllTypesProto2["mapBoolBool"], reader: IBinaryReader, options: BinaryReadOptions): void {
         let len = reader.uint32(), end = reader.pos + len, key: keyof TestAllTypesProto2["mapBoolBool"] | undefined, val: TestAllTypesProto2["mapBoolBool"][any] | undefined;
@@ -2591,12 +2676,22 @@ class TestAllTypesProto2$Type extends MessageType<TestAllTypesProto2> {
         /* map<sfixed64, sfixed64> map_sfixed64_sfixed64 = 65; */
         for (let k of globalThis.Object.keys(message.mapSfixed64Sfixed64))
             writer.tag(65, WireType.LengthDelimited).fork().tag(1, WireType.Bit64).sfixed64(k).tag(2, WireType.Bit64).sfixed64(message.mapSfixed64Sfixed64[k]).join();
+        /* map<int32, bool> map_int32_bool = 104; */
+        for (let k of globalThis.Object.keys(message.mapInt32Bool))
+            writer.tag(104, WireType.LengthDelimited).fork().tag(1, WireType.Varint).int32(parseInt(k)).tag(2, WireType.Varint).bool(message.mapInt32Bool[k as any]).join();
         /* map<int32, float> map_int32_float = 66; */
         for (let k of globalThis.Object.keys(message.mapInt32Float))
             writer.tag(66, WireType.LengthDelimited).fork().tag(1, WireType.Varint).int32(parseInt(k)).tag(2, WireType.Bit32).float(message.mapInt32Float[k as any]).join();
         /* map<int32, double> map_int32_double = 67; */
         for (let k of globalThis.Object.keys(message.mapInt32Double))
             writer.tag(67, WireType.LengthDelimited).fork().tag(1, WireType.Varint).int32(parseInt(k)).tag(2, WireType.Bit64).double(message.mapInt32Double[k as any]).join();
+        /* map<int32, protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage> map_int32_nested_message = 103; */
+        for (let k of globalThis.Object.keys(message.mapInt32NestedMessage)) {
+            writer.tag(103, WireType.LengthDelimited).fork().tag(1, WireType.Varint).int32(parseInt(k));
+            writer.tag(2, WireType.LengthDelimited).fork();
+            TestAllTypesProto2_NestedMessage.internalBinaryWrite(message.mapInt32NestedMessage[k as any], writer, options);
+            writer.join().join();
+        }
         /* map<bool, bool> map_bool_bool = 68; */
         for (let k of globalThis.Object.keys(message.mapBoolBool))
             writer.tag(68, WireType.LengthDelimited).fork().tag(1, WireType.Varint).bool(k === "true").tag(2, WireType.Varint).bool(message.mapBoolBool[k]).join();
@@ -2752,6 +2847,9 @@ class TestAllTypesProto2$Type extends MessageType<TestAllTypesProto2> {
         /* optional int32 Field_name18__ = 418 [json_name = "FieldName18"]; */
         if (message.fieldName18 !== undefined)
             writer.tag(418, WireType.Varint).int32(message.fieldName18);
+        /* optional protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect message_set_correct = 500; */
+        if (message.messageSetCorrect)
+            TestAllTypesProto2_MessageSetCorrect.internalBinaryWrite(message.messageSetCorrect, writer.tag(500, WireType.LengthDelimited).fork(), options).join();
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
@@ -3051,6 +3149,66 @@ class TestAllTypesProto2_MessageSetCorrectExtension2$Type extends MessageType<Te
  * @generated MessageType for protobuf message protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2
  */
 export const TestAllTypesProto2_MessageSetCorrectExtension2 = new TestAllTypesProto2_MessageSetCorrectExtension2$Type();
+// @generated message type with reflection information, may provide speed optimized methods
+class TestAllTypesProto2_ExtensionWithOneof$Type extends MessageType<TestAllTypesProto2_ExtensionWithOneof> {
+    constructor() {
+        super("protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof", [
+            { no: 1, name: "a", kind: "scalar", oneof: "oneofField", T: 5 /*ScalarType.INT32*/ },
+            { no: 2, name: "b", kind: "scalar", oneof: "oneofField", T: 5 /*ScalarType.INT32*/ }
+        ]);
+    }
+    create(value?: PartialMessage<TestAllTypesProto2_ExtensionWithOneof>): TestAllTypesProto2_ExtensionWithOneof {
+        const message = globalThis.Object.create((this.messagePrototype!));
+        message.oneofField = { oneofKind: undefined };
+        if (value !== undefined)
+            reflectionMergePartial<TestAllTypesProto2_ExtensionWithOneof>(this, message, value);
+        return message;
+    }
+    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: TestAllTypesProto2_ExtensionWithOneof): TestAllTypesProto2_ExtensionWithOneof {
+        let message = target ?? this.create(), end = reader.pos + length;
+        while (reader.pos < end) {
+            let [fieldNo, wireType] = reader.tag();
+            switch (fieldNo) {
+                case /* int32 a */ 1:
+                    message.oneofField = {
+                        oneofKind: "a",
+                        a: reader.int32()
+                    };
+                    break;
+                case /* int32 b */ 2:
+                    message.oneofField = {
+                        oneofKind: "b",
+                        b: reader.int32()
+                    };
+                    break;
+                default:
+                    let u = options.readUnknownField;
+                    if (u === "throw")
+                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
+                    let d = reader.skip(wireType);
+                    if (u !== false)
+                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
+            }
+        }
+        return message;
+    }
+    internalBinaryWrite(message: TestAllTypesProto2_ExtensionWithOneof, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
+        /* int32 a = 1; */
+        if (message.oneofField.oneofKind === "a")
+            writer.tag(1, WireType.Varint).int32(message.oneofField.a);
+        /* int32 b = 2; */
+        if (message.oneofField.oneofKind === "b")
+            writer.tag(2, WireType.Varint).int32(message.oneofField.b);
+        let u = options.writeUnknownFields;
+        if (u !== false)
+            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+        return writer;
+    }
+}
+/**
+ * @generated MessageType for protobuf message protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof
+ */
+export const TestAllTypesProto2_ExtensionWithOneof = new TestAllTypesProto2_ExtensionWithOneof$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class ForeignMessageProto2$Type extends MessageType<ForeignMessageProto2> {
     constructor() {

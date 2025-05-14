@@ -142,8 +142,10 @@ export interface TestAllTypesProto2 {
   mapFixed64Fixed64: Map<number, number>;
   mapSfixed32Sfixed32: Map<number, number>;
   mapSfixed64Sfixed64: Map<number, number>;
+  mapInt32Bool: Map<number, boolean>;
   mapInt32Float: Map<number, number>;
   mapInt32Double: Map<number, number>;
+  mapInt32NestedMessage: Map<number, TestAllTypesProto2_NestedMessage>;
   mapBoolBool: Map<boolean, boolean>;
   mapStringString: Map<string, string>;
   mapStringBytes: Map<string, Uint8Array>;
@@ -206,6 +208,7 @@ export interface TestAllTypesProto2 {
   fieldName16?: number | undefined;
   fieldName17?: number | undefined;
   FieldName18?: number | undefined;
+  messageSetCorrect?: TestAllTypesProto2_MessageSetCorrect | undefined;
 }
 
 export enum TestAllTypesProto2_NestedEnum {
@@ -305,6 +308,11 @@ export interface TestAllTypesProto2_MapSfixed64Sfixed64Entry {
   value: number;
 }
 
+export interface TestAllTypesProto2_MapInt32BoolEntry {
+  key: number;
+  value: boolean;
+}
+
 export interface TestAllTypesProto2_MapInt32FloatEntry {
   key: number;
   value: number;
@@ -313,6 +321,11 @@ export interface TestAllTypesProto2_MapInt32FloatEntry {
 export interface TestAllTypesProto2_MapInt32DoubleEntry {
   key: number;
   value: number;
+}
+
+export interface TestAllTypesProto2_MapInt32NestedMessageEntry {
+  key: number;
+  value: TestAllTypesProto2_NestedMessage | undefined;
 }
 
 export interface TestAllTypesProto2_MapBoolBoolEntry {
@@ -371,6 +384,10 @@ export interface TestAllTypesProto2_MessageSetCorrectExtension1 {
 
 export interface TestAllTypesProto2_MessageSetCorrectExtension2 {
   i?: number | undefined;
+}
+
+export interface TestAllTypesProto2_ExtensionWithOneof {
+  oneofField?: { $case: "a"; a: number } | { $case: "b"; b: number } | undefined;
 }
 
 export interface ForeignMessageProto2 {
@@ -664,8 +681,10 @@ function createBaseTestAllTypesProto2(): TestAllTypesProto2 {
     mapFixed64Fixed64: new Map(),
     mapSfixed32Sfixed32: new Map(),
     mapSfixed64Sfixed64: new Map(),
+    mapInt32Bool: new Map(),
     mapInt32Float: new Map(),
     mapInt32Double: new Map(),
+    mapInt32NestedMessage: new Map(),
     mapBoolBool: new Map(),
     mapStringString: new Map(),
     mapStringBytes: new Map(),
@@ -709,6 +728,7 @@ function createBaseTestAllTypesProto2(): TestAllTypesProto2 {
     fieldName16: 0,
     fieldName17: 0,
     FieldName18: 0,
+    messageSetCorrect: undefined,
   };
 }
 
@@ -1043,11 +1063,18 @@ export const TestAllTypesProto2: MessageFns<TestAllTypesProto2> = {
     message.mapSfixed64Sfixed64.forEach((value, key) => {
       TestAllTypesProto2_MapSfixed64Sfixed64Entry.encode({ key: key as any, value }, writer.uint32(522).fork()).join();
     });
+    message.mapInt32Bool.forEach((value, key) => {
+      TestAllTypesProto2_MapInt32BoolEntry.encode({ key: key as any, value }, writer.uint32(834).fork()).join();
+    });
     message.mapInt32Float.forEach((value, key) => {
       TestAllTypesProto2_MapInt32FloatEntry.encode({ key: key as any, value }, writer.uint32(530).fork()).join();
     });
     message.mapInt32Double.forEach((value, key) => {
       TestAllTypesProto2_MapInt32DoubleEntry.encode({ key: key as any, value }, writer.uint32(538).fork()).join();
+    });
+    message.mapInt32NestedMessage.forEach((value, key) => {
+      TestAllTypesProto2_MapInt32NestedMessageEntry.encode({ key: key as any, value }, writer.uint32(826).fork())
+        .join();
     });
     message.mapBoolBool.forEach((value, key) => {
       TestAllTypesProto2_MapBoolBoolEntry.encode({ key: key as any, value }, writer.uint32(546).fork()).join();
@@ -1206,6 +1233,9 @@ export const TestAllTypesProto2: MessageFns<TestAllTypesProto2> = {
     }
     if (message.FieldName18 !== undefined && message.FieldName18 !== 0) {
       writer.uint32(3344).int32(message.FieldName18);
+    }
+    if (message.messageSetCorrect !== undefined) {
+      TestAllTypesProto2_MessageSetCorrect.encode(message.messageSetCorrect, writer.uint32(4002).fork()).join();
     }
     return writer;
   },
@@ -2325,6 +2355,17 @@ export const TestAllTypesProto2: MessageFns<TestAllTypesProto2> = {
           }
           continue;
         }
+        case 104: {
+          if (tag !== 834) {
+            break;
+          }
+
+          const entry104 = TestAllTypesProto2_MapInt32BoolEntry.decode(reader, reader.uint32());
+          if (entry104.value !== undefined) {
+            message.mapInt32Bool.set(entry104.key, entry104.value);
+          }
+          continue;
+        }
         case 66: {
           if (tag !== 530) {
             break;
@@ -2344,6 +2385,17 @@ export const TestAllTypesProto2: MessageFns<TestAllTypesProto2> = {
           const entry67 = TestAllTypesProto2_MapInt32DoubleEntry.decode(reader, reader.uint32());
           if (entry67.value !== undefined) {
             message.mapInt32Double.set(entry67.key, entry67.value);
+          }
+          continue;
+        }
+        case 103: {
+          if (tag !== 826) {
+            break;
+          }
+
+          const entry103 = TestAllTypesProto2_MapInt32NestedMessageEntry.decode(reader, reader.uint32());
+          if (entry103.value !== undefined) {
+            message.mapInt32NestedMessage.set(entry103.key, entry103.value);
           }
           continue;
         }
@@ -2779,6 +2831,14 @@ export const TestAllTypesProto2: MessageFns<TestAllTypesProto2> = {
           message.FieldName18 = reader.int32();
           continue;
         }
+        case 500: {
+          if (tag !== 4002) {
+            break;
+          }
+
+          message.messageSetCorrect = TestAllTypesProto2_MessageSetCorrect.decode(reader, reader.uint32());
+          continue;
+        }
       }
       if ((tag & 7) === 4 || tag === 0) {
         break;
@@ -3029,6 +3089,12 @@ export const TestAllTypesProto2: MessageFns<TestAllTypesProto2> = {
           return acc;
         }, new Map())
         : new Map(),
+      mapInt32Bool: isObject(object.mapInt32Bool)
+        ? Object.entries(object.mapInt32Bool).reduce<Map<number, boolean>>((acc, [key, value]) => {
+          acc.set(globalThis.Number(key), Boolean(value));
+          return acc;
+        }, new Map())
+        : new Map(),
       mapInt32Float: isObject(object.mapInt32Float)
         ? Object.entries(object.mapInt32Float).reduce<Map<number, number>>((acc, [key, value]) => {
           acc.set(globalThis.Number(key), Number(value));
@@ -3040,6 +3106,15 @@ export const TestAllTypesProto2: MessageFns<TestAllTypesProto2> = {
           acc.set(globalThis.Number(key), Number(value));
           return acc;
         }, new Map())
+        : new Map(),
+      mapInt32NestedMessage: isObject(object.mapInt32NestedMessage)
+        ? Object.entries(object.mapInt32NestedMessage).reduce<Map<number, TestAllTypesProto2_NestedMessage>>(
+          (acc, [key, value]) => {
+            acc.set(globalThis.Number(key), TestAllTypesProto2_NestedMessage.fromJSON(value));
+            return acc;
+          },
+          new Map(),
+        )
         : new Map(),
       mapBoolBool: isObject(object.mapBoolBool)
         ? Object.entries(object.mapBoolBool).reduce<Map<boolean, boolean>>((acc, [key, value]) => {
@@ -3151,6 +3226,9 @@ export const TestAllTypesProto2: MessageFns<TestAllTypesProto2> = {
       fieldName16: isSet(object.fieldName16) ? globalThis.Number(object.fieldName16) : 0,
       fieldName17: isSet(object.fieldName17) ? globalThis.Number(object.fieldName17) : 0,
       FieldName18: isSet(object.FieldName18) ? globalThis.Number(object.FieldName18) : 0,
+      messageSetCorrect: isSet(object.messageSetCorrect)
+        ? TestAllTypesProto2_MessageSetCorrect.fromJSON(object.messageSetCorrect)
+        : undefined,
     };
   },
 
@@ -3429,6 +3507,12 @@ export const TestAllTypesProto2: MessageFns<TestAllTypesProto2> = {
         obj.mapSfixed64Sfixed64[k] = Math.round(v);
       });
     }
+    if (message.mapInt32Bool?.size) {
+      obj.mapInt32Bool = {};
+      message.mapInt32Bool.forEach((v, k) => {
+        obj.mapInt32Bool[k] = v;
+      });
+    }
     if (message.mapInt32Float?.size) {
       obj.mapInt32Float = {};
       message.mapInt32Float.forEach((v, k) => {
@@ -3439,6 +3523,12 @@ export const TestAllTypesProto2: MessageFns<TestAllTypesProto2> = {
       obj.mapInt32Double = {};
       message.mapInt32Double.forEach((v, k) => {
         obj.mapInt32Double[k] = v;
+      });
+    }
+    if (message.mapInt32NestedMessage?.size) {
+      obj.mapInt32NestedMessage = {};
+      message.mapInt32NestedMessage.forEach((v, k) => {
+        obj.mapInt32NestedMessage[k] = TestAllTypesProto2_NestedMessage.toJSON(v);
       });
     }
     if (message.mapBoolBool?.size) {
@@ -3606,6 +3696,9 @@ export const TestAllTypesProto2: MessageFns<TestAllTypesProto2> = {
     }
     if (message.FieldName18 !== undefined && message.FieldName18 !== 0) {
       obj.FieldName18 = Math.round(message.FieldName18);
+    }
+    if (message.messageSetCorrect !== undefined) {
+      obj.messageSetCorrect = TestAllTypesProto2_MessageSetCorrect.toJSON(message.messageSetCorrect);
     }
     return obj;
   },
@@ -3786,6 +3879,15 @@ export const TestAllTypesProto2: MessageFns<TestAllTypesProto2> = {
       });
       return m;
     })();
+    message.mapInt32Bool = (() => {
+      const m = new Map();
+      (object.mapInt32Bool as Map<number, boolean> ?? new Map()).forEach((value, key) => {
+        if (value !== undefined) {
+          m.set(key, globalThis.Boolean(value));
+        }
+      });
+      return m;
+    })();
     message.mapInt32Float = (() => {
       const m = new Map();
       (object.mapInt32Float as Map<number, number> ?? new Map()).forEach((value, key) => {
@@ -3802,6 +3904,17 @@ export const TestAllTypesProto2: MessageFns<TestAllTypesProto2> = {
           m.set(key, globalThis.Number(value));
         }
       });
+      return m;
+    })();
+    message.mapInt32NestedMessage = (() => {
+      const m = new Map();
+      (object.mapInt32NestedMessage as Map<number, TestAllTypesProto2_NestedMessage> ?? new Map()).forEach(
+        (value, key) => {
+          if (value !== undefined) {
+            m.set(key, TestAllTypesProto2_NestedMessage.fromPartial(value));
+          }
+        },
+      );
       return m;
     })();
     message.mapBoolBool = (() => {
@@ -3967,6 +4080,9 @@ export const TestAllTypesProto2: MessageFns<TestAllTypesProto2> = {
     message.fieldName16 = object.fieldName16 ?? 0;
     message.fieldName17 = object.fieldName17 ?? 0;
     message.FieldName18 = object.FieldName18 ?? 0;
+    message.messageSetCorrect = (object.messageSetCorrect !== undefined && object.messageSetCorrect !== null)
+      ? TestAllTypesProto2_MessageSetCorrect.fromPartial(object.messageSetCorrect)
+      : undefined;
     return message;
   },
 };
@@ -4859,6 +4975,86 @@ export const TestAllTypesProto2_MapSfixed64Sfixed64Entry: MessageFns<TestAllType
   },
 };
 
+function createBaseTestAllTypesProto2_MapInt32BoolEntry(): TestAllTypesProto2_MapInt32BoolEntry {
+  return { key: 0, value: false };
+}
+
+export const TestAllTypesProto2_MapInt32BoolEntry: MessageFns<TestAllTypesProto2_MapInt32BoolEntry> = {
+  encode(message: TestAllTypesProto2_MapInt32BoolEntry, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
+    if (message.key !== 0) {
+      writer.uint32(8).int32(message.key);
+    }
+    if (message.value !== false) {
+      writer.uint32(16).bool(message.value);
+    }
+    return writer;
+  },
+
+  decode(input: BinaryReader | Uint8Array, length?: number): TestAllTypesProto2_MapInt32BoolEntry {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseTestAllTypesProto2_MapInt32BoolEntry();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1: {
+          if (tag !== 8) {
+            break;
+          }
+
+          message.key = reader.int32();
+          continue;
+        }
+        case 2: {
+          if (tag !== 16) {
+            break;
+          }
+
+          message.value = reader.bool();
+          continue;
+        }
+      }
+      if ((tag & 7) === 4 || tag === 0) {
+        break;
+      }
+      reader.skip(tag & 7);
+    }
+    return message;
+  },
+
+  fromJSON(object: any): TestAllTypesProto2_MapInt32BoolEntry {
+    return {
+      key: isSet(object.key) ? globalThis.Number(object.key) : 0,
+      value: isSet(object.value) ? globalThis.Boolean(object.value) : false,
+    };
+  },
+
+  toJSON(message: TestAllTypesProto2_MapInt32BoolEntry): unknown {
+    const obj: any = {};
+    if (message.key !== 0) {
+      obj.key = Math.round(message.key);
+    }
+    if (message.value !== false) {
+      obj.value = message.value;
+    }
+    return obj;
+  },
+
+  create<I extends Exact<DeepPartial<TestAllTypesProto2_MapInt32BoolEntry>, I>>(
+    base?: I,
+  ): TestAllTypesProto2_MapInt32BoolEntry {
+    return TestAllTypesProto2_MapInt32BoolEntry.fromPartial(base ?? ({} as any));
+  },
+  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto2_MapInt32BoolEntry>, I>>(
+    object: I,
+  ): TestAllTypesProto2_MapInt32BoolEntry {
+    const message = createBaseTestAllTypesProto2_MapInt32BoolEntry();
+    message.key = object.key ?? 0;
+    message.value = object.value ?? false;
+    return message;
+  },
+};
+
 function createBaseTestAllTypesProto2_MapInt32FloatEntry(): TestAllTypesProto2_MapInt32FloatEntry {
   return { key: 0, value: 0 };
 }
@@ -5018,6 +5214,92 @@ export const TestAllTypesProto2_MapInt32DoubleEntry: MessageFns<TestAllTypesProt
     return message;
   },
 };
+
+function createBaseTestAllTypesProto2_MapInt32NestedMessageEntry(): TestAllTypesProto2_MapInt32NestedMessageEntry {
+  return { key: 0, value: undefined };
+}
+
+export const TestAllTypesProto2_MapInt32NestedMessageEntry: MessageFns<TestAllTypesProto2_MapInt32NestedMessageEntry> =
+  {
+    encode(
+      message: TestAllTypesProto2_MapInt32NestedMessageEntry,
+      writer: BinaryWriter = new BinaryWriter(),
+    ): BinaryWriter {
+      if (message.key !== 0) {
+        writer.uint32(8).int32(message.key);
+      }
+      if (message.value !== undefined) {
+        TestAllTypesProto2_NestedMessage.encode(message.value, writer.uint32(18).fork()).join();
+      }
+      return writer;
+    },
+
+    decode(input: BinaryReader | Uint8Array, length?: number): TestAllTypesProto2_MapInt32NestedMessageEntry {
+      const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+      let end = length === undefined ? reader.len : reader.pos + length;
+      const message = createBaseTestAllTypesProto2_MapInt32NestedMessageEntry();
+      while (reader.pos < end) {
+        const tag = reader.uint32();
+        switch (tag >>> 3) {
+          case 1: {
+            if (tag !== 8) {
+              break;
+            }
+
+            message.key = reader.int32();
+            continue;
+          }
+          case 2: {
+            if (tag !== 18) {
+              break;
+            }
+
+            message.value = TestAllTypesProto2_NestedMessage.decode(reader, reader.uint32());
+            continue;
+          }
+        }
+        if ((tag & 7) === 4 || tag === 0) {
+          break;
+        }
+        reader.skip(tag & 7);
+      }
+      return message;
+    },
+
+    fromJSON(object: any): TestAllTypesProto2_MapInt32NestedMessageEntry {
+      return {
+        key: isSet(object.key) ? globalThis.Number(object.key) : 0,
+        value: isSet(object.value) ? TestAllTypesProto2_NestedMessage.fromJSON(object.value) : undefined,
+      };
+    },
+
+    toJSON(message: TestAllTypesProto2_MapInt32NestedMessageEntry): unknown {
+      const obj: any = {};
+      if (message.key !== 0) {
+        obj.key = Math.round(message.key);
+      }
+      if (message.value !== undefined) {
+        obj.value = TestAllTypesProto2_NestedMessage.toJSON(message.value);
+      }
+      return obj;
+    },
+
+    create<I extends Exact<DeepPartial<TestAllTypesProto2_MapInt32NestedMessageEntry>, I>>(
+      base?: I,
+    ): TestAllTypesProto2_MapInt32NestedMessageEntry {
+      return TestAllTypesProto2_MapInt32NestedMessageEntry.fromPartial(base ?? ({} as any));
+    },
+    fromPartial<I extends Exact<DeepPartial<TestAllTypesProto2_MapInt32NestedMessageEntry>, I>>(
+      object: I,
+    ): TestAllTypesProto2_MapInt32NestedMessageEntry {
+      const message = createBaseTestAllTypesProto2_MapInt32NestedMessageEntry();
+      message.key = object.key ?? 0;
+      message.value = (object.value !== undefined && object.value !== null)
+        ? TestAllTypesProto2_NestedMessage.fromPartial(object.value)
+        : undefined;
+      return message;
+    },
+  };
 
 function createBaseTestAllTypesProto2_MapBoolBoolEntry(): TestAllTypesProto2_MapBoolBoolEntry {
   return { key: false, value: false };
@@ -5932,6 +6214,102 @@ export const TestAllTypesProto2_MessageSetCorrectExtension2: MessageFns<
   ): TestAllTypesProto2_MessageSetCorrectExtension2 {
     const message = createBaseTestAllTypesProto2_MessageSetCorrectExtension2();
     message.i = object.i ?? 0;
+    return message;
+  },
+};
+
+function createBaseTestAllTypesProto2_ExtensionWithOneof(): TestAllTypesProto2_ExtensionWithOneof {
+  return { oneofField: undefined };
+}
+
+export const TestAllTypesProto2_ExtensionWithOneof: MessageFns<TestAllTypesProto2_ExtensionWithOneof> = {
+  encode(message: TestAllTypesProto2_ExtensionWithOneof, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
+    switch (message.oneofField?.$case) {
+      case "a":
+        writer.uint32(8).int32(message.oneofField.a);
+        break;
+      case "b":
+        writer.uint32(16).int32(message.oneofField.b);
+        break;
+    }
+    return writer;
+  },
+
+  decode(input: BinaryReader | Uint8Array, length?: number): TestAllTypesProto2_ExtensionWithOneof {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseTestAllTypesProto2_ExtensionWithOneof();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1: {
+          if (tag !== 8) {
+            break;
+          }
+
+          message.oneofField = { $case: "a", a: reader.int32() };
+          continue;
+        }
+        case 2: {
+          if (tag !== 16) {
+            break;
+          }
+
+          message.oneofField = { $case: "b", b: reader.int32() };
+          continue;
+        }
+      }
+      if ((tag & 7) === 4 || tag === 0) {
+        break;
+      }
+      reader.skip(tag & 7);
+    }
+    return message;
+  },
+
+  fromJSON(object: any): TestAllTypesProto2_ExtensionWithOneof {
+    return {
+      oneofField: isSet(object.a)
+        ? { $case: "a", a: globalThis.Number(object.a) }
+        : isSet(object.b)
+        ? { $case: "b", b: globalThis.Number(object.b) }
+        : undefined,
+    };
+  },
+
+  toJSON(message: TestAllTypesProto2_ExtensionWithOneof): unknown {
+    const obj: any = {};
+    if (message.oneofField?.$case === "a") {
+      obj.a = Math.round(message.oneofField.a);
+    } else if (message.oneofField?.$case === "b") {
+      obj.b = Math.round(message.oneofField.b);
+    }
+    return obj;
+  },
+
+  create<I extends Exact<DeepPartial<TestAllTypesProto2_ExtensionWithOneof>, I>>(
+    base?: I,
+  ): TestAllTypesProto2_ExtensionWithOneof {
+    return TestAllTypesProto2_ExtensionWithOneof.fromPartial(base ?? ({} as any));
+  },
+  fromPartial<I extends Exact<DeepPartial<TestAllTypesProto2_ExtensionWithOneof>, I>>(
+    object: I,
+  ): TestAllTypesProto2_ExtensionWithOneof {
+    const message = createBaseTestAllTypesProto2_ExtensionWithOneof();
+    switch (object.oneofField?.$case) {
+      case "a": {
+        if (object.oneofField?.a !== undefined && object.oneofField?.a !== null) {
+          message.oneofField = { $case: "a", a: object.oneofField.a };
+        }
+        break;
+      }
+      case "b": {
+        if (object.oneofField?.b !== undefined && object.oneofField?.b !== null) {
+          message.oneofField = { $case: "b", b: object.oneofField.b };
+        }
+        break;
+      }
+    }
     return message;
   },
 };
