@@ -3524,11 +3524,17 @@ export namespace protobuf_test_messages {
                 /** TestAllTypesProto2 mapSfixed64Sfixed64 */
                 mapSfixed64Sfixed64?: ({ [k: string]: (number|Long) }|null);
 
+                /** TestAllTypesProto2 mapInt32Bool */
+                mapInt32Bool?: ({ [k: string]: boolean }|null);
+
                 /** TestAllTypesProto2 mapInt32Float */
                 mapInt32Float?: ({ [k: string]: number }|null);
 
                 /** TestAllTypesProto2 mapInt32Double */
                 mapInt32Double?: ({ [k: string]: number }|null);
+
+                /** TestAllTypesProto2 mapInt32NestedMessage */
+                mapInt32NestedMessage?: ({ [k: string]: protobuf_test_messages.editions.proto2.TestAllTypesProto2.INestedMessage }|null);
 
                 /** TestAllTypesProto2 mapBoolBool */
                 mapBoolBool?: ({ [k: string]: boolean }|null);
@@ -3682,6 +3688,9 @@ export namespace protobuf_test_messages {
 
                 /** TestAllTypesProto2 FieldName18__ */
                 FieldName18__?: (number|null);
+
+                /** TestAllTypesProto2 messageSetCorrect */
+                messageSetCorrect?: (protobuf_test_messages.editions.proto2.TestAllTypesProto2.IMessageSetCorrect|null);
 
                 /** TestAllTypesProto2 .protobuf_test_messages.editions.proto2.extensionInt32 */
                 ".protobuf_test_messages.editions.proto2.extensionInt32"?: (number|null);
@@ -3942,11 +3951,17 @@ export namespace protobuf_test_messages {
                 /** TestAllTypesProto2 mapSfixed64Sfixed64. */
                 public mapSfixed64Sfixed64: { [k: string]: (number|Long) };
 
+                /** TestAllTypesProto2 mapInt32Bool. */
+                public mapInt32Bool: { [k: string]: boolean };
+
                 /** TestAllTypesProto2 mapInt32Float. */
                 public mapInt32Float: { [k: string]: number };
 
                 /** TestAllTypesProto2 mapInt32Double. */
                 public mapInt32Double: { [k: string]: number };
+
+                /** TestAllTypesProto2 mapInt32NestedMessage. */
+                public mapInt32NestedMessage: { [k: string]: protobuf_test_messages.editions.proto2.TestAllTypesProto2.INestedMessage };
 
                 /** TestAllTypesProto2 mapBoolBool. */
                 public mapBoolBool: { [k: string]: boolean };
@@ -4100,6 +4115,9 @@ export namespace protobuf_test_messages {
 
                 /** TestAllTypesProto2 FieldName18__. */
                 public FieldName18__: number;
+
+                /** TestAllTypesProto2 messageSetCorrect. */
+                public messageSetCorrect?: (protobuf_test_messages.editions.proto2.TestAllTypesProto2.IMessageSetCorrect|null);
 
                 /** TestAllTypesProto2 oneofField. */
                 public oneofField?: ("oneofUint32"|"oneofNestedMessage"|"oneofString"|"oneofBytes"|"oneofBool"|"oneofUint64"|"oneofFloat"|"oneofDouble"|"oneofEnum");
@@ -4509,6 +4527,9 @@ export namespace protobuf_test_messages {
 
                     /** MessageSetCorrect .protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension */
                     ".protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension"?: (protobuf_test_messages.editions.proto2.TestAllTypesProto2.IMessageSetCorrectExtension2|null);
+
+                    /** MessageSetCorrect .protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof */
+                    ".protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof"?: (protobuf_test_messages.editions.proto2.TestAllTypesProto2.IExtensionWithOneof|null);
                 }
 
                 /** Represents a MessageSetCorrect. */
@@ -4786,6 +4807,112 @@ export namespace protobuf_test_messages {
 
                     /**
                      * Gets the default type url for MessageSetCorrectExtension2
+                     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                     * @returns The default type url
+                     */
+                    public static getTypeUrl(typeUrlPrefix?: string): string;
+                }
+
+                /** Properties of an ExtensionWithOneof. */
+                interface IExtensionWithOneof {
+
+                    /** ExtensionWithOneof a */
+                    a?: (number|null);
+
+                    /** ExtensionWithOneof b */
+                    b?: (number|null);
+                }
+
+                /** Represents an ExtensionWithOneof. */
+                class ExtensionWithOneof implements IExtensionWithOneof {
+
+                    /**
+                     * Constructs a new ExtensionWithOneof.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.IExtensionWithOneof);
+
+                    /** ExtensionWithOneof a. */
+                    public a?: (number|null);
+
+                    /** ExtensionWithOneof b. */
+                    public b?: (number|null);
+
+                    /** ExtensionWithOneof oneofField. */
+                    public oneofField?: ("a"|"b");
+
+                    /**
+                     * Creates a new ExtensionWithOneof instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns ExtensionWithOneof instance
+                     */
+                    public static create(properties?: protobuf_test_messages.editions.proto2.TestAllTypesProto2.IExtensionWithOneof): protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof;
+
+                    /**
+                     * Encodes the specified ExtensionWithOneof message. Does not implicitly {@link protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.verify|verify} messages.
+                     * @param message ExtensionWithOneof message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: protobuf_test_messages.editions.proto2.TestAllTypesProto2.IExtensionWithOneof, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified ExtensionWithOneof message, length delimited. Does not implicitly {@link protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.verify|verify} messages.
+                     * @param message ExtensionWithOneof message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: protobuf_test_messages.editions.proto2.TestAllTypesProto2.IExtensionWithOneof, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an ExtensionWithOneof message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns ExtensionWithOneof
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof;
+
+                    /**
+                     * Decodes an ExtensionWithOneof message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns ExtensionWithOneof
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof;
+
+                    /**
+                     * Verifies an ExtensionWithOneof message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an ExtensionWithOneof message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns ExtensionWithOneof
+                     */
+                    public static fromObject(object: { [k: string]: any }): protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof;
+
+                    /**
+                     * Creates a plain object from an ExtensionWithOneof message. Also converts values to other types if specified.
+                     * @param message ExtensionWithOneof
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this ExtensionWithOneof to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+
+                    /**
+                     * Gets the default type url for ExtensionWithOneof
                      * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
                      * @returns The default type url
                      */

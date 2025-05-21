@@ -70,7 +70,10 @@ export function foreignEnumToJSON(object: ForeignEnum): string {
  * this stays true in a unit test.
  */
 export interface TestAllTypesProto3 {
-  /** Singular */
+  /**
+   * Singular
+   * test [kotlin] comment
+   */
   optionalInt32: number;
   optionalInt64: number;
   optionalUint32: number;

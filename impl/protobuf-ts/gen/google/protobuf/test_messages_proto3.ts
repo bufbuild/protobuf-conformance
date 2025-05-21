@@ -57,6 +57,7 @@ import { NullValue } from "./struct";
 export interface TestAllTypesProto3 {
     /**
      * Singular
+     * test [kotlin] comment
      *
      * @generated from protobuf field: int32 optional_int32 = 1;
      */
