@@ -16,10 +16,10 @@
     "test": "conformance_test_runner --maximum_edition PROTO3 --enforce_recommended --failure_list failing_tests.txt --text_format_failure_list failing_tests_text_format.txt --output_dir . runner.js"
   },
   "devDependencies": {
-    "@bufbuild/buf": "^1.55.1",
-    "@types/node": "^24.0.8",
-    "esbuild": "^0.25.5",
-    "typescript": "^5.8.3"
+    "@bufbuild/buf": "^1.56.0",
+    "@types/node": "^24.1.0",
+    "esbuild": "^0.25.8",
+    "typescript": "^5.9.2"
   },
   "dependencies": {
     "ts-proto": "^2.7.5"
