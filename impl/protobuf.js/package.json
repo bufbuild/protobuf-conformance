@@ -22,7 +22,7 @@
     "protobufjs-cli": "^1.2.0"
   },
   "devDependencies": {
-    "typescript": "^5.8.3",
+    "typescript": "^5.9.2",
     "tsx": "^4.20.3"
   }
 }
