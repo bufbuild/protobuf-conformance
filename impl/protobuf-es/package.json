@@ -18,13 +18,13 @@
     "test:string": "BUF_BIGINT_DISABLE=1 npx conformance_test_runner --maximum_edition MAX --enforce_recommended --failure_list failing_tests_without_bigint.txt --text_format_failure_list failing_tests_text_format.txt --output_dir . runner.ts"
   },
   "dependencies": {
-    "@bufbuild/protobuf": "^2.6.0",
-    "@bufbuild/protoc-gen-es": "^2.6.0"
+    "@bufbuild/protobuf": "^2.6.2",
+    "@bufbuild/protoc-gen-es": "^2.6.2"
   },
   "devDependencies": {
-    "@bufbuild/buf": "^1.55.1",
-    "@types/node": "^24.0.8",
+    "@bufbuild/buf": "^1.56.0",
+    "@types/node": "^24.1.0",
     "tsx": "^4.20.3",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.2"
   }
 }
