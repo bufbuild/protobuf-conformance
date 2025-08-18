@@ -7,6 +7,7 @@
     "format": "prettier  --ignore-unknown --write 'scripts/*' 'impl/*/*' '!impl/*/ge*'",
     "test": "node scripts/test.js",
     "posttest": "node scripts/report.js",
+    "preinstall": "rm -rf ./proto",
     "postinstall": "conformance_proto_eject ./proto"
   },
   "licenseHeader": {
