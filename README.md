@@ -44,3 +44,9 @@ Note: None of the libraries tested implement the text format, so the results for
 To run the conformance tests, run `npm test` from the repo root.
 
 Note that only Linux and OSX operating systems are supported.
+
+> [!NOTE]
+>
+> Beginning with the v32.0 release of Protobuf, this repository will no longer be publishing releases
+> of the conformance runner. Users can instead install the conformance runner (and protoc if desired)
+> via the [protobuf-conformance](https://www.npmjs.com/package/protobuf-conformance) package on npm.
