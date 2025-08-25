@@ -5,9 +5,10 @@
   "scripts": {
     "license-header": "license-header --ignore 'proto/**' --ignore 'impl/*/gen/**' --ignore 'impl/protobuf.js/wrapper.js'",
     "format": "prettier  --ignore-unknown --write 'scripts/*' 'impl/*/*' '!impl/*/ge*'",
-    "postinstall": "node scripts/download-conformance-release.js",
     "test": "node scripts/test.js",
-    "posttest": "node scripts/report.js"
+    "posttest": "node scripts/report.js",
+    "preinstall": "rm -rf ./proto",
+    "postinstall": "conformance_proto_eject ./proto"
   },
   "licenseHeader": {
     "licenseType": "apache",
@@ -18,5 +19,8 @@
     "@bufbuild/license-header": "^0.0.4",
     "fflate": "^0.8.2",
     "prettier": "^3.6.2"
+  },
+  "devDependencies": {
+    "protobuf-conformance": "^31.0.0"
   }
 }
