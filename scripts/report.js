@@ -42,7 +42,7 @@ function generateMarkdownTable(impls) {
   const emojYes = ":heavy_check_mark:";
   const emojNo = ":x:";
   const lines = [
-    "| Implementation | JavaScript and<br>TypeScript | Standard<br>Plugin | Maximum Edition supported | Required tests | Recommended tests |",
+    "| Implementation | JavaScript and<br>TypeScript | Standard<br>Plugin | Supported Edition | Required tests | Recommended tests |",
     "|---|:---:|:---:|:---:|:---:|:---:|",
   ];
   for (const impl of impls) {

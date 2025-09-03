@@ -23,7 +23,7 @@ The current implementations being tested are:
 
 <!-- TABLE-START -->
 
-| Implementation | JavaScript and<br>TypeScript | Standard<br>Plugin | Maximum Edition supported | Required tests | Recommended tests |
+| Implementation | JavaScript and<br>TypeScript | Standard<br>Plugin | Supported Edition | Required tests | Recommended tests |
 |---|:---:|:---:|:---:|:---:|:---:|
 | [Protobuf-ES](impl/protobuf-es) | :heavy_check_mark: | :heavy_check_mark: | 2023 | <sub><img src=".github/genimg/Protobuf-ES-required.svg" height="25" width="125" /></sub><br><sup>(0&nbsp;failures)<sub> | <sub><img src=".github/genimg/Protobuf-ES-recommended.svg" height="25" width="125" /></sub><br><sup>(12&nbsp;failures)<sub> |
 | [protobuf-ts](impl/protobuf-ts) | :heavy_check_mark: | :heavy_check_mark: | proto3 | <sub><img src=".github/genimg/protobuf-ts-required.svg" height="25" width="125" /></sub><br><sup>(3&nbsp;failures)<sub> | <sub><img src=".github/genimg/protobuf-ts-recommended.svg" height="25" width="125" /></sub><br><sup>(7&nbsp;failures)<sub> |
