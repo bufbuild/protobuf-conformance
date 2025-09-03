@@ -19,6 +19,24 @@ import { join as joinPath } from "node:path";
 const readmePath = new URL("../README.md", import.meta.url).pathname;
 const imgPath = new URL("../.github/genimg", import.meta.url).pathname;
 const impls = listImpl(["proto3", "2023", "2024"]);
+
+for (const impl of impls) {
+  console.log(`# ${impl.conformanceMeta.name}`);
+  console.log(`javascript: ${impl.conformanceMeta.javascript}`);
+  console.log(`typescript: ${impl.conformanceMeta.typescript}`);
+  console.log(`standardPlugin: ${impl.conformanceMeta.standardPlugin}`);
+  console.log(`maximumEdition: ${impl.conformanceMeta.maximumEdition}`);
+  console.log(`baseline: ${impl.baseline.conformanceMeta.name}`);
+  console.log(`required:`);
+  console.log(`  failures: ${impl.getFailures().required}`);
+  console.log(`  passing:  ${impl.required.passing}`);
+  console.log(`  total:    ${impl.required.total}`);
+  console.log(`recommended:`);
+  console.log(`  failures: ${impl.getFailures().recommended}`);
+  console.log(`  passing:  ${impl.recommended.passing}`);
+  console.log(`  total:    ${impl.recommended.total}`);
+  console.log();
+}
 generateImages(imgPath, impls);
 injectMarkdown(readmePath, "LIST", generateImplList(impls));
 injectMarkdown(readmePath, "TABLE", generateMarkdownTable(impls));
