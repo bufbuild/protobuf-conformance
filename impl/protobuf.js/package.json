@@ -14,7 +14,7 @@
     "pregenerate": "rm -rf gen/*",
     "generate": "bash generate.sh",
     "build": "tsc --noEmit",
-    "test": "conformance_test_runner --maximum_edition 2023 --enforce_recommended --failure_list failing_tests.txt --text_format_failure_list failing_tests_text_format.txt runner.ts"
+    "test": "conformance_test_runner --maximum_edition 2023 --enforce_recommended --failure_list failing_tests.txt --text_format_failure_list failing_tests_text_format.txt --output_dir . runner.ts"
   },
   "dependencies": {
     "long": "^5.3.2",
