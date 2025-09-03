@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "clean": "git clean -Xdf",
     "license-header": "license-header --ignore 'proto/**' --ignore 'impl/*/gen/**' --ignore 'impl/protobuf.js/wrapper.js'",
     "format": "prettier  --ignore-unknown --write 'scripts/*' 'impl/*/*' '!impl/*/ge*'",
     "test": "node scripts/test.js",
@@ -21,6 +22,6 @@
     "prettier": "^3.6.2"
   },
   "devDependencies": {
-    "protobuf-conformance": "^31.0.0"
+    "protobuf-conformance": "^32.0.0"
   }
 }
