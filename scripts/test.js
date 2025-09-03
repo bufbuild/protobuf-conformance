@@ -12,9 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { listImpl } from "./util.js";
+import { listAll } from "./util.js";
 
-for (const impl of listImpl()) {
+for (const impl of listAll()) {
   impl.run("npm ci");
   impl.run("npm run generate");
   impl.run("npm run build --if-present");

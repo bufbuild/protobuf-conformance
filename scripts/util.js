@@ -21,7 +21,18 @@ const implDirectory = new URL("../impl", import.meta.url).pathname;
 
 /**
  * @typedef Impl
- * @property {boolean} baseline
+ * @property {string} path
+ * @property {ConformanceMeta} conformanceMeta
+ * @property {GetFailuresFn} getFailures
+ * @property {RunFn} run
+ * @property {Impl} baseline
+ * @property {Stats} required
+ * @property {Stats} recommended
+ * @property {number} featureScore
+ */
+
+/**
+ * @typedef ImplBase
  * @property {string} path
  * @property {ConformanceMeta} conformanceMeta
  * @property {GetFailuresFn} getFailures
@@ -46,19 +57,123 @@ const implDirectory = new URL("../impl", import.meta.url).pathname;
  */
 
 /**
+ * @typedef Stats
+ * @property {number} passing
+ * @property {number} total
+ * @property {number} percentPassing
+ */
+
+/**
  * @typedef ConformanceMeta
  * @property {string} name
+ * @property {boolean} baseline
  * @property {string} githubUrl
- * @property {boolean} editions
+ * @property {string} maximumEdition
  * @property {boolean} javascript
  * @property {boolean} typescript
  * @property {boolean} standardPlugin
  */
 
 /**
- * @return {(Impl)[]}
+ * Implementations are sorted by conformance:
+ * - Highest count of required conformance tests passed first
+ * - If tied, consider recommended conformance tests
+ * - If tied, score features (support for editions, TypeScript and JavaScript, standard plugin)
+ *
+ * @param {string[]} knownEditions
+ * @return {Impl[]}
  */
-export function listImpl() {
+export function listImpl(knownEditions) {
+  const all = listAll();
+  for (const impl of all) {
+    if (!knownEditions.includes(impl.conformanceMeta.maximumEdition)) {
+      throw new Error(
+        `${impl.path}: expected conformanceMeta.maximumEdition to be one of ${knownEditions.join(", ")}`,
+      );
+    }
+  }
+  const baselines = all.filter((i) => i.conformanceMeta.baseline);
+  const missingBaselines = knownEditions.filter(
+    (e) => !baselines.find((b) => b.conformanceMeta.maximumEdition === e),
+  );
+  if (missingBaselines.length > 0) {
+    throw new Error(`missing baseline for ${missingBaselines.join(", ")}`);
+  }
+  return all
+    .filter((i) => !i.conformanceMeta.baseline)
+    .map((i) => {
+      const baseline = baselines.find(
+        (b) =>
+          b.conformanceMeta.maximumEdition === i.conformanceMeta.maximumEdition,
+      );
+      if (!baseline) {
+        throw new Error(
+          `missing baseline for ${i.conformanceMeta.maximumEdition}`,
+        );
+      }
+      let featureScore = knownEditions.indexOf(
+        i.conformanceMeta.maximumEdition,
+      );
+      if (i.conformanceMeta.standardPlugin) {
+        featureScore++;
+      }
+      if (i.conformanceMeta.typescript) {
+        featureScore++;
+      }
+      if (i.conformanceMeta.javascript) {
+        featureScore++;
+      }
+      const thisFailures = i.getFailures();
+      const baseFailures = baseline.getFailures();
+      return {
+        ...i,
+        baseline,
+        required: {
+          passing: baseFailures.required - thisFailures.required,
+          total: baseFailures.required,
+          percentPassing:
+            ((baseFailures.required - thisFailures.required) /
+              baseFailures.required) *
+            100,
+        },
+        recommended: {
+          passing: baseFailures.recommended - thisFailures.recommended,
+          total: baseFailures.recommended,
+          percentPassing:
+            ((baseFailures.recommended - thisFailures.recommended) /
+              baseFailures.recommended) *
+            100,
+        },
+        featureScore,
+      };
+    })
+    .sort((a, b) => {
+      if (a.required.percentPassing < b.required.percentPassing) {
+        return 1;
+      }
+      if (a.required.percentPassing > b.required.percentPassing) {
+        return -1;
+      }
+      if (a.recommended.percentPassing < b.recommended.percentPassing) {
+        return 1;
+      }
+      if (a.recommended.percentPassing > b.recommended.percentPassing) {
+        return -1;
+      }
+      if (a.featureScore < b.featureScore) {
+        return 1;
+      }
+      if (a.featureScore > b.featureScore) {
+        return -1;
+      }
+      return a.conformanceMeta.name - b.conformanceMeta.name;
+    });
+}
+
+/**
+ * @return {(ImplBase)[]}
+ */
+export function listAll() {
   const directories = readdirSync(implDirectory, {
     withFileTypes: true,
   })
@@ -66,7 +181,6 @@ export function listImpl() {
     .map((ent) => joinPath(ent.parentPath, ent.name));
   return directories.map((dir) => {
     return {
-      baseline: dir.endsWith("baseline"),
       path: dir,
       conformanceMeta: parseImplPackage(joinPath(dir, "package.json")),
       getFailures() {
@@ -112,11 +226,17 @@ function parseImplPackage(path) {
   if (typeof json.conformanceMeta.name != "string") {
     throw new Error(`${path}: expected conformanceMeta.name to be string`);
   }
+  const baseline = json.conformanceMeta.baseline ?? false;
+  if (typeof baseline != "boolean") {
+    throw new Error(`${path}: expected conformanceMeta.baseline to be boolean`);
+  }
   if (typeof json.conformanceMeta.githubUrl != "string") {
     throw new Error(`${path}: expected conformanceMeta.githubUrl to be string`);
   }
-  if (typeof json.conformanceMeta.editions != "boolean") {
-    throw new Error(`${path}: expected conformanceMeta.editions to be boolean`);
+  if (typeof json.conformanceMeta.maximumEdition != "string") {
+    throw new Error(
+      `${path}: expected conformanceMeta.maximumEdition to be string`,
+    );
   }
   if (typeof json.conformanceMeta.javascript != "boolean") {
     throw new Error(
@@ -135,8 +255,9 @@ function parseImplPackage(path) {
   }
   return {
     name: json.conformanceMeta.name,
+    baseline,
     githubUrl: json.conformanceMeta.githubUrl,
-    editions: json.conformanceMeta.editions,
+    maximumEdition: json.conformanceMeta.maximumEdition,
     javascript: json.conformanceMeta.javascript,
     typescript: json.conformanceMeta.typescript,
     standardPlugin: json.conformanceMeta.standardPlugin,
@@ -152,11 +273,16 @@ function parseFailingTests(failureListPath) {
     .split("\n")
     .filter((line) => line.trim().length > 0)
     .filter((line) => !line.startsWith("#"));
-  return {
-    lines,
-    required: lines.filter((line) => line.startsWith("Required.")).length,
-    recommended: lines.filter((line) => line.startsWith("Recommended.")).length,
-  };
+  const required = lines.filter((line) => line.startsWith("Required.")).length;
+  const recommended = lines.filter((line) =>
+    line.startsWith("Recommended."),
+  ).length;
+  if (required + recommended !== lines.length) {
+    throw new Error(
+      `error parsing failure list: required (${required}) + recommended (${recommended}) does not match total (${lines.length}) lines`,
+    );
+  }
+  return { lines, required, recommended };
 }
 
 /**
