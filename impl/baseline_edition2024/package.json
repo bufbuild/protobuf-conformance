@@ -1,0 +1,29 @@
+{
+  "name": "baseline_edition2024",
+  "conformanceMeta": {
+    "name": "baseline_edition2024",
+    "baseline": true,
+    "githubUrl": "https://github.com/bufbuild/protobuf-conformance",
+    "maximumEdition": "2024",
+    "javascript": true,
+    "typescript": true,
+    "standardPlugin": true
+  },
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "buf generate",
+    "build": "tsc --noEmit",
+    "test": "conformance_test_runner --maximum_edition 2024 --enforce_recommended --failure_list failing_tests.txt --text_format_failure_list failing_tests_text_format.txt --output_dir . runner.ts"
+  },
+  "dependencies": {
+    "@bufbuild/protobuf": "^2.6.3",
+    "@bufbuild/protoc-gen-es": "^2.6.3"
+  },
+  "devDependencies": {
+    "@bufbuild/buf": "^1.56.0",
+    "@types/node": "^24.2.1",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2"
+  }
+}

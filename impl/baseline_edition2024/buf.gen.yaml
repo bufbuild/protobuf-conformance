@@ -1,0 +1,8 @@
+version: v2
+clean: true
+inputs:
+  - proto_file: ../../proto/conformance/conformance.proto
+plugins:
+  - local: protoc-gen-es
+    opt: target=ts
+    out: gen
