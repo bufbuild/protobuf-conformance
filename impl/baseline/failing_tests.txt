@@ -314,6 +314,8 @@ Recommended.Proto2.ProtobufInput.ValidDataScalarBinary.UINT32[9].ProtobufOutput
 Recommended.Proto2.ProtobufInput.ValidDataScalarBinary.UINT64[0].ProtobufOutput
 Recommended.Proto2.ProtobufInput.ValidDataScalarBinary.UINT64[1].ProtobufOutput
 Recommended.Proto2.ProtobufInput.ValidDataScalarBinary.UINT64[2].ProtobufOutput
+Recommended.Proto2.ProtobufInput.ValidMessageSetEncoding.SubmessageEncoding.NotUnknown.ProtobufOutput
+Recommended.Proto2.ProtobufInput.ValidMessageSetEncoding.SubmessageEncoding.ProtobufOutput
 Recommended.Proto3.FieldMaskNumbersDontRoundTrip.JsonOutput
 Recommended.Proto3.FieldMaskPathsDontRoundTrip.JsonOutput
 Recommended.Proto3.FieldMaskTooManyUnderscore.JsonOutput
@@ -661,6 +663,7 @@ Required.Proto2.JsonInput.BytesField.JsonOutput
 Required.Proto2.JsonInput.BytesField.ProtobufOutput
 Required.Proto2.JsonInput.BytesRepeatedField.JsonOutput
 Required.Proto2.JsonInput.BytesRepeatedField.ProtobufOutput
+Required.Proto2.JsonInput.DoubleFieldEmptyString
 Required.Proto2.JsonInput.DoubleFieldInfinity.JsonOutput
 Required.Proto2.JsonInput.DoubleFieldInfinity.ProtobufOutput
 Required.Proto2.JsonInput.DoubleFieldMaxNegativeValue.JsonOutput
@@ -675,8 +678,12 @@ Required.Proto2.JsonInput.DoubleFieldNan.JsonOutput
 Required.Proto2.JsonInput.DoubleFieldNan.ProtobufOutput
 Required.Proto2.JsonInput.DoubleFieldNegativeInfinity.JsonOutput
 Required.Proto2.JsonInput.DoubleFieldNegativeInfinity.ProtobufOutput
+Required.Proto2.JsonInput.DoubleFieldQuotedExponentialValue.JsonOutput
+Required.Proto2.JsonInput.DoubleFieldQuotedExponentialValue.ProtobufOutput
 Required.Proto2.JsonInput.DoubleFieldQuotedValue.JsonOutput
 Required.Proto2.JsonInput.DoubleFieldQuotedValue.ProtobufOutput
+Required.Proto2.JsonInput.DoubleFieldStringValueNonNumeric
+Required.Proto2.JsonInput.DoubleFieldStringValuePartiallyNumeric
 Required.Proto2.JsonInput.DoubleFieldTooLarge
 Required.Proto2.JsonInput.DoubleFieldTooSmall
 Required.Proto2.JsonInput.EnumField.JsonOutput
@@ -699,6 +706,7 @@ Required.Proto2.JsonInput.FieldNameWithMixedCases.Validator
 Required.Proto2.JsonInput.FieldNameWithNumbers.JsonOutput
 Required.Proto2.JsonInput.FieldNameWithNumbers.ProtobufOutput
 Required.Proto2.JsonInput.FieldNameWithNumbers.Validator
+Required.Proto2.JsonInput.FloatFieldEmptyString
 Required.Proto2.JsonInput.FloatFieldInfinity.JsonOutput
 Required.Proto2.JsonInput.FloatFieldInfinity.ProtobufOutput
 Required.Proto2.JsonInput.FloatFieldMaxNegativeValue.JsonOutput
@@ -713,8 +721,12 @@ Required.Proto2.JsonInput.FloatFieldNan.JsonOutput
 Required.Proto2.JsonInput.FloatFieldNan.ProtobufOutput
 Required.Proto2.JsonInput.FloatFieldNegativeInfinity.JsonOutput
 Required.Proto2.JsonInput.FloatFieldNegativeInfinity.ProtobufOutput
+Required.Proto2.JsonInput.FloatFieldQuotedExponentialValue.JsonOutput
+Required.Proto2.JsonInput.FloatFieldQuotedExponentialValue.ProtobufOutput
 Required.Proto2.JsonInput.FloatFieldQuotedValue.JsonOutput
 Required.Proto2.JsonInput.FloatFieldQuotedValue.ProtobufOutput
+Required.Proto2.JsonInput.FloatFieldStringValueNonNumeric
+Required.Proto2.JsonInput.FloatFieldStringValuePartiallyNumeric
 Required.Proto2.JsonInput.FloatFieldTooLarge
 Required.Proto2.JsonInput.FloatFieldTooSmall
 Required.Proto2.JsonInput.HelloWorld.JsonOutput
@@ -725,6 +737,7 @@ Required.Proto2.JsonInput.IgnoreUnknownJsonNumber.ProtobufOutput
 Required.Proto2.JsonInput.IgnoreUnknownJsonObject.ProtobufOutput
 Required.Proto2.JsonInput.IgnoreUnknownJsonString.ProtobufOutput
 Required.Proto2.JsonInput.IgnoreUnknownJsonTrue.ProtobufOutput
+Required.Proto2.JsonInput.Int32FieldEmptyString
 Required.Proto2.JsonInput.Int32FieldExponentialFormat.JsonOutput
 Required.Proto2.JsonInput.Int32FieldExponentialFormat.ProtobufOutput
 Required.Proto2.JsonInput.Int32FieldFloatTrailingZero.JsonOutput
@@ -743,10 +756,16 @@ Required.Proto2.JsonInput.Int32FieldNegativeWithLeadingZero
 Required.Proto2.JsonInput.Int32FieldNotInteger
 Required.Proto2.JsonInput.Int32FieldNotNumber
 Required.Proto2.JsonInput.Int32FieldPlusSign
+Required.Proto2.JsonInput.Int32FieldQuotedExponentialValue.JsonOutput
+Required.Proto2.JsonInput.Int32FieldQuotedExponentialValue.ProtobufOutput
 Required.Proto2.JsonInput.Int32FieldStringValue.JsonOutput
 Required.Proto2.JsonInput.Int32FieldStringValue.ProtobufOutput
 Required.Proto2.JsonInput.Int32FieldStringValueEscaped.JsonOutput
 Required.Proto2.JsonInput.Int32FieldStringValueEscaped.ProtobufOutput
+Required.Proto2.JsonInput.Int32FieldStringValueNonNumeric
+Required.Proto2.JsonInput.Int32FieldStringValuePartiallyNumeric
+Required.Proto2.JsonInput.Int32FieldStringValueZero.JsonOutput
+Required.Proto2.JsonInput.Int32FieldStringValueZero.ProtobufOutput
 Required.Proto2.JsonInput.Int32FieldTooLarge
 Required.Proto2.JsonInput.Int32FieldTooSmall
 Required.Proto2.JsonInput.Int32FieldTrailingSpace
@@ -754,6 +773,7 @@ Required.Proto2.JsonInput.Int32MapEscapedKey.JsonOutput
 Required.Proto2.JsonInput.Int32MapEscapedKey.ProtobufOutput
 Required.Proto2.JsonInput.Int32MapField.JsonOutput
 Required.Proto2.JsonInput.Int32MapField.ProtobufOutput
+Required.Proto2.JsonInput.Int64FieldEmptyString
 Required.Proto2.JsonInput.Int64FieldMaxValue.JsonOutput
 Required.Proto2.JsonInput.Int64FieldMaxValue.ProtobufOutput
 Required.Proto2.JsonInput.Int64FieldMaxValueNotQuoted.JsonOutput
@@ -813,6 +833,7 @@ Required.Proto2.JsonInput.StringFieldUnicodeEscapeWithLowercaseHexLetters.JsonOu
 Required.Proto2.JsonInput.StringFieldUnicodeEscapeWithLowercaseHexLetters.ProtobufOutput
 Required.Proto2.JsonInput.StringRepeatedField.JsonOutput
 Required.Proto2.JsonInput.StringRepeatedField.ProtobufOutput
+Required.Proto2.JsonInput.Uint32FieldEmptyString
 Required.Proto2.JsonInput.Uint32FieldMaxFloatValue.JsonOutput
 Required.Proto2.JsonInput.Uint32FieldMaxFloatValue.ProtobufOutput
 Required.Proto2.JsonInput.Uint32FieldMaxValue.JsonOutput
@@ -822,6 +843,7 @@ Required.Proto2.JsonInput.Uint32FieldNotNumber
 Required.Proto2.JsonInput.Uint32FieldTooLarge
 Required.Proto2.JsonInput.Uint32MapField.JsonOutput
 Required.Proto2.JsonInput.Uint32MapField.ProtobufOutput
+Required.Proto2.JsonInput.Uint64FieldEmptyString
 Required.Proto2.JsonInput.Uint64FieldMaxValue.JsonOutput
 Required.Proto2.JsonInput.Uint64FieldMaxValue.ProtobufOutput
 Required.Proto2.JsonInput.Uint64FieldMaxValueNotQuoted.JsonOutput
@@ -839,6 +861,9 @@ Required.Proto2.ProtobufInput.IllegalZeroFieldNum_Case_0
 Required.Proto2.ProtobufInput.IllegalZeroFieldNum_Case_1
 Required.Proto2.ProtobufInput.IllegalZeroFieldNum_Case_2
 Required.Proto2.ProtobufInput.IllegalZeroFieldNum_Case_3
+Required.Proto2.ProtobufInput.MessageSetEncoding.UnknownExtension.ProtobufOutput
+Required.Proto2.ProtobufInput.MismatchedGroupTags
+Required.Proto2.ProtobufInput.MismatchedNestedGroupTags
 Required.Proto2.ProtobufInput.PrematureEofBeforeKnownNonRepeatedValue.BOOL
 Required.Proto2.ProtobufInput.PrematureEofBeforeKnownNonRepeatedValue.BYTES
 Required.Proto2.ProtobufInput.PrematureEofBeforeKnownNonRepeatedValue.DOUBLE
@@ -1015,6 +1040,50 @@ Required.Proto2.ProtobufInput.RepeatedScalarSelectsLast.UINT64.JsonOutput
 Required.Proto2.ProtobufInput.RepeatedScalarSelectsLast.UINT64.ProtobufOutput
 Required.Proto2.ProtobufInput.UnknownOrdering.ProtobufOutput
 Required.Proto2.ProtobufInput.UnknownVarint.ProtobufOutput
+Required.Proto2.ProtobufInput.UnknownWireType6_Field0_Version0
+Required.Proto2.ProtobufInput.UnknownWireType6_Field0_Version1
+Required.Proto2.ProtobufInput.UnknownWireType6_Field0_Version2
+Required.Proto2.ProtobufInput.UnknownWireType6_Field0_Version3
+Required.Proto2.ProtobufInput.UnknownWireType6_Field1_Version0
+Required.Proto2.ProtobufInput.UnknownWireType6_Field1_Version1
+Required.Proto2.ProtobufInput.UnknownWireType6_Field1_Version2
+Required.Proto2.ProtobufInput.UnknownWireType6_Field1_Version3
+Required.Proto2.ProtobufInput.UnknownWireType6_Field2_Version0
+Required.Proto2.ProtobufInput.UnknownWireType6_Field2_Version1
+Required.Proto2.ProtobufInput.UnknownWireType6_Field2_Version2
+Required.Proto2.ProtobufInput.UnknownWireType6_Field2_Version3
+Required.Proto2.ProtobufInput.UnknownWireType6_Field3_Version0
+Required.Proto2.ProtobufInput.UnknownWireType6_Field3_Version1
+Required.Proto2.ProtobufInput.UnknownWireType6_Field3_Version2
+Required.Proto2.ProtobufInput.UnknownWireType6_Field3_Version3
+Required.Proto2.ProtobufInput.UnknownWireType7_Field0_Version0
+Required.Proto2.ProtobufInput.UnknownWireType7_Field0_Version1
+Required.Proto2.ProtobufInput.UnknownWireType7_Field0_Version2
+Required.Proto2.ProtobufInput.UnknownWireType7_Field0_Version3
+Required.Proto2.ProtobufInput.UnknownWireType7_Field1_Version0
+Required.Proto2.ProtobufInput.UnknownWireType7_Field1_Version1
+Required.Proto2.ProtobufInput.UnknownWireType7_Field1_Version2
+Required.Proto2.ProtobufInput.UnknownWireType7_Field1_Version3
+Required.Proto2.ProtobufInput.UnknownWireType7_Field2_Version0
+Required.Proto2.ProtobufInput.UnknownWireType7_Field2_Version1
+Required.Proto2.ProtobufInput.UnknownWireType7_Field2_Version2
+Required.Proto2.ProtobufInput.UnknownWireType7_Field2_Version3
+Required.Proto2.ProtobufInput.UnknownWireType7_Field3_Version0
+Required.Proto2.ProtobufInput.UnknownWireType7_Field3_Version1
+Required.Proto2.ProtobufInput.UnknownWireType7_Field3_Version2
+Required.Proto2.ProtobufInput.UnknownWireType7_Field3_Version3
+Required.Proto2.ProtobufInput.UnmatchedEndGroup
+Required.Proto2.ProtobufInput.UnmatchedEndGroupNested
+Required.Proto2.ProtobufInput.UnmatchedEndGroupNestedLen
+Required.Proto2.ProtobufInput.UnmatchedEndGroupUnknown
+Required.Proto2.ProtobufInput.UnmatchedEndGroupWithData
+Required.Proto2.ProtobufInput.UnmatchedEndGroupWrongType
+Required.Proto2.ProtobufInput.UnmatchedStartGroup
+Required.Proto2.ProtobufInput.UnmatchedStartGroupNested
+Required.Proto2.ProtobufInput.UnmatchedStartGroupNestedLen
+Required.Proto2.ProtobufInput.UnmatchedStartGroupUnknown
+Required.Proto2.ProtobufInput.UnmatchedStartGroupWithData
+Required.Proto2.ProtobufInput.UnmatchedStartGroupWrongType
 Required.Proto2.ProtobufInput.ValidDataMap.BOOL.BOOL.Default.JsonOutput
 Required.Proto2.ProtobufInput.ValidDataMap.BOOL.BOOL.Default.ProtobufOutput
 Required.Proto2.ProtobufInput.ValidDataMap.BOOL.BOOL.DuplicateKey.JsonOutput
@@ -1561,6 +1630,8 @@ Required.Proto2.ProtobufInput.ValidDataScalar.UINT64[1].JsonOutput
 Required.Proto2.ProtobufInput.ValidDataScalar.UINT64[1].ProtobufOutput
 Required.Proto2.ProtobufInput.ValidDataScalar.UINT64[2].JsonOutput
 Required.Proto2.ProtobufInput.ValidDataScalar.UINT64[2].ProtobufOutput
+Required.Proto2.ProtobufInput.ValidMessageSetEncoding.OutOfOrderGroupsEntries.ProtobufOutput
+Required.Proto2.ProtobufInput.ValidMessageSetEncoding.ProtobufOutput
 Required.Proto3.DurationProtoInputTooLarge.JsonOutput
 Required.Proto3.DurationProtoInputTooSmall.JsonOutput
 Required.Proto3.JsonInput.AllFieldAcceptNull.JsonOutput
@@ -1569,6 +1640,8 @@ Required.Proto3.JsonInput.Any.JsonOutput
 Required.Proto3.JsonInput.Any.ProtobufOutput
 Required.Proto3.JsonInput.AnyNested.JsonOutput
 Required.Proto3.JsonInput.AnyNested.ProtobufOutput
+Required.Proto3.JsonInput.AnyNull.JsonOutput
+Required.Proto3.JsonInput.AnyNull.ProtobufOutput
 Required.Proto3.JsonInput.AnyUnorderedTypeTag.JsonOutput
 Required.Proto3.JsonInput.AnyUnorderedTypeTag.ProtobufOutput
 Required.Proto3.JsonInput.AnyWithDuration.JsonOutput
@@ -1577,6 +1650,8 @@ Required.Proto3.JsonInput.AnyWithFieldMask.JsonOutput
 Required.Proto3.JsonInput.AnyWithFieldMask.ProtobufOutput
 Required.Proto3.JsonInput.AnyWithInt32ValueWrapper.JsonOutput
 Required.Proto3.JsonInput.AnyWithInt32ValueWrapper.ProtobufOutput
+Required.Proto3.JsonInput.AnyWithNoType.JsonOutput
+Required.Proto3.JsonInput.AnyWithNoType.ProtobufOutput
 Required.Proto3.JsonInput.AnyWithStruct.JsonOutput
 Required.Proto3.JsonInput.AnyWithStruct.ProtobufOutput
 Required.Proto3.JsonInput.AnyWithTimestamp.JsonOutput
@@ -1585,6 +1660,8 @@ Required.Proto3.JsonInput.AnyWithValueForInteger.JsonOutput
 Required.Proto3.JsonInput.AnyWithValueForInteger.ProtobufOutput
 Required.Proto3.JsonInput.AnyWithValueForJsonObject.JsonOutput
 Required.Proto3.JsonInput.AnyWithValueForJsonObject.ProtobufOutput
+Required.Proto3.JsonInput.AnyWktRepresentationWithBadType
+Required.Proto3.JsonInput.AnyWktRepresentationWithEmptyTypeAndValue
 Required.Proto3.JsonInput.BoolFieldFalse.JsonOutput
 Required.Proto3.JsonInput.BoolFieldFalse.ProtobufOutput
 Required.Proto3.JsonInput.BoolFieldTrue.JsonOutput
@@ -1597,6 +1674,7 @@ Required.Proto3.JsonInput.BytesField.JsonOutput
 Required.Proto3.JsonInput.BytesField.ProtobufOutput
 Required.Proto3.JsonInput.BytesRepeatedField.JsonOutput
 Required.Proto3.JsonInput.BytesRepeatedField.ProtobufOutput
+Required.Proto3.JsonInput.DoubleFieldEmptyString
 Required.Proto3.JsonInput.DoubleFieldInfinity.JsonOutput
 Required.Proto3.JsonInput.DoubleFieldInfinity.ProtobufOutput
 Required.Proto3.JsonInput.DoubleFieldMaxNegativeValue.JsonOutput
@@ -1611,8 +1689,12 @@ Required.Proto3.JsonInput.DoubleFieldNan.JsonOutput
 Required.Proto3.JsonInput.DoubleFieldNan.ProtobufOutput
 Required.Proto3.JsonInput.DoubleFieldNegativeInfinity.JsonOutput
 Required.Proto3.JsonInput.DoubleFieldNegativeInfinity.ProtobufOutput
+Required.Proto3.JsonInput.DoubleFieldQuotedExponentialValue.JsonOutput
+Required.Proto3.JsonInput.DoubleFieldQuotedExponentialValue.ProtobufOutput
 Required.Proto3.JsonInput.DoubleFieldQuotedValue.JsonOutput
 Required.Proto3.JsonInput.DoubleFieldQuotedValue.ProtobufOutput
+Required.Proto3.JsonInput.DoubleFieldStringValueNonNumeric
+Required.Proto3.JsonInput.DoubleFieldStringValuePartiallyNumeric
 Required.Proto3.JsonInput.DoubleFieldTooLarge
 Required.Proto3.JsonInput.DoubleFieldTooSmall
 Required.Proto3.JsonInput.DurationJsonInputTooLarge
@@ -1663,6 +1745,7 @@ Required.Proto3.JsonInput.FieldNameWithMixedCases.Validator
 Required.Proto3.JsonInput.FieldNameWithNumbers.JsonOutput
 Required.Proto3.JsonInput.FieldNameWithNumbers.ProtobufOutput
 Required.Proto3.JsonInput.FieldNameWithNumbers.Validator
+Required.Proto3.JsonInput.FloatFieldEmptyString
 Required.Proto3.JsonInput.FloatFieldInfinity.JsonOutput
 Required.Proto3.JsonInput.FloatFieldInfinity.ProtobufOutput
 Required.Proto3.JsonInput.FloatFieldMaxNegativeValue.JsonOutput
@@ -1677,8 +1760,12 @@ Required.Proto3.JsonInput.FloatFieldNan.JsonOutput
 Required.Proto3.JsonInput.FloatFieldNan.ProtobufOutput
 Required.Proto3.JsonInput.FloatFieldNegativeInfinity.JsonOutput
 Required.Proto3.JsonInput.FloatFieldNegativeInfinity.ProtobufOutput
+Required.Proto3.JsonInput.FloatFieldQuotedExponentialValue.JsonOutput
+Required.Proto3.JsonInput.FloatFieldQuotedExponentialValue.ProtobufOutput
 Required.Proto3.JsonInput.FloatFieldQuotedValue.JsonOutput
 Required.Proto3.JsonInput.FloatFieldQuotedValue.ProtobufOutput
+Required.Proto3.JsonInput.FloatFieldStringValueNonNumeric
+Required.Proto3.JsonInput.FloatFieldStringValuePartiallyNumeric
 Required.Proto3.JsonInput.FloatFieldTooLarge
 Required.Proto3.JsonInput.FloatFieldTooSmall
 Required.Proto3.JsonInput.HelloWorld.JsonOutput
@@ -1689,6 +1776,7 @@ Required.Proto3.JsonInput.IgnoreUnknownJsonNumber.ProtobufOutput
 Required.Proto3.JsonInput.IgnoreUnknownJsonObject.ProtobufOutput
 Required.Proto3.JsonInput.IgnoreUnknownJsonString.ProtobufOutput
 Required.Proto3.JsonInput.IgnoreUnknownJsonTrue.ProtobufOutput
+Required.Proto3.JsonInput.Int32FieldEmptyString
 Required.Proto3.JsonInput.Int32FieldExponentialFormat.JsonOutput
 Required.Proto3.JsonInput.Int32FieldExponentialFormat.ProtobufOutput
 Required.Proto3.JsonInput.Int32FieldFloatTrailingZero.JsonOutput
@@ -1707,10 +1795,16 @@ Required.Proto3.JsonInput.Int32FieldNegativeWithLeadingZero
 Required.Proto3.JsonInput.Int32FieldNotInteger
 Required.Proto3.JsonInput.Int32FieldNotNumber
 Required.Proto3.JsonInput.Int32FieldPlusSign
+Required.Proto3.JsonInput.Int32FieldQuotedExponentialValue.JsonOutput
+Required.Proto3.JsonInput.Int32FieldQuotedExponentialValue.ProtobufOutput
 Required.Proto3.JsonInput.Int32FieldStringValue.JsonOutput
 Required.Proto3.JsonInput.Int32FieldStringValue.ProtobufOutput
 Required.Proto3.JsonInput.Int32FieldStringValueEscaped.JsonOutput
 Required.Proto3.JsonInput.Int32FieldStringValueEscaped.ProtobufOutput
+Required.Proto3.JsonInput.Int32FieldStringValueNonNumeric
+Required.Proto3.JsonInput.Int32FieldStringValuePartiallyNumeric
+Required.Proto3.JsonInput.Int32FieldStringValueZero.JsonOutput
+Required.Proto3.JsonInput.Int32FieldStringValueZero.ProtobufOutput
 Required.Proto3.JsonInput.Int32FieldTooLarge
 Required.Proto3.JsonInput.Int32FieldTooSmall
 Required.Proto3.JsonInput.Int32FieldTrailingSpace
@@ -1718,6 +1812,7 @@ Required.Proto3.JsonInput.Int32MapEscapedKey.JsonOutput
 Required.Proto3.JsonInput.Int32MapEscapedKey.ProtobufOutput
 Required.Proto3.JsonInput.Int32MapField.JsonOutput
 Required.Proto3.JsonInput.Int32MapField.ProtobufOutput
+Required.Proto3.JsonInput.Int64FieldEmptyString
 Required.Proto3.JsonInput.Int64FieldMaxValue.JsonOutput
 Required.Proto3.JsonInput.Int64FieldMaxValue.ProtobufOutput
 Required.Proto3.JsonInput.Int64FieldMaxValueNotQuoted.JsonOutput
@@ -1823,6 +1918,8 @@ Required.Proto3.JsonInput.Struct.JsonOutput
 Required.Proto3.JsonInput.Struct.ProtobufOutput
 Required.Proto3.JsonInput.StructWithEmptyListValue.JsonOutput
 Required.Proto3.JsonInput.StructWithEmptyListValue.ProtobufOutput
+Required.Proto3.JsonInput.TimestampEpochValue.JsonOutput
+Required.Proto3.JsonInput.TimestampEpochValue.ProtobufOutput
 Required.Proto3.JsonInput.TimestampJsonInputLowercaseT
 Required.Proto3.JsonInput.TimestampJsonInputLowercaseZ
 Required.Proto3.JsonInput.TimestampJsonInputMissingT
@@ -1831,18 +1928,32 @@ Required.Proto3.JsonInput.TimestampJsonInputTooLarge
 Required.Proto3.JsonInput.TimestampJsonInputTooSmall
 Required.Proto3.JsonInput.TimestampLeap.JsonOutput
 Required.Proto3.JsonInput.TimestampLeap.ProtobufOutput
+Required.Proto3.JsonInput.TimestampLittleAfterEpochlValue.JsonOutput
+Required.Proto3.JsonInput.TimestampLittleAfterEpochlValue.ProtobufOutput
+Required.Proto3.JsonInput.TimestampLittleBeforeEpochValue.JsonOutput
+Required.Proto3.JsonInput.TimestampLittleBeforeEpochValue.ProtobufOutput
 Required.Proto3.JsonInput.TimestampMaxValue.JsonOutput
 Required.Proto3.JsonInput.TimestampMaxValue.ProtobufOutput
 Required.Proto3.JsonInput.TimestampMinValue.JsonOutput
 Required.Proto3.JsonInput.TimestampMinValue.ProtobufOutput
+Required.Proto3.JsonInput.TimestampNanoAfterEpochlValue.JsonOutput
+Required.Proto3.JsonInput.TimestampNanoAfterEpochlValue.ProtobufOutput
+Required.Proto3.JsonInput.TimestampNanoBeforeEpochValue.JsonOutput
+Required.Proto3.JsonInput.TimestampNanoBeforeEpochValue.ProtobufOutput
 Required.Proto3.JsonInput.TimestampNull.JsonOutput
 Required.Proto3.JsonInput.TimestampNull.ProtobufOutput
 Required.Proto3.JsonInput.TimestampRepeatedValue.JsonOutput
 Required.Proto3.JsonInput.TimestampRepeatedValue.ProtobufOutput
+Required.Proto3.JsonInput.TimestampTenAndHalfSecondsAfterEpochValue.JsonOutput
+Required.Proto3.JsonInput.TimestampTenAndHalfSecondsAfterEpochValue.ProtobufOutput
+Required.Proto3.JsonInput.TimestampTenAndHalfSecondsBeforeEpochValue.JsonOutput
+Required.Proto3.JsonInput.TimestampTenAndHalfSecondsBeforeEpochValue.ProtobufOutput
+Required.Proto3.JsonInput.TimestampWithMissingColonInOffset
 Required.Proto3.JsonInput.TimestampWithNegativeOffset.JsonOutput
 Required.Proto3.JsonInput.TimestampWithNegativeOffset.ProtobufOutput
 Required.Proto3.JsonInput.TimestampWithPositiveOffset.JsonOutput
 Required.Proto3.JsonInput.TimestampWithPositiveOffset.ProtobufOutput
+Required.Proto3.JsonInput.Uint32FieldEmptyString
 Required.Proto3.JsonInput.Uint32FieldMaxFloatValue.JsonOutput
 Required.Proto3.JsonInput.Uint32FieldMaxFloatValue.ProtobufOutput
 Required.Proto3.JsonInput.Uint32FieldMaxValue.JsonOutput
@@ -1852,6 +1963,7 @@ Required.Proto3.JsonInput.Uint32FieldNotNumber
 Required.Proto3.JsonInput.Uint32FieldTooLarge
 Required.Proto3.JsonInput.Uint32MapField.JsonOutput
 Required.Proto3.JsonInput.Uint32MapField.ProtobufOutput
+Required.Proto3.JsonInput.Uint64FieldEmptyString
 Required.Proto3.JsonInput.Uint64FieldMaxValue.JsonOutput
 Required.Proto3.JsonInput.Uint64FieldMaxValue.ProtobufOutput
 Required.Proto3.JsonInput.Uint64FieldMaxValueNotQuoted.JsonOutput
@@ -1885,6 +1997,8 @@ Required.Proto3.ProtobufInput.IllegalZeroFieldNum_Case_0
 Required.Proto3.ProtobufInput.IllegalZeroFieldNum_Case_1
 Required.Proto3.ProtobufInput.IllegalZeroFieldNum_Case_2
 Required.Proto3.ProtobufInput.IllegalZeroFieldNum_Case_3
+Required.Proto3.ProtobufInput.MismatchedGroupTags
+Required.Proto3.ProtobufInput.MismatchedNestedGroupTags
 Required.Proto3.ProtobufInput.PrematureEofBeforeKnownNonRepeatedValue.BOOL
 Required.Proto3.ProtobufInput.PrematureEofBeforeKnownNonRepeatedValue.BYTES
 Required.Proto3.ProtobufInput.PrematureEofBeforeKnownNonRepeatedValue.DOUBLE
@@ -2061,6 +2175,50 @@ Required.Proto3.ProtobufInput.RepeatedScalarSelectsLast.UINT64.JsonOutput
 Required.Proto3.ProtobufInput.RepeatedScalarSelectsLast.UINT64.ProtobufOutput
 Required.Proto3.ProtobufInput.UnknownOrdering.ProtobufOutput
 Required.Proto3.ProtobufInput.UnknownVarint.ProtobufOutput
+Required.Proto3.ProtobufInput.UnknownWireType6_Field0_Version0
+Required.Proto3.ProtobufInput.UnknownWireType6_Field0_Version1
+Required.Proto3.ProtobufInput.UnknownWireType6_Field0_Version2
+Required.Proto3.ProtobufInput.UnknownWireType6_Field0_Version3
+Required.Proto3.ProtobufInput.UnknownWireType6_Field1_Version0
+Required.Proto3.ProtobufInput.UnknownWireType6_Field1_Version1
+Required.Proto3.ProtobufInput.UnknownWireType6_Field1_Version2
+Required.Proto3.ProtobufInput.UnknownWireType6_Field1_Version3
+Required.Proto3.ProtobufInput.UnknownWireType6_Field2_Version0
+Required.Proto3.ProtobufInput.UnknownWireType6_Field2_Version1
+Required.Proto3.ProtobufInput.UnknownWireType6_Field2_Version2
+Required.Proto3.ProtobufInput.UnknownWireType6_Field2_Version3
+Required.Proto3.ProtobufInput.UnknownWireType6_Field3_Version0
+Required.Proto3.ProtobufInput.UnknownWireType6_Field3_Version1
+Required.Proto3.ProtobufInput.UnknownWireType6_Field3_Version2
+Required.Proto3.ProtobufInput.UnknownWireType6_Field3_Version3
+Required.Proto3.ProtobufInput.UnknownWireType7_Field0_Version0
+Required.Proto3.ProtobufInput.UnknownWireType7_Field0_Version1
+Required.Proto3.ProtobufInput.UnknownWireType7_Field0_Version2
+Required.Proto3.ProtobufInput.UnknownWireType7_Field0_Version3
+Required.Proto3.ProtobufInput.UnknownWireType7_Field1_Version0
+Required.Proto3.ProtobufInput.UnknownWireType7_Field1_Version1
+Required.Proto3.ProtobufInput.UnknownWireType7_Field1_Version2
+Required.Proto3.ProtobufInput.UnknownWireType7_Field1_Version3
+Required.Proto3.ProtobufInput.UnknownWireType7_Field2_Version0
+Required.Proto3.ProtobufInput.UnknownWireType7_Field2_Version1
+Required.Proto3.ProtobufInput.UnknownWireType7_Field2_Version2
+Required.Proto3.ProtobufInput.UnknownWireType7_Field2_Version3
+Required.Proto3.ProtobufInput.UnknownWireType7_Field3_Version0
+Required.Proto3.ProtobufInput.UnknownWireType7_Field3_Version1
+Required.Proto3.ProtobufInput.UnknownWireType7_Field3_Version2
+Required.Proto3.ProtobufInput.UnknownWireType7_Field3_Version3
+Required.Proto3.ProtobufInput.UnmatchedEndGroup
+Required.Proto3.ProtobufInput.UnmatchedEndGroupNested
+Required.Proto3.ProtobufInput.UnmatchedEndGroupNestedLen
+Required.Proto3.ProtobufInput.UnmatchedEndGroupUnknown
+Required.Proto3.ProtobufInput.UnmatchedEndGroupWithData
+Required.Proto3.ProtobufInput.UnmatchedEndGroupWrongType
+Required.Proto3.ProtobufInput.UnmatchedStartGroup
+Required.Proto3.ProtobufInput.UnmatchedStartGroupNested
+Required.Proto3.ProtobufInput.UnmatchedStartGroupNestedLen
+Required.Proto3.ProtobufInput.UnmatchedStartGroupUnknown
+Required.Proto3.ProtobufInput.UnmatchedStartGroupWithData
+Required.Proto3.ProtobufInput.UnmatchedStartGroupWrongType
 Required.Proto3.ProtobufInput.ValidDataMap.BOOL.BOOL.Default.JsonOutput
 Required.Proto3.ProtobufInput.ValidDataMap.BOOL.BOOL.Default.ProtobufOutput
 Required.Proto3.ProtobufInput.ValidDataMap.BOOL.BOOL.DuplicateKey.JsonOutput
@@ -2609,160 +2767,3 @@ Required.Proto3.ProtobufInput.ValidDataScalar.UINT64[2].JsonOutput
 Required.Proto3.ProtobufInput.ValidDataScalar.UINT64[2].ProtobufOutput
 Required.Proto3.TimestampProtoInputTooLarge.JsonOutput
 Required.Proto3.TimestampProtoInputTooSmall.JsonOutput
-Required.Proto2.JsonInput.DoubleFieldEmptyString # Should have failed to parse, but didn't.
-Required.Proto2.JsonInput.DoubleFieldQuotedExponentialValue.JsonOutput # Failed to parse input or produce output.
-Required.Proto2.JsonInput.DoubleFieldQuotedExponentialValue.ProtobufOutput # Failed to parse input or produce output.
-Required.Proto2.JsonInput.DoubleFieldStringValueNonNumeric # Should have failed to parse, but didn't.
-Required.Proto2.JsonInput.DoubleFieldStringValuePartiallyNumeric # Should have failed to parse, but didn't.
-Required.Proto2.JsonInput.FloatFieldEmptyString # Should have failed to parse, but didn't.
-Required.Proto2.JsonInput.FloatFieldQuotedExponentialValue.JsonOutput # Failed to parse input or produce output.
-Required.Proto2.JsonInput.FloatFieldQuotedExponentialValue.ProtobufOutput # Failed to parse input or produce output.
-Required.Proto2.JsonInput.FloatFieldStringValueNonNumeric # Should have failed to parse, but didn't.
-Required.Proto2.JsonInput.FloatFieldStringValuePartiallyNumeric # Should have failed to parse, but didn't.
-Required.Proto2.JsonInput.Int32FieldEmptyString # Should have failed to parse, but didn't.
-Required.Proto2.JsonInput.Int32FieldQuotedExponentialValue.JsonOutput # Failed to parse input or produce output.
-Required.Proto2.JsonInput.Int32FieldQuotedExponentialValue.ProtobufOutput # Failed to parse input or produce output.
-Required.Proto2.JsonInput.Int32FieldStringValueNonNumeric # Should have failed to parse, but didn't.
-Required.Proto2.JsonInput.Int32FieldStringValuePartiallyNumeric # Should have failed to parse, but didn't.
-Required.Proto2.JsonInput.Int32FieldStringValueZero.JsonOutput # Failed to parse input or produce output.
-Required.Proto2.JsonInput.Int32FieldStringValueZero.ProtobufOutput # Failed to parse input or produce output.
-Required.Proto2.JsonInput.Int64FieldEmptyString # Should have failed to parse, but didn't.
-Required.Proto2.JsonInput.Uint32FieldEmptyString # Should have failed to parse, but didn't.
-Required.Proto2.JsonInput.Uint64FieldEmptyString # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.MismatchedGroupTags # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.MismatchedNestedGroupTags # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType6_Field0_Version0 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType6_Field0_Version1 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType6_Field0_Version2 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType6_Field0_Version3 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType6_Field1_Version0 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType6_Field1_Version1 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType6_Field1_Version2 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType6_Field1_Version3 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType6_Field2_Version0 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType6_Field2_Version1 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType6_Field2_Version2 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType6_Field2_Version3 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType6_Field3_Version0 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType6_Field3_Version1 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType6_Field3_Version2 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType6_Field3_Version3 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType7_Field0_Version0 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType7_Field0_Version1 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType7_Field0_Version2 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType7_Field0_Version3 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType7_Field1_Version0 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType7_Field1_Version1 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType7_Field1_Version2 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType7_Field1_Version3 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType7_Field2_Version0 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType7_Field2_Version1 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType7_Field2_Version2 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType7_Field2_Version3 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType7_Field3_Version0 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType7_Field3_Version1 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType7_Field3_Version2 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnknownWireType7_Field3_Version3 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnmatchedEndGroup # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnmatchedEndGroupNested # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnmatchedEndGroupNestedLen # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnmatchedEndGroupUnknown # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnmatchedEndGroupWithData # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnmatchedEndGroupWrongType # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnmatchedStartGroup # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnmatchedStartGroupNested # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnmatchedStartGroupNestedLen # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnmatchedStartGroupUnknown # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnmatchedStartGroupWithData # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.UnmatchedStartGroupWrongType # Should have failed to parse, but didn't.
-Required.Proto3.JsonInput.AnyNull.JsonOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.AnyNull.ProtobufOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.AnyWithNoType.JsonOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.AnyWithNoType.ProtobufOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.AnyWktRepresentationWithBadType # Should have failed to parse, but didn't.
-Required.Proto3.JsonInput.AnyWktRepresentationWithEmptyTypeAndValue # Should have failed to parse, but didn't.
-Required.Proto3.JsonInput.DoubleFieldEmptyString # Should have failed to parse, but didn't.
-Required.Proto3.JsonInput.DoubleFieldQuotedExponentialValue.JsonOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.DoubleFieldQuotedExponentialValue.ProtobufOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.DoubleFieldStringValueNonNumeric # Should have failed to parse, but didn't.
-Required.Proto3.JsonInput.DoubleFieldStringValuePartiallyNumeric # Should have failed to parse, but didn't.
-Required.Proto3.JsonInput.FloatFieldEmptyString # Should have failed to parse, but didn't.
-Required.Proto3.JsonInput.FloatFieldQuotedExponentialValue.JsonOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.FloatFieldQuotedExponentialValue.ProtobufOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.FloatFieldStringValueNonNumeric # Should have failed to parse, but didn't.
-Required.Proto3.JsonInput.FloatFieldStringValuePartiallyNumeric # Should have failed to parse, but didn't.
-Required.Proto3.JsonInput.Int32FieldEmptyString # Should have failed to parse, but didn't.
-Required.Proto3.JsonInput.Int32FieldQuotedExponentialValue.JsonOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.Int32FieldQuotedExponentialValue.ProtobufOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.Int32FieldStringValueNonNumeric # Should have failed to parse, but didn't.
-Required.Proto3.JsonInput.Int32FieldStringValuePartiallyNumeric # Should have failed to parse, but didn't.
-Required.Proto3.JsonInput.Int32FieldStringValueZero.JsonOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.Int32FieldStringValueZero.ProtobufOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.Int64FieldEmptyString # Should have failed to parse, but didn't.
-Required.Proto3.JsonInput.TimestampEpochValue.JsonOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.TimestampEpochValue.ProtobufOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.TimestampLittleAfterEpochlValue.JsonOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.TimestampLittleAfterEpochlValue.ProtobufOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.TimestampLittleBeforeEpochValue.JsonOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.TimestampLittleBeforeEpochValue.ProtobufOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.TimestampNanoAfterEpochlValue.JsonOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.TimestampNanoAfterEpochlValue.ProtobufOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.TimestampNanoBeforeEpochValue.JsonOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.TimestampNanoBeforeEpochValue.ProtobufOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.TimestampTenAndHalfSecondsAfterEpochValue.JsonOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.TimestampTenAndHalfSecondsAfterEpochValue.ProtobufOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.TimestampTenAndHalfSecondsBeforeEpochValue.JsonOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.TimestampTenAndHalfSecondsBeforeEpochValue.ProtobufOutput # Failed to parse input or produce output.
-Required.Proto3.JsonInput.Uint32FieldEmptyString # Should have failed to parse, but didn't.
-Required.Proto3.JsonInput.Uint64FieldEmptyString # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.MismatchedGroupTags # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.MismatchedNestedGroupTags # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType6_Field0_Version0 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType6_Field0_Version1 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType6_Field0_Version2 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType6_Field0_Version3 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType6_Field1_Version0 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType6_Field1_Version1 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType6_Field1_Version2 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType6_Field1_Version3 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType6_Field2_Version0 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType6_Field2_Version1 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType6_Field2_Version2 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType6_Field2_Version3 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType6_Field3_Version0 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType6_Field3_Version1 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType6_Field3_Version2 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType6_Field3_Version3 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType7_Field0_Version0 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType7_Field0_Version1 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType7_Field0_Version2 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType7_Field0_Version3 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType7_Field1_Version0 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType7_Field1_Version1 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType7_Field1_Version2 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType7_Field1_Version3 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType7_Field2_Version0 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType7_Field2_Version1 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType7_Field2_Version2 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType7_Field2_Version3 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType7_Field3_Version0 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType7_Field3_Version1 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType7_Field3_Version2 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnknownWireType7_Field3_Version3 # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnmatchedEndGroup # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnmatchedEndGroupNested # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnmatchedEndGroupNestedLen # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnmatchedEndGroupUnknown # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnmatchedEndGroupWithData # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnmatchedEndGroupWrongType # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnmatchedStartGroup # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnmatchedStartGroupNested # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnmatchedStartGroupNestedLen # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnmatchedStartGroupUnknown # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnmatchedStartGroupWithData # Should have failed to parse, but didn't.
-Required.Proto3.ProtobufInput.UnmatchedStartGroupWrongType # Should have failed to parse, but didn't.
-Recommended.Proto2.ProtobufInput.ValidMessageSetEncoding.SubmessageEncoding.NotUnknown.ProtobufOutput # Failed to parse input or produce output.
-Recommended.Proto2.ProtobufInput.ValidMessageSetEncoding.SubmessageEncoding.ProtobufOutput # Failed to parse input or produce output.
-Required.Proto2.ProtobufInput.MessageSetEncoding.UnknownExtension.ProtobufOutput # Failed to parse input or produce output.
-Required.Proto2.ProtobufInput.ValidMessageSetEncoding.OutOfOrderGroupsEntries.ProtobufOutput # Failed to parse input or produce output.
-Required.Proto2.ProtobufInput.ValidMessageSetEncoding.ProtobufOutput # Failed to parse input or produce output.
