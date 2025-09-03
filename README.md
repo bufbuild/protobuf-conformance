@@ -35,7 +35,7 @@ The current implementations being tested are:
 
 <!-- TABLE-END -->
 
-Since Editions are relatively new, only implementations that advertise support are tested with Editions. 
+Implementations are tested with proto2, proto3, and the maximum Edition they advertise to support.
 
 Note: None of the libraries tested implement the text format, so the results for those test runs are not shown.
 
