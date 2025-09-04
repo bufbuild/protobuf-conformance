@@ -3,7 +3,7 @@
   "conformanceMeta": {
     "name": "ts-proto",
     "githubUrl": "https://github.com/stephenh/ts-proto",
-    "editions": false,
+    "maximumEdition": "proto3",
     "javascript": false,
     "typescript": true,
     "standardPlugin": true

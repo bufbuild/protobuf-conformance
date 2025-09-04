@@ -3,7 +3,7 @@
   "conformanceMeta": {
     "name": "google-protobuf",
     "githubUrl": "https://github.com/protocolbuffers/protobuf-javascript",
-    "editions": false,
+    "maximumEdition": "proto3",
     "javascript": true,
     "typescript": false,
     "standardPlugin": true

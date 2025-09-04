@@ -18,41 +18,59 @@ import { join as joinPath } from "node:path";
 
 const readmePath = new URL("../README.md", import.meta.url).pathname;
 const imgPath = new URL("../.github/genimg", import.meta.url).pathname;
-const results = getTestResults();
-generateImages(imgPath, results);
-injectMarkdown(readmePath, "LIST", generateImplList(results));
-injectMarkdown(readmePath, "TABLE", generateMarkdownTable(results));
+const impls = listImpl(["proto3", "2023", "2024"]);
+
+for (const impl of impls) {
+  console.log(`# ${impl.conformanceMeta.name}`);
+  console.log(`javascript: ${impl.conformanceMeta.javascript}`);
+  console.log(`typescript: ${impl.conformanceMeta.typescript}`);
+  console.log(`standardPlugin: ${impl.conformanceMeta.standardPlugin}`);
+  console.log(`maximumEdition: ${impl.conformanceMeta.maximumEdition}`);
+  console.log(`baseline: ${impl.baseline.conformanceMeta.name}`);
+  console.log(`required:`);
+  console.log(`  failures: ${impl.getFailures().required}`);
+  console.log(`  passing:  ${impl.required.passing}`);
+  console.log(`  total:    ${impl.required.total}`);
+  console.log(`recommended:`);
+  console.log(`  failures: ${impl.getFailures().recommended}`);
+  console.log(`  passing:  ${impl.recommended.passing}`);
+  console.log(`  total:    ${impl.recommended.total}`);
+  console.log();
+}
+generateImages(imgPath, impls);
+injectMarkdown(readmePath, "LIST", generateImplList(impls));
+injectMarkdown(readmePath, "TABLE", generateMarkdownTable(impls));
 
 /**
- * @param {TestResults} results
+ * @param {import("./util.js").Impl[]} impls
  * @return {string}
  */
-function generateImplList(results) {
-  const lines = results.impls.map(
+function generateImplList(impls) {
+  const lines = impls.map(
     (i) => `* ${i.conformanceMeta.name}: ${i.conformanceMeta.githubUrl}`,
   );
   return "\n" + lines.join("\n") + "\n\n";
 }
 
 /**
- * @param {TestResults} results
+ * @param {import("./util.js").Impl[]} impls
  * @return {string}
  */
-function generateMarkdownTable(results) {
+function generateMarkdownTable(impls) {
   const emojYes = ":heavy_check_mark:";
   const emojNo = ":x:";
   const lines = [
-    "| Implementation | JavaScript and<br>TypeScript | Standard<br>Plugin | Editions | Required tests | Recommended tests |",
+    "| Implementation | JavaScript and<br>TypeScript | Standard<br>Plugin | Supported Edition | Required tests | Recommended tests |",
     "|---|:---:|:---:|:---:|:---:|:---:|",
   ];
-  for (const impl of results.impls) {
+  for (const impl of impls) {
     const failures = impl.getFailures();
     const statsRequired = `<sub><img src=".github/genimg/${impl.conformanceMeta.name}-required.svg" height="25" width="125" /></sub><br><sup>(${failures.required}&nbsp;failures)<sub>`;
     const statsRecommend = `<sub><img src=".github/genimg/${impl.conformanceMeta.name}-recommended.svg" height="25" width="125" /></sub><br><sup>(${failures.recommended}&nbsp;failures)<sub>`;
     const meta = impl.conformanceMeta;
     const link = `[${meta.name}](impl/${impl.path.split("/").pop()})`;
     lines.push(
-      `| ${link} | ${meta.javascript && meta.typescript ? emojYes : emojNo} | ${meta.standardPlugin ? emojYes : emojNo} | ${meta.editions ? emojYes : emojNo} | ${statsRequired} | ${statsRecommend} |`,
+      `| ${link} | ${meta.javascript && meta.typescript ? emojYes : emojNo} | ${meta.standardPlugin ? emojYes : emojNo} | ${meta.maximumEdition} | ${statsRequired} | ${statsRecommend} |`,
     );
   }
   return "\n" + lines.join("\n") + "\n\n";
@@ -60,16 +78,16 @@ function generateMarkdownTable(results) {
 
 /**
  * @param {string} dir
- * @param {TestResults} results
+ * @param {import("./util.js").Impl[]} impls
  */
-function generateImages(dir, results) {
+function generateImages(dir, impls) {
   if (existsSync(dir)) {
     rmSync(dir, { recursive: true });
   }
   mkdirSync(dir);
-  for (const impl of results.impls) {
+  for (const impl of impls) {
     const failures = impl.getFailures();
-    const total = results.baseline.getFailures();
+    const total = impl.baseline.getFailures();
     {
       const passed = total.required - failures.required;
       const percentage = (passed / total.required) * 100;
@@ -125,65 +143,4 @@ function generateProgressBarSvg(percentage) {
     </text>
   </g>
 </svg>`;
-}
-
-/**
- * @typedef TestResults
- * @property {import("./util.js").Impl} baseline
- * @property {import("./util.js").Impl[]} impls
- */
-
-/**
- * Implementations are sorted by conformance:
- * - Highest count of required conformance tests passed first
- * - If tied, consider recommended conformance tests
- * - If tied, score features (support for editions, TypeScript and JavaScript, standard plugin)
- *
- * @return {TestResults}
- */
-function getTestResults() {
-  const all = listImpl();
-  const baseline = all.find((i) => i.baseline);
-  if (!baseline) {
-    throw new Error("missing baseline");
-  }
-  const impls = all
-    .filter((i) => !i.baseline)
-    .sort((a, b) => {
-      if (a.getFailures().required > b.getFailures().required) {
-        return 1;
-      }
-      if (a.getFailures().required < b.getFailures().required) {
-        return -1;
-      }
-      if (a.getFailures().recommended > b.getFailures().recommended) {
-        return 1;
-      }
-      if (a.getFailures().recommended < b.getFailures().recommended) {
-        return -1;
-      }
-      if (scoreFeatures(a) < scoreFeatures(b)) {
-        return -1;
-      }
-      if (scoreFeatures(a) > scoreFeatures(b)) {
-        return 1;
-      }
-      return a.conformanceMeta.name - b.conformanceMeta.name;
-    });
-  return {
-    baseline,
-    impls,
-  };
-}
-
-/**
- * @param {import("./util.js").Impl} impl
- */
-function scoreFeatures(impl) {
-  return [
-    impl.conformanceMeta.editions,
-    impl.conformanceMeta.standardPlugin,
-    impl.conformanceMeta.typescript,
-    impl.conformanceMeta.javascript,
-  ].filter((f) => f === true).length;
 }

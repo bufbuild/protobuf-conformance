@@ -13,9 +13,9 @@ The current implementations being tested are:
 * protobuf-ts: https://github.com/timostamm/protobuf-ts
 * google-protobuf: https://github.com/protocolbuffers/protobuf-javascript
 * ts-proto: https://github.com/stephenh/ts-proto
+* protobuf.js: https://github.com/protobufjs/protobuf.js
 * protoscript: https://github.com/TateThurston/protoscript
 * protoc-gen-ts: https://github.com/thesayyn/protoc-gen-ts
-* protobuf.js: https://github.com/protobufjs/protobuf.js
 
 <!-- LIST-END -->
 
@@ -23,19 +23,19 @@ The current implementations being tested are:
 
 <!-- TABLE-START -->
 
-| Implementation | JavaScript and<br>TypeScript | Standard<br>Plugin | Editions | Required tests | Recommended tests |
+| Implementation | JavaScript and<br>TypeScript | Standard<br>Plugin | Supported Edition | Required tests | Recommended tests |
 |---|:---:|:---:|:---:|:---:|:---:|
-| [Protobuf-ES](impl/protobuf-es) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | <sub><img src=".github/genimg/Protobuf-ES-required.svg" height="25" width="125" /></sub><br><sup>(0&nbsp;failures)<sub> | <sub><img src=".github/genimg/Protobuf-ES-recommended.svg" height="25" width="125" /></sub><br><sup>(0&nbsp;failures)<sub> |
-| [protobuf-ts](impl/protobuf-ts) | :heavy_check_mark: | :heavy_check_mark: | :x: | <sub><img src=".github/genimg/protobuf-ts-required.svg" height="25" width="125" /></sub><br><sup>(3&nbsp;failures)<sub> | <sub><img src=".github/genimg/protobuf-ts-recommended.svg" height="25" width="125" /></sub><br><sup>(1&nbsp;failures)<sub> |
-| [google-protobuf](impl/google-protobuf) | :x: | :heavy_check_mark: | :x: | <sub><img src=".github/genimg/google-protobuf-required.svg" height="25" width="125" /></sub><br><sup>(649&nbsp;failures)<sub> | <sub><img src=".github/genimg/google-protobuf-recommended.svg" height="25" width="125" /></sub><br><sup>(305&nbsp;failures)<sub> |
-| [ts-proto](impl/ts-proto) | :x: | :heavy_check_mark: | :x: | <sub><img src=".github/genimg/ts-proto-required.svg" height="25" width="125" /></sub><br><sup>(740&nbsp;failures)<sub> | <sub><img src=".github/genimg/ts-proto-recommended.svg" height="25" width="125" /></sub><br><sup>(613&nbsp;failures)<sub> |
-| [protoscript](impl/protoscript) | :heavy_check_mark: | :heavy_check_mark: | :x: | <sub><img src=".github/genimg/protoscript-required.svg" height="25" width="125" /></sub><br><sup>(1140&nbsp;failures)<sub> | <sub><img src=".github/genimg/protoscript-recommended.svg" height="25" width="125" /></sub><br><sup>(535&nbsp;failures)<sub> |
-| [protoc-gen-ts](impl/protoc-gen-ts) | :x: | :heavy_check_mark: | :x: | <sub><img src=".github/genimg/protoc-gen-ts-required.svg" height="25" width="125" /></sub><br><sup>(1678&nbsp;failures)<sub> | <sub><img src=".github/genimg/protoc-gen-ts-recommended.svg" height="25" width="125" /></sub><br><sup>(472&nbsp;failures)<sub> |
-| [protobuf.js](impl/protobuf.js) | :heavy_check_mark: | :x: | :heavy_check_mark: | <sub><img src=".github/genimg/protobuf.js-required.svg" height="25" width="125" /></sub><br><sup>(1830&nbsp;failures)<sub> | <sub><img src=".github/genimg/protobuf.js-recommended.svg" height="25" width="125" /></sub><br><sup>(570&nbsp;failures)<sub> |
+| [Protobuf-ES](impl/protobuf-es) | :heavy_check_mark: | :heavy_check_mark: | 2023 | <sub><img src=".github/genimg/Protobuf-ES-required.svg" height="25" width="125" /></sub><br><sup>(0&nbsp;failures)<sub> | <sub><img src=".github/genimg/Protobuf-ES-recommended.svg" height="25" width="125" /></sub><br><sup>(12&nbsp;failures)<sub> |
+| [protobuf-ts](impl/protobuf-ts) | :heavy_check_mark: | :heavy_check_mark: | proto3 | <sub><img src=".github/genimg/protobuf-ts-required.svg" height="25" width="125" /></sub><br><sup>(3&nbsp;failures)<sub> | <sub><img src=".github/genimg/protobuf-ts-recommended.svg" height="25" width="125" /></sub><br><sup>(7&nbsp;failures)<sub> |
+| [google-protobuf](impl/google-protobuf) | :x: | :heavy_check_mark: | proto3 | <sub><img src=".github/genimg/google-protobuf-required.svg" height="25" width="125" /></sub><br><sup>(650&nbsp;failures)<sub> | <sub><img src=".github/genimg/google-protobuf-recommended.svg" height="25" width="125" /></sub><br><sup>(305&nbsp;failures)<sub> |
+| [ts-proto](impl/ts-proto) | :x: | :heavy_check_mark: | proto3 | <sub><img src=".github/genimg/ts-proto-required.svg" height="25" width="125" /></sub><br><sup>(741&nbsp;failures)<sub> | <sub><img src=".github/genimg/ts-proto-recommended.svg" height="25" width="125" /></sub><br><sup>(613&nbsp;failures)<sub> |
+| [protobuf.js](impl/protobuf.js) | :heavy_check_mark: | :x: | 2023 | <sub><img src=".github/genimg/protobuf.js-required.svg" height="25" width="125" /></sub><br><sup>(1833&nbsp;failures)<sub> | <sub><img src=".github/genimg/protobuf.js-recommended.svg" height="25" width="125" /></sub><br><sup>(579&nbsp;failures)<sub> |
+| [protoscript](impl/protoscript) | :heavy_check_mark: | :heavy_check_mark: | proto3 | <sub><img src=".github/genimg/protoscript-required.svg" height="25" width="125" /></sub><br><sup>(1143&nbsp;failures)<sub> | <sub><img src=".github/genimg/protoscript-recommended.svg" height="25" width="125" /></sub><br><sup>(541&nbsp;failures)<sub> |
+| [protoc-gen-ts](impl/protoc-gen-ts) | :x: | :heavy_check_mark: | proto3 | <sub><img src=".github/genimg/protoc-gen-ts-required.svg" height="25" width="125" /></sub><br><sup>(1680&nbsp;failures)<sub> | <sub><img src=".github/genimg/protoc-gen-ts-recommended.svg" height="25" width="125" /></sub><br><sup>(475&nbsp;failures)<sub> |
 
 <!-- TABLE-END -->
 
-Since Editions are relatively new, only implementations that advertise support are tested with Editions. 
+Implementations are tested with proto2, proto3, and the maximum Edition they advertise to support.
 
 Note: None of the libraries tested implement the text format, so the results for those test runs are not shown.
 

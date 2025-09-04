@@ -3,7 +3,7 @@
   "conformanceMeta": {
     "name": "protobuf-ts",
     "githubUrl": "https://github.com/timostamm/protobuf-ts",
-    "editions": false,
+    "maximumEdition": "proto3",
     "javascript": true,
     "typescript": true,
     "standardPlugin": true

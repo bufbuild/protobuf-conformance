@@ -3,11 +3,12 @@
   "conformanceMeta": {
     "name": "protoc-gen-ts",
     "githubUrl": "https://github.com/thesayyn/protoc-gen-ts",
-    "editions": false,
+    "maximumEdition": "proto3",
     "javascript": false,
     "typescript": true,
     "standardPlugin": true
   },
+  "private": true,
   "scripts": {
     "generate": "bash generate.sh",
     "build": "bash build.sh",
