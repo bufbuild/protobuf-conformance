@@ -3,7 +3,7 @@
   "conformanceMeta": {
     "name": "Protobuf-ES",
     "githubUrl": "https://github.com/bufbuild/protobuf-es",
-    "maximumEdition": "2023",
+    "maximumEdition": "2024",
     "javascript": true,
     "typescript": true,
     "standardPlugin": true
@@ -14,12 +14,12 @@
     "generate": "buf generate",
     "build": "tsc --noEmit",
     "test": "npm run test:bigint && npm run test:string",
-    "test:bigint": "conformance_test_runner --maximum_edition 2023 --enforce_recommended --failure_list failing_tests.txt --text_format_failure_list failing_tests_text_format.txt --output_dir . runner.ts",
-    "test:string": "BUF_BIGINT_DISABLE=1 npx conformance_test_runner --maximum_edition 2023 --enforce_recommended --failure_list failing_tests_without_bigint.txt --text_format_failure_list failing_tests_text_format.txt --output_dir . runner.ts"
+    "test:bigint": "conformance_test_runner --maximum_edition 2024 --enforce_recommended --failure_list failing_tests.txt --text_format_failure_list failing_tests_text_format.txt --output_dir . runner.ts",
+    "test:string": "BUF_BIGINT_DISABLE=1 npx conformance_test_runner --maximum_edition 2024 --enforce_recommended --failure_list failing_tests_without_bigint.txt --text_format_failure_list failing_tests_text_format.txt --output_dir . runner.ts"
   },
   "dependencies": {
-    "@bufbuild/protobuf": "^2.7.0",
-    "@bufbuild/protoc-gen-es": "^2.7.0"
+    "@bufbuild/protobuf": "^2.8.0",
+    "@bufbuild/protoc-gen-es": "^2.8.0"
   },
   "devDependencies": {
     "@bufbuild/buf": "^1.57.0",
