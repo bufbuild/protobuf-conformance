@@ -20,7 +20,31 @@ updates:
         patterns:
           - "*"
   - package-ecosystem: "npm"
-    directory: "/impl/baseline"
+    directory: "/impl/baseline_edition2023"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      timezone: UTC
+      time: "07:00"
+    open-pull-requests-limit: 50
+    groups:
+      baseline:
+        patterns:
+          - "*"
+  - package-ecosystem: "npm"
+    directory: "/impl/baseline_edition2024"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      timezone: UTC
+      time: "07:00"
+    open-pull-requests-limit: 50
+    groups:
+      baseline:
+        patterns:
+          - "*"
+  - package-ecosystem: "npm"
+    directory: "/impl/baseline_proto3"
     schedule:
       interval: "monthly"
       day: "monday"
