@@ -16,9 +16,9 @@
     "test": "conformance_test_runner --maximum_edition PROTO3 --enforce_recommended --failure_list failing_tests.txt --text_format_failure_list failing_tests_text_format.txt --output_dir . runner.js"
   },
   "devDependencies": {
-    "@bufbuild/buf": "^1.56.0",
-    "@types/node": "^24.2.1",
-    "esbuild": "^0.25.8",
+    "@bufbuild/buf": "^1.57.2",
+    "@types/node": "^24.5.2",
+    "esbuild": "^0.25.10",
     "typescript": "^5.9.2"
   },
   "dependencies": {
