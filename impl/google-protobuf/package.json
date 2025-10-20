@@ -18,6 +18,6 @@
     "google-protobuf": "^4.0.0"
   },
   "devDependencies": {
-    "@bufbuild/buf": "^1.57.2"
+    "@bufbuild/buf": "^1.59.0"
   }
 }
