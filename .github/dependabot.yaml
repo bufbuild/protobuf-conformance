@@ -28,7 +28,7 @@ updates:
       time: "07:00"
     open-pull-requests-limit: 50
     groups:
-      baseline:
+      baseline_edition2023:
         patterns:
           - "*"
   - package-ecosystem: "npm"
@@ -40,7 +40,7 @@ updates:
       time: "07:00"
     open-pull-requests-limit: 50
     groups:
-      baseline:
+      baseline_edition2024:
         patterns:
           - "*"
   - package-ecosystem: "npm"
@@ -52,7 +52,7 @@ updates:
       time: "07:00"
     open-pull-requests-limit: 50
     groups:
-      baseline:
+      baseline_proto3:
         patterns:
           - "*"
   - package-ecosystem: "npm"
