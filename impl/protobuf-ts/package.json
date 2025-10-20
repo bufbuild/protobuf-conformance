@@ -21,8 +21,8 @@
   },
   "devDependencies": {
     "@bufbuild/buf": "^1.57.2",
-    "@types/node": "^24.5.2",
-    "tsx": "^4.20.5",
-    "typescript": "^5.9.2"
+    "@types/node": "^24.6.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
   }
 }
