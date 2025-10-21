@@ -3,21 +3,21 @@
   "conformanceMeta": {
     "name": "google-protobuf",
     "githubUrl": "https://github.com/protocolbuffers/protobuf-javascript",
-    "maximumEdition": "proto3",
+    "maximumEdition": "2023",
     "javascript": true,
     "typescript": false,
     "standardPlugin": true
   },
   "private": true,
   "scripts": {
-    "pregenerate": "bash pregenerate.sh",
-    "generate": "bash generate.sh",
-    "test": "conformance_test_runner --maximum_edition PROTO3 --enforce_recommended --failure_list failing_tests.txt --text_format_failure_list failing_tests_text_format.txt --output_dir . runner.js"
+    "generate": "buf generate",
+    "test": "conformance_test_runner --maximum_edition 2023 --enforce_recommended --failure_list failing_tests.txt --text_format_failure_list failing_tests_text_format.txt --output_dir . runner.js"
   },
   "dependencies": {
-    "google-protobuf": "^3.21.4"
+    "google-protobuf": "^4.0.0",
+    "@protocolbuffers/protoc-gen-js": "^4.0.0"
   },
   "devDependencies": {
-    "@bufbuild/buf": "^1.56.0"
+    "@bufbuild/buf": "^1.59.0"
   }
 }
