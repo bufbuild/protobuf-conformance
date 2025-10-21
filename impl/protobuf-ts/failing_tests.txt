@@ -1,12 +1,13 @@
-Recommended.Proto2.JsonInput.FieldNameExtension.Validator
-Required.Proto2.ProtobufInput.MismatchedGroupTags # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.MismatchedNestedGroupTags # Should have failed to parse, but didn't.
-Required.Proto3.JsonInput.AnyWktRepresentationWithEmptyTypeAndValue # Should have failed to parse, but didn't.
-
-# Because protobuf-ts uses JSON.parse, it cannot fail on duplicate properties
 Recommended.Proto2.JsonInput.FieldNameDuplicate # Should have failed to parse, but didn't.
 Recommended.Proto2.JsonInput.FieldNameDuplicateDifferentCasing1 # Should have failed to parse, but didn't.
 Recommended.Proto2.JsonInput.FieldNameDuplicateDifferentCasing2 # Should have failed to parse, but didn't.
+Recommended.Proto2.JsonInput.FieldNameExtension.Validator # Expected JSON payload but got type 1
 Recommended.Proto3.JsonInput.FieldNameDuplicate # Should have failed to parse, but didn't.
 Recommended.Proto3.JsonInput.FieldNameDuplicateDifferentCasing1 # Should have failed to parse, but didn't.
 Recommended.Proto3.JsonInput.FieldNameDuplicateDifferentCasing2 # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.MismatchedGroupTags # Should have failed to parse, but didn't.
+Required.Proto2.ProtobufInput.MismatchedNestedGroupTags # Should have failed to parse, but didn't.
+Required.Proto3.DurationProtoNanosWrongSign.JsonOutput # Should have failed to serialize, but didn't.
+Required.Proto3.DurationProtoNanosWrongSignNegativeSecs.JsonOutput # Should have failed to serialize, but didn't.
+Required.Proto3.JsonInput.AnyWktRepresentationWithEmptyTypeAndValue # Should have failed to parse, but didn't.
+Required.Proto3.TimestampProtoNanoTooLarge.JsonOutput # Should have failed to serialize, but didn't.

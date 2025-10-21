@@ -20,21 +20,21 @@ Recommended.Proto2.JsonInput.MultilineWithSpaces.ProtobufOutput # Output was not
 Recommended.Proto2.JsonInput.OneLineNoSpaces.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Recommended.Proto2.JsonInput.OneLineWithSpaces.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Recommended.Proto2.JsonInput.OneofZeroBool.JsonOutput # Output was not equivalent to reference message: deleted: oneof_bool: false
-Recommended.Proto2.JsonInput.OneofZeroBool.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Recommended.Proto2.JsonInput.OneofZeroBool.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Recommended.Proto2.JsonInput.OneofZeroBytes.JsonOutput # Output was not equivalent to reference message: deleted: oneof_bytes: ""
-Recommended.Proto2.JsonInput.OneofZeroBytes.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Recommended.Proto2.JsonInput.OneofZeroBytes.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Recommended.Proto2.JsonInput.OneofZeroDouble.JsonOutput # Output was not equivalent to reference message: deleted: oneof_double: 0
-Recommended.Proto2.JsonInput.OneofZeroDouble.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Recommended.Proto2.JsonInput.OneofZeroDouble.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Recommended.Proto2.JsonInput.OneofZeroEnum.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Recommended.Proto2.JsonInput.OneofZeroFloat.JsonOutput # Output was not equivalent to reference message: deleted: oneof_float: 0
-Recommended.Proto2.JsonInput.OneofZeroFloat.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Recommended.Proto2.JsonInput.OneofZeroFloat.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Recommended.Proto2.JsonInput.OneofZeroMessage.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Recommended.Proto2.JsonInput.OneofZeroString.JsonOutput # Output was not equivalent to reference message: deleted: oneof_string: ""
-Recommended.Proto2.JsonInput.OneofZeroString.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Recommended.Proto2.JsonInput.OneofZeroString.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Recommended.Proto2.JsonInput.OneofZeroUint32.JsonOutput # Output was not equivalent to reference message: deleted: oneof_uint32: 0
-Recommended.Proto2.JsonInput.OneofZeroUint32.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Recommended.Proto2.JsonInput.OneofZeroUint32.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Recommended.Proto2.JsonInput.OneofZeroUint64.JsonOutput # Output was not equivalent to reference message: deleted: oneof_uint64: 0
-Recommended.Proto2.JsonInput.OneofZeroUint64.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Recommended.Proto2.JsonInput.OneofZeroUint64.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Recommended.Proto2.JsonInput.RejectUnknownEnumStringValueInMapValue # Should have failed to parse, but didn't.
 Recommended.Proto2.JsonInput.RejectUnknownEnumStringValueInOptionalField # Should have failed to parse, but didn't.
 Recommended.Proto2.JsonInput.RejectUnknownEnumStringValueInRepeatedField # Should have failed to parse, but didn't.
@@ -44,12 +44,12 @@ Recommended.Proto2.JsonInput.StringFieldUnpairedHighSurrogate # Should have fail
 Recommended.Proto2.JsonInput.StringFieldUnpairedLowSurrogate # Should have failed to parse, but didn't.
 Recommended.Proto2.ProtobufInput.OneofZeroBool.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Recommended.Proto2.ProtobufInput.OneofZeroBytes.JsonOutput # Output was not equivalent to reference message: deleted: oneof_bytes: ""
-Recommended.Proto2.ProtobufInput.OneofZeroBytes.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Recommended.Proto2.ProtobufInput.OneofZeroBytes.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Recommended.Proto2.ProtobufInput.OneofZeroDouble.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Recommended.Proto2.ProtobufInput.OneofZeroEnum.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Recommended.Proto2.ProtobufInput.OneofZeroFloat.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Recommended.Proto2.ProtobufInput.OneofZeroMessage.JsonOutput # Output was not equivalent to reference message: deleted: oneof_nested_message.a: 0
-Recommended.Proto2.ProtobufInput.OneofZeroMessage.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Recommended.Proto2.ProtobufInput.OneofZeroMessage.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Recommended.Proto2.ProtobufInput.OneofZeroMessageSetTwice.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Recommended.Proto2.ProtobufInput.OneofZeroString.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Recommended.Proto2.ProtobufInput.OneofZeroUint32.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
@@ -260,8 +260,8 @@ Recommended.Proto2.ProtobufInput.ValidDataScalarBinary.UINT32[9].ProtobufOutput 
 Recommended.Proto2.ProtobufInput.ValidDataScalarBinary.UINT64[0].ProtobufOutput # Output was not equivalent to reference message: Expect: \040\000, but got: \222\001\000\232\001\000\242\037\000
 Recommended.Proto2.ProtobufInput.ValidDataScalarBinary.UINT64[1].ProtobufOutput # Output was not equivalent to reference message: Expect: \040\271\140, but got: \040\271\140\222\001\000\232\001\000\242\037\000
 Recommended.Proto2.ProtobufInput.ValidDataScalarBinary.UINT64[2].ProtobufOutput # Output was not equivalent to reference message: Expect: \040\377\377\377\377\377\377\377\377\377\001, but got: \040\377\377\377\
-Recommended.Proto2.ProtobufInput.ValidMessageSetEncoding.SubmessageEncoding.NotUnknown.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
-Recommended.Proto2.ProtobufInput.ValidMessageSetEncoding.SubmessageEncoding.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Recommended.Proto2.ProtobufInput.ValidMessageSetEncoding.SubmessageEncoding.NotUnknown.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
+Recommended.Proto2.ProtobufInput.ValidMessageSetEncoding.SubmessageEncoding.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Recommended.Proto3.FieldMaskNumbersDontRoundTrip.JsonOutput # Should have failed to serialize, but didn't.
 Recommended.Proto3.FieldMaskPathsDontRoundTrip.JsonOutput # Should have failed to serialize, but didn't.
 Recommended.Proto3.FieldMaskTooManyUnderscore.JsonOutput # Should have failed to serialize, but didn't.
@@ -293,21 +293,21 @@ Recommended.Proto3.JsonInput.NullValueInOtherOneofOldFormat.Validator # JSON pay
 Recommended.Proto3.JsonInput.OneLineNoSpaces.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Recommended.Proto3.JsonInput.OneLineWithSpaces.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Recommended.Proto3.JsonInput.OneofZeroBool.JsonOutput # Output was not equivalent to reference message: deleted: oneof_bool: false
-Recommended.Proto3.JsonInput.OneofZeroBool.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Recommended.Proto3.JsonInput.OneofZeroBool.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Recommended.Proto3.JsonInput.OneofZeroBytes.JsonOutput # Output was not equivalent to reference message: deleted: oneof_bytes: ""
-Recommended.Proto3.JsonInput.OneofZeroBytes.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Recommended.Proto3.JsonInput.OneofZeroBytes.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Recommended.Proto3.JsonInput.OneofZeroDouble.JsonOutput # Output was not equivalent to reference message: deleted: oneof_double: 0
-Recommended.Proto3.JsonInput.OneofZeroDouble.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Recommended.Proto3.JsonInput.OneofZeroDouble.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Recommended.Proto3.JsonInput.OneofZeroEnum.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Recommended.Proto3.JsonInput.OneofZeroFloat.JsonOutput # Output was not equivalent to reference message: deleted: oneof_float: 0
-Recommended.Proto3.JsonInput.OneofZeroFloat.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Recommended.Proto3.JsonInput.OneofZeroFloat.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Recommended.Proto3.JsonInput.OneofZeroMessage.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Recommended.Proto3.JsonInput.OneofZeroString.JsonOutput # Output was not equivalent to reference message: deleted: oneof_string: ""
-Recommended.Proto3.JsonInput.OneofZeroString.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Recommended.Proto3.JsonInput.OneofZeroString.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Recommended.Proto3.JsonInput.OneofZeroUint32.JsonOutput # Output was not equivalent to reference message: deleted: oneof_uint32: 0
-Recommended.Proto3.JsonInput.OneofZeroUint32.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Recommended.Proto3.JsonInput.OneofZeroUint32.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Recommended.Proto3.JsonInput.OneofZeroUint64.JsonOutput # Output was not equivalent to reference message: deleted: oneof_uint64: 0
-Recommended.Proto3.JsonInput.OneofZeroUint64.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Recommended.Proto3.JsonInput.OneofZeroUint64.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Recommended.Proto3.JsonInput.RejectUnknownEnumStringValueInMapValue # Should have failed to parse, but didn't.
 Recommended.Proto3.JsonInput.RejectUnknownEnumStringValueInOptionalField # Should have failed to parse, but didn't.
 Recommended.Proto3.JsonInput.RejectUnknownEnumStringValueInRepeatedField # Should have failed to parse, but didn't.
@@ -322,7 +322,7 @@ Recommended.Proto3.JsonInput.TimestampHasZeroFractionalDigit.Validator # JSON pa
 Recommended.Proto3.JsonInput.TimestampZeroNormalized.Validator # JSON payload validation failed.
 Recommended.Proto3.ProtobufInput.OneofZeroBool.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Recommended.Proto3.ProtobufInput.OneofZeroBytes.JsonOutput # Output was not equivalent to reference message: deleted: oneof_bytes: ""
-Recommended.Proto3.ProtobufInput.OneofZeroBytes.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Recommended.Proto3.ProtobufInput.OneofZeroBytes.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Recommended.Proto3.ProtobufInput.OneofZeroDouble.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Recommended.Proto3.ProtobufInput.OneofZeroEnum.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Recommended.Proto3.ProtobufInput.OneofZeroFloat.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
@@ -563,10 +563,10 @@ Required.Proto2.JsonInput.DoubleFieldStringValuePartiallyNumeric # Should have f
 Required.Proto2.JsonInput.DoubleFieldTooLarge # Should have failed to parse, but didn't.
 Required.Proto2.JsonInput.DoubleFieldTooSmall # Should have failed to parse, but didn't.
 Required.Proto2.JsonInput.EnumField.JsonOutput # Output was not equivalent to reference message: deleted: optional_nested_enum: FOO
-Required.Proto2.JsonInput.EnumField.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Required.Proto2.JsonInput.EnumField.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Required.Proto2.JsonInput.EnumFieldNumericValueNonZero.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Required.Proto2.JsonInput.EnumFieldNumericValueZero.JsonOutput # Output was not equivalent to reference message: deleted: optional_nested_enum: FOO
-Required.Proto2.JsonInput.EnumFieldNumericValueZero.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Required.Proto2.JsonInput.EnumFieldNumericValueZero.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Required.Proto2.JsonInput.EnumRepeatedField.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Required.Proto2.JsonInput.FieldNameEscaped.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Required.Proto2.JsonInput.FieldNameInSnakeCase.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
@@ -640,6 +640,7 @@ Required.Proto2.JsonInput.RepeatedFieldWrongElementTypeExpectingMessagesGotStrin
 Required.Proto2.JsonInput.RepeatedFieldWrongElementTypeExpectingStringsGotBool # Should have failed to parse, but didn't.
 Required.Proto2.JsonInput.RepeatedFieldWrongElementTypeExpectingStringsGotInt # Should have failed to parse, but didn't.
 Required.Proto2.JsonInput.RepeatedFieldWrongElementTypeExpectingStringsGotMessage # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.SingleValueForRepeatedFieldInt32 # Should have failed to parse, but didn't.
 Required.Proto2.JsonInput.StoresDefaultPrimitive.Validator # JSON payload validation failed.
 Required.Proto2.JsonInput.StringField.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Required.Proto2.JsonInput.StringFieldEmbeddedNull.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
@@ -670,7 +671,7 @@ Required.Proto2.ProtobufInput.IllegalZeroFieldNum_Case_0 # Should have failed to
 Required.Proto2.ProtobufInput.IllegalZeroFieldNum_Case_1 # Should have failed to parse, but didn't.
 Required.Proto2.ProtobufInput.IllegalZeroFieldNum_Case_2 # Should have failed to parse, but didn't.
 Required.Proto2.ProtobufInput.IllegalZeroFieldNum_Case_3 # Should have failed to parse, but didn't.
-Required.Proto2.ProtobufInput.MessageSetEncoding.UnknownExtension.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Required.Proto2.ProtobufInput.MessageSetEncoding.UnknownExtension.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Required.Proto2.ProtobufInput.PrematureEofInPackedFieldValue.BOOL # Should have failed to parse, but didn't.
 Required.Proto2.ProtobufInput.RepeatedScalarMessageMerge.JsonOutput # Output was not equivalent to reference message: deleted: optional_nested_message.corecursive.optional_int64: 1234modified: optio
 Required.Proto2.ProtobufInput.RepeatedScalarMessageMerge.ProtobufOutput # Output was not equivalent to reference message: deleted: optional_nested_message.corecursive.optional_int64: 1234added: optional
@@ -856,7 +857,7 @@ Required.Proto2.ProtobufInput.ValidDataOneof.BOOL.MultipleValuesForDifferentFiel
 Required.Proto2.ProtobufInput.ValidDataOneof.BOOL.MultipleValuesForSameField.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Required.Proto2.ProtobufInput.ValidDataOneof.BOOL.NonDefaultValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Required.Proto2.ProtobufInput.ValidDataOneof.BYTES.DefaultValue.JsonOutput # Output was not equivalent to reference message: deleted: oneof_bytes: ""
-Required.Proto2.ProtobufInput.ValidDataOneof.BYTES.DefaultValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Required.Proto2.ProtobufInput.ValidDataOneof.BYTES.DefaultValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Required.Proto2.ProtobufInput.ValidDataOneof.BYTES.MultipleValuesForDifferentField.JsonOutput # JSON output we received from test was unparseable.
 Required.Proto2.ProtobufInput.ValidDataOneof.BYTES.MultipleValuesForDifferentField.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Required.Proto2.ProtobufInput.ValidDataOneof.BYTES.MultipleValuesForSameField.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
@@ -878,7 +879,7 @@ Required.Proto2.ProtobufInput.ValidDataOneof.FLOAT.MultipleValuesForSameField.Pr
 Required.Proto2.ProtobufInput.ValidDataOneof.FLOAT.NonDefaultValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Required.Proto2.ProtobufInput.ValidDataOneof.MESSAGE.DefaultValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Required.Proto2.ProtobufInput.ValidDataOneof.MESSAGE.Merge.JsonOutput # Output was not equivalent to reference message: deleted: oneof_nested_message.corecursive.optional_int32: 1deleted: oneof_nested
-Required.Proto2.ProtobufInput.ValidDataOneof.MESSAGE.Merge.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Required.Proto2.ProtobufInput.ValidDataOneof.MESSAGE.Merge.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Required.Proto2.ProtobufInput.ValidDataOneof.MESSAGE.MultipleValuesForDifferentField.JsonOutput # JSON output we received from test was unparseable.
 Required.Proto2.ProtobufInput.ValidDataOneof.MESSAGE.MultipleValuesForDifferentField.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Required.Proto2.ProtobufInput.ValidDataOneof.MESSAGE.MultipleValuesForSameField.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
@@ -890,7 +891,7 @@ Required.Proto2.ProtobufInput.ValidDataOneof.STRING.MultipleValuesForSameField.P
 Required.Proto2.ProtobufInput.ValidDataOneof.STRING.NonDefaultValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Required.Proto2.ProtobufInput.ValidDataOneof.UINT32.DefaultValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Required.Proto2.ProtobufInput.ValidDataOneof.UINT32.MultipleValuesForDifferentField.JsonOutput # JSON output we received from test was unparseable.
-Required.Proto2.ProtobufInput.ValidDataOneof.UINT32.MultipleValuesForDifferentField.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Required.Proto2.ProtobufInput.ValidDataOneof.UINT32.MultipleValuesForDifferentField.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Required.Proto2.ProtobufInput.ValidDataOneof.UINT32.MultipleValuesForSameField.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Required.Proto2.ProtobufInput.ValidDataOneof.UINT32.NonDefaultValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Required.Proto2.ProtobufInput.ValidDataOneof.UINT64.DefaultValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
@@ -959,7 +960,7 @@ Required.Proto2.ProtobufInput.ValidDataScalar.DOUBLE[1].ProtobufOutput # Output 
 Required.Proto2.ProtobufInput.ValidDataScalar.DOUBLE[2].ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Required.Proto2.ProtobufInput.ValidDataScalar.DOUBLE[3].ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Required.Proto2.ProtobufInput.ValidDataScalar.ENUM[0].JsonOutput # Output was not equivalent to reference message: deleted: optional_nested_enum: FOO
-Required.Proto2.ProtobufInput.ValidDataScalar.ENUM[0].ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Required.Proto2.ProtobufInput.ValidDataScalar.ENUM[0].ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Required.Proto2.ProtobufInput.ValidDataScalar.ENUM[1].ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Required.Proto2.ProtobufInput.ValidDataScalar.ENUM[2].ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Required.Proto2.ProtobufInput.ValidDataScalar.ENUM[3].ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
@@ -1048,10 +1049,14 @@ Required.Proto2.ProtobufInput.ValidDataScalar.UINT64[0].JsonOutput # Output was 
 Required.Proto2.ProtobufInput.ValidDataScalar.UINT64[0].ProtobufOutput # Output was not equivalent to reference message: deleted: optional_uint64: 0added: optional_nested_message: { }added: optional_fo
 Required.Proto2.ProtobufInput.ValidDataScalar.UINT64[1].ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
 Required.Proto2.ProtobufInput.ValidDataScalar.UINT64[2].ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: me
-Required.Proto2.ProtobufInput.ValidMessageSetEncoding.OutOfOrderGroupsEntries.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
-Required.Proto2.ProtobufInput.ValidMessageSetEncoding.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Required.Proto2.ProtobufInput.ValidMessageSetEncoding.OutOfOrderGroupsEntries.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
+Required.Proto2.ProtobufInput.ValidMessageSetEncoding.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Required.Proto3.DurationProtoInputTooLarge.JsonOutput # Should have failed to serialize, but didn't.
 Required.Proto3.DurationProtoInputTooSmall.JsonOutput # Should have failed to serialize, but didn't.
+Required.Proto3.DurationProtoNanosTooLarge.JsonOutput # Should have failed to serialize, but didn't.
+Required.Proto3.DurationProtoNanosTooSmall.JsonOutput # Should have failed to serialize, but didn't.
+Required.Proto3.DurationProtoNanosWrongSign.JsonOutput # Should have failed to serialize, but didn't.
+Required.Proto3.DurationProtoNanosWrongSignNegativeSecs.JsonOutput # Should have failed to serialize, but didn't.
 Required.Proto3.JsonInput.AllFieldAcceptNull.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Required.Proto3.JsonInput.Any.JsonOutput # Output was not equivalent to reference message: deleted: optional_any: { [type.googleapis.com/protobuf_test_messages.proto3.Test
 Required.Proto3.JsonInput.Any.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
@@ -1204,8 +1209,8 @@ Required.Proto3.JsonInput.OptionalUint32Wrapper.JsonOutput # Output was not equi
 Required.Proto3.JsonInput.OptionalUint32Wrapper.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Required.Proto3.JsonInput.OptionalUint64Wrapper.JsonOutput # Output was not equivalent to reference message: deleted: optional_uint64_wrapper: { }
 Required.Proto3.JsonInput.OptionalUint64Wrapper.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
-Required.Proto3.JsonInput.OptionalWrapperTypesWithNonDefaultValue.JsonOutput # Output was not equivalent to reference message: deleted: optional_bool_wrapper: { value: true }deleted: optional_int32_wrapper: 
-Required.Proto3.JsonInput.OptionalWrapperTypesWithNonDefaultValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Required.Proto3.JsonInput.OptionalWrapperTypesWithNonDefaultValue.JsonOutput # Output was not equivalent to reference message: deleted: optional_bool_wrapper: { value: true }deleted: optional_int32_wrapper:
+Required.Proto3.JsonInput.OptionalWrapperTypesWithNonDefaultValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Required.Proto3.JsonInput.OriginalProtoFieldName.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Required.Proto3.JsonInput.PrimitiveRepeatedField.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Required.Proto3.JsonInput.RepeatedBoolWrapper.JsonOutput # Output was not equivalent to reference message: deleted: repeated_bool_wrapper[0].value: true
@@ -1239,6 +1244,7 @@ Required.Proto3.JsonInput.RepeatedUint64Wrapper.JsonOutput # Output was not equi
 Required.Proto3.JsonInput.RepeatedUint64Wrapper.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Required.Proto3.JsonInput.RepeatedValue.JsonOutput # Output was not equivalent to reference message: added: repeated_value[0].struct_value: { }deleted: repeated_value[0].list_value:
 Required.Proto3.JsonInput.RepeatedValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
+Required.Proto3.JsonInput.SingleValueForRepeatedFieldInt32 # Should have failed to parse, but didn't.
 Required.Proto3.JsonInput.StringField.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Required.Proto3.JsonInput.StringFieldEmbeddedNull.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Required.Proto3.JsonInput.StringFieldEscape.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
@@ -1506,7 +1512,7 @@ Required.Proto3.ProtobufInput.ValidDataOneof.BOOL.MultipleValuesForDifferentFiel
 Required.Proto3.ProtobufInput.ValidDataOneof.BOOL.MultipleValuesForSameField.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Required.Proto3.ProtobufInput.ValidDataOneof.BOOL.NonDefaultValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Required.Proto3.ProtobufInput.ValidDataOneof.BYTES.DefaultValue.JsonOutput # Output was not equivalent to reference message: deleted: oneof_bytes: ""
-Required.Proto3.ProtobufInput.ValidDataOneof.BYTES.DefaultValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Required.Proto3.ProtobufInput.ValidDataOneof.BYTES.DefaultValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Required.Proto3.ProtobufInput.ValidDataOneof.BYTES.MultipleValuesForDifferentField.JsonOutput # JSON output we received from test was unparseable.
 Required.Proto3.ProtobufInput.ValidDataOneof.BYTES.MultipleValuesForDifferentField.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Required.Proto3.ProtobufInput.ValidDataOneof.BYTES.MultipleValuesForSameField.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
@@ -1528,7 +1534,7 @@ Required.Proto3.ProtobufInput.ValidDataOneof.FLOAT.MultipleValuesForSameField.Pr
 Required.Proto3.ProtobufInput.ValidDataOneof.FLOAT.NonDefaultValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Required.Proto3.ProtobufInput.ValidDataOneof.MESSAGE.DefaultValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Required.Proto3.ProtobufInput.ValidDataOneof.MESSAGE.Merge.JsonOutput # Output was not equivalent to reference message: deleted: oneof_nested_message.corecursive.optional_int32: 1deleted: oneof_nested
-Required.Proto3.ProtobufInput.ValidDataOneof.MESSAGE.Merge.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Required.Proto3.ProtobufInput.ValidDataOneof.MESSAGE.Merge.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Required.Proto3.ProtobufInput.ValidDataOneof.MESSAGE.MultipleValuesForDifferentField.JsonOutput # JSON output we received from test was unparseable.
 Required.Proto3.ProtobufInput.ValidDataOneof.MESSAGE.MultipleValuesForDifferentField.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Required.Proto3.ProtobufInput.ValidDataOneof.MESSAGE.MultipleValuesForSameField.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
@@ -1540,7 +1546,7 @@ Required.Proto3.ProtobufInput.ValidDataOneof.STRING.MultipleValuesForSameField.P
 Required.Proto3.ProtobufInput.ValidDataOneof.STRING.NonDefaultValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Required.Proto3.ProtobufInput.ValidDataOneof.UINT32.DefaultValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Required.Proto3.ProtobufInput.ValidDataOneof.UINT32.MultipleValuesForDifferentField.JsonOutput # JSON output we received from test was unparseable.
-Required.Proto3.ProtobufInput.ValidDataOneof.UINT32.MultipleValuesForDifferentField.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted: 
+Required.Proto3.ProtobufInput.ValidDataOneof.UINT32.MultipleValuesForDifferentField.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }deleted:
 Required.Proto3.ProtobufInput.ValidDataOneof.UINT32.MultipleValuesForSameField.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Required.Proto3.ProtobufInput.ValidDataOneof.UINT32.NonDefaultValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Required.Proto3.ProtobufInput.ValidDataOneof.UINT64.DefaultValue.ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
@@ -1682,3 +1688,5 @@ Required.Proto3.ProtobufInput.ValidDataScalar.UINT64[1].ProtobufOutput # Output 
 Required.Proto3.ProtobufInput.ValidDataScalar.UINT64[2].ProtobufOutput # Output was not equivalent to reference message: added: optional_nested_message: { }added: optional_foreign_message: { }added: op
 Required.Proto3.TimestampProtoInputTooLarge.JsonOutput # Should have failed to serialize, but didn't.
 Required.Proto3.TimestampProtoInputTooSmall.JsonOutput # Should have failed to serialize, but didn't.
+Required.Proto3.TimestampProtoNanoTooLarge.JsonOutput # Should have failed to serialize, but didn't.
+Required.Proto3.TimestampProtoNegativeNanos.JsonOutput # Should have failed to serialize, but didn't.

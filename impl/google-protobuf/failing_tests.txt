@@ -557,6 +557,8 @@ Required.Editions_Proto2.JsonInput.RepeatedFieldWrongElementTypeExpectingMessage
 Required.Editions_Proto2.JsonInput.RepeatedFieldWrongElementTypeExpectingStringsGotBool # Should have failed to parse, but didn't.
 Required.Editions_Proto2.JsonInput.RepeatedFieldWrongElementTypeExpectingStringsGotInt # Should have failed to parse, but didn't.
 Required.Editions_Proto2.JsonInput.RepeatedFieldWrongElementTypeExpectingStringsGotMessage # Should have failed to parse, but didn't.
+Required.Editions_Proto2.JsonInput.SingleValueForRepeatedFieldInt32 # Should have failed to parse, but didn't.
+Required.Editions_Proto2.JsonInput.SingleValueForRepeatedFieldMessage # Should have failed to parse, but didn't.
 Required.Editions_Proto2.JsonInput.StoresDefaultPrimitive.Validator # Expected JSON payload but got type 2
 Required.Editions_Proto2.JsonInput.StringField.JsonOutput # Failed to parse input or produce output.
 Required.Editions_Proto2.JsonInput.StringField.ProtobufOutput # Failed to parse input or produce output.
@@ -866,6 +868,8 @@ Required.Editions_Proto3.JsonInput.RepeatedUint64Wrapper.JsonOutput # Failed to 
 Required.Editions_Proto3.JsonInput.RepeatedUint64Wrapper.ProtobufOutput # Failed to parse input or produce output.
 Required.Editions_Proto3.JsonInput.RepeatedValue.JsonOutput # Failed to parse input or produce output.
 Required.Editions_Proto3.JsonInput.RepeatedValue.ProtobufOutput # Failed to parse input or produce output.
+Required.Editions_Proto3.JsonInput.SingleValueForRepeatedFieldInt32 # Should have failed to parse, but didn't.
+Required.Editions_Proto3.JsonInput.SingleValueForRepeatedFieldMessage # Should have failed to parse, but didn't.
 Required.Editions_Proto3.JsonInput.SkipsDefaultPrimitive.Validator # Expected JSON payload but got type 2
 Required.Editions_Proto3.JsonInput.StringField.JsonOutput # Failed to parse input or produce output.
 Required.Editions_Proto3.JsonInput.StringField.ProtobufOutput # Failed to parse input or produce output.
@@ -1134,6 +1138,8 @@ Required.Proto2.JsonInput.RepeatedFieldWrongElementTypeExpectingMessagesGotStrin
 Required.Proto2.JsonInput.RepeatedFieldWrongElementTypeExpectingStringsGotBool # Should have failed to parse, but didn't.
 Required.Proto2.JsonInput.RepeatedFieldWrongElementTypeExpectingStringsGotInt # Should have failed to parse, but didn't.
 Required.Proto2.JsonInput.RepeatedFieldWrongElementTypeExpectingStringsGotMessage # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.SingleValueForRepeatedFieldInt32 # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.SingleValueForRepeatedFieldMessage # Should have failed to parse, but didn't.
 Required.Proto2.JsonInput.StoresDefaultPrimitive.Validator # Expected JSON payload but got type 2
 Required.Proto2.JsonInput.StringField.JsonOutput # Failed to parse input or produce output.
 Required.Proto2.JsonInput.StringField.ProtobufOutput # Failed to parse input or produce output.
@@ -1446,6 +1452,8 @@ Required.Proto3.JsonInput.RepeatedUint64Wrapper.JsonOutput # Failed to parse inp
 Required.Proto3.JsonInput.RepeatedUint64Wrapper.ProtobufOutput # Failed to parse input or produce output.
 Required.Proto3.JsonInput.RepeatedValue.JsonOutput # Failed to parse input or produce output.
 Required.Proto3.JsonInput.RepeatedValue.ProtobufOutput # Failed to parse input or produce output.
+Required.Proto3.JsonInput.SingleValueForRepeatedFieldInt32 # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.SingleValueForRepeatedFieldMessage # Should have failed to parse, but didn't.
 Required.Proto3.JsonInput.SkipsDefaultPrimitive.Validator # Expected JSON payload but got type 2
 Required.Proto3.JsonInput.StringField.JsonOutput # Failed to parse input or produce output.
 Required.Proto3.JsonInput.StringField.ProtobufOutput # Failed to parse input or produce output.
