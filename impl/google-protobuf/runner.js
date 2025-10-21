@@ -35,14 +35,33 @@ const {
   TestCategory,
 } = require("./gen/conformance/conformance_pb.js");
 
-const {
-  TestAllTypesProto2,
-} = require("./gen/google/protobuf/test_messages_proto2_pb.js");
-const {
-  TestAllTypesProto3,
-} = require("./gen/google/protobuf/test_messages_proto3_pb.js");
-
 const { readSync, writeSync } = require("fs");
+
+const types = new Map([
+  [
+    "protobuf_test_messages.editions.TestAllTypesEdition2023",
+    require("./gen/google/protobuf/test_messages_edition2023_pb")
+      .TestAllTypesEdition2023,
+  ],
+  [
+    "protobuf_test_messages.editions.proto2.TestAllTypesProto2",
+    require("./gen/google/protobuf/test_messages_proto2_editions_pb")
+      .TestAllTypesProto2,
+  ],
+  [
+    "protobuf_test_messages.proto2.TestAllTypesProto2",
+    require("./gen/google/protobuf/test_messages_proto2_pb").TestAllTypesProto2,
+  ],
+  [
+    "protobuf_test_messages.editions.proto3.TestAllTypesProto3",
+    require("./gen/google/protobuf/test_messages_proto3_editions_pb")
+      .TestAllTypesProto3,
+  ],
+  [
+    "protobuf_test_messages.proto3.TestAllTypesProto3",
+    require("./gen/google/protobuf/test_messages_proto3_pb").TestAllTypesProto3,
+  ],
+]);
 
 function readBuffer(bytes) {
   const buf = Buffer.alloc(bytes);
@@ -134,36 +153,25 @@ function doTest(request) {
 
   if (request.getMessageType() === "conformance.FailureSet") {
     response.setProtobufPayload(new ArrayBuffer(0));
-  } else if (
-    request.getMessageType() ===
-    "protobuf_test_messages.proto2.TestAllTypesProto2"
-  ) {
-    try {
-      const testMessage = TestAllTypesProto2.deserializeBinary(
-        request.getProtobufPayload(),
-      );
-      response.setProtobufPayload(testMessage.serializeBinary());
-    } catch (err) {
-      response.setParseError(String(err));
-    }
-  } else if (
-    request.getMessageType() ===
-    "protobuf_test_messages.proto3.TestAllTypesProto3"
-  ) {
-    try {
-      const testMessage = TestAllTypesProto3.deserializeBinary(
-        request.getProtobufPayload(),
-      );
-      response.setProtobufPayload(testMessage.serializeBinary());
-    } catch (err) {
-      response.setParseError(String(err));
-    }
-  } else {
+    return response;
+  }
+
+  const type = types.get(request.getMessageType());
+  if (!type) {
     response.setRuntimeError(
       `Payload message not supported: ${request.getMessageType()}.`,
     );
+    return response;
   }
 
+  let testMessage;
+  try {
+    testMessage = type.deserializeBinary(request.getProtobufPayload());
+  } catch (err) {
+    response.setParseError(String(err));
+    return response;
+  }
+  response.setProtobufPayload(testMessage.serializeBinary());
   return response;
 }
 
