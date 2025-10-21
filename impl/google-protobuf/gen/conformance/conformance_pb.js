@@ -13,13 +13,7 @@
 
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global =
-    (typeof globalThis !== 'undefined' && globalThis) ||
-    (typeof window !== 'undefined' && window) ||
-    (typeof global !== 'undefined' && global) ||
-    (typeof self !== 'undefined' && self) ||
-    (function () { return this; }).call(null) ||
-    Function('return this')();
+var global = globalThis;
 
 goog.exportSymbol('proto.conformance.ConformanceRequest', null, global);
 goog.exportSymbol('proto.conformance.ConformanceRequest.PayloadCase', null, global);
@@ -167,9 +161,9 @@ proto.conformance.TestStatus.prototype.toObject = function(opt_includeInstance) 
  */
 proto.conformance.TestStatus.toObject = function(includeInstance, msg) {
   var f, obj = {
-    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    failureMessage: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    matchedName: jspb.Message.getFieldWithDefault(msg, 3, "")
+name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+failureMessage: jspb.Message.getFieldWithDefault(msg, 2, ""),
+matchedName: jspb.Message.getFieldWithDefault(msg, 3, "")
   };
 
   if (includeInstance) {
@@ -207,15 +201,15 @@ proto.conformance.TestStatus.deserializeBinaryFromReader = function(msg, reader)
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setName(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setFailureMessage(value);
       break;
     case 3:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setMatchedName(value);
       break;
     default:
@@ -364,7 +358,7 @@ proto.conformance.FailureSet.prototype.toObject = function(opt_includeInstance) 
  */
 proto.conformance.FailureSet.toObject = function(includeInstance, msg) {
   var f, obj = {
-    testList: jspb.Message.toObjectList(msg.getTestList(),
+testList: jspb.Message.toObjectList(msg.getTestList(),
     proto.conformance.TestStatus.toObject, includeInstance)
   };
 
@@ -545,15 +539,15 @@ proto.conformance.ConformanceRequest.prototype.toObject = function(opt_includeIn
  */
 proto.conformance.ConformanceRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    protobufPayload: msg.getProtobufPayload_asB64(),
-    jsonPayload: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    jspbPayload: jspb.Message.getFieldWithDefault(msg, 7, ""),
-    textPayload: jspb.Message.getFieldWithDefault(msg, 8, ""),
-    requestedOutputFormat: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    messageType: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    testCategory: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    jspbEncodingOptions: (f = msg.getJspbEncodingOptions()) && proto.conformance.JspbEncodingConfig.toObject(includeInstance, f),
-    printUnknownFields: jspb.Message.getBooleanFieldWithDefault(msg, 9, false)
+protobufPayload: msg.getProtobufPayload_asB64(),
+jsonPayload: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+jspbPayload: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+textPayload: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f,
+requestedOutputFormat: jspb.Message.getFieldWithDefault(msg, 3, 0),
+messageType: jspb.Message.getFieldWithDefault(msg, 4, ""),
+testCategory: jspb.Message.getFieldWithDefault(msg, 5, 0),
+jspbEncodingOptions: (f = msg.getJspbEncodingOptions()) && proto.conformance.JspbEncodingConfig.toObject(includeInstance, f),
+printUnknownFields: jspb.Message.getBooleanFieldWithDefault(msg, 9, false)
   };
 
   if (includeInstance) {
@@ -595,15 +589,15 @@ proto.conformance.ConformanceRequest.deserializeBinaryFromReader = function(msg,
       msg.setProtobufPayload(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setJsonPayload(value);
       break;
     case 7:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setJspbPayload(value);
       break;
     case 8:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setTextPayload(value);
       break;
     case 3:
@@ -611,7 +605,7 @@ proto.conformance.ConformanceRequest.deserializeBinaryFromReader = function(msg,
       msg.setRequestedOutputFormat(value);
       break;
     case 4:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setMessageType(value);
       break;
     case 5:
@@ -1065,15 +1059,15 @@ proto.conformance.ConformanceResponse.prototype.toObject = function(opt_includeI
  */
 proto.conformance.ConformanceResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    parseError: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    serializeError: jspb.Message.getFieldWithDefault(msg, 6, ""),
-    timeoutError: jspb.Message.getFieldWithDefault(msg, 9, ""),
-    runtimeError: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    protobufPayload: msg.getProtobufPayload_asB64(),
-    jsonPayload: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    skipped: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    jspbPayload: jspb.Message.getFieldWithDefault(msg, 7, ""),
-    textPayload: jspb.Message.getFieldWithDefault(msg, 8, "")
+parseError: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
+serializeError: (f = jspb.Message.getField(msg, 6)) == null ? undefined : f,
+timeoutError: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f,
+runtimeError: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
+protobufPayload: msg.getProtobufPayload_asB64(),
+jsonPayload: (f = jspb.Message.getField(msg, 4)) == null ? undefined : f,
+skipped: (f = jspb.Message.getField(msg, 5)) == null ? undefined : f,
+jspbPayload: (f = jspb.Message.getField(msg, 7)) == null ? undefined : f,
+textPayload: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -1111,19 +1105,19 @@ proto.conformance.ConformanceResponse.deserializeBinaryFromReader = function(msg
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setParseError(value);
       break;
     case 6:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setSerializeError(value);
       break;
     case 9:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setTimeoutError(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setRuntimeError(value);
       break;
     case 3:
@@ -1131,19 +1125,19 @@ proto.conformance.ConformanceResponse.deserializeBinaryFromReader = function(msg
       msg.setProtobufPayload(value);
       break;
     case 4:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setJsonPayload(value);
       break;
     case 5:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setSkipped(value);
       break;
     case 7:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setJspbPayload(value);
       break;
     case 8:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readStringRequireUtf8());
       msg.setTextPayload(value);
       break;
     default:
@@ -1621,7 +1615,7 @@ proto.conformance.JspbEncodingConfig.prototype.toObject = function(opt_includeIn
  */
 proto.conformance.JspbEncodingConfig.toObject = function(includeInstance, msg) {
   var f, obj = {
-    useJspbArrayAnyFormat: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
+useJspbArrayAnyFormat: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
   };
 
   if (includeInstance) {

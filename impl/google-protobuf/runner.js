@@ -32,17 +32,35 @@ const {
   ConformanceRequest,
   ConformanceResponse,
   WireFormat,
-  TestCategory,
 } = require("./gen/conformance/conformance_pb.js");
 
-const {
-  TestAllTypesProto2,
-} = require("./gen/google/protobuf/test_messages_proto2_pb.js");
-const {
-  TestAllTypesProto3,
-} = require("./gen/google/protobuf/test_messages_proto3_pb.js");
-
 const { readSync, writeSync } = require("fs");
+
+const types = new Map([
+  [
+    "protobuf_test_messages.editions.TestAllTypesEdition2023",
+    require("./gen/google/protobuf/test_messages_edition2023_pb")
+      .TestAllTypesEdition2023,
+  ],
+  [
+    "protobuf_test_messages.editions.proto2.TestAllTypesProto2",
+    require("./gen/google/protobuf/test_messages_proto2_editions_pb")
+      .TestAllTypesProto2,
+  ],
+  [
+    "protobuf_test_messages.proto2.TestAllTypesProto2",
+    require("./gen/google/protobuf/test_messages_proto2_pb").TestAllTypesProto2,
+  ],
+  [
+    "protobuf_test_messages.editions.proto3.TestAllTypesProto3",
+    require("./gen/google/protobuf/test_messages_proto3_editions_pb")
+      .TestAllTypesProto3,
+  ],
+  [
+    "protobuf_test_messages.proto3.TestAllTypesProto3",
+    require("./gen/google/protobuf/test_messages_proto3_pb").TestAllTypesProto3,
+  ],
+]);
 
 function readBuffer(bytes) {
   const buf = Buffer.alloc(bytes);
@@ -76,15 +94,6 @@ function writeBuffer(buffer) {
 
 function doTest(request) {
   const response = new ConformanceResponse(new ArrayBuffer(0));
-
-  // Returning a runtime error for the test Required.Proto3.ProtobufInput.UnknownOrdering.ProtobufOutput
-  // crashes the runner.
-  if (
-    is_Required_Proto3_ProtobufInput_UnknownOrdering_ProtobufOutput(request)
-  ) {
-    response.setProtobufPayload(new Uint8Array());
-    return response;
-  }
 
   if (
     request.getPayloadCase() === ConformanceRequest.PayloadCase.JSON_PAYLOAD
@@ -134,75 +143,26 @@ function doTest(request) {
 
   if (request.getMessageType() === "conformance.FailureSet") {
     response.setProtobufPayload(new ArrayBuffer(0));
-  } else if (
-    request.getMessageType() ===
-    "protobuf_test_messages.proto2.TestAllTypesProto2"
-  ) {
-    try {
-      const testMessage = TestAllTypesProto2.deserializeBinary(
-        request.getProtobufPayload(),
-      );
-      response.setProtobufPayload(testMessage.serializeBinary());
-    } catch (err) {
-      response.setParseError(String(err));
-    }
-  } else if (
-    request.getMessageType() ===
-    "protobuf_test_messages.proto3.TestAllTypesProto3"
-  ) {
-    try {
-      const testMessage = TestAllTypesProto3.deserializeBinary(
-        request.getProtobufPayload(),
-      );
-      response.setProtobufPayload(testMessage.serializeBinary());
-    } catch (err) {
-      response.setParseError(String(err));
-    }
-  } else {
+    return response;
+  }
+
+  const type = types.get(request.getMessageType());
+  if (!type) {
     response.setRuntimeError(
       `Payload message not supported: ${request.getMessageType()}.`,
     );
+    return response;
   }
 
+  let testMessage;
+  try {
+    testMessage = type.deserializeBinary(request.getProtobufPayload());
+  } catch (err) {
+    response.setParseError(String(err));
+    return response;
+  }
+  response.setProtobufPayload(testMessage.serializeBinary());
   return response;
-}
-
-function is_Required_Proto3_ProtobufInput_UnknownOrdering_ProtobufOutput(
-  request,
-) {
-  if (request.getTestCategory() !== TestCategory.BINARY_TEST) {
-    return false;
-  }
-  if (request.getRequestedOutputFormat() !== WireFormat.PROTOBUF) {
-    return false;
-  }
-  const types = [
-    "protobuf_test_messages.proto3.TestAllTypesProto3",
-    "protobuf_test_messages.proto2.TestAllTypesProto2",
-    "protobuf_test_messages.editions.proto2.TestAllTypesProto2",
-    "protobuf_test_messages.editions.proto3.TestAllTypesProto3",
-  ];
-  if (!types.includes(request.getMessageType())) {
-    return false;
-  }
-  if (!request.hasProtobufPayload()) {
-    return false;
-  }
-  const reqPayload = new Uint8Array([
-    210, 41, 3, 97, 98, 99, 208, 41, 123, 210, 41, 3, 100, 101, 102, 208, 41,
-    200, 3,
-  ]);
-  if (request.getProtobufPayload().byteLength !== reqPayload.byteLength) {
-    return false;
-  }
-  if (
-    !request
-      .getProtobufPayload()
-      .every((value, index) => reqPayload[index] === value)
-  ) {
-    return false;
-  }
-  return true;
 }
 
 function runConformanceTest() {
