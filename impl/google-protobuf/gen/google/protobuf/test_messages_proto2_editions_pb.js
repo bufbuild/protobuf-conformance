@@ -1,4 +1,4 @@
-// source: google/protobuf/test_messages_proto2.proto
+// source: google/protobuf/test_messages_proto2_editions.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -15,43 +15,43 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = globalThis;
 
-goog.exportSymbol('proto.protobuf_test_messages.proto2.EnumOnlyProto2', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.EnumOnlyProto2.Bool', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.ForeignEnumProto2', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.ForeignMessageProto2', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.GroupField', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.NullHypothesisProto2', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.OneStringProto2', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.ProtoWithKeywords', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedEnum', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestAllTypesProto2', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.OneofFieldCase', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestAllTypesProto2.OneofFieldCase', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestLargeOneof', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestLargeOneof.A1', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestLargeOneof.A2', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestLargeOneof.A3', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestLargeOneof.A4', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestLargeOneof.A5', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.TestLargeOneof.LargeOneofCase', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.UnknownToTestAllTypes', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.extensionInt32', null, global);
-goog.exportSymbol('proto.protobuf_test_messages.proto2.groupField', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.EnumOnlyProto2', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.EnumOnlyProto2.Bool', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.ForeignEnumProto2', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.GroupField', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.NullHypothesisProto2', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.OneStringProto2', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedEnum', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.OneofFieldCase', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.OneofFieldCase', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestLargeOneof', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.TestLargeOneof.LargeOneofCase', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.extensionInt32', null, global);
+goog.exportSymbol('proto.protobuf_test_messages.editions.proto2.groupField', null, global);
 /**
  * Generated by JsPbCodeGenerator.
  * @param {Array=} opt_data Optional initial data array, typically from a
@@ -62,16 +62,16 @@ goog.exportSymbol('proto.protobuf_test_messages.proto2.groupField', null, global
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2 = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, 500, proto.protobuf_test_messages.proto2.TestAllTypesProto2.repeatedFields_, proto.protobuf_test_messages.proto2.TestAllTypesProto2.oneofGroups_);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2 = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, 500, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.repeatedFields_, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.oneofGroups_);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.TestAllTypesProto2, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.TestAllTypesProto2.displayName = 'proto.protobuf_test_messages.proto2.TestAllTypesProto2';
+  proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.displayName = 'proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2';
 }
 
 /**
@@ -86,7 +86,7 @@ if (goog.DEBUG && !COMPILED) {
  *
  * @type {!Object<number, jspb.ExtensionFieldInfo>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.extensions = {};
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.extensions = {};
 
 
 /**
@@ -101,7 +101,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.extensions = {};
  *
  * @type {!Object<number, jspb.ExtensionFieldBinaryInfo>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.extensionsBinary = {};
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.extensionsBinary = {};
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -113,16 +113,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.extensionsBinary = {};
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage = function(opt_data) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.displayName = 'proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage';
+  proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.displayName = 'proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -134,16 +134,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data = function(opt_data) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.displayName = 'proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data';
+  proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data.displayName = 'proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -155,16 +155,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField = function(opt_data) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.displayName = 'proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField';
+  proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField.displayName = 'proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -176,16 +176,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect = function(opt_data) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, 1, null, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.displayName = 'proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect';
+  proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.displayName = 'proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect';
 }
 
 /**
@@ -200,7 +200,7 @@ if (goog.DEBUG && !COMPILED) {
  *
  * @type {!Object<number, jspb.ExtensionFieldInfo>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.extensions = {};
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.extensions = {};
 
 
 /**
@@ -215,7 +215,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.extensi
  *
  * @type {!Object<number, jspb.ExtensionFieldBinaryInfo>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.extensionsBinary = {};
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.extensionsBinary = {};
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -227,16 +227,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.extensi
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1 = function(opt_data) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1 = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.displayName = 'proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1';
+  proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.displayName = 'proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -248,16 +248,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2 = function(opt_data) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2 = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.displayName = 'proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2';
+  proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.displayName = 'proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -269,16 +269,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.oneofGroups_);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.oneofGroups_);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.displayName = 'proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof';
+  proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.displayName = 'proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -290,16 +290,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.ForeignMessageProto2 = function(opt_data) {
+proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2 = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.ForeignMessageProto2, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.ForeignMessageProto2.displayName = 'proto.protobuf_test_messages.proto2.ForeignMessageProto2';
+  proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.displayName = 'proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -311,16 +311,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.GroupField = function(opt_data) {
+proto.protobuf_test_messages.editions.proto2.GroupField = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.GroupField, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.GroupField, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.GroupField.displayName = 'proto.protobuf_test_messages.proto2.GroupField';
+  proto.protobuf_test_messages.editions.proto2.GroupField.displayName = 'proto.protobuf_test_messages.editions.proto2.GroupField';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -332,16 +332,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, 500, proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.repeatedFields_, null);
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, 500, proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.repeatedFields_, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.UnknownToTestAllTypes, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.displayName = 'proto.protobuf_test_messages.proto2.UnknownToTestAllTypes';
+  proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.displayName = 'proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -353,16 +353,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup = function(opt_data) {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.displayName = 'proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup';
+  proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup.displayName = 'proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -374,16 +374,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.NullHypothesisProto2 = function(opt_data) {
+proto.protobuf_test_messages.editions.proto2.NullHypothesisProto2 = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.NullHypothesisProto2, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.NullHypothesisProto2, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.NullHypothesisProto2.displayName = 'proto.protobuf_test_messages.proto2.NullHypothesisProto2';
+  proto.protobuf_test_messages.editions.proto2.NullHypothesisProto2.displayName = 'proto.protobuf_test_messages.editions.proto2.NullHypothesisProto2';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -395,16 +395,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.EnumOnlyProto2 = function(opt_data) {
+proto.protobuf_test_messages.editions.proto2.EnumOnlyProto2 = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.EnumOnlyProto2, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.EnumOnlyProto2, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.EnumOnlyProto2.displayName = 'proto.protobuf_test_messages.proto2.EnumOnlyProto2';
+  proto.protobuf_test_messages.editions.proto2.EnumOnlyProto2.displayName = 'proto.protobuf_test_messages.editions.proto2.EnumOnlyProto2';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -416,16 +416,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.OneStringProto2 = function(opt_data) {
+proto.protobuf_test_messages.editions.proto2.OneStringProto2 = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.OneStringProto2, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.OneStringProto2, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.OneStringProto2.displayName = 'proto.protobuf_test_messages.proto2.OneStringProto2';
+  proto.protobuf_test_messages.editions.proto2.OneStringProto2.displayName = 'proto.protobuf_test_messages.editions.proto2.OneStringProto2';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -437,16 +437,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.ProtoWithKeywords = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.protobuf_test_messages.proto2.ProtoWithKeywords.repeatedFields_, null);
+proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords.repeatedFields_, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.ProtoWithKeywords, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.ProtoWithKeywords.displayName = 'proto.protobuf_test_messages.proto2.ProtoWithKeywords';
+  proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords.displayName = 'proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -458,16 +458,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2 = function(opt_data) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2 = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, 256, null, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.displayName = 'proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2';
+  proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.displayName = 'proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2';
 }
 
 /**
@@ -482,7 +482,7 @@ if (goog.DEBUG && !COMPILED) {
  *
  * @type {!Object<number, jspb.ExtensionFieldInfo>}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.extensions = {};
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.extensions = {};
 
 
 /**
@@ -497,7 +497,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.extensions = {};
  *
  * @type {!Object<number, jspb.ExtensionFieldBinaryInfo>}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.extensionsBinary = {};
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.extensionsBinary = {};
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -509,16 +509,16 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.extensionsBinary 
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage = function(opt_data) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.displayName = 'proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage';
+  proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.displayName = 'proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -530,16 +530,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data = function(opt_data) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.displayName = 'proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data';
+  proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data.displayName = 'proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -551,16 +551,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect = function(opt_data) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, 1, null, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.displayName = 'proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect';
+  proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.displayName = 'proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect';
 }
 
 /**
@@ -575,7 +575,7 @@ if (goog.DEBUG && !COMPILED) {
  *
  * @type {!Object<number, jspb.ExtensionFieldInfo>}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensions = {};
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensions = {};
 
 
 /**
@@ -590,7 +590,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
  *
  * @type {!Object<number, jspb.ExtensionFieldBinaryInfo>}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensionsBinary = {};
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensionsBinary = {};
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -602,16 +602,16 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1 = function(opt_data) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1 = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.displayName = 'proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1';
+  proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.displayName = 'proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -623,16 +623,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2 = function(opt_data) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2 = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.displayName = 'proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2';
+  proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.displayName = 'proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -644,16 +644,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.protobuf_test_messages.proto2.TestLargeOneof.oneofGroups_);
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.protobuf_test_messages.editions.proto2.TestLargeOneof.oneofGroups_);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.TestLargeOneof, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.TestLargeOneof, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.TestLargeOneof.displayName = 'proto.protobuf_test_messages.proto2.TestLargeOneof';
+  proto.protobuf_test_messages.editions.proto2.TestLargeOneof.displayName = 'proto.protobuf_test_messages.editions.proto2.TestLargeOneof';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -665,16 +665,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A1 = function(opt_data) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1 = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.TestLargeOneof.A1, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.TestLargeOneof.A1.displayName = 'proto.protobuf_test_messages.proto2.TestLargeOneof.A1';
+  proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1.displayName = 'proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -686,16 +686,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A2 = function(opt_data) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2 = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.TestLargeOneof.A2, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.TestLargeOneof.A2.displayName = 'proto.protobuf_test_messages.proto2.TestLargeOneof.A2';
+  proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2.displayName = 'proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -707,16 +707,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A3 = function(opt_data) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3 = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.TestLargeOneof.A3, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.TestLargeOneof.A3.displayName = 'proto.protobuf_test_messages.proto2.TestLargeOneof.A3';
+  proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3.displayName = 'proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -728,16 +728,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A4 = function(opt_data) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4 = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.TestLargeOneof.A4, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.TestLargeOneof.A4.displayName = 'proto.protobuf_test_messages.proto2.TestLargeOneof.A4';
+  proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4.displayName = 'proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -749,16 +749,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A5 = function(opt_data) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5 = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.protobuf_test_messages.proto2.TestLargeOneof.A5, jspb.Message);
+goog.inherits(proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.protobuf_test_messages.proto2.TestLargeOneof.A5.displayName = 'proto.protobuf_test_messages.proto2.TestLargeOneof.A5';
+  proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5.displayName = 'proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5';
 }
 
 /**
@@ -766,7 +766,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.repeatedFields_ = [31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,48,49,51,52,54,55,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102];
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.repeatedFields_ = [31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,48,49,51,52,54,55,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102];
 
 /**
  * Oneof group definitions for this message. Each group defines the field
@@ -776,12 +776,12 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.repeatedFields_ = [31,32,
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.oneofGroups_ = [[111,112,113,114,115,116,117,118,119]];
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.oneofGroups_ = [[111,112,113,114,115,116,117,118,119]];
 
 /**
  * @enum {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.OneofFieldCase = {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.OneofFieldCase = {
   ONEOF_FIELD_NOT_SET: 0,
   ONEOF_UINT32: 111,
   ONEOF_NESTED_MESSAGE: 112,
@@ -795,10 +795,10 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.OneofFieldCase = {
 };
 
 /**
- * @return {proto.protobuf_test_messages.proto2.TestAllTypesProto2.OneofFieldCase}
+ * @return {proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.OneofFieldCase}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOneofFieldCase = function() {
-  return /** @type {proto.protobuf_test_messages.proto2.TestAllTypesProto2.OneofFieldCase} */(jspb.Message.computeOneofCase(this, proto.protobuf_test_messages.proto2.TestAllTypesProto2.oneofGroups_[0]));
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOneofFieldCase = function() {
+  return /** @type {proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.OneofFieldCase} */(jspb.Message.computeOneofCase(this, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.oneofGroups_[0]));
 };
 
 
@@ -816,8 +816,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.TestAllTypesProto2.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.toObject(opt_includeInstance, this);
 };
 
 
@@ -826,11 +826,11 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.toObject = func
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.toObject = function(includeInstance, msg) {
   var f, obj = {
 optionalInt32: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
 optionalInt64: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
@@ -847,13 +847,13 @@ optionalDouble: (f = jspb.Message.getOptionalFloatingPointField(msg, 12)) == nul
 optionalBool: (f = jspb.Message.getBooleanField(msg, 13)) == null ? undefined : f,
 optionalString: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
 optionalBytes: msg.getOptionalBytes_asB64(),
-optionalNestedMessage: (f = msg.getOptionalNestedMessage()) && proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.toObject(includeInstance, f),
-optionalForeignMessage: (f = msg.getOptionalForeignMessage()) && proto.protobuf_test_messages.proto2.ForeignMessageProto2.toObject(includeInstance, f),
+optionalNestedMessage: (f = msg.getOptionalNestedMessage()) && proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.toObject(includeInstance, f),
+optionalForeignMessage: (f = msg.getOptionalForeignMessage()) && proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.toObject(includeInstance, f),
 optionalNestedEnum: (f = jspb.Message.getField(msg, 21)) == null ? undefined : f,
 optionalForeignEnum: (f = jspb.Message.getField(msg, 22)) == null ? undefined : f,
 optionalStringPiece: (f = jspb.Message.getField(msg, 24)) == null ? undefined : f,
 optionalCord: (f = jspb.Message.getField(msg, 25)) == null ? undefined : f,
-recursiveMessage: (f = msg.getRecursiveMessage()) && proto.protobuf_test_messages.proto2.TestAllTypesProto2.toObject(includeInstance, f),
+recursiveMessage: (f = msg.getRecursiveMessage()) && proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.toObject(includeInstance, f),
 repeatedInt32List: (f = jspb.Message.getRepeatedField(msg, 31)) == null ? undefined : f,
 repeatedInt64List: (f = jspb.Message.getRepeatedField(msg, 32)) == null ? undefined : f,
 repeatedUint32List: (f = jspb.Message.getRepeatedField(msg, 33)) == null ? undefined : f,
@@ -870,9 +870,9 @@ repeatedBoolList: (f = jspb.Message.getRepeatedBooleanField(msg, 43)) == null ? 
 repeatedStringList: (f = jspb.Message.getRepeatedField(msg, 44)) == null ? undefined : f,
 repeatedBytesList: msg.getRepeatedBytesList_asB64(),
 repeatedNestedMessageList: jspb.Message.toObjectList(msg.getRepeatedNestedMessageList(),
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.toObject, includeInstance),
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.toObject, includeInstance),
 repeatedForeignMessageList: jspb.Message.toObjectList(msg.getRepeatedForeignMessageList(),
-    proto.protobuf_test_messages.proto2.ForeignMessageProto2.toObject, includeInstance),
+    proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.toObject, includeInstance),
 repeatedNestedEnumList: (f = jspb.Message.getRepeatedField(msg, 51)) == null ? undefined : f,
 repeatedForeignEnumList: (f = jspb.Message.getRepeatedField(msg, 52)) == null ? undefined : f,
 repeatedStringPieceList: (f = jspb.Message.getRepeatedField(msg, 54)) == null ? undefined : f,
@@ -918,16 +918,16 @@ mapSfixed64Sfixed64Map: (f = msg.getMapSfixed64Sfixed64Map()) ? f.toObject(inclu
 mapInt32BoolMap: (f = msg.getMapInt32BoolMap()) ? f.toObject(includeInstance, undefined) : [],
 mapInt32FloatMap: (f = msg.getMapInt32FloatMap()) ? f.toObject(includeInstance, undefined) : [],
 mapInt32DoubleMap: (f = msg.getMapInt32DoubleMap()) ? f.toObject(includeInstance, undefined) : [],
-mapInt32NestedMessageMap: (f = msg.getMapInt32NestedMessageMap()) ? f.toObject(includeInstance, proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.toObject) : [],
+mapInt32NestedMessageMap: (f = msg.getMapInt32NestedMessageMap()) ? f.toObject(includeInstance, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.toObject) : [],
 mapBoolBoolMap: (f = msg.getMapBoolBoolMap()) ? f.toObject(includeInstance, undefined) : [],
 mapStringStringMap: (f = msg.getMapStringStringMap()) ? f.toObject(includeInstance, undefined) : [],
 mapStringBytesMap: (f = msg.getMapStringBytesMap()) ? f.toObject(includeInstance, undefined) : [],
-mapStringNestedMessageMap: (f = msg.getMapStringNestedMessageMap()) ? f.toObject(includeInstance, proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.toObject) : [],
-mapStringForeignMessageMap: (f = msg.getMapStringForeignMessageMap()) ? f.toObject(includeInstance, proto.protobuf_test_messages.proto2.ForeignMessageProto2.toObject) : [],
+mapStringNestedMessageMap: (f = msg.getMapStringNestedMessageMap()) ? f.toObject(includeInstance, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.toObject) : [],
+mapStringForeignMessageMap: (f = msg.getMapStringForeignMessageMap()) ? f.toObject(includeInstance, proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.toObject) : [],
 mapStringNestedEnumMap: (f = msg.getMapStringNestedEnumMap()) ? f.toObject(includeInstance, undefined) : [],
 mapStringForeignEnumMap: (f = msg.getMapStringForeignEnumMap()) ? f.toObject(includeInstance, undefined) : [],
 oneofUint32: (f = jspb.Message.getField(msg, 111)) == null ? undefined : f,
-oneofNestedMessage: (f = msg.getOneofNestedMessage()) && proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.toObject(includeInstance, f),
+oneofNestedMessage: (f = msg.getOneofNestedMessage()) && proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.toObject(includeInstance, f),
 oneofString: (f = jspb.Message.getField(msg, 113)) == null ? undefined : f,
 oneofBytes: msg.getOneofBytes_asB64(),
 oneofBool: (f = jspb.Message.getBooleanField(msg, 115)) == null ? undefined : f,
@@ -935,8 +935,8 @@ oneofUint64: (f = jspb.Message.getField(msg, 116)) == null ? undefined : f,
 oneofFloat: (f = jspb.Message.getOptionalFloatingPointField(msg, 117)) == null ? undefined : f,
 oneofDouble: (f = jspb.Message.getOptionalFloatingPointField(msg, 118)) == null ? undefined : f,
 oneofEnum: (f = jspb.Message.getField(msg, 119)) == null ? undefined : f,
-data: (f = msg.getData()) && proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.toObject(includeInstance, f),
-multiWordGroupField: (f = msg.getMultiWordGroupField()) && proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.toObject(includeInstance, f),
+data: (f = msg.getData()) && proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data.toObject(includeInstance, f),
+multiWordGroupField: (f = msg.getMultiWordGroupField()) && proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField.toObject(includeInstance, f),
 defaultInt32: jspb.Message.getFieldWithDefault(msg, 241, -123456789),
 defaultInt64: jspb.Message.getFieldWithDefault(msg, 242, -9123456789123456789),
 defaultUint32: jspb.Message.getFieldWithDefault(msg, 243, 2123456789),
@@ -970,11 +970,11 @@ fieldName15: (f = jspb.Message.getField(msg, 415)) == null ? undefined : f,
 fieldName16: (f = jspb.Message.getField(msg, 416)) == null ? undefined : f,
 fieldName17: (f = jspb.Message.getField(msg, 417)) == null ? undefined : f,
 fieldName18: (f = jspb.Message.getField(msg, 418)) == null ? undefined : f,
-messageSetCorrect: (f = msg.getMessageSetCorrect()) && proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.toObject(includeInstance, f)
+messageSetCorrect: (f = msg.getMessageSetCorrect()) && proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.toObject(includeInstance, f)
   };
 
   jspb.Message.toObjectExtension(/** @type {!jspb.Message} */ (msg), obj,
-      proto.protobuf_test_messages.proto2.TestAllTypesProto2.extensions, proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getExtension,
+      proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.extensions, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getExtension,
       includeInstance);
   if (includeInstance) {
     obj.$jspbMessageInstance = msg;
@@ -987,23 +987,23 @@ messageSetCorrect: (f = msg.getMessageSetCorrect()) && proto.protobuf_test_messa
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.TestAllTypesProto2;
-  return proto.protobuf_test_messages.proto2.TestAllTypesProto2.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2;
+  return proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1071,21 +1071,21 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.deserializeBinaryFromRead
       msg.setOptionalBytes(value);
       break;
     case 18:
-      var value = new proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage;
-      reader.readMessage(value,proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.deserializeBinaryFromReader);
+      var value = new proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage;
+      reader.readMessage(value,proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.deserializeBinaryFromReader);
       msg.setOptionalNestedMessage(value);
       break;
     case 19:
-      var value = new proto.protobuf_test_messages.proto2.ForeignMessageProto2;
-      reader.readMessage(value,proto.protobuf_test_messages.proto2.ForeignMessageProto2.deserializeBinaryFromReader);
+      var value = new proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2;
+      reader.readMessage(value,proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.deserializeBinaryFromReader);
       msg.setOptionalForeignMessage(value);
       break;
     case 21:
-      var value = /** @type {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum} */ (reader.readEnum());
+      var value = /** @type {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum} */ (reader.readEnum());
       msg.setOptionalNestedEnum(value);
       break;
     case 22:
-      var value = /** @type {!proto.protobuf_test_messages.proto2.ForeignEnumProto2} */ (reader.readEnum());
+      var value = /** @type {!proto.protobuf_test_messages.editions.proto2.ForeignEnumProto2} */ (reader.readEnum());
       msg.setOptionalForeignEnum(value);
       break;
     case 24:
@@ -1097,8 +1097,8 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.deserializeBinaryFromRead
       msg.setOptionalCord(value);
       break;
     case 27:
-      var value = new proto.protobuf_test_messages.proto2.TestAllTypesProto2;
-      reader.readMessage(value,proto.protobuf_test_messages.proto2.TestAllTypesProto2.deserializeBinaryFromReader);
+      var value = new proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2;
+      reader.readMessage(value,proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.deserializeBinaryFromReader);
       msg.setRecursiveMessage(value);
       break;
     case 31:
@@ -1149,13 +1149,13 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.deserializeBinaryFromRead
       msg.addRepeatedBytes(value);
       break;
     case 48:
-      var value = new proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage;
-      reader.readMessage(value,proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.deserializeBinaryFromReader);
+      var value = new proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage;
+      reader.readMessage(value,proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.deserializeBinaryFromReader);
       msg.addRepeatedNestedMessage(value);
       break;
     case 49:
-      var value = new proto.protobuf_test_messages.proto2.ForeignMessageProto2;
-      reader.readMessage(value,proto.protobuf_test_messages.proto2.ForeignMessageProto2.deserializeBinaryFromReader);
+      var value = new proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2;
+      reader.readMessage(value,proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.deserializeBinaryFromReader);
       msg.addRepeatedForeignMessage(value);
       break;
     case 51:
@@ -1337,7 +1337,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.deserializeBinaryFromRead
     case 103:
       var value = msg.getMapInt32NestedMessageMap();
       reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readInt32, jspb.BinaryReader.prototype.readMessage, proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.deserializeBinaryFromReader, 0, new proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage());
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readInt32, jspb.BinaryReader.prototype.readMessage, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.deserializeBinaryFromReader, 0, new proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage());
          });
       break;
     case 68:
@@ -1361,13 +1361,13 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.deserializeBinaryFromRead
     case 71:
       var value = msg.getMapStringNestedMessageMap();
       reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.deserializeBinaryFromReader, "", new proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage());
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.deserializeBinaryFromReader, "", new proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage());
          });
       break;
     case 72:
       var value = msg.getMapStringForeignMessageMap();
       reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.protobuf_test_messages.proto2.ForeignMessageProto2.deserializeBinaryFromReader, "", new proto.protobuf_test_messages.proto2.ForeignMessageProto2());
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.deserializeBinaryFromReader, "", new proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2());
          });
       break;
     case 73:
@@ -1387,8 +1387,8 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.deserializeBinaryFromRead
       msg.setOneofUint32(value);
       break;
     case 112:
-      var value = new proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage;
-      reader.readMessage(value,proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.deserializeBinaryFromReader);
+      var value = new proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage;
+      reader.readMessage(value,proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.deserializeBinaryFromReader);
       msg.setOneofNestedMessage(value);
       break;
     case 113:
@@ -1416,17 +1416,17 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.deserializeBinaryFromRead
       msg.setOneofDouble(value);
       break;
     case 119:
-      var value = /** @type {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum} */ (reader.readEnum());
+      var value = /** @type {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum} */ (reader.readEnum());
       msg.setOneofEnum(value);
       break;
     case 201:
-      var value = new proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data;
-      reader.readGroup(201, value,proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.deserializeBinaryFromReader);
+      var value = new proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data;
+      reader.readGroup(201, value,proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data.deserializeBinaryFromReader);
       msg.setData(value);
       break;
     case 204:
-      var value = new proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField;
-      reader.readGroup(204, value,proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.deserializeBinaryFromReader);
+      var value = new proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField;
+      reader.readGroup(204, value,proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField.deserializeBinaryFromReader);
       msg.setMultiWordGroupField(value);
       break;
     case 241:
@@ -1562,15 +1562,15 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.deserializeBinaryFromRead
       msg.setFieldName18(value);
       break;
     case 500:
-      var value = new proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect;
-      reader.readMessage(value,proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.deserializeBinaryFromReader);
+      var value = new proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect;
+      reader.readMessage(value,proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.deserializeBinaryFromReader);
       msg.setMessageSetCorrect(value);
       break;
     default:
       jspb.Message.readBinaryExtension(msg, reader,
-        proto.protobuf_test_messages.proto2.TestAllTypesProto2.extensionsBinary,
-        proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getExtension,
-        proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setExtension);
+        proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.extensionsBinary,
+        proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getExtension,
+        proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setExtension);
       break;
     }
   }
@@ -1582,9 +1582,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.deserializeBinaryFromRead
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.TestAllTypesProto2.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1592,11 +1592,11 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.serializeBinary
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = /** @type {number} */ (jspb.Message.getField(message, 1));
   if (f != null) {
@@ -1708,7 +1708,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.serializeBinaryToWriter =
     writer.writeMessage(
       18,
       f,
-      proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.serializeBinaryToWriter
+      proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.serializeBinaryToWriter
     );
   }
   f = message.getOptionalForeignMessage();
@@ -1716,17 +1716,17 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.serializeBinaryToWriter =
     writer.writeMessage(
       19,
       f,
-      proto.protobuf_test_messages.proto2.ForeignMessageProto2.serializeBinaryToWriter
+      proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.serializeBinaryToWriter
     );
   }
-  f = /** @type {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum} */ (jspb.Message.getField(message, 21));
+  f = /** @type {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum} */ (jspb.Message.getField(message, 21));
   if (f != null) {
     writer.writeEnum(
       21,
       f
     );
   }
-  f = /** @type {!proto.protobuf_test_messages.proto2.ForeignEnumProto2} */ (jspb.Message.getField(message, 22));
+  f = /** @type {!proto.protobuf_test_messages.editions.proto2.ForeignEnumProto2} */ (jspb.Message.getField(message, 22));
   if (f != null) {
     writer.writeEnum(
       22,
@@ -1752,7 +1752,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.serializeBinaryToWriter =
     writer.writeMessage(
       27,
       f,
-      proto.protobuf_test_messages.proto2.TestAllTypesProto2.serializeBinaryToWriter
+      proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.serializeBinaryToWriter
     );
   }
   f = message.getRepeatedInt32List();
@@ -1865,7 +1865,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.serializeBinaryToWriter =
     writer.writeRepeatedMessage(
       48,
       f,
-      proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.serializeBinaryToWriter
+      proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.serializeBinaryToWriter
     );
   }
   f = message.getRepeatedForeignMessageList();
@@ -1873,7 +1873,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.serializeBinaryToWriter =
     writer.writeRepeatedMessage(
       49,
       f,
-      proto.protobuf_test_messages.proto2.ForeignMessageProto2.serializeBinaryToWriter
+      proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.serializeBinaryToWriter
     );
   }
   f = message.getRepeatedNestedEnumList();
@@ -2225,7 +2225,7 @@ jspb.internal.public_for_gencode.serializeMapToBinary(
     writer,
     jspb.BinaryWriter.prototype.writeInt32,
     jspb.BinaryWriter.prototype.writeMessage,
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.serializeBinaryToWriter);
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.serializeBinaryToWriter);
   }
   f = message.getMapBoolBoolMap(true);
   if (f && f.getLength() > 0) {
@@ -2262,7 +2262,7 @@ jspb.internal.public_for_gencode.serializeMapToBinary(
     writer,
     jspb.BinaryWriter.prototype.writeString,
     jspb.BinaryWriter.prototype.writeMessage,
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.serializeBinaryToWriter);
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.serializeBinaryToWriter);
   }
   f = message.getMapStringForeignMessageMap(true);
   if (f && f.getLength() > 0) {
@@ -2272,7 +2272,7 @@ jspb.internal.public_for_gencode.serializeMapToBinary(
     writer,
     jspb.BinaryWriter.prototype.writeString,
     jspb.BinaryWriter.prototype.writeMessage,
-    proto.protobuf_test_messages.proto2.ForeignMessageProto2.serializeBinaryToWriter);
+    proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.serializeBinaryToWriter);
   }
   f = message.getMapStringNestedEnumMap(true);
   if (f && f.getLength() > 0) {
@@ -2304,7 +2304,7 @@ jspb.internal.public_for_gencode.serializeMapToBinary(
     writer.writeMessage(
       112,
       f,
-      proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.serializeBinaryToWriter
+      proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.serializeBinaryToWriter
     );
   }
   f = /** @type {string} */ (jspb.Message.getField(message, 113));
@@ -2349,7 +2349,7 @@ jspb.internal.public_for_gencode.serializeMapToBinary(
       f
     );
   }
-  f = /** @type {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum} */ (jspb.Message.getField(message, 119));
+  f = /** @type {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum} */ (jspb.Message.getField(message, 119));
   if (f != null) {
     writer.writeEnum(
       119,
@@ -2361,7 +2361,7 @@ jspb.internal.public_for_gencode.serializeMapToBinary(
     writer.writeGroup(
       201,
       f,
-      proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.serializeBinaryToWriter
+      proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data.serializeBinaryToWriter
     );
   }
   f = message.getMultiWordGroupField();
@@ -2369,7 +2369,7 @@ jspb.internal.public_for_gencode.serializeMapToBinary(
     writer.writeGroup(
       204,
       f,
-      proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.serializeBinaryToWriter
+      proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField.serializeBinaryToWriter
     );
   }
   f = /** @type {number} */ (jspb.Message.getField(message, 241));
@@ -2608,18 +2608,18 @@ jspb.internal.public_for_gencode.serializeMapToBinary(
     writer.writeMessage(
       500,
       f,
-      proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.serializeBinaryToWriter
+      proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.serializeBinaryToWriter
     );
   }
   jspb.Message.serializeBinaryExtensions(message, writer,
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.extensionsBinary, proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getExtension);
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.extensionsBinary, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getExtension);
 };
 
 
 /**
  * @enum {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum = {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum = {
   FOO: 0,
   BAR: 1,
   BAZ: 2,
@@ -2642,8 +2642,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.toObject(opt_includeInstance, this);
 };
 
 
@@ -2652,14 +2652,14 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.prototype.t
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.toObject = function(includeInstance, msg) {
   var f, obj = {
 a: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-corecursive: (f = msg.getCorecursive()) && proto.protobuf_test_messages.proto2.TestAllTypesProto2.toObject(includeInstance, f)
+corecursive: (f = msg.getCorecursive()) && proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -2673,23 +2673,23 @@ corecursive: (f = msg.getCorecursive()) && proto.protobuf_test_messages.proto2.T
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage;
-  return proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage;
+  return proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2701,8 +2701,8 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.deserialize
       msg.setA(value);
       break;
     case 2:
-      var value = new proto.protobuf_test_messages.proto2.TestAllTypesProto2;
-      reader.readMessage(value,proto.protobuf_test_messages.proto2.TestAllTypesProto2.deserializeBinaryFromReader);
+      var value = new proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2;
+      reader.readMessage(value,proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.deserializeBinaryFromReader);
       msg.setCorecursive(value);
       break;
     default:
@@ -2718,9 +2718,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.deserialize
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2728,11 +2728,11 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.prototype.s
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = /** @type {number} */ (jspb.Message.getField(message, 1));
   if (f != null) {
@@ -2746,7 +2746,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.serializeBi
     writer.writeMessage(
       2,
       f,
-      proto.protobuf_test_messages.proto2.TestAllTypesProto2.serializeBinaryToWriter
+      proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.serializeBinaryToWriter
     );
   }
 };
@@ -2756,25 +2756,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.serializeBi
  * optional int32 a = 1;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.prototype.getA = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.prototype.getA = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.prototype.setA = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.prototype.setA = function(value) {
   return jspb.Message.setField(this, 1, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.prototype.clearA = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.prototype.clearA = function() {
   return jspb.Message.setField(this, 1, undefined);
 };
 
@@ -2783,35 +2783,35 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.prototype.c
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.prototype.hasA = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.prototype.hasA = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
 
 /**
  * optional TestAllTypesProto2 corecursive = 2;
- * @return {?proto.protobuf_test_messages.proto2.TestAllTypesProto2}
+ * @return {?proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.prototype.getCorecursive = function() {
-  return /** @type{?proto.protobuf_test_messages.proto2.TestAllTypesProto2} */ (
-    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.proto2.TestAllTypesProto2, 2));
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.prototype.getCorecursive = function() {
+  return /** @type{?proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} */ (
+    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2, 2));
 };
 
 
 /**
- * @param {?proto.protobuf_test_messages.proto2.TestAllTypesProto2|undefined} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage} returns this
+ * @param {?proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2|undefined} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage} returns this
 */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.prototype.setCorecursive = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.prototype.setCorecursive = function(value) {
   return jspb.Message.setWrapperField(this, 2, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.prototype.clearCorecursive = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.prototype.clearCorecursive = function() {
   return this.setCorecursive(undefined);
 };
 
@@ -2820,7 +2820,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.prototype.c
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.prototype.hasCorecursive = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage.prototype.hasCorecursive = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
@@ -2841,8 +2841,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data.toObject(opt_includeInstance, this);
 };
 
 
@@ -2851,11 +2851,11 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.prototype.toObject =
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data.toObject = function(includeInstance, msg) {
   var f, obj = {
 groupInt32: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
 groupUint32: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
@@ -2872,23 +2872,23 @@ groupUint32: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data;
-  return proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data;
+  return proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2916,9 +2916,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.deserializeBinaryFro
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2926,11 +2926,11 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.prototype.serializeB
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = /** @type {number} */ (jspb.Message.getField(message, 1));
   if (f != null) {
@@ -2953,25 +2953,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.serializeBinaryToWri
  * optional int32 group_int32 = 202;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.prototype.getGroupInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data.prototype.getGroupInt32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.prototype.setGroupInt32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data.prototype.setGroupInt32 = function(value) {
   return jspb.Message.setField(this, 1, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.prototype.clearGroupInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data.prototype.clearGroupInt32 = function() {
   return jspb.Message.setField(this, 1, undefined);
 };
 
@@ -2980,7 +2980,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.prototype.clearGroup
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.prototype.hasGroupInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data.prototype.hasGroupInt32 = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -2989,25 +2989,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.prototype.hasGroupIn
  * optional uint32 group_uint32 = 203;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.prototype.getGroupUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data.prototype.getGroupUint32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.prototype.setGroupUint32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data.prototype.setGroupUint32 = function(value) {
   return jspb.Message.setField(this, 2, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.prototype.clearGroupUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data.prototype.clearGroupUint32 = function() {
   return jspb.Message.setField(this, 2, undefined);
 };
 
@@ -3016,7 +3016,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.prototype.clearGroup
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.prototype.hasGroupUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data.prototype.hasGroupUint32 = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
@@ -3037,8 +3037,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField.toObject(opt_includeInstance, this);
 };
 
 
@@ -3047,11 +3047,11 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.proto
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField.toObject = function(includeInstance, msg) {
   var f, obj = {
 groupInt32: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
 groupUint32: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
@@ -3068,23 +3068,23 @@ groupUint32: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField;
-  return proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField;
+  return proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3112,9 +3112,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.deser
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3122,11 +3122,11 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.proto
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = /** @type {number} */ (jspb.Message.getField(message, 1));
   if (f != null) {
@@ -3149,25 +3149,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.seria
  * optional int32 group_int32 = 205;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.prototype.getGroupInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField.prototype.getGroupInt32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.prototype.setGroupInt32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField.prototype.setGroupInt32 = function(value) {
   return jspb.Message.setField(this, 1, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.prototype.clearGroupInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField.prototype.clearGroupInt32 = function() {
   return jspb.Message.setField(this, 1, undefined);
 };
 
@@ -3176,7 +3176,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.proto
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.prototype.hasGroupInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField.prototype.hasGroupInt32 = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -3185,25 +3185,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.proto
  * optional uint32 group_uint32 = 206;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.prototype.getGroupUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField.prototype.getGroupUint32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.prototype.setGroupUint32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField.prototype.setGroupUint32 = function(value) {
   return jspb.Message.setField(this, 2, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.prototype.clearGroupUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField.prototype.clearGroupUint32 = function() {
   return jspb.Message.setField(this, 2, undefined);
 };
 
@@ -3212,7 +3212,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.proto
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.prototype.hasGroupUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField.prototype.hasGroupUint32 = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
@@ -3233,8 +3233,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.toObject(opt_includeInstance, this);
 };
 
 
@@ -3243,17 +3243,17 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.prototy
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
 
   jspb.Message.toObjectExtension(/** @type {!jspb.Message} */ (msg), obj,
-      proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.extensions, proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.prototype.getExtension,
+      proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.extensions, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.prototype.getExtension,
       includeInstance);
   if (includeInstance) {
     obj.$jspbMessageInstance = msg;
@@ -3266,23 +3266,23 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.toObjec
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect;
-  return proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect;
+  return proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3291,9 +3291,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.deseria
     switch (field) {
     default:
       jspb.Message.readBinaryExtension(msg, reader,
-        proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.extensionsBinary,
-        proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.prototype.getExtension,
-        proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.prototype.setExtension);
+        proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.extensionsBinary,
+        proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.prototype.getExtension,
+        proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.prototype.setExtension);
       break;
     }
   }
@@ -3305,9 +3305,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.deseria
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3315,14 +3315,14 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.prototy
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   jspb.Message.serializeBinaryExtensions(message, writer,
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.extensionsBinary, proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.prototype.getExtension);
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.extensionsBinary, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.prototype.getExtension);
 };
 
 
@@ -3342,8 +3342,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.toObject(opt_includeInstance, this);
 };
 
 
@@ -3352,11 +3352,11 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtensio
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.toObject = function(includeInstance, msg) {
   var f, obj = {
 str: (f = jspb.Message.getField(msg, 25)) == null ? undefined : f
   };
@@ -3372,23 +3372,23 @@ str: (f = jspb.Message.getField(msg, 25)) == null ? undefined : f
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1;
-  return proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1;
+  return proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3412,9 +3412,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtensio
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3422,11 +3422,11 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtensio
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = /** @type {string} */ (jspb.Message.getField(message, 25));
   if (f != null) {
@@ -3442,50 +3442,50 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtensio
 /**
  * A tuple of {field number, class constructor} for the extension
  * field named `messageSetExtension`.
- * @type {!jspb.ExtensionFieldInfo<!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1>}
+ * @type {!jspb.ExtensionFieldInfo<!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension = new jspb.ExtensionFieldInfo(
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension = new jspb.ExtensionFieldInfo(
     1547769,
     {messageSetExtension: 0},
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1,
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1,
      /** @type {?function((boolean|undefined),!jspb.Message=): !Object} */ (
-         proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.toObject),
+         proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.toObject),
     0);
 
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.extensionsBinary[1547769] = new jspb.ExtensionFieldBinaryInfo(
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension,
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.extensionsBinary[1547769] = new jspb.ExtensionFieldBinaryInfo(
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension,
     jspb.BinaryReader.prototype.readMessage,
     jspb.BinaryWriter.prototype.writeMessageSet,
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.serializeBinaryToWriter,
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.deserializeBinaryFromReader,
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.serializeBinaryToWriter,
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.deserializeBinaryFromReader,
     false);
 // This registers the extension field with the extended class, so that
 // toObject() will function correctly.
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.extensions[1547769] = proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension;
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.extensions[1547769] = proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension;
 
 /**
  * optional string str = 25;
  * @return {string}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.prototype.getStr = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.prototype.getStr = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 25, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.prototype.setStr = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.prototype.setStr = function(value) {
   return jspb.Message.setField(this, 25, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.prototype.clearStr = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.prototype.clearStr = function() {
   return jspb.Message.setField(this, 25, undefined);
 };
 
@@ -3494,7 +3494,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtensio
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.prototype.hasStr = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.prototype.hasStr = function() {
   return jspb.Message.getField(this, 25) != null;
 };
 
@@ -3503,26 +3503,26 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtensio
 /**
  * A tuple of {field number, class constructor} for the extension
  * field named `messageSetExtension`.
- * @type {!jspb.ExtensionFieldInfo<!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1>}
+ * @type {!jspb.ExtensionFieldInfo<!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension = new jspb.ExtensionFieldInfo(
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension = new jspb.ExtensionFieldInfo(
     1547769,
     {messageSetExtension: 0},
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1,
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1,
      /** @type {?function((boolean|undefined),!jspb.Message=): !Object} */ (
-         proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.toObject),
+         proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.toObject),
     0);
 
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.extensionsBinary[1547769] = new jspb.ExtensionFieldBinaryInfo(
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension,
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.extensionsBinary[1547769] = new jspb.ExtensionFieldBinaryInfo(
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension,
     jspb.BinaryReader.prototype.readMessage,
     jspb.BinaryWriter.prototype.writeMessageSet,
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.serializeBinaryToWriter,
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.deserializeBinaryFromReader,
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.serializeBinaryToWriter,
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.deserializeBinaryFromReader,
     false);
 // This registers the extension field with the extended class, so that
 // toObject() will function correctly.
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.extensions[1547769] = proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension;
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.extensions[1547769] = proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.messageSetExtension;
 
 
 
@@ -3540,8 +3540,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.toObject(opt_includeInstance, this);
 };
 
 
@@ -3550,11 +3550,11 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtensio
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.toObject = function(includeInstance, msg) {
   var f, obj = {
 i: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f
   };
@@ -3570,23 +3570,23 @@ i: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2;
-  return proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2;
+  return proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3610,9 +3610,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtensio
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3620,11 +3620,11 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtensio
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = /** @type {number} */ (jspb.Message.getField(message, 9));
   if (f != null) {
@@ -3640,50 +3640,50 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtensio
 /**
  * A tuple of {field number, class constructor} for the extension
  * field named `messageSetExtension`.
- * @type {!jspb.ExtensionFieldInfo<!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2>}
+ * @type {!jspb.ExtensionFieldInfo<!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension = new jspb.ExtensionFieldInfo(
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension = new jspb.ExtensionFieldInfo(
     4135312,
     {messageSetExtension: 0},
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2,
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2,
      /** @type {?function((boolean|undefined),!jspb.Message=): !Object} */ (
-         proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.toObject),
+         proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.toObject),
     0);
 
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.extensionsBinary[4135312] = new jspb.ExtensionFieldBinaryInfo(
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension,
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.extensionsBinary[4135312] = new jspb.ExtensionFieldBinaryInfo(
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension,
     jspb.BinaryReader.prototype.readMessage,
     jspb.BinaryWriter.prototype.writeMessageSet,
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.serializeBinaryToWriter,
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.deserializeBinaryFromReader,
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.serializeBinaryToWriter,
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.deserializeBinaryFromReader,
     false);
 // This registers the extension field with the extended class, so that
 // toObject() will function correctly.
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.extensions[4135312] = proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension;
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.extensions[4135312] = proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension;
 
 /**
  * optional int32 i = 9;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.prototype.getI = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.prototype.getI = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.prototype.setI = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.prototype.setI = function(value) {
   return jspb.Message.setField(this, 9, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.prototype.clearI = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.prototype.clearI = function() {
   return jspb.Message.setField(this, 9, undefined);
 };
 
@@ -3692,7 +3692,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtensio
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.prototype.hasI = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.prototype.hasI = function() {
   return jspb.Message.getField(this, 9) != null;
 };
 
@@ -3701,26 +3701,26 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtensio
 /**
  * A tuple of {field number, class constructor} for the extension
  * field named `messageSetExtension`.
- * @type {!jspb.ExtensionFieldInfo<!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2>}
+ * @type {!jspb.ExtensionFieldInfo<!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension = new jspb.ExtensionFieldInfo(
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension = new jspb.ExtensionFieldInfo(
     4135312,
     {messageSetExtension: 0},
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2,
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2,
      /** @type {?function((boolean|undefined),!jspb.Message=): !Object} */ (
-         proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.toObject),
+         proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.toObject),
     0);
 
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.extensionsBinary[4135312] = new jspb.ExtensionFieldBinaryInfo(
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension,
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.extensionsBinary[4135312] = new jspb.ExtensionFieldBinaryInfo(
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension,
     jspb.BinaryReader.prototype.readMessage,
     jspb.BinaryWriter.prototype.writeMessageSet,
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.serializeBinaryToWriter,
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.deserializeBinaryFromReader,
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.serializeBinaryToWriter,
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.deserializeBinaryFromReader,
     false);
 // This registers the extension field with the extended class, so that
 // toObject() will function correctly.
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.extensions[4135312] = proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension;
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.extensions[4135312] = proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.messageSetExtension;
 
 
 /**
@@ -3731,22 +3731,22 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.extensi
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.oneofGroups_ = [[1,2]];
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.oneofGroups_ = [[1,2]];
 
 /**
  * @enum {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.OneofFieldCase = {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.OneofFieldCase = {
   ONEOF_FIELD_NOT_SET: 0,
   A: 1,
   B: 2
 };
 
 /**
- * @return {proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.OneofFieldCase}
+ * @return {proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.OneofFieldCase}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.prototype.getOneofFieldCase = function() {
-  return /** @type {proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.OneofFieldCase} */(jspb.Message.computeOneofCase(this, proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.oneofGroups_[0]));
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.prototype.getOneofFieldCase = function() {
+  return /** @type {proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.OneofFieldCase} */(jspb.Message.computeOneofCase(this, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.oneofGroups_[0]));
 };
 
 
@@ -3764,8 +3764,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.toObject(opt_includeInstance, this);
 };
 
 
@@ -3774,11 +3774,11 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.protot
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.toObject = function(includeInstance, msg) {
   var f, obj = {
 a: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
 b: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
@@ -3795,23 +3795,23 @@ b: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof;
-  return proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof;
+  return proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3839,9 +3839,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.deseri
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3849,11 +3849,11 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.protot
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = /** @type {number} */ (jspb.Message.getField(message, 1));
   if (f != null) {
@@ -3876,51 +3876,51 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.serial
 /**
  * A tuple of {field number, class constructor} for the extension
  * field named `extensionWithOneof`.
- * @type {!jspb.ExtensionFieldInfo<!proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof>}
+ * @type {!jspb.ExtensionFieldInfo<!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof = new jspb.ExtensionFieldInfo(
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof = new jspb.ExtensionFieldInfo(
     123456789,
     {extensionWithOneof: 0},
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof,
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof,
      /** @type {?function((boolean|undefined),!jspb.Message=): !Object} */ (
-         proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.toObject),
+         proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.toObject),
     0);
 
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.extensionsBinary[123456789] = new jspb.ExtensionFieldBinaryInfo(
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof,
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.extensionsBinary[123456789] = new jspb.ExtensionFieldBinaryInfo(
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof,
     jspb.BinaryReader.prototype.readMessage,
     jspb.BinaryWriter.prototype.writeMessageSet,
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.serializeBinaryToWriter,
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.deserializeBinaryFromReader,
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.serializeBinaryToWriter,
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.deserializeBinaryFromReader,
     false);
 // This registers the extension field with the extended class, so that
 // toObject() will function correctly.
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.extensions[123456789] = proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof;
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.extensions[123456789] = proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof;
 
 /**
  * optional int32 a = 1;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.prototype.getA = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.prototype.getA = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.prototype.setA = function(value) {
-  return jspb.Message.setOneofField(this, 1, proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.oneofGroups_[0], value);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.prototype.setA = function(value) {
+  return jspb.Message.setOneofField(this, 1, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.prototype.clearA = function() {
-  return jspb.Message.setOneofField(this, 1, proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.oneofGroups_[0], undefined);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.prototype.clearA = function() {
+  return jspb.Message.setOneofField(this, 1, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.oneofGroups_[0], undefined);
 };
 
 
@@ -3928,7 +3928,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.protot
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.prototype.hasA = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.prototype.hasA = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -3937,26 +3937,26 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.protot
  * optional int32 b = 2;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.prototype.getB = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.prototype.getB = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.prototype.setB = function(value) {
-  return jspb.Message.setOneofField(this, 2, proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.oneofGroups_[0], value);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.prototype.setB = function(value) {
+  return jspb.Message.setOneofField(this, 2, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.prototype.clearB = function() {
-  return jspb.Message.setOneofField(this, 2, proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.oneofGroups_[0], undefined);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.prototype.clearB = function() {
+  return jspb.Message.setOneofField(this, 2, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.oneofGroups_[0], undefined);
 };
 
 
@@ -3964,7 +3964,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.protot
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.prototype.hasB = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.prototype.hasB = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
@@ -3973,50 +3973,50 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.protot
 /**
  * A tuple of {field number, class constructor} for the extension
  * field named `extensionWithOneof`.
- * @type {!jspb.ExtensionFieldInfo<!proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof>}
+ * @type {!jspb.ExtensionFieldInfo<!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof = new jspb.ExtensionFieldInfo(
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof = new jspb.ExtensionFieldInfo(
     123456789,
     {extensionWithOneof: 0},
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof,
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof,
      /** @type {?function((boolean|undefined),!jspb.Message=): !Object} */ (
-         proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.toObject),
+         proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.toObject),
     0);
 
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.extensionsBinary[123456789] = new jspb.ExtensionFieldBinaryInfo(
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof,
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.extensionsBinary[123456789] = new jspb.ExtensionFieldBinaryInfo(
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof,
     jspb.BinaryReader.prototype.readMessage,
     jspb.BinaryWriter.prototype.writeMessageSet,
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.serializeBinaryToWriter,
-    proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.deserializeBinaryFromReader,
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.serializeBinaryToWriter,
+    proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.deserializeBinaryFromReader,
     false);
 // This registers the extension field with the extended class, so that
 // toObject() will function correctly.
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.extensions[123456789] = proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof;
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect.extensions[123456789] = proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.ExtensionWithOneof.extensionWithOneof;
 
 /**
  * optional int32 optional_int32 = 1;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOptionalInt32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOptionalInt32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOptionalInt32 = function(value) {
   return jspb.Message.setField(this, 1, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOptionalInt32 = function() {
   return jspb.Message.setField(this, 1, undefined);
 };
 
@@ -4025,7 +4025,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalIn
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOptionalInt32 = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -4034,25 +4034,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalInt3
  * optional int64 optional_int64 = 2;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalInt64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOptionalInt64 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOptionalInt64 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOptionalInt64 = function(value) {
   return jspb.Message.setField(this, 2, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalInt64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOptionalInt64 = function() {
   return jspb.Message.setField(this, 2, undefined);
 };
 
@@ -4061,7 +4061,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalIn
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalInt64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOptionalInt64 = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
@@ -4070,25 +4070,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalInt6
  * optional uint32 optional_uint32 = 3;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOptionalUint32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOptionalUint32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOptionalUint32 = function(value) {
   return jspb.Message.setField(this, 3, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOptionalUint32 = function() {
   return jspb.Message.setField(this, 3, undefined);
 };
 
@@ -4097,7 +4097,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalUi
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOptionalUint32 = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 
@@ -4106,25 +4106,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalUint
  * optional uint64 optional_uint64 = 4;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalUint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOptionalUint64 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOptionalUint64 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOptionalUint64 = function(value) {
   return jspb.Message.setField(this, 4, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalUint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOptionalUint64 = function() {
   return jspb.Message.setField(this, 4, undefined);
 };
 
@@ -4133,7 +4133,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalUi
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalUint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOptionalUint64 = function() {
   return jspb.Message.getField(this, 4) != null;
 };
 
@@ -4142,25 +4142,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalUint
  * optional sint32 optional_sint32 = 5;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalSint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOptionalSint32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOptionalSint32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOptionalSint32 = function(value) {
   return jspb.Message.setField(this, 5, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalSint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOptionalSint32 = function() {
   return jspb.Message.setField(this, 5, undefined);
 };
 
@@ -4169,7 +4169,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalSi
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalSint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOptionalSint32 = function() {
   return jspb.Message.getField(this, 5) != null;
 };
 
@@ -4178,25 +4178,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalSint
  * optional sint64 optional_sint64 = 6;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalSint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOptionalSint64 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOptionalSint64 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOptionalSint64 = function(value) {
   return jspb.Message.setField(this, 6, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalSint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOptionalSint64 = function() {
   return jspb.Message.setField(this, 6, undefined);
 };
 
@@ -4205,7 +4205,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalSi
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalSint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOptionalSint64 = function() {
   return jspb.Message.getField(this, 6) != null;
 };
 
@@ -4214,25 +4214,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalSint
  * optional fixed32 optional_fixed32 = 7;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalFixed32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOptionalFixed32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOptionalFixed32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOptionalFixed32 = function(value) {
   return jspb.Message.setField(this, 7, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalFixed32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOptionalFixed32 = function() {
   return jspb.Message.setField(this, 7, undefined);
 };
 
@@ -4241,7 +4241,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalFi
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalFixed32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOptionalFixed32 = function() {
   return jspb.Message.getField(this, 7) != null;
 };
 
@@ -4250,25 +4250,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalFixe
  * optional fixed64 optional_fixed64 = 8;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalFixed64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOptionalFixed64 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 8, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOptionalFixed64 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOptionalFixed64 = function(value) {
   return jspb.Message.setField(this, 8, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalFixed64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOptionalFixed64 = function() {
   return jspb.Message.setField(this, 8, undefined);
 };
 
@@ -4277,7 +4277,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalFi
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalFixed64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOptionalFixed64 = function() {
   return jspb.Message.getField(this, 8) != null;
 };
 
@@ -4286,25 +4286,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalFixe
  * optional sfixed32 optional_sfixed32 = 9;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalSfixed32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOptionalSfixed32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOptionalSfixed32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOptionalSfixed32 = function(value) {
   return jspb.Message.setField(this, 9, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalSfixed32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOptionalSfixed32 = function() {
   return jspb.Message.setField(this, 9, undefined);
 };
 
@@ -4313,7 +4313,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalSf
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalSfixed32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOptionalSfixed32 = function() {
   return jspb.Message.getField(this, 9) != null;
 };
 
@@ -4322,25 +4322,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalSfix
  * optional sfixed64 optional_sfixed64 = 10;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalSfixed64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOptionalSfixed64 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 10, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOptionalSfixed64 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOptionalSfixed64 = function(value) {
   return jspb.Message.setField(this, 10, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalSfixed64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOptionalSfixed64 = function() {
   return jspb.Message.setField(this, 10, undefined);
 };
 
@@ -4349,7 +4349,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalSf
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalSfixed64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOptionalSfixed64 = function() {
   return jspb.Message.getField(this, 10) != null;
 };
 
@@ -4358,25 +4358,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalSfix
  * optional float optional_float = 11;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalFloat = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOptionalFloat = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 11, 0.0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOptionalFloat = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOptionalFloat = function(value) {
   return jspb.Message.setField(this, 11, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalFloat = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOptionalFloat = function() {
   return jspb.Message.setField(this, 11, undefined);
 };
 
@@ -4385,7 +4385,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalFl
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalFloat = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOptionalFloat = function() {
   return jspb.Message.getField(this, 11) != null;
 };
 
@@ -4394,25 +4394,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalFloa
  * optional double optional_double = 12;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalDouble = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOptionalDouble = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 12, 0.0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOptionalDouble = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOptionalDouble = function(value) {
   return jspb.Message.setField(this, 12, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalDouble = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOptionalDouble = function() {
   return jspb.Message.setField(this, 12, undefined);
 };
 
@@ -4421,7 +4421,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalDo
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalDouble = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOptionalDouble = function() {
   return jspb.Message.getField(this, 12) != null;
 };
 
@@ -4430,25 +4430,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalDoub
  * optional bool optional_bool = 13;
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalBool = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOptionalBool = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 13, false));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOptionalBool = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOptionalBool = function(value) {
   return jspb.Message.setField(this, 13, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalBool = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOptionalBool = function() {
   return jspb.Message.setField(this, 13, undefined);
 };
 
@@ -4457,7 +4457,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalBo
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalBool = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOptionalBool = function() {
   return jspb.Message.getField(this, 13) != null;
 };
 
@@ -4466,25 +4466,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalBool
  * optional string optional_string = 14;
  * @return {string}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalString = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOptionalString = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 14, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOptionalString = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOptionalString = function(value) {
   return jspb.Message.setField(this, 14, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalString = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOptionalString = function() {
   return jspb.Message.setField(this, 14, undefined);
 };
 
@@ -4493,7 +4493,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalSt
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalString = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOptionalString = function() {
   return jspb.Message.getField(this, 14) != null;
 };
 
@@ -4502,7 +4502,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalStri
  * optional bytes optional_bytes = 15;
  * @return {!(string|Uint8Array)}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalBytes = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOptionalBytes = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 15, ""));
 };
 
@@ -4512,7 +4512,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalByte
  * This is a type-conversion wrapper around `getOptionalBytes()`
  * @return {string}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalBytes_asB64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOptionalBytes_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getOptionalBytes()));
 };
@@ -4525,7 +4525,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalByte
  * This is a type-conversion wrapper around `getOptionalBytes()`
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalBytes_asU8 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOptionalBytes_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getOptionalBytes()));
 };
@@ -4533,18 +4533,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalByte
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOptionalBytes = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOptionalBytes = function(value) {
   return jspb.Message.setField(this, 15, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalBytes = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOptionalBytes = function() {
   return jspb.Message.setField(this, 15, undefined);
 };
 
@@ -4553,35 +4553,35 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalBy
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalBytes = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOptionalBytes = function() {
   return jspb.Message.getField(this, 15) != null;
 };
 
 
 /**
  * optional NestedMessage optional_nested_message = 18;
- * @return {?proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage}
+ * @return {?proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalNestedMessage = function() {
-  return /** @type{?proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage} */ (
-    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage, 18));
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOptionalNestedMessage = function() {
+  return /** @type{?proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage} */ (
+    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage, 18));
 };
 
 
 /**
- * @param {?proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage|undefined} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @param {?proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage|undefined} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
 */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOptionalNestedMessage = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOptionalNestedMessage = function(value) {
   return jspb.Message.setWrapperField(this, 18, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalNestedMessage = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOptionalNestedMessage = function() {
   return this.setOptionalNestedMessage(undefined);
 };
 
@@ -4590,35 +4590,35 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalNe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalNestedMessage = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOptionalNestedMessage = function() {
   return jspb.Message.getField(this, 18) != null;
 };
 
 
 /**
  * optional ForeignMessageProto2 optional_foreign_message = 19;
- * @return {?proto.protobuf_test_messages.proto2.ForeignMessageProto2}
+ * @return {?proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalForeignMessage = function() {
-  return /** @type{?proto.protobuf_test_messages.proto2.ForeignMessageProto2} */ (
-    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.proto2.ForeignMessageProto2, 19));
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOptionalForeignMessage = function() {
+  return /** @type{?proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2} */ (
+    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2, 19));
 };
 
 
 /**
- * @param {?proto.protobuf_test_messages.proto2.ForeignMessageProto2|undefined} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @param {?proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2|undefined} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
 */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOptionalForeignMessage = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOptionalForeignMessage = function(value) {
   return jspb.Message.setWrapperField(this, 19, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalForeignMessage = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOptionalForeignMessage = function() {
   return this.setOptionalForeignMessage(undefined);
 };
 
@@ -4627,34 +4627,34 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalFo
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalForeignMessage = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOptionalForeignMessage = function() {
   return jspb.Message.getField(this, 19) != null;
 };
 
 
 /**
  * optional NestedEnum optional_nested_enum = 21;
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalNestedEnum = function() {
-  return /** @type {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum} */ (jspb.Message.getFieldWithDefault(this, 21, 0));
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOptionalNestedEnum = function() {
+  return /** @type {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum} */ (jspb.Message.getFieldWithDefault(this, 21, 0));
 };
 
 
 /**
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOptionalNestedEnum = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOptionalNestedEnum = function(value) {
   return jspb.Message.setField(this, 21, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalNestedEnum = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOptionalNestedEnum = function() {
   return jspb.Message.setField(this, 21, undefined);
 };
 
@@ -4663,34 +4663,34 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalNe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalNestedEnum = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOptionalNestedEnum = function() {
   return jspb.Message.getField(this, 21) != null;
 };
 
 
 /**
  * optional ForeignEnumProto2 optional_foreign_enum = 22;
- * @return {!proto.protobuf_test_messages.proto2.ForeignEnumProto2}
+ * @return {!proto.protobuf_test_messages.editions.proto2.ForeignEnumProto2}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalForeignEnum = function() {
-  return /** @type {!proto.protobuf_test_messages.proto2.ForeignEnumProto2} */ (jspb.Message.getFieldWithDefault(this, 22, 0));
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOptionalForeignEnum = function() {
+  return /** @type {!proto.protobuf_test_messages.editions.proto2.ForeignEnumProto2} */ (jspb.Message.getFieldWithDefault(this, 22, 0));
 };
 
 
 /**
- * @param {!proto.protobuf_test_messages.proto2.ForeignEnumProto2} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @param {!proto.protobuf_test_messages.editions.proto2.ForeignEnumProto2} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOptionalForeignEnum = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOptionalForeignEnum = function(value) {
   return jspb.Message.setField(this, 22, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalForeignEnum = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOptionalForeignEnum = function() {
   return jspb.Message.setField(this, 22, undefined);
 };
 
@@ -4699,7 +4699,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalFo
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalForeignEnum = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOptionalForeignEnum = function() {
   return jspb.Message.getField(this, 22) != null;
 };
 
@@ -4708,25 +4708,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalFore
  * optional string optional_string_piece = 24;
  * @return {string}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalStringPiece = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOptionalStringPiece = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 24, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOptionalStringPiece = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOptionalStringPiece = function(value) {
   return jspb.Message.setField(this, 24, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalStringPiece = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOptionalStringPiece = function() {
   return jspb.Message.setField(this, 24, undefined);
 };
 
@@ -4735,7 +4735,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalSt
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalStringPiece = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOptionalStringPiece = function() {
   return jspb.Message.getField(this, 24) != null;
 };
 
@@ -4744,25 +4744,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalStri
  * optional string optional_cord = 25;
  * @return {string}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOptionalCord = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOptionalCord = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 25, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOptionalCord = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOptionalCord = function(value) {
   return jspb.Message.setField(this, 25, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalCord = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOptionalCord = function() {
   return jspb.Message.setField(this, 25, undefined);
 };
 
@@ -4771,35 +4771,35 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOptionalCo
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOptionalCord = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOptionalCord = function() {
   return jspb.Message.getField(this, 25) != null;
 };
 
 
 /**
  * optional TestAllTypesProto2 recursive_message = 27;
- * @return {?proto.protobuf_test_messages.proto2.TestAllTypesProto2}
+ * @return {?proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRecursiveMessage = function() {
-  return /** @type{?proto.protobuf_test_messages.proto2.TestAllTypesProto2} */ (
-    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.proto2.TestAllTypesProto2, 27));
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getRecursiveMessage = function() {
+  return /** @type{?proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} */ (
+    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2, 27));
 };
 
 
 /**
- * @param {?proto.protobuf_test_messages.proto2.TestAllTypesProto2|undefined} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @param {?proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2|undefined} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
 */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRecursiveMessage = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setRecursiveMessage = function(value) {
   return jspb.Message.setWrapperField(this, 27, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRecursiveMessage = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearRecursiveMessage = function() {
   return this.setRecursiveMessage(undefined);
 };
 
@@ -4808,7 +4808,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRecursiveM
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasRecursiveMessage = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasRecursiveMessage = function() {
   return jspb.Message.getField(this, 27) != null;
 };
 
@@ -4817,16 +4817,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasRecursiveMes
  * repeated int32 repeated_int32 = 31;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedInt32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getRepeatedInt32List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 31));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedInt32List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setRepeatedInt32List = function(value) {
   return jspb.Message.setField(this, 31, value || []);
 };
 
@@ -4834,18 +4834,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedInt3
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addRepeatedInt32 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addRepeatedInt32 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 31, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedInt32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearRepeatedInt32List = function() {
   return this.setRepeatedInt32List([]);
 };
 
@@ -4854,16 +4854,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedIn
  * repeated int64 repeated_int64 = 32;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedInt64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getRepeatedInt64List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 32));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedInt64List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setRepeatedInt64List = function(value) {
   return jspb.Message.setField(this, 32, value || []);
 };
 
@@ -4871,18 +4871,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedInt6
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addRepeatedInt64 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addRepeatedInt64 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 32, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedInt64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearRepeatedInt64List = function() {
   return this.setRepeatedInt64List([]);
 };
 
@@ -4891,16 +4891,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedIn
  * repeated uint32 repeated_uint32 = 33;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedUint32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getRepeatedUint32List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 33));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedUint32List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setRepeatedUint32List = function(value) {
   return jspb.Message.setField(this, 33, value || []);
 };
 
@@ -4908,18 +4908,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedUint
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addRepeatedUint32 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addRepeatedUint32 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 33, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedUint32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearRepeatedUint32List = function() {
   return this.setRepeatedUint32List([]);
 };
 
@@ -4928,16 +4928,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedUi
  * repeated uint64 repeated_uint64 = 34;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedUint64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getRepeatedUint64List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 34));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedUint64List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setRepeatedUint64List = function(value) {
   return jspb.Message.setField(this, 34, value || []);
 };
 
@@ -4945,18 +4945,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedUint
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addRepeatedUint64 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addRepeatedUint64 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 34, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedUint64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearRepeatedUint64List = function() {
   return this.setRepeatedUint64List([]);
 };
 
@@ -4965,16 +4965,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedUi
  * repeated sint32 repeated_sint32 = 35;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedSint32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getRepeatedSint32List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 35));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedSint32List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setRepeatedSint32List = function(value) {
   return jspb.Message.setField(this, 35, value || []);
 };
 
@@ -4982,18 +4982,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedSint
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addRepeatedSint32 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addRepeatedSint32 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 35, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedSint32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearRepeatedSint32List = function() {
   return this.setRepeatedSint32List([]);
 };
 
@@ -5002,16 +5002,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedSi
  * repeated sint64 repeated_sint64 = 36;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedSint64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getRepeatedSint64List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 36));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedSint64List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setRepeatedSint64List = function(value) {
   return jspb.Message.setField(this, 36, value || []);
 };
 
@@ -5019,18 +5019,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedSint
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addRepeatedSint64 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addRepeatedSint64 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 36, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedSint64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearRepeatedSint64List = function() {
   return this.setRepeatedSint64List([]);
 };
 
@@ -5039,16 +5039,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedSi
  * repeated fixed32 repeated_fixed32 = 37;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedFixed32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getRepeatedFixed32List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 37));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedFixed32List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setRepeatedFixed32List = function(value) {
   return jspb.Message.setField(this, 37, value || []);
 };
 
@@ -5056,18 +5056,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedFixe
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addRepeatedFixed32 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addRepeatedFixed32 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 37, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedFixed32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearRepeatedFixed32List = function() {
   return this.setRepeatedFixed32List([]);
 };
 
@@ -5076,16 +5076,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedFi
  * repeated fixed64 repeated_fixed64 = 38;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedFixed64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getRepeatedFixed64List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 38));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedFixed64List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setRepeatedFixed64List = function(value) {
   return jspb.Message.setField(this, 38, value || []);
 };
 
@@ -5093,18 +5093,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedFixe
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addRepeatedFixed64 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addRepeatedFixed64 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 38, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedFixed64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearRepeatedFixed64List = function() {
   return this.setRepeatedFixed64List([]);
 };
 
@@ -5113,16 +5113,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedFi
  * repeated sfixed32 repeated_sfixed32 = 39;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedSfixed32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getRepeatedSfixed32List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 39));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedSfixed32List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setRepeatedSfixed32List = function(value) {
   return jspb.Message.setField(this, 39, value || []);
 };
 
@@ -5130,18 +5130,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedSfix
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addRepeatedSfixed32 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addRepeatedSfixed32 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 39, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedSfixed32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearRepeatedSfixed32List = function() {
   return this.setRepeatedSfixed32List([]);
 };
 
@@ -5150,16 +5150,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedSf
  * repeated sfixed64 repeated_sfixed64 = 40;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedSfixed64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getRepeatedSfixed64List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 40));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedSfixed64List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setRepeatedSfixed64List = function(value) {
   return jspb.Message.setField(this, 40, value || []);
 };
 
@@ -5167,18 +5167,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedSfix
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addRepeatedSfixed64 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addRepeatedSfixed64 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 40, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedSfixed64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearRepeatedSfixed64List = function() {
   return this.setRepeatedSfixed64List([]);
 };
 
@@ -5187,16 +5187,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedSf
  * repeated float repeated_float = 41;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedFloatList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getRepeatedFloatList = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 41));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedFloatList = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setRepeatedFloatList = function(value) {
   return jspb.Message.setField(this, 41, value || []);
 };
 
@@ -5204,18 +5204,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedFloa
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addRepeatedFloat = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addRepeatedFloat = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 41, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedFloatList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearRepeatedFloatList = function() {
   return this.setRepeatedFloatList([]);
 };
 
@@ -5224,16 +5224,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedFl
  * repeated double repeated_double = 42;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedDoubleList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getRepeatedDoubleList = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 42));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedDoubleList = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setRepeatedDoubleList = function(value) {
   return jspb.Message.setField(this, 42, value || []);
 };
 
@@ -5241,18 +5241,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedDoub
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addRepeatedDouble = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addRepeatedDouble = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 42, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedDoubleList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearRepeatedDoubleList = function() {
   return this.setRepeatedDoubleList([]);
 };
 
@@ -5261,16 +5261,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedDo
  * repeated bool repeated_bool = 43;
  * @return {!Array<boolean>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedBoolList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getRepeatedBoolList = function() {
   return /** @type {!Array<boolean>} */ (jspb.Message.getRepeatedBooleanField(this, 43));
 };
 
 
 /**
  * @param {!Array<boolean>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedBoolList = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setRepeatedBoolList = function(value) {
   return jspb.Message.setField(this, 43, value || []);
 };
 
@@ -5278,18 +5278,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedBool
 /**
  * @param {boolean} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addRepeatedBool = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addRepeatedBool = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 43, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedBoolList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearRepeatedBoolList = function() {
   return this.setRepeatedBoolList([]);
 };
 
@@ -5298,16 +5298,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedBo
  * repeated string repeated_string = 44;
  * @return {!Array<string>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedStringList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getRepeatedStringList = function() {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 44));
 };
 
 
 /**
  * @param {!Array<string>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedStringList = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setRepeatedStringList = function(value) {
   return jspb.Message.setField(this, 44, value || []);
 };
 
@@ -5315,18 +5315,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedStri
 /**
  * @param {string} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addRepeatedString = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addRepeatedString = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 44, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedStringList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearRepeatedStringList = function() {
   return this.setRepeatedStringList([]);
 };
 
@@ -5335,7 +5335,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedSt
  * repeated bytes repeated_bytes = 45;
  * @return {!(Array<!Uint8Array>|Array<string>)}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedBytesList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getRepeatedBytesList = function() {
   return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (jspb.Message.getRepeatedField(this, 45));
 };
 
@@ -5345,7 +5345,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedByte
  * This is a type-conversion wrapper around `getRepeatedBytesList()`
  * @return {!Array<string>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedBytesList_asB64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getRepeatedBytesList_asB64 = function() {
   return /** @type {!Array<string>} */ (jspb.Message.bytesListAsB64(
       this.getRepeatedBytesList()));
 };
@@ -5358,7 +5358,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedByte
  * This is a type-conversion wrapper around `getRepeatedBytesList()`
  * @return {!Array<!Uint8Array>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedBytesList_asU8 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getRepeatedBytesList_asU8 = function() {
   return /** @type {!Array<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
       this.getRepeatedBytesList()));
 };
@@ -5366,9 +5366,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedByte
 
 /**
  * @param {!(Array<!Uint8Array>|Array<string>)} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedBytesList = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setRepeatedBytesList = function(value) {
   return jspb.Message.setField(this, 45, value || []);
 };
 
@@ -5376,168 +5376,168 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedByte
 /**
  * @param {!(string|Uint8Array)} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addRepeatedBytes = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addRepeatedBytes = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 45, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedBytesList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearRepeatedBytesList = function() {
   return this.setRepeatedBytesList([]);
 };
 
 
 /**
  * repeated NestedMessage repeated_nested_message = 48;
- * @return {!Array<!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage>}
+ * @return {!Array<!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedNestedMessageList = function() {
-  return /** @type{!Array<!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage, 48));
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getRepeatedNestedMessageList = function() {
+  return /** @type{!Array<!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage, 48));
 };
 
 
 /**
- * @param {!Array<!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @param {!Array<!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage>} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
 */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedNestedMessageList = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setRepeatedNestedMessageList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 48, value);
 };
 
 
 /**
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage=} opt_value
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage=} opt_value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addRepeatedNestedMessage = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 48, opt_value, proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage, opt_index);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addRepeatedNestedMessage = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 48, opt_value, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedNestedMessageList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearRepeatedNestedMessageList = function() {
   return this.setRepeatedNestedMessageList([]);
 };
 
 
 /**
  * repeated ForeignMessageProto2 repeated_foreign_message = 49;
- * @return {!Array<!proto.protobuf_test_messages.proto2.ForeignMessageProto2>}
+ * @return {!Array<!proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedForeignMessageList = function() {
-  return /** @type{!Array<!proto.protobuf_test_messages.proto2.ForeignMessageProto2>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.protobuf_test_messages.proto2.ForeignMessageProto2, 49));
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getRepeatedForeignMessageList = function() {
+  return /** @type{!Array<!proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2, 49));
 };
 
 
 /**
- * @param {!Array<!proto.protobuf_test_messages.proto2.ForeignMessageProto2>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @param {!Array<!proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2>} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
 */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedForeignMessageList = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setRepeatedForeignMessageList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 49, value);
 };
 
 
 /**
- * @param {!proto.protobuf_test_messages.proto2.ForeignMessageProto2=} opt_value
+ * @param {!proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2=} opt_value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.ForeignMessageProto2}
+ * @return {!proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addRepeatedForeignMessage = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 49, opt_value, proto.protobuf_test_messages.proto2.ForeignMessageProto2, opt_index);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addRepeatedForeignMessage = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 49, opt_value, proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedForeignMessageList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearRepeatedForeignMessageList = function() {
   return this.setRepeatedForeignMessageList([]);
 };
 
 
 /**
  * repeated NestedEnum repeated_nested_enum = 51;
- * @return {!Array<!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum>}
+ * @return {!Array<!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedNestedEnumList = function() {
-  return /** @type {!Array<!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum>} */ (jspb.Message.getRepeatedField(this, 51));
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getRepeatedNestedEnumList = function() {
+  return /** @type {!Array<!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum>} */ (jspb.Message.getRepeatedField(this, 51));
 };
 
 
 /**
- * @param {!Array<!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @param {!Array<!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum>} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedNestedEnumList = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setRepeatedNestedEnumList = function(value) {
   return jspb.Message.setField(this, 51, value || []);
 };
 
 
 /**
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum} value
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addRepeatedNestedEnum = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addRepeatedNestedEnum = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 51, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedNestedEnumList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearRepeatedNestedEnumList = function() {
   return this.setRepeatedNestedEnumList([]);
 };
 
 
 /**
  * repeated ForeignEnumProto2 repeated_foreign_enum = 52;
- * @return {!Array<!proto.protobuf_test_messages.proto2.ForeignEnumProto2>}
+ * @return {!Array<!proto.protobuf_test_messages.editions.proto2.ForeignEnumProto2>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedForeignEnumList = function() {
-  return /** @type {!Array<!proto.protobuf_test_messages.proto2.ForeignEnumProto2>} */ (jspb.Message.getRepeatedField(this, 52));
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getRepeatedForeignEnumList = function() {
+  return /** @type {!Array<!proto.protobuf_test_messages.editions.proto2.ForeignEnumProto2>} */ (jspb.Message.getRepeatedField(this, 52));
 };
 
 
 /**
- * @param {!Array<!proto.protobuf_test_messages.proto2.ForeignEnumProto2>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @param {!Array<!proto.protobuf_test_messages.editions.proto2.ForeignEnumProto2>} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedForeignEnumList = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setRepeatedForeignEnumList = function(value) {
   return jspb.Message.setField(this, 52, value || []);
 };
 
 
 /**
- * @param {!proto.protobuf_test_messages.proto2.ForeignEnumProto2} value
+ * @param {!proto.protobuf_test_messages.editions.proto2.ForeignEnumProto2} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addRepeatedForeignEnum = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addRepeatedForeignEnum = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 52, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedForeignEnumList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearRepeatedForeignEnumList = function() {
   return this.setRepeatedForeignEnumList([]);
 };
 
@@ -5546,16 +5546,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedFo
  * repeated string repeated_string_piece = 54;
  * @return {!Array<string>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedStringPieceList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getRepeatedStringPieceList = function() {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 54));
 };
 
 
 /**
  * @param {!Array<string>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedStringPieceList = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setRepeatedStringPieceList = function(value) {
   return jspb.Message.setField(this, 54, value || []);
 };
 
@@ -5563,18 +5563,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedStri
 /**
  * @param {string} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addRepeatedStringPiece = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addRepeatedStringPiece = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 54, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedStringPieceList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearRepeatedStringPieceList = function() {
   return this.setRepeatedStringPieceList([]);
 };
 
@@ -5583,16 +5583,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedSt
  * repeated string repeated_cord = 55;
  * @return {!Array<string>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getRepeatedCordList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getRepeatedCordList = function() {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 55));
 };
 
 
 /**
  * @param {!Array<string>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedCordList = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setRepeatedCordList = function(value) {
   return jspb.Message.setField(this, 55, value || []);
 };
 
@@ -5600,18 +5600,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setRepeatedCord
 /**
  * @param {string} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addRepeatedCord = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addRepeatedCord = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 55, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedCordList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearRepeatedCordList = function() {
   return this.setRepeatedCordList([]);
 };
 
@@ -5620,16 +5620,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearRepeatedCo
  * repeated int32 packed_int32 = 75;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getPackedInt32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getPackedInt32List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 75));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedInt32List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setPackedInt32List = function(value) {
   return jspb.Message.setField(this, 75, value || []);
 };
 
@@ -5637,18 +5637,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedInt32L
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addPackedInt32 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addPackedInt32 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 75, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedInt32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearPackedInt32List = function() {
   return this.setPackedInt32List([]);
 };
 
@@ -5657,16 +5657,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedInt3
  * repeated int64 packed_int64 = 76;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getPackedInt64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getPackedInt64List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 76));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedInt64List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setPackedInt64List = function(value) {
   return jspb.Message.setField(this, 76, value || []);
 };
 
@@ -5674,18 +5674,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedInt64L
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addPackedInt64 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addPackedInt64 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 76, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedInt64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearPackedInt64List = function() {
   return this.setPackedInt64List([]);
 };
 
@@ -5694,16 +5694,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedInt6
  * repeated uint32 packed_uint32 = 77;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getPackedUint32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getPackedUint32List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 77));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedUint32List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setPackedUint32List = function(value) {
   return jspb.Message.setField(this, 77, value || []);
 };
 
@@ -5711,18 +5711,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedUint32
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addPackedUint32 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addPackedUint32 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 77, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedUint32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearPackedUint32List = function() {
   return this.setPackedUint32List([]);
 };
 
@@ -5731,16 +5731,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedUint
  * repeated uint64 packed_uint64 = 78;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getPackedUint64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getPackedUint64List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 78));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedUint64List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setPackedUint64List = function(value) {
   return jspb.Message.setField(this, 78, value || []);
 };
 
@@ -5748,18 +5748,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedUint64
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addPackedUint64 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addPackedUint64 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 78, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedUint64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearPackedUint64List = function() {
   return this.setPackedUint64List([]);
 };
 
@@ -5768,16 +5768,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedUint
  * repeated sint32 packed_sint32 = 79;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getPackedSint32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getPackedSint32List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 79));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedSint32List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setPackedSint32List = function(value) {
   return jspb.Message.setField(this, 79, value || []);
 };
 
@@ -5785,18 +5785,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedSint32
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addPackedSint32 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addPackedSint32 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 79, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedSint32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearPackedSint32List = function() {
   return this.setPackedSint32List([]);
 };
 
@@ -5805,16 +5805,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedSint
  * repeated sint64 packed_sint64 = 80;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getPackedSint64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getPackedSint64List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 80));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedSint64List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setPackedSint64List = function(value) {
   return jspb.Message.setField(this, 80, value || []);
 };
 
@@ -5822,18 +5822,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedSint64
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addPackedSint64 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addPackedSint64 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 80, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedSint64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearPackedSint64List = function() {
   return this.setPackedSint64List([]);
 };
 
@@ -5842,16 +5842,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedSint
  * repeated fixed32 packed_fixed32 = 81;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getPackedFixed32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getPackedFixed32List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 81));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedFixed32List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setPackedFixed32List = function(value) {
   return jspb.Message.setField(this, 81, value || []);
 };
 
@@ -5859,18 +5859,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedFixed3
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addPackedFixed32 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addPackedFixed32 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 81, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedFixed32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearPackedFixed32List = function() {
   return this.setPackedFixed32List([]);
 };
 
@@ -5879,16 +5879,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedFixe
  * repeated fixed64 packed_fixed64 = 82;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getPackedFixed64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getPackedFixed64List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 82));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedFixed64List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setPackedFixed64List = function(value) {
   return jspb.Message.setField(this, 82, value || []);
 };
 
@@ -5896,18 +5896,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedFixed6
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addPackedFixed64 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addPackedFixed64 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 82, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedFixed64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearPackedFixed64List = function() {
   return this.setPackedFixed64List([]);
 };
 
@@ -5916,16 +5916,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedFixe
  * repeated sfixed32 packed_sfixed32 = 83;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getPackedSfixed32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getPackedSfixed32List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 83));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedSfixed32List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setPackedSfixed32List = function(value) {
   return jspb.Message.setField(this, 83, value || []);
 };
 
@@ -5933,18 +5933,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedSfixed
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addPackedSfixed32 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addPackedSfixed32 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 83, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedSfixed32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearPackedSfixed32List = function() {
   return this.setPackedSfixed32List([]);
 };
 
@@ -5953,16 +5953,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedSfix
  * repeated sfixed64 packed_sfixed64 = 84;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getPackedSfixed64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getPackedSfixed64List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 84));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedSfixed64List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setPackedSfixed64List = function(value) {
   return jspb.Message.setField(this, 84, value || []);
 };
 
@@ -5970,18 +5970,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedSfixed
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addPackedSfixed64 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addPackedSfixed64 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 84, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedSfixed64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearPackedSfixed64List = function() {
   return this.setPackedSfixed64List([]);
 };
 
@@ -5990,16 +5990,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedSfix
  * repeated float packed_float = 85;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getPackedFloatList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getPackedFloatList = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 85));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedFloatList = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setPackedFloatList = function(value) {
   return jspb.Message.setField(this, 85, value || []);
 };
 
@@ -6007,18 +6007,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedFloatL
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addPackedFloat = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addPackedFloat = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 85, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedFloatList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearPackedFloatList = function() {
   return this.setPackedFloatList([]);
 };
 
@@ -6027,16 +6027,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedFloa
  * repeated double packed_double = 86;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getPackedDoubleList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getPackedDoubleList = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 86));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedDoubleList = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setPackedDoubleList = function(value) {
   return jspb.Message.setField(this, 86, value || []);
 };
 
@@ -6044,18 +6044,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedDouble
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addPackedDouble = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addPackedDouble = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 86, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedDoubleList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearPackedDoubleList = function() {
   return this.setPackedDoubleList([]);
 };
 
@@ -6064,16 +6064,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedDoub
  * repeated bool packed_bool = 87;
  * @return {!Array<boolean>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getPackedBoolList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getPackedBoolList = function() {
   return /** @type {!Array<boolean>} */ (jspb.Message.getRepeatedBooleanField(this, 87));
 };
 
 
 /**
  * @param {!Array<boolean>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedBoolList = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setPackedBoolList = function(value) {
   return jspb.Message.setField(this, 87, value || []);
 };
 
@@ -6081,55 +6081,55 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedBoolLi
 /**
  * @param {boolean} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addPackedBool = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addPackedBool = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 87, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedBoolList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearPackedBoolList = function() {
   return this.setPackedBoolList([]);
 };
 
 
 /**
  * repeated NestedEnum packed_nested_enum = 88;
- * @return {!Array<!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum>}
+ * @return {!Array<!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getPackedNestedEnumList = function() {
-  return /** @type {!Array<!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum>} */ (jspb.Message.getRepeatedField(this, 88));
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getPackedNestedEnumList = function() {
+  return /** @type {!Array<!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum>} */ (jspb.Message.getRepeatedField(this, 88));
 };
 
 
 /**
- * @param {!Array<!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @param {!Array<!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum>} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setPackedNestedEnumList = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setPackedNestedEnumList = function(value) {
   return jspb.Message.setField(this, 88, value || []);
 };
 
 
 /**
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum} value
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addPackedNestedEnum = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addPackedNestedEnum = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 88, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedNestedEnumList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearPackedNestedEnumList = function() {
   return this.setPackedNestedEnumList([]);
 };
 
@@ -6138,16 +6138,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearPackedNest
  * repeated int32 unpacked_int32 = 89;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getUnpackedInt32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getUnpackedInt32List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 89));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedInt32List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setUnpackedInt32List = function(value) {
   return jspb.Message.setField(this, 89, value || []);
 };
 
@@ -6155,18 +6155,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedInt3
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addUnpackedInt32 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addUnpackedInt32 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 89, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedInt32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearUnpackedInt32List = function() {
   return this.setUnpackedInt32List([]);
 };
 
@@ -6175,16 +6175,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedIn
  * repeated int64 unpacked_int64 = 90;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getUnpackedInt64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getUnpackedInt64List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 90));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedInt64List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setUnpackedInt64List = function(value) {
   return jspb.Message.setField(this, 90, value || []);
 };
 
@@ -6192,18 +6192,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedInt6
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addUnpackedInt64 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addUnpackedInt64 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 90, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedInt64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearUnpackedInt64List = function() {
   return this.setUnpackedInt64List([]);
 };
 
@@ -6212,16 +6212,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedIn
  * repeated uint32 unpacked_uint32 = 91;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getUnpackedUint32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getUnpackedUint32List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 91));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedUint32List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setUnpackedUint32List = function(value) {
   return jspb.Message.setField(this, 91, value || []);
 };
 
@@ -6229,18 +6229,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedUint
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addUnpackedUint32 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addUnpackedUint32 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 91, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedUint32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearUnpackedUint32List = function() {
   return this.setUnpackedUint32List([]);
 };
 
@@ -6249,16 +6249,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedUi
  * repeated uint64 unpacked_uint64 = 92;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getUnpackedUint64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getUnpackedUint64List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 92));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedUint64List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setUnpackedUint64List = function(value) {
   return jspb.Message.setField(this, 92, value || []);
 };
 
@@ -6266,18 +6266,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedUint
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addUnpackedUint64 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addUnpackedUint64 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 92, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedUint64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearUnpackedUint64List = function() {
   return this.setUnpackedUint64List([]);
 };
 
@@ -6286,16 +6286,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedUi
  * repeated sint32 unpacked_sint32 = 93;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getUnpackedSint32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getUnpackedSint32List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 93));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedSint32List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setUnpackedSint32List = function(value) {
   return jspb.Message.setField(this, 93, value || []);
 };
 
@@ -6303,18 +6303,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedSint
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addUnpackedSint32 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addUnpackedSint32 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 93, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedSint32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearUnpackedSint32List = function() {
   return this.setUnpackedSint32List([]);
 };
 
@@ -6323,16 +6323,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedSi
  * repeated sint64 unpacked_sint64 = 94;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getUnpackedSint64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getUnpackedSint64List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 94));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedSint64List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setUnpackedSint64List = function(value) {
   return jspb.Message.setField(this, 94, value || []);
 };
 
@@ -6340,18 +6340,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedSint
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addUnpackedSint64 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addUnpackedSint64 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 94, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedSint64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearUnpackedSint64List = function() {
   return this.setUnpackedSint64List([]);
 };
 
@@ -6360,16 +6360,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedSi
  * repeated fixed32 unpacked_fixed32 = 95;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getUnpackedFixed32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getUnpackedFixed32List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 95));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedFixed32List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setUnpackedFixed32List = function(value) {
   return jspb.Message.setField(this, 95, value || []);
 };
 
@@ -6377,18 +6377,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedFixe
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addUnpackedFixed32 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addUnpackedFixed32 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 95, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedFixed32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearUnpackedFixed32List = function() {
   return this.setUnpackedFixed32List([]);
 };
 
@@ -6397,16 +6397,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedFi
  * repeated fixed64 unpacked_fixed64 = 96;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getUnpackedFixed64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getUnpackedFixed64List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 96));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedFixed64List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setUnpackedFixed64List = function(value) {
   return jspb.Message.setField(this, 96, value || []);
 };
 
@@ -6414,18 +6414,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedFixe
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addUnpackedFixed64 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addUnpackedFixed64 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 96, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedFixed64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearUnpackedFixed64List = function() {
   return this.setUnpackedFixed64List([]);
 };
 
@@ -6434,16 +6434,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedFi
  * repeated sfixed32 unpacked_sfixed32 = 97;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getUnpackedSfixed32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getUnpackedSfixed32List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 97));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedSfixed32List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setUnpackedSfixed32List = function(value) {
   return jspb.Message.setField(this, 97, value || []);
 };
 
@@ -6451,18 +6451,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedSfix
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addUnpackedSfixed32 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addUnpackedSfixed32 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 97, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedSfixed32List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearUnpackedSfixed32List = function() {
   return this.setUnpackedSfixed32List([]);
 };
 
@@ -6471,16 +6471,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedSf
  * repeated sfixed64 unpacked_sfixed64 = 98;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getUnpackedSfixed64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getUnpackedSfixed64List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 98));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedSfixed64List = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setUnpackedSfixed64List = function(value) {
   return jspb.Message.setField(this, 98, value || []);
 };
 
@@ -6488,18 +6488,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedSfix
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addUnpackedSfixed64 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addUnpackedSfixed64 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 98, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedSfixed64List = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearUnpackedSfixed64List = function() {
   return this.setUnpackedSfixed64List([]);
 };
 
@@ -6508,16 +6508,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedSf
  * repeated float unpacked_float = 99;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getUnpackedFloatList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getUnpackedFloatList = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 99));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedFloatList = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setUnpackedFloatList = function(value) {
   return jspb.Message.setField(this, 99, value || []);
 };
 
@@ -6525,18 +6525,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedFloa
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addUnpackedFloat = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addUnpackedFloat = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 99, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedFloatList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearUnpackedFloatList = function() {
   return this.setUnpackedFloatList([]);
 };
 
@@ -6545,16 +6545,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedFl
  * repeated double unpacked_double = 100;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getUnpackedDoubleList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getUnpackedDoubleList = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 100));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedDoubleList = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setUnpackedDoubleList = function(value) {
   return jspb.Message.setField(this, 100, value || []);
 };
 
@@ -6562,18 +6562,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedDoub
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addUnpackedDouble = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addUnpackedDouble = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 100, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedDoubleList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearUnpackedDoubleList = function() {
   return this.setUnpackedDoubleList([]);
 };
 
@@ -6582,16 +6582,16 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedDo
  * repeated bool unpacked_bool = 101;
  * @return {!Array<boolean>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getUnpackedBoolList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getUnpackedBoolList = function() {
   return /** @type {!Array<boolean>} */ (jspb.Message.getRepeatedBooleanField(this, 101));
 };
 
 
 /**
  * @param {!Array<boolean>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedBoolList = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setUnpackedBoolList = function(value) {
   return jspb.Message.setField(this, 101, value || []);
 };
 
@@ -6599,55 +6599,55 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedBool
 /**
  * @param {boolean} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addUnpackedBool = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addUnpackedBool = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 101, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedBoolList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearUnpackedBoolList = function() {
   return this.setUnpackedBoolList([]);
 };
 
 
 /**
  * repeated NestedEnum unpacked_nested_enum = 102;
- * @return {!Array<!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum>}
+ * @return {!Array<!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getUnpackedNestedEnumList = function() {
-  return /** @type {!Array<!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum>} */ (jspb.Message.getRepeatedField(this, 102));
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getUnpackedNestedEnumList = function() {
+  return /** @type {!Array<!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum>} */ (jspb.Message.getRepeatedField(this, 102));
 };
 
 
 /**
- * @param {!Array<!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum>} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @param {!Array<!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum>} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setUnpackedNestedEnumList = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setUnpackedNestedEnumList = function(value) {
   return jspb.Message.setField(this, 102, value || []);
 };
 
 
 /**
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum} value
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.addUnpackedNestedEnum = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.addUnpackedNestedEnum = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 102, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedNestedEnumList = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearUnpackedNestedEnumList = function() {
   return this.setUnpackedNestedEnumList([]);
 };
 
@@ -6658,7 +6658,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearUnpackedNe
  * empty, instead returning `undefined`
  * @return {!jspb.Map<number,number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapInt32Int32Map = function(opt_noLazyCreate) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getMapInt32Int32Map = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<number,number>} */ (
       jspb.Message.getMapField(this, 56, opt_noLazyCreate,
       null));
@@ -6667,9 +6667,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapInt32Int3
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapInt32Int32Map = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearMapInt32Int32Map = function() {
   this.getMapInt32Int32Map().clear();
   return this;
 };
@@ -6681,7 +6681,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapInt32In
  * empty, instead returning `undefined`
  * @return {!jspb.Map<number,number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapInt64Int64Map = function(opt_noLazyCreate) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getMapInt64Int64Map = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<number,number>} */ (
       jspb.Message.getMapField(this, 57, opt_noLazyCreate,
       null));
@@ -6690,9 +6690,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapInt64Int6
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapInt64Int64Map = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearMapInt64Int64Map = function() {
   this.getMapInt64Int64Map().clear();
   return this;
 };
@@ -6704,7 +6704,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapInt64In
  * empty, instead returning `undefined`
  * @return {!jspb.Map<number,number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapUint32Uint32Map = function(opt_noLazyCreate) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getMapUint32Uint32Map = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<number,number>} */ (
       jspb.Message.getMapField(this, 58, opt_noLazyCreate,
       null));
@@ -6713,9 +6713,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapUint32Uin
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapUint32Uint32Map = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearMapUint32Uint32Map = function() {
   this.getMapUint32Uint32Map().clear();
   return this;
 };
@@ -6727,7 +6727,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapUint32U
  * empty, instead returning `undefined`
  * @return {!jspb.Map<number,number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapUint64Uint64Map = function(opt_noLazyCreate) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getMapUint64Uint64Map = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<number,number>} */ (
       jspb.Message.getMapField(this, 59, opt_noLazyCreate,
       null));
@@ -6736,9 +6736,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapUint64Uin
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapUint64Uint64Map = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearMapUint64Uint64Map = function() {
   this.getMapUint64Uint64Map().clear();
   return this;
 };
@@ -6750,7 +6750,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapUint64U
  * empty, instead returning `undefined`
  * @return {!jspb.Map<number,number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapSint32Sint32Map = function(opt_noLazyCreate) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getMapSint32Sint32Map = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<number,number>} */ (
       jspb.Message.getMapField(this, 60, opt_noLazyCreate,
       null));
@@ -6759,9 +6759,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapSint32Sin
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapSint32Sint32Map = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearMapSint32Sint32Map = function() {
   this.getMapSint32Sint32Map().clear();
   return this;
 };
@@ -6773,7 +6773,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapSint32S
  * empty, instead returning `undefined`
  * @return {!jspb.Map<number,number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapSint64Sint64Map = function(opt_noLazyCreate) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getMapSint64Sint64Map = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<number,number>} */ (
       jspb.Message.getMapField(this, 61, opt_noLazyCreate,
       null));
@@ -6782,9 +6782,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapSint64Sin
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapSint64Sint64Map = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearMapSint64Sint64Map = function() {
   this.getMapSint64Sint64Map().clear();
   return this;
 };
@@ -6796,7 +6796,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapSint64S
  * empty, instead returning `undefined`
  * @return {!jspb.Map<number,number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapFixed32Fixed32Map = function(opt_noLazyCreate) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getMapFixed32Fixed32Map = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<number,number>} */ (
       jspb.Message.getMapField(this, 62, opt_noLazyCreate,
       null));
@@ -6805,9 +6805,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapFixed32Fi
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapFixed32Fixed32Map = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearMapFixed32Fixed32Map = function() {
   this.getMapFixed32Fixed32Map().clear();
   return this;
 };
@@ -6819,7 +6819,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapFixed32
  * empty, instead returning `undefined`
  * @return {!jspb.Map<number,number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapFixed64Fixed64Map = function(opt_noLazyCreate) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getMapFixed64Fixed64Map = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<number,number>} */ (
       jspb.Message.getMapField(this, 63, opt_noLazyCreate,
       null));
@@ -6828,9 +6828,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapFixed64Fi
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapFixed64Fixed64Map = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearMapFixed64Fixed64Map = function() {
   this.getMapFixed64Fixed64Map().clear();
   return this;
 };
@@ -6842,7 +6842,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapFixed64
  * empty, instead returning `undefined`
  * @return {!jspb.Map<number,number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapSfixed32Sfixed32Map = function(opt_noLazyCreate) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getMapSfixed32Sfixed32Map = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<number,number>} */ (
       jspb.Message.getMapField(this, 64, opt_noLazyCreate,
       null));
@@ -6851,9 +6851,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapSfixed32S
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapSfixed32Sfixed32Map = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearMapSfixed32Sfixed32Map = function() {
   this.getMapSfixed32Sfixed32Map().clear();
   return this;
 };
@@ -6865,7 +6865,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapSfixed3
  * empty, instead returning `undefined`
  * @return {!jspb.Map<number,number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapSfixed64Sfixed64Map = function(opt_noLazyCreate) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getMapSfixed64Sfixed64Map = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<number,number>} */ (
       jspb.Message.getMapField(this, 65, opt_noLazyCreate,
       null));
@@ -6874,9 +6874,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapSfixed64S
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapSfixed64Sfixed64Map = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearMapSfixed64Sfixed64Map = function() {
   this.getMapSfixed64Sfixed64Map().clear();
   return this;
 };
@@ -6888,7 +6888,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapSfixed6
  * empty, instead returning `undefined`
  * @return {!jspb.Map<number,boolean>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapInt32BoolMap = function(opt_noLazyCreate) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getMapInt32BoolMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<number,boolean>} */ (
       jspb.Message.getMapField(this, 104, opt_noLazyCreate,
       null));
@@ -6897,9 +6897,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapInt32Bool
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapInt32BoolMap = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearMapInt32BoolMap = function() {
   this.getMapInt32BoolMap().clear();
   return this;
 };
@@ -6911,7 +6911,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapInt32Bo
  * empty, instead returning `undefined`
  * @return {!jspb.Map<number,number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapInt32FloatMap = function(opt_noLazyCreate) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getMapInt32FloatMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<number,number>} */ (
       jspb.Message.getMapField(this, 66, opt_noLazyCreate,
       null));
@@ -6920,9 +6920,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapInt32Floa
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapInt32FloatMap = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearMapInt32FloatMap = function() {
   this.getMapInt32FloatMap().clear();
   return this;
 };
@@ -6934,7 +6934,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapInt32Fl
  * empty, instead returning `undefined`
  * @return {!jspb.Map<number,number>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapInt32DoubleMap = function(opt_noLazyCreate) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getMapInt32DoubleMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<number,number>} */ (
       jspb.Message.getMapField(this, 67, opt_noLazyCreate,
       null));
@@ -6943,9 +6943,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapInt32Doub
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapInt32DoubleMap = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearMapInt32DoubleMap = function() {
   this.getMapInt32DoubleMap().clear();
   return this;
 };
@@ -6955,20 +6955,20 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapInt32Do
  * map<int32, NestedMessage> map_int32_nested_message = 103;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
- * @return {!jspb.Map<number,!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage>}
+ * @return {!jspb.Map<number,!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapInt32NestedMessageMap = function(opt_noLazyCreate) {
-  return /** @type {!jspb.Map<number,!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage>} */ (
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getMapInt32NestedMessageMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<number,!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage>} */ (
       jspb.Message.getMapField(this, 103, opt_noLazyCreate,
-      proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage));
+      proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage));
 };
 
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapInt32NestedMessageMap = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearMapInt32NestedMessageMap = function() {
   this.getMapInt32NestedMessageMap().clear();
   return this;
 };
@@ -6980,7 +6980,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapInt32Ne
  * empty, instead returning `undefined`
  * @return {!jspb.Map<boolean,boolean>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapBoolBoolMap = function(opt_noLazyCreate) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getMapBoolBoolMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<boolean,boolean>} */ (
       jspb.Message.getMapField(this, 68, opt_noLazyCreate,
       null));
@@ -6989,9 +6989,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapBoolBoolM
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapBoolBoolMap = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearMapBoolBoolMap = function() {
   this.getMapBoolBoolMap().clear();
   return this;
 };
@@ -7003,7 +7003,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapBoolBoo
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapStringStringMap = function(opt_noLazyCreate) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getMapStringStringMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
       jspb.Message.getMapField(this, 69, opt_noLazyCreate,
       null));
@@ -7012,9 +7012,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapStringStr
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapStringStringMap = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearMapStringStringMap = function() {
   this.getMapStringStringMap().clear();
   return this;
 };
@@ -7026,7 +7026,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapStringS
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,!(string|Uint8Array)>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapStringBytesMap = function(opt_noLazyCreate) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getMapStringBytesMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,!(string|Uint8Array)>} */ (
       jspb.Message.getMapField(this, 70, opt_noLazyCreate,
       null));
@@ -7035,9 +7035,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapStringByt
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapStringBytesMap = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearMapStringBytesMap = function() {
   this.getMapStringBytesMap().clear();
   return this;
 };
@@ -7047,20 +7047,20 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapStringB
  * map<string, NestedMessage> map_string_nested_message = 71;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
- * @return {!jspb.Map<string,!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage>}
+ * @return {!jspb.Map<string,!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapStringNestedMessageMap = function(opt_noLazyCreate) {
-  return /** @type {!jspb.Map<string,!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage>} */ (
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getMapStringNestedMessageMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage>} */ (
       jspb.Message.getMapField(this, 71, opt_noLazyCreate,
-      proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage));
+      proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage));
 };
 
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapStringNestedMessageMap = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearMapStringNestedMessageMap = function() {
   this.getMapStringNestedMessageMap().clear();
   return this;
 };
@@ -7070,20 +7070,20 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapStringN
  * map<string, ForeignMessageProto2> map_string_foreign_message = 72;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
- * @return {!jspb.Map<string,!proto.protobuf_test_messages.proto2.ForeignMessageProto2>}
+ * @return {!jspb.Map<string,!proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapStringForeignMessageMap = function(opt_noLazyCreate) {
-  return /** @type {!jspb.Map<string,!proto.protobuf_test_messages.proto2.ForeignMessageProto2>} */ (
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getMapStringForeignMessageMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,!proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2>} */ (
       jspb.Message.getMapField(this, 72, opt_noLazyCreate,
-      proto.protobuf_test_messages.proto2.ForeignMessageProto2));
+      proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2));
 };
 
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapStringForeignMessageMap = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearMapStringForeignMessageMap = function() {
   this.getMapStringForeignMessageMap().clear();
   return this;
 };
@@ -7093,10 +7093,10 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapStringF
  * map<string, NestedEnum> map_string_nested_enum = 73;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
- * @return {!jspb.Map<string,!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum>}
+ * @return {!jspb.Map<string,!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapStringNestedEnumMap = function(opt_noLazyCreate) {
-  return /** @type {!jspb.Map<string,!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum>} */ (
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getMapStringNestedEnumMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum>} */ (
       jspb.Message.getMapField(this, 73, opt_noLazyCreate,
       null));
 };
@@ -7104,9 +7104,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapStringNes
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapStringNestedEnumMap = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearMapStringNestedEnumMap = function() {
   this.getMapStringNestedEnumMap().clear();
   return this;
 };
@@ -7116,10 +7116,10 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapStringN
  * map<string, ForeignEnumProto2> map_string_foreign_enum = 74;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
- * @return {!jspb.Map<string,!proto.protobuf_test_messages.proto2.ForeignEnumProto2>}
+ * @return {!jspb.Map<string,!proto.protobuf_test_messages.editions.proto2.ForeignEnumProto2>}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapStringForeignEnumMap = function(opt_noLazyCreate) {
-  return /** @type {!jspb.Map<string,!proto.protobuf_test_messages.proto2.ForeignEnumProto2>} */ (
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getMapStringForeignEnumMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,!proto.protobuf_test_messages.editions.proto2.ForeignEnumProto2>} */ (
       jspb.Message.getMapField(this, 74, opt_noLazyCreate,
       null));
 };
@@ -7127,9 +7127,9 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMapStringFor
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapStringForeignEnumMap = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearMapStringForeignEnumMap = function() {
   this.getMapStringForeignEnumMap().clear();
   return this;
 };
@@ -7139,26 +7139,26 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMapStringF
  * optional uint32 oneof_uint32 = 111;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOneofUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOneofUint32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 111, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOneofUint32 = function(value) {
-  return jspb.Message.setOneofField(this, 111, proto.protobuf_test_messages.proto2.TestAllTypesProto2.oneofGroups_[0], value);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOneofUint32 = function(value) {
+  return jspb.Message.setOneofField(this, 111, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOneofUint32 = function() {
-  return jspb.Message.setOneofField(this, 111, proto.protobuf_test_messages.proto2.TestAllTypesProto2.oneofGroups_[0], undefined);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOneofUint32 = function() {
+  return jspb.Message.setOneofField(this, 111, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.oneofGroups_[0], undefined);
 };
 
 
@@ -7166,35 +7166,35 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOneofUint3
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOneofUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOneofUint32 = function() {
   return jspb.Message.getField(this, 111) != null;
 };
 
 
 /**
  * optional NestedMessage oneof_nested_message = 112;
- * @return {?proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage}
+ * @return {?proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOneofNestedMessage = function() {
-  return /** @type{?proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage} */ (
-    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage, 112));
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOneofNestedMessage = function() {
+  return /** @type{?proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage} */ (
+    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage, 112));
 };
 
 
 /**
- * @param {?proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage|undefined} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @param {?proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedMessage|undefined} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
 */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOneofNestedMessage = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 112, proto.protobuf_test_messages.proto2.TestAllTypesProto2.oneofGroups_[0], value);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOneofNestedMessage = function(value) {
+  return jspb.Message.setOneofWrapperField(this, 112, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOneofNestedMessage = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOneofNestedMessage = function() {
   return this.setOneofNestedMessage(undefined);
 };
 
@@ -7203,7 +7203,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOneofNeste
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOneofNestedMessage = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOneofNestedMessage = function() {
   return jspb.Message.getField(this, 112) != null;
 };
 
@@ -7212,26 +7212,26 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOneofNestedM
  * optional string oneof_string = 113;
  * @return {string}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOneofString = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOneofString = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 113, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOneofString = function(value) {
-  return jspb.Message.setOneofField(this, 113, proto.protobuf_test_messages.proto2.TestAllTypesProto2.oneofGroups_[0], value);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOneofString = function(value) {
+  return jspb.Message.setOneofField(this, 113, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOneofString = function() {
-  return jspb.Message.setOneofField(this, 113, proto.protobuf_test_messages.proto2.TestAllTypesProto2.oneofGroups_[0], undefined);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOneofString = function() {
+  return jspb.Message.setOneofField(this, 113, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.oneofGroups_[0], undefined);
 };
 
 
@@ -7239,7 +7239,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOneofStrin
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOneofString = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOneofString = function() {
   return jspb.Message.getField(this, 113) != null;
 };
 
@@ -7248,7 +7248,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOneofString 
  * optional bytes oneof_bytes = 114;
  * @return {!(string|Uint8Array)}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOneofBytes = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOneofBytes = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 114, ""));
 };
 
@@ -7258,7 +7258,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOneofBytes =
  * This is a type-conversion wrapper around `getOneofBytes()`
  * @return {string}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOneofBytes_asB64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOneofBytes_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getOneofBytes()));
 };
@@ -7271,7 +7271,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOneofBytes_a
  * This is a type-conversion wrapper around `getOneofBytes()`
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOneofBytes_asU8 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOneofBytes_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getOneofBytes()));
 };
@@ -7279,19 +7279,19 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOneofBytes_a
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOneofBytes = function(value) {
-  return jspb.Message.setOneofField(this, 114, proto.protobuf_test_messages.proto2.TestAllTypesProto2.oneofGroups_[0], value);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOneofBytes = function(value) {
+  return jspb.Message.setOneofField(this, 114, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOneofBytes = function() {
-  return jspb.Message.setOneofField(this, 114, proto.protobuf_test_messages.proto2.TestAllTypesProto2.oneofGroups_[0], undefined);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOneofBytes = function() {
+  return jspb.Message.setOneofField(this, 114, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.oneofGroups_[0], undefined);
 };
 
 
@@ -7299,7 +7299,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOneofBytes
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOneofBytes = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOneofBytes = function() {
   return jspb.Message.getField(this, 114) != null;
 };
 
@@ -7308,26 +7308,26 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOneofBytes =
  * optional bool oneof_bool = 115;
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOneofBool = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOneofBool = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 115, false));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOneofBool = function(value) {
-  return jspb.Message.setOneofField(this, 115, proto.protobuf_test_messages.proto2.TestAllTypesProto2.oneofGroups_[0], value);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOneofBool = function(value) {
+  return jspb.Message.setOneofField(this, 115, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOneofBool = function() {
-  return jspb.Message.setOneofField(this, 115, proto.protobuf_test_messages.proto2.TestAllTypesProto2.oneofGroups_[0], undefined);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOneofBool = function() {
+  return jspb.Message.setOneofField(this, 115, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.oneofGroups_[0], undefined);
 };
 
 
@@ -7335,7 +7335,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOneofBool 
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOneofBool = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOneofBool = function() {
   return jspb.Message.getField(this, 115) != null;
 };
 
@@ -7344,26 +7344,26 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOneofBool = 
  * optional uint64 oneof_uint64 = 116;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOneofUint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOneofUint64 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 116, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOneofUint64 = function(value) {
-  return jspb.Message.setOneofField(this, 116, proto.protobuf_test_messages.proto2.TestAllTypesProto2.oneofGroups_[0], value);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOneofUint64 = function(value) {
+  return jspb.Message.setOneofField(this, 116, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOneofUint64 = function() {
-  return jspb.Message.setOneofField(this, 116, proto.protobuf_test_messages.proto2.TestAllTypesProto2.oneofGroups_[0], undefined);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOneofUint64 = function() {
+  return jspb.Message.setOneofField(this, 116, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.oneofGroups_[0], undefined);
 };
 
 
@@ -7371,7 +7371,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOneofUint6
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOneofUint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOneofUint64 = function() {
   return jspb.Message.getField(this, 116) != null;
 };
 
@@ -7380,26 +7380,26 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOneofUint64 
  * optional float oneof_float = 117;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOneofFloat = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOneofFloat = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 117, 0.0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOneofFloat = function(value) {
-  return jspb.Message.setOneofField(this, 117, proto.protobuf_test_messages.proto2.TestAllTypesProto2.oneofGroups_[0], value);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOneofFloat = function(value) {
+  return jspb.Message.setOneofField(this, 117, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOneofFloat = function() {
-  return jspb.Message.setOneofField(this, 117, proto.protobuf_test_messages.proto2.TestAllTypesProto2.oneofGroups_[0], undefined);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOneofFloat = function() {
+  return jspb.Message.setOneofField(this, 117, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.oneofGroups_[0], undefined);
 };
 
 
@@ -7407,7 +7407,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOneofFloat
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOneofFloat = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOneofFloat = function() {
   return jspb.Message.getField(this, 117) != null;
 };
 
@@ -7416,26 +7416,26 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOneofFloat =
  * optional double oneof_double = 118;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOneofDouble = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOneofDouble = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 118, 0.0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOneofDouble = function(value) {
-  return jspb.Message.setOneofField(this, 118, proto.protobuf_test_messages.proto2.TestAllTypesProto2.oneofGroups_[0], value);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOneofDouble = function(value) {
+  return jspb.Message.setOneofField(this, 118, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOneofDouble = function() {
-  return jspb.Message.setOneofField(this, 118, proto.protobuf_test_messages.proto2.TestAllTypesProto2.oneofGroups_[0], undefined);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOneofDouble = function() {
+  return jspb.Message.setOneofField(this, 118, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.oneofGroups_[0], undefined);
 };
 
 
@@ -7443,35 +7443,35 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOneofDoubl
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOneofDouble = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOneofDouble = function() {
   return jspb.Message.getField(this, 118) != null;
 };
 
 
 /**
  * optional NestedEnum oneof_enum = 119;
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getOneofEnum = function() {
-  return /** @type {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum} */ (jspb.Message.getFieldWithDefault(this, 119, 0));
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getOneofEnum = function() {
+  return /** @type {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum} */ (jspb.Message.getFieldWithDefault(this, 119, 0));
 };
 
 
 /**
- * @param {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedEnum} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.NestedEnum} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setOneofEnum = function(value) {
-  return jspb.Message.setOneofField(this, 119, proto.protobuf_test_messages.proto2.TestAllTypesProto2.oneofGroups_[0], value);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setOneofEnum = function(value) {
+  return jspb.Message.setOneofField(this, 119, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOneofEnum = function() {
-  return jspb.Message.setOneofField(this, 119, proto.protobuf_test_messages.proto2.TestAllTypesProto2.oneofGroups_[0], undefined);
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearOneofEnum = function() {
+  return jspb.Message.setOneofField(this, 119, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.oneofGroups_[0], undefined);
 };
 
 
@@ -7479,35 +7479,35 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearOneofEnum 
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasOneofEnum = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasOneofEnum = function() {
   return jspb.Message.getField(this, 119) != null;
 };
 
 
 /**
  * optional group Data = 201;
- * @return {?proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data}
+ * @return {?proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getData = function() {
-  return /** @type{?proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data} */ (
-    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data, 201));
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getData = function() {
+  return /** @type{?proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data} */ (
+    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data, 201));
 };
 
 
 /**
- * @param {?proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data|undefined} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @param {?proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.Data|undefined} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
 */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setData = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setData = function(value) {
   return jspb.Message.setWrapperField(this, 201, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearData = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearData = function() {
   return this.setData(undefined);
 };
 
@@ -7516,35 +7516,35 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearData = fun
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasData = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasData = function() {
   return jspb.Message.getField(this, 201) != null;
 };
 
 
 /**
  * optional group MultiWordGroupField = 204;
- * @return {?proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField}
+ * @return {?proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMultiWordGroupField = function() {
-  return /** @type{?proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField} */ (
-    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField, 204));
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getMultiWordGroupField = function() {
+  return /** @type{?proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField} */ (
+    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField, 204));
 };
 
 
 /**
- * @param {?proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField|undefined} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @param {?proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MultiWordGroupField|undefined} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
 */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setMultiWordGroupField = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setMultiWordGroupField = function(value) {
   return jspb.Message.setWrapperField(this, 204, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMultiWordGroupField = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearMultiWordGroupField = function() {
   return this.setMultiWordGroupField(undefined);
 };
 
@@ -7553,7 +7553,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMultiWordG
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasMultiWordGroupField = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasMultiWordGroupField = function() {
   return jspb.Message.getField(this, 204) != null;
 };
 
@@ -7562,25 +7562,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasMultiWordGro
  * optional int32 default_int32 = 241;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getDefaultInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getDefaultInt32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 241, -123456789));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setDefaultInt32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setDefaultInt32 = function(value) {
   return jspb.Message.setField(this, 241, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearDefaultInt32 = function() {
   return jspb.Message.setField(this, 241, undefined);
 };
 
@@ -7589,7 +7589,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultInt
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasDefaultInt32 = function() {
   return jspb.Message.getField(this, 241) != null;
 };
 
@@ -7598,25 +7598,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultInt32
  * optional int64 default_int64 = 242;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getDefaultInt64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getDefaultInt64 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 242, -9123456789123456789));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setDefaultInt64 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setDefaultInt64 = function(value) {
   return jspb.Message.setField(this, 242, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultInt64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearDefaultInt64 = function() {
   return jspb.Message.setField(this, 242, undefined);
 };
 
@@ -7625,7 +7625,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultInt
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultInt64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasDefaultInt64 = function() {
   return jspb.Message.getField(this, 242) != null;
 };
 
@@ -7634,25 +7634,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultInt64
  * optional uint32 default_uint32 = 243;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getDefaultUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getDefaultUint32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 243, 2123456789));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setDefaultUint32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setDefaultUint32 = function(value) {
   return jspb.Message.setField(this, 243, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearDefaultUint32 = function() {
   return jspb.Message.setField(this, 243, undefined);
 };
 
@@ -7661,7 +7661,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultUin
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasDefaultUint32 = function() {
   return jspb.Message.getField(this, 243) != null;
 };
 
@@ -7670,25 +7670,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultUint3
  * optional uint64 default_uint64 = 244;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getDefaultUint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getDefaultUint64 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 244, -8323287284586094827));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setDefaultUint64 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setDefaultUint64 = function(value) {
   return jspb.Message.setField(this, 244, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultUint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearDefaultUint64 = function() {
   return jspb.Message.setField(this, 244, undefined);
 };
 
@@ -7697,7 +7697,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultUin
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultUint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasDefaultUint64 = function() {
   return jspb.Message.getField(this, 244) != null;
 };
 
@@ -7706,25 +7706,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultUint6
  * optional sint32 default_sint32 = 245;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getDefaultSint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getDefaultSint32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 245, -123456789));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setDefaultSint32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setDefaultSint32 = function(value) {
   return jspb.Message.setField(this, 245, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultSint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearDefaultSint32 = function() {
   return jspb.Message.setField(this, 245, undefined);
 };
 
@@ -7733,7 +7733,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultSin
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultSint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasDefaultSint32 = function() {
   return jspb.Message.getField(this, 245) != null;
 };
 
@@ -7742,25 +7742,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultSint3
  * optional sint64 default_sint64 = 246;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getDefaultSint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getDefaultSint64 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 246, -9123456789123456789));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setDefaultSint64 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setDefaultSint64 = function(value) {
   return jspb.Message.setField(this, 246, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultSint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearDefaultSint64 = function() {
   return jspb.Message.setField(this, 246, undefined);
 };
 
@@ -7769,7 +7769,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultSin
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultSint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasDefaultSint64 = function() {
   return jspb.Message.getField(this, 246) != null;
 };
 
@@ -7778,25 +7778,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultSint6
  * optional fixed32 default_fixed32 = 247;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getDefaultFixed32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getDefaultFixed32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 247, 2123456789));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setDefaultFixed32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setDefaultFixed32 = function(value) {
   return jspb.Message.setField(this, 247, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultFixed32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearDefaultFixed32 = function() {
   return jspb.Message.setField(this, 247, undefined);
 };
 
@@ -7805,7 +7805,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultFix
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultFixed32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasDefaultFixed32 = function() {
   return jspb.Message.getField(this, 247) != null;
 };
 
@@ -7814,25 +7814,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultFixed
  * optional fixed64 default_fixed64 = 248;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getDefaultFixed64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getDefaultFixed64 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 248, -8323287284586094827));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setDefaultFixed64 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setDefaultFixed64 = function(value) {
   return jspb.Message.setField(this, 248, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultFixed64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearDefaultFixed64 = function() {
   return jspb.Message.setField(this, 248, undefined);
 };
 
@@ -7841,7 +7841,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultFix
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultFixed64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasDefaultFixed64 = function() {
   return jspb.Message.getField(this, 248) != null;
 };
 
@@ -7850,25 +7850,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultFixed
  * optional sfixed32 default_sfixed32 = 249;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getDefaultSfixed32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getDefaultSfixed32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 249, -123456789));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setDefaultSfixed32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setDefaultSfixed32 = function(value) {
   return jspb.Message.setField(this, 249, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultSfixed32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearDefaultSfixed32 = function() {
   return jspb.Message.setField(this, 249, undefined);
 };
 
@@ -7877,7 +7877,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultSfi
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultSfixed32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasDefaultSfixed32 = function() {
   return jspb.Message.getField(this, 249) != null;
 };
 
@@ -7886,25 +7886,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultSfixe
  * optional sfixed64 default_sfixed64 = 250;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getDefaultSfixed64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getDefaultSfixed64 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 250, -9123456789123456789));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setDefaultSfixed64 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setDefaultSfixed64 = function(value) {
   return jspb.Message.setField(this, 250, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultSfixed64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearDefaultSfixed64 = function() {
   return jspb.Message.setField(this, 250, undefined);
 };
 
@@ -7913,7 +7913,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultSfi
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultSfixed64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasDefaultSfixed64 = function() {
   return jspb.Message.getField(this, 250) != null;
 };
 
@@ -7922,25 +7922,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultSfixe
  * optional float default_float = 251;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getDefaultFloat = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getDefaultFloat = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 251, 9.0E9));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setDefaultFloat = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setDefaultFloat = function(value) {
   return jspb.Message.setField(this, 251, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultFloat = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearDefaultFloat = function() {
   return jspb.Message.setField(this, 251, undefined);
 };
 
@@ -7949,7 +7949,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultFlo
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultFloat = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasDefaultFloat = function() {
   return jspb.Message.getField(this, 251) != null;
 };
 
@@ -7958,25 +7958,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultFloat
  * optional double default_double = 252;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getDefaultDouble = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getDefaultDouble = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 252, 7.0E22));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setDefaultDouble = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setDefaultDouble = function(value) {
   return jspb.Message.setField(this, 252, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultDouble = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearDefaultDouble = function() {
   return jspb.Message.setField(this, 252, undefined);
 };
 
@@ -7985,7 +7985,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultDou
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultDouble = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasDefaultDouble = function() {
   return jspb.Message.getField(this, 252) != null;
 };
 
@@ -7994,25 +7994,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultDoubl
  * optional bool default_bool = 253;
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getDefaultBool = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getDefaultBool = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 253, true));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setDefaultBool = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setDefaultBool = function(value) {
   return jspb.Message.setField(this, 253, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultBool = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearDefaultBool = function() {
   return jspb.Message.setField(this, 253, undefined);
 };
 
@@ -8021,7 +8021,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultBoo
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultBool = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasDefaultBool = function() {
   return jspb.Message.getField(this, 253) != null;
 };
 
@@ -8030,25 +8030,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultBool 
  * optional string default_string = 254;
  * @return {string}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getDefaultString = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getDefaultString = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 254, "Rosebud"));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setDefaultString = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setDefaultString = function(value) {
   return jspb.Message.setField(this, 254, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultString = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearDefaultString = function() {
   return jspb.Message.setField(this, 254, undefined);
 };
 
@@ -8057,7 +8057,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultStr
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultString = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasDefaultString = function() {
   return jspb.Message.getField(this, 254) != null;
 };
 
@@ -8066,7 +8066,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultStrin
  * optional bytes default_bytes = 255;
  * @return {!(string|Uint8Array)}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getDefaultBytes = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getDefaultBytes = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 255, "am9zaHVh"));
 };
 
@@ -8076,7 +8076,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getDefaultBytes
  * This is a type-conversion wrapper around `getDefaultBytes()`
  * @return {string}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getDefaultBytes_asB64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getDefaultBytes_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getDefaultBytes()));
 };
@@ -8089,7 +8089,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getDefaultBytes
  * This is a type-conversion wrapper around `getDefaultBytes()`
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getDefaultBytes_asU8 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getDefaultBytes_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getDefaultBytes()));
 };
@@ -8097,18 +8097,18 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getDefaultBytes
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setDefaultBytes = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setDefaultBytes = function(value) {
   return jspb.Message.setField(this, 255, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultBytes = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearDefaultBytes = function() {
   return jspb.Message.setField(this, 255, undefined);
 };
 
@@ -8117,7 +8117,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearDefaultByt
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultBytes = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasDefaultBytes = function() {
   return jspb.Message.getField(this, 255) != null;
 };
 
@@ -8126,25 +8126,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasDefaultBytes
  * optional int32 fieldname1 = 401;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getFieldname1 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getFieldname1 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 401, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setFieldname1 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setFieldname1 = function(value) {
   return jspb.Message.setField(this, 401, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldname1 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearFieldname1 = function() {
   return jspb.Message.setField(this, 401, undefined);
 };
 
@@ -8153,7 +8153,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldname1
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldname1 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasFieldname1 = function() {
   return jspb.Message.getField(this, 401) != null;
 };
 
@@ -8162,25 +8162,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldname1 =
  * optional int32 field_name2 = 402;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getFieldName2 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getFieldName2 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 402, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setFieldName2 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setFieldName2 = function(value) {
   return jspb.Message.setField(this, 402, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName2 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearFieldName2 = function() {
   return jspb.Message.setField(this, 402, undefined);
 };
 
@@ -8189,7 +8189,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName2
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName2 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasFieldName2 = function() {
   return jspb.Message.getField(this, 402) != null;
 };
 
@@ -8198,25 +8198,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName2 =
  * optional int32 _field_name3 = 403;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getFieldName3 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getFieldName3 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 403, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setFieldName3 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setFieldName3 = function(value) {
   return jspb.Message.setField(this, 403, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName3 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearFieldName3 = function() {
   return jspb.Message.setField(this, 403, undefined);
 };
 
@@ -8225,7 +8225,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName3
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName3 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasFieldName3 = function() {
   return jspb.Message.getField(this, 403) != null;
 };
 
@@ -8234,25 +8234,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName3 =
  * optional int32 field__name4_ = 404;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getFieldName4 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getFieldName4 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 404, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setFieldName4 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setFieldName4 = function(value) {
   return jspb.Message.setField(this, 404, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName4 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearFieldName4 = function() {
   return jspb.Message.setField(this, 404, undefined);
 };
 
@@ -8261,7 +8261,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName4
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName4 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasFieldName4 = function() {
   return jspb.Message.getField(this, 404) != null;
 };
 
@@ -8270,25 +8270,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName4 =
  * optional int32 field0name5 = 405;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getField0name5 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getField0name5 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 405, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setField0name5 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setField0name5 = function(value) {
   return jspb.Message.setField(this, 405, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearField0name5 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearField0name5 = function() {
   return jspb.Message.setField(this, 405, undefined);
 };
 
@@ -8297,7 +8297,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearField0name
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasField0name5 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasField0name5 = function() {
   return jspb.Message.getField(this, 405) != null;
 };
 
@@ -8306,25 +8306,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasField0name5 
  * optional int32 field_0_name6 = 406;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getField0Name6 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getField0Name6 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 406, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setField0Name6 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setField0Name6 = function(value) {
   return jspb.Message.setField(this, 406, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearField0Name6 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearField0Name6 = function() {
   return jspb.Message.setField(this, 406, undefined);
 };
 
@@ -8333,7 +8333,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearField0Name
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasField0Name6 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasField0Name6 = function() {
   return jspb.Message.getField(this, 406) != null;
 };
 
@@ -8342,25 +8342,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasField0Name6 
  * optional int32 fieldName7 = 407;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getFieldname7 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getFieldname7 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 407, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setFieldname7 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setFieldname7 = function(value) {
   return jspb.Message.setField(this, 407, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldname7 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearFieldname7 = function() {
   return jspb.Message.setField(this, 407, undefined);
 };
 
@@ -8369,7 +8369,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldname7
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldname7 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasFieldname7 = function() {
   return jspb.Message.getField(this, 407) != null;
 };
 
@@ -8378,25 +8378,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldname7 =
  * optional int32 FieldName8 = 408;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getFieldname8 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getFieldname8 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 408, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setFieldname8 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setFieldname8 = function(value) {
   return jspb.Message.setField(this, 408, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldname8 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearFieldname8 = function() {
   return jspb.Message.setField(this, 408, undefined);
 };
 
@@ -8405,7 +8405,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldname8
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldname8 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasFieldname8 = function() {
   return jspb.Message.getField(this, 408) != null;
 };
 
@@ -8414,25 +8414,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldname8 =
  * optional int32 field_Name9 = 409;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getFieldName9 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getFieldName9 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 409, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setFieldName9 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setFieldName9 = function(value) {
   return jspb.Message.setField(this, 409, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName9 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearFieldName9 = function() {
   return jspb.Message.setField(this, 409, undefined);
 };
 
@@ -8441,7 +8441,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName9
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName9 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasFieldName9 = function() {
   return jspb.Message.getField(this, 409) != null;
 };
 
@@ -8450,25 +8450,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName9 =
  * optional int32 Field_Name10 = 410;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getFieldName10 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getFieldName10 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 410, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setFieldName10 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setFieldName10 = function(value) {
   return jspb.Message.setField(this, 410, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName10 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearFieldName10 = function() {
   return jspb.Message.setField(this, 410, undefined);
 };
 
@@ -8477,7 +8477,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName1
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName10 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasFieldName10 = function() {
   return jspb.Message.getField(this, 410) != null;
 };
 
@@ -8486,25 +8486,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName10 
  * optional int32 FIELD_NAME11 = 411;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getFieldName11 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getFieldName11 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 411, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setFieldName11 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setFieldName11 = function(value) {
   return jspb.Message.setField(this, 411, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName11 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearFieldName11 = function() {
   return jspb.Message.setField(this, 411, undefined);
 };
 
@@ -8513,7 +8513,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName1
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName11 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasFieldName11 = function() {
   return jspb.Message.getField(this, 411) != null;
 };
 
@@ -8522,25 +8522,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName11 
  * optional int32 FIELD_name12 = 412;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getFieldName12 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getFieldName12 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 412, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setFieldName12 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setFieldName12 = function(value) {
   return jspb.Message.setField(this, 412, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName12 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearFieldName12 = function() {
   return jspb.Message.setField(this, 412, undefined);
 };
 
@@ -8549,7 +8549,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName1
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName12 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasFieldName12 = function() {
   return jspb.Message.getField(this, 412) != null;
 };
 
@@ -8558,25 +8558,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName12 
  * optional int32 __field_name13 = 413;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getFieldName13 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getFieldName13 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 413, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setFieldName13 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setFieldName13 = function(value) {
   return jspb.Message.setField(this, 413, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName13 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearFieldName13 = function() {
   return jspb.Message.setField(this, 413, undefined);
 };
 
@@ -8585,7 +8585,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName1
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName13 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasFieldName13 = function() {
   return jspb.Message.getField(this, 413) != null;
 };
 
@@ -8594,25 +8594,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName13 
  * optional int32 __Field_name14 = 414;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getFieldName14 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getFieldName14 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 414, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setFieldName14 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setFieldName14 = function(value) {
   return jspb.Message.setField(this, 414, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName14 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearFieldName14 = function() {
   return jspb.Message.setField(this, 414, undefined);
 };
 
@@ -8621,7 +8621,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName1
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName14 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasFieldName14 = function() {
   return jspb.Message.getField(this, 414) != null;
 };
 
@@ -8630,25 +8630,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName14 
  * optional int32 field__name15 = 415;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getFieldName15 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getFieldName15 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 415, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setFieldName15 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setFieldName15 = function(value) {
   return jspb.Message.setField(this, 415, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName15 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearFieldName15 = function() {
   return jspb.Message.setField(this, 415, undefined);
 };
 
@@ -8657,7 +8657,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName1
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName15 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasFieldName15 = function() {
   return jspb.Message.getField(this, 415) != null;
 };
 
@@ -8666,25 +8666,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName15 
  * optional int32 field__Name16 = 416;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getFieldName16 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getFieldName16 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 416, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setFieldName16 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setFieldName16 = function(value) {
   return jspb.Message.setField(this, 416, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName16 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearFieldName16 = function() {
   return jspb.Message.setField(this, 416, undefined);
 };
 
@@ -8693,7 +8693,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName1
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName16 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasFieldName16 = function() {
   return jspb.Message.getField(this, 416) != null;
 };
 
@@ -8702,25 +8702,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName16 
  * optional int32 field_name17__ = 417;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getFieldName17 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getFieldName17 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 417, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setFieldName17 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setFieldName17 = function(value) {
   return jspb.Message.setField(this, 417, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName17 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearFieldName17 = function() {
   return jspb.Message.setField(this, 417, undefined);
 };
 
@@ -8729,7 +8729,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName1
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName17 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasFieldName17 = function() {
   return jspb.Message.getField(this, 417) != null;
 };
 
@@ -8738,25 +8738,25 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName17 
  * optional int32 Field_name18__ = 418;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getFieldName18 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getFieldName18 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 418, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setFieldName18 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setFieldName18 = function(value) {
   return jspb.Message.setField(this, 418, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName18 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearFieldName18 = function() {
   return jspb.Message.setField(this, 418, undefined);
 };
 
@@ -8765,35 +8765,35 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearFieldName1
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasFieldName18 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasFieldName18 = function() {
   return jspb.Message.getField(this, 418) != null;
 };
 
 
 /**
  * optional MessageSetCorrect message_set_correct = 500;
- * @return {?proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect}
+ * @return {?proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.getMessageSetCorrect = function() {
-  return /** @type{?proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect} */ (
-    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect, 500));
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.getMessageSetCorrect = function() {
+  return /** @type{?proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect} */ (
+    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect, 500));
 };
 
 
 /**
- * @param {?proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect|undefined} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @param {?proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.MessageSetCorrect|undefined} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
 */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.setMessageSetCorrect = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.setMessageSetCorrect = function(value) {
   return jspb.Message.setWrapperField(this, 500, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMessageSetCorrect = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.clearMessageSetCorrect = function() {
   return this.setMessageSetCorrect(undefined);
 };
 
@@ -8802,7 +8802,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.clearMessageSet
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.prototype.hasMessageSetCorrect = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.prototype.hasMessageSetCorrect = function() {
   return jspb.Message.getField(this, 500) != null;
 };
 
@@ -8823,8 +8823,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.ForeignMessageProto2.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.ForeignMessageProto2.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.toObject(opt_includeInstance, this);
 };
 
 
@@ -8833,11 +8833,11 @@ proto.protobuf_test_messages.proto2.ForeignMessageProto2.prototype.toObject = fu
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.ForeignMessageProto2} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.ForeignMessageProto2.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.toObject = function(includeInstance, msg) {
   var f, obj = {
 c: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f
   };
@@ -8853,23 +8853,23 @@ c: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.ForeignMessageProto2}
+ * @return {!proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2}
  */
-proto.protobuf_test_messages.proto2.ForeignMessageProto2.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.ForeignMessageProto2;
-  return proto.protobuf_test_messages.proto2.ForeignMessageProto2.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2;
+  return proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.ForeignMessageProto2} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.ForeignMessageProto2}
+ * @return {!proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2}
  */
-proto.protobuf_test_messages.proto2.ForeignMessageProto2.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -8893,9 +8893,9 @@ proto.protobuf_test_messages.proto2.ForeignMessageProto2.deserializeBinaryFromRe
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.ForeignMessageProto2.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.ForeignMessageProto2.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -8903,11 +8903,11 @@ proto.protobuf_test_messages.proto2.ForeignMessageProto2.prototype.serializeBina
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.ForeignMessageProto2} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.ForeignMessageProto2.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = /** @type {number} */ (jspb.Message.getField(message, 1));
   if (f != null) {
@@ -8923,25 +8923,25 @@ proto.protobuf_test_messages.proto2.ForeignMessageProto2.serializeBinaryToWriter
  * optional int32 c = 1;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.ForeignMessageProto2.prototype.getC = function() {
+proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.prototype.getC = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.ForeignMessageProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2} returns this
  */
-proto.protobuf_test_messages.proto2.ForeignMessageProto2.prototype.setC = function(value) {
+proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.prototype.setC = function(value) {
   return jspb.Message.setField(this, 1, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.ForeignMessageProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2} returns this
  */
-proto.protobuf_test_messages.proto2.ForeignMessageProto2.prototype.clearC = function() {
+proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.prototype.clearC = function() {
   return jspb.Message.setField(this, 1, undefined);
 };
 
@@ -8950,7 +8950,7 @@ proto.protobuf_test_messages.proto2.ForeignMessageProto2.prototype.clearC = func
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.ForeignMessageProto2.prototype.hasC = function() {
+proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.prototype.hasC = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -8971,8 +8971,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.GroupField.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.GroupField.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.GroupField.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.GroupField.toObject(opt_includeInstance, this);
 };
 
 
@@ -8981,11 +8981,11 @@ proto.protobuf_test_messages.proto2.GroupField.prototype.toObject = function(opt
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.GroupField} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.GroupField} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.GroupField.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.GroupField.toObject = function(includeInstance, msg) {
   var f, obj = {
 groupInt32: (f = jspb.Message.getField(msg, 122)) == null ? undefined : f,
 groupUint32: (f = jspb.Message.getField(msg, 123)) == null ? undefined : f
@@ -9002,23 +9002,23 @@ groupUint32: (f = jspb.Message.getField(msg, 123)) == null ? undefined : f
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.GroupField}
+ * @return {!proto.protobuf_test_messages.editions.proto2.GroupField}
  */
-proto.protobuf_test_messages.proto2.GroupField.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.GroupField.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.GroupField;
-  return proto.protobuf_test_messages.proto2.GroupField.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.GroupField;
+  return proto.protobuf_test_messages.editions.proto2.GroupField.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.GroupField} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.GroupField} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.GroupField}
+ * @return {!proto.protobuf_test_messages.editions.proto2.GroupField}
  */
-proto.protobuf_test_messages.proto2.GroupField.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.GroupField.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9046,9 +9046,9 @@ proto.protobuf_test_messages.proto2.GroupField.deserializeBinaryFromReader = fun
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.GroupField.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.GroupField.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.GroupField.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.GroupField.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9056,11 +9056,11 @@ proto.protobuf_test_messages.proto2.GroupField.prototype.serializeBinary = funct
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.GroupField} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.GroupField} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.GroupField.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.GroupField.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = /** @type {number} */ (jspb.Message.getField(message, 122));
   if (f != null) {
@@ -9083,25 +9083,25 @@ proto.protobuf_test_messages.proto2.GroupField.serializeBinaryToWriter = functio
  * optional int32 group_int32 = 122;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.GroupField.prototype.getGroupInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.GroupField.prototype.getGroupInt32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 122, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.GroupField} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.GroupField} returns this
  */
-proto.protobuf_test_messages.proto2.GroupField.prototype.setGroupInt32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.GroupField.prototype.setGroupInt32 = function(value) {
   return jspb.Message.setField(this, 122, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.GroupField} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.GroupField} returns this
  */
-proto.protobuf_test_messages.proto2.GroupField.prototype.clearGroupInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.GroupField.prototype.clearGroupInt32 = function() {
   return jspb.Message.setField(this, 122, undefined);
 };
 
@@ -9110,7 +9110,7 @@ proto.protobuf_test_messages.proto2.GroupField.prototype.clearGroupInt32 = funct
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.GroupField.prototype.hasGroupInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.GroupField.prototype.hasGroupInt32 = function() {
   return jspb.Message.getField(this, 122) != null;
 };
 
@@ -9119,25 +9119,25 @@ proto.protobuf_test_messages.proto2.GroupField.prototype.hasGroupInt32 = functio
  * optional uint32 group_uint32 = 123;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.GroupField.prototype.getGroupUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.GroupField.prototype.getGroupUint32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 123, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.GroupField} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.GroupField} returns this
  */
-proto.protobuf_test_messages.proto2.GroupField.prototype.setGroupUint32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.GroupField.prototype.setGroupUint32 = function(value) {
   return jspb.Message.setField(this, 123, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.GroupField} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.GroupField} returns this
  */
-proto.protobuf_test_messages.proto2.GroupField.prototype.clearGroupUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.GroupField.prototype.clearGroupUint32 = function() {
   return jspb.Message.setField(this, 123, undefined);
 };
 
@@ -9146,7 +9146,7 @@ proto.protobuf_test_messages.proto2.GroupField.prototype.clearGroupUint32 = func
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.GroupField.prototype.hasGroupUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.GroupField.prototype.hasGroupUint32 = function() {
   return jspb.Message.getField(this, 123) != null;
 };
 
@@ -9157,7 +9157,7 @@ proto.protobuf_test_messages.proto2.GroupField.prototype.hasGroupUint32 = functi
  * @private {!Array<number>}
  * @const
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.repeatedFields_ = [1011];
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.repeatedFields_ = [1011];
 
 
 
@@ -9174,8 +9174,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.toObject(opt_includeInstance, this);
 };
 
 
@@ -9184,16 +9184,16 @@ proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.toObject = f
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.toObject = function(includeInstance, msg) {
   var f, obj = {
 optionalInt32: (f = jspb.Message.getField(msg, 1001)) == null ? undefined : f,
 optionalString: (f = jspb.Message.getField(msg, 1002)) == null ? undefined : f,
-nestedMessage: (f = msg.getNestedMessage()) && proto.protobuf_test_messages.proto2.ForeignMessageProto2.toObject(includeInstance, f),
-optionalGroup: (f = msg.getOptionalGroup()) && proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.toObject(includeInstance, f),
+nestedMessage: (f = msg.getNestedMessage()) && proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.toObject(includeInstance, f),
+optionalGroup: (f = msg.getOptionalGroup()) && proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup.toObject(includeInstance, f),
 optionalBool: (f = jspb.Message.getBooleanField(msg, 1006)) == null ? undefined : f,
 repeatedInt32List: (f = jspb.Message.getRepeatedField(msg, 1011)) == null ? undefined : f
   };
@@ -9209,23 +9209,23 @@ repeatedInt32List: (f = jspb.Message.getRepeatedField(msg, 1011)) == null ? unde
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes}
+ * @return {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes}
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.UnknownToTestAllTypes;
-  return proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes;
+  return proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes}
+ * @return {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes}
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9241,13 +9241,13 @@ proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.deserializeBinaryFromR
       msg.setOptionalString(value);
       break;
     case 1003:
-      var value = new proto.protobuf_test_messages.proto2.ForeignMessageProto2;
-      reader.readMessage(value,proto.protobuf_test_messages.proto2.ForeignMessageProto2.deserializeBinaryFromReader);
+      var value = new proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2;
+      reader.readMessage(value,proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.deserializeBinaryFromReader);
       msg.setNestedMessage(value);
       break;
     case 1004:
-      var value = new proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup;
-      reader.readGroup(1004, value,proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.deserializeBinaryFromReader);
+      var value = new proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup;
+      reader.readGroup(1004, value,proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup.deserializeBinaryFromReader);
       msg.setOptionalGroup(value);
       break;
     case 1006:
@@ -9270,9 +9270,9 @@ proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.deserializeBinaryFromR
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9280,11 +9280,11 @@ proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.serializeBin
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = /** @type {number} */ (jspb.Message.getField(message, 1001));
   if (f != null) {
@@ -9305,7 +9305,7 @@ proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.serializeBinaryToWrite
     writer.writeMessage(
       1003,
       f,
-      proto.protobuf_test_messages.proto2.ForeignMessageProto2.serializeBinaryToWriter
+      proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.serializeBinaryToWriter
     );
   }
   f = message.getOptionalGroup();
@@ -9313,7 +9313,7 @@ proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.serializeBinaryToWrite
     writer.writeGroup(
       1004,
       f,
-      proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.serializeBinaryToWriter
+      proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup.serializeBinaryToWriter
     );
   }
   f = /** @type {boolean} */ (jspb.Message.getField(message, 1006));
@@ -9349,8 +9349,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup.toObject(opt_includeInstance, this);
 };
 
 
@@ -9359,11 +9359,11 @@ proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.prototyp
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup.toObject = function(includeInstance, msg) {
   var f, obj = {
 a: (f = jspb.Message.getField(msg, -1003)) == null ? undefined : f
   };
@@ -9379,23 +9379,23 @@ a: (f = jspb.Message.getField(msg, -1003)) == null ? undefined : f
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup}
+ * @return {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup}
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup;
-  return proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup;
+  return proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup}
+ * @return {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup}
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9419,9 +9419,9 @@ proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.deserial
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9429,11 +9429,11 @@ proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.prototyp
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = /** @type {number} */ (jspb.Message.getField(message, -1003));
   if (f != null) {
@@ -9449,25 +9449,25 @@ proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.serializ
  * optional int32 a = 1;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.prototype.getA = function() {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup.prototype.getA = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, -1003, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup} returns this
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.prototype.setA = function(value) {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup.prototype.setA = function(value) {
   return jspb.Message.setField(this, -1003, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup} returns this
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.prototype.clearA = function() {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup.prototype.clearA = function() {
   return jspb.Message.setField(this, -1003, undefined);
 };
 
@@ -9476,7 +9476,7 @@ proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.prototyp
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.prototype.hasA = function() {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup.prototype.hasA = function() {
   return jspb.Message.getField(this, -1003) != null;
 };
 
@@ -9485,25 +9485,25 @@ proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.prototyp
  * optional int32 optional_int32 = 1001;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.getOptionalInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.getOptionalInt32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1001, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes} returns this
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.setOptionalInt32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.setOptionalInt32 = function(value) {
   return jspb.Message.setField(this, 1001, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes} returns this
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.clearOptionalInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.clearOptionalInt32 = function() {
   return jspb.Message.setField(this, 1001, undefined);
 };
 
@@ -9512,7 +9512,7 @@ proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.clearOptiona
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.hasOptionalInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.hasOptionalInt32 = function() {
   return jspb.Message.getField(this, 1001) != null;
 };
 
@@ -9521,25 +9521,25 @@ proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.hasOptionalI
  * optional string optional_string = 1002;
  * @return {string}
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.getOptionalString = function() {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.getOptionalString = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1002, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes} returns this
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.setOptionalString = function(value) {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.setOptionalString = function(value) {
   return jspb.Message.setField(this, 1002, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes} returns this
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.clearOptionalString = function() {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.clearOptionalString = function() {
   return jspb.Message.setField(this, 1002, undefined);
 };
 
@@ -9548,35 +9548,35 @@ proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.clearOptiona
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.hasOptionalString = function() {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.hasOptionalString = function() {
   return jspb.Message.getField(this, 1002) != null;
 };
 
 
 /**
  * optional ForeignMessageProto2 nested_message = 1003;
- * @return {?proto.protobuf_test_messages.proto2.ForeignMessageProto2}
+ * @return {?proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2}
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.getNestedMessage = function() {
-  return /** @type{?proto.protobuf_test_messages.proto2.ForeignMessageProto2} */ (
-    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.proto2.ForeignMessageProto2, 1003));
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.getNestedMessage = function() {
+  return /** @type{?proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2} */ (
+    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2, 1003));
 };
 
 
 /**
- * @param {?proto.protobuf_test_messages.proto2.ForeignMessageProto2|undefined} value
- * @return {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes} returns this
+ * @param {?proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2|undefined} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes} returns this
 */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.setNestedMessage = function(value) {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.setNestedMessage = function(value) {
   return jspb.Message.setWrapperField(this, 1003, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes} returns this
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.clearNestedMessage = function() {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.clearNestedMessage = function() {
   return this.setNestedMessage(undefined);
 };
 
@@ -9585,35 +9585,35 @@ proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.clearNestedM
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.hasNestedMessage = function() {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.hasNestedMessage = function() {
   return jspb.Message.getField(this, 1003) != null;
 };
 
 
 /**
  * optional group OptionalGroup = 1004;
- * @return {?proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup}
+ * @return {?proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup}
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.getOptionalGroup = function() {
-  return /** @type{?proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup} */ (
-    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup, 1004));
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.getOptionalGroup = function() {
+  return /** @type{?proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup} */ (
+    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup, 1004));
 };
 
 
 /**
- * @param {?proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup|undefined} value
- * @return {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes} returns this
+ * @param {?proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.OptionalGroup|undefined} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes} returns this
 */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.setOptionalGroup = function(value) {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.setOptionalGroup = function(value) {
   return jspb.Message.setWrapperField(this, 1004, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes} returns this
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.clearOptionalGroup = function() {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.clearOptionalGroup = function() {
   return this.setOptionalGroup(undefined);
 };
 
@@ -9622,7 +9622,7 @@ proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.clearOptiona
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.hasOptionalGroup = function() {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.hasOptionalGroup = function() {
   return jspb.Message.getField(this, 1004) != null;
 };
 
@@ -9631,25 +9631,25 @@ proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.hasOptionalG
  * optional bool optional_bool = 1006;
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.getOptionalBool = function() {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.getOptionalBool = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 1006, false));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes} returns this
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.setOptionalBool = function(value) {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.setOptionalBool = function(value) {
   return jspb.Message.setField(this, 1006, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes} returns this
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.clearOptionalBool = function() {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.clearOptionalBool = function() {
   return jspb.Message.setField(this, 1006, undefined);
 };
 
@@ -9658,7 +9658,7 @@ proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.clearOptiona
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.hasOptionalBool = function() {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.hasOptionalBool = function() {
   return jspb.Message.getField(this, 1006) != null;
 };
 
@@ -9667,16 +9667,16 @@ proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.hasOptionalB
  * repeated int32 repeated_int32 = 1011;
  * @return {!Array<number>}
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.getRepeatedInt32List = function() {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.getRepeatedInt32List = function() {
   return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 1011));
 };
 
 
 /**
  * @param {!Array<number>} value
- * @return {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes} returns this
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.setRepeatedInt32List = function(value) {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.setRepeatedInt32List = function(value) {
   return jspb.Message.setField(this, 1011, value || []);
 };
 
@@ -9684,18 +9684,18 @@ proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.setRepeatedI
 /**
  * @param {number} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes} returns this
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.addRepeatedInt32 = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.addRepeatedInt32 = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 1011, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes} returns this
  */
-proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.prototype.clearRepeatedInt32List = function() {
+proto.protobuf_test_messages.editions.proto2.UnknownToTestAllTypes.prototype.clearRepeatedInt32List = function() {
   return this.setRepeatedInt32List([]);
 };
 
@@ -9716,8 +9716,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.NullHypothesisProto2.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.NullHypothesisProto2.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.NullHypothesisProto2.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.NullHypothesisProto2.toObject(opt_includeInstance, this);
 };
 
 
@@ -9726,11 +9726,11 @@ proto.protobuf_test_messages.proto2.NullHypothesisProto2.prototype.toObject = fu
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.NullHypothesisProto2} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.NullHypothesisProto2} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.NullHypothesisProto2.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.NullHypothesisProto2.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -9746,23 +9746,23 @@ proto.protobuf_test_messages.proto2.NullHypothesisProto2.toObject = function(inc
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.NullHypothesisProto2}
+ * @return {!proto.protobuf_test_messages.editions.proto2.NullHypothesisProto2}
  */
-proto.protobuf_test_messages.proto2.NullHypothesisProto2.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.NullHypothesisProto2.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.NullHypothesisProto2;
-  return proto.protobuf_test_messages.proto2.NullHypothesisProto2.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.NullHypothesisProto2;
+  return proto.protobuf_test_messages.editions.proto2.NullHypothesisProto2.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.NullHypothesisProto2} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.NullHypothesisProto2} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.NullHypothesisProto2}
+ * @return {!proto.protobuf_test_messages.editions.proto2.NullHypothesisProto2}
  */
-proto.protobuf_test_messages.proto2.NullHypothesisProto2.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.NullHypothesisProto2.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9782,9 +9782,9 @@ proto.protobuf_test_messages.proto2.NullHypothesisProto2.deserializeBinaryFromRe
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.NullHypothesisProto2.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.NullHypothesisProto2.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.NullHypothesisProto2.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.NullHypothesisProto2.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9792,11 +9792,11 @@ proto.protobuf_test_messages.proto2.NullHypothesisProto2.prototype.serializeBina
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.NullHypothesisProto2} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.NullHypothesisProto2} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.NullHypothesisProto2.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.NullHypothesisProto2.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -9817,8 +9817,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.EnumOnlyProto2.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.EnumOnlyProto2.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.EnumOnlyProto2.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.EnumOnlyProto2.toObject(opt_includeInstance, this);
 };
 
 
@@ -9827,11 +9827,11 @@ proto.protobuf_test_messages.proto2.EnumOnlyProto2.prototype.toObject = function
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.EnumOnlyProto2} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.EnumOnlyProto2} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.EnumOnlyProto2.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.EnumOnlyProto2.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -9847,23 +9847,23 @@ proto.protobuf_test_messages.proto2.EnumOnlyProto2.toObject = function(includeIn
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.EnumOnlyProto2}
+ * @return {!proto.protobuf_test_messages.editions.proto2.EnumOnlyProto2}
  */
-proto.protobuf_test_messages.proto2.EnumOnlyProto2.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.EnumOnlyProto2.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.EnumOnlyProto2;
-  return proto.protobuf_test_messages.proto2.EnumOnlyProto2.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.EnumOnlyProto2;
+  return proto.protobuf_test_messages.editions.proto2.EnumOnlyProto2.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.EnumOnlyProto2} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.EnumOnlyProto2} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.EnumOnlyProto2}
+ * @return {!proto.protobuf_test_messages.editions.proto2.EnumOnlyProto2}
  */
-proto.protobuf_test_messages.proto2.EnumOnlyProto2.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.EnumOnlyProto2.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9883,9 +9883,9 @@ proto.protobuf_test_messages.proto2.EnumOnlyProto2.deserializeBinaryFromReader =
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.EnumOnlyProto2.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.EnumOnlyProto2.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.EnumOnlyProto2.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.EnumOnlyProto2.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9893,11 +9893,11 @@ proto.protobuf_test_messages.proto2.EnumOnlyProto2.prototype.serializeBinary = f
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.EnumOnlyProto2} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.EnumOnlyProto2} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.EnumOnlyProto2.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.EnumOnlyProto2.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -9905,7 +9905,7 @@ proto.protobuf_test_messages.proto2.EnumOnlyProto2.serializeBinaryToWriter = fun
 /**
  * @enum {number}
  */
-proto.protobuf_test_messages.proto2.EnumOnlyProto2.Bool = {
+proto.protobuf_test_messages.editions.proto2.EnumOnlyProto2.Bool = {
   KFALSE: 0,
   KTRUE: 1
 };
@@ -9926,8 +9926,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.OneStringProto2.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.OneStringProto2.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.OneStringProto2.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.OneStringProto2.toObject(opt_includeInstance, this);
 };
 
 
@@ -9936,11 +9936,11 @@ proto.protobuf_test_messages.proto2.OneStringProto2.prototype.toObject = functio
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.OneStringProto2} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.OneStringProto2} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.OneStringProto2.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.OneStringProto2.toObject = function(includeInstance, msg) {
   var f, obj = {
 data: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f
   };
@@ -9956,23 +9956,23 @@ data: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.OneStringProto2}
+ * @return {!proto.protobuf_test_messages.editions.proto2.OneStringProto2}
  */
-proto.protobuf_test_messages.proto2.OneStringProto2.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.OneStringProto2.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.OneStringProto2;
-  return proto.protobuf_test_messages.proto2.OneStringProto2.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.OneStringProto2;
+  return proto.protobuf_test_messages.editions.proto2.OneStringProto2.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.OneStringProto2} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.OneStringProto2} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.OneStringProto2}
+ * @return {!proto.protobuf_test_messages.editions.proto2.OneStringProto2}
  */
-proto.protobuf_test_messages.proto2.OneStringProto2.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.OneStringProto2.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9996,9 +9996,9 @@ proto.protobuf_test_messages.proto2.OneStringProto2.deserializeBinaryFromReader 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.OneStringProto2.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.OneStringProto2.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.OneStringProto2.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.OneStringProto2.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -10006,11 +10006,11 @@ proto.protobuf_test_messages.proto2.OneStringProto2.prototype.serializeBinary = 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.OneStringProto2} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.OneStringProto2} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.OneStringProto2.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.OneStringProto2.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = /** @type {string} */ (jspb.Message.getField(message, 1));
   if (f != null) {
@@ -10026,25 +10026,25 @@ proto.protobuf_test_messages.proto2.OneStringProto2.serializeBinaryToWriter = fu
  * optional string data = 1;
  * @return {string}
  */
-proto.protobuf_test_messages.proto2.OneStringProto2.prototype.getData = function() {
+proto.protobuf_test_messages.editions.proto2.OneStringProto2.prototype.getData = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.protobuf_test_messages.proto2.OneStringProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.OneStringProto2} returns this
  */
-proto.protobuf_test_messages.proto2.OneStringProto2.prototype.setData = function(value) {
+proto.protobuf_test_messages.editions.proto2.OneStringProto2.prototype.setData = function(value) {
   return jspb.Message.setField(this, 1, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.OneStringProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.OneStringProto2} returns this
  */
-proto.protobuf_test_messages.proto2.OneStringProto2.prototype.clearData = function() {
+proto.protobuf_test_messages.editions.proto2.OneStringProto2.prototype.clearData = function() {
   return jspb.Message.setField(this, 1, undefined);
 };
 
@@ -10053,7 +10053,7 @@ proto.protobuf_test_messages.proto2.OneStringProto2.prototype.clearData = functi
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.OneStringProto2.prototype.hasData = function() {
+proto.protobuf_test_messages.editions.proto2.OneStringProto2.prototype.hasData = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -10064,7 +10064,7 @@ proto.protobuf_test_messages.proto2.OneStringProto2.prototype.hasData = function
  * @private {!Array<number>}
  * @const
  */
-proto.protobuf_test_messages.proto2.ProtoWithKeywords.repeatedFields_ = [3];
+proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords.repeatedFields_ = [3];
 
 
 
@@ -10081,8 +10081,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.ProtoWithKeywords.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.ProtoWithKeywords.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords.toObject(opt_includeInstance, this);
 };
 
 
@@ -10091,11 +10091,11 @@ proto.protobuf_test_messages.proto2.ProtoWithKeywords.prototype.toObject = funct
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.ProtoWithKeywords} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.ProtoWithKeywords.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords.toObject = function(includeInstance, msg) {
   var f, obj = {
 inline: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
 concept: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
@@ -10113,23 +10113,23 @@ requiresList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.ProtoWithKeywords}
+ * @return {!proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords}
  */
-proto.protobuf_test_messages.proto2.ProtoWithKeywords.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.ProtoWithKeywords;
-  return proto.protobuf_test_messages.proto2.ProtoWithKeywords.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords;
+  return proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.ProtoWithKeywords} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.ProtoWithKeywords}
+ * @return {!proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords}
  */
-proto.protobuf_test_messages.proto2.ProtoWithKeywords.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -10161,9 +10161,9 @@ proto.protobuf_test_messages.proto2.ProtoWithKeywords.deserializeBinaryFromReade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.ProtoWithKeywords.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.ProtoWithKeywords.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -10171,11 +10171,11 @@ proto.protobuf_test_messages.proto2.ProtoWithKeywords.prototype.serializeBinary 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.ProtoWithKeywords} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.ProtoWithKeywords.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = /** @type {number} */ (jspb.Message.getField(message, 1));
   if (f != null) {
@@ -10205,25 +10205,25 @@ proto.protobuf_test_messages.proto2.ProtoWithKeywords.serializeBinaryToWriter = 
  * optional int32 inline = 1;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.ProtoWithKeywords.prototype.getInline = function() {
+proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords.prototype.getInline = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.ProtoWithKeywords} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords} returns this
  */
-proto.protobuf_test_messages.proto2.ProtoWithKeywords.prototype.setInline = function(value) {
+proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords.prototype.setInline = function(value) {
   return jspb.Message.setField(this, 1, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.ProtoWithKeywords} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords} returns this
  */
-proto.protobuf_test_messages.proto2.ProtoWithKeywords.prototype.clearInline = function() {
+proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords.prototype.clearInline = function() {
   return jspb.Message.setField(this, 1, undefined);
 };
 
@@ -10232,7 +10232,7 @@ proto.protobuf_test_messages.proto2.ProtoWithKeywords.prototype.clearInline = fu
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.ProtoWithKeywords.prototype.hasInline = function() {
+proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords.prototype.hasInline = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -10241,25 +10241,25 @@ proto.protobuf_test_messages.proto2.ProtoWithKeywords.prototype.hasInline = func
  * optional string concept = 2;
  * @return {string}
  */
-proto.protobuf_test_messages.proto2.ProtoWithKeywords.prototype.getConcept = function() {
+proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords.prototype.getConcept = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.protobuf_test_messages.proto2.ProtoWithKeywords} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords} returns this
  */
-proto.protobuf_test_messages.proto2.ProtoWithKeywords.prototype.setConcept = function(value) {
+proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords.prototype.setConcept = function(value) {
   return jspb.Message.setField(this, 2, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.ProtoWithKeywords} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords} returns this
  */
-proto.protobuf_test_messages.proto2.ProtoWithKeywords.prototype.clearConcept = function() {
+proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords.prototype.clearConcept = function() {
   return jspb.Message.setField(this, 2, undefined);
 };
 
@@ -10268,7 +10268,7 @@ proto.protobuf_test_messages.proto2.ProtoWithKeywords.prototype.clearConcept = f
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.ProtoWithKeywords.prototype.hasConcept = function() {
+proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords.prototype.hasConcept = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
@@ -10277,16 +10277,16 @@ proto.protobuf_test_messages.proto2.ProtoWithKeywords.prototype.hasConcept = fun
  * repeated string requires = 3;
  * @return {!Array<string>}
  */
-proto.protobuf_test_messages.proto2.ProtoWithKeywords.prototype.getRequiresList = function() {
+proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords.prototype.getRequiresList = function() {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 3));
 };
 
 
 /**
  * @param {!Array<string>} value
- * @return {!proto.protobuf_test_messages.proto2.ProtoWithKeywords} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords} returns this
  */
-proto.protobuf_test_messages.proto2.ProtoWithKeywords.prototype.setRequiresList = function(value) {
+proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords.prototype.setRequiresList = function(value) {
   return jspb.Message.setField(this, 3, value || []);
 };
 
@@ -10294,18 +10294,18 @@ proto.protobuf_test_messages.proto2.ProtoWithKeywords.prototype.setRequiresList 
 /**
  * @param {string} value
  * @param {number=} opt_index
- * @return {!proto.protobuf_test_messages.proto2.ProtoWithKeywords} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords} returns this
  */
-proto.protobuf_test_messages.proto2.ProtoWithKeywords.prototype.addRequires = function(value, opt_index) {
+proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords.prototype.addRequires = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 3, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.protobuf_test_messages.proto2.ProtoWithKeywords} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords} returns this
  */
-proto.protobuf_test_messages.proto2.ProtoWithKeywords.prototype.clearRequiresList = function() {
+proto.protobuf_test_messages.editions.proto2.ProtoWithKeywords.prototype.clearRequiresList = function() {
   return this.setRequiresList([]);
 };
 
@@ -10326,8 +10326,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.toObject(opt_includeInstance, this);
 };
 
 
@@ -10336,11 +10336,11 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.toObjec
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.toObject = function(includeInstance, msg) {
   var f, obj = {
 requiredInt32: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
 requiredInt64: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f,
@@ -10357,15 +10357,15 @@ requiredDouble: (f = jspb.Message.getOptionalFloatingPointField(msg, 12)) == nul
 requiredBool: (f = jspb.Message.getBooleanField(msg, 13)) == null ? undefined : f,
 requiredString: (f = jspb.Message.getField(msg, 14)) == null ? undefined : f,
 requiredBytes: msg.getRequiredBytes_asB64(),
-requiredNestedMessage: (f = msg.getRequiredNestedMessage()) && proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.toObject(includeInstance, f),
-requiredForeignMessage: (f = msg.getRequiredForeignMessage()) && proto.protobuf_test_messages.proto2.ForeignMessageProto2.toObject(includeInstance, f),
+requiredNestedMessage: (f = msg.getRequiredNestedMessage()) && proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.toObject(includeInstance, f),
+requiredForeignMessage: (f = msg.getRequiredForeignMessage()) && proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.toObject(includeInstance, f),
 requiredNestedEnum: (f = jspb.Message.getField(msg, 21)) == null ? undefined : f,
 requiredForeignEnum: (f = jspb.Message.getField(msg, 22)) == null ? undefined : f,
 requiredStringPiece: (f = jspb.Message.getField(msg, 24)) == null ? undefined : f,
 requiredCord: (f = jspb.Message.getField(msg, 25)) == null ? undefined : f,
-recursiveMessage: (f = msg.getRecursiveMessage()) && proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.toObject(includeInstance, f),
-optionalRecursiveMessage: (f = msg.getOptionalRecursiveMessage()) && proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.toObject(includeInstance, f),
-data: (f = msg.getData()) && proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.toObject(includeInstance, f),
+recursiveMessage: (f = msg.getRecursiveMessage()) && proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.toObject(includeInstance, f),
+optionalRecursiveMessage: (f = msg.getOptionalRecursiveMessage()) && proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.toObject(includeInstance, f),
+data: (f = msg.getData()) && proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data.toObject(includeInstance, f),
 defaultInt32: jspb.Message.getFieldWithDefault(msg, 241, -123456789),
 defaultInt64: jspb.Message.getFieldWithDefault(msg, 242, -9123456789123456789),
 defaultUint32: jspb.Message.getFieldWithDefault(msg, 243, 2123456789),
@@ -10384,7 +10384,7 @@ defaultBytes: msg.getDefaultBytes_asB64()
   };
 
   jspb.Message.toObjectExtension(/** @type {!jspb.Message} */ (msg), obj,
-      proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.extensions, proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getExtension,
+      proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.extensions, proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getExtension,
       includeInstance);
   if (includeInstance) {
     obj.$jspbMessageInstance = msg;
@@ -10397,23 +10397,23 @@ defaultBytes: msg.getDefaultBytes_asB64()
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2;
-  return proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2;
+  return proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -10481,21 +10481,21 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.deserializeBinary
       msg.setRequiredBytes(value);
       break;
     case 18:
-      var value = new proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage;
-      reader.readMessage(value,proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.deserializeBinaryFromReader);
+      var value = new proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage;
+      reader.readMessage(value,proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.deserializeBinaryFromReader);
       msg.setRequiredNestedMessage(value);
       break;
     case 19:
-      var value = new proto.protobuf_test_messages.proto2.ForeignMessageProto2;
-      reader.readMessage(value,proto.protobuf_test_messages.proto2.ForeignMessageProto2.deserializeBinaryFromReader);
+      var value = new proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2;
+      reader.readMessage(value,proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.deserializeBinaryFromReader);
       msg.setRequiredForeignMessage(value);
       break;
     case 21:
-      var value = /** @type {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedEnum} */ (reader.readEnum());
+      var value = /** @type {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedEnum} */ (reader.readEnum());
       msg.setRequiredNestedEnum(value);
       break;
     case 22:
-      var value = /** @type {!proto.protobuf_test_messages.proto2.ForeignEnumProto2} */ (reader.readEnum());
+      var value = /** @type {!proto.protobuf_test_messages.editions.proto2.ForeignEnumProto2} */ (reader.readEnum());
       msg.setRequiredForeignEnum(value);
       break;
     case 24:
@@ -10507,18 +10507,18 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.deserializeBinary
       msg.setRequiredCord(value);
       break;
     case 27:
-      var value = new proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2;
-      reader.readMessage(value,proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.deserializeBinaryFromReader);
+      var value = new proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2;
+      reader.readMessage(value,proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.deserializeBinaryFromReader);
       msg.setRecursiveMessage(value);
       break;
     case 28:
-      var value = new proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2;
-      reader.readMessage(value,proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.deserializeBinaryFromReader);
+      var value = new proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2;
+      reader.readMessage(value,proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.deserializeBinaryFromReader);
       msg.setOptionalRecursiveMessage(value);
       break;
     case 201:
-      var value = new proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data;
-      reader.readGroup(201, value,proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.deserializeBinaryFromReader);
+      var value = new proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data;
+      reader.readGroup(201, value,proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data.deserializeBinaryFromReader);
       msg.setData(value);
       break;
     case 241:
@@ -10583,9 +10583,9 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.deserializeBinary
       break;
     default:
       jspb.Message.readBinaryExtension(msg, reader,
-        proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.extensionsBinary,
-        proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getExtension,
-        proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setExtension);
+        proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.extensionsBinary,
+        proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getExtension,
+        proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setExtension);
       break;
     }
   }
@@ -10597,9 +10597,9 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.deserializeBinary
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -10607,11 +10607,11 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.seriali
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = /** @type {number} */ (jspb.Message.getField(message, 1));
   if (f != null) {
@@ -10723,7 +10723,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.serializeBinaryTo
     writer.writeMessage(
       18,
       f,
-      proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.serializeBinaryToWriter
+      proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.serializeBinaryToWriter
     );
   }
   f = message.getRequiredForeignMessage();
@@ -10731,17 +10731,17 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.serializeBinaryTo
     writer.writeMessage(
       19,
       f,
-      proto.protobuf_test_messages.proto2.ForeignMessageProto2.serializeBinaryToWriter
+      proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2.serializeBinaryToWriter
     );
   }
-  f = /** @type {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedEnum} */ (jspb.Message.getField(message, 21));
+  f = /** @type {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedEnum} */ (jspb.Message.getField(message, 21));
   if (f != null) {
     writer.writeEnum(
       21,
       f
     );
   }
-  f = /** @type {!proto.protobuf_test_messages.proto2.ForeignEnumProto2} */ (jspb.Message.getField(message, 22));
+  f = /** @type {!proto.protobuf_test_messages.editions.proto2.ForeignEnumProto2} */ (jspb.Message.getField(message, 22));
   if (f != null) {
     writer.writeEnum(
       22,
@@ -10767,7 +10767,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.serializeBinaryTo
     writer.writeMessage(
       27,
       f,
-      proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.serializeBinaryToWriter
+      proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.serializeBinaryToWriter
     );
   }
   f = message.getOptionalRecursiveMessage();
@@ -10775,7 +10775,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.serializeBinaryTo
     writer.writeMessage(
       28,
       f,
-      proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.serializeBinaryToWriter
+      proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.serializeBinaryToWriter
     );
   }
   f = message.getData();
@@ -10783,7 +10783,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.serializeBinaryTo
     writer.writeGroup(
       201,
       f,
-      proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.serializeBinaryToWriter
+      proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data.serializeBinaryToWriter
     );
   }
   f = /** @type {number} */ (jspb.Message.getField(message, 241));
@@ -10892,14 +10892,14 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.serializeBinaryTo
     );
   }
   jspb.Message.serializeBinaryExtensions(message, writer,
-    proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.extensionsBinary, proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getExtension);
+    proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.extensionsBinary, proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getExtension);
 };
 
 
 /**
  * @enum {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedEnum = {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedEnum = {
   FOO: 0,
   BAR: 1,
   BAZ: 2,
@@ -10922,8 +10922,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.toObject(opt_includeInstance, this);
 };
 
 
@@ -10932,15 +10932,15 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.pro
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.toObject = function(includeInstance, msg) {
   var f, obj = {
 a: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
-corecursive: (f = msg.getCorecursive()) && proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.toObject(includeInstance, f),
-optionalCorecursive: (f = msg.getOptionalCorecursive()) && proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.toObject(includeInstance, f)
+corecursive: (f = msg.getCorecursive()) && proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.toObject(includeInstance, f),
+optionalCorecursive: (f = msg.getOptionalCorecursive()) && proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -10954,23 +10954,23 @@ optionalCorecursive: (f = msg.getOptionalCorecursive()) && proto.protobuf_test_m
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage;
-  return proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage;
+  return proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -10982,13 +10982,13 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.des
       msg.setA(value);
       break;
     case 2:
-      var value = new proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2;
-      reader.readMessage(value,proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.deserializeBinaryFromReader);
+      var value = new proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2;
+      reader.readMessage(value,proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.deserializeBinaryFromReader);
       msg.setCorecursive(value);
       break;
     case 3:
-      var value = new proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2;
-      reader.readMessage(value,proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.deserializeBinaryFromReader);
+      var value = new proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2;
+      reader.readMessage(value,proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.deserializeBinaryFromReader);
       msg.setOptionalCorecursive(value);
       break;
     default:
@@ -11004,9 +11004,9 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.des
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -11014,11 +11014,11 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.pro
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = /** @type {number} */ (jspb.Message.getField(message, 1));
   if (f != null) {
@@ -11032,7 +11032,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.ser
     writer.writeMessage(
       2,
       f,
-      proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.serializeBinaryToWriter
+      proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.serializeBinaryToWriter
     );
   }
   f = message.getOptionalCorecursive();
@@ -11040,7 +11040,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.ser
     writer.writeMessage(
       3,
       f,
-      proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.serializeBinaryToWriter
+      proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.serializeBinaryToWriter
     );
   }
 };
@@ -11050,25 +11050,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.ser
  * required int32 a = 1;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.getA = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.getA = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.setA = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.setA = function(value) {
   return jspb.Message.setField(this, 1, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.clearA = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.clearA = function() {
   return jspb.Message.setField(this, 1, undefined);
 };
 
@@ -11077,35 +11077,35 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.pro
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.hasA = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.hasA = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
 
 /**
  * required TestAllRequiredTypesProto2 corecursive = 2;
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.getCorecursive = function() {
-  return /** @type{!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} */ (
-    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2, 2, 1));
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.getCorecursive = function() {
+  return /** @type{!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} */ (
+    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2, 2, 1));
 };
 
 
 /**
- * @param {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage} returns this
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage} returns this
 */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.setCorecursive = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.setCorecursive = function(value) {
   return jspb.Message.setWrapperField(this, 2, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.clearCorecursive = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.clearCorecursive = function() {
   return jspb.Message.setField(this, 2, undefined);
 };
 
@@ -11114,35 +11114,35 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.pro
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.hasCorecursive = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.hasCorecursive = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
 
 /**
  * optional TestAllRequiredTypesProto2 optional_corecursive = 3;
- * @return {?proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2}
+ * @return {?proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.getOptionalCorecursive = function() {
-  return /** @type{?proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} */ (
-    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2, 3));
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.getOptionalCorecursive = function() {
+  return /** @type{?proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} */ (
+    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2, 3));
 };
 
 
 /**
- * @param {?proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2|undefined} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage} returns this
+ * @param {?proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2|undefined} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage} returns this
 */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.setOptionalCorecursive = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.setOptionalCorecursive = function(value) {
   return jspb.Message.setWrapperField(this, 3, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.clearOptionalCorecursive = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.clearOptionalCorecursive = function() {
   return this.setOptionalCorecursive(undefined);
 };
 
@@ -11151,7 +11151,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.pro
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.hasOptionalCorecursive = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage.prototype.hasOptionalCorecursive = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 
@@ -11172,8 +11172,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data.toObject(opt_includeInstance, this);
 };
 
 
@@ -11182,11 +11182,11 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.prototype.to
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data.toObject = function(includeInstance, msg) {
   var f, obj = {
 groupInt32: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f,
 groupUint32: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
@@ -11203,23 +11203,23 @@ groupUint32: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data;
-  return proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data;
+  return proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -11247,9 +11247,9 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.deserializeB
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -11257,11 +11257,11 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.prototype.se
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = /** @type {number} */ (jspb.Message.getField(message, 1));
   if (f != null) {
@@ -11284,25 +11284,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.serializeBin
  * required int32 group_int32 = 202;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.prototype.getGroupInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data.prototype.getGroupInt32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.prototype.setGroupInt32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data.prototype.setGroupInt32 = function(value) {
   return jspb.Message.setField(this, 1, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.prototype.clearGroupInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data.prototype.clearGroupInt32 = function() {
   return jspb.Message.setField(this, 1, undefined);
 };
 
@@ -11311,7 +11311,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.prototype.cl
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.prototype.hasGroupInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data.prototype.hasGroupInt32 = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -11320,25 +11320,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.prototype.ha
  * required uint32 group_uint32 = 203;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.prototype.getGroupUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data.prototype.getGroupUint32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.prototype.setGroupUint32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data.prototype.setGroupUint32 = function(value) {
   return jspb.Message.setField(this, 2, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.prototype.clearGroupUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data.prototype.clearGroupUint32 = function() {
   return jspb.Message.setField(this, 2, undefined);
 };
 
@@ -11347,7 +11347,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.prototype.cl
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.prototype.hasGroupUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data.prototype.hasGroupUint32 = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
@@ -11368,8 +11368,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.toObject(opt_includeInstance, this);
 };
 
 
@@ -11378,17 +11378,17 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
 
   jspb.Message.toObjectExtension(/** @type {!jspb.Message} */ (msg), obj,
-      proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensions, proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.prototype.getExtension,
+      proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensions, proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.prototype.getExtension,
       includeInstance);
   if (includeInstance) {
     obj.$jspbMessageInstance = msg;
@@ -11401,23 +11401,23 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect;
-  return proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect;
+  return proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -11426,9 +11426,9 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
     switch (field) {
     default:
       jspb.Message.readBinaryExtension(msg, reader,
-        proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensionsBinary,
-        proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.prototype.getExtension,
-        proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.prototype.setExtension);
+        proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensionsBinary,
+        proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.prototype.getExtension,
+        proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.prototype.setExtension);
       break;
     }
   }
@@ -11440,9 +11440,9 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -11450,14 +11450,14 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   jspb.Message.serializeBinaryExtensions(message, writer,
-    proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensionsBinary, proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.prototype.getExtension);
+    proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensionsBinary, proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.prototype.getExtension);
 };
 
 
@@ -11477,8 +11477,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.toObject(opt_includeInstance, this);
 };
 
 
@@ -11487,11 +11487,11 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.toObject = function(includeInstance, msg) {
   var f, obj = {
 str: (f = jspb.Message.getField(msg, 25)) == null ? undefined : f
   };
@@ -11507,23 +11507,23 @@ str: (f = jspb.Message.getField(msg, 25)) == null ? undefined : f
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1;
-  return proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1;
+  return proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -11547,9 +11547,9 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -11557,11 +11557,11 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = /** @type {string} */ (jspb.Message.getField(message, 25));
   if (f != null) {
@@ -11577,50 +11577,50 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
 /**
  * A tuple of {field number, class constructor} for the extension
  * field named `messageSetExtension`.
- * @type {!jspb.ExtensionFieldInfo<!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1>}
+ * @type {!jspb.ExtensionFieldInfo<!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1>}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension = new jspb.ExtensionFieldInfo(
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension = new jspb.ExtensionFieldInfo(
     1547769,
     {messageSetExtension: 0},
-    proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1,
+    proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1,
      /** @type {?function((boolean|undefined),!jspb.Message=): !Object} */ (
-         proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.toObject),
+         proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.toObject),
     0);
 
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensionsBinary[1547769] = new jspb.ExtensionFieldBinaryInfo(
-    proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension,
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensionsBinary[1547769] = new jspb.ExtensionFieldBinaryInfo(
+    proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension,
     jspb.BinaryReader.prototype.readMessage,
     jspb.BinaryWriter.prototype.writeMessageSet,
-    proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.serializeBinaryToWriter,
-    proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.deserializeBinaryFromReader,
+    proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.serializeBinaryToWriter,
+    proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.deserializeBinaryFromReader,
     false);
 // This registers the extension field with the extended class, so that
 // toObject() will function correctly.
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensions[1547769] = proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension;
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensions[1547769] = proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension;
 
 /**
  * required string str = 25;
  * @return {string}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.prototype.getStr = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.prototype.getStr = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 25, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.prototype.setStr = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.prototype.setStr = function(value) {
   return jspb.Message.setField(this, 25, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.prototype.clearStr = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.prototype.clearStr = function() {
   return jspb.Message.setField(this, 25, undefined);
 };
 
@@ -11629,7 +11629,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.prototype.hasStr = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.prototype.hasStr = function() {
   return jspb.Message.getField(this, 25) != null;
 };
 
@@ -11638,26 +11638,26 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
 /**
  * A tuple of {field number, class constructor} for the extension
  * field named `messageSetExtension`.
- * @type {!jspb.ExtensionFieldInfo<!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1>}
+ * @type {!jspb.ExtensionFieldInfo<!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1>}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension = new jspb.ExtensionFieldInfo(
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension = new jspb.ExtensionFieldInfo(
     1547769,
     {messageSetExtension: 0},
-    proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1,
+    proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1,
      /** @type {?function((boolean|undefined),!jspb.Message=): !Object} */ (
-         proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.toObject),
+         proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.toObject),
     0);
 
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensionsBinary[1547769] = new jspb.ExtensionFieldBinaryInfo(
-    proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension,
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensionsBinary[1547769] = new jspb.ExtensionFieldBinaryInfo(
+    proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension,
     jspb.BinaryReader.prototype.readMessage,
     jspb.BinaryWriter.prototype.writeMessageSet,
-    proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.serializeBinaryToWriter,
-    proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.deserializeBinaryFromReader,
+    proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.serializeBinaryToWriter,
+    proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.deserializeBinaryFromReader,
     false);
 // This registers the extension field with the extended class, so that
 // toObject() will function correctly.
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensions[1547769] = proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension;
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensions[1547769] = proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.messageSetExtension;
 
 
 
@@ -11675,8 +11675,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.toObject(opt_includeInstance, this);
 };
 
 
@@ -11685,11 +11685,11 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.toObject = function(includeInstance, msg) {
   var f, obj = {
 i: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f
   };
@@ -11705,23 +11705,23 @@ i: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2;
-  return proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2;
+  return proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -11745,9 +11745,9 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -11755,11 +11755,11 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = /** @type {number} */ (jspb.Message.getField(message, 9));
   if (f != null) {
@@ -11775,50 +11775,50 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
 /**
  * A tuple of {field number, class constructor} for the extension
  * field named `messageSetExtension`.
- * @type {!jspb.ExtensionFieldInfo<!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2>}
+ * @type {!jspb.ExtensionFieldInfo<!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2>}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension = new jspb.ExtensionFieldInfo(
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension = new jspb.ExtensionFieldInfo(
     4135312,
     {messageSetExtension: 0},
-    proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2,
+    proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2,
      /** @type {?function((boolean|undefined),!jspb.Message=): !Object} */ (
-         proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.toObject),
+         proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.toObject),
     0);
 
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensionsBinary[4135312] = new jspb.ExtensionFieldBinaryInfo(
-    proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension,
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensionsBinary[4135312] = new jspb.ExtensionFieldBinaryInfo(
+    proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension,
     jspb.BinaryReader.prototype.readMessage,
     jspb.BinaryWriter.prototype.writeMessageSet,
-    proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.serializeBinaryToWriter,
-    proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.deserializeBinaryFromReader,
+    proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.serializeBinaryToWriter,
+    proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.deserializeBinaryFromReader,
     false);
 // This registers the extension field with the extended class, so that
 // toObject() will function correctly.
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensions[4135312] = proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension;
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensions[4135312] = proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension;
 
 /**
  * required int32 i = 9;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.prototype.getI = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.prototype.getI = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.prototype.setI = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.prototype.setI = function(value) {
   return jspb.Message.setField(this, 9, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.prototype.clearI = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.prototype.clearI = function() {
   return jspb.Message.setField(this, 9, undefined);
 };
 
@@ -11827,7 +11827,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.prototype.hasI = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.prototype.hasI = function() {
   return jspb.Message.getField(this, 9) != null;
 };
 
@@ -11836,50 +11836,50 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
 /**
  * A tuple of {field number, class constructor} for the extension
  * field named `messageSetExtension`.
- * @type {!jspb.ExtensionFieldInfo<!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2>}
+ * @type {!jspb.ExtensionFieldInfo<!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2>}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension = new jspb.ExtensionFieldInfo(
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension = new jspb.ExtensionFieldInfo(
     4135312,
     {messageSetExtension: 0},
-    proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2,
+    proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2,
      /** @type {?function((boolean|undefined),!jspb.Message=): !Object} */ (
-         proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.toObject),
+         proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.toObject),
     0);
 
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensionsBinary[4135312] = new jspb.ExtensionFieldBinaryInfo(
-    proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension,
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensionsBinary[4135312] = new jspb.ExtensionFieldBinaryInfo(
+    proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension,
     jspb.BinaryReader.prototype.readMessage,
     jspb.BinaryWriter.prototype.writeMessageSet,
-    proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.serializeBinaryToWriter,
-    proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.deserializeBinaryFromReader,
+    proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.serializeBinaryToWriter,
+    proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.deserializeBinaryFromReader,
     false);
 // This registers the extension field with the extended class, so that
 // toObject() will function correctly.
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensions[4135312] = proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension;
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.extensions[4135312] = proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.messageSetExtension;
 
 /**
  * required int32 required_int32 = 1;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequiredInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getRequiredInt32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setRequiredInt32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setRequiredInt32 = function(value) {
   return jspb.Message.setField(this, 1, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredInt32 = function() {
   return jspb.Message.setField(this, 1, undefined);
 };
 
@@ -11888,7 +11888,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredInt32 = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -11897,25 +11897,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequ
  * required int64 required_int64 = 2;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequiredInt64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getRequiredInt64 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setRequiredInt64 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setRequiredInt64 = function(value) {
   return jspb.Message.setField(this, 2, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredInt64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredInt64 = function() {
   return jspb.Message.setField(this, 2, undefined);
 };
 
@@ -11924,7 +11924,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredInt64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredInt64 = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
@@ -11933,25 +11933,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequ
  * required uint32 required_uint32 = 3;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequiredUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getRequiredUint32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setRequiredUint32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setRequiredUint32 = function(value) {
   return jspb.Message.setField(this, 3, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredUint32 = function() {
   return jspb.Message.setField(this, 3, undefined);
 };
 
@@ -11960,7 +11960,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredUint32 = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 
@@ -11969,25 +11969,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequ
  * required uint64 required_uint64 = 4;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequiredUint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getRequiredUint64 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setRequiredUint64 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setRequiredUint64 = function(value) {
   return jspb.Message.setField(this, 4, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredUint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredUint64 = function() {
   return jspb.Message.setField(this, 4, undefined);
 };
 
@@ -11996,7 +11996,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredUint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredUint64 = function() {
   return jspb.Message.getField(this, 4) != null;
 };
 
@@ -12005,25 +12005,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequ
  * required sint32 required_sint32 = 5;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequiredSint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getRequiredSint32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setRequiredSint32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setRequiredSint32 = function(value) {
   return jspb.Message.setField(this, 5, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredSint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredSint32 = function() {
   return jspb.Message.setField(this, 5, undefined);
 };
 
@@ -12032,7 +12032,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredSint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredSint32 = function() {
   return jspb.Message.getField(this, 5) != null;
 };
 
@@ -12041,25 +12041,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequ
  * required sint64 required_sint64 = 6;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequiredSint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getRequiredSint64 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setRequiredSint64 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setRequiredSint64 = function(value) {
   return jspb.Message.setField(this, 6, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredSint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredSint64 = function() {
   return jspb.Message.setField(this, 6, undefined);
 };
 
@@ -12068,7 +12068,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredSint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredSint64 = function() {
   return jspb.Message.getField(this, 6) != null;
 };
 
@@ -12077,25 +12077,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequ
  * required fixed32 required_fixed32 = 7;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequiredFixed32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getRequiredFixed32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setRequiredFixed32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setRequiredFixed32 = function(value) {
   return jspb.Message.setField(this, 7, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredFixed32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredFixed32 = function() {
   return jspb.Message.setField(this, 7, undefined);
 };
 
@@ -12104,7 +12104,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredFixed32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredFixed32 = function() {
   return jspb.Message.getField(this, 7) != null;
 };
 
@@ -12113,25 +12113,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequ
  * required fixed64 required_fixed64 = 8;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequiredFixed64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getRequiredFixed64 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 8, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setRequiredFixed64 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setRequiredFixed64 = function(value) {
   return jspb.Message.setField(this, 8, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredFixed64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredFixed64 = function() {
   return jspb.Message.setField(this, 8, undefined);
 };
 
@@ -12140,7 +12140,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredFixed64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredFixed64 = function() {
   return jspb.Message.getField(this, 8) != null;
 };
 
@@ -12149,25 +12149,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequ
  * required sfixed32 required_sfixed32 = 9;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequiredSfixed32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getRequiredSfixed32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setRequiredSfixed32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setRequiredSfixed32 = function(value) {
   return jspb.Message.setField(this, 9, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredSfixed32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredSfixed32 = function() {
   return jspb.Message.setField(this, 9, undefined);
 };
 
@@ -12176,7 +12176,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredSfixed32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredSfixed32 = function() {
   return jspb.Message.getField(this, 9) != null;
 };
 
@@ -12185,25 +12185,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequ
  * required sfixed64 required_sfixed64 = 10;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequiredSfixed64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getRequiredSfixed64 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 10, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setRequiredSfixed64 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setRequiredSfixed64 = function(value) {
   return jspb.Message.setField(this, 10, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredSfixed64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredSfixed64 = function() {
   return jspb.Message.setField(this, 10, undefined);
 };
 
@@ -12212,7 +12212,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredSfixed64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredSfixed64 = function() {
   return jspb.Message.getField(this, 10) != null;
 };
 
@@ -12221,25 +12221,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequ
  * required float required_float = 11;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequiredFloat = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getRequiredFloat = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 11, 0.0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setRequiredFloat = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setRequiredFloat = function(value) {
   return jspb.Message.setField(this, 11, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredFloat = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredFloat = function() {
   return jspb.Message.setField(this, 11, undefined);
 };
 
@@ -12248,7 +12248,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredFloat = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredFloat = function() {
   return jspb.Message.getField(this, 11) != null;
 };
 
@@ -12257,25 +12257,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequ
  * required double required_double = 12;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequiredDouble = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getRequiredDouble = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 12, 0.0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setRequiredDouble = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setRequiredDouble = function(value) {
   return jspb.Message.setField(this, 12, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredDouble = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredDouble = function() {
   return jspb.Message.setField(this, 12, undefined);
 };
 
@@ -12284,7 +12284,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredDouble = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredDouble = function() {
   return jspb.Message.getField(this, 12) != null;
 };
 
@@ -12293,25 +12293,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequ
  * required bool required_bool = 13;
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequiredBool = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getRequiredBool = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 13, false));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setRequiredBool = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setRequiredBool = function(value) {
   return jspb.Message.setField(this, 13, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredBool = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredBool = function() {
   return jspb.Message.setField(this, 13, undefined);
 };
 
@@ -12320,7 +12320,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredBool = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredBool = function() {
   return jspb.Message.getField(this, 13) != null;
 };
 
@@ -12329,25 +12329,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequ
  * required string required_string = 14;
  * @return {string}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequiredString = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getRequiredString = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 14, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setRequiredString = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setRequiredString = function(value) {
   return jspb.Message.setField(this, 14, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredString = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredString = function() {
   return jspb.Message.setField(this, 14, undefined);
 };
 
@@ -12356,7 +12356,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredString = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredString = function() {
   return jspb.Message.getField(this, 14) != null;
 };
 
@@ -12365,7 +12365,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequ
  * required bytes required_bytes = 15;
  * @return {!(string|Uint8Array)}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequiredBytes = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getRequiredBytes = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 15, ""));
 };
 
@@ -12375,7 +12375,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequ
  * This is a type-conversion wrapper around `getRequiredBytes()`
  * @return {string}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequiredBytes_asB64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getRequiredBytes_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getRequiredBytes()));
 };
@@ -12388,7 +12388,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequ
  * This is a type-conversion wrapper around `getRequiredBytes()`
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequiredBytes_asU8 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getRequiredBytes_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getRequiredBytes()));
 };
@@ -12396,18 +12396,18 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequ
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setRequiredBytes = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setRequiredBytes = function(value) {
   return jspb.Message.setField(this, 15, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredBytes = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredBytes = function() {
   return jspb.Message.setField(this, 15, undefined);
 };
 
@@ -12416,35 +12416,35 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredBytes = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredBytes = function() {
   return jspb.Message.getField(this, 15) != null;
 };
 
 
 /**
  * required NestedMessage required_nested_message = 18;
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequiredNestedMessage = function() {
-  return /** @type{!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage} */ (
-    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage, 18, 1));
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getRequiredNestedMessage = function() {
+  return /** @type{!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage} */ (
+    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage, 18, 1));
 };
 
 
 /**
- * @param {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedMessage} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
 */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setRequiredNestedMessage = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setRequiredNestedMessage = function(value) {
   return jspb.Message.setWrapperField(this, 18, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredNestedMessage = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredNestedMessage = function() {
   return jspb.Message.setField(this, 18, undefined);
 };
 
@@ -12453,35 +12453,35 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredNestedMessage = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredNestedMessage = function() {
   return jspb.Message.getField(this, 18) != null;
 };
 
 
 /**
  * required ForeignMessageProto2 required_foreign_message = 19;
- * @return {!proto.protobuf_test_messages.proto2.ForeignMessageProto2}
+ * @return {!proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequiredForeignMessage = function() {
-  return /** @type{!proto.protobuf_test_messages.proto2.ForeignMessageProto2} */ (
-    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.proto2.ForeignMessageProto2, 19, 1));
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getRequiredForeignMessage = function() {
+  return /** @type{!proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2} */ (
+    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2, 19, 1));
 };
 
 
 /**
- * @param {!proto.protobuf_test_messages.proto2.ForeignMessageProto2} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @param {!proto.protobuf_test_messages.editions.proto2.ForeignMessageProto2} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
 */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setRequiredForeignMessage = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setRequiredForeignMessage = function(value) {
   return jspb.Message.setWrapperField(this, 19, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredForeignMessage = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredForeignMessage = function() {
   return jspb.Message.setField(this, 19, undefined);
 };
 
@@ -12490,34 +12490,34 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredForeignMessage = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredForeignMessage = function() {
   return jspb.Message.getField(this, 19) != null;
 };
 
 
 /**
  * required NestedEnum required_nested_enum = 21;
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedEnum}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedEnum}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequiredNestedEnum = function() {
-  return /** @type {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedEnum} */ (jspb.Message.getFieldWithDefault(this, 21, 0));
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getRequiredNestedEnum = function() {
+  return /** @type {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedEnum} */ (jspb.Message.getFieldWithDefault(this, 21, 0));
 };
 
 
 /**
- * @param {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedEnum} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.NestedEnum} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setRequiredNestedEnum = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setRequiredNestedEnum = function(value) {
   return jspb.Message.setField(this, 21, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredNestedEnum = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredNestedEnum = function() {
   return jspb.Message.setField(this, 21, undefined);
 };
 
@@ -12526,34 +12526,34 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredNestedEnum = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredNestedEnum = function() {
   return jspb.Message.getField(this, 21) != null;
 };
 
 
 /**
  * required ForeignEnumProto2 required_foreign_enum = 22;
- * @return {!proto.protobuf_test_messages.proto2.ForeignEnumProto2}
+ * @return {!proto.protobuf_test_messages.editions.proto2.ForeignEnumProto2}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequiredForeignEnum = function() {
-  return /** @type {!proto.protobuf_test_messages.proto2.ForeignEnumProto2} */ (jspb.Message.getFieldWithDefault(this, 22, 0));
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getRequiredForeignEnum = function() {
+  return /** @type {!proto.protobuf_test_messages.editions.proto2.ForeignEnumProto2} */ (jspb.Message.getFieldWithDefault(this, 22, 0));
 };
 
 
 /**
- * @param {!proto.protobuf_test_messages.proto2.ForeignEnumProto2} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @param {!proto.protobuf_test_messages.editions.proto2.ForeignEnumProto2} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setRequiredForeignEnum = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setRequiredForeignEnum = function(value) {
   return jspb.Message.setField(this, 22, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredForeignEnum = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredForeignEnum = function() {
   return jspb.Message.setField(this, 22, undefined);
 };
 
@@ -12562,7 +12562,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredForeignEnum = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredForeignEnum = function() {
   return jspb.Message.getField(this, 22) != null;
 };
 
@@ -12571,25 +12571,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequ
  * required string required_string_piece = 24;
  * @return {string}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequiredStringPiece = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getRequiredStringPiece = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 24, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setRequiredStringPiece = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setRequiredStringPiece = function(value) {
   return jspb.Message.setField(this, 24, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredStringPiece = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredStringPiece = function() {
   return jspb.Message.setField(this, 24, undefined);
 };
 
@@ -12598,7 +12598,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredStringPiece = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredStringPiece = function() {
   return jspb.Message.getField(this, 24) != null;
 };
 
@@ -12607,25 +12607,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequ
  * required string required_cord = 25;
  * @return {string}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRequiredCord = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getRequiredCord = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 25, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setRequiredCord = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setRequiredCord = function(value) {
   return jspb.Message.setField(this, 25, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredCord = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearRequiredCord = function() {
   return jspb.Message.setField(this, 25, undefined);
 };
 
@@ -12634,35 +12634,35 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredCord = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasRequiredCord = function() {
   return jspb.Message.getField(this, 25) != null;
 };
 
 
 /**
  * required TestAllRequiredTypesProto2 recursive_message = 27;
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getRecursiveMessage = function() {
-  return /** @type{!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} */ (
-    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2, 27, 1));
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getRecursiveMessage = function() {
+  return /** @type{!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} */ (
+    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2, 27, 1));
 };
 
 
 /**
- * @param {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
 */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setRecursiveMessage = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setRecursiveMessage = function(value) {
   return jspb.Message.setWrapperField(this, 27, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRecursiveMessage = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearRecursiveMessage = function() {
   return jspb.Message.setField(this, 27, undefined);
 };
 
@@ -12671,35 +12671,35 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearRe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasRecursiveMessage = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasRecursiveMessage = function() {
   return jspb.Message.getField(this, 27) != null;
 };
 
 
 /**
  * optional TestAllRequiredTypesProto2 optional_recursive_message = 28;
- * @return {?proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2}
+ * @return {?proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getOptionalRecursiveMessage = function() {
-  return /** @type{?proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} */ (
-    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2, 28));
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getOptionalRecursiveMessage = function() {
+  return /** @type{?proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} */ (
+    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2, 28));
 };
 
 
 /**
- * @param {?proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2|undefined} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @param {?proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2|undefined} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
 */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setOptionalRecursiveMessage = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setOptionalRecursiveMessage = function(value) {
   return jspb.Message.setWrapperField(this, 28, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearOptionalRecursiveMessage = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearOptionalRecursiveMessage = function() {
   return this.setOptionalRecursiveMessage(undefined);
 };
 
@@ -12708,35 +12708,35 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearOp
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasOptionalRecursiveMessage = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasOptionalRecursiveMessage = function() {
   return jspb.Message.getField(this, 28) != null;
 };
 
 
 /**
  * required group Data = 201;
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getData = function() {
-  return /** @type{!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data} */ (
-    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data, 201, 1));
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getData = function() {
+  return /** @type{!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data} */ (
+    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data, 201, 1));
 };
 
 
 /**
- * @param {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.Data} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
 */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setData = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setData = function(value) {
   return jspb.Message.setWrapperField(this, 201, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearData = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearData = function() {
   return jspb.Message.setField(this, 201, undefined);
 };
 
@@ -12745,7 +12745,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDa
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasData = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasData = function() {
   return jspb.Message.getField(this, 201) != null;
 };
 
@@ -12754,25 +12754,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasData
  * required int32 default_int32 = 241;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getDefaultInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getDefaultInt32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 241, -123456789));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setDefaultInt32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setDefaultInt32 = function(value) {
   return jspb.Message.setField(this, 241, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultInt32 = function() {
   return jspb.Message.setField(this, 241, undefined);
 };
 
@@ -12781,7 +12781,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultInt32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultInt32 = function() {
   return jspb.Message.getField(this, 241) != null;
 };
 
@@ -12790,25 +12790,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefa
  * required int64 default_int64 = 242;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getDefaultInt64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getDefaultInt64 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 242, -9123456789123456789));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setDefaultInt64 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setDefaultInt64 = function(value) {
   return jspb.Message.setField(this, 242, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultInt64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultInt64 = function() {
   return jspb.Message.setField(this, 242, undefined);
 };
 
@@ -12817,7 +12817,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultInt64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultInt64 = function() {
   return jspb.Message.getField(this, 242) != null;
 };
 
@@ -12826,25 +12826,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefa
  * required uint32 default_uint32 = 243;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getDefaultUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getDefaultUint32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 243, 2123456789));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setDefaultUint32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setDefaultUint32 = function(value) {
   return jspb.Message.setField(this, 243, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultUint32 = function() {
   return jspb.Message.setField(this, 243, undefined);
 };
 
@@ -12853,7 +12853,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultUint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultUint32 = function() {
   return jspb.Message.getField(this, 243) != null;
 };
 
@@ -12862,25 +12862,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefa
  * required uint64 default_uint64 = 244;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getDefaultUint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getDefaultUint64 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 244, -8323287284586094827));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setDefaultUint64 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setDefaultUint64 = function(value) {
   return jspb.Message.setField(this, 244, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultUint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultUint64 = function() {
   return jspb.Message.setField(this, 244, undefined);
 };
 
@@ -12889,7 +12889,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultUint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultUint64 = function() {
   return jspb.Message.getField(this, 244) != null;
 };
 
@@ -12898,25 +12898,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefa
  * required sint32 default_sint32 = 245;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getDefaultSint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getDefaultSint32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 245, -123456789));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setDefaultSint32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setDefaultSint32 = function(value) {
   return jspb.Message.setField(this, 245, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultSint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultSint32 = function() {
   return jspb.Message.setField(this, 245, undefined);
 };
 
@@ -12925,7 +12925,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultSint32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultSint32 = function() {
   return jspb.Message.getField(this, 245) != null;
 };
 
@@ -12934,25 +12934,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefa
  * required sint64 default_sint64 = 246;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getDefaultSint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getDefaultSint64 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 246, -9123456789123456789));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setDefaultSint64 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setDefaultSint64 = function(value) {
   return jspb.Message.setField(this, 246, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultSint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultSint64 = function() {
   return jspb.Message.setField(this, 246, undefined);
 };
 
@@ -12961,7 +12961,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultSint64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultSint64 = function() {
   return jspb.Message.getField(this, 246) != null;
 };
 
@@ -12970,25 +12970,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefa
  * required fixed32 default_fixed32 = 247;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getDefaultFixed32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getDefaultFixed32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 247, 2123456789));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setDefaultFixed32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setDefaultFixed32 = function(value) {
   return jspb.Message.setField(this, 247, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultFixed32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultFixed32 = function() {
   return jspb.Message.setField(this, 247, undefined);
 };
 
@@ -12997,7 +12997,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultFixed32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultFixed32 = function() {
   return jspb.Message.getField(this, 247) != null;
 };
 
@@ -13006,25 +13006,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefa
  * required fixed64 default_fixed64 = 248;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getDefaultFixed64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getDefaultFixed64 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 248, -8323287284586094827));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setDefaultFixed64 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setDefaultFixed64 = function(value) {
   return jspb.Message.setField(this, 248, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultFixed64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultFixed64 = function() {
   return jspb.Message.setField(this, 248, undefined);
 };
 
@@ -13033,7 +13033,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultFixed64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultFixed64 = function() {
   return jspb.Message.getField(this, 248) != null;
 };
 
@@ -13042,25 +13042,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefa
  * required sfixed32 default_sfixed32 = 249;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getDefaultSfixed32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getDefaultSfixed32 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 249, -123456789));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setDefaultSfixed32 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setDefaultSfixed32 = function(value) {
   return jspb.Message.setField(this, 249, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultSfixed32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultSfixed32 = function() {
   return jspb.Message.setField(this, 249, undefined);
 };
 
@@ -13069,7 +13069,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultSfixed32 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultSfixed32 = function() {
   return jspb.Message.getField(this, 249) != null;
 };
 
@@ -13078,25 +13078,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefa
  * required sfixed64 default_sfixed64 = 250;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getDefaultSfixed64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getDefaultSfixed64 = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 250, -9123456789123456789));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setDefaultSfixed64 = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setDefaultSfixed64 = function(value) {
   return jspb.Message.setField(this, 250, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultSfixed64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultSfixed64 = function() {
   return jspb.Message.setField(this, 250, undefined);
 };
 
@@ -13105,7 +13105,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultSfixed64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultSfixed64 = function() {
   return jspb.Message.getField(this, 250) != null;
 };
 
@@ -13114,25 +13114,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefa
  * required float default_float = 251;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getDefaultFloat = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getDefaultFloat = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 251, 9.0E9));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setDefaultFloat = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setDefaultFloat = function(value) {
   return jspb.Message.setField(this, 251, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultFloat = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultFloat = function() {
   return jspb.Message.setField(this, 251, undefined);
 };
 
@@ -13141,7 +13141,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultFloat = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultFloat = function() {
   return jspb.Message.getField(this, 251) != null;
 };
 
@@ -13150,25 +13150,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefa
  * required double default_double = 252;
  * @return {number}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getDefaultDouble = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getDefaultDouble = function() {
   return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 252, 7.0E22));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setDefaultDouble = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setDefaultDouble = function(value) {
   return jspb.Message.setField(this, 252, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultDouble = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultDouble = function() {
   return jspb.Message.setField(this, 252, undefined);
 };
 
@@ -13177,7 +13177,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultDouble = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultDouble = function() {
   return jspb.Message.getField(this, 252) != null;
 };
 
@@ -13186,25 +13186,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefa
  * required bool default_bool = 253;
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getDefaultBool = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getDefaultBool = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 253, true));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setDefaultBool = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setDefaultBool = function(value) {
   return jspb.Message.setField(this, 253, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultBool = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultBool = function() {
   return jspb.Message.setField(this, 253, undefined);
 };
 
@@ -13213,7 +13213,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultBool = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultBool = function() {
   return jspb.Message.getField(this, 253) != null;
 };
 
@@ -13222,25 +13222,25 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefa
  * required string default_string = 254;
  * @return {string}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getDefaultString = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getDefaultString = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 254, "Rosebud"));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setDefaultString = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setDefaultString = function(value) {
   return jspb.Message.setField(this, 254, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultString = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultString = function() {
   return jspb.Message.setField(this, 254, undefined);
 };
 
@@ -13249,7 +13249,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultString = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultString = function() {
   return jspb.Message.getField(this, 254) != null;
 };
 
@@ -13258,7 +13258,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefa
  * required bytes default_bytes = 255;
  * @return {!(string|Uint8Array)}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getDefaultBytes = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getDefaultBytes = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 255, "am9zaHVh"));
 };
 
@@ -13268,7 +13268,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getDefa
  * This is a type-conversion wrapper around `getDefaultBytes()`
  * @return {string}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getDefaultBytes_asB64 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getDefaultBytes_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getDefaultBytes()));
 };
@@ -13281,7 +13281,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getDefa
  * This is a type-conversion wrapper around `getDefaultBytes()`
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getDefaultBytes_asU8 = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.getDefaultBytes_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getDefaultBytes()));
 };
@@ -13289,18 +13289,18 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.getDefa
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.setDefaultBytes = function(value) {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.setDefaultBytes = function(value) {
   return jspb.Message.setField(this, 255, value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2} returns this
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultBytes = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.clearDefaultBytes = function() {
   return jspb.Message.setField(this, 255, undefined);
 };
 
@@ -13309,7 +13309,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.clearDe
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultBytes = function() {
+proto.protobuf_test_messages.editions.proto2.TestAllRequiredTypesProto2.prototype.hasDefaultBytes = function() {
   return jspb.Message.getField(this, 255) != null;
 };
 
@@ -13323,12 +13323,12 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.prototype.hasDefa
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.oneofGroups_ = [[1,2,3,4,5]];
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.oneofGroups_ = [[1,2,3,4,5]];
 
 /**
  * @enum {number}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.LargeOneofCase = {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.LargeOneofCase = {
   LARGE_ONEOF_NOT_SET: 0,
   A1: 1,
   A2: 2,
@@ -13338,10 +13338,10 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.LargeOneofCase = {
 };
 
 /**
- * @return {proto.protobuf_test_messages.proto2.TestLargeOneof.LargeOneofCase}
+ * @return {proto.protobuf_test_messages.editions.proto2.TestLargeOneof.LargeOneofCase}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.getLargeOneofCase = function() {
-  return /** @type {proto.protobuf_test_messages.proto2.TestLargeOneof.LargeOneofCase} */(jspb.Message.computeOneofCase(this, proto.protobuf_test_messages.proto2.TestLargeOneof.oneofGroups_[0]));
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.prototype.getLargeOneofCase = function() {
+  return /** @type {proto.protobuf_test_messages.editions.proto2.TestLargeOneof.LargeOneofCase} */(jspb.Message.computeOneofCase(this, proto.protobuf_test_messages.editions.proto2.TestLargeOneof.oneofGroups_[0]));
 };
 
 
@@ -13359,8 +13359,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.TestLargeOneof.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.TestLargeOneof.toObject(opt_includeInstance, this);
 };
 
 
@@ -13369,17 +13369,17 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.toObject = function
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.TestLargeOneof} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.toObject = function(includeInstance, msg) {
   var f, obj = {
-a1: (f = msg.getA1()) && proto.protobuf_test_messages.proto2.TestLargeOneof.A1.toObject(includeInstance, f),
-a2: (f = msg.getA2()) && proto.protobuf_test_messages.proto2.TestLargeOneof.A2.toObject(includeInstance, f),
-a3: (f = msg.getA3()) && proto.protobuf_test_messages.proto2.TestLargeOneof.A3.toObject(includeInstance, f),
-a4: (f = msg.getA4()) && proto.protobuf_test_messages.proto2.TestLargeOneof.A4.toObject(includeInstance, f),
-a5: (f = msg.getA5()) && proto.protobuf_test_messages.proto2.TestLargeOneof.A5.toObject(includeInstance, f)
+a1: (f = msg.getA1()) && proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1.toObject(includeInstance, f),
+a2: (f = msg.getA2()) && proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2.toObject(includeInstance, f),
+a3: (f = msg.getA3()) && proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3.toObject(includeInstance, f),
+a4: (f = msg.getA4()) && proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4.toObject(includeInstance, f),
+a5: (f = msg.getA5()) && proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -13393,23 +13393,23 @@ a5: (f = msg.getA5()) && proto.protobuf_test_messages.proto2.TestLargeOneof.A5.t
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.TestLargeOneof;
-  return proto.protobuf_test_messages.proto2.TestLargeOneof.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.TestLargeOneof;
+  return proto.protobuf_test_messages.editions.proto2.TestLargeOneof.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.TestLargeOneof} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -13417,28 +13417,28 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.deserializeBinaryFromReader =
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.protobuf_test_messages.proto2.TestLargeOneof.A1;
-      reader.readMessage(value,proto.protobuf_test_messages.proto2.TestLargeOneof.A1.deserializeBinaryFromReader);
+      var value = new proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1;
+      reader.readMessage(value,proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1.deserializeBinaryFromReader);
       msg.setA1(value);
       break;
     case 2:
-      var value = new proto.protobuf_test_messages.proto2.TestLargeOneof.A2;
-      reader.readMessage(value,proto.protobuf_test_messages.proto2.TestLargeOneof.A2.deserializeBinaryFromReader);
+      var value = new proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2;
+      reader.readMessage(value,proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2.deserializeBinaryFromReader);
       msg.setA2(value);
       break;
     case 3:
-      var value = new proto.protobuf_test_messages.proto2.TestLargeOneof.A3;
-      reader.readMessage(value,proto.protobuf_test_messages.proto2.TestLargeOneof.A3.deserializeBinaryFromReader);
+      var value = new proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3;
+      reader.readMessage(value,proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3.deserializeBinaryFromReader);
       msg.setA3(value);
       break;
     case 4:
-      var value = new proto.protobuf_test_messages.proto2.TestLargeOneof.A4;
-      reader.readMessage(value,proto.protobuf_test_messages.proto2.TestLargeOneof.A4.deserializeBinaryFromReader);
+      var value = new proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4;
+      reader.readMessage(value,proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4.deserializeBinaryFromReader);
       msg.setA4(value);
       break;
     case 5:
-      var value = new proto.protobuf_test_messages.proto2.TestLargeOneof.A5;
-      reader.readMessage(value,proto.protobuf_test_messages.proto2.TestLargeOneof.A5.deserializeBinaryFromReader);
+      var value = new proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5;
+      reader.readMessage(value,proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5.deserializeBinaryFromReader);
       msg.setA5(value);
       break;
     default:
@@ -13454,9 +13454,9 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.deserializeBinaryFromReader =
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.TestLargeOneof.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.TestLargeOneof.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -13464,18 +13464,18 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.serializeBinary = f
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.TestLargeOneof} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getA1();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.protobuf_test_messages.proto2.TestLargeOneof.A1.serializeBinaryToWriter
+      proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1.serializeBinaryToWriter
     );
   }
   f = message.getA2();
@@ -13483,7 +13483,7 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.serializeBinaryToWriter = fun
     writer.writeMessage(
       2,
       f,
-      proto.protobuf_test_messages.proto2.TestLargeOneof.A2.serializeBinaryToWriter
+      proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2.serializeBinaryToWriter
     );
   }
   f = message.getA3();
@@ -13491,7 +13491,7 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.serializeBinaryToWriter = fun
     writer.writeMessage(
       3,
       f,
-      proto.protobuf_test_messages.proto2.TestLargeOneof.A3.serializeBinaryToWriter
+      proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3.serializeBinaryToWriter
     );
   }
   f = message.getA4();
@@ -13499,7 +13499,7 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.serializeBinaryToWriter = fun
     writer.writeMessage(
       4,
       f,
-      proto.protobuf_test_messages.proto2.TestLargeOneof.A4.serializeBinaryToWriter
+      proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4.serializeBinaryToWriter
     );
   }
   f = message.getA5();
@@ -13507,7 +13507,7 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.serializeBinaryToWriter = fun
     writer.writeMessage(
       5,
       f,
-      proto.protobuf_test_messages.proto2.TestLargeOneof.A5.serializeBinaryToWriter
+      proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5.serializeBinaryToWriter
     );
   }
 };
@@ -13529,8 +13529,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A1.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.TestLargeOneof.A1.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1.toObject(opt_includeInstance, this);
 };
 
 
@@ -13539,11 +13539,11 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A1.prototype.toObject = funct
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.TestLargeOneof.A1} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A1.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -13559,23 +13559,23 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A1.toObject = function(includ
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof.A1}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A1.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.TestLargeOneof.A1;
-  return proto.protobuf_test_messages.proto2.TestLargeOneof.A1.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1;
+  return proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.TestLargeOneof.A1} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof.A1}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A1.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -13595,9 +13595,9 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A1.deserializeBinaryFromReade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A1.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.TestLargeOneof.A1.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -13605,11 +13605,11 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A1.prototype.serializeBinary 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.TestLargeOneof.A1} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A1.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -13630,8 +13630,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A2.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.TestLargeOneof.A2.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2.toObject(opt_includeInstance, this);
 };
 
 
@@ -13640,11 +13640,11 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A2.prototype.toObject = funct
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.TestLargeOneof.A2} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A2.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -13660,23 +13660,23 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A2.toObject = function(includ
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof.A2}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A2.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.TestLargeOneof.A2;
-  return proto.protobuf_test_messages.proto2.TestLargeOneof.A2.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2;
+  return proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.TestLargeOneof.A2} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof.A2}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A2.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -13696,9 +13696,9 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A2.deserializeBinaryFromReade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A2.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.TestLargeOneof.A2.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -13706,11 +13706,11 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A2.prototype.serializeBinary 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.TestLargeOneof.A2} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A2.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -13731,8 +13731,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A3.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.TestLargeOneof.A3.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3.toObject(opt_includeInstance, this);
 };
 
 
@@ -13741,11 +13741,11 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A3.prototype.toObject = funct
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.TestLargeOneof.A3} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A3.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -13761,23 +13761,23 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A3.toObject = function(includ
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof.A3}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A3.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.TestLargeOneof.A3;
-  return proto.protobuf_test_messages.proto2.TestLargeOneof.A3.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3;
+  return proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.TestLargeOneof.A3} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof.A3}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A3.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -13797,9 +13797,9 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A3.deserializeBinaryFromReade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A3.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.TestLargeOneof.A3.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -13807,11 +13807,11 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A3.prototype.serializeBinary 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.TestLargeOneof.A3} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A3.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -13832,8 +13832,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A4.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.TestLargeOneof.A4.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4.toObject(opt_includeInstance, this);
 };
 
 
@@ -13842,11 +13842,11 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A4.prototype.toObject = funct
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.TestLargeOneof.A4} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A4.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -13862,23 +13862,23 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A4.toObject = function(includ
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof.A4}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A4.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.TestLargeOneof.A4;
-  return proto.protobuf_test_messages.proto2.TestLargeOneof.A4.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4;
+  return proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.TestLargeOneof.A4} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof.A4}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A4.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -13898,9 +13898,9 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A4.deserializeBinaryFromReade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A4.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.TestLargeOneof.A4.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -13908,11 +13908,11 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A4.prototype.serializeBinary 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.TestLargeOneof.A4} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A4.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -13933,8 +13933,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A5.prototype.toObject = function(opt_includeInstance) {
-  return proto.protobuf_test_messages.proto2.TestLargeOneof.A5.toObject(opt_includeInstance, this);
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5.prototype.toObject = function(opt_includeInstance) {
+  return proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5.toObject(opt_includeInstance, this);
 };
 
 
@@ -13943,11 +13943,11 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A5.prototype.toObject = funct
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.protobuf_test_messages.proto2.TestLargeOneof.A5} msg The msg instance to transform.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A5.toObject = function(includeInstance, msg) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -13963,23 +13963,23 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A5.toObject = function(includ
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof.A5}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A5.deserializeBinary = function(bytes) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.protobuf_test_messages.proto2.TestLargeOneof.A5;
-  return proto.protobuf_test_messages.proto2.TestLargeOneof.A5.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5;
+  return proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.protobuf_test_messages.proto2.TestLargeOneof.A5} msg The message object to deserialize into.
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof.A5}
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A5.deserializeBinaryFromReader = function(msg, reader) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -13999,9 +13999,9 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A5.deserializeBinaryFromReade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A5.prototype.serializeBinary = function() {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.protobuf_test_messages.proto2.TestLargeOneof.A5.serializeBinaryToWriter(this, writer);
+  proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -14009,39 +14009,39 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A5.prototype.serializeBinary 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.protobuf_test_messages.proto2.TestLargeOneof.A5} message
+ * @param {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.A5.serializeBinaryToWriter = function(message, writer) {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
 
 /**
  * optional A1 a1 = 1;
- * @return {?proto.protobuf_test_messages.proto2.TestLargeOneof.A1}
+ * @return {?proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.getA1 = function() {
-  return /** @type{?proto.protobuf_test_messages.proto2.TestLargeOneof.A1} */ (
-    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.proto2.TestLargeOneof.A1, 1));
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.prototype.getA1 = function() {
+  return /** @type{?proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1} */ (
+    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1, 1));
 };
 
 
 /**
- * @param {?proto.protobuf_test_messages.proto2.TestLargeOneof.A1|undefined} value
- * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof} returns this
+ * @param {?proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A1|undefined} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof} returns this
 */
-proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.setA1 = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 1, proto.protobuf_test_messages.proto2.TestLargeOneof.oneofGroups_[0], value);
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.prototype.setA1 = function(value) {
+  return jspb.Message.setOneofWrapperField(this, 1, proto.protobuf_test_messages.editions.proto2.TestLargeOneof.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof} returns this
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.clearA1 = function() {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.prototype.clearA1 = function() {
   return this.setA1(undefined);
 };
 
@@ -14050,35 +14050,35 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.clearA1 = function(
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.hasA1 = function() {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.prototype.hasA1 = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
 
 /**
  * optional A2 a2 = 2;
- * @return {?proto.protobuf_test_messages.proto2.TestLargeOneof.A2}
+ * @return {?proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.getA2 = function() {
-  return /** @type{?proto.protobuf_test_messages.proto2.TestLargeOneof.A2} */ (
-    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.proto2.TestLargeOneof.A2, 2));
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.prototype.getA2 = function() {
+  return /** @type{?proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2} */ (
+    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2, 2));
 };
 
 
 /**
- * @param {?proto.protobuf_test_messages.proto2.TestLargeOneof.A2|undefined} value
- * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof} returns this
+ * @param {?proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A2|undefined} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof} returns this
 */
-proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.setA2 = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 2, proto.protobuf_test_messages.proto2.TestLargeOneof.oneofGroups_[0], value);
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.prototype.setA2 = function(value) {
+  return jspb.Message.setOneofWrapperField(this, 2, proto.protobuf_test_messages.editions.proto2.TestLargeOneof.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof} returns this
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.clearA2 = function() {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.prototype.clearA2 = function() {
   return this.setA2(undefined);
 };
 
@@ -14087,35 +14087,35 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.clearA2 = function(
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.hasA2 = function() {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.prototype.hasA2 = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
 
 /**
  * optional A3 a3 = 3;
- * @return {?proto.protobuf_test_messages.proto2.TestLargeOneof.A3}
+ * @return {?proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.getA3 = function() {
-  return /** @type{?proto.protobuf_test_messages.proto2.TestLargeOneof.A3} */ (
-    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.proto2.TestLargeOneof.A3, 3));
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.prototype.getA3 = function() {
+  return /** @type{?proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3} */ (
+    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3, 3));
 };
 
 
 /**
- * @param {?proto.protobuf_test_messages.proto2.TestLargeOneof.A3|undefined} value
- * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof} returns this
+ * @param {?proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A3|undefined} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof} returns this
 */
-proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.setA3 = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 3, proto.protobuf_test_messages.proto2.TestLargeOneof.oneofGroups_[0], value);
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.prototype.setA3 = function(value) {
+  return jspb.Message.setOneofWrapperField(this, 3, proto.protobuf_test_messages.editions.proto2.TestLargeOneof.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof} returns this
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.clearA3 = function() {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.prototype.clearA3 = function() {
   return this.setA3(undefined);
 };
 
@@ -14124,35 +14124,35 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.clearA3 = function(
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.hasA3 = function() {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.prototype.hasA3 = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 
 
 /**
  * optional A4 a4 = 4;
- * @return {?proto.protobuf_test_messages.proto2.TestLargeOneof.A4}
+ * @return {?proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.getA4 = function() {
-  return /** @type{?proto.protobuf_test_messages.proto2.TestLargeOneof.A4} */ (
-    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.proto2.TestLargeOneof.A4, 4));
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.prototype.getA4 = function() {
+  return /** @type{?proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4} */ (
+    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4, 4));
 };
 
 
 /**
- * @param {?proto.protobuf_test_messages.proto2.TestLargeOneof.A4|undefined} value
- * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof} returns this
+ * @param {?proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A4|undefined} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof} returns this
 */
-proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.setA4 = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 4, proto.protobuf_test_messages.proto2.TestLargeOneof.oneofGroups_[0], value);
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.prototype.setA4 = function(value) {
+  return jspb.Message.setOneofWrapperField(this, 4, proto.protobuf_test_messages.editions.proto2.TestLargeOneof.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof} returns this
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.clearA4 = function() {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.prototype.clearA4 = function() {
   return this.setA4(undefined);
 };
 
@@ -14161,35 +14161,35 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.clearA4 = function(
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.hasA4 = function() {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.prototype.hasA4 = function() {
   return jspb.Message.getField(this, 4) != null;
 };
 
 
 /**
  * optional A5 a5 = 5;
- * @return {?proto.protobuf_test_messages.proto2.TestLargeOneof.A5}
+ * @return {?proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.getA5 = function() {
-  return /** @type{?proto.protobuf_test_messages.proto2.TestLargeOneof.A5} */ (
-    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.proto2.TestLargeOneof.A5, 5));
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.prototype.getA5 = function() {
+  return /** @type{?proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5} */ (
+    jspb.Message.getWrapperField(this, proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5, 5));
 };
 
 
 /**
- * @param {?proto.protobuf_test_messages.proto2.TestLargeOneof.A5|undefined} value
- * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof} returns this
+ * @param {?proto.protobuf_test_messages.editions.proto2.TestLargeOneof.A5|undefined} value
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof} returns this
 */
-proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.setA5 = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 5, proto.protobuf_test_messages.proto2.TestLargeOneof.oneofGroups_[0], value);
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.prototype.setA5 = function(value) {
+  return jspb.Message.setOneofWrapperField(this, 5, proto.protobuf_test_messages.editions.proto2.TestLargeOneof.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof} returns this
+ * @return {!proto.protobuf_test_messages.editions.proto2.TestLargeOneof} returns this
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.clearA5 = function() {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.prototype.clearA5 = function() {
   return this.setA5(undefined);
 };
 
@@ -14198,7 +14198,7 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.clearA5 = function(
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.hasA5 = function() {
+proto.protobuf_test_messages.editions.proto2.TestLargeOneof.prototype.hasA5 = function() {
   return jspb.Message.getField(this, 5) != null;
 };
 
@@ -14206,7 +14206,7 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.prototype.hasA5 = function() 
 /**
  * @enum {number}
  */
-proto.protobuf_test_messages.proto2.ForeignEnumProto2 = {
+proto.protobuf_test_messages.editions.proto2.ForeignEnumProto2 = {
   FOREIGN_FOO: 0,
   FOREIGN_BAR: 1,
   FOREIGN_BAZ: 2
@@ -14218,7 +14218,7 @@ proto.protobuf_test_messages.proto2.ForeignEnumProto2 = {
  * field named `extensionInt32`.
  * @type {!jspb.ExtensionFieldInfo<number>}
  */
-proto.protobuf_test_messages.proto2.extensionInt32 = new jspb.ExtensionFieldInfo(
+proto.protobuf_test_messages.editions.proto2.extensionInt32 = new jspb.ExtensionFieldInfo(
     120,
     {extensionInt32: 0},
     null,
@@ -14226,8 +14226,8 @@ proto.protobuf_test_messages.proto2.extensionInt32 = new jspb.ExtensionFieldInfo
          null),
     0);
 
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.extensionsBinary[120] = new jspb.ExtensionFieldBinaryInfo(
-    proto.protobuf_test_messages.proto2.extensionInt32,
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.extensionsBinary[120] = new jspb.ExtensionFieldBinaryInfo(
+    proto.protobuf_test_messages.editions.proto2.extensionInt32,
     jspb.BinaryReader.prototype.readInt32,
     jspb.BinaryWriter.prototype.writeInt32,
     undefined,
@@ -14235,31 +14235,31 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.extensionsBinary[120] = n
     false);
 // This registers the extension field with the extended class, so that
 // toObject() will function correctly.
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.extensions[120] = proto.protobuf_test_messages.proto2.extensionInt32;
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.extensions[120] = proto.protobuf_test_messages.editions.proto2.extensionInt32;
 
 
 /**
  * A tuple of {field number, class constructor} for the extension
  * field named `groupField`.
- * @type {!jspb.ExtensionFieldInfo<!proto.protobuf_test_messages.proto2.GroupField>}
+ * @type {!jspb.ExtensionFieldInfo<!proto.protobuf_test_messages.editions.proto2.GroupField>}
  */
-proto.protobuf_test_messages.proto2.groupField = new jspb.ExtensionFieldInfo(
+proto.protobuf_test_messages.editions.proto2.groupField = new jspb.ExtensionFieldInfo(
     121,
     {groupField: 0},
-    proto.protobuf_test_messages.proto2.GroupField,
+    proto.protobuf_test_messages.editions.proto2.GroupField,
      /** @type {?function((boolean|undefined),!jspb.Message=): !Object} */ (
-         proto.protobuf_test_messages.proto2.GroupField.toObject),
+         proto.protobuf_test_messages.editions.proto2.GroupField.toObject),
     0);
 
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.extensionsBinary[121] = new jspb.ExtensionFieldBinaryInfo(
-    proto.protobuf_test_messages.proto2.groupField,
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.extensionsBinary[121] = new jspb.ExtensionFieldBinaryInfo(
+    proto.protobuf_test_messages.editions.proto2.groupField,
     jspb.BinaryReader.prototype.readGroup,
     jspb.BinaryWriter.prototype.writeGroup,
-    proto.protobuf_test_messages.proto2.GroupField.serializeBinaryToWriter,
-    proto.protobuf_test_messages.proto2.GroupField.deserializeBinaryFromReader,
+    proto.protobuf_test_messages.editions.proto2.GroupField.serializeBinaryToWriter,
+    proto.protobuf_test_messages.editions.proto2.GroupField.deserializeBinaryFromReader,
     false);
 // This registers the extension field with the extended class, so that
 // toObject() will function correctly.
-proto.protobuf_test_messages.proto2.TestAllTypesProto2.extensions[121] = proto.protobuf_test_messages.proto2.groupField;
+proto.protobuf_test_messages.editions.proto2.TestAllTypesProto2.extensions[121] = proto.protobuf_test_messages.editions.proto2.groupField;
 
-goog.object.extend(exports, proto.protobuf_test_messages.proto2);
+goog.object.extend(exports, proto.protobuf_test_messages.editions.proto2);
