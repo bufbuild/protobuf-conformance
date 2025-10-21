@@ -32,7 +32,6 @@ const {
   ConformanceRequest,
   ConformanceResponse,
   WireFormat,
-  TestCategory,
 } = require("./gen/conformance/conformance_pb.js");
 
 const { readSync, writeSync } = require("fs");
@@ -95,15 +94,6 @@ function writeBuffer(buffer) {
 
 function doTest(request) {
   const response = new ConformanceResponse(new ArrayBuffer(0));
-
-  // Returning a runtime error for the test Required.Proto3.ProtobufInput.UnknownOrdering.ProtobufOutput
-  // crashes the runner.
-  if (
-    is_Required_Proto3_ProtobufInput_UnknownOrdering_ProtobufOutput(request)
-  ) {
-    response.setProtobufPayload(new Uint8Array());
-    return response;
-  }
 
   if (
     request.getPayloadCase() === ConformanceRequest.PayloadCase.JSON_PAYLOAD
@@ -173,44 +163,6 @@ function doTest(request) {
   }
   response.setProtobufPayload(testMessage.serializeBinary());
   return response;
-}
-
-function is_Required_Proto3_ProtobufInput_UnknownOrdering_ProtobufOutput(
-  request,
-) {
-  if (request.getTestCategory() !== TestCategory.BINARY_TEST) {
-    return false;
-  }
-  if (request.getRequestedOutputFormat() !== WireFormat.PROTOBUF) {
-    return false;
-  }
-  const types = [
-    "protobuf_test_messages.proto3.TestAllTypesProto3",
-    "protobuf_test_messages.proto2.TestAllTypesProto2",
-    "protobuf_test_messages.editions.proto2.TestAllTypesProto2",
-    "protobuf_test_messages.editions.proto3.TestAllTypesProto3",
-  ];
-  if (!types.includes(request.getMessageType())) {
-    return false;
-  }
-  if (!request.hasProtobufPayload()) {
-    return false;
-  }
-  const reqPayload = new Uint8Array([
-    210, 41, 3, 97, 98, 99, 208, 41, 123, 210, 41, 3, 100, 101, 102, 208, 41,
-    200, 3,
-  ]);
-  if (request.getProtobufPayload().byteLength !== reqPayload.byteLength) {
-    return false;
-  }
-  if (
-    !request
-      .getProtobufPayload()
-      .every((value, index) => reqPayload[index] === value)
-  ) {
-    return false;
-  }
-  return true;
 }
 
 function runConformanceTest() {
