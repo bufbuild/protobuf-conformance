@@ -10,12 +10,12 @@
   },
   "private": true,
   "scripts": {
-    "pregenerate": "bash pregenerate.sh",
-    "generate": "bash generate.sh",
+    "generate": "buf generate",
     "test": "conformance_test_runner --maximum_edition PROTO3 --enforce_recommended --failure_list failing_tests.txt --text_format_failure_list failing_tests_text_format.txt --output_dir . runner.js"
   },
   "dependencies": {
-    "google-protobuf": "^4.0.0"
+    "google-protobuf": "^4.0.0",
+    "@protocolbuffers/protoc-gen-js": "^4.0.0"
   },
   "devDependencies": {
     "@bufbuild/buf": "^1.59.0"

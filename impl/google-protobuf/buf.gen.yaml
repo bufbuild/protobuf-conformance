@@ -3,6 +3,6 @@ clean: true
 inputs:
   - directory: ../../proto
 plugins:
-  - local: ["./protoc-gen-js"]
+  - local: protoc-gen-js
     opt: import_style=commonjs,binary
     out: gen
