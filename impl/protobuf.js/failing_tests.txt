@@ -783,6 +783,10 @@ Required.Editions_Proto2.ProtobufInput.ValidDataScalar.UINT32[8].JsonOutput # Fa
 Required.Editions_Proto2.ProtobufInput.ValidDataScalar.UINT32[8].ProtobufOutput # Failed to parse input or produce output.
 Required.Editions_Proto3.DurationProtoInputTooLarge.JsonOutput # Should have failed to serialize, but didn't.
 Required.Editions_Proto3.DurationProtoInputTooSmall.JsonOutput # Should have failed to serialize, but didn't.
+Required.Editions_Proto3.DurationProtoNanosTooLarge.JsonOutput # Should have failed to serialize, but didn't.
+Required.Editions_Proto3.DurationProtoNanosTooSmall.JsonOutput # Should have failed to serialize, but didn't.
+Required.Editions_Proto3.DurationProtoNanosWrongSign.JsonOutput # Should have failed to serialize, but didn't.
+Required.Editions_Proto3.DurationProtoNanosWrongSignNegativeSecs.JsonOutput # Should have failed to serialize, but didn't.
 Required.Editions_Proto3.JsonInput.Any.JsonOutput # Output was not equivalent to reference message: deleted: optional_any.type_url: "type.googleapis.com/protobuf_test_messages.edit
 Required.Editions_Proto3.JsonInput.Any.ProtobufOutput # Output was not equivalent to reference message: deleted: optional_any.type_url: "type.googleapis.com/protobuf_test_messages.edit
 Required.Editions_Proto3.JsonInput.AnyNested.JsonOutput # Output was not equivalent to reference message: deleted: optional_any.type_url: "type.googleapis.com/google.protobuf.Any"deleted
@@ -1104,6 +1108,8 @@ Required.Editions_Proto3.ProtobufInput.ValidDataScalar.UINT32[8].JsonOutput # Fa
 Required.Editions_Proto3.ProtobufInput.ValidDataScalar.UINT32[8].ProtobufOutput # Failed to parse input or produce output.
 Required.Editions_Proto3.TimestampProtoInputTooLarge.JsonOutput # Should have failed to serialize, but didn't.
 Required.Editions_Proto3.TimestampProtoInputTooSmall.JsonOutput # Should have failed to serialize, but didn't.
+Required.Editions_Proto3.TimestampProtoNanoTooLarge.JsonOutput # Should have failed to serialize, but didn't.
+Required.Editions_Proto3.TimestampProtoNegativeNanos.JsonOutput # Should have failed to serialize, but didn't.
 Required.Proto2.JsonInput.AllFieldAcceptNull.JsonOutput # Failed to parse input or produce output.
 Required.Proto2.JsonInput.AllFieldAcceptNull.ProtobufOutput # Failed to parse input or produce output.
 Required.Proto2.JsonInput.BoolFieldFalse.JsonOutput # Failed to parse input or produce output.
@@ -1270,6 +1276,8 @@ Required.Proto2.JsonInput.RepeatedFieldWrongElementTypeExpectingMessagesGotStrin
 Required.Proto2.JsonInput.RepeatedFieldWrongElementTypeExpectingStringsGotBool # Should have failed to parse, but didn't.
 Required.Proto2.JsonInput.RepeatedFieldWrongElementTypeExpectingStringsGotInt # Should have failed to parse, but didn't.
 Required.Proto2.JsonInput.RepeatedFieldWrongElementTypeExpectingStringsGotMessage # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.SingleValueForRepeatedFieldInt32 # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.SingleValueForRepeatedFieldMessage # Should have failed to parse, but didn't.
 Required.Proto2.JsonInput.StoresDefaultPrimitive.Validator # Expected JSON payload but got type 2
 Required.Proto2.JsonInput.StringField.JsonOutput # Failed to parse input or produce output.
 Required.Proto2.JsonInput.StringField.ProtobufOutput # Failed to parse input or produce output.
@@ -2089,6 +2097,10 @@ Required.Proto2.ProtobufInput.ValidMessageSetEncoding.OutOfOrderGroupsEntries.Pr
 Required.Proto2.ProtobufInput.ValidMessageSetEncoding.ProtobufOutput # Failed to parse input or produce output.
 Required.Proto3.DurationProtoInputTooLarge.JsonOutput # Should have failed to serialize, but didn't.
 Required.Proto3.DurationProtoInputTooSmall.JsonOutput # Should have failed to serialize, but didn't.
+Required.Proto3.DurationProtoNanosTooLarge.JsonOutput # Should have failed to serialize, but didn't.
+Required.Proto3.DurationProtoNanosTooSmall.JsonOutput # Should have failed to serialize, but didn't.
+Required.Proto3.DurationProtoNanosWrongSign.JsonOutput # Should have failed to serialize, but didn't.
+Required.Proto3.DurationProtoNanosWrongSignNegativeSecs.JsonOutput # Should have failed to serialize, but didn't.
 Required.Proto3.JsonInput.Any.JsonOutput # Output was not equivalent to reference message: deleted: optional_any.type_url: "type.googleapis.com/protobuf_test_messages.prot
 Required.Proto3.JsonInput.Any.ProtobufOutput # Output was not equivalent to reference message: deleted: optional_any.type_url: "type.googleapis.com/protobuf_test_messages.prot
 Required.Proto3.JsonInput.AnyNested.JsonOutput # Output was not equivalent to reference message: deleted: optional_any.type_url: "type.googleapis.com/google.protobuf.Any"deleted
@@ -2410,3 +2422,5 @@ Required.Proto3.ProtobufInput.ValidDataScalar.UINT32[8].JsonOutput # Failed to p
 Required.Proto3.ProtobufInput.ValidDataScalar.UINT32[8].ProtobufOutput # Failed to parse input or produce output.
 Required.Proto3.TimestampProtoInputTooLarge.JsonOutput # Should have failed to serialize, but didn't.
 Required.Proto3.TimestampProtoInputTooSmall.JsonOutput # Should have failed to serialize, but didn't.
+Required.Proto3.TimestampProtoNanoTooLarge.JsonOutput # Should have failed to serialize, but didn't.
+Required.Proto3.TimestampProtoNegativeNanos.JsonOutput # Should have failed to serialize, but didn't.

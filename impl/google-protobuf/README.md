@@ -12,4 +12,3 @@ A few modifications were made to the file to enable it to run in this environmen
 
 - Does not support ESM.
 - Requires community-maintained typings and separate code generators for TypeScript.
-- Cannot generate code for Editions.

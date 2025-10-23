@@ -639,6 +639,8 @@ Required.Proto2.JsonInput.RepeatedFieldWrongElementTypeExpectingMessagesGotStrin
 Required.Proto2.JsonInput.RepeatedFieldWrongElementTypeExpectingStringsGotBool # Should have failed to parse, but didn't.
 Required.Proto2.JsonInput.RepeatedFieldWrongElementTypeExpectingStringsGotInt # Should have failed to parse, but didn't.
 Required.Proto2.JsonInput.RepeatedFieldWrongElementTypeExpectingStringsGotMessage # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.SingleValueForRepeatedFieldInt32 # Should have failed to parse, but didn't.
+Required.Proto2.JsonInput.SingleValueForRepeatedFieldMessage # Should have failed to parse, but didn't.
 Required.Proto2.JsonInput.StoresDefaultPrimitive.Validator # Expected JSON payload but got type 2
 Required.Proto2.JsonInput.StringField.JsonOutput # Failed to parse input or produce output.
 Required.Proto2.JsonInput.StringField.ProtobufOutput # Failed to parse input or produce output.
@@ -1458,6 +1460,10 @@ Required.Proto2.ProtobufInput.ValidMessageSetEncoding.OutOfOrderGroupsEntries.Pr
 Required.Proto2.ProtobufInput.ValidMessageSetEncoding.ProtobufOutput # Failed to parse input or produce output.
 Required.Proto3.DurationProtoInputTooLarge.JsonOutput # Should have failed to serialize, but didn't.
 Required.Proto3.DurationProtoInputTooSmall.JsonOutput # Should have failed to serialize, but didn't.
+Required.Proto3.DurationProtoNanosTooLarge.JsonOutput # Should have failed to serialize, but didn't.
+Required.Proto3.DurationProtoNanosTooSmall.JsonOutput # Should have failed to serialize, but didn't.
+Required.Proto3.DurationProtoNanosWrongSign.JsonOutput # Should have failed to serialize, but didn't.
+Required.Proto3.DurationProtoNanosWrongSignNegativeSecs.JsonOutput # Should have failed to serialize, but didn't.
 Required.Proto3.JsonInput.AllFieldAcceptNull.JsonOutput # JSON output we received from test was unparseable.
 Required.Proto3.JsonInput.Any.JsonOutput # JSON output we received from test was unparseable.
 Required.Proto3.JsonInput.Any.ProtobufOutput # Output was not equivalent to reference message: deleted: optional_any: { [type.googleapis.com/protobuf_test_messages.proto3.Test
@@ -1700,6 +1706,8 @@ Required.Proto3.JsonInput.RepeatedUint64Wrapper.JsonOutput # JSON output we rece
 Required.Proto3.JsonInput.RepeatedUint64Wrapper.ProtobufOutput # Output was not equivalent to reference message: deleted: repeated_uint64_wrapper[0]: { }deleted: repeated_uint64_wrapper[1]: { v
 Required.Proto3.JsonInput.RepeatedValue.JsonOutput # JSON output we received from test was unparseable.
 Required.Proto3.JsonInput.RepeatedValue.ProtobufOutput # Output was not equivalent to reference message: deleted: repeated_value[0]: { list_value { values { string_value: "a" } } }
+Required.Proto3.JsonInput.SingleValueForRepeatedFieldInt32 # Should have failed to parse, but didn't.
+Required.Proto3.JsonInput.SingleValueForRepeatedFieldMessage # Should have failed to parse, but didn't.
 Required.Proto3.JsonInput.StringField.JsonOutput # JSON output we received from test was unparseable.
 Required.Proto3.JsonInput.StringField.ProtobufOutput # Output was not equivalent to reference message: deleted: optional_string: "Hello world!"
 Required.Proto3.JsonInput.StringFieldEmbeddedNull.JsonOutput # JSON output we received from test was unparseable.
@@ -2153,3 +2161,5 @@ Required.Proto3.ProtobufInput.ValidDataScalar.UINT64[2].JsonOutput # JSON output
 Required.Proto3.ProtobufInput.ValidDataScalar.UINT64[2].ProtobufOutput # Failed to parse input or produce output.
 Required.Proto3.TimestampProtoInputTooLarge.JsonOutput # Should have failed to serialize, but didn't.
 Required.Proto3.TimestampProtoInputTooSmall.JsonOutput # Should have failed to serialize, but didn't.
+Required.Proto3.TimestampProtoNanoTooLarge.JsonOutput # Should have failed to serialize, but didn't.
+Required.Proto3.TimestampProtoNegativeNanos.JsonOutput # Should have failed to serialize, but didn't.

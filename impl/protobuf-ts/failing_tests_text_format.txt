@@ -1,11 +1,3 @@
-Recommended.Proto3.ProtobufInput.GroupUnknownFields_Drop.TextFormatOutput # Failed to parse input or produce output.
-Recommended.Proto3.ProtobufInput.GroupUnknownFields_Print.TextFormatOutput # Failed to parse input or produce output.
-Recommended.Proto3.ProtobufInput.MessageUnknownFields_Drop.TextFormatOutput # Failed to parse input or produce output.
-Recommended.Proto3.ProtobufInput.MessageUnknownFields_Print.TextFormatOutput # Failed to parse input or produce output.
-Recommended.Proto3.ProtobufInput.RepeatedUnknownFields_Drop.TextFormatOutput # Failed to parse input or produce output.
-Recommended.Proto3.ProtobufInput.RepeatedUnknownFields_Print.TextFormatOutput # Failed to parse input or produce output.
-Recommended.Proto3.ProtobufInput.ScalarUnknownFields_Drop.TextFormatOutput # Failed to parse input or produce output.
-Recommended.Proto3.ProtobufInput.ScalarUnknownFields_Print.TextFormatOutput # Failed to parse input or produce output.
 Recommended.Proto3.TextFormatInput.StringLiteralLongUnicodeEscapeSurrogateFirstOnlyBytes # Should have failed to parse, but didn't.
 Recommended.Proto3.TextFormatInput.StringLiteralLongUnicodeEscapeSurrogateFirstOnlyString # Should have failed to parse, but didn't.
 Recommended.Proto3.TextFormatInput.StringLiteralLongUnicodeEscapeSurrogatePairBytes # Should have failed to parse, but didn't.
