@@ -17,11 +17,11 @@
   },
   "devDependencies": {
     "@bufbuild/buf": "^1.59.0",
-    "@types/node": "^24.9.1",
+    "@types/node": "^24.9.2",
     "esbuild": "^0.25.11",
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "ts-proto": "^2.8.1"
+    "ts-proto": "^2.8.3"
   }
 }
