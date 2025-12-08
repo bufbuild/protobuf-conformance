@@ -14,10 +14,10 @@
     "test": "conformance_test_runner --maximum_edition 2023 --enforce_recommended --failure_list failing_tests.txt --text_format_failure_list failing_tests_text_format.txt --output_dir . runner.js"
   },
   "dependencies": {
-    "google-protobuf": "^4.0.0",
-    "@protocolbuffers/protoc-gen-js": "^4.0.0"
+    "google-protobuf": "^4.0.1",
+    "@protocolbuffers/protoc-gen-js": "^4.0.1"
   },
   "devDependencies": {
-    "@bufbuild/buf": "^1.59.0"
+    "@bufbuild/buf": "^1.61.0"
   }
 }
