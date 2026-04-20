@@ -396,7 +396,7 @@ fieldName18: jspb.Message.getFieldWithDefault(msg, 418, 0)
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.editions.proto3.TestAllTypesProto3}
  */
 proto.protobuf_test_messages.editions.proto3.TestAllTypesProto3.deserializeBinary = function(bytes) {
@@ -2289,7 +2289,7 @@ corecursive: (f = msg.getCorecursive()) && proto.protobuf_test_messages.editions
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedMessage}
  */
 proto.protobuf_test_messages.editions.proto3.TestAllTypesProto3.NestedMessage.deserializeBinary = function(bytes) {
@@ -7130,7 +7130,7 @@ c: jspb.Message.getFieldWithDefault(msg, 1, 0)
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.editions.proto3.ForeignMessage}
  */
 proto.protobuf_test_messages.editions.proto3.ForeignMessage.deserializeBinary = function(bytes) {
@@ -7260,7 +7260,7 @@ proto.protobuf_test_messages.editions.proto3.NullHypothesisProto3.toObject = fun
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.editions.proto3.NullHypothesisProto3}
  */
 proto.protobuf_test_messages.editions.proto3.NullHypothesisProto3.deserializeBinary = function(bytes) {
@@ -7361,7 +7361,7 @@ proto.protobuf_test_messages.editions.proto3.EnumOnlyProto3.toObject = function(
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.editions.proto3.EnumOnlyProto3}
  */
 proto.protobuf_test_messages.editions.proto3.EnumOnlyProto3.deserializeBinary = function(bytes) {

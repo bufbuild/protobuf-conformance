@@ -176,7 +176,7 @@ matchedName: jspb.Message.getFieldWithDefault(msg, 3, "")
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.conformance.TestStatus}
  */
 proto.conformance.TestStatus.deserializeBinary = function(bytes) {
@@ -372,7 +372,7 @@ testList: jspb.Message.toObjectList(msg.getTestList(),
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.conformance.FailureSet}
  */
 proto.conformance.FailureSet.deserializeBinary = function(bytes) {
@@ -560,7 +560,7 @@ printUnknownFields: jspb.Message.getBooleanFieldWithDefault(msg, 9, false)
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.conformance.ConformanceRequest}
  */
 proto.conformance.ConformanceRequest.deserializeBinary = function(bytes) {
@@ -1080,7 +1080,7 @@ textPayload: (f = jspb.Message.getField(msg, 8)) == null ? undefined : f
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.conformance.ConformanceResponse}
  */
 proto.conformance.ConformanceResponse.deserializeBinary = function(bytes) {
@@ -1628,7 +1628,7 @@ useJspbArrayAnyFormat: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.conformance.JspbEncodingConfig}
  */
 proto.conformance.JspbEncodingConfig.deserializeBinary = function(bytes) {
