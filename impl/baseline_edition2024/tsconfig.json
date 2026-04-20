@@ -18,9 +18,11 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
     "moduleResolution": "Node",
+    "ignoreDeprecations": "6.0",
     "skipLibCheck": false,
+    "types": ["node"],
     "lib": [
-      "ES2016",
+      "ES2018",
       // ES2020.BigInt for the bigint representation of 64-bit integers
       "ES2020.BigInt"
     ]
