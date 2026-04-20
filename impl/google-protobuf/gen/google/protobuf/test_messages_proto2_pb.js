@@ -986,7 +986,7 @@ messageSetCorrect: (f = msg.getMessageSetCorrect()) && proto.protobuf_test_messa
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2}
  */
 proto.protobuf_test_messages.proto2.TestAllTypesProto2.deserializeBinary = function(bytes) {
@@ -2672,7 +2672,7 @@ corecursive: (f = msg.getCorecursive()) && proto.protobuf_test_messages.proto2.T
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage}
  */
 proto.protobuf_test_messages.proto2.TestAllTypesProto2.NestedMessage.deserializeBinary = function(bytes) {
@@ -2871,7 +2871,7 @@ groupUint32: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data}
  */
 proto.protobuf_test_messages.proto2.TestAllTypesProto2.Data.deserializeBinary = function(bytes) {
@@ -3067,7 +3067,7 @@ groupUint32: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField}
  */
 proto.protobuf_test_messages.proto2.TestAllTypesProto2.MultiWordGroupField.deserializeBinary = function(bytes) {
@@ -3265,7 +3265,7 @@ proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.toObjec
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect}
  */
 proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrect.deserializeBinary = function(bytes) {
@@ -3371,7 +3371,7 @@ str: (f = jspb.Message.getField(msg, 25)) == null ? undefined : f
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1}
  */
 proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension1.deserializeBinary = function(bytes) {
@@ -3569,7 +3569,7 @@ i: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2}
  */
 proto.protobuf_test_messages.proto2.TestAllTypesProto2.MessageSetCorrectExtension2.deserializeBinary = function(bytes) {
@@ -3794,7 +3794,7 @@ b: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof}
  */
 proto.protobuf_test_messages.proto2.TestAllTypesProto2.ExtensionWithOneof.deserializeBinary = function(bytes) {
@@ -8852,7 +8852,7 @@ c: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.ForeignMessageProto2}
  */
 proto.protobuf_test_messages.proto2.ForeignMessageProto2.deserializeBinary = function(bytes) {
@@ -9001,7 +9001,7 @@ groupUint32: (f = jspb.Message.getField(msg, 123)) == null ? undefined : f
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.GroupField}
  */
 proto.protobuf_test_messages.proto2.GroupField.deserializeBinary = function(bytes) {
@@ -9208,7 +9208,7 @@ repeatedInt32List: (f = jspb.Message.getRepeatedField(msg, 1011)) == null ? unde
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes}
  */
 proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.deserializeBinary = function(bytes) {
@@ -9378,7 +9378,7 @@ a: (f = jspb.Message.getField(msg, -1003)) == null ? undefined : f
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup}
  */
 proto.protobuf_test_messages.proto2.UnknownToTestAllTypes.OptionalGroup.deserializeBinary = function(bytes) {
@@ -9745,7 +9745,7 @@ proto.protobuf_test_messages.proto2.NullHypothesisProto2.toObject = function(inc
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.NullHypothesisProto2}
  */
 proto.protobuf_test_messages.proto2.NullHypothesisProto2.deserializeBinary = function(bytes) {
@@ -9846,7 +9846,7 @@ proto.protobuf_test_messages.proto2.EnumOnlyProto2.toObject = function(includeIn
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.EnumOnlyProto2}
  */
 proto.protobuf_test_messages.proto2.EnumOnlyProto2.deserializeBinary = function(bytes) {
@@ -9955,7 +9955,7 @@ data: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.OneStringProto2}
  */
 proto.protobuf_test_messages.proto2.OneStringProto2.deserializeBinary = function(bytes) {
@@ -10112,7 +10112,7 @@ requiresList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : 
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.ProtoWithKeywords}
  */
 proto.protobuf_test_messages.proto2.ProtoWithKeywords.deserializeBinary = function(bytes) {
@@ -10396,7 +10396,7 @@ defaultBytes: msg.getDefaultBytes_asB64()
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2}
  */
 proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.deserializeBinary = function(bytes) {
@@ -10953,7 +10953,7 @@ optionalCorecursive: (f = msg.getOptionalCorecursive()) && proto.protobuf_test_m
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage}
  */
 proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.NestedMessage.deserializeBinary = function(bytes) {
@@ -11202,7 +11202,7 @@ groupUint32: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data}
  */
 proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.Data.deserializeBinary = function(bytes) {
@@ -11400,7 +11400,7 @@ proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect}
  */
 proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrect.deserializeBinary = function(bytes) {
@@ -11506,7 +11506,7 @@ str: (f = jspb.Message.getField(msg, 25)) == null ? undefined : f
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1}
  */
 proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension1.deserializeBinary = function(bytes) {
@@ -11704,7 +11704,7 @@ i: (f = jspb.Message.getField(msg, 9)) == null ? undefined : f
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2}
  */
 proto.protobuf_test_messages.proto2.TestAllRequiredTypesProto2.MessageSetCorrectExtension2.deserializeBinary = function(bytes) {
@@ -13392,7 +13392,7 @@ a5: (f = msg.getA5()) && proto.protobuf_test_messages.proto2.TestLargeOneof.A5.t
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof}
  */
 proto.protobuf_test_messages.proto2.TestLargeOneof.deserializeBinary = function(bytes) {
@@ -13558,7 +13558,7 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A1.toObject = function(includ
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof.A1}
  */
 proto.protobuf_test_messages.proto2.TestLargeOneof.A1.deserializeBinary = function(bytes) {
@@ -13659,7 +13659,7 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A2.toObject = function(includ
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof.A2}
  */
 proto.protobuf_test_messages.proto2.TestLargeOneof.A2.deserializeBinary = function(bytes) {
@@ -13760,7 +13760,7 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A3.toObject = function(includ
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof.A3}
  */
 proto.protobuf_test_messages.proto2.TestLargeOneof.A3.deserializeBinary = function(bytes) {
@@ -13861,7 +13861,7 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A4.toObject = function(includ
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof.A4}
  */
 proto.protobuf_test_messages.proto2.TestLargeOneof.A4.deserializeBinary = function(bytes) {
@@ -13962,7 +13962,7 @@ proto.protobuf_test_messages.proto2.TestLargeOneof.A5.toObject = function(includ
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.proto2.TestLargeOneof.A5}
  */
 proto.protobuf_test_messages.proto2.TestLargeOneof.A5.deserializeBinary = function(bytes) {

@@ -227,7 +227,7 @@ d: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.editions.ComplexMessage}
  */
 proto.protobuf_test_messages.editions.ComplexMessage.deserializeBinary = function(bytes) {
@@ -520,7 +520,7 @@ groupLikeType: (f = msg.getGroupLikeType()) && proto.protobuf_test_messages.edit
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.editions.TestAllTypesEdition2023}
  */
 proto.protobuf_test_messages.editions.TestAllTypesEdition2023.deserializeBinary = function(bytes) {
@@ -1799,7 +1799,7 @@ corecursive: (f = msg.getCorecursive()) && proto.protobuf_test_messages.editions
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.editions.TestAllTypesEdition2023.NestedMessage}
  */
 proto.protobuf_test_messages.editions.TestAllTypesEdition2023.NestedMessage.deserializeBinary = function(bytes) {
@@ -1998,7 +1998,7 @@ groupUint32: (f = jspb.Message.getField(msg, 2)) == null ? undefined : f
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.editions.TestAllTypesEdition2023.GroupLikeType}
  */
 proto.protobuf_test_messages.editions.TestAllTypesEdition2023.GroupLikeType.deserializeBinary = function(bytes) {
@@ -5711,7 +5711,7 @@ c: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.editions.ForeignMessageEdition2023}
  */
 proto.protobuf_test_messages.editions.ForeignMessageEdition2023.deserializeBinary = function(bytes) {
@@ -5859,7 +5859,7 @@ c: (f = jspb.Message.getField(msg, 1)) == null ? undefined : f
 
 /**
  * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @param {jspb.binary.bytesource.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.protobuf_test_messages.editions.GroupLikeType}
  */
 proto.protobuf_test_messages.editions.GroupLikeType.deserializeBinary = function(bytes) {
