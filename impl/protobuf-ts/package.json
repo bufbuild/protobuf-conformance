@@ -20,9 +20,9 @@
     "@protobuf-ts/runtime": "^2.9.1"
   },
   "devDependencies": {
-    "@bufbuild/buf": "^1.66.1",
-    "@types/node": "^25.5.0",
+    "@bufbuild/buf": "^1.69.0",
+    "@types/node": "^25.6.0",
     "tsx": "^4.21.0",
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.3"
   }
 }
