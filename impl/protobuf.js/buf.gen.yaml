@@ -1,0 +1,14 @@
+version: v2
+clean: true
+inputs:
+  - directory: ../../proto
+plugins:
+  # protobuf.js provides protoc-gen-pbjs via the protobufjs-cli package.
+  - local: protoc-gen-pbjs
+    strategy: all
+    out: gen
+    opt:
+      - target=json-module
+      - wrap=esm
+      - dts
+      - file=protos_pb.js

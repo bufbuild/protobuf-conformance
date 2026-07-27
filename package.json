@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "clean": "git clean -Xdf",
-    "license-header": "license-header --ignore 'proto/**' --ignore 'impl/*/gen/**' --ignore 'impl/protobuf.js/wrapper.js'",
+    "license-header": "license-header --ignore 'proto/**' --ignore 'impl/*/gen/**'",
     "format": "prettier  --ignore-unknown --write 'scripts/*' 'impl/*/*' '!impl/*/ge*'",
     "test": "node scripts/test.js",
     "posttest": "node scripts/report.js",

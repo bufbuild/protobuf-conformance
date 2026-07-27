@@ -18,25 +18,48 @@ import { readSync, writeSync } from "fs";
 
 import * as protos from "./gen/protos_pb.js";
 import * as $protobuf from "protobufjs";
+import protojson from "protobufjs/ext/protojson.js";
+import textformat from "protobufjs/ext/textformat.js";
 
-const registry = {
-  // "protobuf_test_messages.proto2.TestAllTypesProto2": protos.protobuf_test_messages.proto2.TestAllTypesProto2, // cannot use, fails to compile
-  "protobuf_test_messages.proto3.TestAllTypesProto3":
-    protos.protobuf_test_messages.proto3.TestAllTypesProto3,
+$protobuf.Reader.discardUnknown = false;
+
+protos.default.resolveAll();
+
+const registry: Record<string, $protobuf.Type> = {
+  "protobuf_test_messages.proto2.TestAllTypesProto2": protos.default.lookupType(
+    "protobuf_test_messages.proto2.TestAllTypesProto2",
+  ),
+  "protobuf_test_messages.proto3.TestAllTypesProto3": protos.default.lookupType(
+    "protobuf_test_messages.proto3.TestAllTypesProto3",
+  ),
   "protobuf_test_messages.editions.TestAllTypesEdition2023":
-    protos.protobuf_test_messages.editions.TestAllTypesEdition2023,
+    protos.default.lookupType(
+      "protobuf_test_messages.editions.TestAllTypesEdition2023",
+    ),
   "protobuf_test_messages.editions.proto2.TestAllTypesProto2":
-    protos.protobuf_test_messages.editions.proto2.TestAllTypesProto2,
+    protos.default.lookupType(
+      "protobuf_test_messages.editions.proto2.TestAllTypesProto2",
+    ),
   "protobuf_test_messages.editions.proto3.TestAllTypesProto3":
-    protos.protobuf_test_messages.editions.proto3.TestAllTypesProto3,
-  "google.protobuf.Struct": protos.google.protobuf.Struct,
-  "google.protobuf.Value": protos.google.protobuf.Value,
-  "google.protobuf.FieldMask": protos.google.protobuf.FieldMask,
-  "google.protobuf.Duration": protos.google.protobuf.Duration,
-  "google.protobuf.Int32Value": protos.google.protobuf.Int32Value,
-  "google.protobuf.Any": protos.google.protobuf.Any,
-  "google.protobuf.Timestamp": protos.google.protobuf.Timestamp,
-} as unknown as Record<string, typeof $protobuf.Message>;
+    protos.default.lookupType(
+      "protobuf_test_messages.editions.proto3.TestAllTypesProto3",
+    ),
+  "google.protobuf.Struct": protos.default.lookupType("google.protobuf.Struct"),
+  "google.protobuf.Value": protos.default.lookupType("google.protobuf.Value"),
+  "google.protobuf.FieldMask": protos.default.lookupType(
+    "google.protobuf.FieldMask",
+  ),
+  "google.protobuf.Duration": protos.default.lookupType(
+    "google.protobuf.Duration",
+  ),
+  "google.protobuf.Int32Value": protos.default.lookupType(
+    "google.protobuf.Int32Value",
+  ),
+  "google.protobuf.Any": protos.default.lookupType("google.protobuf.Any"),
+  "google.protobuf.Timestamp": protos.default.lookupType(
+    "google.protobuf.Timestamp",
+  ),
+};
 
 function main() {
   let testCount = 0;
@@ -56,7 +79,7 @@ interface Result {
   [s: string]: Uint8Array | string;
 }
 
-function test(request: protos.conformance.ConformanceRequest): Result {
+function test(request: protos.conformance.ConformanceRequest.$Shape): Result {
   if (request.messageType === protos.conformance.FailureSet.name) {
     // > The conformance runner will request a list of failures as the first request.
     // > This will be known by message_type == "conformance.FailureSet", a conformance
@@ -68,13 +91,9 @@ function test(request: protos.conformance.ConformanceRequest): Result {
     };
   }
 
-  // Returning a runtime error for the test Required.Proto3.ProtobufInput.UnknownOrdering.ProtobufOutput
-  // crashes the runner.
-  if (
-    is_Required_Proto3_ProtobufInput_UnknownOrdering_ProtobufOutput(request)
-  ) {
+  if (!request.messageType) {
     return {
-      protobufPayload: new Uint8Array(),
+      runtimeError: `missing request message type`,
     };
   }
 
@@ -88,23 +107,28 @@ function test(request: protos.conformance.ConformanceRequest): Result {
   let payload: $protobuf.Message;
 
   try {
-    if (request.protobufPayload) {
-      payload = payloadType.decode(request.protobufPayload);
-    } else if (
-      request.jsonPayload !== null &&
-      request.jsonPayload !== undefined &&
-      request.jsonPayload != ""
-    ) {
-      // Note it doesn't seem ProtobufJS allows for specifying JSON options such as ignore unknown fields so this is
-      // unused:
-      // if (request.testCategory === TestCategory.JSON_IGNORE_UNKNOWN_PARSING_TEST;
-      // Further, we first have to parse the string payload into a JSON object and then call fromObject
-      payload = payloadType.fromObject(JSON.parse(request.jsonPayload));
-    } else {
-      // We use a failure list instead of skipping, because that is more transparent.
-      return {
-        runtimeError: `payload not supported`,
-      };
+    switch (request.payload) {
+      case "protobufPayload":
+        payload = payloadType.decode(request.protobufPayload);
+        break;
+
+      case "jsonPayload":
+        payload = protojson.fromJsonString(payloadType, request.jsonPayload, {
+          ignoreUnknownFields:
+            request.testCategory ===
+            protos.conformance.TestCategory.JSON_IGNORE_UNKNOWN_PARSING_TEST,
+        });
+        break;
+
+      case "textPayload":
+        payload = textformat.fromText(payloadType, request.textPayload);
+        break;
+
+      default:
+        // We use a failure list instead of skipping, because that is more transparent.
+        return {
+          runtimeError: `payload not supported`,
+        };
     }
   } catch (err) {
     // > This string should be set to indicate parsing failed.  The string can
@@ -124,22 +148,18 @@ function test(request: protos.conformance.ConformanceRequest): Result {
 
       case 2: // JSON:
         return {
-          jsonPayload: JSON.stringify(
-            // See https://github.com/protobufjs/protobuf.js?tab=readme-ov-file#toolset for toObject options
-            payloadType.toObject(payload, {
-              json: true,
-              bytes: String,
-              longs: String,
-              enums: String,
-            }),
-          ),
+          jsonPayload: protojson.toJsonString(payloadType, payload),
         };
 
       case 3: // JSPB
         return { skipped: "JSPB not supported." };
 
       case 4: // TEXT_FORMAT
-        return { skipped: "Text format not supported." };
+        return {
+          textPayload: textformat.toText(payloadType, payload, {
+            unknowns: request.printUnknownFields ?? false,
+          }),
+        };
 
       default:
         return {
@@ -154,45 +174,10 @@ function test(request: protos.conformance.ConformanceRequest): Result {
   }
 }
 
-function is_Required_Proto3_ProtobufInput_UnknownOrdering_ProtobufOutput(
-  request: protos.conformance.ConformanceRequest,
-) {
-  if (request.testCategory != protos.conformance.TestCategory.BINARY_TEST) {
-    return false;
-  }
-  if (request.requestedOutputFormat != protos.conformance.WireFormat.PROTOBUF) {
-    return false;
-  }
-  if (
-    request.messageType != "protobuf_test_messages.proto3.TestAllTypesProto3" &&
-    request.messageType != "protobuf_test_messages.proto2.TestAllTypesProto2"
-  ) {
-    return false;
-  }
-  if (!request.protobufPayload) {
-    return false;
-  }
-  const reqPayload = new Uint8Array([
-    210, 41, 3, 97, 98, 99, 208, 41, 123, 210, 41, 3, 100, 101, 102, 208, 41,
-    200, 3,
-  ]);
-  if (request.protobufPayload.byteLength != reqPayload.byteLength) {
-    return false;
-  }
-  if (
-    !request.protobufPayload.every(
-      (value, index) => reqPayload[index] === value,
-    )
-  ) {
-    return false;
-  }
-  return true;
-}
-
 // Returns true if the test ran successfully, false on legitimate EOF.
 // If EOF is encountered in an unexpected place, raises IOError.
 function testIo(
-  test: (request: protos.conformance.ConformanceRequest) => Result,
+  test: (request: protos.conformance.ConformanceRequest.$Shape) => Result,
 ): boolean {
   setBlockingStdout();
   const requestLengthBuf = readBuffer(4);

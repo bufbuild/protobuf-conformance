@@ -6,23 +6,24 @@
     "maximumEdition": "2024",
     "javascript": true,
     "typescript": true,
-    "standardPlugin": false
+    "standardPlugin": true
   },
   "private": true,
   "type": "module",
   "scripts": {
-    "pregenerate": "rm -rf gen/*",
-    "generate": "bash generate.sh",
+    "generate": "buf generate",
     "build": "tsc --noEmit",
     "test": "conformance_test_runner --maximum_edition 2024 --enforce_recommended --failure_list failing_tests.txt --text_format_failure_list failing_tests_text_format.txt --output_dir . runner.ts"
   },
   "dependencies": {
     "long": "^5.3.2",
-    "protobufjs": "^8.0.0",
-    "protobufjs-cli": "^2.0.1"
+    "protobufjs": "^8.7.1",
+    "protobufjs-cli": "^2.6.1"
   },
   "devDependencies": {
-    "typescript": "^6.0.2",
-    "tsx": "^4.21.0"
+    "@bufbuild/buf": "^1.72.0",
+    "@types/node": "^20.19.41",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
   }
 }
