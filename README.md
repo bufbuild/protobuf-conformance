@@ -37,7 +37,7 @@ The current implementations being tested are:
 
 Implementations are tested with proto2, proto3, and the maximum Edition they advertise to support.
 
-Note: The Required and Recommended columns cover Binary and ProtoJSON. Text Format conformance is tracked separately. protobuf.js runs the dedicated Text Format suite with 0 failures; the other implementations tested do not currently implement Text Format.
+Note: The Required and Recommended columns cover Binary and ProtoJSON. Text Format conformance is tracked separately.
 
 ## Running the tests
 

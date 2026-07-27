@@ -41,8 +41,9 @@ import {
   fromBinary,
   toJsonString,
   fromJsonString,
-  type Message,
+  type Message, protoInt64,
 } from "@bufbuild/protobuf";
+import { fromText, toText } from "@bufbuild/protobuf/txtpb";
 import { file_google_protobuf_test_messages_edition2023 } from "./gen/google/protobuf/test_messages_edition2023_pb";
 import { file_google_protobuf_test_messages_proto2_editions } from "./gen/google/protobuf/test_messages_proto2_editions_pb";
 import { file_google_protobuf_test_messages_proto3_editions } from "./gen/google/protobuf/test_messages_proto3_editions_pb";
@@ -112,6 +113,15 @@ function test(request: ConformanceRequest): ConformanceResponse["result"] {
         });
         break;
 
+      case "textPayload":
+        if (!protoInt64.supported) {
+          // The text format requires BigInt; we skip these tests in the string
+          // fall-back enabled by BUF_BIGINT_DISABLE rather than fail them.
+          return { case: "skipped", value: "text format requires BigInt" };
+        }
+        payload = fromText(payloadSchema, request.payload.value, { registry });
+        break;
+
       default:
         // We use a failure list instead of skipping, because that is more transparent.
         return {
@@ -148,7 +158,21 @@ function test(request: ConformanceRequest): ConformanceResponse["result"] {
         return { case: "skipped", value: "JSPB not supported." };
 
       case WireFormat.TEXT_FORMAT:
-        return { case: "skipped", value: "Text format not supported." };
+        if (!protoInt64.supported) {
+          // The text format requires BigInt; we skip these tests in the string
+          // fall-back enabled by BUF_BIGINT_DISABLE rather than fail them.
+          return { case: "skipped", value: "text format requires BigInt" };
+        }
+        return {
+          case: "textPayload",
+          // toText omits unknown fields by default. The runner asks us to print
+          // them via request.printUnknownFields (true for the *_Print tests,
+          // false for the *_Drop tests).
+          value: toText(payloadSchema, payload, {
+            printUnknownFields: request.printUnknownFields,
+            registry,
+          }),
+        };
 
       default:
         return {
