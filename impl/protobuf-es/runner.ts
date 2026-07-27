@@ -41,7 +41,8 @@ import {
   fromBinary,
   toJsonString,
   fromJsonString,
-  type Message, protoInt64,
+  type Message,
+  protoInt64,
 } from "@bufbuild/protobuf";
 import { fromText, toText } from "@bufbuild/protobuf/txtpb";
 import { file_google_protobuf_test_messages_edition2023 } from "./gen/google/protobuf/test_messages_edition2023_pb";
