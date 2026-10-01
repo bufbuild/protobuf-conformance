@@ -17,13 +17,13 @@
   },
   "dependencies": {
     "long": "^5.3.2",
-    "protobufjs": "^8.7.1",
-    "protobufjs-cli": "^2.6.1"
+    "protobufjs": "^8.8.0",
+    "protobufjs-cli": "^2.7.0"
   },
   "devDependencies": {
-    "@bufbuild/buf": "^1.72.0",
-    "@types/node": "^20.19.41",
-    "tsx": "^4.21.0",
-    "typescript": "^6.0.2"
+    "@bufbuild/buf": "^1.73.0",
+    "@types/node": "^26.6.3",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
   }
 }
